@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAaH//8Hg\u003d",
+        "filename": "res/values-it/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 3916
+      },
+      "writtenOn": "2012-11-02T22:07:25Z",
+      "side": 1,
+      "message": "Annullare dovrà essere rimpiazzato da Continuare.",
+      "revId": "3eebb0bf0cc5213c412ba1465a9d4e456ab96796",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
