@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAaH//8KY\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2012-11-02T19:06:31Z",
+      "side": 1,
+      "message": "Perhaps, it can be translate to \"Explorador de Archivos\". What do you think?",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8Kc\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2012-11-02T19:06:31Z",
+      "side": 1,
+      "message": "I need to see the context of these strings, because I don\u0027t know how translate it.\nCan you help me?",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
