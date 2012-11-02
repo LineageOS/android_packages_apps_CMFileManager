@@ -558,7 +558,7 @@
   <!-- Preferences * General * Disk usage warning level summary -->
   <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
        of ListPreference. This should be fixed in frameworks base prior to be added here. -->
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">Afficher une couleur différente dans la barre d\'utilisation du disque quand il atteint <xliff:g id="level">%1$s</xliff:g> pourcent d\'espace libre</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">Afficher un couleur différente dans la barre d\'utilisation du disque quand il atteint <xliff:g id="level">%1$s</xliff:g> pourcent d\'espace libre</string>
   <!-- Preferences * General * Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Calculer les statistiques de dossiers</string>
   <!-- Preferences * General * Compute folder statistics summary on -->
@@ -590,7 +590,7 @@
   <!-- Preferences * Search * Highlight search terms -->
   <string name="pref_highlight_terms">Mettre les termes de recherche en surbrillance</string>
   <!-- Preferences * Search * Sort results mode -->
-  <string name="pref_sort_search_results_mode">Mode de tri des résultats</string>
+  <string name="pref_sort_search_results_mode">Mode de tri des résultatsSort results mode</string>
   <!-- Preferences * Search * Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">Pas de tri</string>
   <!-- Preferences * Search * Sort results mode. None -->
@@ -610,7 +610,7 @@
   <!-- Preferences * Search * Remove saved search terms summary -->
   <string name="pref_remove_saved_search_terms_summary">Appuyez pour supprimer tout les termes de recherche sauvergardés</string>
   <!-- Preferences * Search * Suggestions were truncated -->
-  <string name="pref_remove_saved_search_terms_msg">Tout les termes de recherche ont été supprimé.</string>
+  <string name="pref_remove_saved_search_terms_msg">Tous les termes de recherche ont été supprimé.</string>
 
   <!-- Preferences * Debug * Capture debug traces -->
   <string name="pref_debug_traces">Information de déboguage</string>
