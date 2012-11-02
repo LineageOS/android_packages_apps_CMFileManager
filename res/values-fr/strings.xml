@@ -29,8 +29,6 @@
   <string name="device_domainsocket">Domain socket</string>
 
   <!-- Default buttons -->
-  <string name="ok">@android:string/ok</string>
-  <string name="cancel">@android:string/annuler</string>
   <string name="yes">Oui</string>
   <string name="no">Non</string>
   <string name="all">Tous</string>
@@ -40,7 +38,7 @@
   <string name="search_result_name">Rechercher: <xliff:g id="terms">%1$s</xliff:g></string>
 
   <!-- Loading waiting message -->
-  <string name="loading_message">Chargement &#8230;</string>
+  <string name="loading_message">Chargement \u2026;</string>
 
   <!-- Cancelled message -->
   <string name="cancelled_message">Annulé.</string>
@@ -292,7 +290,7 @@
   <!-- Search * Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">Certains des termes de recherche dispose d\'un petit nombre de caractères. L\'opération pourrait être très coûteux en temps et en ressources système.\n\nVoulez-vous continuer?</string>
   <!-- Search * Searching dialog title -->
-  <string name="searching">Patientez &#8230;</string>
+  <string name="searching">Patientez \u2026;</string>
   <!-- Search * Searching label -->
   <string name="searching_action_label">Recherche en cours...</string>
 
@@ -359,37 +357,37 @@
     <xliff:g id="name">%1$s</xliff:g> - nouveau<xliff:g id="extension">%2$s</xliff:g></string>
 
   <!-- Waiting dialog * Performing operation message -->
-  <string name="waiting_dialog_msg">Effectuer l\'opération &#8230;</string>
+  <string name="waiting_dialog_msg">Effectuer l\'opération \u2026;</string>
   <!-- Waiting dialog * Copying title -->
-  <string name="waiting_dialog_copying_title">Copie &#8230;</string>
+  <string name="waiting_dialog_copying_title">Copie \u2026;</string>
   <!-- Waiting dialog * Copying message -->
   <string name="waiting_dialog_copying_msg">
     <![CDATA[<b>De</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/>]]>
     <![CDATA[<b>à</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog * Moving title -->
-  <string name="waiting_dialog_moving_title">Déplacement &#8230;</string>
+  <string name="waiting_dialog_moving_title">Déplacement \u2026;</string>
   <!-- Waiting dialog * Moving message -->
   <string name="waiting_dialog_moving_msg">
     <![CDATA[<b>De</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/>]]>
     <![CDATA[<b>à</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog * Deleting title -->
-  <string name="waiting_dialog_deleting_title">Suppression &#8230;</string>
+  <string name="waiting_dialog_deleting_title">Suppression \u2026;</string>
   <!-- Waiting dialog * Deleting message -->
   <string name="waiting_dialog_deleting_msg">
     <![CDATA[<b>Fichier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog * Extracting title -->
-  <string name="waiting_dialog_extracting_title">Extraction &#8230;</string>
+  <string name="waiting_dialog_extracting_title">Extraction \u2026;</string>
   <!-- Waiting dialog * Extracting message -->
   <string name="waiting_dialog_extracting_msg">
     <![CDATA[<b>Fichier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog * Extracting title -->
-  <string name="waiting_dialog_compressing_title">Compression &#8230;</string>
+  <string name="waiting_dialog_compressing_title">Compression \u2026;</string>
   <!-- Waiting dialog * Extracting message -->
   <string name="waiting_dialog_compressing_msg">
     <![CDATA[<b>Fichier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog * Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg">
-    <![CDATA[<b>Analyse &#8230;</b>]]></string>
+    <![CDATA[<b>Analyse \u2026;</b>]]></string>
   <!-- Extracting * Success message -->
   <string name="msgs_extracting_success">L\'extraction s\'est terminée correctement. Les donnéees ont été extraite dans <xliff:g id="destination">%1$s</xliff:g>.</string>
   <!-- Compressing * Success message -->
