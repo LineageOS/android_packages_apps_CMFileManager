@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAaH//8Y4\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-11-02T01:22:27Z",
+      "side": 1,
+      "message": "Please don\u0027t include strings with \u0027translatable\u003dfalse\u0027",
+      "revId": "a831e84408c8313a84ddddab84def05d888c6a68",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
