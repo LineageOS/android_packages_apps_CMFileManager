@@ -1,0 +1,293 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAaH//8Ng\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "they are still here?",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8NQ\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "What about:\nHandlingen fik timeout\nHandlingen udløb",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8NM\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "Why not translate mount to danish?",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8NI\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "Again, why not translate mount/unmount in the whole document?",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8NE\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "Perhaps:\nDumpet / Bestået:",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8NA\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "Perhaps:\nOverordnet:",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8M8\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "I would prefer \"Historik\" instead of \"Historie\"",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8M4\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "\"ikke-gemte\" to \"ugemte\" or even better \"Ændringerne er ikke gemt\"",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8Mw\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 361,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "I am not sure how to properly translate the word \"initial\" into danish but I really don\u0027t like \"indledende\", do you have a better word for it?\n\"gemning\" is that a word ;)\nDer opstod en fejl da den indledende (or a better word) mappe skulle gemmes.",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8Ms\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "Historik",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8Mo\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "Ryd historik",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8Mk\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 433,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "Fravælg alt",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8Mg\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 437,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "Fravælg",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8Mc\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 439,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "\"Indsæt det valgte\" or \"Indsæt markering\"",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8MY\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 441,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "Same as above and the instances below",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8MU\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 513,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "Afslut kode:",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8MM\u003d",
+        "filename": "res/values-da/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 650,
+      "author": {
+        "id": 2809
+      },
+      "writtenOn": "2012-11-02T16:44:38Z",
+      "side": 1,
+      "message": "\"For at forebygge....\" not \"Far at forebygge...\"",
+      "revId": "ae67ed5397b92240dcb366292766c5381652fbaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
