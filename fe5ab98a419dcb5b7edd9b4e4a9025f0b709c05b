@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAaX///x0\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 70
+      },
+      "writtenOn": "2012-11-03T23:53:16Z",
+      "side": 1,
+      "message": "I\u0027d rather keep it, because thats what it is, a \"Dateimanager\"",
+      "parentUuid": "AAAAaX///y4\u003d",
+      "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAaX///zQ\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -48,6 +66,24 @@
       "writtenOn": "2012-11-03T21:54:19Z",
       "side": 1,
       "message": "\"Speicherplatznutzung\" should be renamed to \"speichernutzung\" to fit in one row, when it\u0027s clicked.",
+      "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///xw\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 70
+      },
+      "writtenOn": "2012-11-03T23:53:16Z",
+      "side": 1,
+      "message": "Good point. Agree",
+      "parentUuid": "AAAAaX///zQ\u003d",
       "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -89,6 +125,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAaX///xs\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 70
+      },
+      "writtenOn": "2012-11-03T23:53:16Z",
+      "side": 1,
+      "message": "Would shortening to \"Speicherbelegung\" help?",
+      "parentUuid": "AAAAaX///y0\u003d",
+      "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAaX///1A\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -124,6 +178,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAaX///xo\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 70
+      },
+      "writtenOn": "2012-11-03T23:53:16Z",
+      "side": 1,
+      "message": "Agree to Marcos point of view",
+      "parentUuid": "AAAAaX///yw\u003d",
+      "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAaX///08\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -135,6 +207,24 @@
       "writtenOn": "2012-11-03T20:17:51Z",
       "side": 1,
       "message": "\"Sucheinstellung\" fits a lot better in the setting menu than \"Such-Einstellungen\".",
+      "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///xk\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 542,
+      "author": {
+        "id": 70
+      },
+      "writtenOn": "2012-11-03T23:53:16Z",
+      "side": 1,
+      "message": "I think, we better use \"Suche-Einstellungen\". We can not always consider smaller displays to fit into the entire row.",
+      "parentUuid": "AAAAaX///08\u003d",
       "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
