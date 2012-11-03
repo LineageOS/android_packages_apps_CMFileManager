@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "AAAAaX///0M\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2012-11-03T20:46:16Z",
+      "side": 1,
+      "message": "This translation causes some problems\nhttp://files.jackmu95.de/files/cyanogenmod/CMFileManager/Speicherinhalt_anzeigen_ausgeben_problem.png",
+      "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAaX///1A\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
