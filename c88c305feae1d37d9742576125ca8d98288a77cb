@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAaH//7/U\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2012-11-03T02:54:19Z",
+      "side": 1,
+      "message": "Error to try compile: packages/apps/CMFileManager/res/values/strings.xml:50: error: Error parsing XML: unbound prefix\n\nMust be revert this line to previous",
+      "revId": "c88c305feae1d37d9742576125ca8d98288a77cb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
