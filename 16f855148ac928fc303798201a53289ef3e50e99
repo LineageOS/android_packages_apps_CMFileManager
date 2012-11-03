@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAAaX///3c\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T18:34:20Z",
+      "side": 1,
+      "message": "Whitespace error",
+      "revId": "16f855148ac928fc303798201a53289ef3e50e99",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAaH//75Q\u003d",
         "filename": "res/values-fr/strings.xml",
         "patchSetId": 1
