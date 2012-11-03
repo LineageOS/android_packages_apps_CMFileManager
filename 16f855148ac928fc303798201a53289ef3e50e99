@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAaH//75Q\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 541,
+      "author": {
+        "id": 4045
+      },
+      "writtenOn": "2012-11-03T04:47:44Z",
+      "side": 1,
+      "message": "mauvais accent utilisé",
+      "revId": "16f855148ac928fc303798201a53289ef3e50e99",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//75U\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 561,
+      "author": {
+        "id": 4045
+      },
+      "writtenOn": "2012-11-03T04:47:44Z",
+      "side": 1,
+      "message": "une couleur*",
+      "revId": "16f855148ac928fc303798201a53289ef3e50e99",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//75A\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 592,
+      "author": {
+        "id": 4045
+      },
+      "writtenOn": "2012-11-03T04:47:44Z",
+      "side": 1,
+      "message": "La traduction anglaise est presente",
+      "revId": "16f855148ac928fc303798201a53289ef3e50e99",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//75M\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 611,
+      "author": {
+        "id": 4045
+      },
+      "writtenOn": "2012-11-03T04:47:44Z",
+      "side": 1,
+      "message": "tous*",
+      "revId": "16f855148ac928fc303798201a53289ef3e50e99",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
