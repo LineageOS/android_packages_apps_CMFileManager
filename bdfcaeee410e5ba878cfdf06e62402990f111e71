@@ -1,0 +1,1347 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAaX///+M\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Hoofdmap?",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///+E\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "r. 46 t/m 49 mogen weg",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///+A\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Ik heb het niet zo met punten...",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///98\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Let op (vaker gebruikt)",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///94\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Kan geen root-toegang verkrijgen (deze constructie is wel vaker gebruikt)",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///90\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "...machtigingen om te functioneren...",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///9w\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Kan geen root-toegang verkrijgen.",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///9s\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Kan de instellingen niet toepassen/ópslaan",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///9o\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Veranderen naar hoofdmap.",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///9k\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "De bewerking is succesvol voltooid?",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///9g\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "De bewerkingscommando is niet gevonden of is ongeldig",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///9c\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Lees-/schrijffout",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///9Y\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Bewerkingstime-out",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///9U\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "...gekoppeld als alleen-lezen (staat in de naam van de string?)...\n...het bestandssysteem als beschrijfbaar te koppelen...",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///9Q\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "inconsistecies \u003d inconsistenties, tegenstrijdigheden",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///9M\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Liever \"geïnstalleerd\"",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///9I\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Een aantal bestanden",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///9E\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "toepassing \u003e\u003e app",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///9A\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "De bewerking vereist verhoogde machtigingen (korter)",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///88\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "USB-opslag",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///84\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Indelingsmodus?",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///8w\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Eenvoudig",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///8s\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Uitgebreid",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///8o\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Eerst mappen",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///8k\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Eerst verborgen bestanden",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///8g\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Systeembestanden tonen",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///8c\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Ik heb liever symlinks (of bestandsverwijzingen of om alles in te sluiten bestands-/mappenverwijzingen) en dan ook nog tonen i.p.v. een gebiedende wijs",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///8Y\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "- zoals op SD-kaarten (de kaart zelf is geen bestandssysteem)\n- omdat het alleen-lezen(-)bestandssystemen zijn",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///8U\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Liever informatie (als dat past)...",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///8Q\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Aankoppelingspad:",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///8M\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Dump/pass (jargon, een correcte vertaling zou te lang zijn)\n\nhttps://wiki.archlinux.org/index.php/Fstab#Field_definitions",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///8I\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Tik",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///8E\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "- op SD-kaarten\n- eigenaarswijziging\n- Ik ben geen fan van het woord \u0027eigenaar\u0027, maar ik kan geen betere vertaling vinden",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///8A\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "- op SD-kaarten\n- groepswijziging",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///78\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "- op SD-kaarten\n- In Linux-/UNIX-bestandssystemen wordt voor de vertaling van \u0027permission\u0027 het woord \u0027recht\u0027 gebruikt",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///74\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Rechten",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///70\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Verwijst naar (als in een symlink)",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///7w\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Inhoud (heb liever niet opeens een persoonsvorm)",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///7s\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Dit mag weg",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///7k\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Heb liever zonder \u0027je\u0027 (of maak er \u0027uw\u0027 van)",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///7g\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "^^",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///7c\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Termen",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///7Y\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Zoeken bevestigen",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///7U\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "te veel tijd?",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///7Q\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Een ogenblik geduld a.u.b.",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///7M\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Bezig met zoeken",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///7I\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Mag weg",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///7E\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 314,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Bewerken/r?",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///7A\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Afsluiten bevestigen",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///68\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 328,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "... geopend als alleen-lezen",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///64\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Hoofdmap",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///60\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 341,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Favoriet verwijderen",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///6w\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Favoriet succesvol toegevoegd",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///6s\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 350,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "- Paden moeten beginnen met een slash\n- (een voorbeeld van een absolute pad is \"/usr/bin/bash\"; een voorbeeld van een relatieve pad is \"./bash\" als je al in de map \"/usr/bin\" zit)",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///6o\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 404,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Vernieuwen",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///6k\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 412,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Selectie ongedaan maken (als dat past?)",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///6g\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 414,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Selecteren",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///6c\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 416,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "- Deselecteren\n- Selectie ongedaan maken (als dat past)",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///6Y\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Infinitivi a.u.b. (incl. r. 420, 422 en 424)",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///6U\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 426,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Symlink aanmaken(?)",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///6Q\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 442,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Naam wijzigen (vind ik toch leuker)",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///6M\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 444,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Kopie aanmaken",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///6I\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 448,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "- \u003clijdend voorwerp\u003e \u003cwerkwoord\u003e \u003cbijwoordelijke bepalingen\u003e (in het kort de volgorde die gebruikt wordt door AOSP\n- Toevoegen aan favorieten",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///6E\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 452,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Bovenliggende map openen",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///6A\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 455,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Weet u zeker dat u door wilt gaan?",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///58\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 469,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Hier wordt gesproken over met welke app een bestand geopend moet worden (ik weet alleen niet de correcte term hiervoor)",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///50\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 471,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Infinitief",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///5w\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 498,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Symlink?",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///5s\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 516,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "BINAIR",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///5o\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 519,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "E-BOEK/E-BOOK (liever de tweede)",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///5g\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 520,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "E-MAIL",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///5k\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 521,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "GECOMPRIMEERD",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///5c\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 543,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Kleine letter i a.u.b.",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///5Y\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 545,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Zoekinstellingen",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///5U\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 549,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "CyanogenMod-project",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///5Q\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 554,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Gebruik a.u.b. een infinitief in r. 554 t/m 615",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///5M\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 615,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Foutopsporingsinformatie opslaan",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///5E\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 618,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "Let op:\\n\\nHet uitpakken van een gecomprimeerd bestand met relatieve/absolute paden kan systeembestanden overschrijven.\\n\\nWeet u zeker dat u door wilt gaan?",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///5A\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 626,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T17:33:13Z",
+      "side": 1,
+      "message": "- bestandsbeheerder van CyanogenMod\n- Hiermee kunt u het bestandssysteem bekijken...\n- ... bewerkingen uitvoeren die schadelijk kunnen zijn voor uw apparaat.\n- Om dit te voorkomen....\n- U kunt naar de ... gaan via Instellingen\n- De bewerkingen die u uitvoert gebeuren op eigen verantwoordelijkheid.\n- De ontwikkelaars van CyanogenMod",
+      "revId": "bdfcaeee410e5ba878cfdf06e62402990f111e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
