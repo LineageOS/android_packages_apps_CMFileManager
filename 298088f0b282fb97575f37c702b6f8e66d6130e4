@@ -1,0 +1,191 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAaH//8CA\u003d",
+        "filename": "res/values-it/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 3434
+      },
+      "writtenOn": "2012-11-03T01:38:31Z",
+      "side": 1,
+      "message": "\u0026#8230; should be \\u2026",
+      "revId": "298088f0b282fb97575f37c702b6f8e66d6130e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8Ck\u003d",
+        "filename": "res/values-it/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 3434
+      },
+      "writtenOn": "2012-11-03T01:38:31Z",
+      "side": 1,
+      "message": "Remove line 128, translatable \u003d false",
+      "revId": "298088f0b282fb97575f37c702b6f8e66d6130e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8B4\u003d",
+        "filename": "res/values-it/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 3434
+      },
+      "writtenOn": "2012-11-03T01:38:31Z",
+      "side": 1,
+      "message": "\u0026#8230; should be \\u2026",
+      "revId": "298088f0b282fb97575f37c702b6f8e66d6130e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8Cc\u003d",
+        "filename": "res/values-it/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 3434
+      },
+      "writtenOn": "2012-11-03T01:38:31Z",
+      "side": 1,
+      "message": "\u0026#8230; should be \\u2026",
+      "revId": "298088f0b282fb97575f37c702b6f8e66d6130e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8CY\u003d",
+        "filename": "res/values-it/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 3434
+      },
+      "writtenOn": "2012-11-03T01:38:31Z",
+      "side": 1,
+      "message": "\u0026#8230; should be \\u2026",
+      "revId": "298088f0b282fb97575f37c702b6f8e66d6130e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8CU\u003d",
+        "filename": "res/values-it/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 3434
+      },
+      "writtenOn": "2012-11-03T01:38:31Z",
+      "side": 1,
+      "message": "\u0026#8230; should be \\u2026",
+      "revId": "298088f0b282fb97575f37c702b6f8e66d6130e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8CQ\u003d",
+        "filename": "res/values-it/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 3434
+      },
+      "writtenOn": "2012-11-03T01:38:31Z",
+      "side": 1,
+      "message": "\u0026#8230; should be \\u2026",
+      "revId": "298088f0b282fb97575f37c702b6f8e66d6130e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8CM\u003d",
+        "filename": "res/values-it/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 3434
+      },
+      "writtenOn": "2012-11-03T01:38:31Z",
+      "side": 1,
+      "message": "\u0026#8230; should be \\u2026",
+      "revId": "298088f0b282fb97575f37c702b6f8e66d6130e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8CI\u003d",
+        "filename": "res/values-it/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 3434
+      },
+      "writtenOn": "2012-11-03T01:38:31Z",
+      "side": 1,
+      "message": "\u0026#8230; should be \\u2026",
+      "revId": "298088f0b282fb97575f37c702b6f8e66d6130e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8CE\u003d",
+        "filename": "res/values-it/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 3434
+      },
+      "writtenOn": "2012-11-03T01:38:31Z",
+      "side": 1,
+      "message": "\u0026#8230; should be \\u2026",
+      "revId": "298088f0b282fb97575f37c702b6f8e66d6130e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//8Bk\u003d",
+        "filename": "res/values-it/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 3434
+      },
+      "writtenOn": "2012-11-03T01:38:31Z",
+      "side": 1,
+      "message": "\"selezionato\" should be \"selezionati\"",
+      "revId": "298088f0b282fb97575f37c702b6f8e66d6130e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
