@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAaH//73c\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T06:23:23Z",
+      "side": 1,
+      "message": "I prefer to mantain the term \"selección\" in this and the 3 next strings",
+      "revId": "dfa7f62fc076c1604725b050482cd98c58764732",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
