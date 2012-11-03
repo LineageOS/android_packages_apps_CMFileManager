@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAAaH//7/A\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Use comment format from this http://review.cyanogenmod.com/#/c/25800/.",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAaH//8KY\u003d",
         "filename": "res/values-es/strings.xml",
         "patchSetId": 1
@@ -19,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAaH//7/Q\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "I prefer \"Gestor de Archivos\"",
+      "parentUuid": "AAAAaH//8KY\u003d",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAaH//8Kc\u003d",
         "filename": "res/values-es/strings.xml",
         "patchSetId": 1
@@ -30,6 +65,823 @@
       "writtenOn": "2012-11-02T19:06:31Z",
       "side": 1,
       "message": "I need to see the context of these strings, because I don\u0027t know how translate it.\nCan you help me?",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//7/I\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "This strings are UNIX devices. Leave it untouched.",
+      "parentUuid": "AAAAaH//8Kc\u003d",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//7/E\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Remove this 2 strings according to http://review.cyanogenmod.com/#/c/25800/.",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//7+0\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Change \"\u0026#8230;\" for \"\\u2026\" all over the translation according to http://review.cyanogenmod.com/#/c/25800/.",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//7+c\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "\"La preferencia no pudo ser aplicada ni almacenada.\"",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//790\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Typo: raíz",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//7+Y\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "I think is better \"La carpeta o archivo no existe.\"",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//7+U\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Is not better \"Error de ...\"? What do you think.",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//7+Q\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "\"...ilegal. Invocación fallida.\"",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//7+M\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Is not better \"Pulse de nuevo para salir\"?",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//7+I\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "No hay ninguna aplicación registrada para...",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//758\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Typo: ¿Sobrescribir?",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//7+A\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Se produjo un error al asociar ...",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//798\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Typo: raíz",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//79k\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Is not better \"Modo de visualización\"?",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//79g\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Historial",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//78U\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "La operación de ... no esta permitida",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//78I\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Typo:  ..fallado. Algunos sistemas ..\n\n.. como las tarjetas SD ..",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//76A\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "I\u0027m not sure of this. It\u0027s refers to filesystem. I think we need better terms here.",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//78Q\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Cambiar permisos es una operación que no esta permitida en ...",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//78M\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": ".. como las tarjetas SD ..",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//78E\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": ".. como las tarjetas SD ..",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//78A\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": ".. como las tarjetas SD ..",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//794\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Carpeta",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//77s\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "I prefer \"Dictar búsqueda\"",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//77k\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Don\u0027t translate this",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//77g\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Selecciónar archivo",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//79s\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Typo: raíz",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//77Y\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Carpeta del sistema",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//77U\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Establecer ...",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//77Q\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Eliminar marcador",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//77I\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Is not better \".. se completo correctamente. ...\"",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//77E\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Same here",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//77A\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Deseleccionar todo",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//768\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Deseleccionar (Quitar selección is too long)",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//764\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "What do you think about \"Abrir contenedor\"? Up to you.",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//760\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Nada que completar.",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//76w\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "I know that this is the correct translation, but i think is better \"Script:\". May in spanish is better to use \"Nombre:\"",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//76s\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Código de salida",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//76o\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 283,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "SEGURIDAD",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//76k\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Error al abrir ..",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//76g\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Use the app_name here.",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//76c\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Take care here. Using % generates an error that need to be corrected in frameworks base. Use \"porcentaje\" for now.",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//76Y\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "...responsabilidad asegurarse...",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//76U\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "\"Mostrar widget de relevancia\"",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//76Q\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 314,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Sin ordenar",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//76M\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "Habilitar registro de depuración",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//76I\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 325,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "... Extraer archivos comprimidos que contienen rutas absolutas o relativas ... ya que se pueden sobrescribir archivos de sistema...",
+      "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaH//76E\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 328,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-03T04:25:46Z",
+      "side": 1,
+      "message": "... y con ello, realizar operaciones ...\n... que un operación dañe el dispostivo.",
       "revId": "e4c1f28eafd4dc04cd1878dec6bcb7ea887bb4a9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
