@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAaX///y4\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T22:44:22Z",
+      "side": 1,
+      "message": "But that word is just not correct (same as Dutch), it shouldn\u0027t be apart. Perhaps just \u0027Datei\u0027?",
+      "parentUuid": "AAAAaX///1E\u003d",
+      "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAaX///zQ\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAaX///y0\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T22:44:22Z",
+      "side": 1,
+      "message": "I think this shouldn\u0027t be translated (it\u0027s just fsck jargon)",
+      "parentUuid": "AAAAaX///0M\u003d",
+      "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAaX///1A\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -64,6 +100,24 @@
       "writtenOn": "2012-11-03T20:17:51Z",
       "side": 1,
       "message": "\"Klicke\" instead of \"Tippe\" sounds a lot better.",
+      "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAaX///yw\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-11-03T22:44:22Z",
+      "side": 1,
+      "message": "Clicking is not something you do on a device that does not have a mouse. IMHO \u0027Tippe\u0027 is the right translation (as it\u0027s also in Dutch)",
+      "parentUuid": "AAAAaX///1A\u003d",
       "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
