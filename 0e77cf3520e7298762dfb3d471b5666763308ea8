@@ -1,0 +1,10 @@
+Change-Id: Ic75ea876b5f2b5fd910a4b56864754daf43d9560
+Code-Review+1: Pavel Volkov <marshmollow@gmail.com>
+Code-Review+2: David van Tonder <david.vantonder@gmail.com>
+Verified+1: David van Tonder <david.vantonder@gmail.com>
+Code-Review+1: Vsevolod Zoubarev <yandexx@gmail.com>
+Submitted-by: David van Tonder <david.vantonder@gmail.com>
+Submitted-at: Sun, 04 Nov 2012 07:54:11 -0800
+Reviewed-on: http://review.cyanogenmod.org/25892
+Project: CyanogenMod/android_packages_apps_CMFileManager
+Branch: refs/heads/jellybean
