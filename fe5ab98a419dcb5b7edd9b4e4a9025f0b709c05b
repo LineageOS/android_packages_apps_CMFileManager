@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAaX///yk\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2012-11-04T16:58:59Z",
+      "side": 1,
+      "message": "\"Datei\" means in German just File. There are a lot of Apps in the Market wich are described as \"Datei Manager\". I my opinion it\u0027s ok that it\u0027s written apart.",
+      "parentUuid": "AAAAaX///y4\u003d",
+      "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAaX///zQ\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -161,6 +179,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3///9Q\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2012-11-04T16:58:59Z",
+      "side": 1,
+      "message": "Yes, it would",
+      "parentUuid": "AAAAaX///xs\u003d",
+      "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAaX///1A\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -243,6 +279,24 @@
       "side": 1,
       "message": "I think, we better use \"Suche-Einstellungen\". We can not always consider smaller displays to fit into the entire row.",
       "parentUuid": "AAAAaX///08\u003d",
+      "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///9M\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 542,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2012-11-04T16:58:59Z",
+      "side": 1,
+      "message": "The German word ist \"Sucheinstellungen\" not noch \"Such-Einstellungen\". Just google it",
+      "parentUuid": "AAAAaX///xk\u003d",
       "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
