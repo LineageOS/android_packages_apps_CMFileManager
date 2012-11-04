@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3///9E\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 70
+      },
+      "writtenOn": "2012-11-04T16:29:30Z",
+      "side": 1,
+      "message": "Not always the best place to cite, but: http://de.wikipedia.org/wiki/Dateimanager",
+      "parentUuid": "AAAAaX///yk\u003d",
+      "revId": "fe5ab98a419dcb5b7edd9b4e4a9025f0b709c05b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAaX///zQ\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
