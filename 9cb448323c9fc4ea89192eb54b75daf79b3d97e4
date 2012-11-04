@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAaX///tY\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-04T04:09:34Z",
+      "side": 1,
+      "message": "Move this to src/com/cyanogenmod/filemanager/ui/policy/NFCActionPolicy.java",
+      "revId": "9cb448323c9fc4ea89192eb54b75daf79b3d97e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
