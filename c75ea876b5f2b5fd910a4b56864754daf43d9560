@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3///40\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-04T22:15:12Z",
+      "side": 1,
+      "message": "Please add a \\n at the end of the line.  It was added to English last night.",
+      "revId": "c75ea876b5f2b5fd910a4b56864754daf43d9560",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
