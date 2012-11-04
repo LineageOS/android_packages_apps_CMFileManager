@@ -90,7 +90,6 @@
 
   <!-- Console -->
   <ScrollView
-      android:id="@+id/editor_scroller"
       android:layout_width="match_parent"
       android:layout_height="@dimen/console_height"
       android:layout_margin="@dimen/default_margin"
