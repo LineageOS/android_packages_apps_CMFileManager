@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3///7s\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2012-11-04T19:20:35Z",
+      "side": 1,
+      "message": "No need to add this line if it\u0027ll not be translated. No compiler warnings if skipped.",
+      "revId": "4e9f8bb0ddecaf81a4226534d4c8b488a19d1044",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
