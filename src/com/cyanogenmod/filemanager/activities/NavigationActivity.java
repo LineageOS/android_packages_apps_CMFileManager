@@ -25,7 +25,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcelable;
@@ -288,13 +288,6 @@ public class NavigationActivity extends Activity
         //Set the main layout of the activity
         setContentView(R.layout.navigation);
 
-        //Request features
-        if (!AndroidHelper.isTablet(this)) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        } else {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        }
-
         // Show welcome message
         showWelcomeMsg();
 
@@ -338,6 +331,14 @@ public class NavigationActivity extends Activity
 
         //Check the intent action
         checkIntent(intent);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
     }
 
     /**
@@ -401,7 +402,7 @@ public class NavigationActivity extends Activity
         if (firstUse) {
             AlertDialog dialog = DialogHelper.createAlertDialog(
                 this, R.drawable.ic_launcher,
-                R.string.welcome_title, getString(R.string.welcome_msg), false, true);
+                R.string.welcome_title, getString(R.string.welcome_msg), false);
             dialog.show();
 
             // Don't display again this dialog
@@ -1092,7 +1093,7 @@ public class NavigationActivity extends Activity
      * @return boolean Indicates if the action must be intercepted
      */
     private boolean checkBackAction() {
-        // We need a basic structure to check this 
+        // We need a basic structure to check this
         if (getCurrentNavigationView() == null) return false;
 
         //Check if the configuration view is showing. In this case back

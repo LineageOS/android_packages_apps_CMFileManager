@@ -23,6 +23,7 @@ import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -87,18 +88,19 @@ public class PickerActivity extends Activity
             Log.d(TAG, "PickerActivity.onCreate"); //$NON-NLS-1$
         }
 
-        //Request features
-        if (!AndroidHelper.isTablet(this)) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        } else {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        }
-
         // Initialize the activity
         init();
 
         //Save state
         super.onCreate(state);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
     }
 
     /**
