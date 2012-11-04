@@ -13,9 +13,10 @@
  ** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  ** See the License for the specific language governing permissions and
  ** limitations under the License.-->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent" >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical">
 
   <TextView
     android:id="@+id/dialog_message"
@@ -26,4 +27,4 @@
     android:textAppearance="@style/primary_text_appearance"
     android:textStyle="normal" />
 
-</LinearLayout>
+</ScrollView>
