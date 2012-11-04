@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3///8U\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-04T18:30:14Z",
+      "side": 1,
+      "message": "I prefer to gain space for data in the layout",
+      "revId": "e7e798ec56e451bf5ff009b18cbd286f83bce666",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///8Q\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-04T18:30:14Z",
+      "side": 1,
+      "message": "I removed filesystem_info_dialog_dump_pass, because any spanish translation is too long, and I prefer to gain space for data in the layout",
+      "revId": "e7e798ec56e451bf5ff009b18cbd286f83bce666",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///8M\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-04T18:30:14Z",
+      "side": 1,
+      "message": "This commands are applied to selection and without this could create confusion. The word \"selección\" should be included, despite the overflow (in my device only \"Comprimir selección\" was compressed)",
+      "revId": "e7e798ec56e451bf5ff009b18cbd286f83bce666",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
