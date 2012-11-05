@@ -1,0 +1,480 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3///vo\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Správce soubor?",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///vg\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "\u003c![CDATA[\u003cKo?enová složka\u003e]]\u003e",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///vc\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "je neplatná",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///vY\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Soubor nebo složka nebyla nalezena.",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///vU\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Souborový systém je pouze v režimu ke ?tení",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///vI\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "P?idružení akce k aplikaci selhalo.",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///u8\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Režim rozvržení",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///u4\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Dump / Pass:",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///t8\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Nad?azená složka",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///uk\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Zadejte, co hledáte",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///ug\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "?ekn?te, co hledáte",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///uU\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 314,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Prosím",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///uQ\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 328,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "p?íliš",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///uM\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 428,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Nová",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///uI\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Odeslat",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///uE\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 474,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Otev?ít nad?azenou složku",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///t4\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 478,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Tuto akci nelze vzít zp?t.",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///tw\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 507,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Není nic k dokon?ení.",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///ts\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 564,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Zástupce úsp?šn? vytvo?en.",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///tk\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 598,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Použít gesta p?ejetím",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///tg\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 600,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Použít detekci gesta p?ejetím zleva do prava pro mazání soubor? nebo složek.",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///tQ\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 614,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "ale p?i každé privilegované akci zažádá o povolení",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///tI\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 618,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Režim bez omezení\\n\\nVarování! Tento režim umož?uje operace, které mohou poškodit vaše za?ízení.",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///sg\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 633,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Podle významu",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///sY\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 635,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Soukromí",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///sQ\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 640,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "pro p?íští hledání",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///sI\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 651,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "Zaznamenávat ladící informace",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3///sE\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 668,
+      "author": {
+        "id": 4632
+      },
+      "writtenOn": "2012-11-05T04:51:13Z",
+      "side": 1,
+      "message": "škod",
+      "revId": "b1dd3a5ef7e8ae5c0c1e952f8b9915c50aef1d73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
