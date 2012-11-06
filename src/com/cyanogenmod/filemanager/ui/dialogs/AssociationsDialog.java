@@ -380,26 +380,28 @@ public class AssociationsDialog implements OnItemClickListener {
 
                     // Look through the resolved filter to determine which part
                     // of it matched the original Intent.
-                    Iterator<IntentFilter.AuthorityEntry> aIt = ri.filter.authoritiesIterator();
-                    if (aIt != null) {
-                        while (aIt.hasNext()) {
-                            IntentFilter.AuthorityEntry a = aIt.next();
-                            if (a.match(data) >= 0) {
-                                int port = a.getPort();
-                                filter.addDataAuthority(a.getHost(),
-                                        port >= 0 ? Integer.toString(port) : null);
-                                break;
+                    if (ri.filter != null) {
+                        Iterator<IntentFilter.AuthorityEntry> aIt = ri.filter.authoritiesIterator();
+                        if (aIt != null) {
+                            while (aIt.hasNext()) {
+                                IntentFilter.AuthorityEntry a = aIt.next();
+                                if (a.match(data) >= 0) {
+                                    int port = a.getPort();
+                                    filter.addDataAuthority(a.getHost(),
+                                            port >= 0 ? Integer.toString(port) : null);
+                                    break;
+                                }
                             }
                         }
-                    }
-                    Iterator<PatternMatcher> pIt = ri.filter.pathsIterator();
-                    if (pIt != null) {
-                        String path = data.getPath();
-                        while (path != null && pIt.hasNext()) {
-                            PatternMatcher p = pIt.next();
-                            if (p.match(path)) {
-                                filter.addDataPath(p.getPath(), p.getType());
-                                break;
+                        Iterator<PatternMatcher> pIt = ri.filter.pathsIterator();
+                        if (pIt != null) {
+                            String path = data.getPath();
+                            while (path != null && pIt.hasNext()) {
+                                PatternMatcher p = pIt.next();
+                                if (p.match(path)) {
+                                    filter.addDataPath(p.getPath(), p.getType());
+                                    break;
+                                }
                             }
                         }
                     }
