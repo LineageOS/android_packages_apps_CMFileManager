@@ -550,15 +550,15 @@
   <!-- Preferences * General * Case sensitive sort title -->
   <string name="pref_case_sensitive_sort">Berücksichtige Groß-/Kleinschreibung beim Sortieren</string>
   <!-- Preferences * General *Disk usage warning level title -->
-  <string name="pref_disk_usage_warning_level">Speicher-Nutzungswarnung</string>
+  <string name="pref_disk_usage_warning_level">Speichernutzungswarnung</string>
   <!-- Preferences * General * Disk usage warning level summary -->
   <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
        of ListPreference. This should be fixed in frameworks base prior to be added here. -->
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">Verwende eine andere Farbe in den Widgets für die Speichernutzung, wenn noch <xliff:g id="level">%1$s</xliff:g> Prozent freier Speicher verfügbar sind.</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">Eine andere Farbe verwenden, wenn noch <xliff:g id="level">%1$s</xliff:g> Prozent des Speichers verfügbar sind.</string>
   <!-- Preferences * General * Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Berechne Verzeichnisstatistiken</string>
   <!-- Preferences * General * Compute folder statistics summary on -->
-  <string name="pref_compute_folder_statistics_on">Warnung! Die Berechnung der Verzeichnisstatistiken ist aufwenig bezüglich Zeit und der Auslastung des Gerätes.</string>
+  <string name="pref_compute_folder_statistics_on">Die Berechnung der Verzeichnisstatistiken ist sehr zeitaufwendig und benötigt viele Systemresourcen.</string>
   <!-- Preferences * General * Use flinger detection -->
   <string name="pref_use_flinger">Wischgesten verwenden</string>
   <!-- Preferences * General * Use flinger detection summary -->
@@ -578,7 +578,7 @@
   <!-- Preferences * General * Root access mode -->
   <string name="pref_access_mode_root">Root-Zugriffsmodus</string>
   <!-- Preferences * General * Root access mode summary -->
-  <string name="pref_access_mode_root_summary">Root-Zugriffsmodus\n\Warnung! Dieser Modus erlaubt Operationen, die dein Gerät beschädigen können. Du bist für jede ausgeführte Operation selbst verantwortlich.</string>
+  <string name="pref_access_mode_root_summary">Root-Zugriffsmodus\n\nIn diesem Modus hast du alle Zugriffsrechte auf das Dateisystem. Du bist für jede ausgeführte Operation selbst verantwortlich.</string>
   <!-- Preferences * Search * Results category -->
   <string name="pref_search_results_category">Ergebnisse</string>
   <!-- Preferences * Search * Show relevance widget -->
