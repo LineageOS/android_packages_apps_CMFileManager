@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//+xo\u003d",
+        "filename": "res/values-sk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-11-07T01:48:08Z",
+      "side": 1,
+      "message": "This breaks the build!",
+      "revId": "d8b06581cc2494dc06dc0ece216d4e88dc8cc3d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+xk\u003d",
+        "filename": "res/values-sk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-11-07T01:48:08Z",
+      "side": 1,
+      "message": "whitespace?",
+      "revId": "d8b06581cc2494dc06dc0ece216d4e88dc8cc3d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
