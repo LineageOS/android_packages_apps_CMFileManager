@@ -19,6 +19,41 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//+pg\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:38:11Z",
+      "side": 1,
+      "message": "Blokkeszköz",
+      "parentUuid": "AAAAa3//+sA\u003d",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+pk\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:38:11Z",
+      "side": 1,
+      "message": "Karaktereszköz",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//+ps\u003d",
         "filename": "res/values-hu/strings.xml",
         "patchSetId": 3
