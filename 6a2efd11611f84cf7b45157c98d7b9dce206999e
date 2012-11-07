@@ -90,6 +90,108 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//+2g\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-07T00:14:16Z",
+      "side": 1,
+      "message": "azt hiszem, ez úgy van, hogy ha elhagyod a különféle quantity-kat, csak az othert veszed, akkor az lefedi a többit is. Próbáld meg pls, hogy törlöd ezt a két sort és beforditod",
+      "revId": "6a2efd11611f84cf7b45157c98d7b9dce206999e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+2c\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 283,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-07T00:14:16Z",
+      "side": 1,
+      "message": "itt is, hasonlóan",
+      "revId": "6a2efd11611f84cf7b45157c98d7b9dce206999e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+2U\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-07T00:14:16Z",
+      "side": 1,
+      "message": "X elem található, X talált elem, X találat (!)",
+      "revId": "6a2efd11611f84cf7b45157c98d7b9dce206999e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+2Q\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-07T00:14:16Z",
+      "side": 1,
+      "message": "itt is, lehet, hogy az other és a zero elég",
+      "revId": "6a2efd11611f84cf7b45157c98d7b9dce206999e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+14\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 361,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-07T00:14:16Z",
+      "side": 1,
+      "message": "Most el kellett gondolkoznom, hogy ez mi is... Egyébként én támogatnám a könyvtár szót a mappával szemben, még ha hosszabb is.",
+      "revId": "6a2efd11611f84cf7b45157c98d7b9dce206999e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+10\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-07T00:14:16Z",
+      "side": 1,
+      "message": "Elemzés",
+      "revId": "6a2efd11611f84cf7b45157c98d7b9dce206999e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3///io\u003d",
         "filename": "res/values-hu/strings.xml",
         "patchSetId": 2
@@ -101,6 +203,40 @@
       "writtenOn": "2012-11-05T21:52:36Z",
       "side": 1,
       "message": "Ezt javítom.",
+      "revId": "6a2efd11611f84cf7b45157c98d7b9dce206999e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+1w\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 616,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-07T00:14:16Z",
+      "side": 1,
+      "message": "Hmm, frappáns :)",
+      "revId": "6a2efd11611f84cf7b45157c98d7b9dce206999e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+1k\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 620,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-07T00:14:16Z",
+      "side": 1,
+      "message": "Rendszergazdai mód?",
       "revId": "6a2efd11611f84cf7b45157c98d7b9dce206999e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
