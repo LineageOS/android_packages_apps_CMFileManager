@@ -1,0 +1,327 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//+sA\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "Blokk eszköz",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+ps\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "Nevesített/elnevezett cs?vezeték (hülyén hangzik, lehet hogy jobb ha marad az eredeti)",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+rs\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "Ennek a magyar neve maradt Domain socket :/",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+ro\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "Furcsák ezek a pontok a message-ek végén. Van követendö szabály?",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+rg\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "inkább rendszergazda üzemmód, rendszergazdai mód helyett, és védett mód helyett a biztonságos üzemmód",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+rU\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "(szerintem) Egy igazi felhasználó furcsán néz ha egy program jogosultságot akar szerezni. Jogosultsága neki van (a felhasználónak). Kicsit szabad fordítás, de inkább: A funkcióhoz nincs megfelel? jogosultsága.",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+rQ\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "Szerintem rendszergazda üzemmód, késöbb nem kommentezem, ha elfogadjátok akkor úgyis mindenhol egységes lesz.",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+rM\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "Nézem az eredeti fájlt is, de akkor is furcsa, inkább:\n\nA m?velet sikertelen, hiba történt.",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+rA\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "magasabb jogosultság furcsán hangzik.\nInkább a m?velethez nincs jogosultsága. Nem tudom érdemes lenne odaírni, hogy az *aktuális/jelenlegi üzemmódban*? (rendszergazda üzemmód, ok az \"üzemmód\" helyett lehet hogy jobb a \"mód\" csak simán, de a \"rendszergazdai\" szó nem hangzik jól nekem.)",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+q4\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "Érvénytelen paraméter, sikertelen futtatás",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+qw\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "A m?velet elvégzéséhez nincs megfelel? jogosultsága.",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+qo\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "Inkább leválasztható, de nem tudom.",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+qk\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "Ez furcsa üzenet, nincs el?ttem a progi, az érintse meg mondatból valahogy hiányzik hogy mit. Gondolom az üzenetet.",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+qY\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "Na ennek biztos semmi értelme, az SD kártya nem fájlrendszer.\n\ninkább Néhány fájlrendszer, mint több SD kártya beépített fájlrendszere, csak olvasható.\n\nIgazából nem tudom mi a jó, ahogy a mount-ot/unmount-ot ismerem, a readonly fájlrendszereket is mountolni kell ha olvasni akarod, de ha valami egyébként írható, csak readonly módban van mountolva, akkor újra kell mountolni úgy, hogy tényleg írhass is rá.",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+qQ\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "A jogosultság ...",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+qM\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "Ez furcsán hangzik, de lehet hogy jó. Inkább: Nincsenek még el?zmények.",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+qE\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "Az érvénytelen fájl nem lenne jobb? A helytelen fájl az a 0 bájtos :)",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+qA\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 350,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "máshol gyökérkönyvtárnak hívtad (mintha)",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+p8\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 352,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-07T04:36:40Z",
+      "side": 1,
+      "message": "Rendszer könyvtár, de a system is jól hangzik",
+      "revId": "14489313423fe2c013cbd5ac0896c153e3f2a401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
