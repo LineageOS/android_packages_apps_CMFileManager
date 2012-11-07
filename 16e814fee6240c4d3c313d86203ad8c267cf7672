@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//+2k\u003d",
+        "filename": "res/values-pt-rBR/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-11-07T00:14:19Z",
+      "side": 1,
+      "message": "You should use \u0026#x25b2 here!\n\nSimilar errors below.",
+      "revId": "16e814fee6240c4d3c313d86203ad8c267cf7672",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
