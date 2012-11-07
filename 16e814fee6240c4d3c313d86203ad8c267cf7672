@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAAa3//+0s\u003d",
+        "filename": "res/values-pt-rBR/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-07T00:31:39Z",
+      "side": 1,
+      "message": "License",
+      "revId": "16e814fee6240c4d3c313d86203ad8c267cf7672",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+0Q\u003d",
+        "filename": "res/values-pt-rBR/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-07T00:31:39Z",
+      "side": 1,
+      "message": "Xliff namespace",
+      "revId": "16e814fee6240c4d3c313d86203ad8c267cf7672",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//+2k\u003d",
         "filename": "res/values-pt-rBR/strings.xml",
         "patchSetId": 1
