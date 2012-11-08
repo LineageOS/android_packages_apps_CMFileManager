@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAAa3//+X4\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 557,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-11-08T03:21:13Z",
+      "side": 1,
+      "message": "...wenn nur noch... Prozent des Speichers frei sind.\n\nDer Speicher verschwindet ja nicht. :-)",
+      "revId": "e64544db35b9f00203e2d8e71d96ab9936f44f4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+Xs\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 559,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-11-08T03:21:13Z",
+      "side": 1,
+      "message": "Evtl. auf \"Verzeichnisstatistiken\" kürzen, da es abgeschnitten wird.",
+      "revId": "e64544db35b9f00203e2d8e71d96ab9936f44f4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+Xo\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 561,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-11-08T03:21:13Z",
+      "side": 1,
+      "message": "Ich finde bei deiner Übersetzung wird nicht klar was denn diese Systemresourcen sind. Und dass diese nur während der Berechnung benötigt werden.\n\nVorschlag:\nWarnung!\\nDie Berechnung nimmt einige Zeit in Anspruch. Währenddessen ist die Systemleistung evtl. eingeschränkt.",
+      "revId": "e64544db35b9f00203e2d8e71d96ab9936f44f4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//+ak\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 1
@@ -49,6 +100,24 @@
       "side": 1,
       "message": "unnötige und an dieser Stelle nicht nötige Haarspalterei. Würde es nicht ändern.",
       "parentUuid": "AAAAa3//+aY\u003d",
+      "revId": "e64544db35b9f00203e2d8e71d96ab9936f44f4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+Xk\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 581,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-11-08T03:21:13Z",
+      "side": 1,
+      "message": "+1\nMatthias",
+      "parentUuid": "AAAAa3//+aM\u003d",
       "revId": "e64544db35b9f00203e2d8e71d96ab9936f44f4d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
