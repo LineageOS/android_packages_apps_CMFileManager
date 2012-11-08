@@ -16,6 +16,24 @@
       "revId": "e64544db35b9f00203e2d8e71d96ab9936f44f4d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+aY\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 581,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2012-11-08T01:19:35Z",
+      "side": 1,
+      "message": "Ich hatte ja die beiden anderen Modi übersetzt und wollte es somit daran anpassen. Man könnte den zweiten Satz noch etwas ausformolieren. \"Du bist für jede ausgefühte Operation selbst verantwortlich, da das Gerät beschädigt werden kann.\"",
+      "parentUuid": "AAAAa3//+ak\u003d",
+      "revId": "e64544db35b9f00203e2d8e71d96ab9936f44f4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
