@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//+AU\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-09T21:51:43Z",
+      "side": 1,
+      "message": "Magyarban mindenki egy szónak irja, Fájlkezelö",
+      "parentUuid": "AAAAa3//+kM\u003d",
+      "revId": "60f3015d11db94001691af234b340cf44d55bd39",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//+kI\u003d",
         "filename": "res/values-hu/strings.xml",
         "patchSetId": 4
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//+AQ\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-09T21:51:43Z",
+      "side": 1,
+      "message": "A csatorna nem tetszik, igazándiból ha nagyon eröltetni akarod a magyart, akkor csö, de inkább pipe",
+      "parentUuid": "AAAAa3//+kE\u003d",
+      "revId": "60f3015d11db94001691af234b340cf44d55bd39",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//+kA\u003d",
         "filename": "res/values-hu/strings.xml",
         "patchSetId": 4
@@ -64,6 +100,24 @@
       "writtenOn": "2012-11-07T16:21:51Z",
       "side": 1,
       "message": "Így  milyen?",
+      "revId": "60f3015d11db94001691af234b340cf44d55bd39",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+AM\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-09T21:51:43Z",
+      "side": 1,
+      "message": "Elég annyi, hogy nincs jogosultsága",
+      "parentUuid": "AAAAa3//+kA\u003d",
       "revId": "60f3015d11db94001691af234b340cf44d55bd39",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -104,6 +158,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//+AI\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-09T21:51:43Z",
+      "side": 1,
+      "message": "A szöveget :)",
+      "parentUuid": "AAAAa3//+j0\u003d",
+      "revId": "60f3015d11db94001691af234b340cf44d55bd39",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//+jw\u003d",
         "filename": "res/values-hu/strings.xml",
         "patchSetId": 4
@@ -121,6 +193,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//+AE\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-09T21:51:43Z",
+      "side": 1,
+      "message": "Néhány fájlrendszer, mint bizonyos SD-kártyák fizikailag nem irhatóak.",
+      "parentUuid": "AAAAa3//+jw\u003d",
+      "revId": "60f3015d11db94001691af234b340cf44d55bd39",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//+js\u003d",
         "filename": "res/values-hu/strings.xml",
         "patchSetId": 4
@@ -132,6 +222,24 @@
       "writtenOn": "2012-11-07T16:21:51Z",
       "side": 1,
       "message": "Ide mit írjak? Mert efelett elsiklottunk.",
+      "revId": "60f3015d11db94001691af234b340cf44d55bd39",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//+AA\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-09T21:51:43Z",
+      "side": 1,
+      "message": "Töröm rajta magam egy kicsit aztán mondom :)",
+      "parentUuid": "AAAAa3//+js\u003d",
       "revId": "60f3015d11db94001691af234b340cf44d55bd39",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -200,6 +308,24 @@
       "writtenOn": "2012-11-07T16:21:51Z",
       "side": 1,
       "message": "Itt a From To dolgot, meg akarom lesni m?ködés közben, de ha van ötlet elfogadom.",
+      "revId": "60f3015d11db94001691af234b340cf44d55bd39",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9/4\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-11-09T21:51:43Z",
+      "side": 1,
+      "message": "másolás innen-ide szövege, felugró ablakban",
+      "parentUuid": "AAAAa3//+jc\u003d",
       "revId": "60f3015d11db94001691af234b340cf44d55bd39",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
