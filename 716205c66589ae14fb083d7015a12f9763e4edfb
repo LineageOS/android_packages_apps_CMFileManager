@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//9zA\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-11-10T15:53:59Z",
+      "side": 1,
+      "message": "Ezt boxold le Dáviddal.",
+      "revId": "716205c66589ae14fb083d7015a12f9763e4edfb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9y0\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-11-10T15:53:59Z",
+      "side": 1,
+      "message": "Egy-két helyen van még ilyen, de ha ragaszkodsz hozzá akkor oda írom a \u0027a szöveget\u0027 részt.",
+      "revId": "716205c66589ae14fb083d7015a12f9763e4edfb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9yw\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-11-10T15:53:59Z",
+      "side": 1,
+      "message": "Ide várom a javaslatot.",
+      "revId": "716205c66589ae14fb083d7015a12f9763e4edfb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9yo\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 544,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-11-10T15:53:59Z",
+      "side": 1,
+      "message": "Ez úgy hasogassa vagy ba\u0027ntccsa a szemem. Nincs valami ötlet?",
+      "revId": "716205c66589ae14fb083d7015a12f9763e4edfb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9ys\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 548,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2012-11-10T15:53:59Z",
+      "side": 1,
+      "message": "A mondat végén itt viszont elfér a pont, majd odateszem.",
+      "revId": "716205c66589ae14fb083d7015a12f9763e4edfb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
