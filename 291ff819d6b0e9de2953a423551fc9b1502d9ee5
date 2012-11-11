@@ -2,6 +2,91 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAAa3//9WY\u003d",
+        "filename": "CHANGELOG.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "add the * here for consistency with the list below",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9WQ\u003d",
+        "filename": "res/layout/menu_item_separator.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "should this not be 1dp?  0.75 seems a strange number to use.",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9WM\u003d",
+        "filename": "res/raw/changelog",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "same comment here as per the other changelog - use * for consistency",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9Wg\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/FileManagerApplication.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9Wc\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/FileManagerApplication.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//9W0\u003d",
         "filename": "src/com/cyanogenmod/filemanager/FileManagerApplication.java",
         "patchSetId": 1
@@ -13,6 +98,278 @@
       "writtenOn": "2012-11-11T20:45:10Z",
       "side": 1,
       "message": "could just use \u0027defaultValue\u0027 here and remove the above line",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9V8\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/activities/BookmarksActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9V4\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 351,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "Is this maybe too late?  when the app starts up with the dark theme selected I get a white screen for a few seconds before the dark theme \u0027applies\u0027",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9V0\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1585,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9Vw\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9Vs\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/activities/preferences/SettingsPreferences.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 536,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9Vo\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/TwoColumnsMenuListAdapter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9Vk\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/ThemeManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "white space here and below",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9Vc\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/FilesystemInfoDialog.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 351,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9VU\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/FsoPropertiesDialog.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 617,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9VQ\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/preferences/ThemeRoulette.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "White space in this file",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9VM\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/preferences/ThemeSelectorPreference.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9VI\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/preferences/ThemeView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "whitespace in file",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9VE\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/BreadcrumbView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9U0\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/util/DialogHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 497,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9Uw\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/util/SearchHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9Uo\u003d",
+        "filename": "themes/.gitignore",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-11T21:12:55Z",
+      "side": 1,
+      "message": "Should this be part of the commit?",
       "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
