@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//9QQ\u003d",
+        "filename": "res/layout/menu_item_separator.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-11T23:17:21Z",
+      "side": 1,
+      "message": "I tried to make a vertical line thinner than horizontal in dialog tabs",
+      "parentUuid": "AAAAa3//9WQ\u003d",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//9WM\u003d",
         "filename": "res/raw/changelog",
         "patchSetId": 1
