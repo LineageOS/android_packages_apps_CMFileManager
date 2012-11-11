@@ -138,6 +138,40 @@
       "revId": "716205c66589ae14fb083d7015a12f9763e4edfb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9Sg\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 606,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-11-11T21:43:50Z",
+      "side": 1,
+      "message": "remove this newline",
+      "revId": "716205c66589ae14fb083d7015a12f9763e4edfb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9Sc\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 618,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-11-11T21:43:50Z",
+      "side": 1,
+      "message": "remove this newline",
+      "revId": "716205c66589ae14fb083d7015a12f9763e4edfb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
