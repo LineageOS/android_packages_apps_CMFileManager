@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//9lY\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-11T01:32:32Z",
+      "side": 1,
+      "message": "Részemr?l ok, üzemmód nélkül is.",
+      "parentUuid": "AAAAa3//9zA\u003d",
+      "revId": "716205c66589ae14fb083d7015a12f9763e4edfb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//9y0\u003d",
         "filename": "res/values-hu/strings.xml",
         "patchSetId": 5
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//9lU\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-11T01:32:32Z",
+      "side": 1,
+      "message": "Szerintem így ok.",
+      "parentUuid": "AAAAa3//9y0\u003d",
+      "revId": "716205c66589ae14fb083d7015a12f9763e4edfb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//9yw\u003d",
         "filename": "res/values-hu/strings.xml",
         "patchSetId": 5
@@ -47,6 +83,24 @@
       "writtenOn": "2012-11-10T15:53:59Z",
       "side": 1,
       "message": "Ide várom a javaslatot.",
+      "revId": "716205c66589ae14fb083d7015a12f9763e4edfb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9lM\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-11-11T01:32:32Z",
+      "side": 1,
+      "message": "Ez amúgy mire jó? 0/0-t az érték amit ír rá.",
+      "parentUuid": "AAAAa3//9yw\u003d",
       "revId": "716205c66589ae14fb083d7015a12f9763e4edfb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
