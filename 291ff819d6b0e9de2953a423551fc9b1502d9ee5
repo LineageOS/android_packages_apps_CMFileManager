@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//9W0\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/FileManagerApplication.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 4785
+      },
+      "writtenOn": "2012-11-11T20:45:10Z",
+      "side": 1,
+      "message": "could just use \u0027defaultValue\u0027 here and remove the above line",
+      "revId": "291ff819d6b0e9de2953a423551fc9b1502d9ee5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
