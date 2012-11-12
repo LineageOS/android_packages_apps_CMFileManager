@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//8+I\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-12T23:17:27Z",
+      "side": 1,
+      "message": "Typo: nn",
+      "revId": "19dee6131286fb4b24a69e6fd5397f7f9c592753",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8+E\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-12T23:17:27Z",
+      "side": 1,
+      "message": "This should be translate",
+      "revId": "19dee6131286fb4b24a69e6fd5397f7f9c592753",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8+A\u003d",
+        "filename": "themes/res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-12T23:17:27Z",
+      "side": 1,
+      "message": "This should be translate",
+      "revId": "19dee6131286fb4b24a69e6fd5397f7f9c592753",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//898\u003d",
+        "filename": "themes/res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2012-11-12T23:17:27Z",
+      "side": 1,
+      "message": "Un tema en colores oscuros ...",
+      "revId": "19dee6131286fb4b24a69e6fd5397f7f9c592753",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
