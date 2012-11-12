@@ -319,7 +319,14 @@
   <string name="pref_remove_saved_search_terms">Rimuovi i termini di ricerca salvati</string>
   <string name="pref_remove_saved_search_terms_summary">Tocca per rimuovere tutti i termini di ricerca salvati</string>
   <string name="pref_remove_saved_search_terms_msg">Tutti i termini di ricerca salvati sono stati cancellati.</string>
+  <string name="pref_themes_selection_category">Temi</string>
+  <string name="pref_themes_set_theme">Imposta tema</string>
+  <string name="pref_themes_no_preview">Anteprima\nnon disponibile</string>
+  <string name="pref_themes_confirmation">Il tema è stato applicato con successo.</string>
+  <string name="pref_themes_not_found">Tema non trovato.</string>  
   <string name="pref_debug_traces">Registra informazioni per il debug</string>
+  <string name="theme_default_name">Tema chiaro</string>
+  <string name="theme_default_description">Un tema chiaro per il file manager di CyanogenMod.</string>
   <string name="security_warning_extract">Attenzione!\n\nEstrarre un archivio con percorsi relativi o assoluti può danneggiare il dispositivo in quanto possono venire sovrascritti file di sistema.\n\nContinuare?</string>
   <string name="changelog_title">Changelog</string>
   <string name="welcome_title">Benvenuti</string>
