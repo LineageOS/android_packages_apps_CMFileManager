@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//9Bw\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 620,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2012-11-12T15:52:13Z",
+      "side": 1,
+      "message": "Kurz und aussagekräsftig ist immer besser. Würde das \"wurde\" auch weglassen.",
+      "parentUuid": "AAAAa3//9C0\u003d",
+      "revId": "92b5a2e3f763a2473390faed439e2a6166675354",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//9Cw\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 2
@@ -64,6 +82,24 @@
       "writtenOn": "2012-11-12T14:47:40Z",
       "side": 1,
       "message": "evtl. \"hell (Standard)\" oder \"hell (Std / def.)\"",
+      "revId": "92b5a2e3f763a2473390faed439e2a6166675354",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9Bo\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 628,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2012-11-12T15:52:13Z",
+      "side": 1,
+      "message": "+1 für \"Hell (Standard)\"",
+      "parentUuid": "AAAAa3//9Cs\u003d",
       "revId": "92b5a2e3f763a2473390faed439e2a6166675354",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -115,6 +151,24 @@
       "writtenOn": "2012-11-12T14:47:40Z",
       "side": 1,
       "message": "CM-Dateimanager",
+      "revId": "92b5a2e3f763a2473390faed439e2a6166675354",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9Bk\u003d",
+        "filename": "themes/res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2012-11-12T15:52:13Z",
+      "side": 1,
+      "message": "\"Dunkles Design für den CM-Dateimanager\"",
+      "parentUuid": "AAAAa3//9Cg\u003d",
       "revId": "92b5a2e3f763a2473390faed439e2a6166675354",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
