@@ -52,6 +52,24 @@
       "revId": "730bd86120bb7609d7c2c86ac0351cfd2df72260",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//9HE\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 671,
+      "author": {
+        "id": 1558
+      },
+      "writtenOn": "2012-11-12T05:13:53Z",
+      "side": 1,
+      "message": "Sem si ten Spravce souboru take poprve spustil a... nejak to tam nemuzu najit :) Jinak to tedy je ok. Dik.",
+      "parentUuid": "AAAAa3//9HQ\u003d",
+      "revId": "730bd86120bb7609d7c2c86ac0351cfd2df72260",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
