@@ -1,0 +1,11 @@
+Change-Id: I8537a1bb04397d0234ef8c214e74d4fcd567c533
+Code-Review+1: Pavel Volkov <marshmollow@gmail.com>
+Code-Review+2: Steve Kondik <shade@chemlab.org>
+Verified+1: Steve Kondik <shade@chemlab.org>
+Code-Review+1: Krasnonozhenko Aleksey <acras1@gmail.com>
+Code-Review+1: Vsevolod Zoubarev <yandexx@gmail.com>
+Submitted-by: Steve Kondik <shade@chemlab.org>
+Submitted-at: Mon, 12 Nov 2012 10:31:40 -0800
+Reviewed-on: http://review.cyanogenmod.org/26355
+Project: CyanogenMod/android_packages_apps_CMFileManager
+Branch: refs/heads/jellybean
