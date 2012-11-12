@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//9AU\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2012-11-12T18:43:28Z",
+      "side": 1,
+      "message": "I prefer to not translate it, but could be translated for \"Tema claro\".",
+      "revId": "d0595d8cf644bbfb15fe7e4ad4c9c67904b7f4fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
