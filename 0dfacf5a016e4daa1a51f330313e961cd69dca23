@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//9LI\u003d",
+        "filename": "res/layout/theme_view.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2012-11-12T02:05:01Z",
+      "side": 1,
+      "message": "Can we change this to android:scaleType\u003d\"CENTER_INSIDE\" to address stretching of the theme preview?",
+      "revId": "0dfacf5a016e4daa1a51f330313e961cd69dca23",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
