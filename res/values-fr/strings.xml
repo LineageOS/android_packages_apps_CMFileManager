@@ -34,7 +34,7 @@
   <string name="overwrite">Ecraser</string>
 
    <!-- The search result name -->
-  <string name="search_result_name">Rechercher: <xliff:g id="terms">%1$s</xliff:g></string>
+  <string name="search_result_name">Rechercher : <xliff:g id="terms">%1$s</xliff:g></string>
 
   <!-- Loading waiting message -->
   <string name="loading_message">Chargement \u2026;</string>
@@ -58,7 +58,7 @@
   <!--  A console couldn't be created. Ask the user to change the access mode. Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Confirmer le changement</string>
   <!--  A console couldn't be created. Ask the user to change the access mode. Dialog Message -->
-  <string name="msgs_change_to_prompt_access_mode_msg">Impossible de passer en mode Root. Retour au mode normal.\n\nEffectuer le changement?</string>
+  <string name="msgs_change_to_prompt_access_mode_msg">Impossible de passer en mode Root. Retour au mode normal.\n\nEffectuer le changement ?</string>
 
   <!-- A console couldn't be created. Without privileges, the application won't work -->
   <string name="msgs_cant_create_console">Impossible d\'obtenir les privilèges requis pour fonctionner.</string>
@@ -105,13 +105,13 @@
   <string name="msgs_not_registered_app">Il n\'y a pas d\'application enregistré pour ouvrir le fichier sélectionné.</string>
 
   <!-- Overwrite files? -->
-  <string name="msgs_overwrite_files">Certains fichiers existent déjà dans le dossier de destination.\n\nEcraser?</string>
+  <string name="msgs_overwrite_files">Certains fichiers existent déjà dans le dossier de destination.\n\nEcraser ?</string>
 
   <!-- The association of an action to the application failed -->
   <string name="msgs_action_association_failed">Associer l\'action à l\'application a échoué.</string>
 
   <!-- An operation requires elevated privileged. Ask the user. -->
-  <string name="advise_insufficient_permissions">L\'opération nécessite une élévation des priviléges.\n\nVoulez-vous passer en mode Root?</string>
+  <string name="advise_insufficient_permissions">L\'opération nécessite une élévation des priviléges.\n\nVoulez-vous passer en mode Root ?</string>
 
 
   <!-- The parent directory of the current directory in navigation view -->
@@ -188,23 +188,23 @@
   <!-- Filesystem Info Dialog * Tab * Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">Utilisation du disque</string>
   <!-- Filesystem Info Dialog * Status Label -->
-  <string name="filesystem_info_dialog_status">Statut:</string>
+  <string name="filesystem_info_dialog_status">Statut :</string>
   <!-- Filesystem Info Dialog * Mount Point Label -->
-  <string name="filesystem_info_dialog_mount_point">Point de montage:</string>
+  <string name="filesystem_info_dialog_mount_point">Point de montage :</string>
   <!-- Filesystem Info Dialog * Device Label -->
-  <string name="filesystem_info_dialog_device">Appareil:</string>
+  <string name="filesystem_info_dialog_device">Appareil :</string>
   <!-- Filesystem Info Dialog * Type Label -->
-  <string name="filesystem_info_dialog_type">Type:</string>
+  <string name="filesystem_info_dialog_type">Type :</string>
   <!-- Filesystem Info Dialog * Options Label -->
-  <string name="filesystem_info_dialog_options">Options:</string>
+  <string name="filesystem_info_dialog_options">Options :</string>
   <!-- Filesystem Info Dialog * Dump/Pass Label -->
-  <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
+  <string name="filesystem_info_dialog_dump_pass">Dump/Pass :</string>
   <!-- Filesystem Info Dialog * Total Disk Usage -->
-  <string name="filesystem_info_dialog_total_disk_usage">Total:</string>
+  <string name="filesystem_info_dialog_total_disk_usage">Total :</string>
   <!-- Filesystem Info Dialog * Used Disk Usage -->
-  <string name="filesystem_info_dialog_used_disk_usage">Utilisé:</string>
+  <string name="filesystem_info_dialog_used_disk_usage">Utilisé :</string>
   <!-- Filesystem Info Dialog * Free Disk Usage -->
-  <string name="filesystem_info_dialog_free_disk_usage">Libre:</string>
+  <string name="filesystem_info_dialog_free_disk_usage">Libre :</string>
 
 
   <!-- Fso Properties * Not allowed message -->
@@ -222,27 +222,27 @@
   <!-- Fso Properties Dialog * Tab * Permissions -->
   <string name="fso_properties_dialog_tab_permissions">Permissions</string>
   <!-- Fso Properties Dialog * Name Label -->
-  <string name="fso_properties_dialog_name">Nom:</string>
+  <string name="fso_properties_dialog_name">Nom :</string>
   <!-- Fso Properties Dialog * Parent Folder Label -->
-  <string name="fso_properties_dialog_parent">Parent:</string>
+  <string name="fso_properties_dialog_parent">Parent :</string>
   <!-- Fso Properties Dialog * Type Label -->
-  <string name="fso_properties_dialog_type">Type:</string>
+  <string name="fso_properties_dialog_type">Type :</string>
   <!-- Fso Properties Dialog * Category Label -->
-  <string name="fso_properties_dialog_category">Categorie:</string>
+  <string name="fso_properties_dialog_category">Categorie :</string>
   <!-- Fso Properties Dialog * Link Label -->
-  <string name="fso_properties_dialog_link">Lien:</string>
+  <string name="fso_properties_dialog_link">Lien :</string>
   <!-- Fso Properties Dialog * Size Label -->
-  <string name="fso_properties_dialog_size">Taille:</string>
+  <string name="fso_properties_dialog_size">Taille :</string>
   <!-- Fso Properties Dialog * Contains Label -->
-  <string name="fso_properties_dialog_contains">Contenu:</string>
+  <string name="fso_properties_dialog_contains">Contenu :</string>
   <!-- Fso Properties Dialog * Date Label -->
-  <string name="fso_properties_dialog_date">Dernière accés:</string>
+  <string name="fso_properties_dialog_date">Dernière accés :</string>
   <!-- Fso Properties Dialog * Owner Label -->
-  <string name="fso_properties_dialog_owner">Propriétaire:</string>
+  <string name="fso_properties_dialog_owner">Propriétaire :</string>
   <!-- Fso Properties Dialog * Group Label -->
-  <string name="fso_properties_dialog_group">Groupe:</string>
+  <string name="fso_properties_dialog_group">Groupe :</string>
   <!-- Fso Properties Dialog * Others Label -->
-  <string name="fso_properties_dialog_others">Autres:</string>
+  <string name="fso_properties_dialog_others">Autres :</string>
 
   <!-- Fso Properties Dialog * Folders -->
   <plurals name="fso_properties_dialog_folders">
@@ -283,11 +283,11 @@
   <!-- Search * Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> dans <xliff:g id="path">%2$s</xliff:g></string>
   <!-- Search * Search query terms -->
-  <string name="search_terms"><![CDATA[<b>Termes:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <string name="search_terms"><![CDATA[<b>Termes :</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Search * Confirm search -->
   <string name="search_few_characters_title">Confirmer la recherche</string>
   <!-- Search * Some terms of the search are too small. The operation could be very costly -->
-  <string name="search_few_characters_msg">Certains des termes de recherche dispose d\'un petit nombre de caractères. L\'opération pourrait être très coûteux en temps et en ressources système.\n\nVoulez-vous continuer?</string>
+  <string name="search_few_characters_msg">Certains des termes de recherche dispose d\'un petit nombre de caractères. L\'opération pourrait être très coûteux en temps et en ressources système.\n\nVoulez-vous continuer ?</string>
   <!-- Search * Searching dialog title -->
   <string name="searching">Patientez \u2026;</string>
   <!-- Search * Searching label -->
@@ -307,7 +307,7 @@
   <!-- Editor * Editor is dirty, ask the user * Dialog title -->
   <string name="editor_dirty_ask_title">Quitter</string>
   <!-- Editor * Editor is dirty, ask the user * Dialog message -->
-  <string name="editor_dirty_ask_msg">Il y a des changements non enregistrés.\n\nQuitter sans enregistrer?</string>
+  <string name="editor_dirty_ask_msg">Il y a des changements non enregistrés.\n\nQuitter sans enregistrer ?</string>
   <!-- Editor * Save operation success -->
   <string name="editor_successfully_saved">Le fichier a été enregistré.</string>
   <!-- Editor * Read-only file mode -->
@@ -331,7 +331,7 @@
   <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Dossier d\'acceuil</string>
   <!-- Initial directory label -->
-  <string name="initial_directory_label">Choisir le dossier d\'acceuil:</string>
+  <string name="initial_directory_label">Choisir le dossier d\'acceuil :</string>
   <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Les chemins relatifs ne sont pas autorisés.</string>
   <!-- Initial directory error message -->
@@ -448,10 +448,10 @@
   <string name="actions_menu_open_parent_folder">Ouvrir le dossier parent</string>
 
   <!-- Actions * Ask user prior to do an undone operation. Dialog message -->
-  <string name="actions_ask_undone_operation_msg">Cette action ne peut pas être annulé. Voulez-vous continuer?</string>
+  <string name="actions_ask_undone_operation_msg">Cette action ne peut pas être annulé. Voulez-vous continuer ?</string>
 
   <!-- Enter Name Dialog * Label -->
-  <string name="input_name_dialog_label">Nom:</string>
+  <string name="input_name_dialog_label">Nom :</string>
   <!-- Enter Name Dialog * Message * Empty name -->
   <string name="input_name_dialog_message_empty_name">Le nom ne pas être vide.</string>
   <!-- Enter Name Dialog * Message * Invalid name -->
@@ -561,7 +561,7 @@
   <!-- Preferences * General * Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Calculer les statistiques de dossiers</string>
   <!-- Preferences * General * Compute folder statistics summary on -->
-  <string name="pref_compute_folder_statistics_on">Attention! Le calcul des statistiques de dossiers est coûteuse en temps et en ressources système</string>
+  <string name="pref_compute_folder_statistics_on">Attention ! Le calcul des statistiques de dossiers est coûteuse en temps et en ressources système</string>
   <!-- Preferences * General * Use flinger detection -->
   <string name="pref_use_flinger">Utiliser les mouvements de glissement</string>
   <!-- Preferences * General * Use flinger detection summary -->
@@ -581,7 +581,7 @@
   <!-- Preferences * General * Root access mode -->
   <string name="pref_access_mode_root">Mode Root</string>
   <!-- Preferences * General * Root access mode summary -->
-  <string name="pref_access_mode_root_summary">Mode Root\n\nAttention! Ce mode permet des opérations qui pourraient endommager votre appareil. Il est de votre responsabilité de veiller à ce que les opérations effectuées soient sures</string>
+  <string name="pref_access_mode_root_summary">Mode Root\n\nAttention ! Ce mode permet des opérations qui pourraient endommager votre appareil. Il est de votre responsabilité de veiller à ce que les opérations effectuées soient sures</string>
   <!-- Preferences * Search * Results category -->
   <string name="pref_search_results_category">Résultats</string>
   <!-- Preferences * Search * Show relevance widget -->
@@ -601,7 +601,7 @@
   <!-- Preferences * Search * Save search terms -->
   <string name="pref_save_search_terms">Sauvergarder les termes de recherche</string>
   <!-- Preferences * Search * Save search terms summary on -->
-  <string name="pref_save_search_terms_on">Les termes de recherche ont été sauvegardé et seront suggérés dans les recherches futures</string>
+  <string name="pref_save_search_terms_on">Les termes de recherche seront sauvegardés et seront suggérés dans les recherches futures</string>
   <!-- Preferences * Search * Save search terms summary off -->
   <string name="pref_save_search_terms_off">Les termes de recherche n\'ont pas été sauvegardé</string>
   <!-- Preferences * Search * Remove saved search terms -->
@@ -615,7 +615,7 @@
   <string name="pref_debug_traces">Information de débogage</string>
 
   <!-- Security * Extract relative or absolute files -->
-  <string name="security_warning_extract">Attention!\n\n Extraire une archive vers un chemin absolu ou relatif peut causer des dommages sur votre appareil en écrasant des fichiers système.\n\nVoulez-vous continuer?</string>
+  <string name="security_warning_extract">Attention !\n\n Extraire une archive vers un chemin absolu ou relatif peut causer des dommages sur votre appareil en écrasant des fichiers système.\n\nVoulez-vous continuer ?</string>
 
   <!-- ChangeLog * Dialog title -->
   <string name="changelog_title">Note de version</string>
