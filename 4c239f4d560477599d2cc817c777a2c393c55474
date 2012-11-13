@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//84Q\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 620,
+      "author": {
+        "id": 70
+      },
+      "writtenOn": "2012-11-13T01:39:38Z",
+      "side": 1,
+      "message": "nicht verkehrt aber warum nicht einfaches Deutsch?: \"angewendet\"",
+      "revId": "4c239f4d560477599d2cc817c777a2c393c55474",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
