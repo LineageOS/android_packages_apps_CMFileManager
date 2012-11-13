@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//87c\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 4457
+      },
+      "writtenOn": "2012-11-13T01:21:46Z",
+      "side": 0,
+      "message": "\"Logirovanie\" sounds really unnatural to me.\n\"Protokolirovanie\" is fine word for that.",
+      "revId": "be8ae15ff3b6e2381fe566968956c23c7647a11a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
