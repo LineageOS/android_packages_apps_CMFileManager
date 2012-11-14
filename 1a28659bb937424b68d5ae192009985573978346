@@ -71,6 +71,23 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//8a8\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T22:53:56Z",
+      "side": 1,
+      "message": "L\\\u0027opération a réussi",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//8a0\u003d",
         "filename": "res/values-fr/strings.xml",
         "patchSetId": 2
@@ -123,6 +140,23 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//8ao\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T22:53:56Z",
+      "side": 1,
+      "message": "...accès...",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//8aw\u003d",
         "filename": "res/values-fr/strings.xml",
         "patchSetId": 2
@@ -134,6 +168,40 @@
       "writtenOn": "2012-11-14T22:47:30Z",
       "side": 1,
       "message": "trouvée",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8ac\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T22:53:56Z",
+      "side": 1,
+      "message": "\"La commande n\\\u0027a pas été trouvé ou a une définition non valide\" (no dot at end)",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8aY\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T22:53:56Z",
+      "side": 1,
+      "message": "\"...échoué\" (the real sentence is \"la lecture/écriture a échoué\")",
       "revId": "1a28659bb937424b68d5ae192009985573978346",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -191,6 +259,23 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//8Zs\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T22:53:56Z",
+      "side": 1,
+      "message": "Les opérations sur les permissions ne sont pas autorisées en mode sécurisé. Appuyez pour passer en mode Root.",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//8aI\u003d",
         "filename": "res/values-fr/strings.xml",
         "patchSetId": 2
@@ -202,6 +287,23 @@
       "writtenOn": "2012-11-14T22:47:30Z",
       "side": 1,
       "message": "disposent",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8Zc\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T22:53:56Z",
+      "side": 1,
+      "message": "...disposent...",
       "revId": "1a28659bb937424b68d5ae192009985573978346",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -276,6 +378,23 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//8ZU\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 486,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T22:53:56Z",
+      "side": 1,
+      "message": "\"Durée :\"",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//8Zo\u003d",
         "filename": "res/values-fr/strings.xml",
         "patchSetId": 2
@@ -287,6 +406,23 @@
       "writtenOn": "2012-11-14T22:47:30Z",
       "side": 1,
       "message": "Paramètres  è not é in all files",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8ZI\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 540,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T22:53:56Z",
+      "side": 1,
+      "message": "Paramètres",
       "revId": "1a28659bb937424b68d5ae192009985573978346",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -310,6 +446,40 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//8ZE\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 542,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T22:53:56Z",
+      "side": 1,
+      "message": "Paramètres généraux",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8Y8\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 576,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T22:53:56Z",
+      "side": 1,
+      "message": "...privilège...",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//8ZY\u003d",
         "filename": "res/values-fr/strings.xml",
         "patchSetId": 2
@@ -321,6 +491,23 @@
       "writtenOn": "2012-11-14T22:47:30Z",
       "side": 1,
       "message": "privilèges",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8Yw\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 580,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T22:53:56Z",
+      "side": 1,
+      "message": "\"...privilège(s?).\"",
       "revId": "1a28659bb937424b68d5ae192009985573978346",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -344,6 +531,23 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//8Yo\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T22:53:56Z",
+      "side": 1,
+      "message": "\"...soient sûres\"",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//8ZM\u003d",
         "filename": "res/values-fr/strings.xml",
         "patchSetId": 2
@@ -355,6 +559,23 @@
       "writtenOn": "2012-11-14T22:47:30Z",
       "side": 1,
       "message": "sauvegardés",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8YU\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 629,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T22:53:56Z",
+      "side": 1,
+      "message": "...paramètres...",
       "revId": "1a28659bb937424b68d5ae192009985573978346",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
