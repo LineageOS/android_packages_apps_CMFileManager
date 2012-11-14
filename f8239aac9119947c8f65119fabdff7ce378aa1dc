@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//8XQ\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T23:23:47Z",
+      "side": 1,
+      "message": "finish with \".\" if more than one sentence",
+      "revId": "f8239aac9119947c8f65119fabdff7ce378aa1dc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8XY\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T23:23:47Z",
+      "side": 1,
+      "message": "No \".\" if one sentence",
+      "revId": "f8239aac9119947c8f65119fabdff7ce378aa1dc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8XM\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 486,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T23:23:47Z",
+      "side": 1,
+      "message": "Durée :",
+      "revId": "f8239aac9119947c8f65119fabdff7ce378aa1dc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8XI\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 542,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T23:23:47Z",
+      "side": 1,
+      "message": "Paramètres...",
+      "revId": "f8239aac9119947c8f65119fabdff7ce378aa1dc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8XE\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 576,
+      "author": {
+        "id": 4750
+      },
+      "writtenOn": "2012-11-14T23:23:47Z",
+      "side": 1,
+      "message": "...privilège...",
+      "revId": "f8239aac9119947c8f65119fabdff7ce378aa1dc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
