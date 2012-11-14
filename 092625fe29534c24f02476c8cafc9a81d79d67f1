@@ -1,0 +1,276 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//8gE\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "detectée",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8gs\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "\u003cstring name\u003d\"msgs_not_registered_app\"\u003eIl n\\\u0027y a pas d\\\u0027application enregistrée pour ouvrir le fichier sélectionné.\u003c/string\u003e",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8gg\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "\u003cstring name\u003d\"parent_dir\"\u003eDossier parents\u003c/string\u003e\n\npluriel vraiment nécessaire pour parent ??",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8gc\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "\u003cstring name\u003d\"filesystem_info_mount_not_allowed_msg\"\u003eLes opérations de montage du système de fichi\ners ne sont pas autorisées en mode sécurisé. Appuyez pour passer en mode  Root.\u003c/string\u003e\n\n\nautorisées",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8gA\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "intègrent",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8gY\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "\u003cstring name\u003d\"fso_properties_permissions_not_allowed_msg\"\u003eLes opérations sur les permissions ne sont pas autorisées en mode sécurisé. Appuyez pour passer en mode Root.\u003c/string\u003e",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8gU\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "Catégorie :",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8gQ\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "Dernier accès :",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8gM\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "coûteuse",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8gI\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 451,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "annulée",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8f8\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 564,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "coûteux",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8f4\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 580,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "privilèges",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8f0\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 610,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "tous les termes",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8fw\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 612,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "Tous les termes de recherche ont été supprimés.",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8fo\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 628,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "effectuées",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8fs\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 628,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T14:21:01Z",
+      "side": 1,
+      "message": "et d\\\u0027effectuer des",
+      "revId": "092625fe29534c24f02476c8cafc9a81d79d67f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
