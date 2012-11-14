@@ -1,0 +1,293 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//8bE\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "maybe we should write  \"fichiers\"",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8bA\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "fichier ou fichiers ?",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8a0\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "détectée",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8aw\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "trouvée",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8ak\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "échouée",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8ag\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "privilèges   è not é",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8aM\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "opérations ne sont pas autorisées",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8aI\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "disposent",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8aE\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "patienter",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8Z8\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "Sélectionner",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8Z4\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "Le nom ne doit pas être vide \nor\n Le nom ne peut pas être vide",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8Z0\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 486,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "Time :",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8Zo\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 540,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "Paramètres  è not é in all files",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8Zw\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 542,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "Paramètres",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8ZY\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 580,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "privilèges",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8ZQ\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "sûres",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8ZM\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 606,
+      "author": {
+        "id": 2990
+      },
+      "writtenOn": "2012-11-14T22:47:30Z",
+      "side": 1,
+      "message": "sauvegardés",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
