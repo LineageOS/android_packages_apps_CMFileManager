@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//8YI\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 4617
+      },
+      "writtenOn": "2012-11-14T23:06:30Z",
+      "side": 1,
+      "message": "Non, fichier. \nJ\u0027ai longuement épluché le web, et c\u0027est plutôt sans \"s\" qui gagne.",
+      "parentUuid": "AAAAa3//8bA\u003d",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//8Zg\u003d",
         "filename": "res/values-fr/strings.xml",
         "patchSetId": 2
@@ -321,6 +339,24 @@
       "writtenOn": "2012-11-14T22:47:30Z",
       "side": 1,
       "message": "patienter",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//8X0\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 4617
+      },
+      "writtenOn": "2012-11-14T23:06:30Z",
+      "side": 1,
+      "message": "?",
+      "parentUuid": "AAAAa3//8aE\u003d",
       "revId": "1a28659bb937424b68d5ae192009985573978346",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
