@@ -226,6 +226,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//8XU\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 4617
+      },
+      "writtenOn": "2012-11-14T23:21:20Z",
+      "side": 1,
+      "message": "Not!",
+      "parentUuid": "AAAAa3//8aY\u003d",
+      "revId": "1a28659bb937424b68d5ae192009985573978346",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//8ak\u003d",
         "filename": "res/values-fr/strings.xml",
         "patchSetId": 2
