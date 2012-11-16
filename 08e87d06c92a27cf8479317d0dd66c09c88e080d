@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAa3//8FM\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 628,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2012-11-16T09:52:13Z",
+      "side": 1,
+      "message": "@Kim, Which additional new lines?  we have the original text as paragraphs as well",
+      "parentUuid": "AAAAa3//8JI\u003d",
+      "revId": "08e87d06c92a27cf8479317d0dd66c09c88e080d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//8JE\u003d",
         "filename": "res/values-fr/strings.xml",
         "patchSetId": 5
