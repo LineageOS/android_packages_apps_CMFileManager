@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//708\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 646,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2012-11-17T17:17:02Z",
+      "side": 1,
+      "message": "@Tanguy Pruvot, I don\u0027t understand it\u0027 OK",
+      "revId": "b438727a54625df65dad07a424bc60a2d2f780c2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
