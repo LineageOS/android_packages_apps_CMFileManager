@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAAa3//70k\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4045
+      },
+      "writtenOn": "2012-11-17T18:19:08Z",
+      "side": 1,
+      "message": "ça me chagrine ça, on ne dit pas \"explorateur de fichiers\" ? si quelqu\u0027un pouvait me confirmer :-)",
+      "revId": "b438727a54625df65dad07a424bc60a2d2f780c2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//70g\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4045
+      },
+      "writtenOn": "2012-11-17T18:19:08Z",
+      "side": 1,
+      "message": "idem pour le \"s\"",
+      "revId": "b438727a54625df65dad07a424bc60a2d2f780c2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//708\u003d",
         "filename": "res/values-fr/strings.xml",
         "patchSetId": 6
