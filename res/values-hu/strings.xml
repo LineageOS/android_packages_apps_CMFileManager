@@ -555,7 +555,7 @@
     <!-- Preferences * General * Use flinger detection -->
     <string name="pref_use_flinger">Kézmozdulatok használata</string>
     <!-- Preferences * General * Use flinger detection summary -->
-    <string name="pref_use_flinger_summary">A balról jobbra elhúzott mozdulat használata a fájl vagy mappa törléshez.</string>
+    <string name="pref_use_flinger_summary">Fájlok és mappák törlése jobbra történő elhúzással.</string>
     <!-- Preferences * General * Advanced settings category -->
     <string name="pref_general_advanced_settings_category">Speciális</string>
     <!-- Preferences * General * Access mode -->
@@ -575,7 +575,7 @@
     <!-- Preferences * Search * Results category -->
     <string name="pref_search_results_category">Találatok</string>
     <!-- Preferences * Search * Show relevance widget -->
-    <string name="pref_show_relevance_widget">Vonatkozási modul megjelenítése</string>
+    <string name="pref_show_relevance_widget">Relevancia modul megjelenítése</string>
     <!-- Preferences * Search * Highlight search terms -->
     <string name="pref_highlight_terms">Keresési feltételek kiemelése</string>
     <!-- Preferences * Search * Sort results mode -->
