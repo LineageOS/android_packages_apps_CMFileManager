@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//7xE\u003d",
+        "filename": "themes/res/values-fr/strings.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2012-11-18T03:47:34Z",
+      "side": 1,
+      "message": "Please remove this line with a new Patch!\ntranslatable \u003d \"false\" is here for a reason!",
+      "revId": "660bb5d8e7f7d43fc9d8b6aa8497d197b6f4a902",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
