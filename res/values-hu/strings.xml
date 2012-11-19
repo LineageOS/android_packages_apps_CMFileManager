@@ -403,13 +403,13 @@
     <!-- Actions Dialog * Menu * Deselect -->
     <string name="actions_menu_deselect">Elvet</string>
     <!-- Actions Dialog * Menu * Paste selection -->
-    <string name="actions_menu_paste_selection">Kijelölés beillesztése</string>
+    <string name="actions_menu_paste_selection">Kijelöltek beillesztése</string>
     <!-- Actions Dialog * Menu * Move selection -->
-    <string name="actions_menu_move_selection">Kijelölés mozgatása</string>
+    <string name="actions_menu_move_selection">Kijelöltek mozgatása</string>
     <!-- Actions Dialog * Menu * Delete selection -->
-    <string name="actions_menu_delete_selection">Kijelölés törlése</string>
+    <string name="actions_menu_delete_selection">Kijelöltek törlése</string>
     <!-- Actions Dialog * Menu * Compress selection -->
-    <string name="actions_menu_compress_selection">Kijelölés tömörítése</string>
+    <string name="actions_menu_compress_selection">Kijelöltek tömörítése</string>
     <!-- Actions Dialog * Menu * Create link -->
     <string name="actions_menu_create_link">Link létrehozása</string>
     <!-- Actions Dialog * Menu * Open -->
