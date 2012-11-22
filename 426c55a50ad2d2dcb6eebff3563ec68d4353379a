@@ -2,6 +2,74 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAAa3//6+Y\u003d",
+        "filename": "res/values-pt-rBR/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2012-11-22T21:18:14Z",
+      "side": 1,
+      "message": "Should be \"Desmarcar tudo\". \"Deselecionar\" or \"Desselecionar\" doesn\u0027t exists.",
+      "revId": "426c55a50ad2d2dcb6eebff3563ec68d4353379a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//6+c\u003d",
+        "filename": "res/values-pt-rBR/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2012-11-22T21:18:14Z",
+      "side": 1,
+      "message": "Should be \"Desmarcar tudo\".",
+      "revId": "426c55a50ad2d2dcb6eebff3563ec68d4353379a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//6+k\u003d",
+        "filename": "res/values-pt-rBR/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2012-11-22T21:18:14Z",
+      "side": 1,
+      "message": "Please, replace \"não irão ser\" by \"não serão\".",
+      "revId": "426c55a50ad2d2dcb6eebff3563ec68d4353379a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//6+g\u003d",
+        "filename": "res/values-pt-rBR/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2012-11-22T21:18:14Z",
+      "side": 1,
+      "message": "Missing space at \"dispositivoao\", should be \"dispositivo ao\" ?.",
+      "revId": "426c55a50ad2d2dcb6eebff3563ec68d4353379a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAa3//7Is\u003d",
         "filename": "res/values-pt-rBR/strings.xml",
         "patchSetId": 1
