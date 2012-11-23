@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//6zY\u003d",
+        "filename": "themes/res/values-ja/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1579
+      },
+      "writtenOn": "2012-11-23T11:18:05Z",
+      "side": 1,
+      "message": "IMHO, that would be better \"?\" than \"?\" since theme_default_description uses \"?\" or vice versa.",
+      "revId": "8e39373476fc215358606c30a1004bd36879c279",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
