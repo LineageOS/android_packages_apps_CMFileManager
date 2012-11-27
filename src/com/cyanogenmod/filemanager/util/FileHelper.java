@@ -825,9 +825,10 @@ public final class FileHelper {
         }
         String ext = getExtension(fso);
         if (ext != null) {
+            String extLC = ext.toLowerCase();
             int cc = VALID.length;
             for (int i = 0; i < cc; i++) {
-                if (VALID[i].compareTo(ext) == 0) {
+                if (VALID[i].compareTo(extLC) == 0) {
                     return true;
                 }
             }
