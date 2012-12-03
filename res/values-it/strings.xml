@@ -219,10 +219,10 @@
   <string name="actions_menu_deselect_all">Deseleziona tutti</string>
   <string name="actions_menu_select">Seleziona</string>
   <string name="actions_menu_deselect">Deseleziona</string>
-  <string name="actions_menu_paste_selection">Incolla selezione</string>
-  <string name="actions_menu_move_selection">Sposta selezione</string>
-  <string name="actions_menu_delete_selection">Cancella selezione</string>
-  <string name="actions_menu_compress_selection">Comprimi selezione</string>
+  <string name="actions_menu_paste_selection">Incolla selezionati</string>
+  <string name="actions_menu_move_selection">Sposta selezionati</string>
+  <string name="actions_menu_delete_selection">Elimina selezionati</string>
+  <string name="actions_menu_compress_selection">Comprimi selezionati</string>
   <string name="actions_menu_create_link">Crea collegamento</string>
   <string name="actions_menu_open">Apri</string>
   <string name="actions_menu_open_with">Apri con</string>
