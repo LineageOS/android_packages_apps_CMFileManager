@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAbn///KI\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 625,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-12-28T22:06:05Z",
+      "side": 1,
+      "message": "Licht thema",
+      "revId": "f8c822cda065ca88fe760334184bf397eb0044f4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
