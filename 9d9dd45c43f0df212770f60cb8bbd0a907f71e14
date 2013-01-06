@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcX///xo\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 580,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-01-06T22:02:18Z",
+      "side": 1,
+      "message": "Relevantiewidget\n\nHet gaat hier om een klein icoontje dat wordt weergegeven, wat aangeeft wat de relevantie van de zoekopdracht is. Ik vind het woord \"widget\" hier erg verwarrend. Ik moest de optie 3x aan en uit zetten om te kijken wat er gebeurde.\n\n- Relevantiepictogram tonen",
+      "revId": "9d9dd45c43f0df212770f60cb8bbd0a907f71e14",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcX///yA\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-01-06T22:02:18Z",
+      "side": 1,
+      "message": "Dit vind ik wel een beetje een overdreven lang woord :-p\nDit lijkt me veel duidelijker:\n\n- Resultaten sorteren op",
+      "revId": "9d9dd45c43f0df212770f60cb8bbd0a907f71e14",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcX///x4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 588,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-01-06T22:02:18Z",
+      "side": 1,
+      "message": "- Naam",
+      "revId": "9d9dd45c43f0df212770f60cb8bbd0a907f71e14",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcX///x0\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 590,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-01-06T22:02:18Z",
+      "side": 1,
+      "message": "- Relevantie",
+      "revId": "9d9dd45c43f0df212770f60cb8bbd0a907f71e14",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
