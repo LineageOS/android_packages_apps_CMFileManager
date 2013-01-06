@@ -72,6 +72,41 @@
     },
     {
       "key": {
+        "uuid": "AAAAcX///tw\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-01-06T23:58:02Z",
+      "side": 1,
+      "message": "ja ook goed :)\n\n- Resultaten sorteren",
+      "parentUuid": "AAAAcX///vs\u003d",
+      "revId": "9d9dd45c43f0df212770f60cb8bbd0a907f71e14",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcX///tk\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 586,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-01-06T23:58:02Z",
+      "side": 1,
+      "message": "- Niet sorteren\n\nVind ik mooier.\n\nof alleen\n\n- Niet\n\n\n?",
+      "revId": "9d9dd45c43f0df212770f60cb8bbd0a907f71e14",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcX///x4\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -89,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcX///ts\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 588,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-01-06T23:58:02Z",
+      "side": 1,
+      "message": "- Op naam",
+      "parentUuid": "AAAAcX///x4\u003d",
+      "revId": "9d9dd45c43f0df212770f60cb8bbd0a907f71e14",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcX///x0\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -100,6 +153,24 @@
       "writtenOn": "2013-01-06T22:02:18Z",
       "side": 1,
       "message": "- Relevantie",
+      "revId": "9d9dd45c43f0df212770f60cb8bbd0a907f71e14",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcX///to\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 590,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-01-06T23:58:02Z",
+      "side": 1,
+      "message": "- Op relevantie",
+      "parentUuid": "AAAAcX///x0\u003d",
       "revId": "9d9dd45c43f0df212770f60cb8bbd0a907f71e14",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
