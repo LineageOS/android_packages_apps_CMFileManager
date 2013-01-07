@@ -62,6 +62,7 @@ import com.cyanogenmod.filemanager.util.StorageHelper;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.IOException;
 
 /**
  * A class that wraps a dialog for showing the list of actions that
@@ -394,13 +395,60 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
                 NavigationActionPolicy.openParentFolder(
                         this.mContext, this.mFso, this.mOnRequestRefreshListener);
                 break;
-
+            
+            //- Toggle .nomedia file
+            case R.id.mnu_actions_nomedia_toggle:
+                toggleNoMediaFile(this.mFso);
+                break;
             default:
                 break;
         }
 
         //Dismiss the dialog
         this.mDialog.dismiss();
+    }
+    
+    /**
+     * Method that toggles the presence of a .nomedia file in a diretory
+     *
+     * @param path The FileSystemObject to the directory in question
+     */
+    private void toggleNoMediaFile(FileSystemObject path) {
+        File nomedia = new File(path.getFullPath() + "/.nomedia");
+        if (nomedia.isFile()) {
+            //.nomedia exists, remove it
+            if(!nomedia.delete()) {
+                DialogHelper.showToast(
+                    this.mContext,
+                    this.mContext.getString(R.string.actions_failed_to_remove_nomedia),
+                    Toast.LENGTH_SHORT);
+            } else {
+                DialogHelper.showToast(
+                    this.mContext,
+                    path.getName() + " " + this.mContext.getString(R.string.actions_removed_nomedia),
+                    Toast.LENGTH_SHORT);
+            }
+        } else {
+            //no .nomedia file, create it
+            try {
+                if(nomedia.createNewFile()) {
+                    DialogHelper.showToast(
+                        this.mContext,
+                        path.getName() + " " + this.mContext.getString(R.string.actions_created_nomedia),
+                        Toast.LENGTH_SHORT);
+                } else {
+                    DialogHelper.showToast(
+                        this.mContext,
+                        this.mContext.getString(R.string.actions_failed_to_create_no_media),
+                        Toast.LENGTH_SHORT);
+                } 
+            } catch(IOException ex) {
+                DialogHelper.showToast(
+                    this.mContext,
+                    this.mContext.getString(R.string.actions_failed_to_create_no_media),
+                    Toast.LENGTH_SHORT);
+            }
+        }
     }
 
     /**
@@ -601,6 +649,18 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
             MimeTypeCategory category = MimeTypeHelper.getCategory(this.mContext, this.mFso);
             if (category.compareTo(MimeTypeCategory.EXEC) != 0) {
                 menu.removeItem(R.id.mnu_actions_execute);
+            }   
+        }
+
+        // Only allow .nomedia toggle in stroge volume
+        if (!StorageHelper.isPathInStorageVolume(this.mFso.getFullPath())) {
+            menu.removeItem(R.id.mnu_actions_nomedia_toggle);
+        } else {
+            //test if we need to toggle the text
+            File nomedia = new File(mFso.getFullPath() + "/.nomedia");
+            if(nomedia.isFile()) {
+                MenuItem toggleMenuItem = menu.findItem(R.id.mnu_actions_nomedia_toggle);
+                toggleMenuItem.setTitle(R.string.actions_menu_include_with_media_scanner);
             }
         }
 

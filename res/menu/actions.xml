@@ -70,6 +70,10 @@
       android:id="@+id/mnu_actions_add_shortcut_current_folder"
       android:showAsAction="ifRoom"
       android:title="@string/actions_menu_add_shortcut"/>
+    <item
+      android:id="@+id/mnu_actions_nomedia_toggle"
+      android:showAsAction="ifRoom"
+      android:title="@string/actions_menu_exclude_from_media_scanner"/>
   </group>
 
   <!-- FileSystemObject Actions -->
