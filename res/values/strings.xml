@@ -509,6 +509,19 @@
   <string name="actions_menu_add_shortcut">Add shortcut</string>
   <!-- Actions Dialog * Menu * Open parent folder -->
   <string name="actions_menu_open_parent_folder">Open parent</string>
+  <!-- Actions Dialog * Menu * Exclude from media scanner -->
+  <string name="actions_menu_exclude_from_media_scanner">Skip media scan</string>
+  <!-- Actions Dialog * Menu * Include with media scanner -->
+  <string name="actions_menu_include_with_media_scanner">Resume media scan</string>
+  <!-- Actions Dialog * Toggle .nomedia * Failed to remove .nomedia -->
+  <string name="actions_failed_to_remove_nomedia">Failed to include in Media Scanner</string>
+  <!-- Actions Dialog * Toggle .nomedia * removed .nomedia file -->
+  <string name="actions_removed_nomedia">included in Media Scanner</string>
+  <!-- Actions Dialog * Toggle .nomedia * created .nomedia file -->
+  <string name="actions_failed_to_create_no_media">Failed to exclude from Media Scanner</string>
+  <!-- Actions Dialog * Toggle .nomedia * failed to create .nomedia file -->
+  <string name="actions_created_nomedia">excluded from Media Scanner</string>
+  <string name="fso_properties_dialog_include_in_media_scan">Skip media scan:</string>
 
   <!-- Actions * Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">
