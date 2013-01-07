@@ -35,12 +35,17 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.FolderUsageExecutable;
 import com.cyanogenmod.filemanager.console.ConsoleBuilder;
+import com.cyanogenmod.filemanager.console.ConsoleAllocException;
+import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
+import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
 import com.cyanogenmod.filemanager.model.AID;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.model.FolderUsage;
@@ -65,8 +70,12 @@ import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
 import com.cyanogenmod.filemanager.util.ResourcesHelper;
+import com.cyanogenmod.filemanager.util.StorageHelper;
 
 import java.text.DateFormat;
+import java.io.File;
+import java.io.IOException;
+import java.io.FileNotFoundException;
 
 /**
  * A class that wraps a dialog for showing information about a {@link FileSystemObject}
@@ -357,6 +366,17 @@ public class FsoPropertiesDialog
         setPermissionCheckBoxesListener(this.mChkGroupPermission);
         setPermissionCheckBoxesListener(this.mChkOthersPermission);
 
+        // Check if we should show "Skip media scan" toggle
+        if(!StorageHelper.isPathInStorageVolume(this.mFso.getFullPath()) || !FileHelper.isDirectory(this.mFso)) {
+            LinearLayout fsoSkipMediaScanView = (LinearLayout)contentView.findViewById(R.id.fso_skip_media_scan_view);
+            fsoSkipMediaScanView.setVisibility(View.GONE);
+        } else {
+            //attach the click events
+            CheckBox cbFsoIncludeInMediaScan = (CheckBox)contentView.findViewById(R.id.fso_include_in_media_scan);
+            cbFsoIncludeInMediaScan.setChecked(checkNoMediaFile());
+            cbFsoIncludeInMediaScan.setOnCheckedChangeListener(this);
+        }
+
         //Change the tab
         onClick(this.mInfoViewTab);
         this.mIgnoreCheckEvents = false;
@@ -538,38 +558,137 @@ public class FsoPropertiesDialog
         }
     }
 
+    //return what the state of the checkbox should be
+    private boolean toggleNoMediaFile(boolean isChecked) {
+        boolean finalCheckboxState = false;
+
+        File nomedia = new File(mFso.getFullPath(), ".nomedia");
+
+        if(isChecked) {
+            if (!nomedia.isFile()) {
+                finalCheckboxState = true;
+                //no .nomedia file, create it
+                try {
+                    if(!nomedia.createNewFile()) {
+                        //failed to create .nomedia file
+                        DialogHelper.showToast(
+                            this.mContext,
+                            "Failed to prevent media scanning",
+                            Toast.LENGTH_SHORT);
+                        finalCheckboxState = false;
+                    }
+                } catch(IOException ex) {
+                    //failed to create .nomedia file
+                    DialogHelper.showToast(
+                        this.mContext,
+                        "Failed to prevent media scanning",
+                        Toast.LENGTH_SHORT);
+                    finalCheckboxState = false;
+                }
+            }
+        } else {
+            finalCheckboxState = false;
+
+            if (nomedia.isDirectory()) {
+                //confirm removing the dir
+                AlertDialog alert = DialogHelper.createYesNoDialog(
+                    this.mContext,
+                    R.string.fso_properties_dialog_delete_nomedia_dir_title,
+                    R.string.fso_properties_dialog_delete_nomedia_dir_body,
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            if(which == DialogInterface.BUTTON_POSITIVE) {
+                                try {
+                                    CommandHelper.deleteDirectory(
+                                        FsoPropertiesDialog.this.mContext,
+                                        FsoPropertiesDialog.this.mFso.getFullPath() + "/.nomedia",
+                                        null);
+                                } catch(Exception ex) {
+                                    DialogHelper.showToast(
+                                        FsoPropertiesDialog.this.mContext,
+                                        "Failed to prevent media scanning",
+                                        Toast.LENGTH_SHORT);
+                                }
+                            } else {
+                                DialogHelper.showToast(
+                                    FsoPropertiesDialog.this.mContext,
+                                    "Cancelling Delete",
+                                    Toast.LENGTH_SHORT);
+                            }
+                        }
+                    });
+                DialogHelper.delegateDialogShow(this.mContext, alert);
+            } else {
+                if (nomedia.isFile()) {
+                    //.nomedia exists, remove it
+                    if(!nomedia.delete()) {
+                        //failed to delete .nomedia file
+                        DialogHelper.showToast(
+                            this.mContext,
+                            "Failed to start media scanning",
+                            Toast.LENGTH_SHORT);
+                        finalCheckboxState = true;
+                    }
+                }
+            }
+        }
+
+        return finalCheckboxState;
+    }
+
+    private boolean checkNoMediaFile() {
+        File nomedia = new File(mFso.getFullPath(), ".nomedia");
+        if (nomedia.isFile() || nomedia.isDirectory()) {
+            return true;
+        }
+        return false;
+    }
+
     /**
      * {@inheritDoc}
      */
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        if (this.mIgnoreCheckEvents) return;
+        if(buttonView.getId() == R.id.fso_include_in_media_scan) {
+            buttonView.setChecked(toggleNoMediaFile(isChecked));
+        } else {
+            if (this.mIgnoreCheckEvents) return;
 
-        try {
-            // Cancel the folder usage command
-            cancelFolderUsageCommand();
-
-            // Retrieve the permissions and send to operating system
-            Permissions permissions = getPermissions();
-            if (!CommandHelper.changePermissions(
-                    this.mContext, this.mFso.getFullPath(), permissions, null)) {
-                // Show the warning message
-                setMsg(this.mContext.getString(
-                        R.string.fso_properties_failed_to_change_permission_msg));
-
-                // Update the permissions with the previous information
-                updatePermissions();
-                return;
-            }
-
-            // Some filesystem, like sdcards, doesn't allow to change the permissions.
-            // But the system doesn't return the fail. Read again the fso and compare to
-            // ensure that the permission was changed
             try {
-                FileSystemObject systemFso  =
-                        CommandHelper.getFileInfo(
-                                this.mContext, this.mFso.getFullPath(), false, null);
-                if (systemFso == null || systemFso.getPermissions().compareTo(permissions) != 0) {
+                // Cancel the folder usage command
+                cancelFolderUsageCommand();
+
+                // Retrieve the permissions and send to operating system
+                Permissions permissions = getPermissions();
+                if (!CommandHelper.changePermissions(
+                        this.mContext, this.mFso.getFullPath(), permissions, null)) {
+                    // Show the warning message
+                    setMsg(this.mContext.getString(
+                            R.string.fso_properties_failed_to_change_permission_msg));
+
+                    // Update the permissions with the previous information
+                    updatePermissions();
+                    return;
+                }
+
+                // Some filesystem, like sdcards, doesn't allow to change the permissions.
+                // But the system doesn't return the fail. Read again the fso and compare to
+                // ensure that the permission was changed
+                try {
+                    FileSystemObject systemFso  =
+                            CommandHelper.getFileInfo(
+                                    this.mContext, this.mFso.getFullPath(), false, null);
+                    if (systemFso == null || systemFso.getPermissions().compareTo(permissions) != 0) {
+                        // Show the warning message
+                        setMsg(FsoPropertiesDialog.this.mContext.getString(
+                                R.string.fso_properties_failed_to_change_permission_msg));
+
+                        // Update the permissions with the previous information
+                        updatePermissions();
+                        return;
+                    }
+                } catch (Exception e) {
                     // Show the warning message
                     setMsg(FsoPropertiesDialog.this.mContext.getString(
                             R.string.fso_properties_failed_to_change_permission_msg));
@@ -578,49 +697,41 @@ public class FsoPropertiesDialog
                     updatePermissions();
                     return;
                 }
-            } catch (Exception e) {
-                // Show the warning message
-                setMsg(FsoPropertiesDialog.this.mContext.getString(
-                        R.string.fso_properties_failed_to_change_permission_msg));
 
-                // Update the permissions with the previous information
-                updatePermissions();
-                return;
+                // The permission was changed. Refresh the information
+                this.mFso.setPermissions(permissions);
+                this.mHasChanged = true;
+                setMsg(null);
+
+            } catch (Exception ex) {
+                // Capture the exception and show warning message
+                ExceptionUtil.translateException(
+                        this.mContext, ex, true, true, new ExceptionUtil.OnRelaunchCommandResult() {
+                    @Override
+                    public void onSuccess() {
+                        // Hide the message
+                        setMsg(null);
+                    }
+
+                    @Override
+                    public void onCancelled() {
+                        // Update the permissions with the previous information
+                        updatePermissions();
+                        setMsg(null);
+                    }
+
+                    @Override
+                    public void onFailed(Throwable cause) {
+                        // Show the warning message
+                        setMsg(FsoPropertiesDialog.this.mContext.getString(
+                                R.string.fso_properties_failed_to_change_permission_msg));
+
+                        // Update the permissions with the previous information
+                        updatePermissions();
+                    }
+                });
+
             }
-
-            // The permission was changed. Refresh the information
-            this.mFso.setPermissions(permissions);
-            this.mHasChanged = true;
-            setMsg(null);
-
-        } catch (Exception ex) {
-            // Capture the exception and show warning message
-            ExceptionUtil.translateException(
-                    this.mContext, ex, true, true, new ExceptionUtil.OnRelaunchCommandResult() {
-                @Override
-                public void onSuccess() {
-                    // Hide the message
-                    setMsg(null);
-                }
-
-                @Override
-                public void onCancelled() {
-                    // Update the permissions with the previous information
-                    updatePermissions();
-                    setMsg(null);
-                }
-
-                @Override
-                public void onFailed(Throwable cause) {
-                    // Show the warning message
-                    setMsg(FsoPropertiesDialog.this.mContext.getString(
-                            R.string.fso_properties_failed_to_change_permission_msg));
-
-                    // Update the permissions with the previous information
-                    updatePermissions();
-                }
-            });
-
         }
     }
 

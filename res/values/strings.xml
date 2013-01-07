@@ -311,6 +311,10 @@
     <item quantity="one">1 files</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> files</item>
   </plurals>
+  <!-- Fso Properties Dialog * Skip meida scan -->
+  <string name="fso_properties_dialog_include_in_media_scan">Skip media scan</string>
+  <string name="fso_properties_dialog_delete_nomedia_dir_title">Delete .nomedia directory</string>
+  <string name="fso_properties_dialog_delete_nomedia_dir_body">This directory contains a .nomedia directory.  Do you want to delete it and all of its contents?</string>
 
   <!-- History * History activity title -->
   <string name="history">History</string>
