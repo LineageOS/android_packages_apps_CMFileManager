@@ -35,6 +35,7 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.LinearLayout;
 
 import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
@@ -65,8 +66,11 @@ import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
 import com.cyanogenmod.filemanager.util.ResourcesHelper;
+import com.cyanogenmod.filemanager.util.StorageHelper;
 
 import java.text.DateFormat;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * A class that wraps a dialog for showing information about a {@link FileSystemObject}
@@ -357,6 +361,18 @@ public class FsoPropertiesDialog
         setPermissionCheckBoxesListener(this.mChkGroupPermission);
         setPermissionCheckBoxesListener(this.mChkOthersPermission);
 
+        // Check if we should show "Skip media scan" toggle
+        if(!StorageHelper.isPathInStorageVolume(this.mFso.getFullPath())) {
+            LinearLayout fsoSkipMediaScanView = (LinearLayout)contentView.findViewById(R.id.fso_skip_media_scan_view);
+            fsoSkipMediaScanView.setVisibility(View.GONE);
+        } else {
+            //attach the click events
+            CheckBox cbFsoIncludeInMediaScan = (CheckBox)contentView.findViewById(R.id.fso_include_in_media_scan);
+            cbFsoIncludeInMediaScan.setOnCheckedChangeListener(this);
+
+            cbFsoIncludeInMediaScan.setChecked(checkNoMediaFile());
+        }
+
         //Change the tab
         onClick(this.mInfoViewTab);
         this.mIgnoreCheckEvents = false;
@@ -538,12 +554,46 @@ public class FsoPropertiesDialog
         }
     }
 
+    private void toggleNoMediaFile(boolean isChecked) {
+        if(isChecked) {
+            File nomedia = new File(mFso.getFullPath(), ".nomedia");
+            if (!nomedia.isFile()) {
+                //no .nomedia file, create it
+                try {
+                    if(nomedia.createNewFile()) {
+                    } else {
+                    }
+                } catch(IOException ex) {
+                }
+            }
+        } else {
+            File nomedia = new File(mFso.getFullPath(), ".nomedia");
+            if (nomedia.isFile()) {
+                //.nomedia exists, remove it
+                if(!nomedia.delete()) {
+                } else {
+                }
+            }
+        }
+    }
+
+    private boolean checkNoMediaFile() {
+        File nomedia = new File(mFso.getFullPath(), ".nomedia");
+        if (nomedia.isFile()) {
+            return true;
+        }
+        return false;
+    }
+
     /**
      * {@inheritDoc}
      */
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        if (this.mIgnoreCheckEvents) return;
+        if(buttonView.getId() == R.id.fso_include_in_media_scan) {
+            toggleNoMediaFile(isChecked);
+	} else {
+	if (this.mIgnoreCheckEvents) return;
 
         try {
             // Cancel the folder usage command
@@ -622,6 +672,7 @@ public class FsoPropertiesDialog
             });
 
         }
+        } //end the if/else, indent this crap later
     }
 
     /**
