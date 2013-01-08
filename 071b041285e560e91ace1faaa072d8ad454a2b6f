@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcX///G4\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 513,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-08T06:16:09Z",
+      "side": 1,
+      "message": "This 2 strings are to long. Please, you should consider to join this string in only one resource, like \"Toogle media scan\", or at least something no more long than 16 characters.",
+      "revId": "071b041285e560e91ace1faaa072d8ad454a2b6f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcX///GM\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 415,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-08T06:16:09Z",
+      "side": 1,
+      "message": "Please, move this method to a new policy class (FsoActionPolicy)  or split this method and add to NewActionPolicy and DeleteActionPolicy.",
+      "revId": "071b041285e560e91ace1faaa072d8ad454a2b6f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcX///GI\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 416,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-08T06:16:09Z",
+      "side": 1,
+      "message": "This method create or delete a file, so call this.mOnRequestRefreshListener.onRequestRefresh() and this.mOnRequestRefreshListener.onRequestRemove to refresh the listview",
+      "revId": "071b041285e560e91ace1faaa072d8ad454a2b6f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcX///Gs\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 417,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-08T06:16:09Z",
+      "side": 1,
+      "message": "Use \"File nomedia \u003d new File(path.getFullPath(), \".nomedia\");\"",
+      "revId": "071b041285e560e91ace1faaa072d8ad454a2b6f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcX///Fw\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-08T06:16:09Z",
+      "side": 1,
+      "message": "What happens if a folder \".nomedia\" exists. It will going to crash, because the name \".nomedia\" exists. I think is better to check nomedia.exists()",
+      "revId": "071b041285e560e91ace1faaa072d8ad454a2b6f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcX///GE\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 655,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-08T06:16:09Z",
+      "side": 1,
+      "message": "You must protect this with \n\nif(this.mGlobal) {\n....\n}\n\nOtherwise, if a .nomedia file exists in a subfolder and the user do a long-click over this folder, it will cause a FC.",
+      "revId": "071b041285e560e91ace1faaa072d8ad454a2b6f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcX///Go\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 660,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-08T06:16:09Z",
+      "side": 1,
+      "message": "\"File nomedia \u003d new File(mFso.getFullPath(), \".nomedia\");\"",
+      "revId": "071b041285e560e91ace1faaa072d8ad454a2b6f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcX///Fs\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 661,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-08T06:16:09Z",
+      "side": 1,
+      "message": "The same here",
+      "revId": "071b041285e560e91ace1faaa072d8ad454a2b6f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
