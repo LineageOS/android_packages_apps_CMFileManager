@@ -237,6 +237,12 @@
     <string name="fso_properties_dialog_size">Méret:</string>
     <!-- Fso Properties Dialog * Contains Label -->
     <string name="fso_properties_dialog_contains">Tartalmaz:</string>
+    <!-- Fso Properties Dialog * Last Accessed Time Label -->
+    <string name="fso_properties_dialog_last_accessed_date">Elérés ideje:</string>
+    <!-- Fso Properties Dialog * Last Modified Time Label -->
+    <string name="fso_properties_dialog_last_modified_date">Módosítás ideje:</string>
+    <!-- Fso Properties Dialog * Last Changed Time -->
+    <string name="fso_properties_dialog_last_changed_date">Adatváltozás ideje:</string>
     <!-- Fso Properties Dialog * Owner Label -->
     <string name="fso_properties_dialog_owner">Tulajdonos:</string>
     <!-- Fso Properties Dialog * Group Label -->
