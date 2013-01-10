@@ -16,6 +16,24 @@
       "revId": "81a5fb77631bf830b0e5d90d9b019cba9b69f81c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn///DU\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2013-01-10T16:20:37Z",
+      "side": 1,
+      "message": "Nem! A jelenlegi-re írtam hogy nem tetszik, majd írtam, hogy \u0027visszakoztam\u0027 ahogy Te is. Úgyhogy kérem csak a \u0027+1\u0027-et!!!",
+      "parentUuid": "AAAAcn///D4\u003d",
+      "revId": "81a5fb77631bf830b0e5d90d9b019cba9b69f81c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
