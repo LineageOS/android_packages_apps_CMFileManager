@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcn//+5k\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/FsoPropertiesDialog.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 656,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-01-10T23:07:27Z",
+      "side": 1,
+      "message": "oops, some tabs slipped in here and the line below.",
+      "revId": "6a8eef5f857bbe49533bcfa780ce8e150bb02e36",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
