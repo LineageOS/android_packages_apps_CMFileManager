@@ -51,7 +51,7 @@
   <string name="msgs_read_only_filesystem">El sistema de archivos es de solo-lectura. Intente montarlo como lectura-escritura antes de repetir la operación.</string>
   <string name="msgs_illegal_argument">Argumento ilegal. Invocación fallida.</string>
   <string name="msgs_unresolved_inconsistencies">La operación no está permitida porque podría crear inconsistencias.</string>
-  <string name="msgs_operation_not_allowed_in_current_directory">La operación no está permitida en la carpeta actual.</string>
+  <string name="msgs_operation_not_allowed_in_current_directory">La operación no está permitida en la carpeta actual.\n\nLa carpeta de destino no puede ser una subcarpeta de la actual o ser la misma que la actual.</string>
   <string name="msgs_push_again_to_exit">Pulse de nuevo para salir.</string>
   <string name="msgs_not_registered_app">No hay ninguna aplicación registrada para abrir el tipo de archivo seleccionado.</string>
   <string name="msgs_overwrite_files">Alguno de los archivos existe en la carpeta de destino. \n\n¿Sobrescribir?</string>
@@ -85,7 +85,7 @@
   <string name="cm_filemanager_show_symlinks">Ver accesos directos</string>
   <string name="filesystem_info_warning_title">Sin información</string>
   <string name="filesystem_info_warning_msg">No hay información disponible para el sistema de archivos.</string>
-  <string name="filesystem_info_cant_be_mounted_msg">El sistema de archivos no ha podido ser montado/desmontado.</string>
+  <string name="filesystem_info_cant_be_mounted_msg">El sistema de archivos no puede ser montado/desmontado.</string>
   <string name="filesystem_info_mount_not_allowed_msg">La operación de montaje del sistema de archivos no está permitida en modo seguro. Tocar aquí para cambiar a modo superusuario.</string>
   <string name="filesystem_info_mount_failed_msg">La operación de montaje del sistema de archivos ha fallado. Algunos sistemas de archivos, como las tarjetas SD, no pueden ser montados o desmontados porque están diseñados como sistemas de solo-lectura.</string>
   <string name="filesystem_info_dialog_title">Información del sistema de archivos</string>
@@ -114,7 +114,9 @@
   <string name="fso_properties_dialog_link">Enlace:</string>
   <string name="fso_properties_dialog_size">Tamaño:</string>
   <string name="fso_properties_dialog_contains">Contenido:</string>
-  <string name="fso_properties_dialog_date">Último acceso:</string>
+  <string name="fso_properties_dialog_last_accessed_date">Accedido:</string>
+  <string name="fso_properties_dialog_last_modified_date">Modificado:</string>
+  <string name="fso_properties_dialog_last_changed_date">Cambiado:</string>
   <string name="fso_properties_dialog_owner">Propietario:</string>
   <string name="fso_properties_dialog_group">Grupo:</string>
   <string name="fso_properties_dialog_others">Otros:</string>
@@ -208,8 +210,8 @@
   <string name="actions_menu_deselect_all">Desmarcar todo</string>
   <string name="actions_menu_select">Marcar</string>
   <string name="actions_menu_deselect">Desmarcar</string>
-  <string name="actions_menu_paste_selection">Pegar selección</string>
-  <string name="actions_menu_move_selection">Mover selección</string>
+  <string name="actions_menu_paste_selection">Pegar aquí</string>
+  <string name="actions_menu_move_selection">Mover aquí</string>
   <string name="actions_menu_delete_selection">Borrar selección</string>
   <string name="actions_menu_compress_selection">Comprimir selección</string>
   <string name="actions_menu_create_link">Crear enlace</string>
@@ -281,7 +283,7 @@
   <string name="pref_about_summary">File Manager v<xliff:g id="version">%1$s</xliff:g>
     \nCopyright \u00A9 2012 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">General</string>
-  <string name="pref_case_sensitive_sort">Distinción mayúsc. y minúsc.</string>
+  <string name="pref_case_sensitive_sort">Ordenación sensible</string>
   <string name="pref_disk_usage_warning_level">Aviso de uso de disco</string>
   <string name="pref_disk_usage_warning_level_summary" formatted="false">Mostrar un color diferente para los widgets de uso de disco, cuando el espacio ocupado supere el <xliff:g id="level">%1$s</xliff:g> por ciento del total</string>
   <string name="pref_compute_folder_statistics">Estadísticas de carpetas</string>
@@ -297,7 +299,7 @@
   <string name="pref_access_mode_root">Modo superusuario</string>
   <string name="pref_access_mode_root_summary">Modo superusuario\n\n¡Aviso! Este modo permite operaciones que pueden bloquear el dispositivo. Será su responsabilidad asegurarse de que la operación sea segura</string>
   <string name="pref_search_results_category">Resultados</string>
-  <string name="pref_show_relevance_widget">Mostrar widget de relevancia</string>
+  <string name="pref_show_relevance_widget">Mostrar relevancia</string>
   <string name="pref_highlight_terms">Resaltar términos de búsqueda</string>
   <string name="pref_sort_search_results_mode">Ordenación de resultados</string>
   <string name="pref_sort_search_results_mode_none">Sin ordenar</string>
@@ -315,7 +317,7 @@
   <string name="pref_themes_no_preview">Vista previa\nno disponible</string>
   <string name="pref_themes_confirmation">Tema aplicado satisfactoriamente.</string>
   <string name="pref_themes_not_found">Tema no encontrado.</string>
-  <string name="pref_debug_traces">Habilitar registro de depuración</string>
+  <string name="pref_debug_traces">Habilitar depuración</string>
   <string name="theme_default_name">Tema claro</string>
   <string name="theme_default_description">Un tema en colores claros para File Manager.</string>
   <string name="security_warning_extract">¡Aviso!\n\nExtraer archivos comprimidos que contienen rutas absolutas o relativas puede causar daños en su dispositivo por la posible sobrescritura de archivos de sistema.\n\n¿Continuar?</string>

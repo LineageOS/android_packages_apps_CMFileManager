@@ -18,14 +18,12 @@ package com.cyanogenmod.filemanager.commands.java;
 
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
-import com.cyanogenmod.filemanager.commands.ChangeCurrentDirExecutable;
 import com.cyanogenmod.filemanager.commands.ChangeOwnerExecutable;
 import com.cyanogenmod.filemanager.commands.ChangePermissionsExecutable;
 import com.cyanogenmod.filemanager.commands.CompressExecutable;
 import com.cyanogenmod.filemanager.commands.CopyExecutable;
 import com.cyanogenmod.filemanager.commands.CreateDirExecutable;
 import com.cyanogenmod.filemanager.commands.CreateFileExecutable;
-import com.cyanogenmod.filemanager.commands.CurrentDirExecutable;
 import com.cyanogenmod.filemanager.commands.DeleteDirExecutable;
 import com.cyanogenmod.filemanager.commands.DeleteFileExecutable;
 import com.cyanogenmod.filemanager.commands.DiskUsageExecutable;
@@ -81,15 +79,6 @@ public class JavaExecutableCreator implements ExecutableCreator {
      * {@inheritDoc}
      */
     @Override
-    public ChangeCurrentDirExecutable createChangeCurrentDirExecutable(String dir)
-            throws CommandNotFoundException {
-        return new ChangeCurrentDirCommand(this.mConsole, dir);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
     public ChangeOwnerExecutable createChangeOwnerExecutable(
             String fso, User newUser, Group newGroup) throws CommandNotFoundException {
         throw new CommandNotFoundException("Not implemented"); //$NON-NLS-1$
@@ -129,14 +118,6 @@ public class JavaExecutableCreator implements ExecutableCreator {
     public CreateFileExecutable createCreateFileExecutable(String file)
             throws CommandNotFoundException {
         return new CreateFileCommand(file);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public CurrentDirExecutable createCurrentDirExecutable() throws CommandNotFoundException {
-        return new CurrentDirCommand(this.mConsole);
     }
 
     /**
@@ -200,7 +181,7 @@ public class JavaExecutableCreator implements ExecutableCreator {
     public FindExecutable createFindExecutable(
             String directory, Query query, AsyncResultListener asyncResultListener)
             throws CommandNotFoundException {
-        return new FindCommand(this.mConsole.getCtx(), directory, query, asyncResultListener);
+        return new FindCommand(directory, query, asyncResultListener);
     }
 
     /**
@@ -245,7 +226,7 @@ public class JavaExecutableCreator implements ExecutableCreator {
     @Override
     public ListExecutable createListExecutable(String src)
             throws CommandNotFoundException {
-        return new ListCommand(this.mConsole.getCtx(), src, LIST_MODE.DIRECTORY);
+        return new ListCommand(src, LIST_MODE.DIRECTORY);
     }
 
     /**
@@ -254,7 +235,7 @@ public class JavaExecutableCreator implements ExecutableCreator {
     @Override
     public ListExecutable createFileInfoExecutable(String src, boolean followSymlinks)
             throws CommandNotFoundException {
-        return new ListCommand(this.mConsole.getCtx(), src, LIST_MODE.FILEINFO);
+        return new ListCommand(src, LIST_MODE.FILEINFO);
     }
 
     /**
@@ -336,7 +317,7 @@ public class JavaExecutableCreator implements ExecutableCreator {
     @Override
     public ResolveLinkExecutable createResolveLinkExecutable(String fso)
             throws CommandNotFoundException {
-        return new ResolveLinkCommand(this.mConsole.getCtx(), fso);
+        return new ResolveLinkCommand(fso);
     }
 
     /**

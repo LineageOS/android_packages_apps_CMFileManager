@@ -13,10 +13,9 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Temas do Gerenciador de Arquivos</string>
-    <string name="app_description">Temas para o Gerenciador de Arquivos CyanogenMod</string>
-    <string name="dark_theme_name">Tema escuro</string>
-    <string name="dark_theme_desc">Um tema escuro para o Gerenciador de Arquivos CyanogenMod</string>
+  <string name="app_name">Bestandsbeheerderthema\'s</string>
+  <string name="app_description">Thema\'s voor de bestandsbeheerder van CyanogenMod</string>
+  <string name="dark_theme_name">Donker thema</string>
+  <string name="dark_theme_desc">Donkere kleuren voor de bestandsbeheerder</string>
 </resources>

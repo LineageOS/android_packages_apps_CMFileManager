@@ -580,10 +580,10 @@ public class NavigationActivity extends Activity
                     }
                 } catch (Throwable ex) {
                     if (!NavigationActivity.this.mChRooted) {
-                        //Show exception and exists
+                        //Show exception and exit
                         Log.e(TAG, getString(R.string.msgs_cant_create_console), ex);
                         // We don't have any console
-                        // Show exception and exists
+                        // Show exception and exit
                         DialogHelper.showToast(
                                 NavigationActivity.this,
                                 R.string.msgs_cant_create_console, Toast.LENGTH_LONG);
@@ -612,14 +612,19 @@ public class NavigationActivity extends Activity
                                 StorageHelper.getStorageVolumes(NavigationActivity.this);
                         if (volumes != null && volumes.length > 0) {
                             initialDir = volumes[0].getPath();
+                        } else {
+                            // Show exception and exit
+                            DialogHelper.showToast(
+                                    NavigationActivity.this,
+                                    R.string.msgs_cant_create_console, Toast.LENGTH_LONG);
+                            exit();
+                            return;
                         }
                     }
 
                     //Ensure initial is an absolute directory
                     try {
-                        initialDir =
-                                CommandHelper.getAbsolutePath(
-                                        NavigationActivity.this, initialDir, null);
+                        initialDir = new File(initialDir).getAbsolutePath();
                     } catch (Throwable e) {
                         Log.e(TAG, "Resolve of initital directory fails", e); //$NON-NLS-1$
                         String msg =
@@ -916,7 +921,7 @@ public class NavigationActivity extends Activity
      * {@inheritDoc}
      */
     @Override
-    public void onRequestRefresh(Object o) {
+    public void onRequestRefresh(Object o, boolean clearSelection) {
         if (o instanceof FileSystemObject) {
             // Refresh only the item
             this.getCurrentNavigationView().refresh((FileSystemObject)o);
@@ -924,14 +929,16 @@ public class NavigationActivity extends Activity
             // Refresh all
             getCurrentNavigationView().refresh();
         }
-        this.getCurrentNavigationView().onDeselectAll();
+        if (clearSelection) {
+            this.getCurrentNavigationView().onDeselectAll();
+        }
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public void onRequestRemove(Object o) {
+    public void onRequestRemove(Object o, boolean clearSelection) {
         if (o instanceof FileSystemObject) {
             // Remove from view
             this.getCurrentNavigationView().removeItem((FileSystemObject)o);
@@ -939,9 +946,11 @@ public class NavigationActivity extends Activity
             //Remove from history
             removeFromHistory((FileSystemObject)o);
         } else {
-            onRequestRefresh(null);
+            onRequestRefresh(null, clearSelection);
         }
-        this.getCurrentNavigationView().onDeselectAll();
+        if (clearSelection) {
+            this.getCurrentNavigationView().onDeselectAll();
+        }
     }
 
     /**
@@ -1187,7 +1196,6 @@ public class NavigationActivity extends Activity
         bundle.putString(
                 SearchActivity.EXTRA_SEARCH_DIRECTORY,
                 getCurrentNavigationView().getCurrentDir());
-        // TODO VoiceSearch icon is not shown. This must be a bug of CM. Verify with a test app.
         startSearch(Preferences.getLastSearch(), true, bundle, false);
         return true;
     }
@@ -1419,7 +1427,7 @@ public class NavigationActivity extends Activity
                     public void onClick(DialogInterface alertDialog, int which) {
                         if (which == DialogInterface.BUTTON_NEGATIVE) {
                             // We don't have any console
-                            // Show exception and exists
+                            // Show exception and exit
                             DialogHelper.showToast(
                                     NavigationActivity.this,
                                     R.string.msgs_cant_create_console, Toast.LENGTH_LONG);
@@ -1596,10 +1604,13 @@ public class NavigationActivity extends Activity
         Theme theme = ThemeManager.getCurrentTheme(this);
         theme.setBaseTheme(this, false);
 
+        //- Layout
+        View v = findViewById(R.id.navigation_layout);
+        theme.setBackgroundDrawable(this, v, "background_drawable"); //$NON-NLS-1$
         //- ActionBar
         theme.setTitlebarDrawable(this, getActionBar(), "titlebar_drawable"); //$NON-NLS-1$
         //- StatusBar
-        View v = findViewById(R.id.navigation_statusbar);
+        v = findViewById(R.id.navigation_statusbar);
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             theme.setBackgroundDrawable(this, v, "titlebar_drawable"); //$NON-NLS-1$
         } else {
