@@ -70,6 +70,24 @@
       "revId": "c1d510662352b4a1c52cf3494ef15836d11222e9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+lc\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-11T17:26:26Z",
+      "side": 1,
+      "message": "Das habe ich damals auch gesagt, das warst du noch dagegen :P Vor allem Daniel Hillebrand war damit nicht einversatnden, soweit ich mich erinnern kann. Ich fände es aber persönlich auch schöner, dann müssten wir aber auch den DSP Manager von DSP-Manager zu \"DSP Manager\" ändern.",
+      "parentUuid": "AAAAcn//+lw\u003d",
+      "revId": "c1d510662352b4a1c52cf3494ef15836d11222e9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
