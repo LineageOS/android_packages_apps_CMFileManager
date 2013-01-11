@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcn//+kY\u003d",
+        "filename": "res/layout/fso_properties_dialog.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-11T19:48:52Z",
+      "side": 1,
+      "message": "Please put the comment on top of the \u003cTableRow line and add a newline as for the other lines.",
+      "revId": "72c51a7984cb54ad1771d8ff2bccc4b9451b49a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+kU\u003d",
+        "filename": "res/layout/fso_properties_dialog.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 365,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-11T19:48:52Z",
+      "side": 1,
+      "message": "I wonder whether the layout shouldn\u0027t be changed like that:\n\nLast Modified:        xxxx-xx-xx\n\nLast Changed:       xxxx-xx-xx\n\nAllow Media Scan: [x]\n\nIMHO that\u0027s better than putting the check box in the middle.",
+      "revId": "72c51a7984cb54ad1771d8ff2bccc4b9451b49a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+kw\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/activities/PickerActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-11T19:48:52Z",
+      "side": 1,
+      "message": "What\u0027s the point of that change? In case of \u0027it\u0027s more efficient\u0027, I think the better readability of the old code is more important than the slightly better efficiency of this rarely executed code path.",
+      "revId": "72c51a7984cb54ad1771d8ff2bccc4b9451b49a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+ks\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/FsoPropertiesDialog.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 1295,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-11T19:48:52Z",
+      "side": 1,
+      "message": "exists -\u003e exist",
+      "revId": "72c51a7984cb54ad1771d8ff2bccc4b9451b49a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+ko\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/FsoPropertiesDialog.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 1323,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-11T19:48:52Z",
+      "side": 1,
+      "message": "can you please make this an if(isChecked) { } ... else { /* !isChecked */ } block or split into two functions so it\u0027s easier to understand?\n\nI would probably also change the logic:\n- make isNoMediaFilePresent() only return true if the .nomedia file is indeed a file, not a directory\n- if this function is entered with a .nomedia directory present, show the dialog, else create/delete the file as necessary\n\nIf we account for directories, should there also be a check for the .nomedia file being non-empty?",
+      "revId": "72c51a7984cb54ad1771d8ff2bccc4b9451b49a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+kk\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/FsoPropertiesDialog.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 1338,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-11T19:48:52Z",
+      "side": 1,
+      "message": "Coding style: There (consistently) should be a space after the if.",
+      "revId": "72c51a7984cb54ad1771d8ff2bccc4b9451b49a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+kg\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 1070,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-11T19:48:52Z",
+      "side": 1,
+      "message": "perform -\u003e performs",
+      "revId": "72c51a7984cb54ad1771d8ff2bccc4b9451b49a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+kc\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 1072,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-11T19:48:52Z",
+      "side": 1,
+      "message": "converts -\u003e convert",
+      "revId": "72c51a7984cb54ad1771d8ff2bccc4b9451b49a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
