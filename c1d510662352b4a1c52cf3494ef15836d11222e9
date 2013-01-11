@@ -88,6 +88,24 @@
       "revId": "c1d510662352b4a1c52cf3494ef15836d11222e9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+lM\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-01-11T17:32:08Z",
+      "side": 1,
+      "message": "Ich habe zu diesem Thema meine Meinung noch nie gesagt.\r\nhttp://review.cyanogenmod.org/#/c/25843/5\r\n\r\nDer DSPManager wird doch überhaupt nicht umgebrochen! Den würde ich so lassen.",
+      "parentUuid": "AAAAcn//+lc\u003d",
+      "revId": "c1d510662352b4a1c52cf3494ef15836d11222e9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
