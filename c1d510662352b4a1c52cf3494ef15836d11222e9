@@ -52,6 +52,24 @@
       "revId": "c1d510662352b4a1c52cf3494ef15836d11222e9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+lw\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-01-11T17:15:06Z",
+      "side": 1,
+      "message": "Ich habe mir die damalige Diskussion angesehen. Es ging nur darum, dass \"Dateimanager\" richtig und \"Dataei Manager\" falsch ist.\r\n\r\nDas ist natürlich so, aber meiner Meinung nach sieht es ziemlich bescheiden aus wenn das \"r\" alleine in der zweiten Zeile steht.\r\nIch denke an dieser Stelle sollten wir uns aus ästhetischen Gründen für das falsche \"Datei Manager\" entscheiden.",
+      "parentUuid": "AAAAcn//+nQ\u003d",
+      "revId": "c1d510662352b4a1c52cf3494ef15836d11222e9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
