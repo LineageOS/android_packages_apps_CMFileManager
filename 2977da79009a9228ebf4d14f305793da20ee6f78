@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcn//+aY\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-01-12T03:49:08Z",
+      "side": 1,
+      "message": "Hier hätte ich jetzt wiederum Dateimanager geschrieben.\nZeile 21 ist ja nur eine Ausnahme aus optischen Gründen.",
+      "revId": "2977da79009a9228ebf4d14f305793da20ee6f78",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
