@@ -153,6 +153,14 @@
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> файл(-ов,-а)</item>
   </plurals>
 
+  <string name="fso_properties_dialog_include_in_media_scan">Исключить поиск медиа:</string>
+  <string name="fso_failed_to_allow_media_scan">Не удалось произвести поиск медиа файлов</string>
+  <string name="fso_failed_to_prevent_media_scan">Не удалось отменить поиск медиа файлов</string>
+  <string name="fso_delete_nomedia_dir_title">Удалить каталог .nomedia</string>
+  <string name="fso_delete_nomedia_dir_body">Этот каталог содержит .nomedia.\n\nВы действительно хотите удалить его со всем содержимым?</string>
+  <string name="fso_delete_nomedia_non_empty_title">Удалить файл .nomedia</string>
+  <string name="fso_delete_nomedia_non_empty_body">Этот каталог содержит файл .nomedia.\n\nВы действительно хотите удалить его?</string>
+
   <string name="history">История</string>
   <string name="msgs_history_empty">История пуста</string>
   <string name="msgs_history_unknown">Неизвестный пункт истории</string>
