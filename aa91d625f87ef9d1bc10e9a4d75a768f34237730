@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcn//+ZM\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-01-12T04:23:00Z",
+      "side": 1,
+      "message": "Dateimanager! Bitte wirklich nur in Zeile 21 die \"falsche\" Schreibweise benutzen.",
+      "revId": "aa91d625f87ef9d1bc10e9a4d75a768f34237730",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+Zc\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-01-12T04:23:00Z",
+      "side": 1,
+      "message": "Sind diese vier Zeilen nicht viel zu lang?",
+      "revId": "aa91d625f87ef9d1bc10e9a4d75a768f34237730",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+ZY\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-01-12T04:23:00Z",
+      "side": 1,
+      "message": "Klingt in meinen Ohren irgendwie hässlich, da es denglisch ist.\nIch finde \"Mount point\" oder \"Einhängepunkt\" besser.",
+      "revId": "aa91d625f87ef9d1bc10e9a4d75a768f34237730",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+Y4\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-01-12T04:23:00Z",
+      "side": 1,
+      "message": "Punkt entfallen lassen.",
+      "revId": "aa91d625f87ef9d1bc10e9a4d75a768f34237730",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+ZA\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 387,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-01-12T04:23:00Z",
+      "side": 1,
+      "message": "Der Punkt am Ende sollte entfallen.",
+      "revId": "aa91d625f87ef9d1bc10e9a4d75a768f34237730",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+Y8\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 389,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-01-12T04:23:00Z",
+      "side": 1,
+      "message": "Punkt entfallen lassen.",
+      "revId": "aa91d625f87ef9d1bc10e9a4d75a768f34237730",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+ZE\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 394,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-01-12T04:23:00Z",
+      "side": 1,
+      "message": "Dateimanager! Bitte wirklich nur in Zeile 21 die \"falsche\" Schreibweise benutzen.\n\nAusserdem noch den Punkt entfallen lassen.\n\nWir setzen am Satzende nur ? und !.\nPunkte setzen wir nur wenn mehrere Sätze hintereinander folgen.\nEr entfällt also bei allen \"summary-artigen\" Strings.",
+      "revId": "aa91d625f87ef9d1bc10e9a4d75a768f34237730",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+ZI\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-01-12T04:23:00Z",
+      "side": 1,
+      "message": "Dateimanager! Bitte wirklich nur in Zeile 21 die \"falsche\" Schreibweise benutzen.\n\nAusserdem noch den Punkt entfallen lassen.",
+      "revId": "aa91d625f87ef9d1bc10e9a4d75a768f34237730",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
