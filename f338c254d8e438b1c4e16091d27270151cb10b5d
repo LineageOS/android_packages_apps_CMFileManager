@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcn//+OA\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-12T18:01:24Z",
+      "side": 1,
+      "message": "I think is better \"Omitir escan.\\nmedios:\"",
+      "revId": "f338c254d8e438b1c4e16091d27270151cb10b5d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+OE\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-12T18:01:24Z",
+      "side": 1,
+      "message": "I think is better \"Fallo al impedir el escaneado de medios\"",
+      "revId": "f338c254d8e438b1c4e16091d27270151cb10b5d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+OI\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-12T18:01:24Z",
+      "side": 1,
+      "message": "Borrar archivo \\\u0027.nomedia\\\u0027",
+      "revId": "f338c254d8e438b1c4e16091d27270151cb10b5d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
