@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//+ck\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/activities/PickerActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-12T02:50:35Z",
+      "side": 1,
+      "message": "Formatting and nls warning",
+      "parentUuid": "AAAAcn//+kw\u003d",
+      "revId": "72c51a7984cb54ad1771d8ff2bccc4b9451b49a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//+ks\u003d",
         "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/FsoPropertiesDialog.java",
         "patchSetId": 7
@@ -81,6 +99,24 @@
       "writtenOn": "2013-01-11T19:48:52Z",
       "side": 1,
       "message": "can you please make this an if(isChecked) { } ... else { /* !isChecked */ } block or split into two functions so it\u0027s easier to understand?\n\nI would probably also change the logic:\n- make isNoMediaFilePresent() only return true if the .nomedia file is indeed a file, not a directory\n- if this function is entered with a .nomedia directory present, show the dialog, else create/delete the file as necessary\n\nIf we account for directories, should there also be a check for the .nomedia file being non-empty?",
+      "revId": "72c51a7984cb54ad1771d8ff2bccc4b9451b49a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+cU\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/FsoPropertiesDialog.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 1323,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-12T02:50:35Z",
+      "side": 1,
+      "message": "I splitted the method and checked logic for non empty .nomedia file.\n\nI prefer to leave the isNoMediaFilePresent method untouched, because your proposal will disrupt the user when access the dialog (the user not need to be advise of .nomedia file except if he is going to toogle it).",
+      "parentUuid": "AAAAcn//+ko\u003d",
       "revId": "72c51a7984cb54ad1771d8ff2bccc4b9451b49a5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
