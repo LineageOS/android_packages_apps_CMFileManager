@@ -1,0 +1,293 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcn//+N0\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Ähm, nein. Das ist einfach falsch. Siehe http://de.wikipedia.org/wiki/Leerzeichen_in_Komposita",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+Nw\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Wie wäre es mit:\n\nRoot-Zugriff konnte nicht erlangt werden. Es wird in den sicheren Modus gewechselt.\n\n(oben dann genauso)",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+Ns\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Das Leerzeichen vor Dateien muss weg.",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+Nc\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Vorher (mit auf) war\u0027s IMHO besser. Eine SD-Karte ist kein Dateisystem, sondern sie hat ein Dateisystem.\n\n(oben genauso)",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+NQ\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Aktiviert statt ausgeführt? Die Änderung hier führt ja keinen Scan aus, sondern erlaubt ihn nur.",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+NM\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Verzeichnis \\\u0027.nomedia\\\u0027 löschen",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+NE\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Dieses Verzeichnis enthält ein Verzeichnis [Anmerkung: Nicht Datei!] namens \\\u0027.nomedia\\\u0027. Soll das Verzeichnis und dessen Inhalt gelöscht werden?",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+M8\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Datei \\\u0027.nomedia\\\u0027 löschen",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+M0\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Dieses Verzeichnis [Anmerkung: Verzeichnis vs. Ordner sollte einheitlich verwendet werden] enthält bereits eine Datei namens \\\u0027.nomedia\\\u0027, die nicht leer ist. Soll diese Datei gelöscht werden?",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+Ms\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Das ziemlich klingt komisch, es fehlt ein ist und ein Komma.\n\nVorschlag:\n\nDa der Suchbegriff sehr kurz ist, kann die Suche sehr lange dauern.",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+Mk\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Ist \u0027Lesezeichen löschen\u0027 nicht ausreichend?",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+Mc\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Entpacke...\n\n(um den gleichen Stil zu bewahren)",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+MY\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Analysiere...",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+MU\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Das Leerzeichen von Neue muss weg.",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+MQ\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "...auf das Dateisystem, fragt aber vor dem Ausführen einer Aktion nach Ihrer Zustimmung.",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+MM\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Entweder \u0027durch das Dateisysten\u0027 oder \u0027durch die Dateisysteme\u0027. Außerdem auszuführen -\u003e ausführen.",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+MI\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 423,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-12T18:31:58Z",
+      "side": 1,
+      "message": "Das CyanogenMod-Team.",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
