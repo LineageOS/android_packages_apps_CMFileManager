@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//+Lw\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-12T18:48:40Z",
+      "side": 1,
+      "message": "Es wurde ja nur vorgeschlagen wegen der Darstellung im App-Drawer, aber prinzipiell ist es falsch, da hast du recht. \n\n@Kim: Um ehrlich zu sein sieht aber Einstellungen im App-Drawer auch nicht besser aus mit dem verschobenen \"r\", also sollten wir es bei \"dem richtigen\" Namen belassen.",
+      "parentUuid": "AAAAcn//+N0\u003d",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//+Nw\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2013-01-12T18:31:58Z",
       "side": 1,
       "message": "Wie wäre es mit:\n\nRoot-Zugriff konnte nicht erlangt werden. Es wird in den sicheren Modus gewechselt.\n\n(oben dann genauso)",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+L8\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-12T18:48:40Z",
+      "side": 1,
+      "message": "Klingt gut",
+      "parentUuid": "AAAAcn//+Nw\u003d",
       "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//+Ls\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-12T18:48:40Z",
+      "side": 1,
+      "message": "Stimmt",
+      "parentUuid": "AAAAcn//+Ns\u003d",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//+Nc\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -64,6 +118,24 @@
       "writtenOn": "2013-01-12T18:31:58Z",
       "side": 1,
       "message": "Vorher (mit auf) war\u0027s IMHO besser. Eine SD-Karte ist kein Dateisystem, sondern sie hat ein Dateisystem.\n\n(oben genauso)",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+Lo\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-12T18:48:40Z",
+      "side": 1,
+      "message": "Muss ich dir recht geben, aber das alte klingt schlecht.\nVielleicht fällt einem da ja noch was gutes ein.",
+      "parentUuid": "AAAAcn//+Nc\u003d",
       "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//+Lk\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-12T18:48:40Z",
+      "side": 1,
+      "message": "Da hast du recht",
+      "parentUuid": "AAAAcn//+NQ\u003d",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//+NM\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -104,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//+Lg\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-12T18:48:40Z",
+      "side": 1,
+      "message": "Sieht besser aus. Dann müssen aber die Anführungszeichen überall übernommen werden.",
+      "parentUuid": "AAAAcn//+NM\u003d",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//+NE\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -115,6 +223,24 @@
       "writtenOn": "2013-01-12T18:31:58Z",
       "side": 1,
       "message": "Dieses Verzeichnis enthält ein Verzeichnis [Anmerkung: Nicht Datei!] namens \\\u0027.nomedia\\\u0027. Soll das Verzeichnis und dessen Inhalt gelöscht werden?",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+Lc\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-12T18:48:40Z",
+      "side": 1,
+      "message": "Klingt gut",
+      "parentUuid": "AAAAcn//+NE\u003d",
       "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -155,6 +281,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//+LY\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-12T18:48:40Z",
+      "side": 1,
+      "message": "Klingt \"...namens \\\u0027.nomedia\\\u0027, welche nicht leer ist.\" nicht besser?",
+      "parentUuid": "AAAAcn//+M0\u003d",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//+Ms\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -172,6 +316,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//+LU\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-12T18:48:40Z",
+      "side": 1,
+      "message": "Ich wollte nur dieses doppelte \"sehr\" vermeiden",
+      "parentUuid": "AAAAcn//+Ms\u003d",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//+Mk\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -183,6 +345,24 @@
       "writtenOn": "2013-01-12T18:31:58Z",
       "side": 1,
       "message": "Ist \u0027Lesezeichen löschen\u0027 nicht ausreichend?",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+LQ\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-12T18:48:40Z",
+      "side": 1,
+      "message": "Ja",
+      "parentUuid": "AAAAcn//+Mk\u003d",
       "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -257,6 +437,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//+LM\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-12T18:48:40Z",
+      "side": 1,
+      "message": "Das klingt wesentlich besser",
+      "parentUuid": "AAAAcn//+MQ\u003d",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//+MM\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -274,6 +472,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//+Kw\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-12T18:48:40Z",
+      "side": 1,
+      "message": "Oh, ich hab einfach nur vergessen, das \"e\" zu entfernen.",
+      "parentUuid": "AAAAcn//+MM\u003d",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//+MI\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
@@ -285,6 +501,24 @@
       "writtenOn": "2013-01-12T18:31:58Z",
       "side": 1,
       "message": "Das CyanogenMod-Team.",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//+Kk\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 423,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-01-12T18:48:40Z",
+      "side": 1,
+      "message": "Ich würde den Punkt weglassen, es ist ja praktisch wie eine Signatur und dort kommt kein Punkt am Ende.",
+      "parentUuid": "AAAAcn//+MI\u003d",
       "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
