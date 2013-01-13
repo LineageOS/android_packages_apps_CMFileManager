@@ -34,7 +34,7 @@
   <string name="msgs_cant_create_console">Imposibil de obţinut privilegiile necesare pentru funcţionare.</string>
   <string name="msgs_privileged_console_alloc_failed">Imposibil de executat în modul Acces Root. Schimbare la modul Sigur.</string>
   <string name="msgs_settings_save_failure">Setarea nu poate fi aplicată sau stocată.</string>
-  <string name="msgs_settings_invalid_initial_directory">Dosarul iniţial "<xliff:g id="initial_dir">%1$s</xliff:g>" nu este valid. Schimbare la dosarul rădăcină.</string>
+  <string name="msgs_settings_invalid_initial_directory">Dosarul iniţial \"<xliff:g id="initial_dir">%1$s</xliff:g>\" nu este valid. Schimbare la dosarul rădăcină.</string>
   <string name="msgs_success">Operaţiunea a fost finalizată cu succes.</string>
   <string name="msgs_unknown">A fost detectată o eroare. Operațiunea nu a reușit.</string>
   <string name="msgs_insufficient_permissions">Această operațiune necesită permisiuni ridicate. Încercaţi să schimbaţi la modul de Acces Root.</string>

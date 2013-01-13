@@ -74,7 +74,7 @@
   <string name="msgs_settings_save_failure">A definição não pôde ser aplicada ou guardada.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">A pasta inicial
-    "<xliff:g id="initial_dir">%1$s</xliff:g>" é invalida. Mudando para a pasta root.</string>
+    \"<xliff:g id="initial_dir">%1$s</xliff:g>\" é invalida. Mudando para a pasta root.</string>
 
   <!-- Success -->
   <string name="msgs_success">A operação foi concluída com sucesso.</string>

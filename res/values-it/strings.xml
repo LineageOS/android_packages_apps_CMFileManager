@@ -44,7 +44,7 @@
   <string name="msgs_privileged_console_alloc_failed">Impossibile eseguire in modalità Root. Passaggio a modalità Safe.</string>
   <string name="msgs_settings_save_failure">Impossibile salvare l\'impostazione.</string>
   <string name="msgs_settings_invalid_initial_directory">La cartella iniziale
-    "<xliff:g id="initial_dir">%1$s</xliff:g>" non è valida ed è stata sostituita con la cartella radice.</string>
+    \"<xliff:g id="initial_dir">%1$s</xliff:g>\" non è valida ed è stata sostituita con la cartella radice.</string>
   <string name="msgs_success">Operazione completata con successo.</string>
   <string name="msgs_unknown">Operazione non completata a causa di un errore.</string>
   <string name="msgs_insufficient_permissions">Questa operazione richiede privilegi più elevati. Riprovare con modalità Root attivata.</string>

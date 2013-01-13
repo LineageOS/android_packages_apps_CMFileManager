@@ -49,7 +49,7 @@
   <string name="msgs_cant_create_console">Не удаётся получить необходимые привилегии</string>
   <string name="msgs_privileged_console_alloc_failed">Невозможно запустить в Root-режиме. Переключение в безопасный режим</string>
   <string name="msgs_settings_save_failure">Настройка не может быть применена или сохранена</string>
-  <string name="msgs_settings_invalid_initial_directory">Начальная папка "<xliff:g id="initial_dir">%1$s</xliff:g>" недоступна. Переход в корневую папку</string>
+  <string name="msgs_settings_invalid_initial_directory">Начальная папка \"<xliff:g id="initial_dir">%1$s</xliff:g>\" недоступна. Переход в корневую папку</string>
 
   <string name="msgs_success">Операция прошла успешно</string>
   <string name="msgs_unknown">Были обнаружены ошибки. Операция завершилась неудачно</string>

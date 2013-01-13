@@ -74,7 +74,7 @@
   <string name="msgs_settings_save_failure">Nastavení nemohlo být aplikováno nebo uloženo.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">Výchozí složka
-    "<xliff:g id="initial_dir">%1$s</xliff:g>" je neplatná. Měním na kořenovou složku.</string>
+    \"<xliff:g id="initial_dir">%1$s</xliff:g>\" je neplatná. Měním na kořenovou složku.</string>
 
   <!-- Success -->
   <string name="msgs_success">Operace proběhla úspěšně.</string>

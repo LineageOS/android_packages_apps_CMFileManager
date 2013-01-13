@@ -73,7 +73,7 @@
   <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Diese Einstellung konnte nicht angewendet oder gespeichert werden.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
-  <string name="msgs_settings_invalid_initial_directory">Der Standardordner "<xliff:g id="initial_dir">%1$s</xliff:g>" ist ungültig. Wechsle zum Wurzelverzeichnis.</string>
+  <string name="msgs_settings_invalid_initial_directory">Der Standardordner \"<xliff:g id="initial_dir">%1$s</xliff:g>\" ist ungültig. Wechsle zum Wurzelverzeichnis.</string>
 
   <!-- Success -->
   <string name="msgs_success">Die Aktion wurde erfolgreich ausgeführt.</string>
