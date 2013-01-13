@@ -72,6 +72,23 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//9yw\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 4315
+      },
+      "writtenOn": "2013-01-13T19:54:20Z",
+      "side": 1,
+      "message": "Tippfehler: \"Dieser Vorgang\"",
+      "revId": "7f75c03704e47e7576438a573c0edce89f1fef19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//+Ns\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 5
