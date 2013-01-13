@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcn//91o\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 5470
+      },
+      "writtenOn": "2013-01-13T17:51:03Z",
+      "side": 1,
+      "message": "Dernier accès",
+      "revId": "0aaf39ba54f081095c9c60c0d5a41af4e0950f77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
