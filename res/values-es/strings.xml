@@ -37,7 +37,7 @@
   <string name="msgs_cant_create_console">Imposible obtener privilegios para esta función.</string>
   <string name="msgs_privileged_console_alloc_failed">Imposible ejecutar en modo superusuario. Cambiando a modo seguro.</string>
   <string name="msgs_settings_save_failure">El ajuste no pudo ser aplicado ni guardado.</string>
-  <string name="msgs_settings_invalid_initial_directory">La carpeta inicial "<xliff:g id="initial_dir">%1$s</xliff:g>" es inválida. Cambiando a la carpeta raíz.</string>
+  <string name="msgs_settings_invalid_initial_directory">La carpeta inicial \'<xliff:g id="initial_dir">%1$s</xliff:g>\' es inválida. Cambiando a la carpeta raíz.</string>
   <string name="msgs_success">La operación ha sido completada.</string>
   <string name="msgs_unknown">Ocurrió un error. La operación no se completó.</string>
   <string name="msgs_insufficient_permissions">Esta operación requiere permisos de superusuario. Intente cambiar a modo superusuario.</string>

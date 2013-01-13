@@ -71,7 +71,7 @@
   <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Indstillingen kunne ikke anvendes eller gemmes.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
-  <string name="msgs_settings_invalid_initial_directory">Opstartsmappen "<xliff:g id="initial_dir">%1$s</xliff:g>" er ugyldig. Skifter til rodmappe.</string>
+  <string name="msgs_settings_invalid_initial_directory">Opstartsmappen \'<xliff:g id="initial_dir">%1$s</xliff:g>\' er ugyldig. Skifter til rodmappe.</string>
 
   <!-- Success -->
   <string name="msgs_success">Handlingen blev gennemført med succes.</string>

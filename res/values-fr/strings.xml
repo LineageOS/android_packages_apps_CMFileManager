@@ -67,7 +67,7 @@
   <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Impossible d\'appliquer ou d\'enregistrer le réglage</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
-  <string name="msgs_settings_invalid_initial_directory">Le dossier d\'accueil "<xliff:g id="initial_dir">%1$s</xliff:g>" est invalide. Changement vers le dossier Root.</string>
+  <string name="msgs_settings_invalid_initial_directory">Le dossier d\'accueil \'<xliff:g id="initial_dir">%1$s</xliff:g>\' est invalide. Changement vers le dossier Root.</string>
 
   <!-- Success -->
   <string name="msgs_success">Opération réussie</string>

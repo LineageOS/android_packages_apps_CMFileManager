@@ -66,7 +66,7 @@
   <string name="msgs_settings_save_failure">Η ρύθμιση δεν μπορεί να εφαρμοστεί ή να αποθηκευθεί.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">Ο αρχικός φάκελος
-    "<xliff:g id="initial_dir">%1$s</xliff:g>" δεν είναι έγκυρος. Αλλαγή στο ριζικό φάκελο.</string>
+    \'<xliff:g id="initial_dir">%1$s</xliff:g>\' δεν είναι έγκυρος. Αλλαγή στο ριζικό φάκελο.</string>
 
   <!-- Success -->
   <string name="msgs_success">Η λειτουργία ολοκληρώθηκε με επιτυχία.</string>

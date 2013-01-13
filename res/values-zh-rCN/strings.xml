@@ -75,7 +75,7 @@
   <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">设置无法被应用与保存.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
-  <string name="msgs_settings_invalid_initial_directory">初始文件夹 "<xliff:g id="initial_dir">%1$s</xliff:g>" 是无效的. 切换至 Root 文件夹.</string>
+  <string name="msgs_settings_invalid_initial_directory">初始文件夹 \'<xliff:g id="initial_dir">%1$s</xliff:g>\' 是无效的. 切换至 Root 文件夹.</string>
 
   <!-- Success -->
   <string name="msgs_success">操作已成功的完成.</string>

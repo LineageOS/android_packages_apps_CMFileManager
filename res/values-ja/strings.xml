@@ -75,7 +75,7 @@
   <string name="msgs_settings_save_failure">この設定は適用または保存できませんでした。</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">初期フォルダ
-    "<xliff:g id="initial_dir">%1$s</xliff:g>" は不正です。ルートフォルダに変更します。</string>
+    \'<xliff:g id="initial_dir">%1$s</xliff:g>\' は不正です。ルートフォルダに変更します。</string>
 
   <!-- Success -->
   <string name="msgs_success">操作は成功しました。</string>

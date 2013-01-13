@@ -72,7 +72,7 @@
   <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Kan de instellingen niet toepassen/opslaan.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
-  <string name="msgs_settings_invalid_initial_directory">De eerste map "<xliff:g id="initial_dir">%1$s</xliff:g>" is ongeldig. Veranderen naar hoofdmap.</string>
+  <string name="msgs_settings_invalid_initial_directory">De eerste map \'<xliff:g id="initial_dir">%1$s</xliff:g>\' is ongeldig. Veranderen naar hoofdmap.</string>
 
   <!-- Success -->
   <string name="msgs_success">De bewerking is succesvol voltooid.</string>

@@ -71,7 +71,7 @@
     <!-- The selected setting was not applied or stored -->
     <string name="msgs_settings_save_failure">A beállítást nem lehet alkalmazni, vagy elmenteni.</string>
     <!-- The initial directory has an invalid or inaccessible reference -->
-    <string name="msgs_settings_invalid_initial_directory">A kezdő könyvtár "<xliff:g id="initial_dir">%1$s</xliff:g>" érvénytelen. Váltás a gyökérkönyvtárra.</string>
+    <string name="msgs_settings_invalid_initial_directory">A kezdő könyvtár \'<xliff:g id="initial_dir">%1$s</xliff:g>\' érvénytelen. Váltás a gyökérkönyvtárra.</string>
 
     <!-- Success -->
     <string name="msgs_success">A művelet sikeresen befejeződött.</string>

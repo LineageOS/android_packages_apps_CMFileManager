@@ -39,7 +39,7 @@
     <string name="msgs_cant_create_console">Não foi possível ganhar os privilégios necessarios para funcionar</string>
     <string name="msgs_privileged_console_alloc_failed">Não foi possível rodar em modo de Acesso Root. Alterando para o modo Seguro.</string>
     <string name="msgs_settings_save_failure">A configuração não pode ser aplicada ou gravada</string>
-    <string name="msgs_settings_invalid_initial_directory">A pasta inicial "<xliff:g id="initial_dir" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%1$s</xliff:g>" é inválida. Alterando para a pasta raiz.</string>
+    <string name="msgs_settings_invalid_initial_directory">A pasta inicial \'<xliff:g id="initial_dir" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%1$s</xliff:g>\' é inválida. Alterando para a pasta raiz.</string>
     <string name="msgs_success">A operação foi completada com sucesso</string>
     <string name="msgs_unknown">Um erro foi detectado. A operação não foi bem sucedida</string>
     <string name="msgs_insufficient_permissions">A operação requer permissões de superusuário. Tente trocar para modo de Acesso Root</string>

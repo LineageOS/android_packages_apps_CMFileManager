@@ -60,7 +60,7 @@
     <string name="msgs_cant_create_console">Es war nicht möglich, die für diesen Vorgang nötigen Rechte zu erlangen.</string>
     <string name="msgs_privileged_console_alloc_failed">Root-Zugriff konnte nicht erlangt werden. Es wird in den sicheren Modus gewechselt.</string>
     <string name="msgs_settings_save_failure">Diese Einstellung konnte nicht angewendet werden.</string>
-    <string name="msgs_settings_invalid_initial_directory">Das Standardverzeichnis "<xliff:g id="initial_dir">%1$s</xliff:g>" ist ungültig. Wechsle zum Wurzelverzeichnis.</string>
+    <string name="msgs_settings_invalid_initial_directory">Das Standardverzeichnis \'<xliff:g id="initial_dir">%1$s</xliff:g>\' ist ungültig. Wechsle zum Wurzelverzeichnis.</string>
 
     <string name="msgs_success">Die Aktion wurde erfolgreich ausgeführt.</string>
     <string name="msgs_unknown">Ein Fehler ist aufgetreten. Die Aktion war nicht erfolgreich.</string>
