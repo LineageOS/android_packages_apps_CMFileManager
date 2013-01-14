@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcn//9Zs\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2013-01-14T15:39:12Z",
+      "side": 1,
+      "message": "We also added.",
+      "revId": "a2c1f4064f14f918d2479e61f625d140891f6db0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9Zg\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2013-01-14T15:39:12Z",
+      "side": 1,
+      "message": "We also remove the next line which contains fso_properties_dialog_date",
+      "revId": "a2c1f4064f14f918d2479e61f625d140891f6db0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9Zo\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2013-01-14T15:39:12Z",
+      "side": 1,
+      "message": "We also added.",
+      "revId": "a2c1f4064f14f918d2479e61f625d140891f6db0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9Zk\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 420,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2013-01-14T15:39:12Z",
+      "side": 1,
+      "message": "We also added.",
+      "revId": "a2c1f4064f14f918d2479e61f625d140891f6db0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
