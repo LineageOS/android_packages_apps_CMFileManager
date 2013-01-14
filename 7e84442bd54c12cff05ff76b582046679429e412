@@ -16,6 +16,74 @@
       "revId": "7e84442bd54c12cff05ff76b582046679429e412",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9pQ\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-14T01:18:22Z",
+      "side": 1,
+      "message": "Vor wie muss das Komma weg. Außerdem kann -\u003e darf.\n\nVorschlag: ... der Quelle oder die Quelle selbst sein.\n\noder\n\nDas Zielverzeichnis darf nicht die Quelle oder deren Unterverzeichnis sein.",
+      "revId": "7e84442bd54c12cff05ff76b582046679429e412",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9pI\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-14T01:18:22Z",
+      "side": 1,
+      "message": "Eventuell \u0027Kein Ordner\u0027? Genauso bei den Dateien.",
+      "revId": "7e84442bd54c12cff05ff76b582046679429e412",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9pA\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-14T01:18:22Z",
+      "side": 1,
+      "message": "Standardverzeichnisses",
+      "revId": "7e84442bd54c12cff05ff76b582046679429e412",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9o8\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 423,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-01-14T01:18:22Z",
+      "side": 1,
+      "message": "Bindestrich vor Team",
+      "revId": "7e84442bd54c12cff05ff76b582046679429e412",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
