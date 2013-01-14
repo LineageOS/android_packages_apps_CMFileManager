@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcn//9jM\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 2248
+      },
+      "writtenOn": "2013-01-14T03:59:17Z",
+      "side": 1,
+      "message": "\"en de inhoud daarvan\" tussen komma\u0027s?",
+      "revId": "bfa74c9dd8b8b370d2592727eefaf183d22c8785",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
