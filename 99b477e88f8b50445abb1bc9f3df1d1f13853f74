@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcn//8zk\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-01-16T01:34:37Z",
+      "side": 1,
+      "message": "dit -\u003e deze\ndaarvan -\u003e ervan\n\ndeze .nomedia.map en de inhoud ervan",
+      "revId": "99b477e88f8b50445abb1bc9f3df1d1f13853f74",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
