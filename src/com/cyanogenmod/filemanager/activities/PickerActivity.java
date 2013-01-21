@@ -54,6 +54,7 @@ import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
 import com.cyanogenmod.filemanager.ui.widgets.Breadcrumb;
 import com.cyanogenmod.filemanager.ui.widgets.ButtonItem;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationView;
+import com.cyanogenmod.filemanager.ui.widgets.NavigationView.OnDirectoryChangedListener;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationView.OnFilePickedListener;
 import com.cyanogenmod.filemanager.util.DialogHelper;
 import com.cyanogenmod.filemanager.util.ExceptionUtil;
@@ -72,7 +73,7 @@ import java.util.Map;
  * application.
  */
 public class PickerActivity extends Activity
-        implements OnCancelListener, OnDismissListener, OnFilePickedListener {
+        implements OnCancelListener, OnDismissListener, OnFilePickedListener, OnDirectoryChangedListener {
 
     private static final String TAG = "PickerActivity"; //$NON-NLS-1$
 
@@ -105,7 +106,11 @@ public class PickerActivity extends Activity
     // Extra data for Gallery CROP action
     private static final String EXTRA_CROP = "crop"; //$NON-NLS-1$
 
+    // Scheme for directory picking
+    private static final String DIRECTORY_URI_SCHEME = "folder"; //$NON-NLS-1$
+
     private FileSystemObject mFso;  // The picked item
+    private FileSystemObject mCurrentDirectory;
     private AlertDialog mDialog;
     private Handler mHandler;
     /**
@@ -171,9 +176,21 @@ public class PickerActivity extends Activity
     private void init() {
         // Check that call has a valid request (GET_CONTENT a and mime type)
         String action = getIntent().getAction();
+        Uri data = getIntent().getData();
+        boolean pickingDirectory = false;
 
         Log.d(TAG, "PickerActivity. action: " + String.valueOf(action)); //$NON-NLS-1$
-        if (action.compareTo(Intent.ACTION_GET_CONTENT.toString()) != 0) {
+        Log.d(TAG, "PickerActivity. data: " + data.toString()); //$NON-NLS-1$
+
+        if (Intent.ACTION_GET_CONTENT.equals(action)) {
+            /* ok, picking file */
+        } else if (Intent.ACTION_PICK.equals(action)
+                && data != null
+                && DIRECTORY_URI_SCHEME.equals(data.getScheme())
+                && data.getSchemeSpecificPart().startsWith("//")) { //$NON-NLS-1$
+            /* ok, picking directory */
+            pickingDirectory = true;
+        } else {
             setResult(Activity.RESULT_CANCELED);
             finish();
             return;
@@ -212,6 +229,9 @@ public class PickerActivity extends Activity
                         Boolean.valueOf(localOnly));
             }
         }
+        if (pickingDirectory) {
+            restrictions.put(DisplayRestrictions.DIRECTORY_ONLY_RESTRICTION, true);
+        }
 
         // Create or use the console
         if (!initializeConsole()) {
@@ -243,6 +263,7 @@ public class PickerActivity extends Activity
                 (NavigationView)this.mRootView.findViewById(R.id.navigation_view);
         this.mNavigationView.setRestrictions(restrictions);
         this.mNavigationView.setOnFilePickedListener(this);
+        this.mNavigationView.setOnDirectoryChangedListener(this);
         this.mNavigationView.setBreadcrumb(breadcrumb);
 
         // Apply the current theme
@@ -250,9 +271,12 @@ public class PickerActivity extends Activity
 
         // Create the dialog
         this.mDialog = DialogHelper.createDialog(
-            this, R.drawable.ic_launcher, R.string.picker_title, this.mRootView);
+            this, R.drawable.ic_launcher,
+            pickingDirectory ? R.string.directory_picker_title : R.string.picker_title,
+            this.mRootView);
+
         this.mDialog.setButton(
-                DialogInterface.BUTTON_NEUTRAL,
+                DialogInterface.BUTTON_NEGATIVE,
                 getString(R.string.cancel),
                 new DialogInterface.OnClickListener() {
             @Override
@@ -260,6 +284,18 @@ public class PickerActivity extends Activity
                 dlg.cancel();
             }
         });
+        if (pickingDirectory) {
+            this.mDialog.setButton(
+                    DialogInterface.BUTTON_POSITIVE,
+                    getString(R.string.select),
+                    new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dlg, int which) {
+                    PickerActivity.this.mFso = PickerActivity.this.mCurrentDirectory;
+                    dlg.dismiss();
+                }
+            });
+        }
         this.mDialog.setCancelable(true);
         this.mDialog.setOnCancelListener(this);
         this.mDialog.setOnDismissListener(this);
@@ -269,12 +305,25 @@ public class PickerActivity extends Activity
         ButtonItem fs = (ButtonItem)this.mRootView.findViewById(R.id.ab_filesystem_info);
         fs.setContentDescription(getString(R.string.actionbar_button_storage_cd));
 
+        final String rootDirectory;
+        if (pickingDirectory) {
+            // we've already validated data to have folder:///x/y format before
+            final File initialDir = new File(data.getSchemeSpecificPart().substring(2));
+            if (initialDir.exists() && initialDir.isDirectory() && initialDir.isAbsolute()) {
+                rootDirectory = initialDir.getAbsolutePath();
+            } else {
+                rootDirectory = FileHelper.ROOT_DIRECTORY;
+            }
+        } else {
+            rootDirectory = FileHelper.ROOT_DIRECTORY;
+        }
+
         this.mHandler = new Handler();
         this.mHandler.post(new Runnable() {
             @Override
             public void run() {
                 // Navigate to. The navigation view will redirect to the appropriate directory
-                PickerActivity.this.mNavigationView.changeCurrentDir(FileHelper.ROOT_DIRECTORY);
+                PickerActivity.this.mNavigationView.changeCurrentDir(rootDirectory);
             }
         });
 
@@ -401,6 +450,14 @@ public class PickerActivity extends Activity
     public void onFilePicked(FileSystemObject item) {
         this.mFso = item;
         this.mDialog.dismiss();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void onDirectoryChanged(FileSystemObject item) {
+        this.mCurrentDirectory = item;
     }
 
     /**
