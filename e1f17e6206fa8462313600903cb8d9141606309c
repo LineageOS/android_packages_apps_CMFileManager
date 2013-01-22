@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAc3///Y0\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/activities/PickerActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-22T05:44:36Z",
+      "side": 1,
+      "message": "Make mFso and mCurrentDirectory package for avoid synthetic accessor",
+      "revId": "e1f17e6206fa8462313600903cb8d9141606309c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3///Y8\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/activities/PickerActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-22T05:44:36Z",
+      "side": 1,
+      "message": "Redundant null check: The variable data cannot be null at this location",
+      "revId": "e1f17e6206fa8462313600903cb8d9141606309c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3///Y4\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/activities/PickerActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-22T05:44:36Z",
+      "side": 1,
+      "message": "Boolean.TRUE",
+      "revId": "e1f17e6206fa8462313600903cb8d9141606309c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3///Yg\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/activities/PickerActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 428,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-22T05:44:36Z",
+      "side": 1,
+      "message": "If we expect a folder scheme from input, i think we should return and folder schema also.\n\nif (pickingDirectory) {\n    Uri uri \u003d Uri.fromParts(\"folder\", String.format(\"//%s\", src), null);\n    result.setData(uri);\n} else {\n    result.setData(Uri.fromFile(src));\n}",
+      "revId": "e1f17e6206fa8462313600903cb8d9141606309c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3///Yw\u003d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-01-22T05:44:36Z",
+      "side": 1,
+      "message": "Javadoc param name",
+      "revId": "e1f17e6206fa8462313600903cb8d9141606309c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
