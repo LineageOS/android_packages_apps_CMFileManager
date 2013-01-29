@@ -33,6 +33,24 @@
       "revId": "680f72f852d23ecbebae9b35476a22444a799590",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9O8\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-01-29T03:57:59Z",
+      "side": 1,
+      "message": "It actually is, but it gives a perfect idea of what this application is designed for.\nAfter all, there is an icon that helps to understand this app\u0027s purpose.\n//ya avtor etih izmeneniy, da. \"files\" ne vybivaetsya iz ostal\u0027nyh znachkov (settings / contacts / maps /etc.)",
+      "parentUuid": "AAAAc3//9Ss\u003d",
+      "revId": "680f72f852d23ecbebae9b35476a22444a799590",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
