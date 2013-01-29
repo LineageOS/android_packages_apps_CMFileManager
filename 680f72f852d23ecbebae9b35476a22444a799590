@@ -51,6 +51,24 @@
       "revId": "680f72f852d23ecbebae9b35476a22444a799590",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//9K4\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2337
+      },
+      "writtenOn": "2013-01-29T12:37:53Z",
+      "side": 1,
+      "message": "Maybe better to translate as Failovyi menedger?",
+      "parentUuid": "AAAAc3//9O4\u003d",
+      "revId": "680f72f852d23ecbebae9b35476a22444a799590",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
