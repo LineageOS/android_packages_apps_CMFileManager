@@ -41,10 +41,6 @@
   <!-- The search result name -->
   <string name="search_result_name">Zoeken: <xliff:g id="terms">%1$s</xliff:g></string>
 
-  <!-- Loading waiting message -->
-  <string name="loading_message">Laden\u2026</string>
-  <!-- Cancelled message -->
-  <string name="cancelled_message">Annuleren</string>
   <!-- Error message -->
   <string name="error_message">Fout</string>
 

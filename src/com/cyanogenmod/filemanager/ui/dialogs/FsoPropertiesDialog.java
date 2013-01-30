@@ -328,7 +328,7 @@ public class FsoPropertiesDialog
         }
 
         //- Permissions
-        String loadingMsg = this.mContext.getString(R.string.loading_message);
+        String loadingMsg = this.mContext.getString(android.R.string.loading);
         setSpinnerMsg(this.mContext, FsoPropertiesDialog.this.mSpnOwner, loadingMsg);
         setSpinnerMsg(this.mContext, FsoPropertiesDialog.this.mSpnGroup, loadingMsg);
         updatePermissions();
@@ -1130,8 +1130,8 @@ public class FsoPropertiesDialog
         final Resources res = this.mContext.getResources();
         if (cancelled) {
             try {
-                FsoPropertiesDialog.this.mTvSize.setText(R.string.cancelled_message);
-                FsoPropertiesDialog.this.mTvContains.setText(R.string.cancelled_message);
+                FsoPropertiesDialog.this.mTvSize.setText(android.R.string.cancel);
+                FsoPropertiesDialog.this.mTvContains.setText(android.R.string.cancel);
             } catch (Throwable e) {/**NON BLOCK**/}
 
             // End of drawing
