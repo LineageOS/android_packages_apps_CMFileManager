@@ -328,7 +328,7 @@ public class FsoPropertiesDialog
         }
 
         //- Permissions
-        String loadingMsg = this.mContext.getString(R.string.loading_message);
+        String loadingMsg = this.mContext.getString(android.R.string.loading);
         setSpinnerMsg(this.mContext, FsoPropertiesDialog.this.mSpnOwner, loadingMsg);
         setSpinnerMsg(this.mContext, FsoPropertiesDialog.this.mSpnGroup, loadingMsg);
         updatePermissions();

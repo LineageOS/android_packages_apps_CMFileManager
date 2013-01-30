@@ -44,7 +44,6 @@
     <!-- Search result name -->
     <string name="search_result_name">Suche: <xliff:g id="terms">%1$s</xliff:g></string>
 
-    <string name="loading_message">Lade&#8230;</string>
     <string name="cancelled_message">Abgebrochen</string>
     <string name="error_message">Fehler</string>
 

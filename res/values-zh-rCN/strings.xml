@@ -42,9 +42,6 @@
   <!-- The search result name -->
   <string name="search_result_name">搜索: <xliff:g id="terms">%1$s</xliff:g></string>
 
-  <!-- Loading waiting message -->
-  <string name="loading_message">读取中\u2026</string>
-
   <!-- Cancelled message -->
   <string name="cancelled_message">已取消.</string>
   <!-- Error message -->

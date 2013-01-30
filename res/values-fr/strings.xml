@@ -36,9 +36,6 @@
    <!-- The search result name -->
   <string name="search_result_name">Rechercher\u00A0: <xliff:g id="terms">%1$s</xliff:g></string>
 
-  <!-- Loading waiting message -->
-  <string name="loading_message">Chargement\u2026</string>
-
   <!-- Cancelled message -->
   <string name="cancelled_message">Annulé</string>
   <!-- Error message -->

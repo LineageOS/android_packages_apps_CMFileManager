@@ -42,8 +42,6 @@
   <!-- The search result name -->
   <string name="search_result_name">Procurar: <xliff:g id="terms">%1$s</xliff:g></string>
 
-  <!-- Loading waiting message -->
-  <string name="loading_message">A Ler\u2026</string>
   <!-- Cancelled message -->
   <string name="cancelled_message">Cancelado.</string>
   <!-- Error message -->
