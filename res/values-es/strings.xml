@@ -25,7 +25,6 @@
   <string name="overwrite">Sobrescribir</string>
   <string name="select">Seleccionar</string>
   <string name="search_result_name">Buscar: <xliff:g id="terms">%1$s</xliff:g></string>
-  <string name="loading_message">Cargando\u2026</string>
   <string name="cancelled_message">Cancelado</string>
   <string name="error_message">Error</string>
   <string name="warning_title">Aviso</string>

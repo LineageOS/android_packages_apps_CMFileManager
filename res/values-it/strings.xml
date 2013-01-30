@@ -29,7 +29,6 @@
   <string name="overwrite">Sovrascrivi</string>
   <string name="root_directory_name"><![CDATA[<Cartella radice>]]></string>
   <string name="search_result_name">Ricerca: <xliff:g id="terms">%1$s</xliff:g></string>
-  <string name="loading_message">Caricando\u2026</string>
   <string name="cancelled_message">Annullato.</string>
   <string name="error_message">Errore.</string>
   <string name="warning_title">Avviso</string>

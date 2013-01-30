@@ -51,8 +51,6 @@
   <!-- The search result name -->
   <string name="search_result_name">Search: <xliff:g id="terms">%1$s</xliff:g></string>
 
-  <!-- Loading waiting message -->
-  <string name="loading_message">Loading\u2026</string>
   <!-- Computing message -->
   <string name="computing_message" translatable="false"><xliff:g id="data">%1$s</xliff:g></string>
   <!-- Computing new line message -->
