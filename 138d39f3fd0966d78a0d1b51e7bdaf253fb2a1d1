@@ -1,0 +1,11 @@
+Change-Id: I138d39f3fd0966d78a0d1b51e7bdaf253fb2a1d1
+Code-Review+2: Danny Baumann <dannybaumann@web.de>
+Code-Review+1: coudu <coudu@wanadoo.fr>
+Code-Review+1: Delphin PETER <delphinpeter@gmail.com>
+Verified+1: Cid
+Code-Review+1: Gaétan Porcellana <gaetan@porcellana.me>
+Submitted-by: Danny Baumann <dannybaumann@web.de>
+Submitted-at: Fri, 01 Feb 2013 05:41:48 -0800
+Reviewed-on: http://review.cyanogenmod.org/31222
+Project: CyanogenMod/android_packages_apps_CMFileManager
+Branch: refs/heads/cm-10.1
