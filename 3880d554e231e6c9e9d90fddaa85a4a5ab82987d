@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAc3//7kM\u003d",
+        "filename": "res/values-zh-rCN/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1642
+      },
+      "writtenOn": "2013-02-02T23:30:53Z",
+      "side": 1,
+      "message": "http://paste.ubuntu.com/1601879/",
+      "revId": "3880d554e231e6c9e9d90fddaa85a4a5ab82987d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAc3//7kI\u003d",
+        "filename": "res/values-zh-rCN/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 452,
+      "author": {
+        "id": 1642
+      },
+      "writtenOn": "2013-02-02T23:30:53Z",
+      "side": 1,
+      "message": "http://paste.ubuntu.com/1601882/",
+      "revId": "3880d554e231e6c9e9d90fddaa85a4a5ab82987d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
