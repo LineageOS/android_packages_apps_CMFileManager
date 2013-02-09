@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdH//+ok\u003d",
+        "filename": "res/raw-nl/changelog",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-02-09T06:01:36Z",
+      "side": 1,
+      "message": "- Vragen naar toegangsmodus \n\nzo is het ook vertaald in CMFM",
+      "revId": "c3b86a160750fdc9c49a4274aa84867cef20594f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdH//+oc\u003d",
+        "filename": "res/raw-nl/changelog",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-02-09T06:01:36Z",
+      "side": 1,
+      "message": "-Root-toegangsmodus",
+      "revId": "c3b86a160750fdc9c49a4274aa84867cef20594f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdH//+os\u003d",
+        "filename": "res/raw-nl/changelog",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-02-09T06:01:36Z",
+      "side": 1,
+      "message": "- Breadcrumb browsen\n\nIk weet ook niet goed hoe je dit kan vertalen, het is in ieder geval dit http://en.wikipedia.org/wiki/Breadcrumb_(navigation)",
+      "revId": "c3b86a160750fdc9c49a4274aa84867cef20594f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
