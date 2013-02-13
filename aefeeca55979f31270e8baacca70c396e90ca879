@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdX///z0\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-13T01:18:54Z",
+      "side": 1,
+      "message": "... 2012-2013 Das CyanogenMod-Projekt?",
+      "revId": "aefeeca55979f31270e8baacca70c396e90ca879",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
