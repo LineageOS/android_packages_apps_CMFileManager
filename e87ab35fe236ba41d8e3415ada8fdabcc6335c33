@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAdX//8X8\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 371,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-02-21T04:55:19Z",
+      "side": 1,
+      "message": "Könnte man drüber nachdenken",
+      "parentUuid": "AAAAdX//8YM\u003d",
+      "revId": "e87ab35fe236ba41d8e3415ada8fdabcc6335c33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAdX//8YI\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-02-21T04:44:43Z",
       "side": 1,
       "message": "Sortieren auf jeden Fall groß schreiben.\nWie wäre es mit:\n\"Beim Sortieren der Suchergebnisse Groß- und Kleinschreibung berücksichtigen\"",
+      "revId": "e87ab35fe236ba41d8e3415ada8fdabcc6335c33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//8YA\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-02-21T04:55:19Z",
+      "side": 1,
+      "message": "Mist, das Sortieren habe ich vergessen groß zu schreiben, aber dein Vorschlag klingt gut Kim.",
+      "parentUuid": "AAAAdX//8YI\u003d",
       "revId": "e87ab35fe236ba41d8e3415ada8fdabcc6335c33",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
