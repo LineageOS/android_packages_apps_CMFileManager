@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdX//8YM\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 371,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-02-21T04:44:43Z",
+      "side": 1,
+      "message": "Obwohl die Groß- und Kleinschreibung zur Rechtschreibung gehört, würde ich dass nicht mit Rechtschreibung übersetzen.\n\nIch denke \"Groß- / Kleinschreibung\" ist passender.",
+      "revId": "e87ab35fe236ba41d8e3415ada8fdabcc6335c33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//8YI\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2013-02-21T04:44:43Z",
+      "side": 1,
+      "message": "Sortieren auf jeden Fall groß schreiben.\nWie wäre es mit:\n\"Beim Sortieren der Suchergebnisse Groß- und Kleinschreibung berücksichtigen\"",
+      "revId": "e87ab35fe236ba41d8e3415ada8fdabcc6335c33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
