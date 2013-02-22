@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdX//75Y\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 641,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-22T17:36:55Z",
+      "side": 1,
+      "message": "I would update the comments when it\u0027s not only about sorting, but also about navigating...",
+      "revId": "0c2f233b90642e7748a2f5cbfe99701d88973160",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//75g\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 642,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-22T17:36:55Z",
+      "side": 1,
+      "message": "What about \u0027Case-sensitive\u0027 as the title?",
+      "revId": "0c2f233b90642e7748a2f5cbfe99701d88973160",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//75U\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 643,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-22T17:36:55Z",
+      "side": 1,
+      "message": "Also here",
+      "revId": "0c2f233b90642e7748a2f5cbfe99701d88973160",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
