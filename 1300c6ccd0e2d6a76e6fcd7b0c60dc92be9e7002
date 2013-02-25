@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdX//7B0\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-02-25T08:08:18Z",
+      "side": 1,
+      "message": "Leersteksel",
+      "revId": "1300c6ccd0e2d6a76e6fcd7b0c60dc92be9e7002",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
