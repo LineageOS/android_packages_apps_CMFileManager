@@ -27,6 +27,10 @@
   <string name="device_namedpipe">Named pipe</string>
   <string name="device_domainsocket">Domain socket</string>
 
+  <!-- Mount Point States -->
+  <string name="mount_point_readonly">RO</string>
+  <string name="mount_point_readwrite">RW</string>
+
   <!-- Default buttons -->
   <string name="yes">Oui</string>
   <string name="no">Non</string>
@@ -570,6 +574,8 @@
   <string name="pref_general_behaviour_category">Général</string>
   <!-- Preferences * General * Case sensitive sort title -->
   <string name="pref_case_sensitive_sort">Tenir compte de la casse</string>
+  <!-- Preferences * General * Case sensitive sort and navigating summary -->
+  <string name="pref_case_sensitive_sort_summary">Tenir compte de la casse lors de la navigation ou du tri des résultats de recherche</string>
   <!-- Preferences * General *Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">Avertissement d\'utilisation disque</string>
   <!-- Preferences * General * Disk usage warning level summary -->
