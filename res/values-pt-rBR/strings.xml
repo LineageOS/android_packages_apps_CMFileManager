@@ -326,4 +326,10 @@
     <string name="actions_menu_send_selection">Enviar seleção</string>
     <string name="select">Selecionar</string>
     <string name="directory_picker_title">Escolha um diretório</string>
+    <string name="copy_text_cd">Toque para copiar texto para a área de transferência</string>
+    <string name="copy_text_msg">Texto copiado para área de transferência</string>
+    <string name="actions_menu_compute_checksum">Calcular checksum</string>
+    <string name="compute_checksum_title">Calcular checksum</string>
+    <string name="compute_checksum_filename_label">Arquivo:</string>
+    <string name="compute_checksum_computing_checksum_msg">Calculando checksum\u2026</string>
 </resources>
