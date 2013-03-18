@@ -67,6 +67,40 @@
       "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6kU\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 470,
+      "author": {
+        "id": 3136
+      },
+      "writtenOn": "2013-03-18T13:17:44Z",
+      "side": 1,
+      "message": "Maybe \"Otwórz katalog nadrz?dny\"?",
+      "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6kQ\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 544,
+      "author": {
+        "id": 3136
+      },
+      "writtenOn": "2013-03-18T13:17:44Z",
+      "side": 1,
+      "message": "I\u0027m not convinced by BINARIA. Maybe the PLIKI BINARNE would be better? Or BINARKI.",
+      "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
