@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAAeX//6eM\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 4449
+      },
+      "writtenOn": "2013-03-18T18:20:16Z",
+      "side": 1,
+      "message": "nie moze zostac anulowana ?",
+      "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6eI\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 4449
+      },
+      "writtenOn": "2013-03-18T18:20:16Z",
+      "side": 1,
+      "message": "nie moze zostac anulowana ?",
+      "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAeX//6lY\u003d",
         "filename": "res/values-pl/strings.xml",
         "patchSetId": 2
@@ -19,6 +53,23 @@
     },
     {
       "key": {
+        "uuid": "AAAAeX//6d8\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 4449
+      },
+      "writtenOn": "2013-03-18T18:20:16Z",
+      "side": 1,
+      "message": "Szczegolowy ?",
+      "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAeX//6lU\u003d",
         "filename": "res/values-pl/strings.xml",
         "patchSetId": 2
@@ -30,6 +81,23 @@
       "writtenOn": "2013-03-18T12:49:08Z",
       "side": 1,
       "message": "i think \"Punkt montowania\" ;)",
+      "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6d4\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 4449
+      },
+      "writtenOn": "2013-03-18T18:20:16Z",
+      "side": 1,
+      "message": "?",
       "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -87,6 +155,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAeX//6ds\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 470,
+      "author": {
+        "id": 4449
+      },
+      "writtenOn": "2013-03-18T18:20:16Z",
+      "side": 1,
+      "message": "+1 for this ^",
+      "parentUuid": "AAAAeX//6kU\u003d",
+      "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAeX//6kQ\u003d",
         "filename": "res/values-pl/strings.xml",
         "patchSetId": 2
@@ -98,6 +184,24 @@
       "writtenOn": "2013-03-18T13:17:44Z",
       "side": 1,
       "message": "I\u0027m not convinced by BINARIA. Maybe the PLIKI BINARNE would be better? Or BINARKI.",
+      "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6do\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 544,
+      "author": {
+        "id": 4449
+      },
+      "writtenOn": "2013-03-18T18:20:16Z",
+      "side": 1,
+      "message": "Maybe \"pliki wykonywalne\" ?",
+      "parentUuid": "AAAAeX//6kQ\u003d",
       "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
