@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//6oQ\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-03-18T06:32:13Z",
+      "side": 1,
+      "message": "The new menu doesn\u0027t verify anything, just compute. IHMO, it\u0027s better to let the \"Checksum\" work here, because i have isn\u0027t better than \"Suma de comprobación\" and there is no clear translation. Furthermore, other translators is using checksum also.",
+      "revId": "cd5df20e7d4bdf0ac527d2cfb4c31f9dcd43981b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6oM\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-03-18T06:32:13Z",
+      "side": 1,
+      "message": "Checksum",
+      "revId": "cd5df20e7d4bdf0ac527d2cfb4c31f9dcd43981b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6oI\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-03-18T06:32:13Z",
+      "side": 1,
+      "message": "Calculando checksum...",
+      "revId": "cd5df20e7d4bdf0ac527d2cfb4c31f9dcd43981b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
