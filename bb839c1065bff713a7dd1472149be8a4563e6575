@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//6lY\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 5622
+      },
+      "writtenOn": "2013-03-18T12:49:08Z",
+      "side": 1,
+      "message": "cosmetic correction - \"Wg nazwy\"",
+      "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6lU\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 5622
+      },
+      "writtenOn": "2013-03-18T12:49:08Z",
+      "side": 1,
+      "message": "i think \"Punkt montowania\" ;)",
+      "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6lQ\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 5622
+      },
+      "writtenOn": "2013-03-18T12:49:08Z",
+      "side": 1,
+      "message": "hm... i think \"Nadrz?dna\" sound better. But, just my opinion.",
+      "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6lM\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 470,
+      "author": {
+        "id": 5622
+      },
+      "writtenOn": "2013-03-18T12:49:08Z",
+      "side": 1,
+      "message": "this same - imo \"Otwórz nadrz?dn?\" sound better.",
+      "revId": "bb839c1065bff713a7dd1472149be8a4563e6575",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
