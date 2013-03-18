@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//6Zg\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 5637
+      },
+      "writtenOn": "2013-03-18T19:15:33Z",
+      "side": 1,
+      "message": "i think this should be translated to \"Inni:\"",
+      "revId": "75c55af065f8eb6814f49e468c5d1ef175513437",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6Zo\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 607,
+      "author": {
+        "id": 5637
+      },
+      "writtenOn": "2013-03-18T19:15:33Z",
+      "side": 1,
+      "message": "i suggest \"dzia?a bez podniesionych uprawnie?\"",
+      "revId": "75c55af065f8eb6814f49e468c5d1ef175513437",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6Zk\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 678,
+      "author": {
+        "id": 5637
+      },
+      "writtenOn": "2013-03-18T19:15:33Z",
+      "side": 1,
+      "message": "should be \"Aby zapobiec\" end next \"aplikacja zostanie uruchomiona\"",
+      "revId": "75c55af065f8eb6814f49e468c5d1ef175513437",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
