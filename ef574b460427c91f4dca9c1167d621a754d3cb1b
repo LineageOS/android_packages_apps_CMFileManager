@@ -16,6 +16,57 @@
       "revId": "ef574b460427c91f4dca9c1167d621a754d3cb1b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6Sg\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 517,
+      "author": {
+        "id": 3784
+      },
+      "writtenOn": "2013-03-19T00:52:22Z",
+      "side": 1,
+      "message": "\"Policz sume kontrolna\", I think you\u0027ve missed it.",
+      "revId": "ef574b460427c91f4dca9c1167d621a754d3cb1b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6Sk\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 3784
+      },
+      "writtenOn": "2013-03-19T00:52:22Z",
+      "side": 1,
+      "message": "\"CZCIONKI\"?",
+      "revId": "ef574b460427c91f4dca9c1167d621a754d3cb1b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6SU\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 641,
+      "author": {
+        "id": 3784
+      },
+      "writtenOn": "2013-03-19T00:52:22Z",
+      "side": 1,
+      "message": "Comma is probably unnecessary here (and in next string too).",
+      "revId": "ef574b460427c91f4dca9c1167d621a754d3cb1b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
