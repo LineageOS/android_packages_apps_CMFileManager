@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//6Sc\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-03-19T00:48:26Z",
+      "side": 1,
+      "message": "\"Otkrit\u0027 papku s faylom\", ne nado pro roditeley",
+      "revId": "cfbaf40967aa6e934bcf6aa0d839daeeca6492a6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
