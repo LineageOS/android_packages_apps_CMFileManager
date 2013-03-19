@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAAeX//6LQ\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 504,
+      "author": {
+        "id": 5637
+      },
+      "writtenOn": "2013-03-19T03:39:12Z",
+      "side": 1,
+      "message": "What\u0027s the meaning of this?\nIn the string name is word \"autocomplete\". If message refers to autocomplete feature, so maybe should be \"Nic do dope?nienia/doko?czenia\" ?",
+      "revId": "ef574b460427c91f4dca9c1167d621a754d3cb1b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAeX//6S8\u003d",
         "filename": "res/values-pl/strings.xml",
         "patchSetId": 5
@@ -36,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAeX//6LY\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 517,
+      "author": {
+        "id": 5637
+      },
+      "writtenOn": "2013-03-19T03:39:12Z",
+      "side": 1,
+      "message": "\"Oblicz sum? kontroln?\" sounds better",
+      "parentUuid": "AAAAeX//6Sg\u003d",
+      "revId": "ef574b460427c91f4dca9c1167d621a754d3cb1b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAeX//6Sk\u003d",
         "filename": "res/values-pl/strings.xml",
         "patchSetId": 5
@@ -47,6 +82,24 @@
       "writtenOn": "2013-03-19T00:52:22Z",
       "side": 1,
       "message": "\"CZCIONKI\"?",
+      "revId": "ef574b460427c91f4dca9c1167d621a754d3cb1b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//6LU\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 5637
+      },
+      "writtenOn": "2013-03-19T03:39:12Z",
+      "side": 1,
+      "message": "i vote for \"CZCIONKI\"",
+      "parentUuid": "AAAAeX//6Sk\u003d",
       "revId": "ef574b460427c91f4dca9c1167d621a754d3cb1b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
