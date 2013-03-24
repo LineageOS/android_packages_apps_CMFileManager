@@ -332,6 +332,10 @@
   <string name="editor_successfully_saved">Plik został pomyślnie zapisany.</string>
   <!-- Editor * Read-only file mode -->
   <string name="editor_read_only_mode">Plik jest otwarty w trybie tylko do odczytu.</string>
+  <!-- Editor * Dumping message -->
+  <string name="dumping_message">Generowanie widoku heksów\u2026</string>
+  <!-- Editor * Displaying -->
+  <string name="displaying_message">Wyświetlanie\u2026</string>
 
   <!-- Bookmarks * Bookmarks activity title -->
   <string name="bookmarks">Zakładki</string>
