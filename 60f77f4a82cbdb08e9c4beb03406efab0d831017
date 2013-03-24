@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//4d4\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-03-24T18:29:03Z",
+      "side": 1,
+      "message": "Mozhet \"Predydushhaja papka\" ili \"Naverh\"?\n\"Domashnjaja papka\" - sovsem drugoe znachenie imeet.",
+      "revId": "60f77f4a82cbdb08e9c4beb03406efab0d831017",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//4d0\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-03-24T18:29:03Z",
+      "side": 1,
+      "message": "USB-nakopitel\u0027",
+      "revId": "60f77f4a82cbdb08e9c4beb03406efab0d831017",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
