@@ -333,6 +333,10 @@
     <string name="editor_successfully_saved">A fájl sikeresen elmentve.</string>
     <!-- Editor * Read-only file mode -->
     <string name="editor_read_only_mode">A fájl csak olvasható.</string>
+    <!-- Editor * Dumping message -->
+    <string name="dumping_message">Hexadecimális nézet létrehozása\u2026</string>
+    <!-- Editor * Displaying -->
+    <string name="displaying_message">Megjelenítés\u2026</string>
 
     <!-- Bookmarks * Bookmarks activity title -->
     <string name="bookmarks">Könyvjelzők</string>
