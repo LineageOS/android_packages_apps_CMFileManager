@@ -16,6 +16,24 @@
       "revId": "2439dcfcffd9cfac9bd002712dc256d80dd8d776",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//4ZI\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2013-03-24T22:26:18Z",
+      "side": 1,
+      "message": "Eto perevod etogo commita - http://review.cyanogenmod.org/#/c/34364/ V nem yavno ne pro otkrjtie faila govoritsya",
+      "parentUuid": "AAAAeX//4Zg\u003d",
+      "revId": "2439dcfcffd9cfac9bd002712dc256d80dd8d776",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
