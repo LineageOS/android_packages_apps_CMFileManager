@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//4Zg\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-03-24T22:22:34Z",
+      "side": 1,
+      "message": "Eto pri zagruzke fayla, chto li? Esli tak -- lucshe budet \"Otkritie...\"",
+      "revId": "2439dcfcffd9cfac9bd002712dc256d80dd8d776",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
