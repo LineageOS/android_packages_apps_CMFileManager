@@ -471,7 +471,9 @@ public class SettingsPreferences extends PreferenceActivity {
      */
     public static class EditorPreferenceFragment extends PreferenceFragment {
 
+        private CheckBoxPreference mNoSuggestions;
         private CheckBoxPreference mWordWrap;
+        private CheckBoxPreference mSyntaxHighlight;
 
         /**
          * @hide
@@ -520,11 +522,23 @@ public class SettingsPreferences extends PreferenceActivity {
             // Add the preferences
             addPreferencesFromResource(R.xml.preferences_editor);
 
+            // No suggestions
+            this.mNoSuggestions =
+                    (CheckBoxPreference)findPreference(
+                            FileManagerSettings.SETTINGS_EDITOR_NO_SUGGESTIONS.getId());
+            this.mNoSuggestions.setOnPreferenceChangeListener(this.mOnChangeListener);
+
             // WordWrap
             this.mWordWrap =
                     (CheckBoxPreference)findPreference(
                             FileManagerSettings.SETTINGS_EDITOR_WORD_WRAP.getId());
             this.mWordWrap.setOnPreferenceChangeListener(this.mOnChangeListener);
+
+            // Syntax highlight
+            this.mSyntaxHighlight =
+                    (CheckBoxPreference)findPreference(
+                            FileManagerSettings.SETTINGS_EDITOR_SYNTAX_HIGHLIGHT.getId());
+            this.mSyntaxHighlight.setOnPreferenceChangeListener(this.mOnChangeListener);
 
             // Loaded
             this.mLoaded = true;

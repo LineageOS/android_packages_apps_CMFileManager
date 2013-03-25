@@ -425,8 +425,12 @@
   <string name="menu_settings">Settings</string>
   <!-- Menu * History * Clear history -->
   <string name="menu_clear_history">Clear history</string>
+  <!-- Menu * Editor * No suggestions -->
+  <string name="menu_no_suggestions">No suggestions</string>
   <!-- Menu * Editor * Word wrap -->
   <string name="menu_word_wrap">Word wrap</string>
+  <!-- Menu * Editor * Sintax highlight -->
+  <string name="menu_syntax_highlight">Syntax highlight</string>
 
   <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp">
@@ -737,8 +741,17 @@
   <string name="pref_remove_saved_search_terms_msg">All saved search terms were removed.</string>
   <!-- Preferences * Editor * Behaviour category -->
   <string name="pref_editor_behaviour_category">Behaviour</string>
+  <!-- Preferences * Editor * No suggestions -->
+  <string name="pref_no_suggestions">No suggestions</string>
+  <!-- Preferences * Editor * No suggestions summary -->
+  <string name="pref_no_suggestions_desc">Do not display dictionary suggestions while editing the file</string>
   <!-- Preferences * Editor * Word wrap -->
   <string name="pref_word_wrap">Word wrap</string>
+  <!-- Preferences * Editor * Syntax highlight -->
+  <string name="pref_syntax_highlight">Syntax highlight</string>
+  <!-- Preferences * Editor * Syntax highlight summary -->
+  <string name="pref_syntax_highlight_desc">Highlight the syntax of the file displayed in
+    the editor (only when a syntax highlight processor is available for the type of file)</string>
   <!-- Preferences * Themes * Themes selection category -->
   <string name="pref_themes_selection_category">Themes</string>
   <!-- Preferences * Themes * Set theme button -->

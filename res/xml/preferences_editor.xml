@@ -22,10 +22,26 @@
       android:key="editor_behaviour"
       android:title="@string/pref_editor_behaviour_category">
 
+      <!-- No suggestions -->
+      <CheckBoxPreference
+        android:key="cm_filemanager_editor_no_suggestions"
+        android:title="@string/pref_no_suggestions"
+        android:summary="@string/pref_no_suggestions_desc"
+        android:persistent="true"
+        android:defaultValue="false" />
+
       <!-- Word wrap -->
       <CheckBoxPreference
         android:key="cm_filemanager_editor_word_wrap"
         android:title="@string/pref_word_wrap"
+        android:persistent="true"
+        android:defaultValue="true" />
+
+      <!-- Syntax highlight -->
+      <CheckBoxPreference
+        android:key="cm_filemanager_editor_syntax_highlight"
+        android:title="@string/pref_syntax_highlight"
+        android:summary="@string/pref_syntax_highlight_desc"
         android:persistent="true"
         android:defaultValue="true" />
 
