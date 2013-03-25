@@ -174,4 +174,14 @@
   <drawable name="dark_fso_type_text_drawable">@null</drawable>
   <drawable name="dark_fso_type_video_drawable">@null</drawable> -->
 
+
+  <!-- Syntax Highlight -->
+  <color name="dark_ash_normal_color">#99ffffff</color>
+  <color name="dark_ash_assigment_color">#99ffffff</color>
+  <color name="dark_ash_single_line_comment_color">#ff3f7f5f</color>
+  <color name="dark_ash_multiline_line_comment_color">#ff7f9fbf</color>
+  <color name="dark_ash_keyword_color">#ffd2568a</color>
+  <color name="dark_ash_string_color">#ff4Ab3b6</color>
+  <color name="dark_ash_variable_color">#ff91bcf8</color>
+
 </resources>

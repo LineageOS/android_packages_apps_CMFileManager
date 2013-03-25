@@ -32,6 +32,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.text.Editable;
+import android.text.InputType;
+import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -55,6 +57,9 @@ import com.cyanogenmod.filemanager.activities.preferences.SettingsPreferences;
 import com.cyanogenmod.filemanager.activities.preferences.SettingsPreferences.EditorPreferenceFragment;
 import com.cyanogenmod.filemanager.adapters.HighlightedSimpleMenuListAdapter;
 import com.cyanogenmod.filemanager.adapters.SimpleMenuListAdapter;
+import com.cyanogenmod.filemanager.ash.ISyntaxHighlightResourcesResolver;
+import com.cyanogenmod.filemanager.ash.SyntaxHighlightFactory;
+import com.cyanogenmod.filemanager.ash.SyntaxHighlightProcessor;
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.WriteExecutable;
 import com.cyanogenmod.filemanager.console.ConsoleBuilder;
@@ -70,6 +75,7 @@ import com.cyanogenmod.filemanager.util.DialogHelper;
 import com.cyanogenmod.filemanager.util.ExceptionUtil;
 import com.cyanogenmod.filemanager.util.ExceptionUtil.OnRelaunchCommandResult;
 import com.cyanogenmod.filemanager.util.FileHelper;
+import com.cyanogenmod.filemanager.util.ResourcesHelper;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -99,9 +105,28 @@ public class EditorActivity extends Activity implements TextWatcher {
                     // The settings has changed
                     String key = intent.getStringExtra(FileManagerSettings.EXTRA_SETTING_CHANGED_KEY);
                     if (key != null) {
-                        // Word wrap
+                        // No suggestions
                         if (key.compareTo(FileManagerSettings.
+                                SETTINGS_EDITOR_NO_SUGGESTIONS.getId()) == 0) {
+                            // Ignore in binary files
+                            if (EditorActivity.this.mBinary) return;
+
+                            // Do we have a different setting?
+                            boolean noSuggestionsSetting =
+                                    Preferences.getSharedPreferences().getBoolean(
+                                        FileManagerSettings.SETTINGS_EDITOR_NO_SUGGESTIONS.getId(),
+                                        ((Boolean)FileManagerSettings.SETTINGS_EDITOR_NO_SUGGESTIONS.
+                                                getDefaultValue()).booleanValue());
+                            if (noSuggestionsSetting != EditorActivity.this.mNoSuggestions) {
+                                toggleNoSuggestions();
+                            }
+
+                        // Word wrap
+                        } else if (key.compareTo(FileManagerSettings.
                                 SETTINGS_EDITOR_WORD_WRAP.getId()) == 0) {
+                            // Ignore in binary files
+                            if (EditorActivity.this.mBinary) return;
+
                             // Do we have a different setting?
                             boolean wordWrapSetting = Preferences.getSharedPreferences().getBoolean(
                                     FileManagerSettings.SETTINGS_EDITOR_WORD_WRAP.getId(),
@@ -109,6 +134,22 @@ public class EditorActivity extends Activity implements TextWatcher {
                                             getDefaultValue()).booleanValue());
                             if (wordWrapSetting != EditorActivity.this.mWordWrap) {
                                 toggleWordWrap();
+                            }
+
+                        // Syntax highlight
+                        } else if (key.compareTo(FileManagerSettings.
+                                    SETTINGS_EDITOR_SYNTAX_HIGHLIGHT.getId()) == 0) {
+                            // Ignore in binary files
+                            if (EditorActivity.this.mBinary) return;
+
+                            // Do we have a different setting?
+                            boolean syntaxHighlightSetting =
+                                    Preferences.getSharedPreferences().getBoolean(
+                                        FileManagerSettings.SETTINGS_EDITOR_SYNTAX_HIGHLIGHT.getId(),
+                                        ((Boolean)FileManagerSettings.SETTINGS_EDITOR_SYNTAX_HIGHLIGHT.
+                                                getDefaultValue()).booleanValue());
+                            if (syntaxHighlightSetting != EditorActivity.this.mSyntaxHighlight) {
+                                toggleSyntaxHighlight();
                             }
                         }
                     }
@@ -128,12 +169,11 @@ public class EditorActivity extends Activity implements TextWatcher {
     /**
      * An internal listener for read a file
      */
-    @SuppressWarnings("hiding")
     private class AsyncReader implements AsyncResultListener {
 
         final Object mSync = new Object();
         ByteArrayOutputStream mByteBuffer = null;
-        StringBuilder mBuffer = null;
+        SpannableStringBuilder mBuffer = null;
         Exception mCause;
         long mSize;
         FileSystemObject mFso;
@@ -263,6 +303,37 @@ public class EditorActivity extends Activity implements TextWatcher {
     }
 
     /**
+     * An internal class to resolve resources for the syntax highlight library.
+     */
+    private class ResourcesResolver implements ISyntaxHighlightResourcesResolver {
+        @Override
+        public CharSequence getString(String resid) {
+            return EditorActivity.this.getString(
+                        ResourcesHelper.getIdentifier(
+                            EditorActivity.this.getResources(), "string", resid));
+        }
+
+        @Override
+        public int getInteger(String resid, int def) {
+            return EditorActivity.this.getResources().
+                    getInteger(
+                        ResourcesHelper.getIdentifier(
+                            EditorActivity.this.getResources(), "integer", resid));
+        }
+
+        @Override
+        public int getColor(String resid, int def) {
+            final Context ctx = EditorActivity.this;
+            try {
+                return ThemeManager.getCurrentTheme(ctx).getColor(ctx, resid);
+            } catch (Exception ex) {
+                // Resource not found
+                return def;
+            }
+        }
+    }
+
+    /**
      * @hide
      */
     FileSystemObject mFso;
@@ -308,6 +379,12 @@ public class EditorActivity extends Activity implements TextWatcher {
      */
     ButtonItem mSave;
 
+    // No suggestions status
+    /**
+     * @hide
+     */
+    boolean mNoSuggestions;
+
     // Word wrap status
     private ViewGroup mWordWrapView;
     private ViewGroup mNoWordWrapView;
@@ -315,6 +392,18 @@ public class EditorActivity extends Activity implements TextWatcher {
      * @hide
      */
     boolean mWordWrap;
+
+    // Syntax highlight status
+    /**
+     * @hide
+     */
+    boolean mSyntaxHighlight;
+    /**
+     * @hide
+     */
+    SyntaxHighlightProcessor mSyntaxHighlightProcessor;
+    private int mEditStart;
+    private int mEditEnd;
 
     private View mOptionsAnchorView;
 
@@ -443,9 +532,21 @@ public class EditorActivity extends Activity implements TextWatcher {
         this.mEditor.setEnabled(false);
         this.mWordWrapView = (ViewGroup)findViewById(R.id.editor_word_wrap_view);
         this.mNoWordWrapView = (ViewGroup)findViewById(R.id.editor_no_word_wrap_view);
-        this.mWordWrap = true;
         this.mWordWrapView.setVisibility(View.VISIBLE);
         this.mNoWordWrapView.setVisibility(View.GONE);
+
+        this.mNoSuggestions = false;
+        this.mWordWrap = true;
+        this.mSyntaxHighlight = true;
+
+        // Load the no suggestions setting
+        boolean noSuggestionsSetting = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.SETTINGS_EDITOR_NO_SUGGESTIONS.getId(),
+                ((Boolean)FileManagerSettings.SETTINGS_EDITOR_NO_SUGGESTIONS.
+                        getDefaultValue()).booleanValue());
+        if (noSuggestionsSetting != this.mNoSuggestions) {
+            toggleNoSuggestions();
+        }
 
         // Load the word wrap setting
         boolean wordWrapSetting = Preferences.getSharedPreferences().getBoolean(
@@ -456,9 +557,33 @@ public class EditorActivity extends Activity implements TextWatcher {
             toggleWordWrap();
         }
 
+        // Load the syntax highlight setting
+        boolean syntaxHighlighSetting = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.SETTINGS_EDITOR_SYNTAX_HIGHLIGHT.getId(),
+                ((Boolean)FileManagerSettings.SETTINGS_EDITOR_SYNTAX_HIGHLIGHT.
+                        getDefaultValue()).booleanValue());
+        if (syntaxHighlighSetting != this.mSyntaxHighlight) {
+            toggleSyntaxHighlight();
+        }
+
         this.mProgress = findViewById(R.id.editor_progress);
         this.mProgressBar = (ProgressBar)findViewById(R.id.editor_progress_bar);
         this.mProgressBarMsg = (TextView)findViewById(R.id.editor_progress_msg);
+    }
+
+    /**
+     * Method that toggle the no suggestions property of the editor
+     * @hide
+     */
+    /**package**/ void toggleNoSuggestions() {
+        int type = InputType.TYPE_CLASS_TEXT |
+                   InputType.TYPE_TEXT_FLAG_MULTI_LINE |
+                   InputType.TYPE_TEXT_FLAG_IME_MULTI_LINE;
+        if (!this.mNoSuggestions) {
+            type |= InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS;
+        }
+        this.mEditor.setInputType(type);
+        this.mNoSuggestions = !this.mNoSuggestions;
     }
 
     /**
@@ -480,6 +605,27 @@ public class EditorActivity extends Activity implements TextWatcher {
         vDst.setVisibility(View.VISIBLE);
         vDst.scrollTo(0, 0);
         this.mWordWrap = !this.mWordWrap;
+    }
+
+    /**
+     * Method that toggle the syntax highlight property of the editor
+     * @hide
+     */
+    /**package**/ void toggleSyntaxHighlight() {
+        if (this.mSyntaxHighlightProcessor != null) {
+            try {
+                if (this.mSyntaxHighlight) {
+                    this.mSyntaxHighlightProcessor.clear(this.mEditor.getText());
+                } else {
+                    this.mSyntaxHighlightProcessor.process(this.mEditor.getText());
+                }
+            } catch (Exception ex) {
+                // An error in a syntax library, should not break down app.
+                Log.e(TAG, "Syntax highlight failed.", ex);
+            }
+        }
+
+        this.mSyntaxHighlight = !this.mSyntaxHighlight;
     }
 
     /**
@@ -524,12 +670,28 @@ public class EditorActivity extends Activity implements TextWatcher {
     private void showOverflowPopUp(View anchor) {
         SimpleMenuListAdapter adapter =
                 new HighlightedSimpleMenuListAdapter(this, R.menu.editor);
+        MenuItem noSuggestions = adapter.getMenu().findItem(R.id.mnu_no_suggestions);
+        if (noSuggestions != null) {
+            if (this.mBinary) {
+                adapter.getMenu().removeItem(R.id.mnu_no_suggestions);
+            } else {
+                noSuggestions.setChecked(this.mNoSuggestions);
+            }
+        }
         MenuItem wordWrap = adapter.getMenu().findItem(R.id.mnu_word_wrap);
         if (wordWrap != null) {
             if (this.mBinary) {
                 adapter.getMenu().removeItem(R.id.mnu_word_wrap);
             } else {
                 wordWrap.setChecked(this.mWordWrap);
+            }
+        }
+        MenuItem syntaxHighlight = adapter.getMenu().findItem(R.id.mnu_syntax_highlight);
+        if (syntaxHighlight != null) {
+            if (this.mBinary) {
+                adapter.getMenu().removeItem(R.id.mnu_syntax_highlight);
+            } else {
+                syntaxHighlight.setChecked(this.mSyntaxHighlight);
             }
         }
 
@@ -542,9 +704,14 @@ public class EditorActivity extends Activity implements TextWatcher {
                     final int position, final long id) {
                 final int itemId = (int)id;
                 switch (itemId) {
+                    case R.id.mnu_no_suggestions:
+                        toggleNoSuggestions();
+                        break;
                     case R.id.mnu_word_wrap:
-                        popup.dismiss();
                         toggleWordWrap();
+                        break;
+                    case R.id.mnu_syntax_highlight:
+                        toggleSyntaxHighlight();
                         break;
                     case R.id.mnu_settings:
                         //Settings
@@ -654,6 +821,14 @@ public class EditorActivity extends Activity implements TextWatcher {
             return;
         }
 
+        // Get the syntax highlight processor
+        SyntaxHighlightFactory shpFactory =
+                SyntaxHighlightFactory.getDefaultFactory(new ResourcesResolver());
+        this.mSyntaxHighlightProcessor = shpFactory.getSyntaxHighlightProcessor(f);
+        if (this.mSyntaxHighlightProcessor != null) {
+            this.mSyntaxHighlightProcessor.initialize();
+        }
+
         // Check that we have read access
         try {
             FileHelper.ensureReadAccess(
@@ -710,6 +885,8 @@ public class EditorActivity extends Activity implements TextWatcher {
 
             @Override
             protected Boolean doInBackground(FileSystemObject... params) {
+                final EditorActivity activity = EditorActivity.this;
+
                 // Only one argument (the file to open)
                 FileSystemObject fso = params[0];
                 this.mCause = null;
@@ -729,8 +906,7 @@ public class EditorActivity extends Activity implements TextWatcher {
                         };
 
                         // Execute the command (read the file)
-                        CommandHelper.read(
-                                EditorActivity.this, fso.getFullPath(), this.mReader, null);
+                        CommandHelper.read(activity, fso.getFullPath(), this.mReader, null);
 
                         // Wait for
                         synchronized (this.mReader.mSync) {
@@ -752,22 +928,21 @@ public class EditorActivity extends Activity implements TextWatcher {
                     // Then dump them byte array to hex dump string
                     // Don't use the Hexdump helper class, so we can show the progress of
                     // the dump process
-                    if (EditorActivity.this.mBinary) {
+                    if (activity.mBinary) {
                         this.mReader.mBuffer =
-                                new StringBuilder(
+                                new SpannableStringBuilder(
                                         toHexPrintableString(
                                                 toHexDump(
                                                         this.mReader.mByteBuffer.toByteArray())));
                     } else {
                         this.mReader.mBuffer =
-                                new StringBuilder(
+                                new SpannableStringBuilder(
                                         new String(this.mReader.mByteBuffer.toByteArray()));
                     }
                     this.mReader.mByteBuffer = null;
 
-                    // 100% - We need two calls here to proper display the message
+                    // 100%
                     this.changeToDisplaying = true;
-                    publishProgress(new Integer(0));
                     publishProgress(new Integer(0));
 
                 } catch (Exception e) {
@@ -786,29 +961,43 @@ public class EditorActivity extends Activity implements TextWatcher {
 
             @Override
             protected void onPostExecute(Boolean result) {
+                final EditorActivity activity = EditorActivity.this;
+
                 // Is error?
                 if (!result.booleanValue()) {
                     if (this.mCause != null) {
-                        ExceptionUtil.translateException(EditorActivity.this, this.mCause);
-                        EditorActivity.this.mEditor.setEnabled(false);
+                        ExceptionUtil.translateException(activity, this.mCause);
+                        activity.mEditor.setEnabled(false);
                     }
                 } else {
                     // Now we have the buffer, set the text of the editor
-                    if (EditorActivity.this.mBinary) {
-                        EditorActivity.this.mEditor.setText(
+                    if (activity.mBinary) {
+                        activity.mEditor.setText(
                                 this.mReader.mBuffer, BufferType.NORMAL);
                     } else {
-                        EditorActivity.this.mEditor.setText(
+                        activity.mEditor.setText(
                                 this.mReader.mBuffer, BufferType.EDITABLE);
+
+                        // Highlight editor text syntax
+                        if (activity.mSyntaxHighlight &&
+                            activity.mSyntaxHighlightProcessor != null) {
+                            try {
+                                activity.mSyntaxHighlightProcessor.process(
+                                        activity.mEditor.getText());
+                            } catch (Exception ex) {
+                                // An error in a syntax library, should not break down app.
+                                Log.e(TAG, "Syntax highlight failed.", ex);
+                            }
+                        }
                     }
                     this.mReader.mBuffer = null; //Cleanup
                     setDirty(false);
-                    EditorActivity.this.mEditor.setEnabled(!EditorActivity.this.mReadOnly);
+                    activity.mEditor.setEnabled(!activity.mReadOnly);
 
                     // Notify read-only mode
-                    if (EditorActivity.this.mReadOnly) {
+                    if (activity.mReadOnly) {
                         DialogHelper.showToast(
-                                EditorActivity.this,
+                                activity,
                                 R.string.editor_read_only_mode,
                                 Toast.LENGTH_SHORT);
                     }
@@ -830,26 +1019,30 @@ public class EditorActivity extends Activity implements TextWatcher {
              * @param progress The progress
              */
             private void doProgress(boolean visible, int progress) {
+                final EditorActivity activity = EditorActivity.this;
+
                 // Show the progress bar
-                EditorActivity.this.mProgressBar.setProgress(progress);
-                EditorActivity.this.mProgress.setVisibility(
-                            visible ? View.VISIBLE : View.GONE);
+                activity.mProgressBar.setProgress(progress);
+                activity.mProgress.setVisibility(visible ? View.VISIBLE : View.GONE);
 
                 if (this.changeToBinaryMode) {
                     // Hexdump always in nowrap mode
-                    if (EditorActivity.this.mWordWrap) {
-                        EditorActivity.this.toggleWordWrap();
+                    if (activity.mWordWrap) {
+                        activity.toggleWordWrap();
+                    }
+                    // Hexdump always has no syntax highlight
+                    if (activity.mSyntaxHighlight) {
+                        activity.toggleSyntaxHighlight();
                     }
 
                     // Show hex dumping text
-                    EditorActivity.this.mProgressBarMsg.setText(R.string.dumping_message);
-                    EditorActivity.this.mEditor.setTextAppearance(
-                            EditorActivity.this, R.style.hexeditor_text_appearance);
-                    EditorActivity.this.mEditor.setTypeface(Typeface.MONOSPACE);
+                    activity.mProgressBarMsg.setText(R.string.dumping_message);
+                    activity.mEditor.setTextAppearance(activity, R.style.hexeditor_text_appearance);
+                    activity.mEditor.setTypeface(Typeface.MONOSPACE);
                     this.changeToBinaryMode = false;
                 }
                 else if (this.changeToDisplaying) {
-                    EditorActivity.this.mProgressBarMsg.setText(R.string.displaying_message);
+                    activity.mProgressBarMsg.setText(R.string.displaying_message);
                     this.changeToDisplaying = false;
                 }
             }
@@ -1030,7 +1223,10 @@ public class EditorActivity extends Activity implements TextWatcher {
      * {@inheritDoc}
      */
     @Override
-    public void onTextChanged(CharSequence s, int start, int before, int count) {/**NON BLOCK**/}
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+        this.mEditStart = start;
+        this.mEditEnd = start + count;
+    }
 
     /**
      * {@inheritDoc}
@@ -1038,6 +1234,9 @@ public class EditorActivity extends Activity implements TextWatcher {
     @Override
     public void afterTextChanged(Editable s) {
         setDirty(true);
+        if (this.mSyntaxHighlightProcessor != null) {
+            this.mSyntaxHighlightProcessor.process(s, this.mEditStart, this.mEditEnd);
+        }
     }
 
     /**
@@ -1117,6 +1316,12 @@ public class EditorActivity extends Activity implements TextWatcher {
         //- ProgressBar
         Drawable dw = theme.getDrawable(this, "horizontal_progress_bar"); //$NON-NLS-1$
         this.mProgressBar.setProgressDrawable(dw);
+
+        // Need a full process of syntax highlight
+        if (!this.mBinary && this.mSyntaxHighlight && this.mSyntaxHighlightProcessor != null) {
+            this.mSyntaxHighlightProcessor.initialize();
+            this.mSyntaxHighlightProcessor.process(this.mEditor.getText());
+        }
     }
 
 }
