@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//28w\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 423,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-03-27T23:45:34Z",
+      "side": 1,
+      "message": "\u0027Deny\u0027 \u003d \u0027Den\u0027 \u003d\u003e Typo...",
+      "revId": "e2f133dc28d698e60c6ca1c09fcb27dddb8bb289",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
