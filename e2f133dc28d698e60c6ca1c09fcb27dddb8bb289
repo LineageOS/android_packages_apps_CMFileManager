@@ -2,6 +2,74 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAAeX//2vc\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-03-28T13:35:00Z",
+      "side": 1,
+      "message": "...in die...",
+      "revId": "e2f133dc28d698e60c6ca1c09fcb27dddb8bb289",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//2vY\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-03-28T13:35:00Z",
+      "side": 1,
+      "message": "Sind das Dialogtexte? Dann würde ich eher \u0027wird generiert\u0027 / \u0027wird angezeigt\u0027 schreiben.\nIn Zeile 227 ist außerdem die Einrückung kaputt.",
+      "revId": "e2f133dc28d698e60c6ca1c09fcb27dddb8bb289",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//2vU\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-03-28T13:35:00Z",
+      "side": 1,
+      "message": "Siehe oben.",
+      "revId": "e2f133dc28d698e60c6ca1c09fcb27dddb8bb289",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//2vQ\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-03-28T13:35:00Z",
+      "side": 1,
+      "message": "Entweder mit Bindestrich oder zusammenschreiben.",
+      "revId": "e2f133dc28d698e60c6ca1c09fcb27dddb8bb289",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAeX//28w\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 1
@@ -13,6 +81,24 @@
       "writtenOn": "2013-03-27T23:45:34Z",
       "side": 1,
       "message": "\u0027Deny\u0027 \u003d \u0027Den\u0027 \u003d\u003e Typo...",
+      "revId": "e2f133dc28d698e60c6ca1c09fcb27dddb8bb289",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//2vI\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 423,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-03-28T13:35:00Z",
+      "side": 1,
+      "message": "Syntax ist weiblich; und Anzeigen muss groß geschrieben werden.",
+      "parentUuid": "AAAAeX//28w\u003d",
       "revId": "e2f133dc28d698e60c6ca1c09fcb27dddb8bb289",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
