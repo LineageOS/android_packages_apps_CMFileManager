@@ -47,6 +47,11 @@
   <string name="cancelled_message">Gekanseleer.</string>
   <!-- Error message -->
   <string name="error_message">Fout.</string>
+  <!-- Copy text content description -->
+  <string name="copy_text_cd">Raak om teks to kopieer na knipbord</string>
+  <!-- Copy text content message -->
+  <string name="copy_text_msg">Teks gekopieerd na die knipbord</string>
+
 
   <!-- Warning dialog title -->
   <string name="warning_title">Pasop</string>
@@ -475,7 +480,9 @@
   <!-- Actions Dialog * Menu * Add shortcut -->
   <string name="actions_menu_add_shortcut">Voeg kortpad</string>
   <!-- Actions Dialog * Menu * Open parent folder -->
-  <string name="actions_menu_open_parent_folder">Maak ouer oop</string>
+  <string name="actions_menu_open_parent_folder">Maak vouer oop</string>
+  <!-- Actions Dialog * Menu * Compute checksum -->
+  <string name="actions_menu_compute_checksum">Bereken kontrolesom</string>
 
   <!-- Actions * Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">Hierdie aksie kan nie teruggestel word nie. Wil jy voortgaan?</string>
@@ -520,6 +527,14 @@
   <!-- Execution console * The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text">
     <xliff:g id="seconds">%1$s</xliff:g> sek.</string>
+
+  <!-- Compute checksum * Title -->
+  <string name="compute_checksum_title">Bereken kontrolesom</string>
+  <!-- Compute checksum * The file name label -->
+  <string name="compute_checksum_filename_label">Lêer:</string>
+  <!-- Compute checksum * The computing checksum message-->
+  <string name="compute_checksum_computing_checksum_msg">Bewerk kontrolesom\u2026</string>
+
 
   <!-- Mime/Types * Folder -->
   <string name="mime_folder">Mime vouergids</string>
