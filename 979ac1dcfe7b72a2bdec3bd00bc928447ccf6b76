@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//26Y\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 389,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-03-28T00:24:41Z",
+      "side": 1,
+      "message": "Should be \"Prozrachnost\u0027\"",
+      "revId": "979ac1dcfe7b72a2bdec3bd00bc928447ccf6b76",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
