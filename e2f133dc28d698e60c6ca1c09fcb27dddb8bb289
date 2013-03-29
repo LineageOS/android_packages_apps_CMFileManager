@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAeX//2XY\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-03-29T17:27:03Z",
+      "side": 1,
+      "message": "Hmm, wie wäre es mit \u0027Hexdump wird generiert...\u0027 (oder ...erzeugt...) und \u0027Anzeige wird vorbereitet...\u0027? \n\nVor allem das \u0027Anzeigen...\u0027 gefällt mir noch nicht richtig, wenngleich ich nicht sicher sagen kann, warum.",
+      "parentUuid": "AAAAeX//2Yo\u003d",
+      "revId": "e2f133dc28d698e60c6ca1c09fcb27dddb8bb289",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAeX//2vU\u003d",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 1
@@ -118,6 +136,24 @@
       "side": 1,
       "message": "Mal was generelles... Wir befinden uns ja hier schon in den Einstellungen. Macht es da überhaupt noch Sinn immer das \u0027Einstellungen\u0027 an die Unterpunkte anzuhängen?\n\nMan könnte doch z.B. \u0027Allgemeine Einstellungen\u0027 zu \u0027Allgemein\u0027 ändern und das bei den anderen Punkten auch so machen.\n\nMeinungen dazu?",
       "parentUuid": "AAAAeX//2vQ\u003d",
+      "revId": "e2f133dc28d698e60c6ca1c09fcb27dddb8bb289",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//2XU\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-03-29T17:27:03Z",
+      "side": 1,
+      "message": "Da bin ich unentschlossen. Sieht das mit der Menge an freiem Platz dann nicht komisch aus? ;)",
+      "parentUuid": "AAAAeX//2Y8\u003d",
       "revId": "e2f133dc28d698e60c6ca1c09fcb27dddb8bb289",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -171,6 +207,23 @@
       "side": 1,
       "message": "Werde ich ändern.",
       "parentUuid": "AAAAeX//2vI\u003d",
+      "revId": "e2f133dc28d698e60c6ca1c09fcb27dddb8bb289",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//2XI\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 427,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-03-29T17:27:03Z",
+      "side": 1,
+      "message": "Hatte ich noch übersehen: ...des aktuellen Designs...",
       "revId": "e2f133dc28d698e60c6ca1c09fcb27dddb8bb289",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
