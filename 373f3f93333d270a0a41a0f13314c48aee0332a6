@@ -16,6 +16,24 @@
       "revId": "373f3f93333d270a0a41a0f13314c48aee0332a6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//2aQ\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 725,
+      "author": {
+        "id": 3269
+      },
+      "writtenOn": "2013-03-29T15:35:31Z",
+      "side": 1,
+      "message": "I could not find a good translation. Maybe deursigtig?",
+      "parentUuid": "AAAAeX//2fg\u003d",
+      "revId": "373f3f93333d270a0a41a0f13314c48aee0332a6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
