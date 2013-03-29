@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//2bM\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-03-29T14:01:16Z",
+      "side": 1,
+      "message": "Esli by mozhno bylo eto kak-to sokratit\u0027, a to v menju ne umeshhaetsja.",
+      "revId": "bb02bfd40c2c86b4d1d3b426790d6ccf0b4a65e7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
