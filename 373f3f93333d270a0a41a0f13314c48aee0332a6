@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//2fg\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 725,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-03-29T04:44:02Z",
+      "side": 1,
+      "message": "Alpha refers to the transparency (level), I believe (transparantie/doorizichtigheid or variants?)",
+      "revId": "373f3f93333d270a0a41a0f13314c48aee0332a6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
