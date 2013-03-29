@@ -16,6 +16,23 @@
       "revId": "bb02bfd40c2c86b4d1d3b426790d6ccf0b4a65e7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//2Ys\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-03-29T17:05:58Z",
+      "side": 1,
+      "message": "Tut, kak ja ponjal, cel\u0027 ne v sozdanii damp-fajla, a v tom, chtoby vyvesti soderzhimoe binarnogo (ili dvoichnogo) fajla v shestnadcatirichnom predstavlenii, dlja chego ispol\u0027zuetsja utilita hexdump, otsjuda i neperevodimaja igra slov : \"Hexdump binary files\".\nPredlagaju zamenit\u0027 zagolovok na \"Shestnadcatirichnoe predstavlenie\" ili \"Shestnadcatirichnyj format\", a opisanie na: \"Vyvod soderzhimogo binarnyh fajlov v shestnadcatirichnom predstavlenii\" ili \"Vyvod soderzhimogo binarnyh fajlov v shestnadcatirichnom formate\" sootvetstvenno.",
+      "revId": "bb02bfd40c2c86b4d1d3b426790d6ccf0b4a65e7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
