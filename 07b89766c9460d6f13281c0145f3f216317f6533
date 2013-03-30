@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//2Go\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2013-03-30T11:20:26Z",
+      "side": 1,
+      "message": "Toje dolgo dumal kak luchshe. A esli tak \"Bez predlozhenij\" ili kak-to tak.\n\n???? ????????.",
+      "revId": "07b89766c9460d6f13281c0145f3f216317f6533",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
