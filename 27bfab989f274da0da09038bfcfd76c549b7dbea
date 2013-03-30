@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//18A\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-03-30T21:30:43Z",
+      "side": 1,
+      "message": "gekopieer",
+      "revId": "27bfab989f274da0da09038bfcfd76c549b7dbea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//184\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-03-30T21:30:43Z",
+      "side": 1,
+      "message": "Sintaks beklemtoning",
+      "revId": "27bfab989f274da0da09038bfcfd76c549b7dbea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//18g\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 682,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-03-30T21:30:43Z",
+      "side": 1,
+      "message": "Put \u0027 around hexdump",
+      "revId": "27bfab989f274da0da09038bfcfd76c549b7dbea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//18o\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 684,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-03-30T21:30:43Z",
+      "side": 1,
+      "message": "Put \u0027 around hex viewer",
+      "revId": "27bfab989f274da0da09038bfcfd76c549b7dbea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//18c\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 686,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-03-30T21:30:43Z",
+      "side": 1,
+      "message": "Sintaks beklemtoning",
+      "revId": "27bfab989f274da0da09038bfcfd76c549b7dbea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//18Y\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 688,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-03-30T21:30:43Z",
+      "side": 1,
+      "message": "See above",
+      "revId": "27bfab989f274da0da09038bfcfd76c549b7dbea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//18U\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 690,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-03-30T21:30:43Z",
+      "side": 1,
+      "message": "beklemtoning",
+      "revId": "27bfab989f274da0da09038bfcfd76c549b7dbea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//18Q\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 725,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-03-30T21:30:43Z",
+      "side": 1,
+      "message": "Deursigtigheid",
+      "revId": "27bfab989f274da0da09038bfcfd76c549b7dbea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//18E\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 734,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-03-30T21:30:43Z",
+      "side": 1,
+      "message": "kleur skema",
+      "revId": "27bfab989f274da0da09038bfcfd76c549b7dbea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
