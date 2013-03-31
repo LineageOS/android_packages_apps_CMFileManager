@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//1XA\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-03-31T16:46:57Z",
+      "side": 1,
+      "message": "Ich sehe gerade, dass vor Dateimanager ein Bindestrich fehlt. Kannst du den mal schnell noch mit einbauen? :)",
+      "revId": "e7f2af6060cff07eb8261f3a6c5fe444c8969ade",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//1W8\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 448,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-03-31T16:46:57Z",
+      "side": 1,
+      "message": "Hier fehlt ein \u0027e\u0027 ;)",
+      "revId": "e7f2af6060cff07eb8261f3a6c5fe444c8969ade",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
