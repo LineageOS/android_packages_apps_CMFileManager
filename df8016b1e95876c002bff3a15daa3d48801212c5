@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//1HA\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-01T14:24:25Z",
+      "side": 1,
+      "message": "I\u0027d stick to the current one, since that\u0027s used in the default translations. It\u0027s also less.",
+      "revId": "df8016b1e95876c002bff3a15daa3d48801212c5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
