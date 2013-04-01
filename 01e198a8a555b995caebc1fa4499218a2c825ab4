@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//1NM\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-01T00:02:07Z",
+      "side": 1,
+      "message": "I think is better \"... y mostrarlo en pantalla\"",
+      "revId": "01e198a8a555b995caebc1fa4499218a2c825ab4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//1Ng\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-01T00:02:07Z",
+      "side": 1,
+      "message": ".. del archivo mostrado ...",
+      "revId": "01e198a8a555b995caebc1fa4499218a2c825ab4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//1NQ\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 367,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-01T00:02:07Z",
+      "side": 1,
+      "message": "This string is for highlight the \"\u003d\", so i think is better \"Asignación\" or something like that",
+      "revId": "01e198a8a555b995caebc1fa4499218a2c825ab4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//1NU\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-01T00:02:07Z",
+      "side": 1,
+      "message": "I think is better \"Comentario simple\" or \"Comentario en línea\", or just \"Comentario\"",
+      "revId": "01e198a8a555b995caebc1fa4499218a2c825ab4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
