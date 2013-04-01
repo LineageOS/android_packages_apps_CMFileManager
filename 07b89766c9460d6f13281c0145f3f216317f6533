@@ -1,0 +1,11 @@
+Change-Id: I979ac1dcfe7b72a2bdec3bd00bc928447ccf6b76
+Code-Review+1: Pavel Volkov <marshmollow@gmail.com>
+Code-Review+2: Jorge Ruesga <jorge@ruesga.com>
+Verified+1: Jorge Ruesga <jorge@ruesga.com>
+Verified+1: Cid
+Code-Review+1: Vladimir Belkov <belladimir@gmail.com>
+Submitted-by: Jorge Ruesga <jorge@ruesga.com>
+Submitted-at: Mon, 01 Apr 2013 13:10:27 -0700
+Reviewed-on: http://review.cyanogenmod.org/34656
+Project: CyanogenMod/android_packages_apps_CMFileManager
+Branch: refs/heads/cm-10.1
