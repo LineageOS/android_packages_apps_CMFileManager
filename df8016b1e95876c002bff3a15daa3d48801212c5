@@ -16,6 +16,24 @@
       "revId": "df8016b1e95876c002bff3a15daa3d48801212c5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//1A0\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-04-01T19:55:24Z",
+      "side": 1,
+      "message": "I have copied the same line because apparently it\u0027s the rule in AOSP file (In defaut translation file and the others translations files, it\u0027s the same line).\nIf you prefere the older line, I do the correction in patch set 2.",
+      "parentUuid": "AAAAeX//1HA\u003d",
+      "revId": "df8016b1e95876c002bff3a15daa3d48801212c5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
