@@ -34,6 +34,24 @@
       "revId": "bf0846d68e614d8692e11319e837ffb303bdf724",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen///20\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-02T13:16:37Z",
+      "side": 1,
+      "message": "Ok. Yes, better. Go ahead and submit a new patchset with it",
+      "parentUuid": "AAAAen///4A\u003d",
+      "revId": "bf0846d68e614d8692e11319e837ffb303bdf724",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
