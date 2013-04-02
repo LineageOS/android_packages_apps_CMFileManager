@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAen///yU\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 5393
+      },
+      "writtenOn": "2013-04-02T15:52:38Z",
+      "side": 1,
+      "message": "SzinTaxis",
+      "revId": "e40a10160145af6064a2844219860bbd13b09687",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
