@@ -52,6 +52,24 @@
       "revId": "df8016b1e95876c002bff3a15daa3d48801212c5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen///9o\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-04-02T01:32:58Z",
+      "side": 1,
+      "message": "Ok I knowed not this, if I understanding good :\nWe add xmlns:android\u003d\"http://schemas.android.com/apk/res/android\" in header, if in one strings value we have \"@android:\"\nCorrect ?",
+      "parentUuid": "AAAAen///+o\u003d",
+      "revId": "df8016b1e95876c002bff3a15daa3d48801212c5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
