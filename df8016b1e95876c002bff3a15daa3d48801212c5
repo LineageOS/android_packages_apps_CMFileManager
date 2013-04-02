@@ -70,6 +70,24 @@
       "revId": "df8016b1e95876c002bff3a15daa3d48801212c5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen///9I\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-02T01:59:35Z",
+      "side": 1,
+      "message": "Yes. Briefly and simply, you must use it if some xml tag starts with \"\u003candroid:...\" or an attribute refers to \"@android:\". \n\nThis document uses the namespace \"urn:oasis:names:tc:xliff:document:1.2\" and to refer it we name it as xliff. When we want to refer it in the document we use \"\u003cxliff:...\"\n\nIn this case the namespace \"http://schemas.android.com/apk/res/android\" is unused.",
+      "parentUuid": "AAAAen///9o\u003d",
+      "revId": "df8016b1e95876c002bff3a15daa3d48801212c5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
