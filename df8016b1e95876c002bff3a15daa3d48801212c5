@@ -88,6 +88,24 @@
       "revId": "df8016b1e95876c002bff3a15daa3d48801212c5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen///8U\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-04-02T02:19:36Z",
+      "side": 1,
+      "message": "Ok, thank you I understood everything.",
+      "parentUuid": "AAAAen///9I\u003d",
+      "revId": "df8016b1e95876c002bff3a15daa3d48801212c5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
