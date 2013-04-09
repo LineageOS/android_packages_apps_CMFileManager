@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAen//9E0\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 385,
+      "author": {
+        "id": 3875
+      },
+      "writtenOn": "2013-04-09T14:53:05Z",
+      "side": 1,
+      "message": "Barevné",
+      "revId": "4a817596fd69f0b61474d85db751c68c7544daef",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//9E4\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 411,
+      "author": {
+        "id": 3875
+      },
+      "writtenOn": "2013-04-09T14:53:05Z",
+      "side": 1,
+      "message": "Více?ádkový",
+      "revId": "4a817596fd69f0b61474d85db751c68c7544daef",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//9E8\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 416,
+      "author": {
+        "id": 3875
+      },
+      "writtenOn": "2013-04-09T14:53:05Z",
+      "side": 1,
+      "message": "\\n\\Rozba \u003c\u003c nevypadlo tady jedno n?",
+      "revId": "4a817596fd69f0b61474d85db751c68c7544daef",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
