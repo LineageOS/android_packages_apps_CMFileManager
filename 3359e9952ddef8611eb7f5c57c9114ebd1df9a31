@@ -1,0 +1,327 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAen//8gw\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Please remove all comments.",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8gQ\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Please indent the xml (4 spaces)",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8g0\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8gs\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8go\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8gg\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8gc\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8gY\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8gU\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8gM\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8gI\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8gE\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8gA\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8f8\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 586,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8f4\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 615,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8f0\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 619,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8fw\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 623,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8fs\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 722,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//8fo\u003d",
+        "filename": "res/values-uk/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 730,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-11T14:12:24Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "revId": "3359e9952ddef8611eb7f5c57c9114ebd1df9a31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
