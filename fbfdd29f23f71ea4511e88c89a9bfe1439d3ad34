@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAen//67M\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 3875
+      },
+      "writtenOn": "2013-04-14T13:31:57Z",
+      "side": 1,
+      "message": "Zobrazování",
+      "revId": "fbfdd29f23f71ea4511e88c89a9bfe1439d3ad34",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//67Q\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 3875
+      },
+      "writtenOn": "2013-04-14T13:31:57Z",
+      "side": 1,
+      "message": "Vypo?ítat mi p?ijde lepší, ale to je asi fuk :)\n\nE: tak koukam, ze u actions_menu_compute_checksum mas \"Vypo?ítat\", tak bych to tak nechal.",
+      "revId": "fbfdd29f23f71ea4511e88c89a9bfe1439d3ad34",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//67U\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 3875
+      },
+      "writtenOn": "2013-04-14T13:31:57Z",
+      "side": 1,
+      "message": "P?i editaci....\n...slov ze slovníku.",
+      "revId": "fbfdd29f23f71ea4511e88c89a9bfe1439d3ad34",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
