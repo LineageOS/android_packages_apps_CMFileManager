@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAen//6mI\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-04-14T23:58:36Z",
+      "side": 1,
+      "message": "Genereer \u0027n hex storting...",
+      "revId": "a550434bf121c10e2a2edd78140922eddea17ae4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//6mM\u003d",
+        "filename": "res/values-af/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 620,
+      "author": {
+        "id": 1576
+      },
+      "writtenOn": "2013-04-14T23:58:36Z",
+      "side": 1,
+      "message": "...  en sortering...",
+      "revId": "a550434bf121c10e2a2edd78140922eddea17ae4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
