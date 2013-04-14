@@ -51,6 +51,10 @@
   <string name="cancelled_message">已取消.</string>
   <!-- Error message -->
   <string name="error_message">错误.</string>
+  <!-- Copy text content description -->
+  <string name="copy_text_cd">点击将文本复制到剪贴板</string>
+  <!-- Copy text content message -->
+  <string name="copy_text_msg">文本已复制到剪贴板</string>
 
   <!-- Warning dialog title -->
   <string name="warning_title">警告</string>
@@ -345,6 +349,10 @@
   <string name="editor_successfully_saved">文件已被成功的保存.</string>
   <!-- Editor * Read-only file mode -->
   <string name="editor_read_only_mode">文件已用只读模式打开.</string>
+  <!-- Editor * Dumping message -->
+  <string name="dumping_message">正在生成十六进制转储\u2026</string>
+  <!-- Editor * Displaying -->
+  <string name="displaying_message">正在显示\u2026</string>
 
   <!-- Bookmarks * Bookmarks activity title -->
   <string name="bookmarks">书签</string>
@@ -380,6 +388,13 @@
   <string name="menu_settings">设置</string>
   <!-- Menu * History * Clear history -->
   <string name="menu_clear_history">清除历史</string>
+  <!-- Menu * Editor * No suggestions -->
+  <string name="menu_no_suggestions">没有建议</string>
+  <!-- Menu * Editor * Word wrap -->
+  <string name="menu_word_wrap">自动换行</string>
+  <!-- Menu * Editor * Syntax highlight -->
+  <string name="menu_syntax_highlight">高亮句法</string>
+
 
   <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp">
@@ -485,6 +500,8 @@
   <string name="actions_menu_add_shortcut">添加快捷方式</string>
   <!-- Actions Dialog * Menu * Open parent folder -->
   <string name="actions_menu_open_parent_folder">打开父目录</string>
+  <!-- Actions Dialog * Menu * Compute checksum -->
+  <string name="actions_menu_compute_checksum">计算校验和</string>
 
   <!-- Actions * Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">
@@ -529,6 +546,13 @@
   <!-- Execution console * The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text">
     <xliff:g id="seconds">%1$s</xliff:g> 秒</string>
+
+  <!-- Compute checksum * Title -->
+  <string name="compute_checksum_title">计算检验和</string>
+  <!-- Compute checksum * The file name label -->
+  <string name="compute_checksum_filename_label">文件:</string>
+  <!-- Compute checksum * The computing checksum message-->
+  <string name="compute_checksum_computing_checksum_msg">正在计算检验和\u2026</string>
 
   <!-- Mime/Types * Folder -->
   <string name="mime_folder">文件夹</string>
@@ -583,6 +607,8 @@
   <string name="pref_general">常规设置</string>
   <!-- Preferences * Search title -->
   <string name="pref_search">搜索选项</string>
+  <!-- Preferences * Editor title -->
+  <string name="pref_editor">编辑器选项</string>
   <!-- Preferences * Themes title -->
   <string name="pref_themes">主题</string>
   <!-- Preferences * About title -->
@@ -655,6 +681,34 @@
   <string name="pref_remove_saved_search_terms_summary">点击此将会删除所有保存的搜索关键词</string>
   <!-- Preferences * Search * Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">所有保存的搜索关键词已被删除.</string>
+  <!-- Preferences * Editor * Behaviour category -->
+  <string name="pref_editor_behaviour_category">行为</string>
+  <!-- Preferences * Editor * No suggestions -->
+  <string name="pref_no_suggestions">不显示建议</string>
+  <!-- Preferences * Editor * No suggestions summary -->
+  <string name="pref_no_suggestions_desc">编辑文件时不要显示字典建议</string>
+  <!-- Preferences * Editor * Word wrap -->
+  <string name="pref_word_wrap">自动换行</string>
+  <!-- Preferences * Editor * Hexdump -->
+  <string name="pref_hexdump">Hexdump 二进制文件</string>
+  <!-- Preferences * Editor * Hexdump desc -->
+  <string name="pref_hexdump_desc">开启二进制文件时, 生成这个文件的十六进制转储并在十六进制查看器内打开.</string>
+    <!-- Preferences * Editor * Syntax highlight category -->
+  <string name="pref_editor_syntax_highlight_category">Syntax highlight</string>
+  <!-- Preferences * Editor * Syntax highlight -->
+  <string name="pref_syntax_highlight">高亮句法</string>
+  <!-- Preferences * Editor * Syntax highlight summary -->
+  <string name="pref_syntax_highlight_desc">高亮在编辑器内显示的文件的句法 (仅在能够处理文件类型的句法高亮处理器存在时)</string>
+  <!-- Preferences * Editor * Syntax highlight color scheme -->
+  <string name="pref_syntax_highlight_color_scheme">配色方案</string>
+  <!-- Preferences * Editor * Syntax highlight color scheme summary -->
+  <string name="pref_syntax_highlight_color_scheme_desc">点击以选择句法高亮配色方案</string>
+  <!-- Preferences * Editor * Syntax highlight * Color Scheme -->
+  <string name="pref_syntax_sh_use_theme_default">使用主题默认值</string>
+  <!-- Preferences * Editor * Syntax highlight *Color Scheme summary -->
+  <string name="pref_syntax_sh_use_theme_default_desc">使用目前主题的默认句法高亮配色方案</string>
+  <!-- Preferences * Editor * Syntax highlight * Color Scheme * Items category -->
+  <string name="pref_editor_sh_item_category">项目</string>
   <!-- Preferences * Themes * Themes selection category -->
   <string name="pref_themes_selection_category">主题</string>
   <!-- Preferences * Themes * Set theme button -->
@@ -673,6 +727,26 @@
   <string name="theme_default_name">淡色主题</string>
   <!-- Themes * Default theme description -->
   <string name="theme_default_description">用于 CyanogenMod 文件管理器的淡色主题.</string>
+
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
+  <string name="color_picker_alpha_slider_text">阿尔法通道</string>
+  <!-- The label of the current color panel -->
+  <string name="color_picker_current_text">目前:</string>
+  <!-- The label of the new color panel -->
+  <string name="color_picker_new_text">新的:</string>
+  <!-- The label of the color input -->
+  <string name="color_picker_color">颜色:</string>
+
+  <!-- Android Syntax Highlight -->
+  <string name="ash_reset_color_scheme">点击以还原为主题的默认配色方案</string>
+  <string name="ash_text">文字</string>
+  <string name="ash_assignment">赋值</string>
+  <string name="ash_singleline_comment">单行注释</string>
+  <string name="ash_multiline_comment">多行注释</string>
+  <string name="ash_keyword">关键词</string>
+  <string name="ash_quoted_string">带引号的字符串</string>
+  <string name="ash_variable">变量</string>
 
   <!-- Security * Extract relative or absolute files -->
   <string name="security_warning_extract">警告!\n\n
