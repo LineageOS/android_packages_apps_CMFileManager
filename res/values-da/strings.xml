@@ -34,6 +34,7 @@
   <string name="no">Nej</string>
   <string name="all">Alle</string>
   <string name="overwrite">Overskriv</string>
+  <string name="select">Vælg</string>
 
   <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
@@ -46,6 +47,10 @@
   <string name="cancelled_message">Annulleret.</string>
   <!-- Error message -->
   <string name="error_message">Fejl.</string>
+  <!-- Copy text content description -->
+  <string name="copy_text_cd">Tryk for at kopiere tekst til udklipsholder</string>
+  <!-- Copy text content message -->
+  <string name="copy_text_msg">Tekst kopieret til udklipsholder</string>
 
   <!-- Warning dialog title -->
   <string name="warning_title">Advarsel</string>
@@ -240,6 +245,12 @@
   <string name="fso_properties_dialog_size">Størrelse:</string>
   <!-- Fso Properties Dialog * Contains Label -->
   <string name="fso_properties_dialog_contains">Indeholder:</string>
+  <!-- Fso Properties Dialog * Last Accessed Time Label -->
+  <string name="fso_properties_dialog_last_accessed_date">Tilgået:</string>
+  <!-- Fso Properties Dialog * Last Modified Time Label -->
+  <string name="fso_properties_dialog_last_modified_date">Modificeret:</string>
+  <!-- Fso Properties Dialog * Last Changed Time -->
+  <string name="fso_properties_dialog_last_changed_date">Ændret:</string>
   <!-- Fso Properties Dialog * Owner Label -->
   <string name="fso_properties_dialog_owner">Ejer:</string>
   <!-- Fso Properties Dialog * Group Label -->
@@ -258,6 +269,14 @@
     <item quantity="one">1 fil</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> filer</item>
   </plurals>
+  <!-- Fso Properties Dialog * Skip media scan -->
+  <string name="fso_properties_dialog_include_in_media_scan">Spring mediescanning over:</string>
+  <string name="fso_failed_to_allow_media_scan">Kunne ikke tillade mediescanning</string>
+  <string name="fso_failed_to_prevent_media_scan">Kunne ikke forhindre mediescanning</string>
+  <string name="fso_delete_nomedia_dir_title">Slet .nomedia-mappe</string>
+  <string name="fso_delete_nomedia_dir_body">Denne mappe indeholder en .nomedia-mappe.\n\nVil du slette den og al dens indhold?</string>
+  <string name="fso_delete_nomedia_non_empty_title">Slet .nomedia-fil</string>
+  <string name="fso_delete_nomedia_non_empty_body">Denne mappe indeholder en ikke-tom .nomedia-fil.\n\nVil du slette den?</string>
 
   <!-- History * History activity title -->
   <string name="history">Historik</string>
@@ -297,6 +316,7 @@
 
   <!-- Picker Activity * Dialog title -->
   <string name="picker_title">Vælg en fil</string>
+  <string name="directory_picker_title">Vælg en mappe</string>
 
   <!-- Editor * Editor activity title -->
   <string name="editor">Editor</string>
@@ -314,6 +334,10 @@
   <string name="editor_successfully_saved">Filen blev gemt med succes.</string>
   <!-- Editor * Read-only file mode -->
   <string name="editor_read_only_mode">Filen er åbnet i tilstanden skrivebeskyttet.</string>
+  <!-- Editor * Dumping message -->
+  <string name="dumping_message">Genererer hex-dump\u2026</string>
+  <!-- Editor * Displaying -->
+  <string name="displaying_message">Viser\u2026</string>
 
   <!-- Bookmarks * Bookmarks activity title -->
   <string name="bookmarks">Bogmærker</string>
@@ -349,6 +373,12 @@
   <string name="menu_settings">Indstillinger</string>
   <!-- Menu * History * Clear history -->
   <string name="menu_clear_history">Ryd historik</string>
+  <!-- Menu * Editor * No suggestions -->
+  <string name="menu_no_suggestions">Ingen forslag</string>
+  <!-- Menu * Editor * Word wrap -->
+  <string name="menu_word_wrap">Tekstombrydning</string>
+  <!-- Menu * Editor * Sintax highlight -->
+  <string name="menu_syntax_highlight">Syntaksfremhævning</string>
 
   <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp">
@@ -432,6 +462,8 @@
   <string name="actions_menu_execute">Eksekvér</string>
   <!-- Actions Dialog * Menu * Send -->
   <string name="actions_menu_send">Send</string>
+  <!-- Actions Dialog * Menu * Send selection -->
+  <string name="actions_menu_send_selection">Send valg</string>
   <!-- Actions Dialog * Menu * Compress -->
   <string name="actions_menu_compress">Komprimér</string>
   <!-- Actions Dialog * Menu * Extract -->
@@ -450,6 +482,8 @@
   <string name="actions_menu_add_shortcut">Tilføj genvej</string>
   <!-- Actions Dialog * Menu * Open parent folder -->
   <string name="actions_menu_open_parent_folder">Åbn overordnet</string>
+  <!-- Actions Dialog * Menu * Compute checksum -->
+  <string name="actions_menu_compute_checksum">Beregn checksum</string>
 
   <!-- Actions * Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">Denne handling kan ikke fortrydes. Vil du fortsætte?</string>
@@ -492,6 +526,13 @@
   <string name="execution_console_script_exitcode_label">Afslutningskode:</string>
   <!-- Execution console * The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> sek.</string>
+
+  <!-- Compute checksum * Title -->
+  <string name="compute_checksum_title">Beregn checksum</string>
+  <!-- Compute checksum * The file name label -->
+  <string name="compute_checksum_filename_label">Fil:</string>
+  <!-- Compute checksum * The computing checksum message-->
+  <string name="compute_checksum_computing_checksum_msg">Beregner checksum\u2026</string>
 
   <!-- Mime/Types * Folder -->
   <string name="mime_folder">Mappe</string>
@@ -544,6 +585,10 @@
   <string name="pref_general">Generelle indstillinger</string>
   <!-- Preferences * Search title -->
   <string name="pref_search">Søgemuligheder</string>
+  <!-- Preferences * Editor title -->
+  <string name="pref_editor">Redigeringsmuligheder</string>
+  <!-- Preferences * Themes title -->
+  <string name="pref_themes">Temaer</string>
   <!-- Preferences * About title -->
   <string name="pref_about">Om</string>
   <!-- Preferences * About summary -->
@@ -554,6 +599,8 @@
   <string name="pref_general_behaviour_category">Generelt</string>
   <!-- Preferences * General * Case sensitive sort title -->
   <string name="pref_case_sensitive_sort">Brug case-sensitiv sortering</string>
+  <!-- Preferences * General * Case sensitive sort and navigating summary -->
+  <string name="pref_case_sensitive_sort_summary">Forskel på store/små bogstaver ved navigering eller sortering af søgeresultater</string>
   <!-- Preferences * General *Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">Advarsel om diskforbrug</string>
   <!-- Preferences * General * Disk usage warning level summary -->
@@ -610,9 +657,74 @@
   <string name="pref_remove_saved_search_terms_summary">Tryk for at fjerne alle de gemte søgetermer</string>
   <!-- Preferences * Search * Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">Alle gemte søgetermer blev fjernet.</string>
+  <!-- Preferences * Editor * Behaviour category -->
+  <string name="pref_editor_behaviour_category">Opførsel</string>
+  <!-- Preferences * Editor * No suggestions -->
+  <string name="pref_no_suggestions">Ingen forslag</string>
+  <!-- Preferences * Editor * No suggestions summary -->
+  <string name="pref_no_suggestions_desc">Vis ikke ordbogsforslag, når filen redigeres</string>
+  <!-- Preferences * Editor * Word wrap -->
+  <string name="pref_word_wrap">Tekstombrydning</string>
+  <!-- Preferences * Editor * Hexdump -->
+  <string name="pref_hexdump">Hexdump af binære filer</string>
+  <!-- Preferences * Editor * Hexdump desc -->
+  <string name="pref_hexdump_desc">Dan et hex-dump af filen og åbn den i en hex-viser, når en binær fil åbnes.</string>
+    <!-- Preferences * Editor * Syntax highlight category -->
+  <string name="pref_editor_syntax_highlight_category">Syntaksfremhævning</string>
+  <!-- Preferences * Editor * Syntax highlight -->
+  <string name="pref_syntax_highlight">Syntaksfremhævning</string>
+  <!-- Preferences * Editor * Syntax highlight summary -->
+  <string name="pref_syntax_highlight_desc">Fremhæv syntaksen for den viste fil i editoren (kun når et syntaksfremhævningsmodul er tilgængelig for filtypen)</string>
+  <!-- Preferences * Editor * Syntax highlight color scheme -->
+  <string name="pref_syntax_highlight_color_scheme">Farveskema</string>
+  <!-- Preferences * Editor * Syntax highlight color scheme summary -->
+  <string name="pref_syntax_highlight_color_scheme_desc">Tryk for at vælge farveskema til syntaksfremhævning</string>
+  <!-- Preferences * Editor * Syntax highlight * Color Scheme -->
+  <string name="pref_syntax_sh_use_theme_default">Brug standardtema</string>
+  <!-- Preferences * Editor * Syntax highlight *Color Scheme summary -->
+  <string name="pref_syntax_sh_use_theme_default_desc">Brug standard-syntaksfremhævningen i det aktuelle tema</string>
+  <!-- Preferences * Editor * Syntax highlight * Color Scheme * Items category -->
+  <string name="pref_editor_sh_item_category">Elementer</string>
+  <!-- Preferences * Themes * Themes selection category -->
+  <string name="pref_themes_selection_category">Temaer</string>
+  <!-- Preferences * Themes * Set theme button -->
+  <string name="pref_themes_set_theme">Sæt tema</string>
+  <!-- Preferences * Themes * No preview -->
+  <string name="pref_themes_no_preview">Intet eksempel\ntilgængeligt</string>
+  <!-- Preferences * Themes * Confirmation message -->
+  <string name="pref_themes_confirmation">Temaet blev korrekt anvendt.</string>
+  <!-- Preferences * Themes * Theme not found message -->
+  <string name="pref_themes_not_found">Tema ikke fundet.</string>
 
   <!-- Preferences * Debug * Capture debug traces -->
   <string name="pref_debug_traces">Log debug-information</string>
+
+  <!-- Themes * Default theme name -->
+  <string name="theme_default_name">Lyst tema</string>
+  <!-- Themes * Default theme description -->
+  <string name="theme_default_description">Et lyst tema til CyanogenMods filstyring.</string>
+  <!-- Themes * Default theme author -->
+  <string name="themes_author">CyanogenMod</string>
+
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
+  <string name="color_picker_alpha_slider_text">Alfa</string>
+  <!-- The label of the current color panel -->
+  <string name="color_picker_current_text">Aktuel:</string>
+  <!-- The label of the new color panel -->
+  <string name="color_picker_new_text">Ny:</string>
+  <!-- The label of the color input -->
+  <string name="color_picker_color">Farve:</string>
+
+  <!-- Android Syntax Highlight -->
+  <string name="ash_reset_color_scheme">Tryk for at gendanne standard-farveskemaet</string>
+  <string name="ash_text">Tekst</string>
+  <string name="ash_assignment">Tildeling</string>
+  <string name="ash_singleline_comment">Enkeltlinje-kommentar</string>
+  <string name="ash_multiline_comment">Flerlinje-kommentar</string>
+  <string name="ash_keyword">Nøgleord</string>
+  <string name="ash_quoted_string">Citeret streng</string>
+  <string name="ash_variable">Variabel</string>
 
   <!-- Security * Extract relative or absolute files -->
   <string name="security_warning_extract">Advarsel!\n\nUdpakning af en arkivfil med relative eller absolutte stier kan forårsage skade på din enhed ved at overskrive systemfiler.\n\nVil du fortsætte?</string>
