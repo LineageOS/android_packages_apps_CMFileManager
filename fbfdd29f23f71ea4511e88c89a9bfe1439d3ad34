@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAen//6Rc\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 1558
+      },
+      "writtenOn": "2013-04-16T02:18:30Z",
+      "side": 1,
+      "message": "Tak ted jsem nepochopil, co nechat :) jestli v obou pripadech \"vypocitat\" nebo v obou pripadech \"spocitat\".",
+      "parentUuid": "AAAAen//67Q\u003d",
+      "revId": "fbfdd29f23f71ea4511e88c89a9bfe1439d3ad34",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAen//67U\u003d",
         "filename": "res/values-cs/strings.xml",
         "patchSetId": 3
