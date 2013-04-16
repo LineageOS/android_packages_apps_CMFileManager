@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAen//6L0\u003d",
+        "filename": "res/values-zh-rCN/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 4359
+      },
+      "writtenOn": "2013-04-16T11:26:56Z",
+      "side": 1,
+      "message": "1. Please remove the unnecessary line.\n2. I am apt to \"Yu fa gao liang\", sorry I have to use Ping yin.",
+      "revId": "65030feaa433e678166955258cdbe9464ea4f1bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//6Lw\u003d",
+        "filename": "res/values-zh-rCN/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 551,
+      "author": {
+        "id": 4359
+      },
+      "writtenOn": "2013-04-16T11:26:56Z",
+      "side": 1,
+      "message": "Ping yin, \"Ji suan jiao yan he\".",
+      "revId": "65030feaa433e678166955258cdbe9464ea4f1bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
