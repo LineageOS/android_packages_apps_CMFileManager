@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAen//3n4\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-04-21T23:06:58Z",
+      "side": 1,
+      "message": "http://es.wikipedia.org/wiki/Named_pipe",
+      "revId": "03c940c1f56c2bd56c7cd5d50292ad408931aed8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//3n8\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-04-21T23:06:58Z",
+      "side": 1,
+      "message": "http://es.wikipedia.org/wiki/Socket_Unix\n\nOr \"Conexión de dominio\"",
+      "revId": "03c940c1f56c2bd56c7cd5d50292ad408931aed8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
