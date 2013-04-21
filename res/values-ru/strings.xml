@@ -294,6 +294,9 @@
   <string name="mime_symlink">Симлинк</string>
   <string name="mime_unknown">Неизвестно</string>
 
+  <string name="filetime_format_mode_system">Системное</string>
+  <string name="filetime_format_mode_locale">Вручную</string>
+
   <string name="selection_one_folder"><xliff:g id="folders">%1$s</xliff:g> папка выделена</string>
   <string name="selection_other_folders"><xliff:g id="folders">%1$s</xliff:g> папки(-ок) выделено</string>
   <string name="selection_one_file"><xliff:g id="files">%1$s</xliff:g> файл выделен</string>
@@ -334,6 +337,7 @@
   <string name="pref_general_behaviour_category">Основные</string>
   <string name="pref_case_sensitive_sort">Учитывать регистр при сортировке</string>
   <string name="pref_case_sensitive_sort_summary">Сортировка результатов при поиске или навигации</string>
+  <string name="pref_filetime_format_mode">Формат даты/времени</string>
   <string name="pref_disk_usage_warning_level">Предупреждения исп. памяти</string>
   <string name="pref_disk_usage_warning_level_summary" formatted="false">Показывать разноцветные индикации дискового пространства, когда они достигают <xliff:g id="level">%1$s</xliff:g> процентов свободного места</string>
   <string name="pref_compute_folder_statistics">Расчёт статистики по папкам</string>
