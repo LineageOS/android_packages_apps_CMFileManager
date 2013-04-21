@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAen//4DI\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-04-21T12:39:46Z",
+      "side": 1,
+      "message": "Others translations have translated these strings. Jorge, is it necessary?. Anyway, I\u0027ve added it for a better control of untranslated strings in all packets.",
+      "revId": "fa598d0abbe969a1572dedd7a5cec6b5def2f67e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
