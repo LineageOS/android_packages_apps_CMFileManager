@@ -12,11 +12,15 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
- -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+-->
 
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">File Manager</string>
     <string name="app_description">Un explorador de archivos de CyanogenMod.</string>
+    <string name="device_blockdevice">Block device</string>
+    <string name="device_characterdevice">Character device</string>
+    <string name="device_namedpipe">Named pipe</string>
+    <string name="device_domainsocket">Domain socket</string>
     <string name="mount_point_readonly">RO</string>
     <string name="mount_point_readwrite">RW</string>
     <string name="yes">Sí</string>
@@ -374,5 +378,4 @@
     <string name="changelog_title">Registro de cambios</string>
     <string name="welcome_title">Bienvenido</string>
     <string name="welcome_msg">Bienvenido al explorador de archivos de CyanogenMod.\n\nEsta aplicación permite explorar el sistema de archivos y con ello, realizar operaciones que podrían bloquear el dispositivo. Para prevenir esta circunstancia, la aplicación se iniciará en modo seguro.\n\nPodrá acceder al modo avanzado de superusuario mediante el menú Ajustes, pero será su responsabilidad el evitar que una operación dañe el dispositivo.\n\nEl equipo de CyanogenMod.\n</string>
-
 </resources>
