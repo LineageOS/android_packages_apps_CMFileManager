@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAen//3rA\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-21T21:42:17Z",
+      "side": 1,
+      "message": "I think it\u0027s possible that some languages require to have the time listed before the date.",
+      "revId": "c8e512b7d98db1f9dd7d2c9d82bb71fdc44b682a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
