@@ -29,7 +29,7 @@
   <string name="size_gigabytes" translatable="false">GB</string>
 
   <!-- Date/time format order (%1$s: date; %2$s: time) -->
-  <string name="datetime_format_order">%1$s %2$s</string>
+  <string name="datetime_format_order" translatable="false">%1$s %2$s</string>
 
   <!-- Devices types -->
   <string name="device_blockdevice">Block device</string>
@@ -608,9 +608,9 @@
   <!--  Filetime formats -->
   <string name="filetime_format_mode_system">System-defined</string>
   <string name="filetime_format_mode_locale">Locale-defined</string>
-  <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/yyyy hh:mm:ss</string>
-  <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
-  <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
+  <string name="filetime_format_mode_ddMMyyyy_HHmmss" translatable="false">dd/mm/yyyy hh:mm:ss</string>
+  <string name="filetime_format_mode_MMddyyyy_HHmmss" translatable="false">mm/dd/yyyy hh:mm:ss</string>
+  <string name="filetime_format_mode_yyyyMMdd_HHmmss" translatable="false">yyyy-mm-dd hh:mm:ss</string>
 
   <!-- Selection. All possibilities. [1 folder; >1 folders; 1 file; >1 files;
      >1 folders and 1 file; 1 folder and >1 files; >1 folders and >1 files]
