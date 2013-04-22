@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAen//3V4\u003d",
+        "filename": "res/values-el/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2013-04-22T16:48:11Z",
+      "side": 1,
+      "message": "Are these 3 strings translatable? I mean, should I translate the letters in my language?",
+      "revId": "1b783529b315ee7748360bd6a84ee6951f63d07a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
