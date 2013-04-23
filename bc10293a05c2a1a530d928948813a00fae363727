@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAe3///0w\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "Bestands beheerder dan ook niet denk ik. Gewoon \u0027Bestanden\u0027 dan maar?",
+      "parentUuid": "AAAAen//3FM\u003d",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAen//3T4\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 4
@@ -48,6 +66,24 @@
       "writtenOn": "2013-04-22T18:08:36Z",
       "side": 1,
       "message": "Ik zou hier toch Weergeven van maken",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAe3///0s\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAen//3T4\u003d",
       "revId": "bc10293a05c2a1a530d928948813a00fae363727",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -71,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAe3///0o\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAen//3Ts\u003d",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAen//3Tg\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 4
@@ -88,6 +142,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAe3///0k\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAen//3Tg\u003d",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAen//3TM\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 4
@@ -99,6 +171,24 @@
       "writtenOn": "2013-04-22T18:08:36Z",
       "side": 1,
       "message": "Moeten we checksum wel vertalen, het is zo\u0027n algemeen computerbegrip.....\n\nen anders moet het \"Controlegetal\" zijn",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAe3///0g\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "Ik hou het wel op checksum.",
+      "parentUuid": "AAAAen//3TM\u003d",
       "revId": "bc10293a05c2a1a530d928948813a00fae363727",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -156,6 +246,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAe3///0c\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAen//3S0\u003d",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAen//3S4\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 4
@@ -167,6 +275,24 @@
       "writtenOn": "2013-04-22T18:08:36Z",
       "side": 1,
       "message": "Android noemt dit \"regionaal\" in de datum instelling...\n\n- Regionale instelling",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAe3///0Y\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAen//3S4\u003d",
       "revId": "bc10293a05c2a1a530d928948813a00fae363727",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -190,6 +316,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAe3///0U\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAen//3FI\u003d",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAen//3SM\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 4
@@ -201,6 +345,24 @@
       "writtenOn": "2013-04-22T18:08:36Z",
       "side": 1,
       "message": "- Geen suggesties",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAe3///0Q\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAen//3SM\u003d",
       "revId": "bc10293a05c2a1a530d928948813a00fae363727",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -224,6 +386,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAe3///0M\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAen//3SI\u003d",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAen//3SE\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 4
@@ -235,6 +415,24 @@
       "writtenOn": "2013-04-22T18:08:36Z",
       "side": 1,
       "message": "- Automatische terugloop",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAe3///0I\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAen//3SE\u003d",
       "revId": "bc10293a05c2a1a530d928948813a00fae363727",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -258,6 +456,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAe3///0E\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "Standaardkleurenschema :)",
+      "parentUuid": "AAAAen//3R0\u003d",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAen//3Rs\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 4
@@ -269,6 +485,24 @@
       "writtenOn": "2013-04-22T18:08:36Z",
       "side": 1,
       "message": "- Huidig:",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAe3///0A\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAen//3Rs\u003d",
       "revId": "bc10293a05c2a1a530d928948813a00fae363727",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -292,6 +526,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAe3///z8\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "Standaardkleurenschema :)",
+      "parentUuid": "AAAAen//3Rc\u003d",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAen//3RM\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 4
@@ -303,6 +555,24 @@
       "writtenOn": "2013-04-22T18:08:36Z",
       "side": 1,
       "message": "Dit gaat noooooit passen\n\nVolgens mij is er maar 1 regel beschikbaar, en rechts daarnaast staat al een vakje met de huidige kleur.\n\nhttp://dut.proz.com/kudoz/english_to_dutch/computers%3A_software/166801-quoted_string.html\n\n\"string tussen aanhalingstekens\"\n\nAangezien dit erg specifieke opties zijn, zijn degene die dot gaan gebruiken wel op de hoogte van wat een \"string\" is denk ik zo.\n\nMaar dit gaat ook nog niet passen denk ik...",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAe3///z4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-23T20:08:14Z",
+      "side": 1,
+      "message": "- Geëscapete tekenreeks/string?",
+      "parentUuid": "AAAAen//3RM\u003d",
       "revId": "bc10293a05c2a1a530d928948813a00fae363727",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
