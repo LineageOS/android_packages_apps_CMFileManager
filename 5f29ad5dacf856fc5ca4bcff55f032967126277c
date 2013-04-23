@@ -16,6 +16,41 @@
       "revId": "5f29ad5dacf856fc5ca4bcff55f032967126277c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAe3///34\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-04-23T16:52:07Z",
+      "side": 1,
+      "message": "Ces lignes (278 à 282) correspondent aux différents choix d\u0027affichage du format des dates et heures. Il faut avoir une cohérence entre la ligne 278 et 279 du coup, ce serait \"Paramètre système\" et \"Paramètre local\". Je ne trouve pas d\u0027exemple dans d\u0027autres applicatiosn où il y a cette option.",
+      "parentUuid": "AAAAe3///5k\u003d",
+      "revId": "5f29ad5dacf856fc5ca4bcff55f032967126277c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAe3///38\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-04-23T16:52:07Z",
+      "side": 1,
+      "message": "\"Sélectionner le jeu de couleur syntaxique\", plus simple et tout aussi clair",
+      "revId": "5f29ad5dacf856fc5ca4bcff55f032967126277c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
