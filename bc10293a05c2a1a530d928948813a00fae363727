@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAen//3FM\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-23T02:26:52Z",
+      "side": 1,
+      "message": "Nog even gekeken hoe het eruit ziet met \"Bestanden beheren\" op m\u0027n homescreen, maar dan krijg je alleen \"Bestanden b...\" te zien, wat er eigenlijk ook niet uit ziet....",
+      "parentUuid": "AAAAen//3T8\u003d",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAen//3T4\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 4
@@ -149,6 +167,23 @@
       "writtenOn": "2013-04-22T18:08:36Z",
       "side": 1,
       "message": "Android noemt dit \"regionaal\" in de datum instelling...\n\n- Regionale instelling",
+      "revId": "bc10293a05c2a1a530d928948813a00fae363727",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//3FI\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-23T02:26:52Z",
+      "side": 1,
+      "message": "Ik vind die \u0027s\u0027 ertussen zo raar....\n\n- Schijfgebruikwaarschuwing",
       "revId": "bc10293a05c2a1a530d928948813a00fae363727",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
