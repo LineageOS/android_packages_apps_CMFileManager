@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAe3///2o\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-04-23T19:27:08Z",
+      "side": 1,
+      "message": "Mozhet luchshe \"Vverh\"?",
+      "revId": "55ced56d976db9b4e628c38dc1325e18d211b88a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAe3///2k\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-04-23T19:27:08Z",
+      "side": 1,
+      "message": "\"Drugie:\"",
+      "revId": "55ced56d976db9b4e628c38dc1325e18d211b88a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAe3///2s\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 265,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-04-23T19:27:08Z",
+      "side": 1,
+      "message": "neobratimo (slitno)",
+      "revId": "55ced56d976db9b4e628c38dc1325e18d211b88a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAe3///2c\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-04-23T19:27:08Z",
+      "side": 1,
+      "message": "Systemniy",
+      "revId": "55ced56d976db9b4e628c38dc1325e18d211b88a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAe3///2Y\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-04-23T19:27:08Z",
+      "side": 1,
+      "message": "Mestny ili regional\u0027niy - v originale \"opredeliaetsya local\u0027u\".\nSleduyushie tri stroki (tipa dd/mm/yyyy hh:mm:ss) tozhe perevesti nado.",
+      "revId": "55ced56d976db9b4e628c38dc1325e18d211b88a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
