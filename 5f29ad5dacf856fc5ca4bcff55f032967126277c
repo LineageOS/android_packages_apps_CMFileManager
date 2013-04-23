@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAe3///5k\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 4617
+      },
+      "writtenOn": "2013-04-23T16:07:53Z",
+      "side": 1,
+      "message": "Paramètre système \u003d\u003e mieux ?",
+      "revId": "5f29ad5dacf856fc5ca4bcff55f032967126277c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
