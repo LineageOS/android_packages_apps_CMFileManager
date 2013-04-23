@@ -16,6 +16,24 @@
       "revId": "8ef4e61d30290e95583b60dac908457e936bf8ce",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//3Eo\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-04-23T03:19:22Z",
+      "side": 1,
+      "message": "This could be translatable in some language \"date time\" or \"time date\". i left it open intentionally.",
+      "parentUuid": "AAAAen//3Vk\u003d",
+      "revId": "8ef4e61d30290e95583b60dac908457e936bf8ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
