@@ -16,6 +16,23 @@
       "revId": "4d6082f97dd8c88d8f0c27d9305f551b139352d8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAe3///no\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-24T04:41:29Z",
+      "side": 1,
+      "message": "is een Geëscapete string wel hetzelfde als een Quoted string???\n\nVolgens mij niet: http://www.cs.cf.ac.uk/Dave/PERL/node18.html\n\n\u0027A single-quoted string is pretty simple. Just surround the text that you\u0027d like to use with single quotes\u0027.\n\nDaarna komen pas de escape karakters aan de beurt, die je kan gebruiken IN een quoted string.",
+      "revId": "4d6082f97dd8c88d8f0c27d9305f551b139352d8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
