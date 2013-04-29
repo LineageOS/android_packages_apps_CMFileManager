@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAfH//+b0\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-29T18:35:59Z",
+      "side": 1,
+      "message": "kopieer -\u003e kopie\n\nDeze tekst wordt achter de bestandsnaam geplakt na het maken van een kopie van het bestand. \n\nScreenshot: https://www.dropbox.com/s/7i2kgi8isahz1cb/Screenshot_2013-04-29-11-35-09.png",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+bs\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-29T18:35:59Z",
+      "side": 1,
+      "message": "Dit is heel erg onduidelijk op HDPI schermen (en kleiner). Je ziet niet wat de echte actie (\u0027plakken\u0027 in dit geval) is. De actie moet vooraan staan.\n\nZie screenshot https://www.dropbox.com/s/d7cn1pfi3qndfp8/Screenshot_2013-04-29-11-35-51.png\n\n- Hier plakken (selectie)",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+bk\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-29T18:35:59Z",
+      "side": 1,
+      "message": "- Hier verplaatsen (selectie)",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+bg\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-29T18:35:59Z",
+      "side": 1,
+      "message": "- Verwijderen (selectie)",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+bc\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-29T18:35:59Z",
+      "side": 1,
+      "message": "- Comprimeren (selectie)",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+bY\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-29T18:35:59Z",
+      "side": 1,
+      "message": "- Verzenden (selectie)",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+bU\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-29T18:35:59Z",
+      "side": 1,
+      "message": "- Favoriet toevoegen\n\nAnders niet zichtbaar dat het om Favoriet gaat\n\nZie screenshot https://www.dropbox.com/s/d7cn1pfi3qndfp8/Screenshot_2013-04-29-11-35-51.png",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+bQ\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-29T18:35:59Z",
+      "side": 1,
+      "message": "- Keuze onthouden\n\nvinkje dat je kan zetten om te onthouden met welke app je een type bestand opent",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+bE\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-29T18:35:59Z",
+      "side": 1,
+      "message": "Kies je de optie Verzenden uit het menu, dan krijg je een dialoog met Versturen....\nzie r. 230\n\n- Verzenden met",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+bA\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-29T18:35:59Z",
+      "side": 1,
+      "message": "- Verzenden\n\nzie r.230",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
