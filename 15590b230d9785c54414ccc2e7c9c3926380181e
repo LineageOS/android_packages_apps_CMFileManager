@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAfH//+MU\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-30T03:28:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAfH//+b0\u003d",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAfH//+bs\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2013-04-29T18:35:59Z",
       "side": 1,
       "message": "Dit is heel erg onduidelijk op HDPI schermen (en kleiner). Je ziet niet wat de echte actie (\u0027plakken\u0027 in dit geval) is. De actie moet vooraan staan.\n\nZie screenshot https://www.dropbox.com/s/d7cn1pfi3qndfp8/Screenshot_2013-04-29-11-35-51.png\n\n- Hier plakken (selectie)",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+MQ\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-30T03:28:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAfH//+bs\u003d",
       "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAfH//+MM\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-30T03:28:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAfH//+bk\u003d",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAfH//+bg\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 6
@@ -64,6 +118,24 @@
       "writtenOn": "2013-04-29T18:35:59Z",
       "side": 1,
       "message": "- Verwijderen (selectie)",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+MI\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-30T03:28:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAfH//+bg\u003d",
       "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAfH//+ME\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-30T03:28:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAfH//+bc\u003d",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAfH//+bY\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 6
@@ -98,6 +188,24 @@
       "writtenOn": "2013-04-29T18:35:59Z",
       "side": 1,
       "message": "- Verzenden (selectie)",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+MA\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-30T03:28:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAfH//+bY\u003d",
       "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAfH//+L8\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-30T03:28:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAfH//+bU\u003d",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAfH//+bQ\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 6
@@ -132,6 +258,24 @@
       "writtenOn": "2013-04-29T18:35:59Z",
       "side": 1,
       "message": "- Keuze onthouden\n\nvinkje dat je kan zetten om te onthouden met welke app je een type bestand opent",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+L4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-30T03:28:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAfH//+bQ\u003d",
       "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -155,6 +299,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAfH//+L0\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-30T03:28:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAfH//+bE\u003d",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAfH//+bA\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 6
@@ -166,6 +328,24 @@
       "writtenOn": "2013-04-29T18:35:59Z",
       "side": 1,
       "message": "- Verzenden\n\nzie r.230",
+      "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+Lw\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-30T03:28:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAfH//+bA\u003d",
       "revId": "15590b230d9785c54414ccc2e7c9c3926380181e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
