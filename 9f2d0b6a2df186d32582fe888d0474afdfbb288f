@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAAfH//+Gg\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-30T14:25:13Z",
+      "side": 1,
+      "message": "- Favoriet succesvol aangemaakt.",
+      "revId": "9f2d0b6a2df186d32582fe888d0474afdfbb288f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAfH//+Gw\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 2
@@ -13,6 +30,41 @@
       "writtenOn": "2013-04-30T13:51:01Z",
       "side": 1,
       "message": "Favoriet maken?",
+      "revId": "9f2d0b6a2df186d32582fe888d0474afdfbb288f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+Go\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-30T14:25:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAfH//+Gw\u003d",
+      "revId": "9f2d0b6a2df186d32582fe888d0474afdfbb288f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+Gk\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-04-30T14:25:13Z",
+      "side": 1,
+      "message": "- Snelkoppeling maken\n\nzie ook r.292/293",
       "revId": "9f2d0b6a2df186d32582fe888d0474afdfbb288f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
