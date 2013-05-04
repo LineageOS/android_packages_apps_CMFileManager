@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAfX//+lk\u003d",
+        "filename": "res/values-nb/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2013-05-04T23:23:35Z",
+      "side": 1,
+      "message": "mappe",
+      "revId": "3057b7da134826b01eaa47940007129aee29e054",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfX//+mI\u003d",
+        "filename": "res/values-nb/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2013-05-04T23:23:35Z",
+      "side": 1,
+      "message": "montere",
+      "revId": "3057b7da134826b01eaa47940007129aee29e054",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfX//+mE\u003d",
+        "filename": "res/values-nb/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2013-05-04T23:23:35Z",
+      "side": 1,
+      "message": "Info",
+      "revId": "3057b7da134826b01eaa47940007129aee29e054",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfX//+l4\u003d",
+        "filename": "res/values-nb/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2013-05-04T23:23:35Z",
+      "side": 1,
+      "message": "ikke lar deg?",
+      "revId": "3057b7da134826b01eaa47940007129aee29e054",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfX//+l0\u003d",
+        "filename": "res/values-nb/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2013-05-04T23:23:35Z",
+      "side": 1,
+      "message": "samme her",
+      "revId": "3057b7da134826b01eaa47940007129aee29e054",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfX//+lw\u003d",
+        "filename": "res/values-nb/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2013-05-04T23:23:35Z",
+      "side": 1,
+      "message": "og her",
+      "revId": "3057b7da134826b01eaa47940007129aee29e054",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfX//+ls\u003d",
+        "filename": "res/values-nb/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2013-05-04T23:23:35Z",
+      "side": 1,
+      "message": "åpnet som",
+      "revId": "3057b7da134826b01eaa47940007129aee29e054",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfX//+lo\u003d",
+        "filename": "res/values-nb/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2013-05-04T23:23:35Z",
+      "side": 1,
+      "message": "søkevilkår",
+      "revId": "3057b7da134826b01eaa47940007129aee29e054",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
