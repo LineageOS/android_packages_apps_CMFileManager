@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAfX//+Yg\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-05-05T15:55:19Z",
+      "side": 1,
+      "message": "In french is \"ko\" and not \"Ko\".\nI don\u0027t know why, it\u0027s particularity of french language :)\n\nhttp://fr.wikipedia.org/wiki/Octet",
+      "revId": "317d9918c3ba01f9639ef95c6b8af5bfed780c1c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
