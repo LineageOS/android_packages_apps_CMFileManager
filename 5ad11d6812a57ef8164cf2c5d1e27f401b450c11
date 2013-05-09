@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAfn//+2E\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-05-09T18:44:57Z",
+      "side": 1,
+      "message": "\"KB\" tozhe bolshimi bukvami nado.",
+      "revId": "5ad11d6812a57ef8164cf2c5d1e27f401b450c11",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
