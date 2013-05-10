@@ -290,10 +290,10 @@
   <string name="filetime_format_mode_MMddyyyy_HHmmss">мм/дд/гггг чч:мм:сс</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">гггг-мм-дд чч:мм:сс</string>
 
-  <string name="selection_one_folder"><xliff:g id="folders">%1$s</xliff:g> папка выделена</string>
-  <string name="selection_other_folders"><xliff:g id="folders">%1$s</xliff:g> папки(-ок) выделено</string>
-  <string name="selection_one_file"><xliff:g id="files">%1$s</xliff:g> файл выделен</string>
-  <string name="selection_other_files"><xliff:g id="files">%1$s</xliff:g> файлов(-а) выделено</string>
+  <string name="selection_one_folder">Выбрана <xliff:g id="folders">%1$s</xliff:g> папка</string>
+  <string name="selection_other_folders">Выбрано папок: <xliff:g id="folders">%1$s</xliff:g></string>
+  <string name="selection_one_file">Выбран <xliff:g id="files">%1$s</xliff:g> файл</string>
+  <string name="selection_other_files">Выбрано файлов: <xliff:g id="files">%1$s</xliff:g></string>
   <string name="selection_other_folders_one_file"><xliff:g id="folders">%1$s</xliff:g> папки(-ок,-а) и <xliff:g id="files">%2$s</xliff:g> файл выделен</string>
   <string name="selection_one_folder_other_files"><xliff:g id="folder2">%1$s</xliff:g> папка и <xliff:g id="file2">%2$s</xliff:g> файлов(-а) выделено</string>
   <string name="selection_other_folders_other_files"><xliff:g id="folder2">%1$s</xliff:g> папки(-ок,-а) и <xliff:g id="files">%2$s</xliff:g> файлов(-а) выделено</string>
