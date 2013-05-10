@@ -1,0 +1,191 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAfn//+Ng\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-05-10T22:57:55Z",
+      "side": 1,
+      "message": "1: Izmenenie razresheniY... 2: Po soobrajeniyaM...",
+      "revId": "1883a88f283df2ec0c57c3004b9453dbc43938f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfn//+Ok\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-05-10T22:57:55Z",
+      "side": 1,
+      "message": "mediafaylov - slitno",
+      "revId": "1883a88f283df2ec0c57c3004b9453dbc43938f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfn//+Nc\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-05-10T22:57:55Z",
+      "side": 1,
+      "message": "tut tozhe",
+      "revId": "1883a88f283df2ec0c57c3004b9453dbc43938f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfn//+NY\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-05-10T22:57:55Z",
+      "side": 1,
+      "message": "nuzhna zapyataya",
+      "revId": "1883a88f283df2ec0c57c3004b9453dbc43938f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfn//+NU\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-05-10T22:57:55Z",
+      "side": 1,
+      "message": "nesohranennye - slitno",
+      "revId": "1883a88f283df2ec0c57c3004b9453dbc43938f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfn//+Nk\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-05-10T22:57:55Z",
+      "side": 1,
+      "message": "Mozhno prodolzhit\u0027 mysl\u0027 i vse tri stroki (297 - 299) privesti k vidu: \"Vybrano papok: X i faylov: Y\"",
+      "revId": "1883a88f283df2ec0c57c3004b9453dbc43938f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfn//+NQ\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 359,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-05-10T22:57:55Z",
+      "side": 1,
+      "message": "Konfidentsial\u0027nost\u0027",
+      "revId": "1883a88f283df2ec0c57c3004b9453dbc43938f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfn//+NM\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-05-10T22:57:55Z",
+      "side": 1,
+      "message": "Sohranyat\u0027 usloviya poiska",
+      "revId": "1883a88f283df2ec0c57c3004b9453dbc43938f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfn//+NI\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 370,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-05-10T22:57:55Z",
+      "side": 1,
+      "message": "ShestnadtsatErichniy",
+      "revId": "1883a88f283df2ec0c57c3004b9453dbc43938f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfn//+NE\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 371,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-05-10T22:57:55Z",
+      "side": 1,
+      "message": "tut tozhe",
+      "revId": "1883a88f283df2ec0c57c3004b9453dbc43938f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfn//+NA\u003d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 382,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-05-10T22:57:55Z",
+      "side": 1,
+      "message": "mozhet luchshe \"predprosmotr\"?",
+      "revId": "1883a88f283df2ec0c57c3004b9453dbc43938f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
