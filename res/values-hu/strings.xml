@@ -17,6 +17,10 @@
 
     <string name="app_name">Fájlkezelő</string>
     <string name="app_description">CyanogenMod fájlkezelő</string>
+    <string name="size_bytes">B</string>
+    <string name="size_kilobytes">kB</string>
+    <string name="size_megabytes">MB</string>
+    <string name="size_gigabytes">GB</string>
     <string name="datetime_format_order">%1$s %2$s</string>
     <string name="device_blockdevice">Blokkeszköz</string>
     <string name="device_characterdevice">Karaktereszköz</string>
@@ -269,6 +273,7 @@
     <string name="selection_other_folders"><xliff:g id="folders">%1$s</xliff:g> könyvtár kiválasztva.</string>
     <string name="selection_one_file"><xliff:g id="files">%1$s</xliff:g> fájl kiválasztva.</string>
     <string name="selection_other_files"><xliff:g id="files">%1$s</xliff:g> fájl kiválasztva.</string>
+    <string name="selection_one_folder_one_file"><xliff:g id="folders">%1$s</xliff:g> könyvtár és <xliff:g id="files">%2$s</xliff:g> fájl kiválasztva.</string>
     <string name="selection_other_folders_one_file"><xliff:g id="folders">%1$s</xliff:g> könyvtár és <xliff:g id="files">%2$s</xliff:g> fájl kiválasztva.</string>
     <string name="selection_one_folder_other_files"><xliff:g id="folder2">%1$s</xliff:g> könyvtár és <xliff:g id="file2">%2$s</xliff:g> fájl kiválasztva.</string>
     <string name="selection_other_folders_other_files"><xliff:g id="folder2">%1$s</xliff:g> könyvtár és <xliff:g id="files">%2$s</xliff:g> fájl kiválasztva.</string>
