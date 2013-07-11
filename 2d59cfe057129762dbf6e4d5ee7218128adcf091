@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dac4157f_f682f0c7",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-07-11T21:17:28Z",
+      "side": 1,
+      "message": "Fixed long separation from text to button.",
+      "revId": "2d59cfe057129762dbf6e4d5ee7218128adcf091",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
