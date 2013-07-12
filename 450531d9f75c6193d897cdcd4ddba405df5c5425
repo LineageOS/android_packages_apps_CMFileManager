@@ -118,6 +118,24 @@
       "revId": "450531d9f75c6193d897cdcd4ddba405df5c5425",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_81c80c76",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-07-12T02:41:33Z",
+      "side": 1,
+      "message": "Ili prosto \"root\" vezde so strochnoi bukvy pisat\u0027.",
+      "parentUuid": "dac4157f_a1ac30ee",
+      "revId": "450531d9f75c6193d897cdcd4ddba405df5c5425",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
