@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dac4157f_c16844bd",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-07-12T00:23:37Z",
+      "side": 1,
+      "message": "\"Root-dostupa\" so strochnoy.",
+      "revId": "450531d9f75c6193d897cdcd4ddba405df5c5425",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_81624cd7",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-07-12T00:23:37Z",
+      "side": 1,
+      "message": "\"Bezopasnom rezhime\" i \"Root-dostupa\", mne kazhetsya, luchshe so strochnoy bukvy pisat\u0027.",
+      "revId": "450531d9f75c6193d897cdcd4ddba405df5c5425",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_419b14ca",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-07-12T00:23:37Z",
+      "side": 1,
+      "message": "\"Bezopasnom rezhime\" i \"Root-dostupa\", mne kazhetsya, luchshe so strochnoy bukvy pisat\u0027.",
+      "revId": "450531d9f75c6193d897cdcd4ddba405df5c5425",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_01207c9a",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-07-12T00:23:37Z",
+      "side": 1,
+      "message": "Zdes\u0027 teper\u0027 mozhno izmenit\u0027 na \"Vybrano papok: \u003cxliff:g id\u003d\"folders\"\u003e%1$s\u003c/xliff:g\u003e i \u003cxliff:g id\u003d\"files\"\u003e%2$s\u003c/xliff:g\u003e fail\".",
+      "revId": "450531d9f75c6193d897cdcd4ddba405df5c5425",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_01a51c03",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 361,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-07-12T00:23:37Z",
+      "side": 1,
+      "message": "\"Root-privilegiy\" tozhe so strochnoy.",
+      "revId": "450531d9f75c6193d897cdcd4ddba405df5c5425",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_814b6c59",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-07-12T00:23:37Z",
+      "side": 1,
+      "message": "\"Root-privilegiyami\" tozhe so strochnoy.",
+      "revId": "450531d9f75c6193d897cdcd4ddba405df5c5425",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_a1ac30ee",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-07-12T00:23:37Z",
+      "side": 1,
+      "message": "Predlagayu pereimenovat\u0027 v \"Rezhim root-dostupa\", a takzhe zamenit\u0027 vse upominaniya (vyshe po tekstu) \"Root-rezhima\" na \"rezhim root-dostupa\".",
+      "revId": "450531d9f75c6193d897cdcd4ddba405df5c5425",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
