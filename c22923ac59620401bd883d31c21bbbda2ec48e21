@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dac4157f_9c6ab319",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-07-12T19:13:47Z",
+      "side": 1,
+      "message": "Plurals are ok in these strings. Good catch.",
+      "revId": "c22923ac59620401bd883d31c21bbbda2ec48e21",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
