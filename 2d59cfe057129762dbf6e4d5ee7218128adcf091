@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "dac4157f_dc9dcb5a",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-07-12T17:37:27Z",
+      "side": 1,
+      "message": "1 folder and 1 file means 2 items, so i think it should be \"selecccionados\". Don\u0027t you think so?",
+      "revId": "2d59cfe057129762dbf6e4d5ee7218128adcf091",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_f682f0c7",
         "filename": "res/values-es/strings.xml",
         "patchSetId": 1
