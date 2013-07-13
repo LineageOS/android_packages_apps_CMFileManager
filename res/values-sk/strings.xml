@@ -220,7 +220,7 @@
   <!-- Filesystem Info Dialog * Options Label -->
   <string name="filesystem_info_dialog_options">Voľby:</string>
   <!-- Filesystem Info Dialog * Dump/Pass Label -->
-  <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
+  <string name="filesystem_info_dialog_dump_pass">Dump/Pass:</string>
   <!-- Filesystem Info Dialog * Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">Celkom:</string>
   <!-- Filesystem Info Dialog * Used Disk Usage -->
@@ -546,6 +546,7 @@
   <string name="selection_other_folders"><xliff:g id="folders">%1$s</xliff:g> vybrané(-ých) priečinky(-ov).</string>
   <string name="selection_one_file"><xliff:g id="files">%1$s</xliff:g> vybraný súbor.</string>
   <string name="selection_other_files"><xliff:g id="files">%1$s</xliff:g> vybrané(-ých) súbory(-ov).</string>
+  <string name="selection_one_folder_one_file"><xliff:g id="folders">%1$s</xliff:g> priečinok a <xliff:g id="files">%2$s</xliff:g> súbor vybraný.</string>
   <string name="selection_other_folders_one_file"><xliff:g id="folders">%1$s</xliff:g> vybrané(-ých) priečinky(-ov) a <xliff:g id="files">%2$s</xliff:g> súbory(-ov).</string>
   <string name="selection_one_folder_other_files"><xliff:g id="folder2">%1$s</xliff:g> vybraný priečinok a <xliff:g id="file2">%2$s</xliff:g> súbory(-ov).</string>
   <string name="selection_other_folders_other_files"><xliff:g id="folder2">%1$s</xliff:g> vybrané(-ých) priečinky(-ov) a <xliff:g id="files">%2$s</xliff:g> súbor.</string>
@@ -556,7 +557,7 @@
   <string name="category_binary">BINÁRNY SÚBOR</string>
   <string name="category_text">TEXTOVÝ SÚBOR</string>
   <string name="category_document">DOKUMENT</string>
-  <string name="category_ebook">EL. KNIHA</string>
+  <string name="category_ebook">ELEKTR. KNIHA</string>
   <string name="category_mail">POŠTA</string>
   <string name="category_compress">KOMPRIMOVANÝ SÚBOR</string>
   <string name="category_exec">SPUSTITEĽNÝ SÚBOR</string>
@@ -589,7 +590,7 @@
   <!-- Preferences * About title -->
   <string name="pref_about">O aplikácii</string>
   <!-- Preferences * About summary -->
-  <string name="pref_about_summary">Správca súborov ver.<xliff:g id="version">%1$s</xliff:g>\nAutorské práva © 2012 The CyanogenMod Project</string>
+  <string name="pref_about_summary">Verzia CyanogenMod Správcu súborov <xliff:g id="version">%1$s</xliff:g>\nAutorské práva © 2012 The CyanogenMod Project</string>
 
   <!-- Preferences * General * Behaviour category -->
   <string name="pref_general_behaviour_category">Všeobecné</string>
@@ -701,19 +702,19 @@
   <!-- Themes * Default theme name -->
   <string name="theme_default_name">Svetlá téma</string>
   <!-- Themes * Default theme description -->
-  <string name="theme_default_description">A light theme for CyanogenMod File Manager.</string>
+  <string name="theme_default_description">Svetlá téma pre CyanogenMod Správcu súborov.</string>
   <!-- Themes * Default theme author -->
   <string name="themes_author">CyanogenMod</string>
 
   <!-- ColorPickerDialog -->
   <!-- The text of the alpha slider control -->
-  <string name="color_picker_alpha_slider_text">Alpha</string>
+  <string name="color_picker_alpha_slider_text">Alfa</string>
   <!-- The label of the current color panel -->
-  <string name="color_picker_current_text">Current:</string>
+  <string name="color_picker_current_text">Súčasná:</string>
   <!-- The label of the new color panel -->
-  <string name="color_picker_new_text">New:</string>
+  <string name="color_picker_new_text">Nová:</string>
   <!-- The label of the color input -->
-  <string name="color_picker_color">Color:</string>
+  <string name="color_picker_color">Farba:</string>
 
   <!-- Android Syntax Highlight -->
   <string name="ash_reset_color_scheme">Ťuknutím obnovíte predvolenú schému farebnej témy</string>
@@ -734,5 +735,5 @@
   <!-- Welcome Dialog * Title -->
   <string name="welcome_title">Vitajte</string>
   <!-- Welcome Dialog * Message -->
-  <string name="welcome_msg">Vitajte v správcovi súborov CyanogenMod.\n\nTáto aplikácia umožňuje prechádzať súborový systém a robiť operácie, ktoré môžu poškodiť vaše zariadenie. Na zabránenie škôd bude aplikácia spustená v Bezpečnom režime.\n\nMôžete zapnúť pokročilý režim s plným oprávnením v Nastaveniach. Tým preberiete zodpovednosťza operácie, ktoré budete s aplikáciou vykonávať.\n\nTým CyanogenMod.\n</string>
+  <string name="welcome_msg">Vitajte v správcovi súborov CyanogenMod.\n\nTáto aplikácia umožňuje prechádzať súborový systém a robiť operácie, ktoré môžu poškodiť vaše zariadenie. Na zabránenie škôd bude aplikácia spustená v Bezpečnom režime.\n\nMôžete zapnúť pokročilý režim s plným oprávnením v Nastaveniach. Tým preberiete zodpovednosťza operácie, ktoré budete s aplikáciou vykonávať.\n\nTím CyanogenMod.\n</string>
 </resources>
