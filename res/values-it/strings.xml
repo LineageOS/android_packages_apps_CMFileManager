@@ -281,6 +281,14 @@
   <string name="mime_unknown">Sconosciuto</string>
   <string name="filetime_format_mode_system">Definito da sistema</string>
   <string name="filetime_format_mode_locale">Definito da localizzazione</string>
+  <string name="selection_one_folder"><xliff:g id="folders">%1$s</xliff:g> cartella selezionata.</string>
+  <string name="selection_other_folders"><xliff:g id="folders">%1$s</xliff:g> cartelle selezionate.</string>
+  <string name="selection_one_file"><xliff:g id="files">%1$s</xliff:g> file selezionato.</string>
+  <string name="selection_other_files"><xliff:g id="files">%1$s</xliff:g> file selezionati.</string>
+  <string name="selection_one_folder_one_file"><xliff:g id="folders">%1$s</xliff:g> cartella e <xliff:g id="files">%2$s</xliff:g> file selezionati.</string>
+  <string name="selection_other_folders_one_file"><xliff:g id="folders">%1$s</xliff:g> cartelle e <xliff:g id="files">%2$s</xliff:g> file selezionati.</string>
+  <string name="selection_one_folder_other_files"><xliff:g id="folder2">%1$s</xliff:g> cartella e <xliff:g id="file2">%2$s</xliff:g> file selezionati.</string>
+  <string name="selection_other_folders_other_files"><xliff:g id="folder2">%1$s</xliff:g> cartelle e <xliff:g id="files">%2$s</xliff:g> file selezionati.</string>
   <string name="category_system">SISTEMA</string>
   <string name="category_app">APP</string>
   <string name="category_binary">BINARIO</string>
