@@ -17,6 +17,10 @@
 
     <string name="app_name">Fájlkezelő</string>
     <string name="app_description">CyanogenMod fájlkezelő</string>
+    <string name="size_bytes">B</string>
+    <string name="size_kilobytes">kB</string>
+    <string name="size_megabytes">MB</string>
+    <string name="size_gigabytes">GB</string>
     <string name="datetime_format_order">%1$s %2$s</string>
     <string name="device_blockdevice">Blokkeszköz</string>
     <string name="device_characterdevice">Karaktereszköz</string>
@@ -265,6 +269,10 @@
     <string name="filetime_format_mode_ddMMyyyy_HHmmss">nn/hh/éééé óó:pp:mm</string>
     <string name="filetime_format_mode_MMddyyyy_HHmmss">hh/nn/éééé óó:pp:mm</string>
     <string name="filetime_format_mode_yyyyMMdd_HHmmss">éééé/hh/nn óó:pp:mm</string>
+    <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> könyvtár és <xliff:g id="files">%2$s</xliff:g> fájl kiválasztva.</string>
+    <plurals name="selection_folders_or_files">
+      <item quantity="other"><xliff:g id="items">%1$s</xliff:g> kiválasztva.</item>
+    </plurals>
     <string name="category_system">RENDSZER</string>
     <string name="category_app">ALKALMAZÁS</string>
     <string name="category_binary">BINÁRIS</string>
