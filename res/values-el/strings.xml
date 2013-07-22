@@ -277,6 +277,7 @@
     <string name="selection_other_folders">Επιλέχθηκαν <xliff:g id="folders">%1$s</xliff:g> φάκελοι.</string>
     <string name="selection_one_file">Επιλέχθηκε <xliff:g id="files">%1$s</xliff:g> αρχείο.</string>
     <string name="selection_other_files">Επιλέχθηκαν <xliff:g id="files">%1$s</xliff:g> αρχεία.</string>
+    <string name="selection_one_folder_one_file">Επιλέχθηκε <xliff:g id="folders">%1$s</xliff:g> φάκελος και <xliff:g id="files">%2$s</xliff:g> αρχείο.</string>
     <string name="selection_other_folders_one_file">Επιλέχθηκαν <xliff:g id="folders">%1$s</xliff:g> φάκελοι και <xliff:g id="files">%2$s</xliff:g> αρχείο.</string>
     <string name="selection_one_folder_other_files">Επιλέχθηκαν <xliff:g id="folder2">%1$s</xliff:g> φάκελος και <xliff:g id="file2">%2$s</xliff:g> αρχεία.</string>
     <string name="selection_other_folders_other_files">Επιλέχθηκαν <xliff:g id="folder2">%1$s</xliff:g> φάκελοι και <xliff:g id="files">%2$s</xliff:g> αρχεία.</string>
