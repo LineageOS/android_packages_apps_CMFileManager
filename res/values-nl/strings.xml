@@ -224,7 +224,7 @@
     <string name="actions_menu_deselect_all">Alles deselecteren</string>
     <string name="actions_menu_select">Selecteren</string>
     <string name="actions_menu_deselect">Deselecteren</string>
-    <string name="actions_menu_paste_selection">Hier plakken (selectie)</string>
+    <string name="actions_menu_paste_selection">Hier kopiëren (selectie)</string>
     <string name="actions_menu_move_selection">Hier verplaatsen (selectie)</string>
     <string name="actions_menu_delete_selection">Verwijderen (selectie)</string>
     <string name="actions_menu_compress_selection">Comprimeren (selectie)</string>
@@ -273,6 +273,7 @@
     <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/yyyy hh:mm:ss</string>
     <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
     <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
+    <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> en <xliff:g id="files">%2$s</xliff:g> geselecteerd.</string>
     <string name="category_system">SYSTEEM</string>
     <string name="category_app">APP</string>
     <string name="category_binary">BINAIR</string>
