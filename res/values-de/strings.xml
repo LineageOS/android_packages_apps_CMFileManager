@@ -354,6 +354,12 @@
     <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
     <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
 
+    <!-- Selection. -->
+    <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> und <xliff:g id="files">%2$s</xliff:g> ausgewählt.</string>
+    <plurals name="selection_folders_or_files">
+        <item quantity="other"><xliff:g id="items">%1$s</xliff:g> ausgewählt.</item>
+    </plurals>
+
     <!-- Category descriptions -->
     <string name="category_system">SYSTEM</string>
     <string name="category_app">APP</string>
