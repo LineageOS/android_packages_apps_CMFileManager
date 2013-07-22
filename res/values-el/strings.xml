@@ -224,7 +224,7 @@
     <string name="actions_menu_deselect_all">Αποεπιλογή όλων</string>
     <string name="actions_menu_select">Επιλογή</string>
     <string name="actions_menu_deselect">Αποεπιλογή</string>
-    <string name="actions_menu_paste_selection">Επικόλληση επιλογής εδώ</string>
+    <string name="actions_menu_paste_selection">Αντιγραφή επιλογής εδώ</string>
     <string name="actions_menu_move_selection">Μετακίνηση επιλογής εδώ</string>
     <string name="actions_menu_delete_selection">Διαγραφή επιλογής</string>
     <string name="actions_menu_compress_selection">Συμπίεση επιλογής</string>
@@ -273,6 +273,8 @@
     <string name="filetime_format_mode_ddMMyyyy_HHmmss">ηη/μμ/εεεε ωω:λλ:δδ</string>
     <string name="filetime_format_mode_MMddyyyy_HHmmss">μμ/ηη/εεεε ωω:λλ:δδ</string>
     <string name="filetime_format_mode_yyyyMMdd_HHmmss">εεεε-μμ-ηη ωω:λλ:δδ</string>
+    <string name="selection_folders_or_files">Επιλέχθηκαν <xliff:g id="items">%1$s</xliff:g>.</string>
+    <string name="selection_folders_and_files">Επιλέχθηκαν <xliff:g id="folders">%1$s</xliff:g> και <xliff:g id="files">%2$s</xliff:g>.</string>
     <string name="category_system">ΣΥΣΤΗΜΑ</string>
     <string name="category_app">ΕΦΑΡΜΟΓΗ</string>
     <string name="category_binary">BINARY</string>
