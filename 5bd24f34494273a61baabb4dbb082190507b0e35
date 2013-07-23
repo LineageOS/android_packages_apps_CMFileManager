@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ad0253b_f549d88f",
+        "filename": "res/values-es/plurals.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-07-23T04:10:09Z",
+      "side": 1,
+      "message": "I need to test if plurals are used here.",
+      "revId": "5bd24f34494273a61baabb4dbb082190507b0e35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ad0253b_d54edc95",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-07-23T04:10:09Z",
+      "side": 1,
+      "message": "I think that plural is a unique option here.",
+      "revId": "5bd24f34494273a61baabb4dbb082190507b0e35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
