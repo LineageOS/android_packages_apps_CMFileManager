@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ad0253b_15a7b450",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-07-23T04:00:12Z",
+      "side": 1,
+      "message": "Genre of phrase will not work properly after this, but I can\u0027t to make anything else. For example: \"3 carpetas seleccionado(s)\" instead of \"3 carpetas seleccionada(s)\"",
+      "revId": "d61f3311ac378dcceed083276d0d8c38e503b9d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
