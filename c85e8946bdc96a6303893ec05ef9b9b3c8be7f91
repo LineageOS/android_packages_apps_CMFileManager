@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3acd31a7_545bec54",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-07-24T00:19:06Z",
+      "side": 1,
+      "message": "Gute Alternative :)",
+      "parentUuid": "3acd31a7_f49438e9",
+      "revId": "c85e8946bdc96a6303893ec05ef9b9b3c8be7f91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3acd31a7_d4993c21",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2013-07-23T23:22:58Z",
       "side": 1,
       "message": "Eventuell \u0027Neues Archiv %1$s%2$s\u0027?",
+      "revId": "c85e8946bdc96a6303893ec05ef9b9b3c8be7f91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_34587056",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-07-24T00:19:06Z",
+      "side": 1,
+      "message": "Klingt auch gut.",
+      "parentUuid": "3acd31a7_d4993c21",
       "revId": "c85e8946bdc96a6303893ec05ef9b9b3c8be7f91",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
