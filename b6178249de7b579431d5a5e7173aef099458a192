@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3acd31a7_8802873d",
+        "filename": "res/values-fr/plurals.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4617
+      },
+      "writtenOn": "2013-07-26T07:21:07Z",
+      "side": 1,
+      "message": "Le point obligatoire ?",
+      "revId": "b6178249de7b579431d5a5e7173aef099458a192",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
