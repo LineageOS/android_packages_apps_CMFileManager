@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aca2d91_7996df95",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-07-29T21:55:38Z",
+      "side": 1,
+      "message": "This is the buggy piece. It should read files !\u003d 0.",
+      "revId": "cd987727c9ac17eaf3e1cb234f32e30a9bde4110",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
