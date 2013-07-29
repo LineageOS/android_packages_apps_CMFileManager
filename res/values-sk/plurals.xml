@@ -29,9 +29,4 @@
     <item quantity="few">Našli sa <xliff:g id="count">%d</xliff:g> položky</item>
     <item quantity="other">Našlo sa <xliff:g id="count">%d</xliff:g> položiek</item>
   </plurals>
-    <plurals name="selection_folders_or_files">
-    <item quantity="one"><xliff:g id="items">%1$s</xliff:g> vybratý.</item>
-    <item quantity="few"><xliff:g id="items">%1$s</xliff:g> vybraté.</item>
-    <item quantity="other"><xliff:g id="items">%1$s</xliff:g> vybratých.</item>
-  </plurals>
 </resources>
