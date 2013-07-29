@@ -130,7 +130,7 @@ public class SelectionView extends LinearLayout {
         String nFilesString = res.getQuantityString(R.plurals.n_files, files, files);
 
         if (files == 0 || folders == 0) {
-            String itemsString = files == 0 ? nFilesString : nFoldersString;
+            String itemsString = files != 0 ? nFilesString : nFoldersString;
             return res.getQuantityString(R.plurals.selection_folders_or_files,
                     files + folders, itemsString);
         }
