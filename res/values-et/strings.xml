@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Failihaldur</string>
+  <string name="app_description">CyanogenMod failihaldur.</string>
+  <string name="size_bytes">B</string>
+  <string name="size_kilobytes">kB</string>
+  <string name="size_megabytes">MB</string>
+  <string name="size_gigabytes">GB</string>
+  <string name="datetime_format_order">%1$s %2$s</string>
+  <string name="device_blockdevice">Blokkseade</string>
+  <string name="device_characterdevice">Sümbolseade</string>
+  <string name="device_namedpipe">Nimega toru</string>
+  <string name="device_domainsocket">Domeenisokkel</string>
+  <string name="mount_point_readonly">RO</string>
+  <string name="mount_point_readwrite">RW</string>
+  <string name="yes">Jah</string>
+  <string name="no">Ei</string>
+  <string name="all">Kõik</string>
+  <string name="overwrite">Kirjuta üle</string>
+  <string name="select">Vali</string>
+  <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
+  <string name="search_result_name">Otsing: <xliff:g id="terms">%1$s</xliff:g></string>
+  <string name="loading_message">Laadimine\u2026</string>
+  <string name="cancelled_message">Katkestatud.</string>
+  <string name="error_message">Viga.</string>
+  <string name="copy_text_cd">Teksti kopeerimiseks lõikepuhvrisse puuduta seda</string>
+  <string name="copy_text_msg">Tekst lõikepuhvrisse kopeeritud</string>
+  <string name="warning_title">Hoiatus</string>
+  <string name="error_title">Viga</string>
+  <string name="confirm_operation">Operatsiooni kinnitamine</string>
+  <string name="confirm_overwrite">Ülekirjutamise kinnitamine</string>
+  <string name="confirm_deletion">Kustutamise kinnitamine</string>
+  <string name="msgs_change_to_prompt_access_mode_title">Režiimi vahetamise kinnitus</string>
+  <string name="msgs_change_to_prompt_access_mode_msg">
+    Root kasutaja režiimi ei õnnestu kasutada. Kasutusele võetakse turvaline režiim.\n\n
+    Kas see muudatus on OK?</string>
+  <string name="msgs_cant_create_console">Tööks vajalike privileegide hankimine ei õnnestu.</string>
+  <string name="msgs_privileged_console_alloc_failed">Root kasutaja režiimi ei õnnestu kasutada.
+    Kasutusele võetakse turvaline režiim.</string>
+  <string name="msgs_settings_save_failure">Seadistust ei õnnestunud rakendada või salvestada.</string>
+  <string name="msgs_settings_invalid_initial_directory">Avamiskaust
+    \"<xliff:g id="initial_dir">%1$s</xliff:g>\" on vigane. Liigutakse juurkausta.</string>
+  <string name="msgs_success">Operatsioon edukalt lõpetatud.</string>
+  <string name="msgs_unknown">Viga. Operatsioon ei olnud edukas.</string>
+  <string name="msgs_insufficient_permissions">See operatsioon vajab suuremaid õigusi. Proovi kasutada
+    root kasutaja režiimi.</string>
+  <string name="msgs_file_not_found">Faili või kausta ei leitud.</string>
+  <string name="msgs_command_not_found">Operatsiooni käsku kas ei leitud või on operatsiooni
+    definitsioon vigane.</string>
+  <string name="msgs_io_failed">Lugemise/kirjutamise viga.</string>
+  <string name="msgs_operation_timeout">Operatsiooni ajalimiit ületati.</string>
+  <string name="msgs_operation_failure">Operatsioon ebaõnnestus.</string>
+  <string name="msgs_console_alloc_failure">Sisemine viga.</string>
+  <string name="msgs_operation_can_not_be_cancelled">Operatsiooni pole võimalik katkestada.</string>
+  <string name="msgs_read_only_filesystem">Failisüsteem on ainult lugemiseks mõeldud režiimis. Enne
+    operatsiooni käivitamist ühenda failisüsteem kirjutamisrežiimis.</string>
+  <string name="msgs_illegal_argument">Vigane argument. Funktsiooni käivitamine ebaõnnestus.</string>
+  <string name="msgs_unresolved_inconsistencies">
+    See operatsioon pole lubatud kuna tekitab ebakõlasid.</string>
+  <string name="msgs_operation_not_allowed_in_current_directory">
+    See operatsioon on aktiivses kaustas keelatud.\n\nSihtkaust ei saa olla lähtekausta alamkaust
+    või olla sama, mis lähtekaust.</string>
+  <string name="msgs_push_again_to_exit">Väljumiseks puuduta uuesti.</string>
+  <string name="msgs_not_registered_app">Ükski rakendus pole end registreerinud tegelema valitud
+    faili tüübiga.</string>
+  <string name="msgs_overwrite_files">
+    Mõned failid eksisteerivad juba sihtkaustas.\n\nKas kirjutada need üle?</string>
+  <string name="msgs_action_association_failed">Tegevuse sidumine rakendusega ebaõnnestus.</string>
+  <string name="advise_insufficient_permissions">See operatsioon vajab suuremaid õigusi.\n\n
+    Kas soovid lülituda root kasutaja režiimi?</string>
+  <string name="parent_dir">Ülemkaust</string>
+  <string name="external_storage">Väline salvestusruum</string>
+  <string name="usb_storage">USB salvestusruum</string>
+  <string name="actionbar_button_filesystem_cd">Failisüsteemi info</string>
+  <string name="actionbar_button_sort_mode_cd">Sorteerimisrežiim</string>
+  <string name="actionbar_button_layout_mode_cd">Paigutusrežiim</string>
+  <string name="actionbar_button_other_view_options_cd">Muud vaateseaded</string>
+  <string name="actionbar_button_selection_done_cd">Tehtud</string>
+  <string name="actionbar_button_actions_cd">Tegevused</string>
+  <string name="actionbar_button_history_cd">Ajalugu</string>
+  <string name="actionbar_button_bookmarks_cd">Järjehoidjad</string>
+  <string name="actionbar_button_search_cd">Otsing</string>
+  <string name="actionbar_button_overflow_cd">Veel seadeid</string>
+  <string name="actionbar_button_storage_cd">Salvestusruumi köited</string>
+  <string name="actionbar_button_save_cd">Salvesta</string>
+  <string name="sort_by_name_asc">Nime järgi &#x25B2;</string>
+  <string name="sort_by_name_desc">Nime järgi &#x25BC;</string>
+  <string name="sort_by_date_asc">Ajatempli järgi &#x25B2;</string>
+  <string name="sort_by_date_desc">Ajatempli järgi &#x25BC;</string>
+  <string name="layout_icons">Ikoonid</string>
+  <string name="layout_simple">Lihtne</string>
+  <string name="layout_details">Detailne</string>
+  <string name="cm_filemanager_show_dirs_first">Kaustad eespool</string>
+  <string name="cm_filemanager_show_hidden">Peidetud failide näitamine</string>
+  <string name="cm_filemanager_show_system">Süsteemi failide näitamine</string>
+  <string name="cm_filemanager_show_symlinks">Nimeviitade näitamine</string>
+  <string name="filesystem_info_warning_title">Info puudub</string>
+  <string name="filesystem_info_warning_msg">Selle failisüsteemi kohta pole infot.</string>
+  <string name="filesystem_info_cant_be_mounted_msg">
+    Failisüsteemi pole võimalik (lahti) ühendada.</string>
+  <string name="filesystem_info_mount_not_allowed_msg">Ohutus režiimis ei ole failisüsteemide ühendamisega
+    seotud tegevused lubatud. Root kasutaja režiimile lülitumiseks puuduta nuppu.</string>
+  <string name="filesystem_info_mount_failed_msg">Failisüsteemi ühendamine ebaõnnestus.
+    Mõnesid failisüsteeme, nagu nt SD kaarte, pole võimalik (lahti) ühendada kuna need
+    on süsteemi ehitatud ainult lugemiseks mõeldud failisüsteemid.</string>
+  <string name="filesystem_info_dialog_title">Failisüsteemi info</string>
+  <string name="filesystem_info_dialog_tab_info">Info</string>
+  <string name="filesystem_info_dialog_tab_disk_usage">Ruumikasutus</string>
+  <string name="filesystem_info_dialog_status">Olek:</string>
+  <string name="filesystem_info_dialog_mount_point">Ühenduspunkt:</string>
+  <string name="filesystem_info_dialog_device">Seade:</string>
+  <string name="filesystem_info_dialog_type">Tüüp:</string>
+  <string name="filesystem_info_dialog_options">Parameetrid:</string>
+  <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
+  <string name="filesystem_info_dialog_total_disk_usage">Kokku:</string>
+  <string name="filesystem_info_dialog_used_disk_usage">Kasutatud:</string>
+  <string name="filesystem_info_dialog_free_disk_usage">Vaba:</string>
+  <string name="fso_properties_permissions_not_allowed_msg">Õiguste muutmine pole turvalises režiimis lubatud.
+    Root kasutaja režiimile lülitumiseks puuduta nuppu.</string>
+  <string name="fso_properties_failed_to_change_owner_msg">Omaniku muutmine ebaõnnestus.\n\n
+    Turvalisusega seotud põhjustel ei luba mõned failisüsteemid (nagu nt SD kaardid) objektide omanikku muuta.</string>
+  <string name="fso_properties_failed_to_change_group_msg">Grupi muutmine ebaõnnestus.\n\n
+    Turvalisusega seotud põhjustel ei luba mõned failisüsteemid (nagu nt SD kaardid) objektide gruppi muuta.</string>
+  <string name="fso_properties_failed_to_change_permission_msg">Õiguste muutmine ebaõnnestus.\n\n
+    Turvalisusega seotud põhjustel ei luba mõned failisüsteemid (nagu nt SD kaardid) objektide loabitte muuta.</string>
+  <string name="fso_properties_dialog_title">Omadused</string>
+  <string name="fso_properties_dialog_tab_info">Info</string>
+  <string name="fso_properties_dialog_tab_permissions">Õigused</string>
+  <string name="fso_properties_dialog_name">Nimi:</string>
+  <string name="fso_properties_dialog_parent">Ülemkaust:</string>
+  <string name="fso_properties_dialog_type">Tüüp:</string>
+  <string name="fso_properties_dialog_category">Kategooria:</string>
+  <string name="fso_properties_dialog_link">Link:</string>
+  <string name="fso_properties_dialog_size">Suurus:</string>
+  <string name="fso_properties_dialog_contains">Sisaldab:</string>
+  <string name="fso_properties_dialog_last_accessed_date">Loetud:</string>
+  <string name="fso_properties_dialog_last_modified_date">Muudetud:</string>
+  <string name="fso_properties_dialog_last_changed_date">Staatus muudetud:</string>
+  <string name="fso_properties_dialog_owner">Omanik:</string>
+  <string name="fso_properties_dialog_group">Grupp:</string>
+  <string name="fso_properties_dialog_others">Teised:</string>
+  <string name="fso_properties_dialog_include_in_media_scan">Meediafailide otsingust eemaldatud:</string>
+  <string name="fso_failed_to_allow_media_scan">Meediafailide otsingusse kaasamine ebaõnnestus.</string>
+  <string name="fso_failed_to_prevent_media_scan">Meediafailide otsingust eemaldamine ebaõnnestus</string>
+  <string name="fso_delete_nomedia_dir_title">.nomedia kausta kustutamine</string>
+  <string name="fso_delete_nomedia_dir_body">Selles kaustas on .nomedia kaust.\n\nSoovid sa selle .nomedia kausta koos selle sisuga kustutada?</string>
+  <string name="fso_delete_nomedia_non_empty_title">.nomedia faili kustutamine</string>
+  <string name="fso_delete_nomedia_non_empty_body">Selles kaustas on sisu omav .nomedia fail.\n\nSoovid sa selle kustutada?</string>
+  <string name="history">Ajalugu</string>
+  <string name="msgs_history_empty">Ajalugu on tühi.</string>
+  <string name="msgs_history_unknown">Tundmatu ajaloo kirje.</string>
+  <string name="search">Otsingutulemused</string>
+  <string name="search_hint">Sisesta oma otsing</string>
+  <string name="search_voice_hint">Ütle oma otsing</string>
+  <string name="search_error_msg">Viga otsimisel. Tulemusi pole.</string>
+  <string name="search_no_results_msg">Tulemusi pole.</string>
+  <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g>
+    <xliff:g id="path">%2$s</xliff:g> kaustas</string>
+  <string name="search_terms"><![CDATA[<b>Terms:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <string name="search_few_characters_title">Otsingu kinnitamine</string>
+  <string name="search_few_characters_msg">Mõned otsinguterminid sisaldavad väga vähe sümboleid. Selline otsing võib olla
+    väga aja- ning ressursimahukas.\n\nOled sa kindel, et soovid jätkata?</string>
+  <string name="searching">Palun oota\u2026</string>
+  <string name="searching_action_label">Otsing on käimas</string>
+  <string name="picker_title">Vali fail</string>
+  <string name="directory_picker_title">Vali kaust</string>
+  <string name="editor">Redaktor</string>
+  <string name="editor_invalid_file_msg">Vigane fail.</string>
+  <string name="editor_file_not_found_msg">Faili ei leitud.</string>
+  <string name="editor_file_exceed_size_msg">Fail on selles seadmes avamiseks liiga suur.</string>
+  <string name="editor_dirty_ask_title">Väljumise kinnitus</string>
+  <string name="editor_dirty_ask_msg">Muudatused on salvestamata.\n\nKas väljuda salvestamata?</string>
+  <string name="editor_successfully_saved">Fail edukalt salvestatud.</string>
+  <string name="editor_read_only_mode">Fail on avatud ainult lugemiseks mõeldud režiimis.</string>
+  <string name="dumping_message">Kuueteistkümnendsüsteemis tõmmise loomine\u2026</string>
+  <string name="displaying_message">Näitamine\u2026</string>
+  <string name="bookmarks">Järjehoidjad</string>
+  <string name="bookmarks_home">Kodu</string>
+  <string name="bookmarks_root_folder">Juurkaust</string>
+  <string name="bookmarks_system_folder">Süsteemi kaust</string>
+  <string name="bookmarks_button_config_cd">Avamiskaustaks seadmine.</string>
+  <string name="bookmarks_button_remove_bookmark_cd">Järjehoidja eemaldamine.</string>
+  <string name="bookmarks_msgs_add_success">Järjehoidja edukalt lisatud.</string>
+  <string name="initial_directory_dialog_title">Avamiskaust</string>
+  <string name="initial_directory_label">Vali avamiskaust:</string>
+  <string name="initial_directory_relative_msg">Suhteliste kaustateede kasutamine pole siin lubatud.</string>
+  <string name="initial_directory_error_msg">Viga avamiskausta salvestamisel.</string>
+  <string name="menu_history">Ajalugu</string>
+  <string name="menu_bookmarks">Järjehoidjad</string>
+  <string name="menu_search">Otsing</string>
+  <string name="menu_settings">Seaded</string>
+  <string name="menu_clear_history">Puhasta ajalugu</string>
+  <string name="menu_no_suggestions">Soovitusi pole</string>
+  <string name="menu_word_wrap">Automaatne reamurdmine</string>
+  <string name="menu_syntax_highlight">Süntaksi esiletõst</string>
+  <string name="create_copy_regexp">
+    <xliff:g id="name">%1$s</xliff:g> - kopeerimine<xliff:g id="extension">%2$s</xliff:g></string>
+  <string name="create_new_compress_file_regexp">
+    <xliff:g id="name">%1$s</xliff:g> - uus<xliff:g id="extension">%2$s</xliff:g></string>
+  <string name="waiting_dialog_msg">Operatsiooni teostamine\u2026</string>
+  <string name="waiting_dialog_copying_title">Kopeerimine\u2026</string>
+  <string name="waiting_dialog_copying_msg">
+    <![CDATA[<b>From</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/>]]>
+    <![CDATA[<b>To</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <string name="waiting_dialog_moving_title">Liigutamine\u2026</string>
+  <string name="waiting_dialog_moving_msg">
+    <![CDATA[<b>From</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/>]]>
+    <![CDATA[<b>To</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <string name="waiting_dialog_deleting_title">Kustutamine\u2026</string>
+  <string name="waiting_dialog_deleting_msg">
+    <![CDATA[<b>File</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <string name="waiting_dialog_extracting_title">Lahti pakkimine\u2026</string>
+  <string name="waiting_dialog_extracting_msg">
+    <![CDATA[<b>File</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <string name="waiting_dialog_compressing_title">Pakkimine\u2026</string>
+  <string name="waiting_dialog_compressing_msg">
+    <![CDATA[<b>File</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <string name="waiting_dialog_analizing_msg">
+    <![CDATA[<b>Analyzing\u2026</b>]]></string>
+  <string name="msgs_extracting_success">
+    Lahtipakkimine edukalt lõpetatud. Andmed pakiti lahti
+    <xliff:g id="destination">%1$s</xliff:g> kausta.</string>
+  <string name="msgs_compressing_success">
+    Pakkimine edukalt lõpetatud. Andmed pakiti kokku
+    <xliff:g id="destination">%1$s</xliff:g> kausta.</string>
+  <string name="actions_dialog_title">Tegevused</string>
+  <string name="actions_menu_properties_current_folder">Omadused</string>
+  <string name="actions_menu_refresh">Värskenda</string>
+  <string name="actions_menu_new_directory">Uus kaust</string>
+  <string name="actions_menu_new_file">Uus fail</string>
+  <string name="actions_menu_select_all">Vali kõik</string>
+  <string name="actions_menu_deselect_all">Tühista kõik märkimised</string>
+  <string name="actions_menu_select">Vali</string>
+  <string name="actions_menu_deselect">Tühista märkimine</string>
+  <string name="actions_menu_paste_selection">Lisa märgitud siia</string>
+  <string name="actions_menu_move_selection">Liiguta märgitud siia</string>
+  <string name="actions_menu_delete_selection">Kustuta märgitud</string>
+  <string name="actions_menu_compress_selection">Paki märgitud kokku</string>
+  <string name="actions_menu_create_link">Tekita viit</string>
+  <string name="actions_menu_open">Ava</string>
+  <string name="actions_menu_open_with">Ava kasutades</string>
+  <string name="actions_menu_execute">Käivita</string>
+  <string name="actions_menu_send">Saada</string>
+  <string name="actions_menu_send_selection">Saada märgitud</string>
+  <string name="actions_menu_compress">Paki kokku</string>
+  <string name="actions_menu_extract">Paki lahti</string>
+  <string name="actions_menu_delete">Kustuta</string>
+  <string name="actions_menu_rename">Nimeta ümber</string>
+  <string name="actions_menu_create_copy">Tekita koopia</string>
+  <string name="actions_menu_properties">Omadused</string>
+  <string name="actions_menu_add_to_bookmarks">Lisa järjehoidjatesse</string>
+  <string name="actions_menu_add_shortcut">Lisa otsetee</string>
+  <string name="actions_menu_open_parent_folder">Ava ülemkaust</string>
+  <string name="actions_menu_compute_checksum">Arvuta kontrollsumma</string>
+  <string name="actions_ask_undone_operation_msg">
+    See tegevus on lõplik ning seda pole võimalik hiljem tagasi võtta. Soovid sa jätkata?</string>
+  <string name="input_name_dialog_label">Nimi:</string>
+  <string name="input_name_dialog_message_empty_name">Nimi ei saa olla tühi.</string>
+  <string name="input_name_dialog_message_invalid_path_name">Vigane nimi.
+    \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' sümbolite kasutamine nimes pole lubatud.</string>
+  <string name="input_name_dialog_message_invalid_name">Vigane nimi. Nimede \'.\' ja
+    \'..\' kasutamine pole lubatud.</string>
+  <string name="input_name_dialog_message_name_exists">See nimi on juba kasutusel.</string>
+  <string name="associations_dialog_title">Seosed</string>
+  <string name="associations_dialog_remember">Valik jäetakse meelde</string>
+  <string name="associations_dialog_openwith_title">Ava rakenduses</string>
+  <string name="associations_dialog_openwith_action">Ava</string>
+  <string name="associations_dialog_sendwith_title">Saada rakendusega</string>
+  <string name="associations_dialog_sendwith_action">Saada</string>
+  <string name="inline_autocomplete_tab_nothing_to_complete_msg">Lõpetamise variandid puuduvad.</string>
+  <string name="execution_console_title">Konsool</string>
+  <string name="execution_console_script_name_label">Skript:</string>
+  <string name="execution_console_script_execution_time_label">Aeg:</string>
+  <string name="execution_console_script_exitcode_label">Väljumiskood:</string>
+  <string name="execution_console_script_execution_time_text">
+    <xliff:g id="seconds">%1$s</xliff:g> s.</string>
+  <string name="compute_checksum_title">Kontrollsumma arvutamine</string>
+  <string name="compute_checksum_filename_label">Fail:</string>
+  <string name="compute_checksum_computing_checksum_msg">Kontrollsumma arvutamine\u2026</string>
+  <string name="mime_folder">Kaust</string>
+  <string name="mime_symlink">Nimeviit</string>
+  <string name="mime_unknown">Tundmatu</string>
+  <string name="filetime_format_mode_system">Süsteemi määratud</string>
+  <string name="filetime_format_mode_locale">Lokaadi määratud</string>
+  <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/yyyy hh:mm:ss</string>
+  <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
+  <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
+  <string name="selection_folders_and_files">Märgitud: <xliff:g id="folders">%1$s</xliff:g> ja <xliff:g id="files">%2$s</xliff:g>.</string>
+  <string name="category_system">SÜSTEEM</string>
+  <string name="category_app">RAKENDUS</string>
+  <string name="category_binary">BINAARFAIL</string>
+  <string name="category_text">TEKST</string>
+  <string name="category_document">DOKUMENT</string>
+  <string name="category_ebook">E-RAAMAT</string>
+  <string name="category_mail">E-MAIL</string>
+  <string name="category_compress">PAKITUD FAIL</string>
+  <string name="category_exec">KÄIVITATAV</string>
+  <string name="category_database">ANDMEBAAS</string>
+  <string name="category_font">FONT</string>
+  <string name="category_image">PILT</string>
+  <string name="category_audio">AUDIO</string>
+  <string name="category_video">VIDEO</string>
+  <string name="category_security">TURVALISUS</string>
+  <string name="compression_mode_title">Pakkimise režiim</string>
+  <string name="shortcut_failed_msg">Viga otsetee käsitlemisel.</string>
+  <string name="shortcut_creation_success_msg">Otsetee edukalt loodud.</string>
+  <string name="shortcut_creation_failed_msg">Otsetee loomine ebaõnnestus.</string>
+  <string name="pref">Seaded</string>
+  <string name="pref_general">Üldseaded</string>
+  <string name="pref_search">Otsinguseaded</string>
+  <string name="pref_editor">Redaktori seaded</string>
+  <string name="pref_themes">Teemad</string>
+  <string name="pref_about">Info</string>
+  <string name="pref_about_summary">Failihaldur v<xliff:g id="version">%1$s</xliff:g>
+    \nAutoriõigus \u00A9 2013 The CyanogenMod Project</string>
+  <string name="pref_general_behaviour_category">Üldine</string>
+  <string name="pref_case_sensitive_sort">Tõstutundlikkus</string>
+  <string name="pref_case_sensitive_sort_summary">Suur- ja väiketähtede arvestamine failisüsteemis liikumisel või otsingutulemuste sorteerimisel</string>
+  <string name="pref_filetime_format_mode">Kuupäeva ja kellaaja formaat</string>
+  <string name="pref_disk_usage_warning_level">Kettakasutuse hoiatus</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">Kettakasutuse vidin
+    kasutab teist värvi kui ketta kasutus ületab <xliff:g id="level">%1$s</xliff:g> protsenti
+    võimalikust ruumist</string>
+  <string name="pref_compute_folder_statistics">Kausta statistika arvutamine</string>
+  <string name="pref_compute_folder_statistics_on">Hoiatus! Kausta statistika arvutamine on töömahukas nii ajalises
+    kui süsteemi ressursside kasutamise mõttes</string>
+  <string name="pref_use_flinger">Viipežestide kasutamine</string>
+  <string name="pref_use_flinger_summary">Vasakult paremale viipežesti kasutamine failide või kaustade kustutamiseks.</string>
+  <string name="pref_general_advanced_settings_category">Muud seaded</string>
+  <string name="pref_access_mode">Töörežiim</string>
+  <string name="pref_access_mode_safe">Ohutu režiim</string>
+  <string name="pref_access_mode_safe_summary">Ohutu režiim\n\nRakendus käivitatakse privileegideta ning ainukesed
+    ligipääsetavad failisüsteemid on rakenduste andmete salvestamiseks mõeldud (SD kaardid ja USB).</string>
+  <string name="pref_access_mode_prompt">Kasutajalt küsimise režiim</string>
+  <string name="pref_access_mode_prompt_summary">Kasutajalt küsimise režiim\n\nRakendus käivitatakse täielike
+    privileegidega, kuid igale suuremaid õigusi nõudvale operatsioonile küsitakse kinnitust.</string>
+  <string name="pref_access_mode_root">Root kasutaja režiim</string>
+  <string name="pref_access_mode_root_summary">Root kasutaja režiim\n\nHoiatus! See režiim võimaldab teha operatsioone,
+    mis võivad muuta su seadme kasutamiskõlbmatuks. Ainult sina vastutad selle eest, et käivitatavad operatsioonid
+    oleks ohutud.</string>
+  <string name="pref_search_results_category">Tulemused</string>
+  <string name="pref_show_relevance_widget">Asjakohasuse vidin</string>
+  <string name="pref_highlight_terms">Otsingu terminite esiletõst</string>
+  <string name="pref_sort_search_results_mode">Tulemuste sorteerimine</string>
+  <string name="pref_sort_search_results_mode_none">Ei sorteerita</string>
+  <string name="pref_sort_search_results_mode_name">Nime järgi</string>
+  <string name="pref_sort_search_results_mode_relevance">Asjakohasuse järgi</string>
+  <string name="pref_search_privacity_category">Privaatsus</string>
+  <string name="pref_save_search_terms">Otsingu terminite salvestamine</string>
+  <string name="pref_save_search_terms_on">Otsingu terminid salvestatakse ning neid kasutatakse hilisematel otsingutel
+      terminite soovitamiseks</string>
+  <string name="pref_save_search_terms_off">Otsingu termineid ei salvestata</string>
+  <string name="pref_remove_saved_search_terms">Salvestatud terminite eemaldamine</string>
+  <string name="pref_remove_saved_search_terms_summary">Kõigi salvestatud otsingute terminite eemaldamiseks puuduta seda rida</string>
+  <string name="pref_remove_saved_search_terms_msg">Kõik salvestatud otsingute terminid on eemaldatud</string>
+  <string name="pref_editor_behaviour_category">Käitumine</string>
+  <string name="pref_no_suggestions">Soovitusi ei tehta</string>
+  <string name="pref_no_suggestions_desc">Failide redigeerimisel ei kasutata sõnastiku soovitusi</string>
+  <string name="pref_word_wrap">Ridade murdmine</string>
+  <string name="pref_hexdump">Kuueteistkümnendsüsteemis tõmmis</string>
+  <string name="pref_hexdump_desc">Binaarfaili avamisel luuakse failist kuueteistkümnendsüsteemis tõmmis ning
+    avatakse see siis redaktoris.</string>
+  <string name="pref_editor_syntax_highlight_category">Süntaksi esiletõst</string>
+  <string name="pref_syntax_highlight">Süntaksi esiletõst</string>
+  <string name="pref_syntax_highlight_desc">Redaktoris avatud faili süntaksi esiletõst/värvimine (ainult
+    juhul kui konkreetse failitüübi jaoks on süntaksi esiletõstuks vajalik info olemas)</string>
+  <string name="pref_syntax_highlight_color_scheme">Värviskeem</string>
+  <string name="pref_syntax_highlight_color_scheme_desc">Süntaksi esiletõstu värviskeemi valimiseks puuduta seda rida</string>
+  <string name="pref_syntax_sh_use_theme_default">Teema vaikeväärtus</string>
+  <string name="pref_syntax_sh_use_theme_default_desc">Kasutatakse aktiivse teema poolt defineeritud süntaksi esiletõstu vaikeväärtusi</string>
+  <string name="pref_editor_sh_item_category">Elemendid</string>
+  <string name="pref_themes_selection_category">Teemad</string>
+  <string name="pref_themes_set_theme">Kasuta teemat</string>
+  <string name="pref_themes_no_preview">Eelvaatlus\npuudub</string>
+  <string name="pref_themes_confirmation">Teema edukalt kasutusele võetud</string>
+  <string name="pref_themes_not_found">Teemat ei leitud</string>
+  <string name="pref_debug_traces">Silumisinfo logimine</string>
+  <string name="theme_default_name">Heledates toonides teema</string>
+  <string name="theme_default_description">Heledates toonides teema CyanogenMod failihaldurile</string>
+  <string name="themes_author">CyanogenMod</string>
+  <string name="color_picker_alpha_slider_text">Alfakanal</string>
+  <string name="color_picker_current_text">Aktiivne:</string>
+  <string name="color_picker_new_text">Uus:</string>
+  <string name="color_picker_color">Värv:</string>
+  <string name="ash_reset_color_scheme">Värviskeemi vaikeväärtuste taastamiseks puuduta seda teksti</string>
+  <string name="ash_text">Tekst</string>
+  <string name="ash_assignment">Omistamine</string>
+  <string name="ash_singleline_comment">Üherealine kommentaar</string>
+  <string name="ash_multiline_comment">Mitmerealine kommentaar</string>
+  <string name="ash_keyword">Võtmesõna</string>
+  <string name="ash_quoted_string">Jutumärkides string</string>
+  <string name="ash_variable">Muutuja</string>
+  <string name="security_warning_extract">Hoiatus!\n\n
+      Suhtelisi või absoluutseid failisüsteemi teid kasutava arhiivi lahti pakkimine võib põhjustada
+      kahju su seadmele kirjutades üle süsteemi faile.\n\n
+      Oled kindel, et soovid jätkata?</string>
+  <string name="changelog_title">Muudatuste nimekiri</string>
+  <string name="welcome_title">Tere tulemast</string>
+  <string name="welcome_msg">
+    Tere tulemast CyanogenModi failihaldurisse.
+    \n\nSee rakendus võimaldab sul uurida seadme failisüsteemi ning teha selles operatsioone, mis
+    võivad su seadme kasutamiskõlbmatuks muuta. Kahju vältimiseks käivitatakse rakendus turvalises
+    ning tavakasutaja õigustega režiimis.\n\nSeadete abil saad kasutada ka seadmes kõiki õigusi
+    omavat režiimi. Ainult sina vastutad selle eest, et sinu tegevus ei kahjusta süsteemi.
+    \n\nCyanogenModi meeskond.\n</string>
+</resources>
