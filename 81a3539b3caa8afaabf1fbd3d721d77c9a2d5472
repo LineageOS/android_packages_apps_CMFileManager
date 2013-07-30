@@ -16,6 +16,24 @@
       "revId": "81a3539b3caa8afaabf1fbd3d721d77c9a2d5472",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_1917ebee",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-07-30T00:51:29Z",
+      "side": 1,
+      "message": "No, it\u0027s correct. The first is for quantity determination, the second one is the format argument. See here: http://developer.android.com/guide/topics/resources/string-resource.html#Plurals",
+      "parentUuid": "1aca2d91_79201f4a",
+      "revId": "81a3539b3caa8afaabf1fbd3d721d77c9a2d5472",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
