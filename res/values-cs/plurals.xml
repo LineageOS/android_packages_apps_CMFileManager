@@ -19,16 +19,24 @@
         <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> složky</item>
         <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> složek</item>
     </plurals>
-
     <plurals name="n_files">
         <item quantity="one">1 soubor</item>
         <item quantity="few"><xliff:g id="files">%1$d</xliff:g> soubory</item>
         <item quantity="other"><xliff:g id="files">%1$d</xliff:g> souborů</item>
     </plurals>
-
     <plurals name="search_found_items">
         <item quantity="one">Nalezena 1 položka</item>
         <item quantity="few">Nalezeny <xliff:g id="count">%d</xliff:g> položky</item>
         <item quantity="other">Nalezeno <xliff:g id="count">%d</xliff:g> položek</item>
+    </plurals>
+    <plurals name="selection_folders">
+        <item quantity="one">Vybrána 1 složka.</item>
+        <item quantity="few">Vybrány <xliff:g id="folders">%1$d</xliff:g> složky.</item>
+        <item quantity="other">Vybraných <xliff:g id="folders">%1$d</xliff:g> složek.</item>
+    </plurals>
+    <plurals name="selection_files">
+        <item quantity="one">Vybrán 1 soubor.</item>
+        <item quantity="few">Vybrány <xliff:g id="files">%1$d</xliff:g> soubory.</item>
+        <item quantity="other">Vybraných <xliff:g id="files">%1$d</xliff:g> souborů.</item>
     </plurals>
 </resources>
