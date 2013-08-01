@@ -189,6 +189,142 @@
     },
     {
       "key": {
+        "uuid": "1aca2d91_0d31e50b",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-08-01T04:36:18Z",
+      "side": 1,
+      "message": "Better \"Alguno de los terminos a buscar ...\"\n\nNote: accent on \"terminos\". Gerrit doesn\u0027t allow to put accents on comments",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_ed3589f7",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-08-01T04:36:18Z",
+      "side": 1,
+      "message": "IMO, original sounds better for me",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_cd3acde7",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-08-01T04:36:18Z",
+      "side": 1,
+      "message": "IMO, original sounds better for me",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_8d25f5c3",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-08-01T04:36:18Z",
+      "side": 1,
+      "message": "IMO, original sounds better for me (besides being shorter)",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_6d2299bb",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-08-01T04:36:18Z",
+      "side": 1,
+      "message": "IMO, original sounds better for me (besides being shorter)",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_4d2fdda1",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-08-01T04:36:18Z",
+      "side": 1,
+      "message": "IMO, original sounds better for me (besides being shorter)",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_2d2ca1aa",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-08-01T04:36:18Z",
+      "side": 1,
+      "message": "IMO, original sounds better for me",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_0d18c583",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-08-01T04:36:18Z",
+      "side": 1,
+      "message": "IMO, original more accurate",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aca2d91_cd82cdc8",
         "filename": "res/values-es/strings.xml",
         "patchSetId": 1
@@ -234,6 +370,24 @@
       "writtenOn": "2013-08-01T04:02:29Z",
       "side": 1,
       "message": "same above",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_cd11ad5f",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-08-01T04:36:18Z",
+      "side": 1,
+      "message": "\"Atencion\" has more sense here (implies a dangeous operation instead only a warning). For the rest of this sentence, the old one sounds better for me.\n\nNote: accent on \"Atencion\"",
+      "parentUuid": "1aca2d91_0d60c534",
       "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
