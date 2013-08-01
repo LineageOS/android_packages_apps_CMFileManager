@@ -1,0 +1,242 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aca2d91_cdfd2d70",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-08-01T04:02:29Z",
+      "side": 1,
+      "message": "Default: \"A CyanogenMod file manager\". Anyway, better: \"Explorador de archivos de CyanogenMod\" without article.",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_ad02f16d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-08-01T04:02:29Z",
+      "side": 1,
+      "message": "Bad. RAE: http://lema.rae.es/drae/?val\u003dsobrescribir",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_8df8557e",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-08-01T04:02:29Z",
+      "side": 1,
+      "message": "Same above.",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_6df5f981",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-08-01T04:02:29Z",
+      "side": 1,
+      "message": "Two ways to say same thing.",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_2def01b2",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-08-01T04:02:29Z",
+      "side": 1,
+      "message": "I discard this change",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_0d2b25ed",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-08-01T04:02:29Z",
+      "side": 1,
+      "message": "same above",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_cd340d4c",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-08-01T04:02:29Z",
+      "side": 1,
+      "message": "Infinitive form is better that present. Rules/policy of AOSP.",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_8d3f3525",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-08-01T04:02:29Z",
+      "side": 1,
+      "message": "Two ways to say same thing.",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_6d3cd92f",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-08-01T04:02:29Z",
+      "side": 1,
+      "message": "synonymous",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_4d491dd0",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-08-01T04:02:29Z",
+      "side": 1,
+      "message": "Infinitive form is better that present. Rules/policy of AOSP.",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_2d46e1bf",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-08-01T04:02:29Z",
+      "side": 1,
+      "message": "Infinitive form is better that present. Rules/policy of AOSP.",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_cd82cdc8",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-08-01T04:02:29Z",
+      "side": 1,
+      "message": "\"Aviso\" is currenly used in all warnings on some packets",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_2d74a1fb",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-08-01T04:02:29Z",
+      "side": 1,
+      "message": "\"Esquema\" is correct",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_0d60c534",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-08-01T04:02:29Z",
+      "side": 1,
+      "message": "same above",
+      "revId": "1a69bbcc6ce181e17b4c188abdcb0a35bfbbe682",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
