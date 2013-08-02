@@ -14,22 +14,26 @@
      limitations under the License.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Fso Properties Dialog * Folders -->
   <plurals name="n_folders">
-    <item quantity="zero">0 папок</item>
     <item quantity="one">1 папка</item>
     <item quantity="other">папок: <xliff:g id="folders">%1$d</xliff:g></item>
   </plurals>
-  <!-- Fso Properties Dialog * Files -->
   <plurals name="n_files">
-    <item quantity="zero">0 файлов</item>
     <item quantity="one">1 файл</item>
     <item quantity="other">файлов: <xliff:g id="files">%1$d</xliff:g></item>
   </plurals>
   <!-- Search * Search found items -->
   <plurals name="search_found_items">
-    <item quantity="zero">Ничего не найдено</item>
     <item quantity="one">Найдено 1 значение</item>
     <item quantity="other">Найдено значений: <xliff:g id="count">%d</xliff:g></item>
+  </plurals>
+  <!-- Statusbar text if there are selected folders or files -->
+  <plurals name="selection_folders">
+    <item quantity="one">Выбрана 1 папка</item>
+    <item quantity="other">Выбрано папок: <xliff:g id="folders">%1$d</xliff:g></item>
+  </plurals>
+  <plurals name="selection_files">
+    <item quantity="one">Выбран 1 файл</item>
+    <item quantity="other">Выбрано файлов: <xliff:g id="files">%1$d</xliff:g></item>
   </plurals>
 </resources>

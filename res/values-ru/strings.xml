@@ -249,7 +249,7 @@
   <string name="actions_menu_deselect_all">Снять выбор</string>
   <string name="actions_menu_select">Выбор</string>
   <string name="actions_menu_deselect">Снять выбор</string>
-  <string name="actions_menu_paste_selection">Вставить выбранное сюда</string>
+  <string name="actions_menu_paste_selection">Копировать выбранное сюда</string>
   <string name="actions_menu_move_selection">Переместить выбранное сюда</string>
   <string name="actions_menu_delete_selection">Удалить выбранное</string>
   <string name="actions_menu_compress_selection">Сжать выбранное</string>
