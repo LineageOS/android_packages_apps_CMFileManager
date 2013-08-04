@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aca2d91_c17291ad",
+        "filename": "res/values-ru/plurals.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-08-04T09:13:36Z",
+      "side": 1,
+      "message": "Mne kazhetsya, luchshe \"one\" sdelat\u0027 po tomu zhe shablonu chto i \"other\". Ne ochen\u0027 kak-to smotritsya, naprimer: \"Vybrano 1 papka i failov: 3\"; luche bylo by: \"Vybrano papok: 1 i failov: 3\".",
+      "revId": "43cb768b083d98622dfc6042b23895186fd5a1a8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}

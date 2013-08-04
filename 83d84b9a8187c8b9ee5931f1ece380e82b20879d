@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aca2d91_6134dddd",
+        "filename": "res/values-ru/plurals.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-08-04T09:13:36Z",
+      "side": 0,
+      "message": "Mozhet eto ostavim?",
+      "revId": "83d84b9a8187c8b9ee5931f1ece380e82b20879d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
