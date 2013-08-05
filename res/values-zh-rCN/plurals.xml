@@ -15,18 +15,23 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="zero">0 个文件夹</item>
     <item quantity="one">1 个文件夹</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> 个文件夹</item>
   </plurals>
   <plurals name="n_files">
-    <item quantity="zero">0 个文件</item>
     <item quantity="one">1 个文件</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> 个文件</item>
   </plurals>
   <plurals name="search_found_items">
-    <item quantity="zero">未找到任何结果</item>
     <item quantity="one">找到了 1 项</item>
     <item quantity="other">找到了 <xliff:g id="count">%d</xliff:g> 项</item>
+  </plurals>
+  <plurals name="selection_folders">
+    <item quantity="one">已选中 1 个文件夹.</item>
+    <item quantity="other">已选中 <xliff:g id="folders">%1$d</xliff:g> 个文件夹.</item>
+  </plurals>
+  <plurals name="selection_files">
+    <item quantity="one">已选中 1 个文件</item>
+    <item quantity="other">已选中 <xliff:g id="files">%1$d</xliff:g> 个文件.</item>
   </plurals>
 </resources>
