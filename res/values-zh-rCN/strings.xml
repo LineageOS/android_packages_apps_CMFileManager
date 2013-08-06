@@ -323,6 +323,8 @@
   <string name="filetime_format_mode_MMddyyyy_HHmmss">月/日/年 时:分:秒</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">年-月-日 时:分:秒</string>
 
+  <string name="selection_folders_and_files">已选中 <xliff:g id="folders">%1$s</xliff:g> 与 <xliff:g id="files">%2$s</xliff:g>.</string>
+
   <string name="category_system">系统</string>
   <string name="category_app">程序</string>
   <string name="category_binary">二进制</string>
@@ -352,7 +354,7 @@
   <string name="pref_themes">主题</string>
   <string name="pref_about">关于</string>
   <string name="pref_about_summary">文件管理器 v<xliff:g id="version">%1$s</xliff:g>
-    \n版权所有 \u00A9 2013 CyanogenMod</string>
+    \n版权所有 \u00A9 2013 CyanogenMod 项目</string>
 
   <string name="pref_general_behaviour_category">常规</string>
   <string name="pref_case_sensitive_sort">区分大小写</string>
