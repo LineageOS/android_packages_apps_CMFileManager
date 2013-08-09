@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fae47921_61a08091",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-08-09T00:58:59Z",
+      "side": 1,
+      "message": "Poluchitsya: \"Vybrano: papok: 3 i failov: 3\". Mnogo dvoetochiy.",
+      "revId": "54eba8d9e345951aac391f18709654d533ce5bd3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
