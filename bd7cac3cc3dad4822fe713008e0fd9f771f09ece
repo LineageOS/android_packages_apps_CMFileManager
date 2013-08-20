@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "baee8101_1fe46f39",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-08-20T08:39:23Z",
+      "side": 1,
+      "message": "Ne znayu, menya \"Failovyi menedzher\" ustraivaet. Posmotrim chto Pavel skazhet.",
+      "parentUuid": "baee8101_bf08c329",
+      "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baee8101_6409b231",
         "filename": "res/values-ru/strings.xml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-08-20T06:39:59Z",
       "side": 1,
       "message": "Mozhet, esche i otsyuda ubrat\u0027 slovo \"otobrazhat\u0027\"?",
+      "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baee8101_ff81ab4e",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-08-20T08:39:23Z",
+      "side": 1,
+      "message": "Mozhno i ubrat\u0027.",
+      "parentUuid": "baee8101_6409b231",
       "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "baee8101_1fb6af3d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-08-20T08:39:23Z",
+      "side": 1,
+      "message": "Mozhno \"Osnovnye\", \"Info\" deistvitel\u0027no strannovato vyglyadit.",
+      "parentUuid": "baee8101_5f10b74e",
+      "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baee8101_3f1df366",
         "filename": "res/values-ru/strings.xml",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2013-08-20T06:45:52Z",
       "side": 1,
       "message": "Include \u003d Iskluchit? HELL NO",
+      "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baee8101_ff9acbc4",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-08-20T08:39:23Z",
+      "side": 1,
+      "message": "V originale \"Skip media scan\". Vybor etogo chekboksa sozdaet fail \".nomedia\" vnutri kataloga.",
+      "parentUuid": "baee8101_3f1df366",
       "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
