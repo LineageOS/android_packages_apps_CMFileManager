@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "baee8101_bf08c329",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-08-20T06:45:52Z",
+      "side": 1,
+      "message": "I vse-taki. Davayte pereimenuem ego v \"Fayli\". Etogo hvatit, po ikonke vse ponyatno.",
+      "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baee8101_6409b231",
         "filename": "res/values-ru/strings.xml",
         "patchSetId": 1
@@ -13,6 +30,40 @@
       "writtenOn": "2013-08-20T06:39:59Z",
       "side": 1,
       "message": "Mozhet, esche i otsyuda ubrat\u0027 slovo \"otobrazhat\u0027\"?",
+      "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baee8101_5f10b74e",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-08-20T06:45:52Z",
+      "side": 1,
+      "message": "Lucshe bi bilo \"Osnovnie\" {svoystva}, nu ili \"Informaciya\" celikom -- ono vpolne vlezaet po dline",
+      "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baee8101_3f1df366",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-08-20T06:45:52Z",
+      "side": 1,
+      "message": "Include \u003d Iskluchit? HELL NO",
       "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
