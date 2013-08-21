@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "baee8101_856db034",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-08-21T05:17:10Z",
+      "side": 1,
+      "message": "Eto potomu, chto eto bilo moe pervoe izmenenie, kotoroe ya esche propihival cherez Pavla i na menya srazu nabezhali s ruganyu.\n\"Fayloviy menedger\" vibivaetsya iz stroynogo ryada korotkih i emkih nazvaniy: https://dl.dropboxusercontent.com/u/16268774/Screenshots/Tablet/IMG_20130820_011312.JPG (vtoroy kandidat na sokrashenie -- \"Emulator terminala\", no do nego mi dotyanutsya, vrode, ne mozhem).\nSmotrite, kak v linukse s etim horosho: https://dl.dropboxusercontent.com/u/16268774/Screenshots/2013-08-20%2001%2047%2002.png",
+      "parentUuid": "baee8101_e52fdcf4",
+      "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baee8101_6409b231",
         "filename": "res/values-ru/strings.xml",
         "patchSetId": 1
