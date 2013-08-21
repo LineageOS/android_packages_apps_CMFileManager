@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "baee8101_e52fdcf4",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2013-08-21T05:02:12Z",
+      "side": 1,
+      "message": "Pomnitsya mne chto my obsuzhdali eto. Reshili ostanovit\u0027sya na \"Failovyj menedzher\". Mozhno i v \"Faily\" pereimenovat\u0027, nichego strashnogo ne sluchitsya.",
+      "parentUuid": "baee8101_1fe46f39",
+      "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baee8101_6409b231",
         "filename": "res/values-ru/strings.xml",
         "patchSetId": 1
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "baee8101_c534d84b",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2013-08-21T05:02:12Z",
+      "side": 1,
+      "message": "Ya za!",
+      "parentUuid": "baee8101_ff81ab4e",
+      "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baee8101_5f10b74e",
         "filename": "res/values-ru/strings.xml",
         "patchSetId": 1
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "Mozhno \"Osnovnye\", \"Info\" deistvitel\u0027no strannovato vyglyadit.",
       "parentUuid": "baee8101_5f10b74e",
+      "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baee8101_a539d443",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2013-08-21T05:02:12Z",
+      "side": 1,
+      "message": "Soglasen",
+      "parentUuid": "baee8101_1fb6af3d",
       "revId": "bd7cac3cc3dad4822fe713008e0fd9f771f09ece",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
