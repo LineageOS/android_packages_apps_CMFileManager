@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baee8101_48b6b5dd",
+        "filename": "res/values-ja/plurals.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1579
+      },
+      "writtenOn": "2013-08-24T15:22:07Z",
+      "side": 1,
+      "message": "Is there any reason no space after \u00271\u0027?",
+      "revId": "5280cf339857582b8cc79ea60340b7467d4bc4d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
