@@ -58,7 +58,7 @@
   <string name="msgs_cant_create_console">Не удаётся получить необходимые привилегии</string>
   <string name="msgs_privileged_console_alloc_failed">Невозможно запустить в режиме root-доступа. Переключение в безопасный режим</string>
   <string name="msgs_settings_save_failure">Настройка не может быть применена или сохранена</string>
-  <string name="msgs_settings_invalid_initial_directory">Начальная папка \"<xliff:g id="initial_dir">%1$s</xliff:g>\" недоступна. Переход в корневую папку</string>
+  <string name="msgs_settings_invalid_initial_directory">Начальная папка «<xliff:g id="initial_dir">%1$s</xliff:g>» недоступна. Переход в корневую папку</string>
 
   <string name="msgs_success">Операция прошла успешно</string>
   <string name="msgs_unknown">Были обнаружены ошибки. Операция завершилась неудачно</string>
@@ -250,7 +250,7 @@
   <string name="actions_menu_deselect_all">Снять выбор</string>
   <string name="actions_menu_select">Выбор</string>
   <string name="actions_menu_deselect">Снять выбор</string>
-  <string name="actions_menu_paste_selection">Вставить выбранное сюда</string>
+  <string name="actions_menu_paste_selection">Скопировать выбранное сюда</string>
   <string name="actions_menu_move_selection">Переместить выбранное сюда</string>
   <string name="actions_menu_delete_selection">Удалить выбранное</string>
   <string name="actions_menu_compress_selection">Сжать выбранное</string>
@@ -275,8 +275,8 @@
 
   <string name="input_name_dialog_label">Имя:</string>
   <string name="input_name_dialog_message_empty_name">Имя не может быть пустым</string>
-  <string name="input_name_dialog_message_invalid_path_name">Недопустимое имя. Нельзя использовать символы: \'<xliff:g id="invalid_characters">%1$s</xliff:g>\'</string>
-  <string name="input_name_dialog_message_invalid_name">Недопустимое имя. Имена \'.\' и \'..\' не разрешены</string>
+  <string name="input_name_dialog_message_invalid_path_name">Недопустимое имя. Нельзя использовать символы: «<xliff:g id="invalid_characters">%1$s</xliff:g>»</string>
+  <string name="input_name_dialog_message_invalid_name">Недопустимое имя. Имена «.» и «..» не разрешены</string>
   <string name="input_name_dialog_message_name_exists">Такое имя уже существует</string>
 
   <string name="associations_dialog_title">Ассоциации</string>
