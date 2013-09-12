@@ -16,12 +16,27 @@
 
 package com.cyanogenmod.filemanager.ui;
 
+import android.content.ContentResolver;
 import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.database.ContentObserver;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.ThumbnailUtils;
+import android.net.Uri;
+import android.os.Handler;
 
+import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
+import com.cyanogenmod.filemanager.util.FileHelper;
+import com.cyanogenmod.filemanager.util.MediaHelper;
+import com.cyanogenmod.filemanager.util.MimeTypeHelper.KnownMimeTypeResolver;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -29,35 +44,195 @@ import java.util.Map;
  */
 public class IconHolder {
 
-    private final Map<String, Drawable> mIcons;
+    private static final int MAX_CACHE = 500;
+
+    private final Map<String, Drawable> mIcons;     // Themes based
+    private final Map<String, Drawable> mAppIcons;  // App based
+
+    private Map<String, Long> mAlbums;      // Media albums
+
+    private final Context mContext;
+    private final boolean mUseThumbs;
+    private boolean mNeedAlbumUpdate = true;
+
+    private ContentObserver mMediaObserver = new ContentObserver(new Handler()) {
+        @Override
+        public void onChange(boolean selfChange) {
+            synchronized (this) {
+                mNeedAlbumUpdate = true;
+            }
+        }
+    };
 
     /**
      * Constructor of <code>IconHolder</code>.
+     *
+     * @param useThumbs If thumbs of images, videos, apps, ... should be returned
+     * instead of the default icon.
      */
-    public IconHolder() {
+    public IconHolder(Context context, boolean useThumbs) {
         super();
+        this.mContext = context;
+        this.mUseThumbs = useThumbs;
         this.mIcons = new HashMap<String, Drawable>();
+        this.mAppIcons = new LinkedHashMap<String, Drawable>(MAX_CACHE, .75F, true) {
+            private static final long serialVersionUID = 1L;
+            @Override
+            protected boolean removeEldestEntry(Entry<String, Drawable> eldest) {
+                return size() > MAX_CACHE;
+            }
+        };
+        this.mAlbums = new HashMap<String, Long>();
+        if (useThumbs) {
+            final ContentResolver cr = mContext.getContentResolver();
+            for (Uri uri : MediaHelper.RELEVANT_URIS) {
+                cr.registerContentObserver(uri, true, mMediaObserver);
+            }
+        }
     }
 
     /**
-     * Method that loads, cache and returns a drawable reference
-     * of a icon.
+     * Method that returns a drawable reference of a icon.
      *
-     * @param context The current context
      * @param resid The resource identifier
      * @return Drawable The drawable icon reference
      */
-    public Drawable getDrawable(Context context, final String resid) {
+    public Drawable getDrawable(final String resid) {
         //Check if the icon exists in the cache
         if (this.mIcons.containsKey(resid)) {
             return this.mIcons.get(resid);
         }
 
         //Load the drawable, cache and returns reference
-        Theme theme = ThemeManager.getCurrentTheme(context);
-        Drawable dw = theme.getDrawable(context, resid);
+        Theme theme = ThemeManager.getCurrentTheme(mContext);
+        Drawable dw = theme.getDrawable(mContext, resid);
         this.mIcons.put(resid, dw);
         return dw;
     }
 
+    /**
+     * Method that returns a drawable reference of a FileSystemObject.
+     *
+     * @param index The index of the element that request the thumb
+     * @param fso The FileSystemObject reference
+     * @return Drawable The drawable reference
+     */
+    public Drawable getDrawable(int index, FileSystemObject fso) {
+        Drawable dw = null;
+        if (mUseThumbs) {
+            // Is cached?
+            final String filepath = fso.getFullPath();
+            if (this.mAppIcons.containsKey(filepath)) {
+                return this.mAppIcons.get(filepath);
+            }
+
+            // Retrieve the drawable
+            if (KnownMimeTypeResolver.isAndroidApp(mContext, fso)) {
+                dw = getAppDrawable(fso);
+            } else if (KnownMimeTypeResolver.isImage(mContext, fso)) {
+                dw = getImageDrawable(fso);
+            } else if (KnownMimeTypeResolver.isVideo(mContext, fso)) {
+                dw = getVideoDrawable(fso);
+            } else if (FileHelper.isDirectory(fso)) {
+                // Album path and fso are supposed to be normalized here
+                // TODO Need to fix "/storage/emulated/legacy" to "/storage/emulated/0" detection
+                synchronized (mMediaObserver) {
+                    if (mNeedAlbumUpdate) {
+                        mNeedAlbumUpdate = false;
+                        this.mAlbums = MediaHelper.getAllAlbums(mContext.getContentResolver());
+                    }
+                }
+                if (this.mAlbums.containsKey(filepath)) {
+                    dw = getAlbumDrawable(this.mAlbums.get(filepath));
+                }
+            }
+
+            // Check if we have a drawable
+            if (dw != null) {
+                // Returns and caches the new drawable
+                this.mAppIcons.put(filepath, dw);
+            }
+        }
+        return dw;
+    }
+
+    /**
+     * Method that returns the main icon of the app
+     *
+     * @param fso The FileSystemObject
+     * @return Drawable The drawable or null if cannot be extracted
+     */
+    private Drawable getAppDrawable(FileSystemObject fso) {
+        final String filepath = fso.getFullPath();
+        PackageManager pm = mContext.getPackageManager();
+        PackageInfo packageInfo = pm.getPackageArchiveInfo(filepath, PackageManager.GET_ACTIVITIES);
+        if (packageInfo != null) {
+            // Read http://code.google.com/p/android/issues/detail?id=9151, CM fixed this
+            // issue. We retain it for compatibility with older versions and roms without this fix.
+            // Required to access apk which are not installed.
+            final ApplicationInfo appInfo = packageInfo.applicationInfo;
+            appInfo.sourceDir = filepath;
+            appInfo.publicSourceDir = filepath;
+            return pm.getDrawable(appInfo.packageName, appInfo.icon, appInfo);
+        }
+        return null;
+    }
+
+    /**
+     * Method that returns a thumbnail of the picture
+     *
+     * @param fso The FileSystemObject
+     * @return Drawable The drawable or null if cannot be extracted
+     */
+    private Drawable getImageDrawable(FileSystemObject fso) {
+        Bitmap thumb = ThumbnailUtils.createImageThumbnail(
+                fso.getFullPath(), ThumbnailUtils.TARGET_SIZE_MICRO_THUMBNAIL);
+        if (thumb == null) {
+            return null;
+        }
+        return new BitmapDrawable(mContext.getResources(), thumb);
+    }
+
+    /**
+     * Method that returns a thumbnail of the video
+     *
+     * @param fso The FileSystemObject
+     * @return Drawable The drawable or null if cannot be extracted
+     */
+    private Drawable getVideoDrawable(FileSystemObject fso) {
+        Bitmap thumb = ThumbnailUtils.createVideoThumbnail(
+                fso.getFullPath(), ThumbnailUtils.TARGET_SIZE_MICRO_THUMBNAIL);
+        if (thumb == null) {
+            return null;
+        }
+        return new BitmapDrawable(mContext.getResources(), thumb);
+    }
+
+    /**
+     * Method that returns a thumbnail of the album folder
+     *
+     * @param albumId The album identifier
+     * @return Drawable The drawable or null if cannot be extracted
+     */
+    private Drawable getAlbumDrawable(long albumId) {
+        String path = MediaHelper.getAlbumThumbnailPath(mContext.getContentResolver(), albumId);
+        if (path == null) {
+            return null;
+        }
+        Bitmap thumb = ThumbnailUtils.createImageThumbnail(path,
+                ThumbnailUtils.TARGET_SIZE_MICRO_THUMBNAIL);
+        if (thumb == null) {
+            return null;
+        }
+        return new BitmapDrawable(mContext.getResources(), thumb);
+    }
+
+    /**
+     * Free any resources used by this instance
+     */
+    public void cleanup() {
+        this.mIcons.clear();
+        this.mAppIcons.clear();
+        mContext.getContentResolver().unregisterContentObserver(mMediaObserver);
+    }
 }
