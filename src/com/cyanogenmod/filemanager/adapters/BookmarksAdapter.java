@@ -104,7 +104,7 @@ public class BookmarksAdapter extends ArrayAdapter<Bookmark> {
     public BookmarksAdapter(
             Context context, List<Bookmark> bookmarks, OnClickListener onActionClickListener) {
         super(context, RESOURCE_ITEM_NAME, bookmarks);
-        this.mIconHolder = new IconHolder();
+        this.mIconHolder = new IconHolder(false);
         this.mOnActionClickListener = onActionClickListener;
 
         //Do cache of the data for better performance
@@ -221,6 +221,9 @@ public class BookmarksAdapter extends ArrayAdapter<Bookmark> {
      */
     public void notifyThemeChanged() {
         // Empty icon holder
-        this.mIconHolder = new IconHolder();
+        if (this.mIconHolder != null) {
+            this.mIconHolder.clearCache();
+        }
+        this.mIconHolder = new IconHolder(false);
     }
 }

@@ -111,7 +111,10 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
     public SearchResultAdapter(
             Context context, List<SearchResult> files, int itemViewResourceId, Query queries) {
         super(context, RESOURCE_ITEM_NAME, files);
-        this.mIconHolder = new IconHolder();
+        final boolean displayThumbs = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getId(),
+                ((Boolean)FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getDefaultValue()).booleanValue());
+        this.mIconHolder = new IconHolder(displayThumbs);
         this.mItemViewResourceId = itemViewResourceId;
         this.mQueries = queries.getQueries();
 

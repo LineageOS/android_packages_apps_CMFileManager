@@ -29,6 +29,8 @@ import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.model.History;
 import com.cyanogenmod.filemanager.parcelables.NavigationViewInfoParcelable;
 import com.cyanogenmod.filemanager.parcelables.SearchInfoParcelable;
+import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
+import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.ui.IconHolder;
 import com.cyanogenmod.filemanager.ui.ThemeManager;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
@@ -98,7 +100,7 @@ public class HistoryAdapter extends ArrayAdapter<History> {
      */
     public HistoryAdapter(Context context, List<History> history) {
         super(context, RESOURCE_ITEM_NAME, history);
-        this.mIconHolder = new IconHolder();
+        notifyThemeChanged(); // Reload icons
 
         //Do cache of the data for better performance
         processData(history);
@@ -208,7 +210,13 @@ public class HistoryAdapter extends ArrayAdapter<History> {
      */
     public void notifyThemeChanged() {
         // Empty icon holder
-        this.mIconHolder = new IconHolder();
+        if (this.mIconHolder != null) {
+            this.mIconHolder.clearCache();
+        }
+        final boolean displayThumbs = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getId(),
+                ((Boolean)FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getDefaultValue()).booleanValue());
+        this.mIconHolder = new IconHolder(displayThumbs);
     }
 
 }

@@ -207,6 +207,15 @@ public class NavigationActivity extends Activity
                             return;
                         }
 
+                        // Display thumbs
+                        if (key.compareTo(FileManagerSettings.
+                                SETTINGS_DISPLAY_THUMBS.getId()) == 0) {
+                            // Clean the icon cache applying the current theme
+                            applyTheme();
+                            getCurrentNavigationView().refresh();
+                            return;
+                        }
+
                         // Use flinger
                         if (key.compareTo(FileManagerSettings.
                                 SETTINGS_USE_FLINGER.getId()) == 0) {
