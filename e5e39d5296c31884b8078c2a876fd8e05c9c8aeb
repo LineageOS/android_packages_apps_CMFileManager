@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9a0c5dc1_db083394",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-09-12T21:09:12Z",
+      "side": 1,
+      "message": "???? ??????, ????! ?? ????, ?? ???????? ??? ???? ????-?????:)",
+      "parentUuid": "9a0c5dc1_703f2626",
+      "revId": "e5e39d5296c31884b8078c2a876fd8e05c9c8aeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a0c5dc1_70f8467d",
         "filename": "res/values-ru/strings.xml",
         "patchSetId": 1
