@@ -18,6 +18,9 @@ package com.cyanogenmod.filemanager.adapters;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
+import android.os.Handler;
+import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -74,21 +77,28 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         public DataHolder() {
             super();
         }
+        Drawable mDwAppIcon;
         Drawable mDwIcon;
         CharSequence mName;
         String mParentDir;
         Float mRelevance;
     }
 
+    private static final int MESSAGE_REDRAW = 1;
 
     private DataHolder[] mData;
     private IconHolder mIconHolder;
     private final int mItemViewResourceId;
 
+    private final Handler mHandler;
+    private AsyncTask<Void, Void, Void> mDrawableTask;
+
     private final boolean mHighlightTerms;
     private final boolean mShowRelevanceWidget;
 
     private final List<String> mQueries;
+
+    private boolean mDisposed;
 
     //The resource of the item icon
     private static final int RESOURCE_ITEM_ICON = R.id.search_item_icon;
@@ -111,7 +121,24 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
     public SearchResultAdapter(
             Context context, List<SearchResult> files, int itemViewResourceId, Query queries) {
         super(context, RESOURCE_ITEM_NAME, files);
-        this.mIconHolder = new IconHolder();
+        this.mHandler = new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                switch (msg.what) {
+                    case MESSAGE_REDRAW:
+                        SearchResultAdapter.super.notifyDataSetInvalidated();
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+        };
+        this.mDisposed = false;
+        final boolean displayThumbs = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getId(),
+                ((Boolean)FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getDefaultValue()).booleanValue());
+        this.mIconHolder = new IconHolder(displayThumbs);
         this.mItemViewResourceId = itemViewResourceId;
         this.mQueries = queries.getQueries();
 
@@ -128,6 +155,7 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         //Do cache of the data for better performance
         loadDefaultIcons();
         processData(files);
+        processDrawables(files);
     }
 
     /**
@@ -143,7 +171,14 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
      */
     @Override
     public void notifyDataSetChanged() {
+        if (mDrawableTask != null) {
+            mDrawableTask.cancel(true);
+        }
+        if (this.mDisposed) {
+            return;
+        }
         processData(null);
+        processDrawables(null);
         super.notifyDataSetChanged();
     }
 
@@ -151,6 +186,13 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
      * Method that dispose the elements of the adapter.
      */
     public void dispose() {
+        if (mDrawableTask != null) {
+            mDrawableTask.cancel(true);
+        }
+        if (this.mIconHolder != null) {
+            this.mIconHolder.clearCache();
+        }
+        this.mDisposed = true;
         clear();
         this.mData = null;
         this.mIconHolder = null;
@@ -173,10 +215,11 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
             SearchResult result = (files == null) ? getItem(i) : files.get(i);
 
             //Build the data holder
+            final FileSystemObject fso = result.getFso();
             this.mData[i] = new SearchResultAdapter.DataHolder();
-            this.mData[i].mDwIcon =
-                    this.mIconHolder.getDrawable(
-                            getContext(), MimeTypeHelper.getIcon(getContext(), result.getFso()));
+            this.mData[i].mDwAppIcon = this.mIconHolder.getDrawable(getContext(), i, fso);
+            this.mData[i].mDwIcon = this.mIconHolder.getDrawable(
+                    getContext(), MimeTypeHelper.getIcon(getContext(), fso));
             if (this.mHighlightTerms) {
                 this.mData[i].mName =
                         SearchHelper.getHighlightedName(result, this.mQueries, highlightedColor);
@@ -192,6 +235,48 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
                 this.mData[i].mRelevance = null;
             }
         }
+    }
+
+    /**
+     * Process all the drawables thumbs
+     *
+     * @param files The list of files (to better performance) or null.
+     */
+    private void processDrawables(final List<SearchResult> files) {
+        mDrawableTask = new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+                try {
+                    // Update the media database
+                    mIconHolder.updateMediaData(getContext().getContentResolver());
+
+                    // Process every file
+                    int cc = (files == null) ? getCount() : files.size();
+                    for (int i = 0; i < cc; i++) {
+                        if (isCancelled()) {
+                            return null;
+                        }
+                        SearchResult result = (files == null) ? getItem(i) : files.get(i);
+                        final FileSystemObject fso = result.getFso();
+                        mData[i].mDwAppIcon = mIconHolder.getDrawable(getContext(), i, fso);
+                        if (i % 5 == 0) {
+                            publishProgress();
+                        }
+                    }
+                    publishProgress();
+                } catch (NullPointerException ex) {
+                    // When the task is cancelled some references could be null. Ignore
+                }
+                return null;
+            }
+
+            @Override
+            protected void onProgressUpdate(Void... values) {
+                mHandler.removeMessages(MESSAGE_REDRAW);
+                mHandler.sendEmptyMessageDelayed(MESSAGE_REDRAW, 250L);
+            }
+        };
+        mDrawableTask.execute();
     }
 
     /**
@@ -264,7 +349,9 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         ViewHolder viewHolder = (ViewHolder)v.getTag();
 
         //Set the data
-        viewHolder.mIvIcon.setImageDrawable(dataHolder.mDwIcon);
+        viewHolder.mIvIcon.setImageDrawable(dataHolder.mDwAppIcon != null
+                ? dataHolder.mDwAppIcon
+                : dataHolder.mDwIcon);
         viewHolder.mTvName.setText(dataHolder.mName, TextView.BufferType.SPANNABLE);
         viewHolder.mTvParentDir.setText(dataHolder.mParentDir);
         if (dataHolder.mRelevance != null) {

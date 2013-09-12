@@ -585,11 +585,20 @@ public class NavigationView extends RelativeLayout implements
     }
 
     /**
+     * Method that recycles this object
+     */
+    public void recycle() {
+        if (this.mAdapter != null) {
+            this.mAdapter.dispose();
+        }
+    }
+
+    /**
      * Method that change the view mode.
      *
      * @param newMode The new mode
      */
-    @SuppressWarnings({ "unchecked", "null" })
+    @SuppressWarnings("unchecked")
     public void changeViewMode(final NavigationLayoutMode newMode) {
         synchronized (this.mSync) {
             //Check that it is really necessary change the mode

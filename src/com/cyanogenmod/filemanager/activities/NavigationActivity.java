@@ -207,6 +207,15 @@ public class NavigationActivity extends Activity
                             return;
                         }
 
+                        // Display thumbs
+                        if (key.compareTo(FileManagerSettings.
+                                SETTINGS_DISPLAY_THUMBS.getId()) == 0) {
+                            // Clean the icon cache applying the current theme
+                            applyTheme();
+                            getCurrentNavigationView().refresh();
+                            return;
+                        }
+
                         // Use flinger
                         if (key.compareTo(FileManagerSettings.
                                 SETTINGS_USE_FLINGER.getId()) == 0) {
@@ -1308,7 +1317,7 @@ public class NavigationActivity extends Activity
      * @param history The history reference
      * @return boolean A problem occurs while navigate
      */
-    public boolean navigateToHistory(History history) {
+    public synchronized boolean navigateToHistory(History history) {
         try {
             //Gets the history
             History realHistory = this.mHistory.get(history.getPosition());
@@ -1598,6 +1607,11 @@ public class NavigationActivity extends Activity
      * @hide
      */
     void exit() {
+        // Recycle the navigation views
+        int cc = this.mNavigationViews.length;
+        for (int i = 0; i < cc; i++) {
+            this.mNavigationViews[i].recycle();
+        }
         try {
             FileManagerApplication.destroyBackgroundConsole();
         } catch (Throwable ex) {
