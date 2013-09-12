@@ -232,7 +232,7 @@ public class FileSystemObjectAdapter
             }
             this.mData[i].mDwIcon = this.mIconHolder.getDrawable(
                     getContext(),
-                    MimeTypeHelper.getIcon(getContext(), fso));
+                    MimeTypeHelper.getIcon(getContext(), fso), fso);
             this.mData[i].mName = fso.getName();
             this.mData[i].mSummary = sbSummary.toString();
             this.mData[i].mSize = FileHelper.getHumanReadableSize(fso);
