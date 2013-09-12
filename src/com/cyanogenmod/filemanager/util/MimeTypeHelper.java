@@ -32,6 +32,7 @@ import com.cyanogenmod.filemanager.model.Symlink;
 import com.cyanogenmod.filemanager.model.SystemFile;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
@@ -553,4 +554,58 @@ public final class MimeTypeHelper {
         return mimeTypeExpression.replaceAll("\\*", ".\\*"); //$NON-NLS-1$ //$NON-NLS-2$
     }
 
+
+    /**
+     * Class for resolve known mime types
+     */
+    public static final class KnownMimeTypeResolver {
+
+        /**
+         * Method that returns if the FileSystemObject is an Android app.
+         *
+         * @param context The current context
+         * @param fso The FileSystemObject to check
+         * @return boolean If the FileSystemObject is an Android app.
+         */
+        public static boolean isAndroidApp(Context context, FileSystemObject fso) {
+            final String[] MIME_TYPES = {"application/vnd.android.package-archive"};
+            return containsMimeType(MIME_TYPES, MimeTypeHelper.getMimeType(context, fso));
+        }
+
+        /**
+         * Method that returns if the FileSystemObject is an image file.
+         *
+         * @param context The current context
+         * @param fso The FileSystemObject to check
+         * @return boolean If the FileSystemObject is an image file.
+         */
+        public static boolean isImage(Context context, FileSystemObject fso) {
+            return MimeTypeHelper.getCategory(context, fso).compareTo(MimeTypeCategory.IMAGE) == 0;
+        }
+
+        /**
+         * Method that returns if the FileSystemObject is an video file.
+         *
+         * @param context The current context
+         * @param fso The FileSystemObject to check
+         * @return boolean If the FileSystemObject is an video file.
+         */
+        public static boolean isVideo(Context context, FileSystemObject fso) {
+            return MimeTypeHelper.getCategory(context, fso).compareTo(MimeTypeCategory.VIDEO) == 0;
+        }
+
+        /**
+         * Internal method to check the mime type
+         *
+         * @param knownMimeTypes The known mime types to check
+         * @param mimeType The mime type to check
+         * @return boolean If the mime type is in the list of known mime types
+         */
+        private static boolean containsMimeType(String[] knownMimeTypes, String mimeType) {
+            if (mimeType == null) {
+                return false;
+            }
+            return Arrays.asList(knownMimeTypes).indexOf(mimeType) != -1;
+        }
+    }
 }
