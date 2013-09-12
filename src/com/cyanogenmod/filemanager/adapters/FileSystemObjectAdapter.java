@@ -230,9 +230,7 @@ public class FileSystemObjectAdapter
                         theme.getDrawable(
                                 getContext(), "checkbox_deselected_drawable"); //$NON-NLS-1$
             }
-            this.mData[i].mDwIcon = this.mIconHolder.getDrawable(
-                    getContext(),
-                    MimeTypeHelper.getIcon(getContext(), fso));
+            this.mData[i].mDwIcon = this.mIconHolder.getDrawable(getContext(), fso);
             this.mData[i].mName = fso.getName();
             this.mData[i].mSummary = sbSummary.toString();
             this.mData[i].mSize = FileHelper.getHumanReadableSize(fso);
