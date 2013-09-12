@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a0c5dc1_703f2626",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-09-12T06:16:11Z",
+      "side": 1,
+      "message": "«?????? ? root-?????? ??????????. ????????????? ? ?????????? ??????»",
+      "revId": "e5e39d5296c31884b8078c2a876fd8e05c9c8aeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0c5dc1_70f8467d",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-09-12T06:16:11Z",
+      "side": 1,
+      "message": "«?????? ? root-?????? ??????????. ???????????? ? ?????????? ?????\\u2026» (??????, ? ??????? ?? ????? ????? ?????????. ??? ???, toast?)",
+      "revId": "e5e39d5296c31884b8078c2a876fd8e05c9c8aeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0c5dc1_90029a6e",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-09-12T06:16:11Z",
+      "side": 1,
+      "message": "«?????????? ??????? ? root-?????.»",
+      "revId": "e5e39d5296c31884b8078c2a876fd8e05c9c8aeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0c5dc1_10efcab1",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-09-12T06:16:11Z",
+      "side": 1,
+      "message": "«?? ?????? ??????? ? root-??????»",
+      "revId": "e5e39d5296c31884b8078c2a876fd8e05c9c8aeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0c5dc1_f02af6e6",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-09-12T06:16:11Z",
+      "side": 1,
+      "message": "«??????? ??? ???????????? ? root-?????.»",
+      "revId": "e5e39d5296c31884b8078c2a876fd8e05c9c8aeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0c5dc1_d02ff2f4",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-09-12T06:16:11Z",
+      "side": 1,
+      "message": "??? ??, ??? ? ? 122-? ??????.",
+      "revId": "e5e39d5296c31884b8078c2a876fd8e05c9c8aeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0c5dc1_b0347e4a",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-09-12T06:16:11Z",
+      "side": 1,
+      "message": "????? «?????» — ??????? ????.",
+      "revId": "e5e39d5296c31884b8078c2a876fd8e05c9c8aeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0c5dc1_90397a44",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-09-12T06:16:11Z",
+      "side": 1,
+      "message": "? ??? ??? ??.",
+      "revId": "e5e39d5296c31884b8078c2a876fd8e05c9c8aeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0c5dc1_70ca8651",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-09-12T06:16:11Z",
+      "side": 1,
+      "message": "«??????????? ????????? ????» (???-?? ???? ?????????? ?????? ????? ?????? ? ? ?????????).",
+      "revId": "e5e39d5296c31884b8078c2a876fd8e05c9c8aeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0c5dc1_10c10a2f",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-09-12T06:16:11Z",
+      "side": 1,
+      "message": "«.» ? «..» (???? ??? ?? ????????? ???????? ????????)",
+      "revId": "e5e39d5296c31884b8078c2a876fd8e05c9c8aeb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
