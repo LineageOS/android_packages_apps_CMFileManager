@@ -17,8 +17,13 @@
 package com.cyanogenmod.filemanager.ui;
 
 import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 
+import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
 
 import java.util.HashMap;
@@ -59,5 +64,23 @@ public class IconHolder {
         this.mIcons.put(resid, dw);
         return dw;
     }
+    
+    public Drawable getDrawable(Context context, final String resid, FileSystemObject fso) {
+    	String filepath = fso.getFullPath();
+    	if (filepath.toLowerCase().endsWith(".apk")) {
+    		PackageManager pm = context.getPackageManager();
+    		PackageInfo packageInfo = pm.getPackageArchiveInfo(fso.getFullPath(), PackageManager.GET_ACTIVITIES);
+            if(packageInfo != null) {
+                ApplicationInfo appInfo = packageInfo.applicationInfo;
+                appInfo.sourceDir = filepath;
+                appInfo.publicSourceDir = filepath;
+                Drawable dw = appInfo.loadIcon(pm);
+                dw.setLayoutDirection(android.view.View.LAYOUT_DIRECTION_LTR);
+                return dw;
+            }
+    	}
+    	return getDrawable(context, resid);
+    }
+
 
 }
