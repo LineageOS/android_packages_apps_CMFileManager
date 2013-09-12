@@ -35,7 +35,6 @@ import com.cyanogenmod.filemanager.ui.IconHolder;
 import com.cyanogenmod.filemanager.ui.ThemeManager;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
 import com.cyanogenmod.filemanager.ui.widgets.RelevanceView;
-import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 import com.cyanogenmod.filemanager.util.SearchHelper;
 
 import java.io.File;
@@ -111,7 +110,10 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
     public SearchResultAdapter(
             Context context, List<SearchResult> files, int itemViewResourceId, Query queries) {
         super(context, RESOURCE_ITEM_NAME, files);
-        this.mIconHolder = new IconHolder();
+        final boolean displayThumbs = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getId(),
+                ((Boolean)FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getDefaultValue()).booleanValue());
+        this.mIconHolder = new IconHolder(displayThumbs);
         this.mItemViewResourceId = itemViewResourceId;
         this.mQueries = queries.getQueries();
 
@@ -174,9 +176,7 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
 
             //Build the data holder
             this.mData[i] = new SearchResultAdapter.DataHolder();
-            this.mData[i].mDwIcon =
-                    this.mIconHolder.getDrawable(
-                            getContext(), MimeTypeHelper.getIcon(getContext(), result.getFso()));
+            this.mData[i].mDwIcon = this.mIconHolder.getDrawable(getContext(), result.getFso());
             if (this.mHighlightTerms) {
                 this.mData[i].mName =
                         SearchHelper.getHighlightedName(result, this.mQueries, highlightedColor);

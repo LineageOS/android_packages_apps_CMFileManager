@@ -31,11 +31,12 @@ import android.widget.TextView;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.model.ParentDirectory;
+import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
+import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.ui.IconHolder;
 import com.cyanogenmod.filemanager.ui.ThemeManager;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
 import com.cyanogenmod.filemanager.util.FileHelper;
-import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -127,10 +128,10 @@ public class FileSystemObjectAdapter
             Context context, List<FileSystemObject> files,
             int itemViewResourceId, boolean pickable) {
         super(context, RESOURCE_ITEM_NAME, files);
-        this.mIconHolder = new IconHolder();
         this.mItemViewResourceId = itemViewResourceId;
         this.mSelectedItems = new ArrayList<FileSystemObject>();
         this.mPickable = pickable;
+        notifyThemeChanged(); // Reload icons
 
         //Do cache of the data for better performance
         loadDefaultIcons();
@@ -230,9 +231,7 @@ public class FileSystemObjectAdapter
                         theme.getDrawable(
                                 getContext(), "checkbox_deselected_drawable"); //$NON-NLS-1$
             }
-            this.mData[i].mDwIcon = this.mIconHolder.getDrawable(
-                    getContext(),
-                    MimeTypeHelper.getIcon(getContext(), fso));
+            this.mData[i].mDwIcon = this.mIconHolder.getDrawable(getContext(), fso);
             this.mData[i].mName = fso.getName();
             this.mData[i].mSummary = sbSummary.toString();
             this.mData[i].mSize = FileHelper.getHumanReadableSize(fso);
@@ -532,7 +531,13 @@ public class FileSystemObjectAdapter
      */
     public void notifyThemeChanged() {
         // Empty icon holder
-        this.mIconHolder = new IconHolder();
+        if (this.mIconHolder != null) {
+            this.mIconHolder.clearCache();
+        }
+        final boolean displayThumbs = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getId(),
+                ((Boolean)FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getDefaultValue()).booleanValue());
+        this.mIconHolder = new IconHolder(displayThumbs);
     }
 
 }
