@@ -30,9 +30,10 @@
 
   <ImageView
     android:id="@+id/navigation_view_item_icon"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="@dimen/default_row_height"
+    android:layout_height="@dimen/default_row_height"
     android:layout_toRightOf="@+id/navigation_view_item_check"
+    android:scaleType="fitXY"
     android:contentDescription="@null"
     android:gravity="center|center_vertical"
     android:src="@null" />

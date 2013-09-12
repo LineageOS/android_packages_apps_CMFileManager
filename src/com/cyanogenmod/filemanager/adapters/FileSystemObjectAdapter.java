@@ -19,6 +19,9 @@ package com.cyanogenmod.filemanager.adapters;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
+import android.os.Handler;
+import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,6 +34,8 @@ import android.widget.TextView;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.model.ParentDirectory;
+import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
+import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.ui.IconHolder;
 import com.cyanogenmod.filemanager.ui.ThemeManager;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
@@ -88,18 +93,23 @@ public class FileSystemObjectAdapter
         }
         boolean mSelected;
         Drawable mDwCheck;
+        Drawable mDwAppIcon;
         Drawable mDwIcon;
         String mName;
         String mSummary;
         String mSize;
     }
 
+    private static final int MESSAGE_REDRAW = 1;
 
     private DataHolder[] mData;
     private IconHolder mIconHolder;
     private final int mItemViewResourceId;
     private List<FileSystemObject> mSelectedItems;
     private final boolean mPickable;
+
+    private final Handler mHandler;
+    private AsyncTask<Void, Void, Void> mDrawableTask;
 
     private OnSelectionChangedListener mOnSelectionChangedListener;
 
@@ -127,14 +137,27 @@ public class FileSystemObjectAdapter
             Context context, List<FileSystemObject> files,
             int itemViewResourceId, boolean pickable) {
         super(context, RESOURCE_ITEM_NAME, files);
-        this.mIconHolder = new IconHolder();
+        this.mHandler = new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                switch (msg.what) {
+                    case MESSAGE_REDRAW:
+                        FileSystemObjectAdapter.super.notifyDataSetInvalidated();
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+        };
         this.mItemViewResourceId = itemViewResourceId;
         this.mSelectedItems = new ArrayList<FileSystemObject>();
         this.mPickable = pickable;
+        notifyThemeChanged(); // Reload icons
 
         //Do cache of the data for better performance
-        loadDefaultIcons();
         processData(files);
+        processDrawables(files);
     }
 
     /**
@@ -160,7 +183,11 @@ public class FileSystemObjectAdapter
      */
     @Override
     public void notifyDataSetChanged() {
+        if (mDrawableTask != null) {
+            mDrawableTask.cancel(true);
+        }
         processData(null);
+        processDrawables(null);
         super.notifyDataSetChanged();
     }
 
@@ -168,6 +195,12 @@ public class FileSystemObjectAdapter
      * Method that dispose the elements of the adapter.
      */
     public void dispose() {
+        if (mDrawableTask != null) {
+            mDrawableTask.cancel(true);
+        }
+        if (this.mIconHolder != null) {
+            this.mIconHolder.clearCache();
+        }
         clear();
         this.mData = null;
         this.mIconHolder = null;
@@ -230,14 +263,49 @@ public class FileSystemObjectAdapter
                         theme.getDrawable(
                                 getContext(), "checkbox_deselected_drawable"); //$NON-NLS-1$
             }
-            this.mData[i].mDwIcon = this.mIconHolder.getDrawable(
-                    getContext(),
+            this.mData[i].mDwIcon = this.mIconHolder.getDrawable(getContext(),
                     MimeTypeHelper.getIcon(getContext(), fso));
             this.mData[i].mName = fso.getName();
             this.mData[i].mSummary = sbSummary.toString();
             this.mData[i].mSize = FileHelper.getHumanReadableSize(fso);
-
         }
+    }
+
+    /**
+     * Process all the drawables thumbs
+     *
+     * @param files The list of files (to better performance) or null.
+     */
+    private void processDrawables(final List<FileSystemObject> files) {
+        mDrawableTask = new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+                // Update the media database
+                mIconHolder.updateMediaData(getContext().getContentResolver());
+
+                // Process every file
+                int cc = (files == null) ? getCount() : files.size();
+                for (int i = 0; i < cc; i++) {
+                    if (isCancelled()) {
+                        return null;
+                    }
+                    FileSystemObject fso = (files == null) ? getItem(i) : files.get(i);
+                    mData[i].mDwAppIcon = mIconHolder.getDrawable(getContext(), i, fso);
+                    if (i % 5 == 0) {
+                        publishProgress();
+                    }
+                }
+                publishProgress();
+                return null;
+            }
+
+            @Override
+            protected void onProgressUpdate(Void... values) {
+                mHandler.removeMessages(MESSAGE_REDRAW);
+                mHandler.sendEmptyMessageDelayed(MESSAGE_REDRAW, 250L);
+            }
+        };
+        mDrawableTask.execute();
     }
 
     /**
@@ -289,7 +357,9 @@ public class FileSystemObjectAdapter
         }
 
         //Set the data
-        viewHolder.mIvIcon.setImageDrawable(dataHolder.mDwIcon);
+        viewHolder.mIvIcon.setImageDrawable(dataHolder.mDwAppIcon != null
+                    ? dataHolder.mDwAppIcon
+                    : dataHolder.mDwIcon);
         viewHolder.mTvName.setText(dataHolder.mName);
         if (viewHolder.mTvSummary != null) {
             viewHolder.mTvSummary.setText(dataHolder.mSummary);
@@ -532,7 +602,14 @@ public class FileSystemObjectAdapter
      */
     public void notifyThemeChanged() {
         // Empty icon holder
-        this.mIconHolder = new IconHolder();
+        if (this.mIconHolder != null) {
+            this.mIconHolder.clearCache();
+        }
+        final boolean displayThumbs = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getId(),
+                ((Boolean)FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getDefaultValue()).booleanValue());
+        this.mIconHolder = new IconHolder(displayThumbs);
+        loadDefaultIcons();
     }
 
 }

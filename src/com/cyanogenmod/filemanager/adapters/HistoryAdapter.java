@@ -98,7 +98,7 @@ public class HistoryAdapter extends ArrayAdapter<History> {
      */
     public HistoryAdapter(Context context, List<History> history) {
         super(context, RESOURCE_ITEM_NAME, history);
-        this.mIconHolder = new IconHolder();
+        notifyThemeChanged(); // Reload icons
 
         //Do cache of the data for better performance
         processData(history);
@@ -207,8 +207,8 @@ public class HistoryAdapter extends ArrayAdapter<History> {
      * Method that should be invoked when the theme of the app was changed
      */
     public void notifyThemeChanged() {
-        // Empty icon holder
-        this.mIconHolder = new IconHolder();
+        // Empty icon holder (only have folders and search icons)
+        this.mIconHolder = new IconHolder(false);
     }
 
 }
