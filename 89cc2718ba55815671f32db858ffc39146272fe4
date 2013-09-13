@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a016987_26dbb61d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-13T08:13:18Z",
+      "side": 1,
+      "message": "Bad formatting. Not tabs, no lines \u003e 100",
+      "revId": "89cc2718ba55815671f32db858ffc39146272fe4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_264976d1",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-13T08:13:18Z",
+      "side": 1,
+      "message": "This function should have some kind of catching. I good idea should be used this method for loading picture thumbs.",
+      "revId": "89cc2718ba55815671f32db858ffc39146272fe4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_c62f42f5",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-13T08:13:18Z",
+      "side": 1,
+      "message": "Use MimeTypeHelper.getMimeType and \"application/vnd.android.package-archive\" to determine that the file is an android app",
+      "revId": "89cc2718ba55815671f32db858ffc39146272fe4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_86394a44",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-13T08:13:18Z",
+      "side": 1,
+      "message": "Why we need this?",
+      "revId": "89cc2718ba55815671f32db858ffc39146272fe4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
