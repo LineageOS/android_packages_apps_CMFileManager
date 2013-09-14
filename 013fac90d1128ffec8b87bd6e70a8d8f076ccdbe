@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_8f5cbdee",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 6438
+      },
+      "writtenOn": "2013-09-14T02:00:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a016987_0fbb2d10",
+      "revId": "013fac90d1128ffec8b87bd6e70a8d8f076ccdbe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_ef3691b3",
         "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2013-09-14T01:20:25Z",
       "side": 1,
       "message": "Please wrap to 100 chars. Also could use the filepath variable here.",
+      "revId": "013fac90d1128ffec8b87bd6e70a8d8f076ccdbe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_6f72a17e",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 6438
+      },
+      "writtenOn": "2013-09-14T02:00:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a016987_ef3691b3",
       "revId": "013fac90d1128ffec8b87bd6e70a8d8f076ccdbe",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_4f6fe592",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 6438
+      },
+      "writtenOn": "2013-09-14T02:00:57Z",
+      "side": 1,
+      "message": "Bug in android says its required http://code.google.com/p/android/issues/detail?id\u003d9151",
+      "parentUuid": "7a016987_cf3bd59b",
+      "revId": "013fac90d1128ffec8b87bd6e70a8d8f076ccdbe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_4f48052e",
         "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
         "patchSetId": 3
@@ -64,6 +118,24 @@
       "writtenOn": "2013-09-14T01:20:25Z",
       "side": 1,
       "message": "I\u0027d suggest this instead to only get the package icon if it could be successfully loaded (and not get the default icon in that case):\n\nif (packageInfo !\u003d null) {\n    ApplicationInfo appInfo \u003d packageInfo.applicationInfo;\n    Drawable d \u003d pm.getDrawable(appInfo.packageName, appInfo.icon, appInfo);\n    if (d !\u003d null) {\n        return d;\n    }\n}",
+      "revId": "013fac90d1128ffec8b87bd6e70a8d8f076ccdbe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_2f0389ba",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 6438
+      },
+      "writtenOn": "2013-09-14T02:00:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a016987_4f48052e",
       "revId": "013fac90d1128ffec8b87bd6e70a8d8f076ccdbe",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
