@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a016987_2f9f0961",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-14T03:34:43Z",
+      "side": 1,
+      "message": "Indent by 8 doesn\u0027t mean 8 from line start, but by additional 8 spaces ;)",
+      "revId": "b52c691aa96ec64f04f0f43382390a1670d5b958",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
