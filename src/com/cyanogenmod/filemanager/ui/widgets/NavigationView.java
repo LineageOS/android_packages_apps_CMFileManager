@@ -65,6 +65,7 @@ import com.cyanogenmod.filemanager.util.DialogHelper;
 import com.cyanogenmod.filemanager.util.ExceptionUtil;
 import com.cyanogenmod.filemanager.util.ExceptionUtil.OnRelaunchCommandResult;
 import com.cyanogenmod.filemanager.util.FileHelper;
+import com.cyanogenmod.filemanager.util.RootHelper;
 import com.cyanogenmod.filemanager.util.StorageHelper;
 
 import java.io.File;
@@ -775,7 +776,7 @@ public class NavigationView extends RelativeLayout implements
 
         // Check navigation security (don't allow to go outside the ChRooted environment if one
         // is created)
-        final String fNewDir = checkChRootedNavigation(newDir);
+        final String fNewDir = RootHelper.fixRootPaths(checkChRootedNavigation(newDir));
 
         synchronized (this.mSync) {
             //Check that it is really necessary change the directory
