@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a016987_fa11b1b0",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-14T21:29:37Z",
+      "side": 1,
+      "message": "Can\u0027t you just force the ImageView width and height in the layout instead of doing manual scaling? That way, you wouldn\u0027t need to make assumptions about the type of drawable returned from pm.getDrawable(), and it would be more efficient as well.",
+      "revId": "79615bd3774d61bcd2ddbd07f5868ac7463aba78",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
