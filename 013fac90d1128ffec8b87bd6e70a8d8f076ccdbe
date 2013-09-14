@@ -107,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_0f17adee",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-14T02:29:31Z",
+      "side": 1,
+      "message": "I wonder whether we shouldn\u0027t fix the ResourcesKey class instead. It seems trivial enough to do, just add null checks prior to the hashCode() and equals() calls.",
+      "parentUuid": "7a016987_4f6fe592",
+      "revId": "013fac90d1128ffec8b87bd6e70a8d8f076ccdbe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_4f48052e",
         "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
         "patchSetId": 3
