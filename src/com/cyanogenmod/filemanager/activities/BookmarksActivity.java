@@ -60,6 +60,7 @@ import com.cyanogenmod.filemanager.ui.widgets.FlingerListView.OnItemFlingerRespo
 import com.cyanogenmod.filemanager.util.CommandHelper;
 import com.cyanogenmod.filemanager.util.DialogHelper;
 import com.cyanogenmod.filemanager.util.ExceptionUtil;
+import com.cyanogenmod.filemanager.util.RootHelper;
 import com.cyanogenmod.filemanager.util.StorageHelper;
 
 import java.io.FileNotFoundException;
@@ -565,7 +566,7 @@ public class BookmarksActivity extends Activity implements OnItemClickListener, 
                                     BOOKMARK_TYPE.SDCARD,
                                     StorageHelper.getStorageVolumeDescription(
                                             getApplication(), volumes[i]),
-                                    volumes[i].getPath()));
+                                    RootHelper.fixRootPaths(volumes[i].getPath())));
                 }
             }
 

@@ -89,6 +89,7 @@ import com.cyanogenmod.filemanager.util.AndroidHelper;
 import com.cyanogenmod.filemanager.util.CommandHelper;
 import com.cyanogenmod.filemanager.util.DialogHelper;
 import com.cyanogenmod.filemanager.util.ExceptionUtil;
+import com.cyanogenmod.filemanager.util.RootHelper;
 import com.cyanogenmod.filemanager.util.ExceptionUtil.OnRelaunchCommandResult;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.StorageHelper;
@@ -683,7 +684,7 @@ public class NavigationActivity extends Activity
             }
         } else {
             //Ensure that initial directory is an absolute directory
-            final String userInitialDir = initialDir;
+            final String userInitialDir = RootHelper.fixRootPaths(initialDir);
             initialDir = FileHelper.getAbsPath(initialDir);
             final String absInitialDir = initialDir;
             File f = new File(initialDir);
