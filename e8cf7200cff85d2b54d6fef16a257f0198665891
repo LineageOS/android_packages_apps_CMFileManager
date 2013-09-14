@@ -51,6 +51,24 @@
       "revId": "e8cf7200cff85d2b54d6fef16a257f0198665891",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_4fc7e545",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-14T04:16:59Z",
+      "side": 1,
+      "message": "http://source.android.com/source/code-style.html#use-spaces-for-indentation :)",
+      "parentUuid": "7a016987_cfbab5c0",
+      "revId": "e8cf7200cff85d2b54d6fef16a257f0198665891",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
