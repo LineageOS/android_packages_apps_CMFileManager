@@ -33,6 +33,24 @@
       "revId": "e8cf7200cff85d2b54d6fef16a257f0198665891",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_cfbab5c0",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 6438
+      },
+      "writtenOn": "2013-09-14T04:10:55Z",
+      "side": 1,
+      "message": "I have no idea what is the rule for spacing here maybe you can link me so i can fix it based on that? So i dont have to blindly try to do what you say :)",
+      "parentUuid": "7a016987_2fadc988",
+      "revId": "e8cf7200cff85d2b54d6fef16a257f0198665891",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
