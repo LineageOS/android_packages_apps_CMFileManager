@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "7a016987_95396e44",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-15T16:20:46Z",
+      "side": 1,
+      "message": "How about attaching a ContentObserver to Albums.CONTENT_URI instead of this time based approach?",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_753f1226",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-15T16:20:46Z",
+      "side": 1,
+      "message": "Why is this remove callback / recycle thing necessary here? AFAICT it\u0027s not done for elements rotated out of the hash either. If it\u0027s needed, it should probably be done there as well.",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_f52b0232",
         "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
         "patchSetId": 12
@@ -13,6 +47,74 @@
       "writtenOn": "2013-09-15T08:02:12Z",
       "side": 1,
       "message": "We are 2013 right?",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_553c162f",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-15T16:20:46Z",
+      "side": 1,
+      "message": "Is the default cursor position really -1? IOW, are you sure to not miss the first item here?",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_35499ad1",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-15T16:20:46Z",
+      "side": 1,
+      "message": "The ID data type is long, not int.",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_15469ebf",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-15T16:20:46Z",
+      "side": 1,
+      "message": "Need to close the cursor here.",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_f511c2b0",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-15T16:20:46Z",
+      "side": 1,
+      "message": "Need to close the cursor.",
       "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
