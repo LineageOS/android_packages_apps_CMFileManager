@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "7a016987_151d7ebd",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 12
+      },
+      "lineNbr": 674,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-15T18:22:57Z",
+      "side": 1,
+      "message": "\u0027Show a preview image for pictures, videos, music files and apps\u0027?",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_756dd231",
+        "filename": "src/com/cyanogenmod/filemanager/activities/preferences/GeneralPreferenceFragment.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-15T18:22:57Z",
+      "side": 1,
+      "message": "Copy\u0027n\u0027paste mistake here.",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_556ad61b",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-15T18:22:57Z",
+      "side": 1,
+      "message": "I wonder whether the actual cache (those two maps) should be put somewhere in the scope of the Application object. That way, the thumbnails would only need to be loaded once instead of per-activity.\n\nThe AsyncTask implementation could be moved there as well, with a Runnable passed in as progress callback.",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_95396e44",
         "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
         "patchSetId": 12
