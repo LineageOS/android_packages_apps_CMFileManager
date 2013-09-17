@@ -107,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_db083794",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-17T20:24:24Z",
+      "side": 1,
+      "message": "Fair enough. I assume the navigation activity isn\u0027t finish()ed until exiting the app, right? In that case, it shouldn\u0027t matter much. I just had in mind how similar patterns in other apps (e.g. photo cache in contacts app) are implemented.",
+      "parentUuid": "7a016987_7bf943c8",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_95396e44",
         "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
         "patchSetId": 12
@@ -136,6 +154,24 @@
       "side": 1,
       "message": "While using a ContentObserver pattern is the right one, I think it requires some extra synchronization for every IconHolder reference. If we decided to move the IconHolder to an unique instance then the ContentObserver should be something to be done.",
       "parentUuid": "7a016987_95396e44",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_3bdbcb1d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-17T20:24:24Z",
+      "side": 1,
+      "message": "What extra synchronization do you mean? Are you concerned about the number of attached observers? (I would use one observer per IconHolder instance)",
+      "parentUuid": "7a016987_fb2bf331",
       "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -247,6 +283,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_1bd80f1d",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-17T20:24:24Z",
+      "side": 1,
+      "message": "Ah, right, I forgot about the ringtones.",
+      "parentUuid": "7a016987_9b451f19",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_553c162f",
         "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
         "patchSetId": 12
@@ -276,6 +330,24 @@
       "side": 1,
       "message": "Yes, i\u0027m sure",
       "parentUuid": "7a016987_553c162f",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_fb03f374",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-17T20:24:24Z",
+      "side": 1,
+      "message": "Just learned something then :)",
+      "parentUuid": "7a016987_7b4b832c",
       "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
