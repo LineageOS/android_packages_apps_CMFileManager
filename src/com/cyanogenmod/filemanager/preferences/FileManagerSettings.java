@@ -71,7 +71,7 @@ public enum FileManagerSettings {
      * When to show the symlinks files.
      * @hide
      */
-    SETTINGS_SHOW_SYMLINKS("cm_filemanager_show_symlinks", Boolean.FALSE), //$NON-NLS-1$
+    SETTINGS_SHOW_SYMLINKS("cm_filemanager_show_symlinks", Boolean.TRUE), //$NON-NLS-1$
 
     /**
      * When to use case sensitive comparison in sorting of files
