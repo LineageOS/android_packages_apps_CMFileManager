@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_7b72637e",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 12
+      },
+      "lineNbr": 674,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-17T19:48:54Z",
+      "side": 1,
+      "message": "Done. I changed the title to Preview",
+      "parentUuid": "7a016987_151d7ebd",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_756dd231",
         "filename": "src/com/cyanogenmod/filemanager/activities/preferences/GeneralPreferenceFragment.java",
         "patchSetId": 12
@@ -30,6 +48,24 @@
       "writtenOn": "2013-09-15T18:22:57Z",
       "side": 1,
       "message": "Copy\u0027n\u0027paste mistake here.",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_5b6fa792",
+        "filename": "src/com/cyanogenmod/filemanager/activities/preferences/GeneralPreferenceFragment.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-17T19:48:54Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "7a016987_756dd231",
       "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_7bf943c8",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-17T19:48:54Z",
+      "side": 1,
+      "message": "In that case is more easy to move the whole IconHolder reference to the Application object. But, IHMO, it has not to much sense. There are 4 activities using the icon holder (bookmarks, history, search and navigation) and only search and navigation shares its icons. While the main user activity is the navigation one, why put on cache icons that are not going to be used. This way if an activity is destroyed its icon cache will be destroyed also. IHMO, its a more effecient way, and not cause any decrease of the application. Just my thought ... but you have more androidfu :). I\u0027ll moved it if still thinking that it\u0027s better.\n\nAbout the AsyncTask there is a problem: The execute arguments are not the same (List\u003cFileSystemObject\u003e vs List\u003cSearchResult\u003e)",
+      "parentUuid": "7a016987_556ad61b",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_95396e44",
         "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
         "patchSetId": 12
@@ -64,6 +118,24 @@
       "writtenOn": "2013-09-15T16:20:46Z",
       "side": 1,
       "message": "How about attaching a ContentObserver to Albums.CONTENT_URI instead of this time based approach?",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_fb2bf331",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-17T19:48:54Z",
+      "side": 1,
+      "message": "While using a ContentObserver pattern is the right one, I think it requires some extra synchronization for every IconHolder reference. If we decided to move the IconHolder to an unique instance then the ContentObserver should be something to be done.",
+      "parentUuid": "7a016987_95396e44",
       "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_bb0e9be3",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-17T19:48:54Z",
+      "side": 1,
+      "message": "You are right. Removed",
+      "parentUuid": "7a016987_753f1226",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_f52b0232",
         "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
         "patchSetId": 12
@@ -98,6 +188,24 @@
       "writtenOn": "2013-09-15T08:02:12Z",
       "side": 1,
       "message": "We are 2013 right?",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_9b5cffee",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-17T19:48:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a016987_f52b0232",
       "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_9b451f19",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-17T19:48:54Z",
+      "side": 1,
+      "message": "No. Audio uses the audio_meta db but do not specifies the type of audio (like album_info does):\n\n.schema audio\nCREATE VIEW audio as SELECT * FROM audio_meta LEFT OUTER JOIN artists ON audio_meta.artist_id\u003dartists.artist_id LEFT OUTER JOIN albums ON audio_meta.album_id\u003dalbums.album_id;\n\nThere are ringtones, music, ...",
+      "parentUuid": "7a016987_b50b4a7d",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_553c162f",
         "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
         "patchSetId": 12
@@ -132,6 +258,24 @@
       "writtenOn": "2013-09-15T16:20:46Z",
       "side": 1,
       "message": "Is the default cursor position really -1? IOW, are you sure to not miss the first item here?",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_7b4b832c",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-17T19:48:54Z",
+      "side": 1,
+      "message": "Yes, i\u0027m sure",
+      "parentUuid": "7a016987_553c162f",
       "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -155,6 +299,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_bb57bbc9",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-17T19:48:54Z",
+      "side": 1,
+      "message": "Done, but to fill a long you have to own a lot of media :)\n\nfrom SQLite page:\n\nINTEGER. The value is a signed integer, stored in 1, 2, 3, 4, 6, or 8 bytes depending on the magnitude of the value",
+      "parentUuid": "7a016987_35499ad1",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_15469ebf",
         "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
         "patchSetId": 12
@@ -166,6 +328,24 @@
       "writtenOn": "2013-09-15T16:20:46Z",
       "side": 1,
       "message": "Need to close the cursor here.",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_db6277ad",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-17T19:48:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a016987_15469ebf",
       "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -189,6 +369,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_5b48c72d",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-17T19:48:54Z",
+      "side": 1,
+      "message": "No, it\u0027s ok",
+      "parentUuid": "7a016987_95104eaa",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_f511c2b0",
         "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
         "patchSetId": 12
@@ -200,6 +398,24 @@
       "writtenOn": "2013-09-15T16:20:46Z",
       "side": 1,
       "message": "Need to close the cursor.",
+      "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_fb5d33ed",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-17T19:48:54Z",
+      "side": 1,
+      "message": "Oops. how much damage Hibernate and Spring has done :). Done",
+      "parentUuid": "7a016987_f511c2b0",
       "revId": "89cb61c167f1ca582aa2507c70e325fe45b2e079",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
