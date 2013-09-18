@@ -176,6 +176,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_eda576b5",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 14
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-18T19:03:49Z",
+      "side": 1,
+      "message": "If I don\u0027t misunderstand the ContentObserver and ContentResolver code, unregistering an observer that is not registered is a no-op, so the additional check shouldn\u0027t be required.",
+      "parentUuid": "7a016987_dbf2776f",
+      "revId": "ac385619c4ed77e7b6db4fa11b87b6ef4da6c118",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_9becff90",
         "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
         "patchSetId": 14
@@ -187,6 +205,24 @@
       "writtenOn": "2013-09-18T02:06:57Z",
       "side": 1,
       "message": "Audio.Media? I think we only need to know about new albums, no new files of that album.",
+      "revId": "ac385619c4ed77e7b6db4fa11b87b6ef4da6c118",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_cdaaba85",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 14
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-18T19:03:49Z",
+      "side": 1,
+      "message": "When audio files are moved around (e.g. by using CMFileManager ;) ), I think the paths will change in the media DB, but the albums DB won\u0027t change - or am I wrong there?",
+      "parentUuid": "7a016987_9becff90",
       "revId": "ac385619c4ed77e7b6db4fa11b87b6ef4da6c118",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
