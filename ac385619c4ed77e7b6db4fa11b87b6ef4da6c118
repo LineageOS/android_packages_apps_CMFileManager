@@ -88,6 +88,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_5b2207bb",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/SearchResultAdapter.java",
+        "patchSetId": 14
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-18T03:45:18Z",
+      "side": 1,
+      "message": "Yeah, always using getCount/getChildAt is what I had in mind.",
+      "parentUuid": "7a016987_bbb57b7f",
+      "revId": "ac385619c4ed77e7b6db4fa11b87b6ef4da6c118",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_9ba3df4f",
         "filename": "src/com/cyanogenmod/filemanager/adapters/SearchResultAdapter.java",
         "patchSetId": 14
@@ -117,6 +135,24 @@
       "side": 1,
       "message": "If we remove this, is a good idea to call the notifydatasetchanged continously? I did this to no collapse the render system. If you have 400 pictures in a folder this supposed 80 UI calls.",
       "parentUuid": "7a016987_9ba3df4f",
+      "revId": "ac385619c4ed77e7b6db4fa11b87b6ef4da6c118",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_3b2f4ba3",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/SearchResultAdapter.java",
+        "patchSetId": 14
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-18T03:45:18Z",
+      "side": 1,
+      "message": "I think I\u0027ll change it in a way to wait no longer than 250ms.",
+      "parentUuid": "7a016987_bb6c5b09",
       "revId": "ac385619c4ed77e7b6db4fa11b87b6ef4da6c118",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
