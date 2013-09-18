@@ -194,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_4d9fea5f",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 14
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-18T19:59:11Z",
+      "side": 1,
+      "message": "Right. I thought that it implies some binder calls but that happens only it is registered",
+      "parentUuid": "7a016987_eda576b5",
+      "revId": "ac385619c4ed77e7b6db4fa11b87b6ef4da6c118",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_9becff90",
         "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
         "patchSetId": 14
@@ -223,6 +241,24 @@
       "side": 1,
       "message": "When audio files are moved around (e.g. by using CMFileManager ;) ), I think the paths will change in the media DB, but the albums DB won\u0027t change - or am I wrong there?",
       "parentUuid": "7a016987_9becff90",
+      "revId": "ac385619c4ed77e7b6db4fa11b87b6ef4da6c118",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_ad865e11",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 14
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-18T19:59:11Z",
+      "side": 1,
+      "message": "No, you are always right :) i missed that use case",
+      "parentUuid": "7a016987_cdaaba85",
       "revId": "ac385619c4ed77e7b6db4fa11b87b6ef4da6c118",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
