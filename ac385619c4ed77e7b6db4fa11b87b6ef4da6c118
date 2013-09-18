@@ -70,6 +70,24 @@
     },
     {
       "key": {
+        "uuid": "7a016987_bbb57b7f",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/SearchResultAdapter.java",
+        "patchSetId": 14
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-18T03:23:36Z",
+      "side": 1,
+      "message": "Not sure, because processDrawables is called twice (with parameters and with null). The first call is done from the constructor with the initial array, the second call is extracted from the adapter. First method performs better but can be replaced by second in all the cases, and then we can nuke the paramter.",
+      "parentUuid": "7a016987_7b8943ca",
+      "revId": "ac385619c4ed77e7b6db4fa11b87b6ef4da6c118",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a016987_9ba3df4f",
         "filename": "src/com/cyanogenmod/filemanager/adapters/SearchResultAdapter.java",
         "patchSetId": 14
@@ -81,6 +99,24 @@
       "writtenOn": "2013-09-18T02:44:01Z",
       "side": 1,
       "message": "Doesn\u0027t the 250ms delay effectively render the progress update useless? It does at least if querying a single thumbnail takes \u003c\u003d 50ms.",
+      "revId": "ac385619c4ed77e7b6db4fa11b87b6ef4da6c118",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_bb6c5b09",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/SearchResultAdapter.java",
+        "patchSetId": 14
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-18T03:23:36Z",
+      "side": 1,
+      "message": "If we remove this, is a good idea to call the notifydatasetchanged continously? I did this to no collapse the render system. If you have 400 pictures in a folder this supposed 80 UI calls.",
+      "parentUuid": "7a016987_9ba3df4f",
       "revId": "ac385619c4ed77e7b6db4fa11b87b6ef4da6c118",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
