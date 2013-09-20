@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "5afe65bd_85802248",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-20T01:07:09Z",
+      "side": 1,
+      "message": "The internal handler doesn\u0027t call this method, though. It calls super.notifyDataSetChanged().",
+      "parentUuid": "5afe65bd_6541a639",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5afe65bd_a508be29",
         "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
         "patchSetId": 16
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Yes, probably the handler should not necessary now. In PS15 scrolling while processing is not too smooth.\nYes the idea is to refresh one time when all the images are fetched. It the user scrolls the getView is called and every gets the properly image if is loaded. I tested with more than 400 images.",
       "parentUuid": "5afe65bd_a508be29",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_65964696",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-20T01:07:09Z",
+      "side": 1,
+      "message": "We should look into how other apps displaying images in lists (contacts, dialer?) are doing it then. It should definitely be possible to show the first ones while still loading the rest.",
+      "parentUuid": "5afe65bd_453eaab9",
       "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
