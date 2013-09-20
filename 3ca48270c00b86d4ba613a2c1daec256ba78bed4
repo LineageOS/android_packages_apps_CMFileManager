@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5afe65bd_6541a639",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-20T00:55:43Z",
+      "side": 1,
+      "message": "Do not process drawables again when the notifyDataSetChanged came from the internal handler (trying to avoid unnecesary calls to proccessDrawable)",
+      "parentUuid": "5afe65bd_850dc239",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5afe65bd_a508be29",
         "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
         "patchSetId": 16
@@ -30,6 +48,24 @@
       "writtenOn": "2013-09-20T00:09:20Z",
       "side": 1,
       "message": "I don\u0027t understand this change from PS15:\n\n- As it is, you can kill the handler completely and just call notifyDataSetChanged() in onPostExecute()\n- In case you have a long list of say 1000 pictures and you\u0027re at the top of the list, the thumbnails aren\u0027t displayed until all are fetched, are they?",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_453eaab9",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-20T00:55:43Z",
+      "side": 1,
+      "message": "Yes, probably the handler should not necessary now. In PS15 scrolling while processing is not too smooth.\nYes the idea is to refresh one time when all the images are fetched. It the user scrolls the getView is called and every gets the properly image if is loaded. I tested with more than 400 images.",
+      "parentUuid": "5afe65bd_a508be29",
       "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "5afe65bd_254bae5b",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-20T00:55:43Z",
+      "side": 1,
+      "message": "Yes, exactly, but it\u0027s just for root access (/mnt/shell requires root permissions). Same for videos. The idea is to access to the /storeage mount point where java have full access.",
+      "parentUuid": "5afe65bd_6513e65d",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5afe65bd_4510ea4e",
         "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
         "patchSetId": 16
@@ -64,6 +118,24 @@
       "writtenOn": "2013-09-20T00:09:20Z",
       "side": 1,
       "message": "This is unneeded, it\u0027s already normalized.",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_0548b25a",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-20T00:55:43Z",
+      "side": 1,
+      "message": "Right",
+      "parentUuid": "5afe65bd_4510ea4e",
       "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "5afe65bd_e57356b3",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-20T00:55:43Z",
+      "side": 1,
+      "message": "Right",
+      "parentUuid": "5afe65bd_251dee66",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5afe65bd_e52596ae",
         "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
         "patchSetId": 16
@@ -104,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "5afe65bd_c5785a92",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-20T00:55:43Z",
+      "side": 1,
+      "message": "Ok.",
+      "parentUuid": "5afe65bd_e52596ae",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5afe65bd_051af26e",
         "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
         "patchSetId": 16
@@ -115,6 +223,24 @@
       "writtenOn": "2013-09-20T00:09:20Z",
       "side": 1,
       "message": "Should indent by 8?",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_656886bb",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-20T00:55:43Z",
+      "side": 1,
+      "message": "Ok.",
+      "parentUuid": "5afe65bd_051af26e",
       "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
