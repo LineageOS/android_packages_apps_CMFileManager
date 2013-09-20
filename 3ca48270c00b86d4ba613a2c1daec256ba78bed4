@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5afe65bd_850dc239",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-20T00:09:20Z",
+      "side": 1,
+      "message": "What is the meaning (and purpose of this flag)?",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_a508be29",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-20T00:09:20Z",
+      "side": 1,
+      "message": "I don\u0027t understand this change from PS15:\n\n- As it is, you can kill the handler completely and just call notifyDataSetChanged() in onPostExecute()\n- In case you have a long list of say 1000 pictures and you\u0027re at the top of the list, the thumbnails aren\u0027t displayed until all are fetched, are they?",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_6513e65d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-20T00:09:20Z",
+      "side": 1,
+      "message": "Is this normalization stuff for cases where one navigates to /mnt/shell/emulated?",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_4510ea4e",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-20T00:09:20Z",
+      "side": 1,
+      "message": "This is unneeded, it\u0027s already normalized.",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_251dee66",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-20T00:09:20Z",
+      "side": 1,
+      "message": "As above",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_e52596ae",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-20T00:09:20Z",
+      "side": 1,
+      "message": "Put this in static finals?",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_051af26e",
+        "filename": "src/com/cyanogenmod/filemanager/util/MediaHelper.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-20T00:09:20Z",
+      "side": 1,
+      "message": "Should indent by 8?",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
