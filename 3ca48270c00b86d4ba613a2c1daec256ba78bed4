@@ -108,6 +108,24 @@
     },
     {
       "key": {
+        "uuid": "5afe65bd_e5e8f618",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-20T01:17:32Z",
+      "side": 1,
+      "message": "Hmm, after doing that (and looking in ContactsCommon), it looks like they\u0027re triggering asynchronous load in bindView(), passing the ImageView into the call. Then they have a handler thread doing the actual load, and everytime they load an image, they send a message to the main thread which looks up whether there\u0027s any image for the pending ImageViews and applies those that are there. This sounds totally doable for us as well :) I\u0027ll look into this.",
+      "parentUuid": "5afe65bd_65964696",
+      "revId": "3ca48270c00b86d4ba613a2c1daec256ba78bed4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5afe65bd_6513e65d",
         "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
         "patchSetId": 16
