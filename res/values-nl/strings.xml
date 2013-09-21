@@ -293,6 +293,8 @@
     <string name="pref_disk_usage_warning_level_summary" formatted="false">Andere kleur voor schijfgebruikwidgets tonen wanneer ze <xliff:g id="level">%1$s</xliff:g> procent vrije ruimte bereiken</string>
     <string name="pref_compute_folder_statistics">Mapstatistieken berekenen</string>
     <string name="pref_compute_folder_statistics_on">Let op: het berekenen van mapstatistieken kost tijd en systeembronnen</string>
+    <string name="pref_display_thumbs">Voorbeeld</string>
+    <string name="pref_display_thumbs_summary">Voorbeeldweergave voor afbeeldingen, video\'s, muziek en apps</string>
     <string name="pref_use_flinger">Veegbewegingen gebruiken</string>
     <string name="pref_use_flinger_summary">Vegen van links naar rechts gebruiken om bestanden of mappen te verwijderen.</string>
     <string name="pref_general_advanced_settings_category">Geavanceerd</string>
