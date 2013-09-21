@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5afe65bd_a8af737c",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 19
+      },
+      "lineNbr": 808,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-09-21T00:28:40Z",
+      "side": 1,
+      "message": "This is where the deadlock after changing the preview setting occured:\n- main thread ran NavigationActivity.applyTheme(), which runs NavigationView.applyTheme() for each view, which calls refresh()\n- refresh() calls into here, mChangingDir is false at this point\n- mChangingDir is set to true here, AsyncTask is scheduled\n- main thread then ran refresh(), which came here again and started waiting\n- the AsyncTask couldn\u0027t run, because its onPreExecute() method couldn\u0027t run\n\nI\u0027ve fixed it by removing the superfluous refresh() call, but an uneasy feeling remains. Potentially deadlocking the main thread doesn\u0027t look ideal to me. Hence my question: What exactly does this construct protect?",
+      "revId": "7cf676c05fdf9d825224f071b14cd71b39cb7bfc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
