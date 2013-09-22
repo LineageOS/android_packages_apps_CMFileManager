@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "5afe65bd_eb9445e9",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-09-22T11:40:59Z",
+      "side": 1,
+      "message": "Ik ben ook voor beschrijfbaar, zoals het nu is dus.",
+      "parentUuid": "5afe65bd_abd08dca",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5afe65bd_8b8711d7",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "\"(...) of een submap daarvan.\"\n\n?",
       "parentUuid": "5afe65bd_8b8711d7",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_cb998921",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-09-22T11:40:59Z",
+      "side": 1,
+      "message": "Als je het Engels aanhoudt, ben ik voor de optie die Frank voorstelt",
+      "parentUuid": "5afe65bd_8bd5d1ba",
       "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -241,6 +277,24 @@
       "side": 1,
       "message": "\u0027Hex-dump genereren bij openen binair bestand en openen in hex-viewer\u0027?",
       "parentUuid": "5afe65bd_0b1d61bd",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_8ba3914f",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-09-22T11:40:59Z",
+      "side": 1,
+      "message": "Zoals Marco het zegt lijkt het alsof er staat \"hexdump genereren bij openen in hex-viewer\u0027 ?\n\n- Hex-dump genereren bij openen binair bestand en deze openen in hex-viewer\u0027\n\nvergeet niet \u003cstring name\u003d\"pref_hexdump\"\u003eHex-dump maken\u003c/string\u003e ook aan te passen naar \u0027genereren\u0027",
+      "parentUuid": "5afe65bd_abe76dab",
       "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
