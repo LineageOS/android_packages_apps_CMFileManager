@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5afe65bd_abd08dca",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-09-22T09:02:02Z",
+      "side": 1,
+      "message": "Je schrijft een bestand _naar_ een bestandssysteem, daarom is een bestandssysteem beschrijfbaar.\n\nZie:\n\n- https://nl.wikipedia.org/wiki/UnionFS (paragraaf Implementaties; alinea 2; zin 2)\n- http://www.freebsd.org/doc/nl/books/handbook/network-diskless.html (31.7.2.8.1; zin 2)",
+      "parentUuid": "5afe65bd_cb7d09e9",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5afe65bd_8b8711d7",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-09-22T08:47:52Z",
       "side": 1,
       "message": "\u0027De doelmap kan niet hetzelfde zijn als de bron of een submap zijn van de bron.\u0027",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_8bd5d1ba",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-09-22T09:02:02Z",
+      "side": 1,
+      "message": "\"(...) of een submap daarvan.\"\n\n?",
+      "parentUuid": "5afe65bd_8b8711d7",
       "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "5afe65bd_6bdbb5ee",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-09-22T09:02:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5afe65bd_6b6df531",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5afe65bd_6b261518",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2013-09-22T08:47:52Z",
       "side": 1,
       "message": "Hoofdlettergevoelig (\u0027d\u0027 ontbreekt)",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_4bd8f9ef",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-09-22T09:02:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5afe65bd_6b261518",
       "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "5afe65bd_ebed658f",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-09-22T09:02:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5afe65bd_2b201df7",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5afe65bd_4b235906",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -104,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "5afe65bd_cbf2a96f",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-09-22T09:02:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5afe65bd_4b235906",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5afe65bd_0b1d61bd",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -115,6 +223,24 @@
       "writtenOn": "2013-09-22T08:47:52Z",
       "side": 1,
       "message": "genereren ipv generen",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_abe76dab",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-09-22T09:02:02Z",
+      "side": 1,
+      "message": "\u0027Hex-dump genereren bij openen binair bestand en openen in hex-viewer\u0027?",
+      "parentUuid": "5afe65bd_0b1d61bd",
       "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
