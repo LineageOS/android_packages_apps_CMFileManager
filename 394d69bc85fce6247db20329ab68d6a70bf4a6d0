@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5afe65bd_cb7d09e9",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 7221
+      },
+      "writtenOn": "2013-09-22T08:47:52Z",
+      "side": 1,
+      "message": "schrijfbaar ipv beschrijfbaar",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_8b8711d7",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 7221
+      },
+      "writtenOn": "2013-09-22T08:47:52Z",
+      "side": 1,
+      "message": "\u0027De doelmap kan niet hetzelfde zijn als de bron of een submap zijn van de bron.\u0027",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_6b6df531",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 7221
+      },
+      "writtenOn": "2013-09-22T08:47:52Z",
+      "side": 1,
+      "message": "bestandssysteem (\u0027e\u0027 ontbreekt)",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_6b261518",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 7221
+      },
+      "writtenOn": "2013-09-22T08:47:52Z",
+      "side": 1,
+      "message": "Hoofdlettergevoelig (\u0027d\u0027 ontbreekt)",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_2b201df7",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 7221
+      },
+      "writtenOn": "2013-09-22T08:47:52Z",
+      "side": 1,
+      "message": "bewerkingen ipv bewerking",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_4b235906",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 7221
+      },
+      "writtenOn": "2013-09-22T08:47:52Z",
+      "side": 1,
+      "message": "verantwoordelijkheid ipv verantwoordelijk",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_0b1d61bd",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 7221
+      },
+      "writtenOn": "2013-09-22T08:47:52Z",
+      "side": 1,
+      "message": "genereren ipv generen",
+      "revId": "394d69bc85fce6247db20329ab68d6a70bf4a6d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
