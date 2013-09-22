@@ -16,6 +16,24 @@
       "revId": "5abe643f0f6ed8897c7604b4bc2ee6470be14f03",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afe65bd_ce519710",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2013-09-22T20:32:56Z",
+      "side": 1,
+      "message": "gar keine so schlechte Idee, dann sollte man das aber auch in der originalen Übersetzung anpassen.",
+      "parentUuid": "5afe65bd_6e3aa3cf",
+      "revId": "5abe643f0f6ed8897c7604b4bc2ee6470be14f03",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
