@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5afe65bd_b9aa2784",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-23T21:15:36Z",
+      "side": 1,
+      "message": "Vista preliminar?",
+      "revId": "dbdd1f95756b5a57a81536760dfef20268bbc5cd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
