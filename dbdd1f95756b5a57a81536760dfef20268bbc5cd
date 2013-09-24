@@ -34,6 +34,24 @@
       "revId": "dbdd1f95756b5a57a81536760dfef20268bbc5cd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3afb71cf_04c5565a",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-09-24T10:42:15Z",
+      "side": 1,
+      "message": "\"Mostrar minuturas\" doesn\u0027t sounds good to me, sorry.\n\nPrevisualización?",
+      "parentUuid": "3afb71cf_241a9218",
+      "revId": "dbdd1f95756b5a57a81536760dfef20268bbc5cd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
