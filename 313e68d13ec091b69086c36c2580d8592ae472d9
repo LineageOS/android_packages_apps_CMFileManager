@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da37b569_a40eace3",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-09-28T09:00:36Z",
+      "side": 1,
+      "message": "Trailing space",
+      "revId": "313e68d13ec091b69086c36c2580d8592ae472d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_c413b00c",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-09-28T09:00:36Z",
+      "side": 1,
+      "message": "Trailing space",
+      "revId": "313e68d13ec091b69086c36c2580d8592ae472d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_64f984c8",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-09-28T09:00:36Z",
+      "side": 1,
+      "message": "Trailing space",
+      "revId": "313e68d13ec091b69086c36c2580d8592ae472d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
