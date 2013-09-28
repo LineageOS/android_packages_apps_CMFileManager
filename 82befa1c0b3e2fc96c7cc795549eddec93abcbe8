@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da37b569_441a4070",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-09-28T06:02:39Z",
+      "side": 1,
+      "message": "Please do not alter the copyright notice",
+      "revId": "82befa1c0b3e2fc96c7cc795549eddec93abcbe8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
