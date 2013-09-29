@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da37b569_8a37efe2",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 5637
+      },
+      "writtenOn": "2013-09-29T08:49:53Z",
+      "side": 1,
+      "message": "IMO: \"zrzut / kolejno??\" if these fields have same meaning as in fstab in *nix",
+      "revId": "c336d4c2c5a613d68160db22880df992ee77b618",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_ca0df738",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 5637
+      },
+      "writtenOn": "2013-09-29T08:49:53Z",
+      "side": 1,
+      "message": "typo: plik",
+      "revId": "c336d4c2c5a613d68160db22880df992ee77b618",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_6a138b5d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 5637
+      },
+      "writtenOn": "2013-09-29T08:49:53Z",
+      "side": 1,
+      "message": "typo: plików",
+      "revId": "c336d4c2c5a613d68160db22880df992ee77b618",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_4a1a4770",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 5637
+      },
+      "writtenOn": "2013-09-29T08:49:53Z",
+      "side": 1,
+      "message": "IMO \"Ogólne\" sounds better",
+      "revId": "c336d4c2c5a613d68160db22880df992ee77b618",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
