@@ -952,8 +952,6 @@ public final class CommandHelper {
      * @param context The current context (needed if console == null)
      * @param mp The mount point to re-mount
      * @param rw Indicates if the operation re-mounted the device as read-write
-     * @param console The console in which execute the program. <code>null</code>
-     * to attach to the default console
      * @return boolean The operation result
      * @throws FileNotFoundException If the initial directory not exists
      * @throws IOException If initial directory couldn't be checked
@@ -966,12 +964,12 @@ public final class CommandHelper {
      * @throws ExecutionException If the operation returns a invalid exit code
      * @see MountExecutable
      */
-    public static boolean remount(Context context, MountPoint mp, boolean rw, Console console)
+    public static boolean remount(Context context, MountPoint mp, boolean rw)
             throws FileNotFoundException, IOException, ConsoleAllocException,
             NoSuchFileOrDirectory, InsufficientPermissionsException,
             CommandNotFoundException, OperationTimeoutException,
             ExecutionException, InvalidCommandDefinitionException {
-        Console c = ensureConsole(context, console);
+        Console c = ConsoleBuilder.getMountConsole(context);
         MountExecutable executable =
                 c.getExecutableFactory().newCreator().createMountExecutable(mp, rw);
         execute(context, executable, c);
@@ -1730,5 +1728,4 @@ public final class CommandHelper {
         }
         return c;
     }
-
 }
