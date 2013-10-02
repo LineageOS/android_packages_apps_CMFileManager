@@ -952,8 +952,6 @@ public final class CommandHelper {
      * @param context The current context (needed if console == null)
      * @param mp The mount point to re-mount
      * @param rw Indicates if the operation re-mounted the device as read-write
-     * @param console The console in which execute the program. <code>null</code>
-     * to attach to the default console
      * @return boolean The operation result
      * @throws FileNotFoundException If the initial directory not exists
      * @throws IOException If initial directory couldn't be checked
@@ -966,12 +964,12 @@ public final class CommandHelper {
      * @throws ExecutionException If the operation returns a invalid exit code
      * @see MountExecutable
      */
-    public static boolean remount(Context context, MountPoint mp, boolean rw, Console console)
+    public static boolean remount(Context context, MountPoint mp, boolean rw)
             throws FileNotFoundException, IOException, ConsoleAllocException,
             NoSuchFileOrDirectory, InsufficientPermissionsException,
             CommandNotFoundException, OperationTimeoutException,
             ExecutionException, InvalidCommandDefinitionException {
-        Console c = ensureConsole(context, console);
+        Console c = ConsoleBuilder.getMountConsole(context);
         MountExecutable executable =
                 c.getExecutableFactory().newCreator().createMountExecutable(mp, rw);
         execute(context, executable, c);
@@ -1210,7 +1208,7 @@ public final class CommandHelper {
         // Create a wrapper listener, for unmount the filesystem if necessary
         UnmountAsyncResultListener wrapperListener = new UnmountAsyncResultListener();
         wrapperListener.mCtx = context;
-        wrapperListener.mConsole = c;
+        wrapperListener.mConsole = ConsoleBuilder.getMountConsole(context);
         wrapperListener.mRef = asyncResultListener;
 
         // Prior to write to disk the data, ensure that can write to the disk using
@@ -1269,7 +1267,7 @@ public final class CommandHelper {
         // Create a wrapper listener, for unmount the filesystem if necessary
         UnmountAsyncResultListener wrapperListener = new UnmountAsyncResultListener();
         wrapperListener.mCtx = context;
-        wrapperListener.mConsole = c;
+        wrapperListener.mConsole = ConsoleBuilder.getMountConsole(context);
         wrapperListener.mRef = asyncResultListener;
 
         CompressExecutable executable1 =
@@ -1341,7 +1339,7 @@ public final class CommandHelper {
         // Create a wrapper listener, for unmount the filesystem if necessary
         UnmountAsyncResultListener wrapperListener = new UnmountAsyncResultListener();
         wrapperListener.mCtx = context;
-        wrapperListener.mConsole = c;
+        wrapperListener.mConsole = ConsoleBuilder.getMountConsole(context);
         wrapperListener.mRef = asyncResultListener;
 
         CompressExecutable executable1 =
@@ -1405,7 +1403,7 @@ public final class CommandHelper {
         // Create a wrapper listener, for unmount the filesystem if necessary
         UnmountAsyncResultListener wrapperListener = new UnmountAsyncResultListener();
         wrapperListener.mCtx = context;
-        wrapperListener.mConsole = c;
+        wrapperListener.mConsole = ConsoleBuilder.getMountConsole(context);
         wrapperListener.mRef = asyncResultListener;
 
         UncompressExecutable executable1 =
@@ -1504,7 +1502,12 @@ public final class CommandHelper {
             OperationTimeoutException, ExecutionException,
             CommandNotFoundException, ReadOnlyFilesystemException,
             FileNotFoundException, IOException, InvalidCommandDefinitionException {
-        Console c = ensureConsole(context, console);
+        Console c = null;
+        if (executable instanceof MountExecutable) {
+            c = ConsoleBuilder.getMountConsole(context);
+        } else {
+            c = ensureConsole(context, console);
+        }
         c.execute(executable);
         return executable.getResult();
     }
@@ -1552,12 +1555,14 @@ public final class CommandHelper {
      * @throws OperationTimeoutException If the operation exceeded the maximum time of wait
      * @throws ExecutionException If the operation returns a invalid exit code
      * @throws ReadOnlyFilesystemException If the operation writes in a read-only filesystem
+     * @throws InvalidCommandDefinitionException If the mount console cannot be created
+     * @throws IOException If initial directory of the mount console couldn't be checked
      */
     private static void writableExecute(
             Context context, WritableExecutable executable, Console console)
             throws ConsoleAllocException, InsufficientPermissionsException, NoSuchFileOrDirectory,
-            OperationTimeoutException, ExecutionException,
-            CommandNotFoundException, ReadOnlyFilesystemException {
+            OperationTimeoutException, ExecutionException, CommandNotFoundException,
+            ReadOnlyFilesystemException, InvalidCommandDefinitionException, IOException {
         writableExecute(context, executable, console, false);
     }
 
@@ -1579,13 +1584,15 @@ public final class CommandHelper {
      * @throws OperationTimeoutException If the operation exceeded the maximum time of wait
      * @throws ExecutionException If the operation returns a invalid exit code
      * @throws ReadOnlyFilesystemException If the operation writes in a read-only filesystem
+     * @throws InvalidCommandDefinitionException If the mount console cannot be created
+     * @throws IOException If initial directory of the mount console couldn't be checked
      */
     private static boolean writableExecute(
             Context context, WritableExecutable executable, Console console,
             boolean leaveDeviceMounted)
             throws ConsoleAllocException, InsufficientPermissionsException, NoSuchFileOrDirectory,
-            OperationTimeoutException, ExecutionException,
-            CommandNotFoundException, ReadOnlyFilesystemException {
+            OperationTimeoutException, ExecutionException, CommandNotFoundException,
+            ReadOnlyFilesystemException, InvalidCommandDefinitionException, IOException {
 
         //Retrieve the mount point information to check if a remount operation is required
         //There are 2 mount points: destination and source. Check both
@@ -1650,18 +1657,30 @@ public final class CommandHelper {
                         createMountExecutable(mpSrc, false);
         }
 
+        // We need a special console for mount/unmount operations
+        if ((needMountDst || needMountSrc) && !console.isPrivileged()) {
+            InsufficientPermissionsException ipEx = new InsufficientPermissionsException();
+            if (needMountDst) ipEx.addExecutable(mountDstExecutable);
+            if (needMountSrc) ipEx.addExecutable(mountSrcExecutable);
+            ipEx.addExecutable(executable);
+            if (needMountDst) ipEx.addExecutable(unmountDstExecutable);
+            if (needMountSrc) ipEx.addExecutable(unmountSrcExecutable);
+            throw ipEx;
+        }
+        Console mountConsole = ConsoleBuilder.getMountConsole(context);
+
         //Execute the commands
         boolean mountExecutedDst = false;
         boolean mountExecutedSrc = false;
         try {
             if (needMountDst) {
                 //Execute the mount command
-                console.execute(mountDstExecutable);
+                mountConsole.execute(mountDstExecutable);
                 mountExecutedDst = true;
             }
             if (needMountSrc) {
                 //Execute the mount command
-                console.execute(mountSrcExecutable);
+                mountConsole.execute(mountSrcExecutable);
                 mountExecutedSrc = true;
             }
 
@@ -1696,11 +1715,11 @@ public final class CommandHelper {
             //and unmount operation
             if (mountExecutedDst && !leaveDeviceMounted) {
                 //Execute the unmount command
-                console.execute(unmountDstExecutable);
+                mountConsole.execute(unmountDstExecutable);
             }
             if (mountExecutedSrc && !leaveDeviceMounted) {
                 //Execute the unmount command
-                console.execute(unmountSrcExecutable);
+                mountConsole.execute(unmountSrcExecutable);
             }
         }
 
@@ -1730,5 +1749,4 @@ public final class CommandHelper {
         }
         return c;
     }
-
 }
