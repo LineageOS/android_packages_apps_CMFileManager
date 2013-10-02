@@ -22,6 +22,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.os.AsyncTask.Status;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -292,7 +293,9 @@ public final class ExceptionUtil {
                                         SyncResultExecutable executable = executables.get(i);
                                         Object result = CommandHelper.reexecute(
                                                 context, executable, null);
-                                        if (relaunchable.getTask() != null) {
+                                        AsyncTask<?, ?, ?> task = relaunchable.getTask();
+                                        if (relaunchable.getTask() != null &&
+                                            (task.getStatus().compareTo(Status.RUNNING) != 0)) {
                                             relaunchable.getTask().execute(result);
                                         }
                                     }

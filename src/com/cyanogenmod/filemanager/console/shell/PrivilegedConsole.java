@@ -34,13 +34,15 @@ public class PrivilegedConsole extends ShellConsole {
     /**
      * Constructor of <code>PrivilegedConsole</code>.
      *
+     * @param mountStorage Whether the emulated storage should be mounted
+     *
      * @throws FileNotFoundException If the default initial directory not exists
      * @throws IOException If initial directory couldn't be checked
      * @throws InvalidCommandDefinitionException If the command has an invalid definition
      */
-    public PrivilegedConsole()
+    public PrivilegedConsole(boolean mountStorage)
             throws FileNotFoundException, IOException, InvalidCommandDefinitionException {
-        super(new SuperuserShell());
+        super(new SuperuserShell(mountStorage));
     }
 
     /**

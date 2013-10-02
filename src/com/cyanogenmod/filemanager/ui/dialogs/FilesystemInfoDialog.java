@@ -335,9 +335,7 @@ public class FilesystemInfoDialog implements OnClickListener, OnCheckedChangeLis
                 Switch sw = (Switch)buttonView;
                 boolean ret = false;
                 try {
-                    ret = CommandHelper.remount(
-                            this.mContext,
-                            this.mMountPoint, isChecked, null);
+                    ret = CommandHelper.remount(this.mContext,this.mMountPoint, isChecked);
                     //Hide warning message
                     this.mInfoMsgView.setVisibility(View.GONE);
                     //Communicate the mount change
