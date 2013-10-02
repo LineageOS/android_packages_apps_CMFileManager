@@ -971,7 +971,10 @@ public final class CommandHelper {
             NoSuchFileOrDirectory, InsufficientPermissionsException,
             CommandNotFoundException, OperationTimeoutException,
             ExecutionException, InvalidCommandDefinitionException {
-        Console c = ensureConsole(context, console);
+        Console c = ConsoleBuilder.getMountConsole(context);
+        if (c == null) {
+            c = ensureConsole(context, console);
+        }
         MountExecutable executable =
                 c.getExecutableFactory().newCreator().createMountExecutable(mp, rw);
         execute(context, executable, c);
@@ -1730,5 +1733,4 @@ public final class CommandHelper {
         }
         return c;
     }
-
 }
