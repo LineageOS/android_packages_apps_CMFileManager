@@ -43,6 +43,7 @@ public final class ConsoleBuilder {
 
     private static final Object SYNC = new Object();
     private static ConsoleHolder sHolder;
+    private static ConsoleHolder sMountHolder;
 
     private static final int ROOT_UID = 0;
 
@@ -69,6 +70,25 @@ public final class ConsoleBuilder {
             throws FileNotFoundException, IOException, InvalidCommandDefinitionException,
             ConsoleAllocException, InsufficientPermissionsException {
         return getConsole(context, true);
+    }
+
+    public static Console getMountConsole(Context context)
+            throws FileNotFoundException, IOException, InvalidCommandDefinitionException,
+            ConsoleAllocException, InsufficientPermissionsException {
+        Console console = getConsole(context, false);
+        if (console == null || !console.isPrivileged()) {
+            if (sMountHolder != null) {
+                sMountHolder.dispose();
+                sMountHolder = null;
+            }
+            throw new InsufficientPermissionsException();
+        }
+
+        if (sMountHolder == null || sMountHolder.getConsole() == null) {
+            sMountHolder = new ConsoleHolder(createPrivilegedConsole(context, false));
+        }
+
+        return sMountHolder.getConsole();
     }
 
     /**
@@ -254,10 +274,14 @@ public final class ConsoleBuilder {
             if (sHolder != null) {
                 sHolder.dispose();
             }
+            if (sMountHolder != null) {
+                sMountHolder.dispose();
+            }
         } catch (Exception e) {
             /**NON BLOCK**/
         }
         sHolder = null;
+        sMountHolder = null;
     }
 
     /**
@@ -307,7 +331,27 @@ public final class ConsoleBuilder {
     public static Console createPrivilegedConsole(Context context)
             throws FileNotFoundException, IOException, InvalidCommandDefinitionException,
             ConsoleAllocException, InsufficientPermissionsException {
-        PrivilegedConsole console = new PrivilegedConsole();
+        return createPrivilegedConsole(context, true);
+    }
+
+    /**
+     * Method that creates a new privileged console. If the allocation of the
+     * privileged console fails, the a non privileged console
+     *
+     * @param context The current context
+     * @param mountStorage Whether to mount the emulated storage
+     * @return Console The privileged console
+     * @throws FileNotFoundException If the initial directory not exists
+     * @throws IOException If initial directory couldn't be checked
+     * @throws InvalidCommandDefinitionException If the command has an invalid definition
+     * @throws ConsoleAllocException If the console can't be allocated
+     * @throws InsufficientPermissionsException If the console created is not a privileged console
+     * @see PrivilegedConsole
+     */
+    public static Console createPrivilegedConsole(Context context, boolean mountStorage)
+            throws FileNotFoundException, IOException, InvalidCommandDefinitionException,
+            ConsoleAllocException, InsufficientPermissionsException {
+        PrivilegedConsole console = new PrivilegedConsole(mountStorage);
         console.setBufferSize(context.getResources().getInteger(R.integer.buffer_size));
         console.alloc();
         if (console.getIdentity().getUser().getId() != ROOT_UID) {

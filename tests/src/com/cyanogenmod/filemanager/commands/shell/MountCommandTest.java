@@ -48,7 +48,7 @@ public class MountCommandTest extends AbstractConsoleTest {
     public void testRemountOk() throws Exception {
         MountPoint mp = MountPointHelper.getMountPointFromDirectory(getConsole(), MOUNT_POINT_DIR);
         boolean rw = MountPointHelper.isReadWrite(mp);
-        boolean ret = CommandHelper.remount(getContext(), mp, !rw, getConsole());
+        boolean ret = CommandHelper.remount(getContext(), mp, !rw);
         MountPoint mp2 = MountPointHelper.getMountPointFromDirectory(getConsole(), MOUNT_POINT_DIR);
         boolean rw2 = MountPointHelper.isReadWrite(mp2);
 

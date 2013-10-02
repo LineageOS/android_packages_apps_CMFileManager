@@ -35,13 +35,29 @@ public class SuperuserShell extends Shell {
 
     private static final String ID = "su";  //$NON-NLS-1$
 
+    private static final String[] MOUNT_STORAGE_ENV = new String[] {
+        "MOUNT_EMULATED_STORAGE=1"
+    };
+
+    private boolean mMountStorage;
+
     /**
      * Constructor of <code>SuperuserShell</code>.
      *
+     * @param mountStorage Whether the emulated storage should be mounted
+     *
      * @throws InvalidCommandDefinitionException If the command has an invalid definition
      */
-    public SuperuserShell() throws InvalidCommandDefinitionException {
+    public SuperuserShell(boolean mountStorage) throws InvalidCommandDefinitionException {
         super(ID, ShellHelper.getProgramCmdLine(new BashShell()));
+        mMountStorage = mountStorage;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public String[] getEnvironment() {
+        return mMountStorage ? MOUNT_STORAGE_ENV : null;
     }
 
     /**
