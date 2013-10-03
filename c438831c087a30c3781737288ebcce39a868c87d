@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "da37b569_39307a56",
+        "filename": "src/com/cyanogenmod/filemanager/console/ConsoleBuilder.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 394,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-10-03T06:57:55Z",
+      "side": 1,
+      "message": "Damn copy\u0027n\u0027paste :)",
+      "parentUuid": "da37b569_997c2622",
+      "revId": "c438831c087a30c3781737288ebcce39a868c87d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da37b569_198fb624",
         "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2013-10-03T05:12:14Z",
       "side": 1,
       "message": "console is not needed anymore. The app shouldn\u0027t pass the console to this method.",
+      "revId": "c438831c087a30c3781737288ebcce39a868c87d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_d934ee4b",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 969,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-10-03T06:57:55Z",
+      "side": 1,
+      "message": "OK. I was wondering whether keeping consistency to the other methods was important, but I guess your comment answers that question ;)",
+      "parentUuid": "da37b569_198fb624",
       "revId": "c438831c087a30c3781737288ebcce39a868c87d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
