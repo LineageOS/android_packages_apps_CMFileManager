@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da37b569_b979ea31",
+        "filename": "src/com/cyanogenmod/filemanager/console/ConsoleBuilder.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-10-03T05:12:14Z",
+      "side": 1,
+      "message": "throw InsufficientPermissionsException",
+      "revId": "c438831c087a30c3781737288ebcce39a868c87d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_997c2622",
+        "filename": "src/com/cyanogenmod/filemanager/console/ConsoleBuilder.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 394,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-10-03T05:12:14Z",
+      "side": 1,
+      "message": "This comment is not needed",
+      "revId": "c438831c087a30c3781737288ebcce39a868c87d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_198fb624",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 969,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-10-03T05:12:14Z",
+      "side": 1,
+      "message": "console is not needed anymore. The app shouldn\u0027t pass the console to this method.",
+      "revId": "c438831c087a30c3781737288ebcce39a868c87d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_7973624e",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 975,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-10-03T05:12:14Z",
+      "side": 1,
+      "message": "This couldn\u0027t be null with the throw InsufficientPermissionsException",
+      "revId": "c438831c087a30c3781737288ebcce39a868c87d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
