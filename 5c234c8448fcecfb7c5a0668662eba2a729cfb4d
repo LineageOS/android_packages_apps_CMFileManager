@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da37b569_34bba1c6",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 1211,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-10-03T22:41:44Z",
+      "side": 1,
+      "message": "I don\u0027t think that\u0027s needed here. The general point of the mount console is being able to mount something in the global mount namespace, which is - AFAICT - not needed here.",
+      "revId": "5c234c8448fcecfb7c5a0668662eba2a729cfb4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_d4afd57b",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 1270,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-10-03T22:41:44Z",
+      "side": 1,
+      "message": "As above.",
+      "revId": "5c234c8448fcecfb7c5a0668662eba2a729cfb4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_f4b459d2",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 1342,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-10-03T22:41:44Z",
+      "side": 1,
+      "message": "As above.",
+      "revId": "5c234c8448fcecfb7c5a0668662eba2a729cfb4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_94caad4e",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 1406,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-10-03T22:41:44Z",
+      "side": 1,
+      "message": "As above.",
+      "revId": "5c234c8448fcecfb7c5a0668662eba2a729cfb4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_b4c7b144",
+        "filename": "src/com/cyanogenmod/filemanager/util/ExceptionUtil.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-10-03T22:41:44Z",
+      "side": 1,
+      "message": "Indent by 8?",
+      "revId": "5c234c8448fcecfb7c5a0668662eba2a729cfb4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
