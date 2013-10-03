@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da37b569_995e6644",
+        "filename": "src/com/cyanogenmod/filemanager/console/ConsoleBuilder.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-10-03T10:00:27Z",
+      "side": 1,
+      "message": "getAccessMode returns the user preference, not the real console access mode",
+      "revId": "47ca2a48d34f6b0870f0f5e9008801b9922fa694",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_b95b2a54",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1661,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-10-03T10:00:27Z",
+      "side": 1,
+      "message": "We need here a previous check of a privileged console to ask user for the operation",
+      "revId": "47ca2a48d34f6b0870f0f5e9008801b9922fa694",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b569_5958de56",
+        "filename": "src/com/cyanogenmod/filemanager/util/ExceptionUtil.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-10-03T10:00:27Z",
+      "side": 1,
+      "message": "double call to task while getting InsufficientPermissionsException",
+      "revId": "47ca2a48d34f6b0870f0f5e9008801b9922fa694",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
