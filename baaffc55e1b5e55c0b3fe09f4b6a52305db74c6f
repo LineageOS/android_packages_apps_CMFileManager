@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a41bdd9_3f1707ef",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-10-04T19:20:04Z",
+      "side": 1,
+      "message": "I don\u0027t fully understand the code flow here, but I\u0027m not sure this is correct. If this is called e.g. to unmount a temporary mount for writing (is it?), the unmount will likely fail because the mount console with its global mount namespace view won\u0027t even see the mount.",
+      "revId": "baaffc55e1b5e55c0b3fe09f4b6a52305db74c6f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a41bdd9_7f1d8f0e",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 1678,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-10-04T19:20:04Z",
+      "side": 1,
+      "message": "That\u0027s unneeded (as per previous PS).",
+      "revId": "baaffc55e1b5e55c0b3fe09f4b6a52305db74c6f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
