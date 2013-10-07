@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a43c5e1_206284d9",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 4977
+      },
+      "writtenOn": "2013-10-07T23:43:09Z",
+      "side": 1,
+      "message": "Manche Dateisysteme, z. B. auf SD-Karten, sind nur lesbar und können deshalb nicht eingebunden/ausgehangen werden.",
+      "revId": "dec6d78fc62a31bc829195d2b333993ac559c5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
