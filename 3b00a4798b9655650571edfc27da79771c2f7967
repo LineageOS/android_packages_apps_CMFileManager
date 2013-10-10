@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3a50d1a3_fc03e90b",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-10-10T02:25:27Z",
+      "side": 1,
+      "message": "Yes, you are right. BTW, the MediaScannerService supports now scan of directories (http://review.cyanogenmod.org/#/c/44585/)",
+      "parentUuid": "5a43c5e1_a61f8c5a",
+      "revId": "3b00a4798b9655650571edfc27da79771c2f7967",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a43c5e1_06520014",
         "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "3a50d1a3_bc0d6139",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1349,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-10-10T02:25:27Z",
+      "side": 1,
+      "message": "Right",
+      "parentUuid": "5a43c5e1_06520014",
+      "revId": "3b00a4798b9655650571edfc27da79771c2f7967",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a43c5e1_e64cb478",
         "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2013-10-09T20:38:32Z",
       "side": 1,
       "message": "As above",
+      "revId": "3b00a4798b9655650571edfc27da79771c2f7967",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_9c08a52a",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1419,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-10-10T02:25:27Z",
+      "side": 1,
+      "message": "Right",
+      "parentUuid": "5a43c5e1_e64cb478",
       "revId": "3b00a4798b9655650571edfc27da79771c2f7967",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
