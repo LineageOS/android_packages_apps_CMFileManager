@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a50d1a3_e5b58cd0",
+        "filename": "res/values-ug/plurals.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-10-13T04:21:35Z",
+      "side": 1,
+      "message": "Please remove comments/whitelines here",
+      "revId": "bedbb3b183cd90678b76cbd574971a4425c0af36",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_05bbd8c5",
+        "filename": "res/values-ug/plurals.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-10-13T04:21:35Z",
+      "side": 1,
+      "message": "Just 2013",
+      "revId": "bedbb3b183cd90678b76cbd574971a4425c0af36",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
