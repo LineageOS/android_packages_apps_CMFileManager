@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a50d1a3_ab08b529",
+        "filename": "res/values-ug/plurals.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-10-14T00:21:46Z",
+      "side": 1,
+      "message": "Please remove this comment",
+      "revId": "fd9b86d245a77dabfa0823c55aefd54446b62c7f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_cb0d0139",
+        "filename": "res/values-ug/plurals.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-10-14T00:21:46Z",
+      "side": 1,
+      "message": "Please remove this comment",
+      "revId": "fd9b86d245a77dabfa0823c55aefd54446b62c7f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_0b044913",
+        "filename": "res/values-ug/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-10-14T00:21:46Z",
+      "side": 1,
+      "message": "Whitespace errors",
+      "revId": "fd9b86d245a77dabfa0823c55aefd54446b62c7f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
