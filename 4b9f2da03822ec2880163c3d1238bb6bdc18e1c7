@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da85f559_1449dad0",
+        "filename": "res/values-zh-rCN/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 367,
+      "author": {
+        "id": 3589
+      },
+      "writtenOn": "2013-12-09T20:46:24Z",
+      "side": 1,
+      "message": "??????? ???????",
+      "revId": "4b9f2da03822ec2880163c3d1238bb6bdc18e1c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
