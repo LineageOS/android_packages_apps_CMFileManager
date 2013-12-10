@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "9a8ffd7b_efba41c0",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/MessageProgressDialog.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-12-10T20:58:45Z",
+      "side": 1,
+      "message": "I guess you could wrap this whole segment with a if (!cancellable) to not even create the button.",
+      "revId": "35d06bfc2545600f9b2630539f4155410af9b03c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a8ffd7b_2faa8971",
         "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/MessageProgressDialog.java",
         "patchSetId": 1
