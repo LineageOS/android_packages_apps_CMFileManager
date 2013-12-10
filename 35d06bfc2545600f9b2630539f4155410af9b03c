@@ -33,6 +33,24 @@
       "revId": "35d06bfc2545600f9b2630539f4155410af9b03c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a8ffd7b_afb439d1",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/MessageProgressDialog.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-12-10T21:01:08Z",
+      "side": 1,
+      "message": "Yeah, that\u0027s what I meant.",
+      "parentUuid": "9a8ffd7b_2faa8971",
+      "revId": "35d06bfc2545600f9b2630539f4155410af9b03c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
