@@ -493,6 +493,17 @@ public class NavigationView extends RelativeLayout implements
         parcel.setChRooted(this.mChRooted);
         parcel.setSelectedFiles(this.mAdapter.getSelectedItems());
         parcel.setFiles(this.mFiles);
+
+        int firstVisiblePosition = mAdapterView.getFirstVisiblePosition();
+        if (firstVisiblePosition >= 0 && firstVisiblePosition < mAdapter.getCount()) {
+			FileSystemObject firstVisible = mAdapter
+					.getItem(firstVisiblePosition);
+			Log.d(getClass().getSimpleName(),
+					"Saving position: " + firstVisiblePosition + ", item: "
+							+ (firstVisible != null ? firstVisible.getName() : "null"));
+			parcel.setFirstVisible(firstVisible);
+        }
+
         return parcel;
     }
 
@@ -510,8 +521,10 @@ public class NavigationView extends RelativeLayout implements
         this.mFiles = info.getFiles();
         this.mAdapter.setSelectedItems(info.getSelectedFiles());
 
+        final FileSystemObject firstVisible = info.getFirstVisible();
+
         //Update the views
-        refresh();
+        refresh(firstVisible);
         return true;
     }
 
@@ -722,20 +735,42 @@ public class NavigationView extends RelativeLayout implements
      *
      * @param fso The file system object
      */
-    public void scrollTo(FileSystemObject fso) {
-        if (fso != null) {
-            try {
-                int position = this.mAdapter.getPosition(fso);
-                this.mAdapterView.setSelection(position);
-            } catch (Exception e) {
-                this.mAdapterView.setSelection(0);
+    public void scrollTo(final FileSystemObject fso) {
+
+        this.mAdapterView.post(new Runnable() {
+
+            @Override
+            public void run() {
+                if (fso != null) {
+                    Log.d(getClass().getSimpleName(),
+                            "Scroll to item: " + fso.getName());
+                    try {
+                        int position = mAdapter.getPosition(fso);
+                        Log.d(getClass().getSimpleName(), "Position: "
+                                + position);
+                        mAdapterView.setSelection(position);
+
+                        // Make the scrollbar appear
+                        if (position > 0) {
+                            mAdapterView.scrollBy(0, 1);
+                            mAdapterView.scrollBy(0, 1);
+                        }
+
+                    } catch (Exception e) {
+                        Log.d(getClass().getSimpleName(),
+                                "Exception while setting position", e);
+                        mAdapterView.setSelection(0);
+                    }
+                } else {
+                    Log.d(getClass().getSimpleName(), "Scroll target is null");
+                    mAdapterView.setSelection(0);
+                }
             }
-        } else {
-            this.mAdapterView.setSelection(0);
-        }
+        });
+
     }
 
-    /**
+   /**
      * Method that refresh the view data.
      */
     public void refresh() {
@@ -1007,13 +1042,6 @@ public class NavigationView extends RelativeLayout implements
                 }
             }
 
-            //Load the data
-            loadData(sortedFiles);
-            this.mFiles = sortedFiles;
-            if (searchInfo != null) {
-                searchInfo.setSuccessNavigation(true);
-            }
-
             //Add to history?
             if (addToHistory && hasChanged && isNewHistory) {
                 if (this.mOnHistoryListener != null) {
@@ -1022,15 +1050,20 @@ public class NavigationView extends RelativeLayout implements
                 }
             }
 
+            //Load the data
+            loadData(sortedFiles);
+            this.mFiles = sortedFiles;
+            if (searchInfo != null) {
+                searchInfo.setSuccessNavigation(true);
+            }
+
             //Change the breadcrumb
             if (this.mBreadcrumb != null) {
                 this.mBreadcrumb.changeBreadcrumbPath(newDir, this.mChRooted);
             }
 
-            //Scroll to object?
-            if (scrollTo != null) {
-                scrollTo(scrollTo);
-            }
+            //If scrollTo is null, the position will be set to 0
+            scrollTo(scrollTo);
 
             //The current directory is now the "newDir"
             this.mCurrentDir = newDir;
@@ -1069,7 +1102,6 @@ public class NavigationView extends RelativeLayout implements
         adapter.clear();
         adapter.addAll(files);
         adapter.notifyDataSetChanged();
-        view.setSelection(0);
     }
 
     /**
