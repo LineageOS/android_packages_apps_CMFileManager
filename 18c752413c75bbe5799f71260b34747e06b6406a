@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a710552_2dbb6d10",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-12-17T16:36:58Z",
+      "side": 1,
+      "message": "indent by 8",
+      "revId": "18c752413c75bbe5799f71260b34747e06b6406a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a710552_cd3669b4",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 501,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-12-17T16:36:58Z",
+      "side": 1,
+      "message": "Please, use TAG, instead of className (here and below)\n\nAlso, add a new DEBUG constant to false, and wrap all this new debug log. Is not useful in production mode, fills the log and exposes file information.",
+      "revId": "18c752413c75bbe5799f71260b34747e06b6406a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a710552_ad451d18",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 745,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-12-17T16:36:58Z",
+      "side": 1,
+      "message": "This doesn\u0027t need indentation",
+      "revId": "18c752413c75bbe5799f71260b34747e06b6406a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a710552_4d4b592c",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 749,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-12-17T16:36:58Z",
+      "side": 1,
+      "message": "same here",
+      "revId": "18c752413c75bbe5799f71260b34747e06b6406a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a710552_6d48952e",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 753,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-12-17T16:36:58Z",
+      "side": 1,
+      "message": "Do we need to show the scrollbar?",
+      "revId": "18c752413c75bbe5799f71260b34747e06b6406a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
