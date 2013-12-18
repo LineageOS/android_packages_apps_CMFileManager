@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5a710552_f0621ead",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 6883
+      },
+      "writtenOn": "2013-12-18T06:54:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a710552_2dbb6d10",
+      "revId": "18c752413c75bbe5799f71260b34747e06b6406a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a710552_cd3669b4",
         "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2013-12-17T16:36:58Z",
       "side": 1,
       "message": "Please, use TAG, instead of className (here and below)\n\nAlso, add a new DEBUG constant to false, and wrap all this new debug log. Is not useful in production mode, fills the log and exposes file information.",
+      "revId": "18c752413c75bbe5799f71260b34747e06b6406a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a710552_90571aca",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 501,
+      "author": {
+        "id": 6883
+      },
+      "writtenOn": "2013-12-18T06:54:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a710552_cd3669b4",
       "revId": "18c752413c75bbe5799f71260b34747e06b6406a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "5a710552_3000a6aa",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 745,
+      "author": {
+        "id": 6883
+      },
+      "writtenOn": "2013-12-18T06:54:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a710552_ad451d18",
+      "revId": "18c752413c75bbe5799f71260b34747e06b6406a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a710552_4d4b592c",
         "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
         "patchSetId": 4
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "5a710552_d02b6232",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 749,
+      "author": {
+        "id": 6883
+      },
+      "writtenOn": "2013-12-18T06:54:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a710552_4d4b592c",
+      "revId": "18c752413c75bbe5799f71260b34747e06b6406a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a710552_6d48952e",
         "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
         "patchSetId": 4
@@ -81,6 +153,24 @@
       "writtenOn": "2013-12-17T16:36:58Z",
       "side": 1,
       "message": "Do we need to show the scrollbar?",
+      "revId": "18c752413c75bbe5799f71260b34747e06b6406a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a710552_b05c96ee",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 753,
+      "author": {
+        "id": 6883
+      },
+      "writtenOn": "2013-12-18T06:54:48Z",
+      "side": 1,
+      "message": "I find it usefull, to highlight that a specific position has been set. Otherwise you may wonder, where the rest of the list has gone.",
+      "parentUuid": "5a710552_6d48952e",
       "revId": "18c752413c75bbe5799f71260b34747e06b6406a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
