@@ -16,6 +16,24 @@
       "revId": "58572c43ebe99209e7f5eaec1786b6ab764c18f1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a68dd71_56dd1a6f",
+        "filename": "res/values-th/plurals.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8308
+      },
+      "writtenOn": "2013-12-26T02:19:56Z",
+      "side": 1,
+      "message": "no quantity use in thai language what should i do about it?\ni only need \"other\" have is safe to remove \"one\"?",
+      "parentUuid": "9a68dd71_3bf96f4e",
+      "revId": "58572c43ebe99209e7f5eaec1786b6ab764c18f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
