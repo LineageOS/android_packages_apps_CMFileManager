@@ -88,6 +88,24 @@
       "revId": "58572c43ebe99209e7f5eaec1786b6ab764c18f1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a68dd71_564bda2b",
+        "filename": "res/values-th/plurals.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-12-26T02:38:38Z",
+      "side": 1,
+      "message": "Thai, like many other Asian languages, doesn\u0027t really have a plural form. That\u0027s why it\u0027s not necessary.\n\nPlurals do not work like arrays. Some languages, such as Russian, need to add quantity\u003d\"few\" or quantity\u003d\"many\".\n\nIf TTools shows it as untranslated, that should be fixed by Delphin.",
+      "parentUuid": "9a68dd71_76c13e80",
+      "revId": "58572c43ebe99209e7f5eaec1786b6ab764c18f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
