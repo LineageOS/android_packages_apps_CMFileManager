@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a68dd71_3bf96f4e",
+        "filename": "res/values-th/plurals.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-12-26T01:17:11Z",
+      "side": 1,
+      "message": "Why the use of the quantity \u0027one\u0027? You didn\u0027t add them in other plurals.",
+      "revId": "58572c43ebe99209e7f5eaec1786b6ab764c18f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
