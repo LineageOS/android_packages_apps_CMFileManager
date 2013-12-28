@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a68dd71_33e513a8",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 5868
+      },
+      "writtenOn": "2013-12-28T13:49:28Z",
+      "side": 1,
+      "message": "I think \"miniatury\" might sound better",
+      "revId": "10386e2df66e0bf04c1d5333094591646f02bd65",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a68dd71_53e207a1",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 5868
+      },
+      "writtenOn": "2013-12-28T13:49:28Z",
+      "side": 1,
+      "message": "As above",
+      "revId": "10386e2df66e0bf04c1d5333094591646f02bd65",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
