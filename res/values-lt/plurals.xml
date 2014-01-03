@@ -25,14 +25,14 @@
     </plurals>
     <plurals name="search_found_items">
         <item quantity="one">1 elementas rastas</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> rasti elementai</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> elementai(-ų) rasti(-ų)</item>
     </plurals>
     <plurals name="selection_folders">
         <item quantity="one">1 aplankas pažymėtas.</item>
-        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> pažymėti aplankai.</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> aplankai(-ų) pažymėti(-ų).</item>
     </plurals>
     <plurals name="selection_files">
-        <item quantity="one">1 failas pasirinktas.</item>
-        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> pažymėti failai.</item>
+        <item quantity="one">1 failas pažymėtas.</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> failai(-ų) pažymėti(-ų).</item>
     </plurals>
 </resources>
