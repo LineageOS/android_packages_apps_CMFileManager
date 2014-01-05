@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a5ae5dd_0b06a120",
+        "filename": "res/values-lt/plurals.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2014-01-05T08:01:03Z",
+      "side": 1,
+      "message": "In what case the extra \u0027?\u0027 is used?\n\nhttp://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html#lt for some more information regarding plurals.",
+      "revId": "e95d6e8a9449d40802a730e84576da4dc78ad791",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
