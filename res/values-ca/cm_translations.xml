@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+<!--
+     Copyright (C) 2012-2014 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,7 +13,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
- -->
+-->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Gestor d\'arxius</string>
   <string name="app_description">El gestor d\'arxius de CyanogenMod.</string>
@@ -49,7 +50,7 @@
   <string name="msgs_cant_create_console">No s\'ha pogut guanyar els privilegis requerits per aquesta funció.</string>
   <string name="msgs_privileged_console_alloc_failed">No s\'ha pogut executar el mode d\'accés superusuari. Canviant al mode segur.</string>
   <string name="msgs_settings_save_failure">L\'ajustament no s\'ha pogut aplicar o desar.</string>
-  <string name="msgs_settings_invalid_initial_directory">La carpeta inicial \"<xliff:g id="initial_dir">%1$s</xliff:g>\" és invàlida. Canviant a la carpeta arrel.</string>
+  <string name="msgs_settings_invalid_initial_directory">La carpeta inicial \u2018<xliff:g id="initial_dir">%1$s</xliff:g>\u2019 és invàlida. Canviant a la carpeta arrel.</string>
   <string name="msgs_success">L\'operació s\'ha completat satisfactòriament.</string>
   <string name="msgs_unknown">s\'ha detectat un error. L\'operació no ha estat satisfatòria.</string>
   <string name="msgs_insufficient_permissions">Aquesta operació necessita més privilegis. Intenta-ho canviant al mode d\'accés de superusuari.</string>
@@ -84,10 +85,10 @@
   <string name="actionbar_button_overflow_cd">Més opcions</string>
   <string name="actionbar_button_storage_cd">Mitjans d\'emmagatzematge</string>
   <string name="actionbar_button_save_cd">Desa</string>
-  <string name="sort_by_name_asc">Per nom &#x25B2;</string>
-  <string name="sort_by_name_desc">Per nom &#x25BC;</string>
-  <string name="sort_by_date_asc">Per data &#x25B2;</string>
-  <string name="sort_by_date_desc">Per data &#x25BC;</string>
+  <string name="sort_by_name_asc">Per nom \u25B2</string>
+  <string name="sort_by_name_desc">Per nom \u25BC</string>
+  <string name="sort_by_date_asc">Per data \u25B2</string>
+  <string name="sort_by_date_desc">Per data \u25BC</string>
   <string name="layout_icons">Icones</string>
   <string name="layout_simple">Simple</string>
   <string name="layout_details">Detalls</string>
@@ -166,7 +167,7 @@
   <string name="dumping_message">Generant volcat hex\u2026</string>
   <string name="displaying_message">Mostrant\u2026</string>
   <string name="bookmarks">Marcadors</string>
-  <string name="bookmarks_home">Inici</string>
+  <string name="bookmarks_home">Casa</string>
   <string name="bookmarks_root_folder">Carpeta arrel</string>
   <string name="bookmarks_system_folder">Carpeta de sistema</string>
   <string name="bookmarks_button_config_cd">Estableix la carpeta inicial.</string>
@@ -179,18 +180,18 @@
   <string name="menu_history">Historial</string>
   <string name="menu_bookmarks">Marcadors</string>
   <string name="menu_search">Cerca</string>
-  <string name="menu_settings">Ajustaments</string>
+  <string name="menu_settings">Configuració</string>
   <string name="menu_clear_history">Neteja l\'historial</string>
   <string name="menu_no_suggestions">Sense sugerències</string>
   <string name="menu_word_wrap">Ajust de línia</string>
-  <string name="menu_syntax_highlight">Realçament de sintaxis</string>
+  <string name="menu_syntax_highlight">Realça la sintaxis</string>
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - copia<xliff:g id="extension">%2$s</xliff:g></string>
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - nou<xliff:g id="extension">%2$s</xliff:g></string>
   <string name="waiting_dialog_msg">Realitzant l\'operació\u2026</string>
   <string name="waiting_dialog_copying_title">Copiant\u2026</string>
-  <string name="waiting_dialog_copying_msg"><![CDATA[<b>De</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/>]]><![CDATA[<b>A</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <string name="waiting_dialog_copying_msg"><![CDATA[<b>De</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>A</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <string name="waiting_dialog_moving_title">Movent\u2026</string>
-  <string name="waiting_dialog_moving_msg"><![CDATA[<b>De</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/>]]><![CDATA[<b>A</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <string name="waiting_dialog_moving_msg"><![CDATA[<b>De</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>A</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <string name="waiting_dialog_deleting_title">Esborrant\u2026</string>
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Arxiu</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <string name="waiting_dialog_extracting_title">Extraient\u2026</string>
@@ -198,9 +199,9 @@
   <string name="waiting_dialog_compressing_title">Comprimint\u2026</string>
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Arxiu</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Analitzant\u2026</b>]]></string>
-  <string name="msgs_extracting_success">L\'operació d\'extracció s\'ha completat satisfactòriament. Les dades s\'han extret a
+  <string name="msgs_extracting_success">L\u0027operació d\u0027extracció s'ha completat satisfactòriament. Les dades s\u0027han extret a
  <xliff:g id="destination">%1$s</xliff:g>.</string>
-  <string name="msgs_compressing_success">L\'operació de compressió s\'ha completat satisfactòriament. Les dades s\'han comprimit a
+  <string name="msgs_compressing_success">L\u0027operació de compressió s\u0027ha completat satisfactòriament. Les dades s\u0027han comprimit a
  <xliff:g id="destination">%1$s</xliff:g>.</string>
   <string name="actions_dialog_title">Accions</string>
   <string name="actions_menu_properties_current_folder">Propietats</string>
@@ -230,11 +231,11 @@
   <string name="actions_menu_add_to_bookmarks">Afegeix als marcadors</string>
   <string name="actions_menu_add_shortcut">Afegeix una drecera</string>
   <string name="actions_menu_open_parent_folder">Obre el pare</string>
-  <string name="actions_menu_compute_checksum">Calcula el checksum</string>
+  <string name="actions_menu_compute_checksum">Calcula checksum</string>
   <string name="actions_ask_undone_operation_msg">Aquesta acció no pot ser desfeta. Vols continuar?</string>
   <string name="input_name_dialog_label">Nom:</string>
   <string name="input_name_dialog_message_empty_name">El nom no pot estar buit.</string>
-  <string name="input_name_dialog_message_invalid_path_name">Nom invàlid. Els caràcters \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' no estan permesos.</string>
+  <string name="input_name_dialog_message_invalid_path_name">Nom invàlid. Els caràcters \u2018<xliff:g id="invalid_characters">%1$s</xliff:g>\u2019 no estan permesos.</string>
   <string name="input_name_dialog_message_invalid_name">Nom invàlid. Els noms \'.\' i \'..\' no estan permesos.</string>
   <string name="input_name_dialog_message_name_exists">El nom ja existeix.</string>
   <string name="associations_dialog_title">Associacions</string>
@@ -280,19 +281,20 @@
   <string name="shortcut_failed_msg">No s\'ha pogut gestionar la drecera.</string>
   <string name="shortcut_creation_success_msg">La drecera s\'ha creat satisfactòriament.</string>
   <string name="shortcut_creation_failed_msg">La creació de la drecera ha fallat.</string>
-  <string name="pref">Ajustaments</string>
+  <string name="pref">Configuració</string>
   <string name="pref_general">Ajustaments generals</string>
   <string name="pref_search">Opcions de cerca</string>
   <string name="pref_editor">Opcions de l\'editor</string>
   <string name="pref_themes">Temes</string>
   <string name="pref_about">Quant a</string>
-  <string name="pref_about_summary">Gestor d\'arxius v<xliff:g id="version">%1$s</xliff:g>\nCopyright \u00A9 2013 The CyanogenMod Project</string>
+  <string name="pref_about_summary">Gestor d\u0027arxius v<xliff:g id="version">%1$s</xliff:g>
+Copyright \u00A9 2013 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">General</string>
   <string name="pref_case_sensitive_sort">Minúscules/Majúscules</string>
   <string name="pref_case_sensitive_sort_summary">Considerar Minúscules/Majúscules quan es navegui o s\'ordenin els resultats de la cerca</string>
   <string name="pref_filetime_format_mode">Format Data/hora</string>
   <string name="pref_disk_usage_warning_level">Alerta d\'utilització del disc</string>
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">Mostra un color diferent en el widget d\'utilització del disc quan s\'arribi al <xliff:g id="level">%1$s</xliff:g> percent d\'espai lliure</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">Mostra un color en els widgets d\u0027utilització de disc quan arribin al <xliff:g id="level">%1$s</xliff:g> percent de l\u0027espai lliure del disc</string>
   <string name="pref_compute_folder_statistics">Calcula estadístiques de la carpeta</string>
   <string name="pref_compute_folder_statistics_on">Alerta! El càlcul d\'estadístiques de la carpeta tarda temps i necessita força recursos del sistema</string>
   <string name="pref_display_thumbs">Previsualització</string>
@@ -327,7 +329,7 @@
   <string name="pref_word_wrap">Ajust de línia</string>
   <string name="pref_hexdump">Volcat Hex d\'arxius binaris</string>
   <string name="pref_hexdump_desc">Quan s\'obri un arxiu binari, genera un volcat hex de l\'arxiu i l\'obre en el visor hex.</string>
-  <string name="pref_editor_syntax_highlight_category">Realçament de sintaxis</string>
+  <string name="pref_editor_syntax_highlight_category">Realça la sintaxis</string>
   <string name="pref_syntax_highlight">Realça la sintaxis</string>
   <string name="pref_syntax_highlight_desc">Realça la sintaxis de l\'arxiu mostrat a l\'editor (només quan un processador de realçament de sintaxis està disponible pel tipus d\'arxiu)</string>
   <string name="pref_syntax_highlight_color_scheme">Esquema de colors</string>
@@ -356,15 +358,28 @@
   <string name="ash_keyword">Paraula clau</string>
   <string name="ash_quoted_string">Cadena comentada</string>
   <string name="ash_variable">Variable</string>
-  <string name="security_warning_extract">Alerta!\n\n
-      Extraient un arxiu comprimit amb rutes relatives o absolutes podria causar danys al teu dispositiu
-      al sobreescriure arxius de sistema.\n\n
-      Segur que vols continuar?</string>
+  <string name="security_warning_extract">Alerta!\n\nExtraient un arxiu comprimit amb rutes relatives o absolutes podria causar danys al teu dispositiu al sobreescriure arxius de sistema.\n\nSegur que vols continuar?</string>
   <string name="changelog_title">Registre de canvis</string>
   <string name="welcome_title">Benvingut</string>
-  <string name="welcome_msg">
-    Benvingut al gestor d\'arxius de CyanogenMod.
-    \n\nAquesta app et permet explorar el sistema d\'arxius i fer operacions que podrien espatllar el teur dispositiu. Per evitar danys, aquesta app s\'executarà en mode segur, en mode de pocs privilegis.
-    \n\nPots accedir al mode avançat, amb privilegis complets mitjançant els Ajustaments. Està sota la teva responsabilitat assegurar que les operacions no espatllin el teu sistema.
-    \n\nL\'equip de CyanogenMod.\n</string>
+  <string name="welcome_msg">Benvingut al gestor d\'arxius de CyanogenMod.\n\nAquesta app et permet explorar el sistema d\'arxius i fer operacions que podrien espatllar el teu dispositiu. Per evitar danys, aquesta app s\'executarà en mode segur, en mode de pocs privilegis.\n\nPots accedir al mode avançat, amb privilegis complets mitjançant els Ajustaments. Està sota la teva responsabilitat assegurar que les operacions no espatllin el teu sistema.\n\nL\'equip de CyanogenMod</string>
+  <plurals name="n_folders">
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> carpeta</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> carpetes</item>
+  </plurals>
+  <plurals name="n_files">
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> arxiu</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> arxius</item>
+  </plurals>
+  <plurals name="search_found_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element trobat</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> elements trobats</item>
+  </plurals>
+  <plurals name="selection_folders">
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> carpeta seleccionada.</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> carpetes seleccionades.</item>
+  </plurals>
+  <plurals name="selection_files">
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> arxiu seleccionat.</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> arxius seleccionats.</item>
+  </plurals>
 </resources>
