@@ -17,23 +17,23 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="one">1 vouergids</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> vouergidse</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> pasta</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> pastas</item>
   </plurals>
   <plurals name="n_files">
-    <item quantity="one">1 lêer</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> lêers</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ficheiro</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ficheiros</item>
   </plurals>
   <plurals name="search_found_items">
-    <item quantity="one">1 item gevind</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> items gevind</item>
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item encontrado</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> items encontrados</item>
   </plurals>
   <plurals name="selection_folders">
-    <item quantity="one">1 vouergids geselekteer.</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> vouergids geselekteer.</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> pasta selecionada.</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> pastas selecionadas.</item>
   </plurals>
   <plurals name="selection_files">
-    <item quantity="one">1 lêer geselekteer.</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> lêers geselekteer.</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ficheiro selecionado.</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ficheiros selecionados.</item>
   </plurals>
 </resources>

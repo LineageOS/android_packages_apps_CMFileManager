@@ -15,7 +15,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-  <string name="dark_theme_name">ธีมมืด</string>
-  <string name="dark_theme_desc">ธีมมืดสำหรับตัวจัดการไฟล์ของ CyanogenMod</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="menu_settings">إعدادات</string>
+  <string name="pref">إعدادات</string>
 </resources>
