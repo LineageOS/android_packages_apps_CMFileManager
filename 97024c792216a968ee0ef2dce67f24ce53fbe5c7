@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bae84128_ace4613b",
+        "filename": "res/layout/bookmarks_item.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2014-03-10T11:32:56Z",
+      "side": 1,
+      "message": "Don\u0027t create an id if you don\u0027t going to use in the code",
+      "revId": "97024c792216a968ee0ef2dce67f24ce53fbe5c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bae84128_0cd0ed52",
+        "filename": "res/layout/bookmarks_item.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2014-03-10T11:32:56Z",
+      "side": 1,
+      "message": "Don\u0027t create an id if you don\u0027t going to use in the code",
+      "revId": "97024c792216a968ee0ef2dce67f24ce53fbe5c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bae84128_6cda597a",
+        "filename": "res/layout/history_item.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2014-03-10T11:32:56Z",
+      "side": 1,
+      "message": "Don\u0027t create an id if you don\u0027t going to use in the code",
+      "revId": "97024c792216a968ee0ef2dce67f24ce53fbe5c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bae84128_cce7253f",
+        "filename": "res/layout/history_item.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2014-03-10T11:32:56Z",
+      "side": 1,
+      "message": "Don\u0027t create an id if you don\u0027t going to use in the code",
+      "revId": "97024c792216a968ee0ef2dce67f24ce53fbe5c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bae84128_acbbc10d",
+        "filename": "res/menu/drawer.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2014-03-10T11:32:56Z",
+      "side": 1,
+      "message": "What means this TODO?",
+      "revId": "97024c792216a968ee0ef2dce67f24ce53fbe5c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bae84128_4c41550b",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 521,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2014-03-10T11:32:56Z",
+      "side": 1,
+      "message": "Do not open the drawer. ActionBarDrawer is a common pattern in Android, so there is no need to open it.",
+      "revId": "97024c792216a968ee0ef2dce67f24ce53fbe5c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bae84128_0c5e2de9",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1401,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2014-03-10T11:32:56Z",
+      "side": 1,
+      "message": "whitespaces",
+      "revId": "97024c792216a968ee0ef2dce67f24ce53fbe5c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bae84128_ec62e9ac",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1569,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2014-03-10T11:32:56Z",
+      "side": 1,
+      "message": "??? Remove this comments",
+      "revId": "97024c792216a968ee0ef2dce67f24ce53fbe5c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bae84128_2c5df1e9",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 2312,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2014-03-10T11:32:56Z",
+      "side": 1,
+      "message": "History items aren\u0027t refreshed properly when the theme changed",
+      "revId": "97024c792216a968ee0ef2dce67f24ce53fbe5c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bae84128_4c5835fb",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 2319,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2014-03-10T11:32:56Z",
+      "side": 1,
+      "message": "whitespaces",
+      "revId": "97024c792216a968ee0ef2dce67f24ce53fbe5c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
