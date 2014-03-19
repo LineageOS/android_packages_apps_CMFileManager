@@ -66,7 +66,6 @@ public class ThemesPreferenceFragment extends TitlePreferenceFragment {
 
         // Add the preferences
         addPreferencesFromResource(R.xml.preferences_themes);
-        getActivity().getActionBar().setIcon(R.drawable.ic_launcher_themes);
 
         // Theme selector
         this.mThemeSelector =
