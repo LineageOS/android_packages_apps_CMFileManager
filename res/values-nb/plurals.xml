@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2013 The CyanogenMod Project
+<!-- Copyright (C) 2012-2014 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -28,5 +28,14 @@
         <item quantity="zero">Ingen elementer funnet</item>
         <item quantity="one">1 element funnet</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> elementer funnet</item>
+    </plurals>
+
+    <plurals name="selection_folders">
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> mappe valgt.</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mapper valgt.</item>
+    </plurals>
+    <plurals name="selection_files">
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fil valgt.</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> filer valgt.</item>
     </plurals>
 </resources>
