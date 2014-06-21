@@ -304,9 +304,7 @@
   <string name="pref_compute_folder_statistics">Показывать число объектов в папках</string>
   <string name="pref_compute_folder_statistics_on">Внимание! Анализ содержимого папок может увеличить время обработки их свойств</string>
   <string name="pref_display_thumbs">Показывать эскизы</string>
-  <string name="pref_display_thumbs_summary">Отображение эскизов картинок, видеозаписей, музыкальных файлов и приложений</string>
   <string name="pref_use_flinger">Использовать жесты</string>
-  <string name="pref_use_flinger_summary">Проведите справа налево для удаления файла или папки</string>
   <string name="pref_general_advanced_settings_category">Дополнительные функции</string>
   <string name="pref_access_mode">Режим доступа</string>
   <string name="pref_access_mode_safe">Безопасный режим</string>
@@ -335,13 +333,10 @@
   <string name="pref_no_suggestions">Не предлагать исправления</string>
   <string name="pref_no_suggestions_desc">Не показывать варианты исправлений при редактировании файла</string>
   <string name="pref_word_wrap">Включить перенос текста</string>
-  <string name="pref_hexdump">Шестнадцатеричный формат</string>
-  <string name="pref_hexdump_desc">Вывод содержимого бинарных файлов в шестнадцатеричном формате</string>
   <string name="pref_editor_syntax_highlight_category">Подсветка синтаксиса</string>
   <string name="pref_syntax_highlight">Включить подсветку синтаксиса</string>
   <string name="pref_syntax_highlight_desc">Подсвечивать синтаксис редактируемого файла (для поддерживаемых редактором типов файлов)</string>
   <string name="pref_syntax_highlight_color_scheme">Цветовая схема</string>
-  <string name="pref_syntax_highlight_color_scheme_desc">Нажмите для выбора цветовой схемы подсветки синтаксиса</string>
   <string name="pref_syntax_sh_use_theme_default">Схема по умолчанию</string>
   <string name="pref_syntax_sh_use_theme_default_desc">Использовать схему подсветки синтаксиса текущей темы</string>
   <string name="pref_editor_sh_item_category">Элементы</string>
@@ -360,7 +355,6 @@
   <string name="color_picker_current_text">Текущий:</string>
   <string name="color_picker_new_text">Новый:</string>
   <string name="color_picker_color">Цвет:</string>
-  <string name="ash_reset_color_scheme">Нажмите здесь для восстановления цветовой схемы по умолчанию</string>
   <string name="ash_text">Текст</string>
   <string name="ash_assignment">Присваивание</string>
   <string name="ash_singleline_comment">Однострочный комментарий</string>

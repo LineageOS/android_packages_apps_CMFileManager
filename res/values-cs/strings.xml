@@ -296,9 +296,7 @@
   <string name="pref_compute_folder_statistics">Spočítat statistiku složky</string>
   <string name="pref_compute_folder_statistics_on">Varování! Spočítání statistiky složky je náročné na čas a systémové prostředky.</string>
   <string name="pref_display_thumbs">Náhled</string>
-  <string name="pref_display_thumbs_summary">Zobrazovat náhledy pro aplikace, hudební soubory, obrázky a videa.</string>
   <string name="pref_use_flinger">Použít gesta přejetím</string>
-  <string name="pref_use_flinger_summary">Použít detekci gesta přejetím zleva doprava pro mazání souborů a složek.</string>
   <string name="pref_general_advanced_settings_category">Pokočilé</string>
   <string name="pref_access_mode">Druh přístupu</string>
   <string name="pref_access_mode_safe">Bezpečný režim</string>
@@ -327,13 +325,10 @@
   <string name="pref_no_suggestions">Žádné návrhy</string>
   <string name="pref_no_suggestions_desc">Při editaci souboru nezobrazovat návrhy slov ze slovníku</string>
   <string name="pref_word_wrap">Zalamovat řádky</string>
-  <string name="pref_hexdump">Výpis binárních souborů šestnáctkově</string>
-  <string name="pref_hexdump_desc">Při otevření binárních souborů vytvořit jejich šestnáctkovou textovou reprezentaci a otevřít ji v prohlížeči.</string>
   <string name="pref_editor_syntax_highlight_category">Zvýraznění syntaxe</string>
   <string name="pref_syntax_highlight">Zvýraznění syntaxe</string>
   <string name="pref_syntax_highlight_desc">Zvýraznit syntaxi souboru v editoru (pouze v případě, pokud je pro tento typ souboru dostupný zvýrazňovací filtr)</string>
   <string name="pref_syntax_highlight_color_scheme">Barevné schéma</string>
-  <string name="pref_syntax_highlight_color_scheme_desc">Dotykem změníte barevné schéma zvýraznění syntaxe</string>
   <string name="pref_syntax_sh_use_theme_default">Použít výchozí téma</string>
   <string name="pref_syntax_sh_use_theme_default_desc">Použít výchozí schéma zvýraznění syntaxe daného tématu</string>
   <string name="pref_editor_sh_item_category">Položky</string>
@@ -352,7 +347,6 @@
   <string name="color_picker_current_text">Aktuální:</string>
   <string name="color_picker_new_text">Nová:</string>
   <string name="color_picker_color">Barva:</string>
-  <string name="ash_reset_color_scheme">Dotykem obnovíte výchozí barevné schéma</string>
   <string name="ash_text">Text</string>
   <string name="ash_assignment">Přiřazení</string>
   <string name="ash_singleline_comment">Jednořádkový komentář</string>

@@ -16,6 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="dark_theme_name">ダークテーマ</string>
-  <string name="dark_theme_desc">CyanogenModファイルマネージャのダークテーマ。</string>
+  <string name="dark_theme_name">Temă \"întunecată\"</string>
+  <string name="dark_theme_desc">Temă \"întunecată\" pentru Managerul de Fișiere CyanogenMod.</string>
 </resources>
