@@ -327,7 +327,7 @@
   <string name="pref_no_suggestions">Nessun suggerimento</string>
   <string name="pref_no_suggestions_desc">Non visualizzare i suggerimenti del dizionario durante la modifica del file</string>
   <string name="pref_word_wrap">A capo automatico</string>
-  <string name="pref_hexdump">Dump esadecimale file binari</string>
+  <string name="pref_hexdump">Dump hex file binari</string>
   <string name="pref_hexdump_desc">Quando si apre un file binario, genera un dump esadecimale del file e aprilo nel visualizzatore esadecimale</string>
   <string name="pref_editor_syntax_highlight_category">Evidenziatore sintassi</string>
   <string name="pref_syntax_highlight">Evidenziatore sintassi</string>
