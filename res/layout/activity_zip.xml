@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/rename_dialog_margin">
+
+    <EditText
+        android:id="@+id/zip_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="none|textNoSuggestions|textVisiblePassword"
+        android:hint="@string/zip_name_hint"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/rename_dialog_margin">
+
+        <Button
+            android:id="@+id/cancel_zip"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@android:string/cancel"/>
+
+        <Button
+            android:id="@+id/confirm_zip"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/zip"/>
+
+    </LinearLayout>
+
+</LinearLayout>

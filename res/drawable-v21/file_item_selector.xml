@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/heaven_yellow" android:state_checked="true" />
+    <!--<item android:drawable="@drawable/not_activated_image" android:state_pressed="false" android:state_activated="false"/>-->
+
+</selector>

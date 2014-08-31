@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<inset
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="@dimen/picture_preview_small" >
+
+    <shape>
+
+        <size
+            android:height="@dimen/file_item_list_divider_height" />
+
+        <gradient
+            android:startColor="@android:color/transparent"
+            android:centerColor="@color/heaven_teal"
+            android:endColor="@color/heaven_teal" />
+
+    </shape>
+
+</inset>
