@@ -1,0 +1,32 @@
+<resources>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:actionBarStyle">@style/TealActionBar</item>
+        <item name="android:actionModeBackground">@color/action_mode_background</item>
+        <item name="android:actionButtonStyle">@style/HeavenActionButtonStyle</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/sort_by_selector</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar"/>
+
+    <style name="TealActionBar" parent="android:Widget.ActionBar">
+        <item name="android:background">@color/heaven_teal</item>
+        <item name="android:displayOptions"/>
+    </style>
+
+    <style name="HeavenActionButtonStyle" parent="android:Widget.ActionButton">
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="DialogTheme" parent="DialogThemeBase"/>
+
+    <style name="DialogThemeBase" parent="android:Theme.Holo.Light.Dialog"/>
+
+    <style name="TextAppearance.Title.Path" parent="TextAppearance.Title.Path.Base">
+        <item name="android:textColor">@color/title_color</item>
+        <item name="android:textSize">@dimen/title_text</item>
+    </style>
+
+    <style name="TextAppearance.Title.Path.Base" parent="android:TextAppearance.Holo.Widget.ActionBar.Title"/>
+
+</resources>

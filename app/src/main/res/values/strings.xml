@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">File Heaven</string>
+
+    <string name="error_file_does_not_exists">File does not exist. What happened, yo?</string>
+    <string name="application_not_available">No app can open this file</string>
+    <string name="apk_app_name">%1$s (&lt;b>%2$s&lt;/b>)</string>
+
+    <!-- file item menu -->
+    <string name="copy">Copy</string>
+    <string name="cut">Cut</string>
+    <string name="rename">Rename</string>
+    <string name="delete">Delete</string>
+    <string name="zip">Zip</string>
+    <string name="share">Share</string>
+    <string name="share_using">Share using&#8230;</string>
+    <string name="open_with">Open with&#8230;</string>
+
+    <string name="rename_canceled">Canceled rename</string>
+    <string name="rename_success">Renamed successfully</string>
+    <string name="rename_failure">Failed to rename</string>
+    <string name="file_exists">File name already used</string>
+    <string name="rename_file">Rename File</string>
+    <string name="rename_folder">Rename Folder</string>
+
+    <string name="delete_all">Delete All</string>
+    <string name="confirm_delete_single">Delete &lt;b>%1$s&lt;/b>?</string>
+    <string name="confirm_delete_multiple">Delete %1$d items?</string>
+
+    <string name="create">Create</string>
+    <string name="create_new_file">Create New File</string>
+    <string name="new_file">New file</string>
+    <string name="new_folder">New folder</string>
+    <string name="file_created">%1$s created</string>
+    <string name="failed_create_exists_file">File name already exists</string>
+    <string name="failed_create_exists_folder">Folder name already exists</string>
+    <string name="failed_create_unknown">File creation failed. Check logs.</string>
+
+    <string name="delete_success_single">Deleted %1$s</string>
+    <string name="delete_success_multiple">Deleted %1$d items</string>
+    <string name="error_deleting">Error deleting item(s)</string>
+    <string name="delete_canceled">Canceled delete</string>
+
+    <string name="copied_single_item_success">Copied %1$s</string>
+    <string name="copied_multiple_items_success">Copied %1$d items</string>
+    <string name="error_copying">Failed to copy item(s)</string>
+
+    <string name="cut_single_item_success">Moved %1$s</string>
+    <string name="cut_multiple_items_success">Moved %1$d items</string>
+    <string name="error_cutting">Failed to move item(s)</string>
+
+    <string name="paste">Paste</string>
+
+    <string name="pasting">Pasting</string>
+
+    <string name="sorting">Sorting</string>
+
+    <string name="calculating">Calculating&#8230;</string>
+
+    <string name="description_zoom_touch_close">Zoom out of image</string>
+
+    <string name="sort_by">Sort by</string>
+    <string name="name_folders_first">Name, folders first</string>
+    <string name="name">Name</string>
+    <string name="extension">Extension</string>
+    <string name="size_low">Size, low to high</string>
+    <string name="size_high">Size, high to low</string>
+    <string name="last_modified">Last modified</string>
+
+    <string name="compress_zip_label">Compress (Zip)</string>
+    <string name="zip_name_hint">YachtPics.zip</string>
+    <string name="zip_success">Successfully zipped</string>
+    <string name="zip_error">Error zipping</string>
+    <string name="zip_canceled">Canceled zip</string>
+    <string name="zipping">Zipping</string>
+
+    <string name="empty_file">Empty file</string>
+
+    <plurals name="empty_folder">
+        <item quantity="one">Empty (%d subfile)</item>
+        <item quantity="other">Empty (%d subfiles)</item>
+    </plurals>
+
+    <string name="empty_name">Enter name (followed by extension)</string>
+
+    <string name="parent_directory_symbol">..</string>
+
+    <string name="search">Search</string>
+    <string name="search_files">Search Files</string>
+    <string name="search_voice_hint">Search Files</string>
+    <string name="search_hint">Search %1$s</string>
+
+    <plurals name="searching">
+        <item quantity="one">Searching for "&lt;b>%1$s&lt;/b>" in &lt;b>%2$s&lt;/b>
+        &lt;br/>&lt;b>%3$d&lt;/b> result so far</item>
+        <item quantity="other">Searching for "&lt;b>%1$s&lt;/b>" in &lt;b>%2$s&lt;/b>
+        &lt;br/>&lt;b>%3$d&lt;/b> results so far</item>
+    </plurals>
+
+    <string name="sdcard_short_name">sdcard</string>
+    <string name="root_storage">/storage</string>
+
+</resources>

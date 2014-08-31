@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="heaven_teal">#009688</color>
+    <color name="heaven_teal_dark">#00695C</color>
+    <color name="heaven_yellow">#FFEE58</color>
+    <color name="action_mode_background">#FFD54F</color>
+    <color name="grey">#F777</color>
+    <color name="title_color">#F333</color>
+    <color name="divider_grey_start">#5555</color>
+    <color name="divider_grey_center">#3555</color>
+</resources>

@@ -1,8 +1,6 @@
-/.settings
-/bin
-/gen
-/.checkstyle
-/.classpath
-/.project
-/lint.xml
-/project.properties
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build

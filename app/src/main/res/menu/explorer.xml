@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/search"
+        android:title="@string/search"
+        android:icon="@drawable/ic_action_search"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:actionViewClass="android.widget.SearchView" />
+
+    <item android:id="@+id/menu_sort_by"
+        android:icon="@drawable/ic_action_sort_by_size"
+        android:title="@string/sort_by"
+        android:showAsAction="ifRoom">
+
+        <menu>
+
+            <group android:id="@+id/group_sort_by"
+                android:checkableBehavior="single">
+
+                <item android:id="@+id/name_folder_first"
+                    android:title="@string/name_folders_first" />
+
+                <item android:id="@+id/name"
+                    android:title="@string/name" />
+
+                <item android:id="@+id/extension"
+                    android:title="@string/extension" />
+
+                <item android:id="@+id/size_low"
+                    android:title="@string/size_low" />
+
+                <item android:id="@+id/size_high"
+                    android:title="@string/size_high" />
+
+                <item android:id="@+id/last_modified"
+                    android:title="@string/last_modified" />
+
+            </group>
+
+        </menu>
+
+    </item>
+
+    <item android:id="@+id/new_file"
+        android:title="@string/new_file"
+        android:icon="@drawable/ic_action_new"
+        android:showAsAction="ifRoom"/>
+
+</menu>
