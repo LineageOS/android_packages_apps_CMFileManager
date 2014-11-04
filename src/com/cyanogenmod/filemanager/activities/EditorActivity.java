@@ -36,7 +36,6 @@ import android.preference.PreferenceActivity;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.SpannableStringBuilder;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -84,6 +83,7 @@ import com.cyanogenmod.filemanager.util.ExceptionUtil.OnRelaunchCommandResult;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MediaHelper;
 import com.cyanogenmod.filemanager.util.ResourcesHelper;
+import com.cyanogenmod.filemanager.util.StringHelper;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -202,8 +202,8 @@ public class EditorActivity extends Activity implements TextWatcher {
         }
     };
 
-    private static class HexDumpAdapter extends ArrayAdapter<String> {
-        private static class ViewHolder {
+    private class HexDumpAdapter extends ArrayAdapter<String> {
+        private class ViewHolder {
             TextView mTextView;
         }
 
@@ -224,7 +224,7 @@ public class EditorActivity extends Activity implements TextWatcher {
                 viewHolder.mTextView = (TextView)v.findViewById(android.R.id.text1);
 
                 viewHolder.mTextView.setTextAppearance(context, R.style.hexeditor_text_appearance);
-                viewHolder.mTextView.setTypeface(Typeface.MONOSPACE);
+                viewHolder.mTextView.setTypeface(mHexTypeface);
                 theme.setTextColor(context, viewHolder.mTextView, "text_color"); //$NON-NLS-1$
 
                 v.setTag(viewHolder);
@@ -304,7 +304,7 @@ public class EditorActivity extends Activity implements TextWatcher {
                 // is read-only
                 if (!EditorActivity.this.mReadOnly) {
                     for (int i = 0; i < partial.length-1; i++) {
-                        if (!isPrintableCharacter((char)partial[i])) {
+                        if (!StringHelper.isPrintableCharacter((char)partial[i])) {
                             EditorActivity.this.mBinary = true;
                             EditorActivity.this.mReadOnly = true;
                             break;
@@ -543,14 +543,14 @@ public class EditorActivity extends Activity implements TextWatcher {
 
     private View mOptionsAnchorView;
 
+    private Typeface mHexTypeface;
+
     private final Object mExecSync = new Object();
 
     /**
      * @hide
      */
     Handler mHandler;
-
-    private static final char[] VALID_NON_PRINTABLE_CHARS = {' ', '\t', '\r', '\n'};
 
     /**
      * @hide
@@ -572,6 +572,9 @@ public class EditorActivity extends Activity implements TextWatcher {
         }
 
         this.mHandler = new Handler();
+
+        // Load typeface for hex editor
+        mHexTypeface = Typeface.createFromAsset(getAssets(), "fonts/Courier-Prime.ttf");
 
         // Register the broadcast receiver
         IntentFilter filter = new IntentFilter();
@@ -1505,23 +1508,6 @@ public class EditorActivity extends Activity implements TextWatcher {
         }
         setResult(Activity.RESULT_OK);
         finish();
-    }
-
-    /**
-     * Method that check if a character is valid printable character
-     *
-     * @param c The character to check
-     * @return boolean If the character is printable
-     * @hide
-     */
-    static boolean isPrintableCharacter(char c) {
-        int cc = VALID_NON_PRINTABLE_CHARS.length;
-        for (int i = 0; i < cc; i++) {
-            if (c == VALID_NON_PRINTABLE_CHARS[i]) {
-                return true;
-            }
-        }
-        return TextUtils.isGraphic(c);
     }
 
     /**
