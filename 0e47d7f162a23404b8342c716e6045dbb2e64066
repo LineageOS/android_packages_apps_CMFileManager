@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a18252c_f7ed8a8f",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 786,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2014-11-04T12:27:51Z",
+      "side": 1,
+      "message": "This needs clarification. A regular user won\u0027t understand the concept of dropping the secure storage.",
+      "revId": "0e47d7f162a23404b8342c716e6045dbb2e64066",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
