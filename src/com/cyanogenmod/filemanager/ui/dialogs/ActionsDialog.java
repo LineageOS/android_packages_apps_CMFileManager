@@ -419,8 +419,17 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
             //- Properties
             case R.id.mnu_actions_properties:
             case R.id.mnu_actions_properties_current_folder:
-                InfoActionPolicy.showPropertiesDialog(
-                        this.mContext, this.mFso, this.mOnRequestRefreshListener);
+                List<FileSystemObject> selection = null;
+                if (this.mOnSelectionListener != null) {
+                    selection = this.mOnSelectionListener.onRequestSelectedFiles();
+                }
+                if (selection.size() == 1) {
+                    InfoActionPolicy.showPropertiesDialog(
+                            this.mContext, selection.get(0), this.mOnRequestRefreshListener);
+                } else {
+                    InfoActionPolicy.showPropertiesDialog(
+                            this.mContext, this.mFso, this.mOnRequestRefreshListener);
+                }
                 break;
 
             //- Navigate to parent
@@ -653,6 +662,12 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
         if (this.mFso != null && FileHelper.isRootDirectory(this.mFso)) {
             menu.removeItem(R.id.mnu_actions_add_to_bookmarks);
             menu.removeItem(R.id.mnu_actions_add_to_bookmarks_current_folder);
+        }
+
+        //- Remove properties option if multiple files selected
+        if (selection != null && selection.size() > 1) {
+            menu.removeItem(R.id.mnu_actions_properties);
+            menu.removeItem(R.id.mnu_actions_properties_current_folder);
         }
 
         //- Paste/Move only when have a selection
