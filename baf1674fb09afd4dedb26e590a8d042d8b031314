@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a122d0e_f3f2d005",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 424,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2014-11-08T02:28:18Z",
+      "side": 1,
+      "message": "Please wrap to 100 chars :)",
+      "revId": "baf1674fb09afd4dedb26e590a8d042d8b031314",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
