@@ -111,7 +111,18 @@ public final class MimeTypeHelper {
         /**
          * Security file (certificate, keys, ...)
          */
-        SECURITY
+        SECURITY;
+
+        public static String[] names() {
+            MimeTypeCategory[] categories = values();
+            String[] names = new String[categories.length];
+
+            for (int i = 0; i < categories.length; i++) {
+                names[i] = categories[i].name();
+            }
+
+            return names;
+        }
     }
 
     /**
@@ -587,5 +598,18 @@ public final class MimeTypeHelper {
         public static boolean isVideo(Context context, FileSystemObject fso) {
             return MimeTypeHelper.getCategory(context, fso).compareTo(MimeTypeCategory.VIDEO) == 0;
         }
+
+        /**
+         * Method that returns if the FileSystemObject is an audio file.
+         *
+         * @param context The current context
+         * @param fso The FileSystemObject to check
+         * @return booelean If the FileSystemObject is a possible audio file
+         */
+        public static boolean isAudio(Context context, FileSystemObject fso) {
+            return MimeTypeHelper.getCategory(context, fso).compareTo(MimeTypeCategory.AUDIO) == 0;
+        }
+
+
     }
 }
