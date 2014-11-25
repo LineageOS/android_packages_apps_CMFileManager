@@ -25,27 +25,35 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.model.Query;
 import com.cyanogenmod.filemanager.model.SearchResult;
+import com.cyanogenmod.filemanager.preferences.AccessMode;
+import com.cyanogenmod.filemanager.preferences.DisplayRestrictions;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
 import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.ui.IconHolder;
 import com.cyanogenmod.filemanager.ui.ThemeManager;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
 import com.cyanogenmod.filemanager.ui.widgets.RelevanceView;
+import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 import com.cyanogenmod.filemanager.util.SearchHelper;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * An implementation of {@link ArrayAdapter} for display search results.
  */
 public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
+
+    private MimeTypeHelper.MimeTypeCategory mMimeFilter = MimeTypeHelper.MimeTypeCategory.NONE;
 
     /**
      * A class that conforms with the ViewHolder pattern to performance
@@ -90,6 +98,7 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
     private final boolean mShowRelevanceWidget;
 
     private final List<String> mQueries;
+    private final List<SearchResult> mOriginalList;
 
     private boolean mDisposed;
 
@@ -116,6 +125,9 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
     public SearchResultAdapter(
             Context context, List<SearchResult> files, int itemViewResourceId, Query queries) {
         super(context, RESOURCE_ITEM_NAME, files);
+
+        mOriginalList = new ArrayList<SearchResult>(files);
+
         this.mDisposed = false;
         final boolean displayThumbs = Preferences.getSharedPreferences().getBoolean(
                 FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getId(),
@@ -157,6 +169,36 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         }
         processData();
         super.notifyDataSetChanged();
+    }
+
+    /**
+     * Method that allows filtering the results by {@link MimeTypeHelper.MimeTypeCategory}
+     * @param mimeFilter the MimeTypeCategory to filter by
+     */
+    public void setMimeFilter(MimeTypeHelper.MimeTypeCategory mimeFilter) {
+        // Are we in ChRooted environment?
+        boolean chRooted =
+                FileManagerApplication.getAccessMode().compareTo(AccessMode.SAFE) == 0;
+
+        // Create display restrictions
+        Map<DisplayRestrictions, Object> restrictions =
+                new HashMap<DisplayRestrictions, Object>();
+        restrictions.put(
+                DisplayRestrictions.MIME_TYPE_RESTRICTION, MimeTypeHelper.ALL_MIME_TYPES);
+
+        List<SearchResult> newResults = SearchHelper.convertToResults(
+                FileHelper.applyUserPreferences(
+                        getFiles(), restrictions, true, chRooted), new Query().fillSlots(mQueries));
+
+        clear();
+        for (SearchResult result : newResults) {
+            // Only show results that are within our category
+            if (MimeTypeHelper.getCategory(getContext(), result.getFso()) == mimeFilter) {
+                add(result);
+            }
+        }
+
+        this.notifyDataSetChanged();
     }
 
     /**
@@ -219,6 +261,19 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         final List<SearchResult> data = new ArrayList<SearchResult>(cc);
         for (int i = 0; i < cc; i++) {
             data.add(getItem(i));
+        }
+        return data;
+    }
+
+    /**
+     * Method that returns the files of the adapter.
+     *
+     * @return List<FileSystemObject> The adapter data
+     */
+    public List<FileSystemObject> getFiles()  {
+        final List<FileSystemObject> data = new ArrayList<FileSystemObject>();
+        for (SearchResult result : mOriginalList) {
+            data.add(result.getFso());
         }
         return data;
     }
