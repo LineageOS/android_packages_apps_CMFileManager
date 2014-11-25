@@ -39,13 +39,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
+
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.preferences.SearchPreferenceFragment;
@@ -83,6 +84,7 @@ import com.cyanogenmod.filemanager.util.DialogHelper;
 import com.cyanogenmod.filemanager.util.ExceptionUtil;
 import com.cyanogenmod.filemanager.util.ExceptionUtil.OnRelaunchCommandResult;
 import com.cyanogenmod.filemanager.util.FileHelper;
+import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 import com.cyanogenmod.filemanager.util.StorageHelper;
 
 import java.io.FileNotFoundException;
@@ -93,7 +95,7 @@ import java.util.List;
  * An activity for search files and folders.
  */
 public class SearchActivity extends Activity
-    implements OnItemClickListener, OnItemLongClickListener, OnRequestRefreshListener {
+    implements OnItemClickListener, OnItemLongClickListener, OnRequestRefreshListener, ActionBar.OnNavigationListener {
 
     private static final String TAG = "SearchActivity"; //$NON-NLS-1$
 
@@ -240,7 +242,7 @@ public class SearchActivity extends Activity
 
                         // Resolve the symlinks
                         FileHelper.resolveSymlinks(
-                                    SearchActivity.this, SearchActivity.this.mResultList);
+                                SearchActivity.this, SearchActivity.this.mResultList);
 
                         // Draw the results
                         drawResults();
@@ -376,7 +378,7 @@ public class SearchActivity extends Activity
             restoreState(state);
         }
 
-        //Initialize action bars and search
+        //Initialize action bars and searc
         initTitleActionBar();
         initComponents();
 
@@ -496,10 +498,14 @@ public class SearchActivity extends Activity
      */
     private void initTitleActionBar() {
         //Configure the action bar options
-        getActionBar().setBackgroundDrawable(
+        // Set up the action bar to show a dropdown list.
+        final ActionBar actionBar = getActionBar();
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+
+        actionBar.setBackgroundDrawable(
                 getResources().getDrawable(R.drawable.bg_holo_titlebar));
-        actionBar.setDisplayOptions(
-                ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         actionBar.setDisplayHomeAsUpEnabled(true);
         View customTitle = getLayoutInflater().inflate(R.layout.simple_customtitle, null, false);
 
@@ -509,8 +515,15 @@ public class SearchActivity extends Activity
         ButtonItem configuration = (ButtonItem)customTitle.findViewById(R.id.ab_button1);
         configuration.setImageResource(R.drawable.ic_holo_light_config);
         configuration.setVisibility(View.VISIBLE);
+        actionBar.setCustomView(customTitle);
 
-        getActionBar().setCustomView(customTitle);
+        // Specify a SpinnerAdapter to populate the dropdown list.
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(actionBar.getThemedContext(),
+                android.R.layout.simple_spinner_item, android.R.id.text1,
+                MimeTypeHelper.MimeTypeCategory.getFriendlyLocalizedNames(this));
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        actionBar.setListNavigationCallbacks(adapter, this);
     }
 
     /**
@@ -1296,6 +1309,13 @@ public class SearchActivity extends Activity
         this.mSearchListView.setDivider(
                 theme.getDrawable(this, "horizontal_divider_drawable")); //$NON-NLS-1$
         this.mSearchListView.invalidate();
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(int i, long l) {
+        String category = MimeTypeHelper.MimeTypeCategory.names()[i];
+        ((SearchResultAdapter) this.mSearchListView.getAdapter()).setMimeFilter(category);
+        return false;
     }
 }
 
