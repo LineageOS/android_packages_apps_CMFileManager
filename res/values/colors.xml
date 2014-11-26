@@ -21,6 +21,11 @@
     <!-- The default dissabled background color -->
     <color name="default_background_disabled">#f2f2f2</color>
 
+    <!--Material-->
+    <color name="material_primary">#607d8b</color>
+    <color name="material_dark">#455a64</color>
+    <color name="actionbar_primary">#607d8b</color>
+
     <!-- A black color with some transparency -->
     <color name="black_transparent">#99000000</color>
     <!-- A derivated blue from @android:color/holo_blue_light with some transparency -->

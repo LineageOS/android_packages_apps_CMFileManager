@@ -18,11 +18,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Base themes -->
-    <style name="FileManager.Theme.Holo.Light" parent="@android:style/Theme.Holo.Light">
+    <style name="FileManager.Theme.Holo.Light" parent="@android:style/Theme.Material.Light">
         <item name="android:windowBackground">@color/default_background</item>
-        <item name="android:actionBarStyle">@style/FileManager.Widget.ActionBar.White</item>
+        <item name="android:colorPrimary">@color/material_primary</item>
+        <item name="android:colorPrimaryDark">@color/material_dark</item>
     </style>
-    <style name="FileManager.Theme.Holo" parent="@android:style/Theme.Holo"></style>
+    <style name="FileManager.Theme.Holo" parent="@android:style/Theme.Material"></style>
 
     <!-- A theme with overlay -->
     <style name="FileManager.Theme.Holo.Light.Overlay" parent="@style/FileManager.Theme.Holo.Light">
@@ -45,9 +46,9 @@
     <!-- Action bar -->
     <style name="FileManager.Widget.ActionBar.White" parent="@android:style/Widget.Holo.Light.ActionBar">
         <item name="android:titleTextStyle">@style/primary_text_appearance</item>
-        <item name="android:background">@color/default_background</item>
-        <item name="android:backgroundStacked">@color/default_background</item>
-        <item name="android:backgroundSplit">@color/default_background</item>
+        <item name="android:background">@color/actionbar_primary</item>
+        <item name="android:backgroundStacked">@color/actionbar_primary</item>
+        <item name="android:backgroundSplit">@color/actionbar_primary</item>
     </style>
 
     <!-- Title -->
@@ -61,7 +62,7 @@
     <style name="primary_text_appearance">
         <item name="android:textSize">@dimen/primary_text_size</item>
         <item name="android:textColor">@color/black_transparent</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
     <!-- The text appearance for principal information (important but not highlight) -->
@@ -94,7 +95,7 @@
     <style name="dialog_title_text_appearance">
         <item name="android:textSize">@dimen/dialog_title_text_size</item>
         <item name="android:textColor">@android:color/holo_blue_dark</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
     <!-- Breadcrumb element -->
@@ -145,7 +146,7 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:textSize">@dimen/primary_text_size</item>
         <item name="android:textColor">@color/black_transparent</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
 </resources>

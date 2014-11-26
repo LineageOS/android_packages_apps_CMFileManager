@@ -26,8 +26,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- The base theme used to customize some (non-themeables) widgets like dialogs
          2 possibles values:
-             - holo: @android:style/Theme.Holo
-             - holo_light: @android:style/Theme.Holo.Light
+             - holo: @android:style/Theme.holo
+             - holo_light: @android:style/Theme.holo.Light
     -->
     <string name="base_theme" translatable="false">holo_light</string>
 
