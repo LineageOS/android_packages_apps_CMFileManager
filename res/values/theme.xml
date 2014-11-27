@@ -83,6 +83,10 @@
 
     <!-- The text color of TextView controls -->
     <color name="text_color">@color/black_transparent</color>
+
+    <!-- The text color of the ActionBar -->
+    <color name="action_bar_text_color">@android:color/white</color>
+
     <!-- The text color of Dialog -->
     <color name="dialog_text_color">@android:color/holo_blue_dark</color>
 
@@ -111,7 +115,7 @@
     <drawable name="remote_filesystem_drawable">@drawable/ic_holo_light_remote</drawable>
 
     <!-- The popup menu checkable selector drawable -->
-    <drawable name="popup_checkable_selector_drawable">@drawable/checkable_selector</drawable>
+    <drawable name="popup_checkable_selector_drawable">@drawable/radio_selector</drawable>
     <!-- The menu checkable selector drawable -->
     <drawable name="menu_checkable_selector_drawable">@drawable/holo_popup_selector</drawable>
     <!-- The checkable item selector drawable -->

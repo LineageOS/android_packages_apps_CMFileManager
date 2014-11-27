@@ -26,6 +26,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -671,7 +672,7 @@ public class EditorActivity extends Activity implements TextWatcher {
         getActionBar().setBackgroundDrawable(
                 getResources().getDrawable(R.drawable.bg_holo_titlebar));
         getActionBar().setDisplayOptions(
-                ActionBar.DISPLAY_SHOW_CUSTOM | ActionBar.DISPLAY_SHOW_HOME);
+                ActionBar.DISPLAY_SHOW_CUSTOM);
         getActionBar().setDisplayHomeAsUpEnabled(true);
         View customTitle = getLayoutInflater().inflate(R.layout.simple_customtitle, null, false);
         this.mTitle = (TextView)customTitle.findViewById(R.id.customtitle_title);
@@ -1550,7 +1551,7 @@ public class EditorActivity extends Activity implements TextWatcher {
         //- ActionBar
         theme.setTitlebarDrawable(this, getActionBar(), "titlebar_drawable"); //$NON-NLS-1$
         View v = getActionBar().getCustomView().findViewById(R.id.customtitle_title);
-        theme.setTextColor(this, (TextView)v, "text_color"); //$NON-NLS-1$
+        theme.setTextColor(this, (TextView)v, "action_bar_text_color"); //$NON-NLS-1$
         v = findViewById(R.id.ab_button0);
         theme.setImageDrawable(this, (ImageView)v, "ab_save_drawable"); //$NON-NLS-1$
         v = findViewById(R.id.ab_button1);
