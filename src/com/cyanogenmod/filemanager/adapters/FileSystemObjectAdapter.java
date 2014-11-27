@@ -317,11 +317,6 @@ public class FileSystemObjectAdapter
 
             if (viewHolder.mHasSelectedBg == null
                     || viewHolder.mHasSelectedBg != dataHolder.mSelected) {
-                String drawableId = dataHolder.mSelected
-                        ? "selectors_selected_drawable" //$NON-NLS-1$
-                        : "selectors_deselected_drawable"; //$NON-NLS-1$
-
-                theme.setBackgroundDrawable(getContext(), v, drawableId);
                 viewHolder.mHasSelectedBg = dataHolder.mSelected;
             }
         }
