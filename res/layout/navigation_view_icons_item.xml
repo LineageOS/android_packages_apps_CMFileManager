@@ -26,7 +26,7 @@
     android:layout_above="@id/navigation_view_item_name"
     android:layout_alignParentLeft="true"
     android:gravity="center|center_vertical"
-    android:src="@drawable/btn_holo_light_check_off_normal" />
+    android:src="@drawable/btn_material_light_check_off_normal" />
 
   <com.cyanogenmod.filemanager.ui.widgets.FixedSizeImageView
     android:id="@+id/navigation_view_item_icon"
