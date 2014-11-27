@@ -145,7 +145,7 @@ public class CheckableListAdapter extends ArrayAdapter<CheckableListAdapter.Chec
                     getContext(), v,
                     (this.mIsDialog) ?
                             "selectors_deselected_drawable" : //$NON-NLS-1$
-                            "menu_checkable_selector_drawable"); //$NON-NLS-1$
+                            "selectors_selected_drawable"); //$NON-NLS-1$
             theme.setTextColor(
                     getContext(), viewHolder.mTvTitle, "text_color"); //$NON-NLS-1$
             theme.setImageDrawable(
