@@ -59,4 +59,8 @@
     <!-- Execution console -->
     <color name="console_bg">#99000000</color>
     <color name="console_fg">#99FFFFFF</color>
+
+    <color name="material_palette_blue_primary">#64B5F6</color>
+    <color name="material_palette_blue_primary_dark">#1565C0</color>
+    <color name="actionbar_palette_blue_primary">#64B5F6</color>
 </resources>
