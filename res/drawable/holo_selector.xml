@@ -13,17 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
+<ripple
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="@color/material_palette_blue_primary_dark">
 
-<selector xmlns:android="http://schemas.android.com/apk/res/android" android:exitFadeDuration="@android:integer/config_shortAnimTime">
-
-  <item
-    android:drawable="@android:color/holo_blue_dark"
-    android:state_pressed="true"/>
-  <item
-    android:drawable="@android:color/holo_blue_dark"
-    android:state_enabled="true"
-    android:state_focused="true"/>
-  <item
-    android:drawable="@android:color/transparent"/>
-
-</selector>
+    <selector>
+        <item android:drawable="@android:color/background_light"
+              android:state_enabled="false"/>
+        <item android:drawable="@color/material_palette_blue_primary"
+              android:state_enabled="true"/>
+    </selector>
+</ripple>
