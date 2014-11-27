@@ -499,7 +499,7 @@ public class SearchActivity extends Activity
         getActionBar().setBackgroundDrawable(
                 getResources().getDrawable(R.drawable.bg_holo_titlebar));
         getActionBar().setDisplayOptions(
-                ActionBar.DISPLAY_SHOW_CUSTOM | ActionBar.DISPLAY_SHOW_HOME);
+                ActionBar.DISPLAY_SHOW_CUSTOM);
         getActionBar().setDisplayHomeAsUpEnabled(true);
         View customTitle = getLayoutInflater().inflate(R.layout.simple_customtitle, null, false);
 
@@ -679,7 +679,7 @@ public class SearchActivity extends Activity
         // Recovers the user preferences about save suggestions
         boolean saveSuggestions = Preferences.getSharedPreferences().getBoolean(
                 FileManagerSettings.SETTINGS_SAVE_SEARCH_TERMS.getId(),
-                ((Boolean)FileManagerSettings.SETTINGS_SAVE_SEARCH_TERMS.
+                ((Boolean) FileManagerSettings.SETTINGS_SAVE_SEARCH_TERMS.
                         getDefaultValue()).booleanValue());
         if (saveSuggestions) {
             //Save every query for use as recent suggestions
@@ -738,7 +738,7 @@ public class SearchActivity extends Activity
                                         if (SearchActivity.this.mExecutable.cancel()) {
                                             ListAdapter listAdapter =
                                                     SearchActivity.
-                                                        this.mSearchListView.getAdapter();
+                                                            this.mSearchListView.getAdapter();
                                             if (listAdapter != null) {
                                                 SearchActivity.this.toggleResults(
                                                         listAdapter.getCount() > 0, true);
@@ -1102,7 +1102,7 @@ public class SearchActivity extends Activity
     @Override
     public void onNavigateTo(Object o) {
         if (o instanceof FileSystemObject) {
-            back(false, (FileSystemObject)o, true);
+            back(false, (FileSystemObject) o, true);
         }
     }
 
@@ -1275,7 +1275,6 @@ public class SearchActivity extends Activity
         theme.setBaseTheme(this, false);
 
         //- ActionBar
-        theme.setTitlebarDrawable(this, getActionBar(), "titlebar_drawable"); //$NON-NLS-1$
         View v = getActionBar().getCustomView().findViewById(R.id.customtitle_title);
         theme.setTextColor(this, (TextView)v, "text_color"); //$NON-NLS-1$
         v = findViewById(R.id.ab_button1);
