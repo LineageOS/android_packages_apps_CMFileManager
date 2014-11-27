@@ -291,8 +291,6 @@
   <string name="pref_editor">编辑器选项</string>
   <string name="pref_themes">主题</string>
   <string name="pref_about">关于</string>
-  <string name="pref_about_summary">文件管理器 v<xliff:g id="version">%1$s</xliff:g>
-    \n版权所有 \u00A9 2012-2014 CyanogenMod</string>
   <string name="pref_general_behaviour_category">常规</string>
   <string name="pref_case_sensitive_sort">排列时区分大小写</string>
   <string name="pref_case_sensitive_sort_summary">导航或排列搜索结果时区分大小写</string>
@@ -328,7 +326,6 @@
   <string name="pref_save_search_terms_off">搜索关键词将不会被保存</string>
   <string name="pref_remove_saved_search_terms">删除保存的关键词</string>
   <string name="pref_remove_saved_search_terms_summary">点击此将会删除所有保存的搜索关键词</string>
-  <string name="pref_remove_saved_search_terms_msg">所有保存的搜索关键词已被删除.</string>
   <string name="pref_editor_behaviour_category">行为</string>
   <string name="pref_no_suggestions">不显示建议</string>
   <string name="pref_no_suggestions_desc">编辑文件时不要显示字典建议</string>

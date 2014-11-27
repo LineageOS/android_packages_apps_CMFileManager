@@ -273,7 +273,6 @@
   <string name="pref_editor">Opciones del editor</string>
   <string name="pref_themes">Temes</string>
   <string name="pref_about">Tocante a</string>
-  <string name="pref_about_summary">Xestor de ficheros v<xliff:g id="version">%1$s</xliff:g>\nCopyright \u00A9 2012-2014 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">Xeneral</string>
   <string name="pref_case_sensitive_sort">Ordenación sensible</string>
   <string name="pref_case_sensitive_sort_summary">Considerar minúscules/mayúscules al restolar o amosar resultaos de la gueta</string>
@@ -309,7 +308,6 @@
   <string name="pref_save_search_terms_off">Los términos de gueta nun van guardase</string>
   <string name="pref_remove_saved_search_terms">Desaniciar términos de gueta</string>
   <string name="pref_remove_saved_search_terms_summary">Tocar equí pa desaniciar tolos términos de gueta guardaos</string>
-  <string name="pref_remove_saved_search_terms_msg">Desaniciáronse tolos términos de gueta.</string>
   <string name="pref_editor_behaviour_category">Comportamientu</string>
   <string name="pref_no_suggestions">Ensin suxerencies</string>
   <string name="pref_no_suggestions_desc">Nun amosar suxerencies del diccionariu mentanto la edición de ficheros</string>

@@ -267,6 +267,21 @@
   <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/jj/aaaa hh:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">aaaa-mm-jj hh:mm:ss</string>
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> et <xliff:g id="files">%2$s</xliff:g> sélectionnés.</string>
+  <string name="category_system">SYSTÈME</string>
+  <string name="category_app">APPLICATION</string>
+  <string name="category_binary">BINAIRE</string>
+  <string name="category_text">TEXTE</string>
+  <string name="category_document">DOCUMENT</string>
+  <string name="category_ebook">EBOOK</string>
+  <string name="category_mail">COURRIER</string>
+  <string name="category_compress">COMPRESSÉ</string>
+  <string name="category_exec">EXÉCUTABLE</string>
+  <string name="category_database">BASE DE DONNÉES</string>
+  <string name="category_font">POLICE</string>
+  <string name="category_image">IMAGE</string>
+  <string name="category_audio">AUDIO</string>
+  <string name="category_video">VIDÉO</string>
+  <string name="category_security">SÉCURITÉ</string>
   <string name="compression_mode_title">Mode de compression</string>
   <string name="shortcut_failed_msg">Impossible d\'atteindre le raccourci</string>
   <string name="shortcut_creation_success_msg">Raccourci créé</string>
@@ -277,7 +292,6 @@
   <string name="pref_editor">Options de l\'éditeur</string>
   <string name="pref_themes">Thèmes</string>
   <string name="pref_about">À propos</string>
-  <string name="pref_about_summary">Gestionnaire de fichier <xliff:g id="version">%1$s</xliff:g>\nCopyright \u00A9 2012-2014 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">Général</string>
   <string name="pref_case_sensitive_sort">Sensible à la casse</string>
   <string name="pref_case_sensitive_sort_summary">Tenir compte de la casse lors de la navigation ou du tri des résultats de recherche</string>
@@ -313,7 +327,6 @@
   <string name="pref_save_search_terms_off">Les termes recherchés ne seront pas sauvegardés</string>
   <string name="pref_remove_saved_search_terms">Effacer l\'historique de recherche</string>
   <string name="pref_remove_saved_search_terms_summary">Appuyer pour supprimer l\'historique des termes recherchés</string>
-  <string name="pref_remove_saved_search_terms_msg">Historique de recherche effacé</string>
   <string name="pref_editor_behaviour_category">Comportement</string>
   <string name="pref_no_suggestions">Pas de suggestions</string>
   <string name="pref_no_suggestions_desc">Ne pas afficher les suggestions pendant l\'édition d\'un fichier</string>

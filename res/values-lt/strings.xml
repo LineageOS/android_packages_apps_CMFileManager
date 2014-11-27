@@ -84,6 +84,7 @@
   <string name="actionbar_button_overflow_cd">Daugiau parinkčių</string>
   <string name="actionbar_button_storage_cd">Saugyklos talpa</string>
   <string name="actionbar_button_save_cd">Išsaugoti</string>
+  <string name="actionbar_button_print_cd">Spausdinti</string>
   <string name="sort_by_name_asc">Pagal pavadinimą \u25B2</string>
   <string name="sort_by_name_desc">Pagal pavadinimą \u25BC</string>
   <string name="sort_by_date_asc">Pagal datą \u25B2</string>
@@ -109,6 +110,7 @@
   <string name="filesystem_info_dialog_type">Tipas:</string>
   <string name="filesystem_info_dialog_options">Pasirinkimai:</string>
   <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
+  <string name="filesystem_info_dialog_virtual">Virtuali:</string>
   <string name="filesystem_info_dialog_total_disk_usage">Viso:</string>
   <string name="filesystem_info_dialog_used_disk_usage">Naudojama:</string>
   <string name="filesystem_info_dialog_free_disk_usage">Laisva:</string>
@@ -169,6 +171,8 @@
   <string name="bookmarks_home">Namai</string>
   <string name="bookmarks_root_folder">„Root“ aplankas</string>
   <string name="bookmarks_system_folder">Sistemos aplankas</string>
+  <string name="bookmarks_secure">Saugi saugykla</string>
+  <string name="bookmarks_remote">Nuotolinė saugykla</string>
   <string name="bookmarks_button_config_cd">Nustatykite pradinį aplanką.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Pašalinti žymę.</string>
   <string name="bookmarks_msgs_add_success">Žymė sėkmingai pridėta.</string>
@@ -228,6 +232,7 @@
   <string name="actions_menu_open_parent_folder">Atidaryti aplanką su failu</string>
   <string name="actions_menu_compute_checksum">Apskaičiuoti kontrolinę sumą</string>
   <string name="actions_menu_print">Spausdinti</string>
+  <string name="actions_menu_set_as_home">Nustatyti kaip pagrindinį</string>
   <string name="actions_ask_undone_operation_msg">Šis veiksmas negali būti atšauktas. Ar norite tęsti?</string>
   <string name="input_name_dialog_label">Pavadinimas:</string>
   <string name="input_name_dialog_message_empty_name">Pavadinimas negali būti tuščias.</string>
@@ -258,6 +263,21 @@
   <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/mmmm vv:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">mmmm-mm-dd vv:mm:ss</string>
   <string name="selection_folders_and_files">Pasirinkta: <xliff:g id="folders">%1$s</xliff:g> ir <xliff:g id="files">%2$s</xliff:g></string>
+  <string name="category_system">SISTEMA</string>
+  <string name="category_app">PROGRAMA</string>
+  <string name="category_binary">DVEJETAINIS</string>
+  <string name="category_text">TEKSTAS</string>
+  <string name="category_document">DOKUMENTAS</string>
+  <string name="category_ebook">EL. KNYGA</string>
+  <string name="category_mail">PAŠTAS</string>
+  <string name="category_compress">SUSPAUSTI</string>
+  <string name="category_exec">VYKDOMAS</string>
+  <string name="category_database">DUOMENŲ BAZĖ</string>
+  <string name="category_font">ŠRIFTAS</string>
+  <string name="category_image">ATVAIZDAS</string>
+  <string name="category_audio">GARSAS</string>
+  <string name="category_video">VAIZDAS</string>
+  <string name="category_security">SAUGUMAS</string>
   <string name="compression_mode_title">Suglaudinimo režimas</string>
   <string name="shortcut_failed_msg">Nepavyko apdoroti nuorodos.</string>
   <string name="shortcut_creation_success_msg">Nuoroda sukurta sėkmingai.</string>
@@ -265,6 +285,7 @@
   <string name="pref">Nustatymai</string>
   <string name="pref_general">Bendrieji parametrai</string>
   <string name="pref_search">Paieškos parinktys</string>
+  <string name="pref_storage">Saugyklos parinktys</string>
   <string name="pref_editor">Redaktoriaus parinktys</string>
   <string name="pref_themes">Temos</string>
   <string name="pref_about">Apie</string>
@@ -304,7 +325,11 @@
   <string name="pref_save_search_terms_off">Paieškos terminai nebus išsaugoti</string>
   <string name="pref_remove_saved_search_terms">Pašalinti paieškos terminus</string>
   <string name="pref_remove_saved_search_terms_summary">Bakstelėkite, jei norite pašalinti visus išsaugotus paieškos terminus</string>
-  <string name="pref_remove_saved_search_terms_msg">Visi paieškos terminai pašalinti.</string>
+  <string name="pref_remove_saved_search_terms_msg">Visi išsaugoti paieškos terminai buvo pašalinti</string>
+  <string name="pref_secure_storage_category">Saugi saugykla</string>
+  <string name="pref_secure_storage_delayed_sync_title">Uždelstas sinchronizavimas</string>
+  <string name="pref_secure_storage_reset_password_title">Atkurti slaptažodį</string>
+  <string name="pref_secure_storage_delete_storage_title">Ištrinti saugyklą</string>
   <string name="pref_editor_behaviour_category">Elgsena</string>
   <string name="pref_no_suggestions">Jokių pasiūlymų</string>
   <string name="pref_no_suggestions_desc">Nerodyti žodyno pasiūlymų redaguojant failą</string>
@@ -341,6 +366,25 @@
   <string name="ash_keyword">Raktinis žodis</string>
   <string name="ash_quoted_string">Cituojama eilutė</string>
   <string name="ash_variable">Kintamasis</string>
+  <string name="secure_storage_unlock_title">Atrakinti saugyklą</string>
+  <string name="secure_storage_create_title">Sukurti saugyklą</string>
+  <string name="secure_storage_reset_title">Atkurti slaptažodį</string>
+  <string name="secure_storage_delete_title">Ištrinti saugyklą</string>
+  <string name="secure_storage_unlock_key_prompt_msg">Įveskite slaptažodį norėdami atrakinti saugią failų sistemą.</string>
+  <string name="secure_storage_unlock_key_new_msg">Įveskite slaptažodį norėdami apsaugoti failų sistemą.</string>
+  <string name="secure_storage_unlock_key_reset_msg">Įrašykite esamą ir naują slaptažodžius norėdami atkurti saugią failų sistemą.</string>
+  <string name="secure_storage_unlock_key_delete_msg">Įrašykite esamą slaptažodį norėdami ištrinti saugią failų sistemą.</string>
+  <string name="secure_storage_unlock_old_key_title">Senas slaptažodis:</string>
+  <string name="secure_storage_unlock_new_key_title">Naujas slaptažodis:</string>
+  <string name="secure_storage_unlock_key_title">Slaptažodis:</string>
+  <string name="secure_storage_unlock_repeat_title">Pakartokite slaptažodį:</string>
+  <string name="secure_storage_create_button">Sukurti</string>
+  <string name="secure_storage_unlock_button">Atrakinti</string>
+  <string name="secure_storage_reset_button">Atkurti</string>
+  <string name="secure_storage_delete_button">Ištrinti</string>
+  <string name="secure_storage_unlock_failed">Nepavyko atrakinti saugyklos</string>
+  <string name="secure_storage_unlock_validation_length">Slaptažodyje turi būti mažiausiai <xliff:g id="characters">%1$d</xliff:g> simboliai.</string>
+  <string name="secure_storage_unlock_validation_equals">Slaptažodžiai nesutampa.</string>
   <string name="print_unsupported_document">Nepalaikomas dokumento formatas</string>
   <string name="print_unsupported_image">Nepalaikomas vaizdo formatas</string>
   <string name="print_document_header">Dokumentas: <xliff:g id="document_name">%1$s</xliff:g></string>

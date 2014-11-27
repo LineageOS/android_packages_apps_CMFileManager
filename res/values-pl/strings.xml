@@ -277,8 +277,6 @@
   <string name="pref_editor">Opcje edytora</string>
   <string name="pref_themes">Motywy</string>
   <string name="pref_about">O aplikacji</string>
-  <string name="pref_about_summary">Menedżer plików v<xliff:g id="version">%1$s</xliff:g>
-Copyright \u00A9 2013 Projekt CyanogenMod</string>
   <string name="pref_general_behaviour_category">Generalne</string>
   <string name="pref_case_sensitive_sort">Uwzględnianie wielkości liter</string>
   <string name="pref_case_sensitive_sort_summary">Uwzględniaj wielkość liter w trakcie nawigacji i sortowania wyników wyszukiwania</string>
@@ -314,7 +312,6 @@ Copyright \u00A9 2013 Projekt CyanogenMod</string>
   <string name="pref_save_search_terms_off">Wyszukiwane frazy nie będą zapisywane</string>
   <string name="pref_remove_saved_search_terms">Usuń zapisane wyszukiwane frazy</string>
   <string name="pref_remove_saved_search_terms_summary">Wybierz by usunąć wszystkie zapisane wyszukiwane frazy</string>
-  <string name="pref_remove_saved_search_terms_msg">Wszystkie zapisane wyszukiwane frazy zostały usunięte.</string>
   <string name="pref_editor_behaviour_category">Zachowanie</string>
   <string name="pref_no_suggestions">Brak podpowiedzi</string>
   <string name="pref_no_suggestions_desc">Nie wyświetlaj podpowiedzi w trakcie edycji pliku</string>

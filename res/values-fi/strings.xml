@@ -268,7 +268,6 @@
   <string name="pref_editor">Editorin asetukset</string>
   <string name="pref_themes">Teemat</string>
   <string name="pref_about">Tietoja</string>
-  <string name="pref_about_summary">Tiedostonhallinta v<xliff:g id="version">%1$s</xliff:g>\nCopyright \u00A9 2012-2014 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">Yleiset</string>
   <string name="pref_case_sensitive_sort">Lajittelu kirjainkoon mukaan</string>
   <string name="pref_case_sensitive_sort_summary">Huomioi kirjainkoko selatessa tai lajitellessa hakutuloksia</string>
@@ -304,7 +303,6 @@
   <string name="pref_save_search_terms_off">Hakutermejä ei tallenneta</string>
   <string name="pref_remove_saved_search_terms">Poista tallennetut hakutermit</string>
   <string name="pref_remove_saved_search_terms_summary">Paina tästä poistaaksesi kaikki hakutermit</string>
-  <string name="pref_remove_saved_search_terms_msg">Kaikki hakutermit poistettu.</string>
   <string name="pref_editor_behaviour_category">Käyttäytyminen</string>
   <string name="pref_no_suggestions">Ei ehdotuksia</string>
   <string name="pref_no_suggestions_desc">Älä näytä sanakirjan ehdotuksia muokatessa tiedostoa</string>

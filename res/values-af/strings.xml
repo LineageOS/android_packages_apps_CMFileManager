@@ -287,8 +287,6 @@
   <string name="pref_editor">Redigeerder opsies</string>
   <string name="pref_themes">Temas</string>
   <string name="pref_about">Aangaande</string>
-  <string name="pref_about_summary">Lêer-verkenner v<xliff:g id="version">%1$s</xliff:g>
-    \nKopiereg \u00A9 2013 Die CyanogenMod Projek</string>
   <string name="pref_general_behaviour_category">Algemeen</string>
   <string name="pref_case_sensitive_sort">Gebruik letter-sensitiewe sortering</string>
   <string name="pref_case_sensitive_sort_summary">Oorweeg letter-sensitiewe navigasie en sortering van soek resultate</string>
@@ -326,7 +324,6 @@
   <string name="pref_save_search_terms_off">Soekterme sal nie gestoor word nie</string>
   <string name="pref_remove_saved_search_terms">Vee soekterme uit</string>
   <string name="pref_remove_saved_search_terms_summary">Raak om al die gestoorde soekterme uit te vee</string>
-  <string name="pref_remove_saved_search_terms_msg">Alle gestoorde soekterme is uitgevee.</string>
   <string name="pref_editor_behaviour_category">Gedrag</string>
   <string name="pref_no_suggestions">Geen voorstelle</string>
   <string name="pref_no_suggestions_desc">Moet nie woordeboek items voorstel tydens verandering van \'n lêer nie</string>

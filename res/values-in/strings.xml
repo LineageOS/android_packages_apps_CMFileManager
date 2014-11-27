@@ -84,6 +84,7 @@
   <string name="actionbar_button_overflow_cd">Pilihan lebih</string>
   <string name="actionbar_button_storage_cd">Volume penyimpanan</string>
   <string name="actionbar_button_save_cd">Simpan</string>
+  <string name="actionbar_button_print_cd">Cetak</string>
   <string name="sort_by_name_asc">Sesuai nama \u25B2</string>
   <string name="sort_by_name_desc">Sesuai nama \u25BC</string>
   <string name="sort_by_date_asc">Sesuai tanggal \u25B2</string>
@@ -109,6 +110,7 @@
   <string name="filesystem_info_dialog_type">Jenis:</string>
   <string name="filesystem_info_dialog_options">Pilihan:</string>
   <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
+  <string name="filesystem_info_dialog_virtual">Virtual:</string>
   <string name="filesystem_info_dialog_total_disk_usage">Total:</string>
   <string name="filesystem_info_dialog_used_disk_usage">Terpakai:</string>
   <string name="filesystem_info_dialog_free_disk_usage">Bebas:</string>
@@ -258,6 +260,14 @@
   <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> dan <xliff:g id="files">%2$s</xliff:g> terpilih.</string>
+  <string name="category_system">SISTEM</string>
+  <string name="category_text">TEKS</string>
+  <string name="category_document">DOKUMEN</string>
+  <string name="category_ebook">EBOOK</string>
+  <string name="category_database">DATABASE</string>
+  <string name="category_image">GAMBAR</string>
+  <string name="category_audio">AUDIO</string>
+  <string name="category_security">KEAMANAN</string>
   <string name="compression_mode_title">Modus kompresi</string>
   <string name="shortcut_failed_msg">Gagal untuk menangani pintasan.</string>
   <string name="shortcut_creation_success_msg">Pintasan dibuat dengan sukses.</string>
@@ -268,7 +278,6 @@
   <string name="pref_editor">Pilihan editor</string>
   <string name="pref_themes">Tema</string>
   <string name="pref_about">Tentang</string>
-  <string name="pref_about_summary">Manajer Berkas v<xliff:g id="version">%1$s</xliff:g>\nCopyright \u00A9 2012-2014 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">Umum</string>
   <string name="pref_case_sensitive_sort">Sensitif-bentuk</string>
   <string name="pref_case_sensitive_sort_summary">Pertimbangkan bentuk ketika menavigasi atau menyortir hasil pencarian</string>
@@ -304,7 +313,7 @@
   <string name="pref_save_search_terms_off">Istilah pencarian tidak akan disimpan</string>
   <string name="pref_remove_saved_search_terms">Hapus istilah pencarian yang tersimpan</string>
   <string name="pref_remove_saved_search_terms_summary">Tap untuk menghapus semua istilah pencarian tersimpan</string>
-  <string name="pref_remove_saved_search_terms_msg">Semua istilah pencarian tersimpan telah dihapus.</string>
+  <string name="pref_secure_storage_delete_storage_title">Hapus Penyimpanan</string>
   <string name="pref_editor_behaviour_category">Perilaku</string>
   <string name="pref_no_suggestions">Tidak ada saran</string>
   <string name="pref_no_suggestions_desc">Jangan tampilkan kamus saran ketika mengubah berkas</string>
@@ -341,6 +350,10 @@
   <string name="ash_keyword">Kata kunci</string>
   <string name="ash_quoted_string">Teks dikutip</string>
   <string name="ash_variable">Variabel</string>
+  <string name="secure_storage_unlock_title">Buka Penyimpanan</string>
+  <string name="secure_storage_create_title">Buat Penyimpanan</string>
+  <string name="secure_storage_reset_title">Atur ulang kata sandi</string>
+  <string name="secure_storage_unlock_validation_equals">Kata sandi tidak cocok.</string>
   <string name="print_unsupported_document">Format dokumen tidak didukung</string>
   <string name="print_unsupported_image">Format gambar tidak didukung</string>
   <string name="print_document_header">Dokumen: <xliff:g id="document_name">%1$s</xliff:g></string>

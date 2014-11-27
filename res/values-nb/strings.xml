@@ -84,6 +84,7 @@
   <string name="actionbar_button_overflow_cd">Flere alternativer</string>
   <string name="actionbar_button_storage_cd">Lagringsvolumer</string>
   <string name="actionbar_button_save_cd">Lagre</string>
+  <string name="actionbar_button_print_cd">Skriv ut</string>
   <string name="sort_by_name_asc">Etter navn ▲</string>
   <string name="sort_by_name_desc">Etter navn ▼</string>
   <string name="sort_by_date_asc">Etter dato ▲</string>
@@ -109,6 +110,7 @@
   <string name="filesystem_info_dialog_type">Type:</string>
   <string name="filesystem_info_dialog_options">Alternativer:</string>
   <string name="filesystem_info_dialog_dump_pass">Dump / Bestå:</string>
+  <string name="filesystem_info_dialog_virtual">Virtuell:</string>
   <string name="filesystem_info_dialog_total_disk_usage">Totalt:</string>
   <string name="filesystem_info_dialog_used_disk_usage">Brukt:</string>
   <string name="filesystem_info_dialog_free_disk_usage">Ledig:</string>
@@ -169,6 +171,8 @@
   <string name="bookmarks_home">Hjem</string>
   <string name="bookmarks_root_folder">Rotmappe</string>
   <string name="bookmarks_system_folder">Systemmappe</string>
+  <string name="bookmarks_secure">Sikker lagring</string>
+  <string name="bookmarks_remote">Ekstern lagring</string>
   <string name="bookmarks_button_config_cd">Sett oppstartsmappe</string>
   <string name="bookmarks_button_remove_bookmark_cd">Fjern bokmerke.</string>
   <string name="bookmarks_msgs_add_success">Bokmerket ble lagt.</string>
@@ -235,6 +239,7 @@
   <string name="actions_menu_open_parent_folder">Åpne forelder</string>
   <string name="actions_menu_compute_checksum">Beregn checksum</string>
   <string name="actions_menu_print">Skriv ut</string>
+  <string name="actions_menu_set_as_home">Angi som hjem</string>
   <string name="actions_ask_undone_operation_msg">Denne handlingen kan ikke omgjøres. Vil du fortsette?</string>
   <string name="input_name_dialog_label">Navn:</string>
   <string name="input_name_dialog_message_empty_name">Navnet kan ikke være tomt.</string>
@@ -265,6 +270,21 @@
   <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/åååå tt:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">åååå-mm-dd tt:mm:ss</string>
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> og <xliff:g id="files">%2$s</xliff:g> valgt.</string>
+  <string name="category_system">SYSTEM</string>
+  <string name="category_app">APP</string>
+  <string name="category_binary">BINÆR</string>
+  <string name="category_text">TEKST</string>
+  <string name="category_document">DOKUMENT</string>
+  <string name="category_ebook">E-BOK</string>
+  <string name="category_mail">E-POST</string>
+  <string name="category_compress">KOMPRIMERT</string>
+  <string name="category_exec">KJØRBAR</string>
+  <string name="category_database">DATABASE</string>
+  <string name="category_font">SKRIFTTYPE</string>
+  <string name="category_image">BILDE</string>
+  <string name="category_audio">LYD</string>
+  <string name="category_video">VIDEO</string>
+  <string name="category_security">SIKKERHET</string>
   <string name="compression_mode_title">Komprimeringstype</string>
   <string name="shortcut_failed_msg">Klarte ikke å håndtere snarveien.</string>
   <string name="shortcut_creation_success_msg">Snarvei opprettet.</string>
@@ -272,6 +292,7 @@
   <string name="pref">Innstillinger</string>
   <string name="pref_general">Generelle innstillinger</string>
   <string name="pref_search">Søkealternativer</string>
+  <string name="pref_storage">Lagringsalternativer</string>
   <string name="pref_editor">Redigeringsmuligheter</string>
   <string name="pref_themes">Temaer</string>
   <string name="pref_about">Om</string>
@@ -311,7 +332,11 @@
   <string name="pref_save_search_terms_off">Søketermer vil ikke bli lagret</string>
   <string name="pref_remove_saved_search_terms">Fjern lagrede søketermer</string>
   <string name="pref_remove_saved_search_terms_summary">Trykk for å fjerne alle lagrede søketermer</string>
-  <string name="pref_remove_saved_search_terms_msg">Alle lagrede søketermer slettet.</string>
+  <string name="pref_remove_saved_search_terms_msg">Alle lagrede søkeordene ble fjernet</string>
+  <string name="pref_secure_storage_category">Sikker lagring</string>
+  <string name="pref_secure_storage_delayed_sync_title">Forsinket synkronisering</string>
+  <string name="pref_secure_storage_reset_password_title">Tilbakestill Passord</string>
+  <string name="pref_secure_storage_delete_storage_title">Slett lagring</string>
   <string name="pref_editor_behaviour_category">Oppførsel</string>
   <string name="pref_no_suggestions">Ingen forslag</string>
   <string name="pref_no_suggestions_desc">Ikke vis forslag mens filer redigeres</string>
@@ -348,6 +373,24 @@
   <string name="ash_keyword">Nøkkelord</string>
   <string name="ash_quoted_string">Streng i anførselstegn</string>
   <string name="ash_variable">Variabel</string>
+  <string name="secure_storage_unlock_title">Lås opp lagring</string>
+  <string name="secure_storage_create_title">Lag lagringsområde</string>
+  <string name="secure_storage_reset_title">Tilbakestill Passord</string>
+  <string name="secure_storage_delete_title">Slett lagring</string>
+  <string name="secure_storage_unlock_key_prompt_msg">Skriv inn passordet for å låse opp Sikker lagring.</string>
+  <string name="secure_storage_unlock_key_new_msg">Skriv inn et passord for å beskytte sikker lagring.</string>
+  <string name="secure_storage_unlock_key_reset_msg">Skriv inn gjeldende og nye passordet for å tilbakestille Sikker lagring.</string>
+  <string name="secure_storage_unlock_key_delete_msg">Skriv inn gjeldende passord hvis du vil slette Sikker lagring.</string>
+  <string name="secure_storage_unlock_old_key_title">Gammelt passord:</string>
+  <string name="secure_storage_unlock_new_key_title">Nytt passord:</string>
+  <string name="secure_storage_unlock_key_title">Passord:</string>
+  <string name="secure_storage_unlock_repeat_title">Gjenta passord:</string>
+  <string name="secure_storage_create_button">Opprett</string>
+  <string name="secure_storage_unlock_button">Låse opp</string>
+  <string name="secure_storage_reset_button">Tilbakestille</string>
+  <string name="secure_storage_delete_button">Slett</string>
+  <string name="secure_storage_unlock_failed">Kan ikke låse opp lagring</string>
+  <string name="secure_storage_unlock_validation_length">Passord må ha minst <xliff:g id="characters"> %1$d </xliff:g> tegn.</string>
   <string name="print_unsupported_document">Ustøttet dokumentformat</string>
   <string name="print_unsupported_image">Ustøttet bildeformat</string>
   <string name="print_document_header">Dokument: <xliff:g id="document_name">%1$s</xliff:g></string>

@@ -84,6 +84,7 @@
   <string name="actionbar_button_overflow_cd">Weitere Optionen</string>
   <string name="actionbar_button_storage_cd">Speicherlaufwerke</string>
   <string name="actionbar_button_save_cd">Speichern</string>
+  <string name="actionbar_button_print_cd">Drucken</string>
   <string name="sort_by_name_asc">Nach Name \u25B2</string>
   <string name="sort_by_name_desc">Nach Name \u25BC</string>
   <string name="sort_by_date_asc">Nach Datum \u25B2</string>
@@ -109,6 +110,7 @@
   <string name="filesystem_info_dialog_type">Typ:</string>
   <string name="filesystem_info_dialog_options">Optionen:</string>
   <string name="filesystem_info_dialog_dump_pass">Sichern/Prüfen:</string>
+  <string name="filesystem_info_dialog_virtual">Virtuell:</string>
   <string name="filesystem_info_dialog_total_disk_usage">Gesamt:</string>
   <string name="filesystem_info_dialog_used_disk_usage">Benutzt:</string>
   <string name="filesystem_info_dialog_free_disk_usage">Frei:</string>
@@ -169,6 +171,8 @@
   <string name="bookmarks_home">Home</string>
   <string name="bookmarks_root_folder">Wurzelverzeichnis</string>
   <string name="bookmarks_system_folder">Systemordner</string>
+  <string name="bookmarks_secure">Sicherer Speicher</string>
+  <string name="bookmarks_remote">Remote Speicher</string>
   <string name="bookmarks_button_config_cd">Standardordner.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Lesezeichen löschen.</string>
   <string name="bookmarks_msgs_add_success">Das Lesezeichen wurde erfolgreich hinzugefügt.</string>
@@ -228,6 +232,7 @@
   <string name="actions_menu_open_parent_folder">Übergeordnetes Verzeichnis öffnen</string>
   <string name="actions_menu_compute_checksum">Prüfsumme generieren</string>
   <string name="actions_menu_print">Drucken</string>
+  <string name="actions_menu_set_as_home">Als Startposition festlegen</string>
   <string name="actions_ask_undone_operation_msg">Diese Aktion kann nicht rückgängig gemacht werden.\n\nTrotzdem fortfahren?</string>
   <string name="input_name_dialog_label">Name:</string>
   <string name="input_name_dialog_message_empty_name">Der Name darf nicht leer sein.</string>
@@ -258,6 +263,21 @@
   <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> und <xliff:g id="files">%2$s</xliff:g> ausgewählt.</string>
+  <string name="category_system">SYSTEM</string>
+  <string name="category_app">APP</string>
+  <string name="category_binary">BINÄR</string>
+  <string name="category_text">TEXT</string>
+  <string name="category_document">DOKUMENT</string>
+  <string name="category_ebook">E-BOOK</string>
+  <string name="category_mail">E-MAIL</string>
+  <string name="category_compress">KOMPRIMIERT</string>
+  <string name="category_exec">AUSFÜHRBAR</string>
+  <string name="category_database">DATENBANK</string>
+  <string name="category_font">SCHRIFTART</string>
+  <string name="category_image">BILD</string>
+  <string name="category_audio">AUDIO</string>
+  <string name="category_video">VIDEO</string>
+  <string name="category_security">SICHERHEIT</string>
   <string name="compression_mode_title">Archivformat</string>
   <string name="shortcut_failed_msg">Fehler beim Zugriff auf die Verknüpfung.</string>
   <string name="shortcut_creation_success_msg">Verknüpfung erfolgreich angelegt.</string>
@@ -265,10 +285,11 @@
   <string name="pref">Einstellungen</string>
   <string name="pref_general">Allgemeine Einstellungen</string>
   <string name="pref_search">Sucheinstellungen</string>
+  <string name="pref_storage">Speicheroptionen</string>
   <string name="pref_editor">Editoreinstellungen</string>
   <string name="pref_themes">Designs</string>
   <string name="pref_about">Über</string>
-  <string name="pref_about_summary">Dateimanager v<xliff:g id="version">%1$s</xliff:g>\nCopyright \u00A9 2013 The CyanogenMod Project</string>
+  <string name="pref_about_summary">Dateimanager v<xliff:g id="version">%1$s</xliff:g>\nCopyright \u00A9 2012-2014 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">Allgemein</string>
   <string name="pref_case_sensitive_sort">Groß- und Kleinschreibung</string>
   <string name="pref_case_sensitive_sort_summary">Beim Navigieren und Sortieren Groß- und Kleinschreibung berücksichtigen</string>
@@ -304,7 +325,8 @@
   <string name="pref_save_search_terms_off">Suchergebnisse werden nicht gespeichert</string>
   <string name="pref_remove_saved_search_terms">Gespeicherte Suchergebnisse löschen</string>
   <string name="pref_remove_saved_search_terms_summary">Tippen, um alle gespeicherten Suchergebnisse zu löschen</string>
-  <string name="pref_remove_saved_search_terms_msg">Alle gespeicherten Suchergebnisse wurden gelöscht</string>
+  <string name="pref_secure_storage_reset_password_title">Passwort zurücksetzen</string>
+  <string name="pref_secure_storage_delete_storage_title">Speicher löschen</string>
   <string name="pref_editor_behaviour_category">Verhalten</string>
   <string name="pref_no_suggestions">Keine Vorschläge</string>
   <string name="pref_no_suggestions_desc">Keine Wortvorschläge während des Bearbeitens einer Datei anzeigen</string>
@@ -341,6 +363,24 @@
   <string name="ash_keyword">Schlüsselwort</string>
   <string name="ash_quoted_string">Text in Anführungszeichen</string>
   <string name="ash_variable">Variable</string>
+  <string name="secure_storage_unlock_title">Speicher entsperren</string>
+  <string name="secure_storage_create_title">Speicher erstellen</string>
+  <string name="secure_storage_reset_title">Passwort zurücksetzen</string>
+  <string name="secure_storage_delete_title">Speicher löschen</string>
+  <string name="secure_storage_unlock_key_prompt_msg">Geben Sie das Passwort zum Entsperren des sicheren Dateisystems ein.</string>
+  <string name="secure_storage_unlock_key_new_msg">Geben Sie ein Passwort zum Schutz des sicheren Dateisystems ein.</string>
+  <string name="secure_storage_unlock_key_reset_msg">Geben Sie das aktuelle und das neue Passwort ein, um das sichere Dateisystem zurückzuesetzen.</string>
+  <string name="secure_storage_unlock_old_key_title">Altes Passwort:</string>
+  <string name="secure_storage_unlock_new_key_title">Neues Passwort:</string>
+  <string name="secure_storage_unlock_key_title">Passwort:</string>
+  <string name="secure_storage_unlock_repeat_title">Passwort wiederholen:</string>
+  <string name="secure_storage_create_button">Erstellen</string>
+  <string name="secure_storage_unlock_button">Entsperren</string>
+  <string name="secure_storage_reset_button">Zurücksetzen</string>
+  <string name="secure_storage_delete_button">Löschen</string>
+  <string name="secure_storage_unlock_failed">Speicher kann nicht entsperrt werden</string>
+  <string name="secure_storage_unlock_validation_length">Das Passwort muss mindestens <xliff:g id="characters">%1$d</xliff:g> Zeichen lang sein.</string>
+  <string name="secure_storage_unlock_validation_equals">Passwörter stimmen nicht überein.</string>
   <string name="print_unsupported_document">Nicht unterstütztes Dokumentformat</string>
   <string name="print_unsupported_image">Nicht unterstütztes Bildformat</string>
   <string name="print_document_header">Dokument: <xliff:g id="document_name">%1$s</xliff:g></string>

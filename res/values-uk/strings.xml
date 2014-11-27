@@ -268,8 +268,6 @@
   <string name="pref_editor">Налаштування редактора</string>
   <string name="pref_themes">Теми</string>
   <string name="pref_about">Про програму</string>
-  <string name="pref_about_summary">Файловий менеджер v<xliff:g id="version">%1$s</xliff:g>
-Copyright \u00A9 2013 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">Основні</string>
   <string name="pref_case_sensitive_sort">Враховувати регістр</string>
   <string name="pref_case_sensitive_sort_summary">Враховувати регістр при навігації чи сортуванні пошукових результатів</string>
@@ -305,7 +303,6 @@ Copyright \u00A9 2013 The CyanogenMod Project</string>
   <string name="pref_save_search_terms_off">Умови пошуку не будуть зберігатися</string>
   <string name="pref_remove_saved_search_terms">Видалити збережені умови пошуку</string>
   <string name="pref_remove_saved_search_terms_summary">Натисніть для видалення всіх збережених умов пошуку</string>
-  <string name="pref_remove_saved_search_terms_msg">Всі збережені умови пошуку були видалені</string>
   <string name="pref_editor_behaviour_category">Поведінка</string>
   <string name="pref_no_suggestions">Без припущень</string>
   <string name="pref_no_suggestions_desc">Не відображити припущення при редагуванні файлів</string>

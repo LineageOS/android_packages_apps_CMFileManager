@@ -263,7 +263,6 @@
   <string name="pref_editor">هەڵبژاردنەکانی دەستکاریکەر</string>
   <string name="pref_themes">ڕووکارەکان</string>
   <string name="pref_about">دەربارەی</string>
-  <string name="pref_about_summary">بەڕێوەبەری فایل وەشانی<xliff:g id="version">%1$s</xliff:g>\nمافی لەبەرگرتنەوەی پارێزراوە بۆ \u00A9 2012-2014 پڕۆژەی سیانۆجین مۆد</string>
   <string name="pref_general_behaviour_category">گشتی</string>
   <string name="pref_case_sensitive_sort">شێوازی هەستیاری</string>
   <string name="pref_case_sensitive_sort_summary">ڕه‌چاوکردنی به‌رگ کاتێک ئاڕاسته‌ده‌کات یان ئه‌نجامی گه‌ڕان ڕیز ده‌کات</string>
@@ -299,7 +298,6 @@
   <string name="pref_save_search_terms_off">مه‌رجه‌کانی گه‌ڕان پاشه‌که‌وت ناکرێ</string>
   <string name="pref_remove_saved_search_terms">سڕینه‌وه‌ی مه‌رجه‌ گه‌ڕانه‌کان که‌ پاشه‌که‌وت کرابون</string>
   <string name="pref_remove_saved_search_terms_summary">تاپ بکه‌ بۆ سڕینه‌وه‌ی هه‌موو مه‌رجه‌ گه‌ڕانه‌ پاشه‌که‌وتکراوه‌کان</string>
-  <string name="pref_remove_saved_search_terms_msg">هه‌موو مه‌رجه‌ گه‌ڕانه‌ پاشه‌که‌وتکراوه‌کان سڕدرانه‌وه‌.</string>
   <string name="pref_editor_behaviour_category">ڕه‌وشت</string>
   <string name="pref_no_suggestions">پێشنیار نەکراوە</string>
   <string name="pref_no_suggestions_desc">پێشنیاری فه‌رهه‌نگ پیشان نه‌درێت کاتێک ده‌سه‌تکاری په‌ڕگه‌ ده‌کرێت</string>

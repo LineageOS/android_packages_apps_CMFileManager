@@ -268,7 +268,6 @@
   <string name="pref_editor">Bewerker</string>
   <string name="pref_themes">Thema\'s</string>
   <string name="pref_about">Over</string>
-  <string name="pref_about_summary">Bestandsbeheerder v<xliff:g id="version">%1$s</xliff:g>\nCopyright \u00A9 2012-2014 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">Algemeen</string>
   <string name="pref_case_sensitive_sort">Hoofdlettergevoelig</string>
   <string name="pref_case_sensitive_sort_summary">Inhoud en zoekresultaten hoofdlettergevoelig sorteren</string>
@@ -304,7 +303,6 @@
   <string name="pref_save_search_terms_off">Zoektermen worden niet opgeslagen</string>
   <string name="pref_remove_saved_search_terms">Opgeslagen zoektermen verwijderen</string>
   <string name="pref_remove_saved_search_terms_summary">Tik om alle opgeslagen zoektermen te verwijderen</string>
-  <string name="pref_remove_saved_search_terms_msg">Alle opgeslagen zoektermen zijn verwijderd.</string>
   <string name="pref_editor_behaviour_category">Gedrag</string>
   <string name="pref_no_suggestions">Geen suggesties</string>
   <string name="pref_no_suggestions_desc">Woordenboeksuggesties verbergen tijdens het bewerken van een bestand</string>
