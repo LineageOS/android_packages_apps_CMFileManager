@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7aa08908_c2b9b2ee",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 818,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2014-12-13T21:10:19Z",
+      "side": 1,
+      "message": "Seems you have a constant in the MediaHelper class for external. Does it make sense to use that here?",
+      "revId": "d5de46e1932156b81d00f20d806bd2a052722bc2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
