@@ -103,9 +103,9 @@ public final class IntentsActionPolicy extends ActionsPolicy {
             // Obtain the mime/type and passed it to intent
             String mime = MimeTypeHelper.getMimeType(ctx, fso);
             if (mime != null) {
-                intent.setDataAndType(getUriFromFile(ctx, fso), mime);
+                intent.setDataAndType(getUriFromFile(ctx, fso, mime), mime);
             } else {
-                intent.setData(getUriFromFile(ctx, fso));
+                intent.setData(getUriFromFile(ctx, fso, mime));
             }
 
             // Resolve the intent
@@ -142,7 +142,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
             intent.setAction(android.content.Intent.ACTION_SEND);
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             intent.setType(MimeTypeHelper.getMimeType(ctx, fso));
-            Uri uri = getUriFromFile(ctx, fso);
+            Uri uri = getUriFromFile(ctx, fso, intent.getType());
             intent.putExtra(Intent.EXTRA_STREAM, uri);
 
             // Resolve the intent
@@ -203,7 +203,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                 lastMimeType = mimeType;
 
                 // Add the uri
-                uris.add(getUriFromFile(ctx, fso));
+                uris.add(getUriFromFile(ctx, fso, mimeType));
             }
             if (sameMimeType) {
                 intent.setType(lastMimeType);
@@ -657,7 +657,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      * @param ctx The current context
      * @param file The file to resolve
      */
-    private static Uri getUriFromFile(Context ctx, FileSystemObject fso) {
+    private static Uri getUriFromFile(Context ctx, FileSystemObject fso, String mimeType) {
         // If the passed object is secure file then we have to provide access with
         // the internal resource provider
         if (fso.isSecure() && SecureConsole.isVirtualStorageResource(fso.getFullPath())
@@ -668,8 +668,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
 
         // Try to resolve media data or return a file uri
         final File file = new File(fso.getFullPath());
-        ContentResolver cr = ctx.getContentResolver();
-        Uri uri = MediaHelper.fileToContentUri(cr, file);
+        Uri uri = MediaHelper.fileToContentUri(ctx, file, mimeType);
         if (uri == null) {
             uri = Uri.fromFile(file);
         }
