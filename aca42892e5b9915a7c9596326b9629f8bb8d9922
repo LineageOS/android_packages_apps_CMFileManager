@@ -16,6 +16,24 @@
       "revId": "aca42892e5b9915a7c9596326b9629f8bb8d9922",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7aa08908_8e0350b8",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/FilesystemInfoDialog.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2014-12-16T15:10:19Z",
+      "side": 1,
+      "message": "Thanks adnan, you\u0027re the man!",
+      "parentUuid": "7aa08908_0ea5a003",
+      "revId": "aca42892e5b9915a7c9596326b9629f8bb8d9922",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
