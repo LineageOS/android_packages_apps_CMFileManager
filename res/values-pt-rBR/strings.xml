@@ -328,6 +328,7 @@
   <string name="pref_remove_saved_search_terms_msg">Todos os termos de busca foram removidos</string>
   <string name="pref_secure_storage_category">Armazenamento seguro</string>
   <string name="pref_secure_storage_delayed_sync_title">Sincronização atrasada</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Sincronização de sistemas de arquivos seguros é uma operação dispendiosa. Habilite esta opção para permitir melhor tempo de resposta após cada operação, executando a sincronização quando o sistema de arquivos não estiver sendo utilizado. Mas se o aplicativo falhar, pode perder as informações pendentes não sincronizadas.</string>
   <string name="pref_secure_storage_reset_password_title">Redefinir a senha</string>
   <string name="pref_secure_storage_delete_storage_title">Excluir armazenamento</string>
   <string name="pref_editor_behaviour_category">Comportamento</string>

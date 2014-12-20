@@ -340,6 +340,7 @@
   <string name="pref_remove_saved_search_terms_msg">Alle gemte søgetermer blev fjernet</string>
   <string name="pref_secure_storage_category">Sikker lagring</string>
   <string name="pref_secure_storage_delayed_sync_title">Forsinket synkronisering</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Synkronisering af sikre filsystemer er en bekostelig operation. Aktivér denne mulighed for at tillade bedre svartider efter hver operation, hvor synkroniseringen udføres når filsystemet er i en ubenyttet tilstand, men på bekostning af tabt afventende information, som ikke synkroniseres hvis appen går ned.</string>
   <string name="pref_secure_storage_reset_password_title">Nulstil adgangskode</string>
   <string name="pref_secure_storage_delete_storage_title">Slet lager</string>
   <string name="pref_editor_behaviour_category">Opførsel</string>

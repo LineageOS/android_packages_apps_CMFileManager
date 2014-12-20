@@ -329,6 +329,7 @@
   <string name="pref_remove_saved_search_terms_msg">Tots els termes de cerca desats s\'han esborrat</string>
   <string name="pref_secure_storage_category">Emmagatzematge segur</string>
   <string name="pref_secure_storage_delayed_sync_title">Retard de sincronització</string>
+  <string name="pref_secure_storage_delayed_sync_summary">La sincronització de sistemes de fitxers segurs és una operació costosa. Habilita aquesta opció per aconseguir millors temps de resposta després de cada operació, realitzant la sincronització quan el sistema de fitxers està en un estat sense ús, però a costa de perdre informació pendent de ser sincronitzada si l\'app es penja.</string>
   <string name="pref_secure_storage_reset_password_title">Restableix contrasenya</string>
   <string name="pref_secure_storage_delete_storage_title">Esborra emmagatzematge</string>
   <string name="pref_editor_behaviour_category">Comportament</string>

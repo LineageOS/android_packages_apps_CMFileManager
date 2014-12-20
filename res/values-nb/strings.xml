@@ -335,6 +335,7 @@
   <string name="pref_remove_saved_search_terms_msg">Alle lagrede søkeordene ble fjernet</string>
   <string name="pref_secure_storage_category">Sikker lagring</string>
   <string name="pref_secure_storage_delayed_sync_title">Forsinket synkronisering</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Synkronisering av sikre filsystemer er en kostbar operasjon. Aktiver dette alternativet for å få en raskere svartid etter hver operasjon, utføre synkronisering når filsystemet er i ubrukt tilstand, men på bekostning av tapt ventende informasjon som ikke synkroniserer hvis app\'en krasjer.</string>
   <string name="pref_secure_storage_reset_password_title">Tilbakestill Passord</string>
   <string name="pref_secure_storage_delete_storage_title">Slett lagring</string>
   <string name="pref_editor_behaviour_category">Oppførsel</string>
@@ -391,6 +392,7 @@
   <string name="secure_storage_delete_button">Slett</string>
   <string name="secure_storage_unlock_failed">Kan ikke låse opp lagring</string>
   <string name="secure_storage_unlock_validation_length">Passord må ha minst <xliff:g id="characters"> %1$d </xliff:g> tegn.</string>
+  <string name="secure_storage_unlock_validation_equals">Passordene samsvarer ikke.</string>
   <string name="print_unsupported_document">Ustøttet dokumentformat</string>
   <string name="print_unsupported_image">Ustøttet bildeformat</string>
   <string name="print_document_header">Dokument: <xliff:g id="document_name">%1$s</xliff:g></string>

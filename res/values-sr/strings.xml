@@ -335,6 +335,7 @@
   <string name="pref_remove_saved_search_terms_msg">Сви сачувани услови претраге су уклоњени</string>
   <string name="pref_secure_storage_category">Безбедно складиште</string>
   <string name="pref_secure_storage_delayed_sync_title">Одложена синхронизација</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Синхронизација безбедног фајл система је скуп операција. Омогућите ову опцију да дозволите бржи одзив после сваке операције, обављање синхронизације када је фајл систем у стању неискоришћеног, али на уштрб губитка несинхронизоване информације на чекању ако апликација пукне.</string>
   <string name="pref_secure_storage_reset_password_title">Ресетујте лозинку</string>
   <string name="pref_secure_storage_delete_storage_title">Обриши складиште</string>
   <string name="pref_editor_behaviour_category">Понашање</string>

@@ -328,6 +328,7 @@
   <string name="pref_remove_saved_search_terms_msg">සුරැකු සෙවීමේ වචන සියල්ල ඉවත් කෙරිණි</string>
   <string name="pref_secure_storage_category">සුරක්ෂිත ගබඩාව</string>
   <string name="pref_secure_storage_delayed_sync_title">ප්‍රමාදිත සමමුහුකරණය</string>
+  <string name="pref_secure_storage_delayed_sync_summary">සුරක්‍ෂිත ගොනු පද්ධති සමමුහුර්තකරණය යනු මිල අධික වූ මෙහෙයුමකි. යෙදුම බිඳ වැටුණහොත් පොරොත්තු තොරතුරු සමමුහුර්ත නොවී නැති වී යාමේ වියදමක් ඇතුව ගොනු පද්ධතිය භාවිත නොවන තත්ත්වයේ පවතින විට සමමුහුර්තකරණය සිදු කිරීමට, සෑම මෙහෙයුමක් ම අවසානයේදී වේගවත් ප්‍රතිචාරවලට ඉඩ දීමට මෙම විකල්පය සබල කරන්න.</string>
   <string name="pref_secure_storage_reset_password_title">මුරපදය යළි සකසන්න</string>
   <string name="pref_secure_storage_delete_storage_title">ගබඩාව මකන්න</string>
   <string name="pref_editor_behaviour_category">හැසිරීම</string>

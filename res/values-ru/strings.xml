@@ -335,6 +335,7 @@
   <string name="pref_remove_saved_search_terms_msg">Сохранённые поисковые запросы удалены</string>
   <string name="pref_secure_storage_category">Защищённое хранилище</string>
   <string name="pref_secure_storage_delayed_sync_title">Отложенная синхронизация</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Синхронизация защищённых ФС требует дополнительного времени. Включение этой опции позволит увеличить производительность за счёт выполнения синхронизации только при отсутствии файловой активности, однако в этом случае при падении приложения могут быть утеряны данные.</string>
   <string name="pref_secure_storage_reset_password_title">Изменить пароль</string>
   <string name="pref_secure_storage_delete_storage_title">Удалить хранилище</string>
   <string name="pref_editor_behaviour_category">Поведение</string>

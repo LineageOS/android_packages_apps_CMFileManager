@@ -328,6 +328,7 @@
   <string name="pref_remove_saved_search_terms_msg">Visi išsaugoti paieškos terminai buvo pašalinti</string>
   <string name="pref_secure_storage_category">Saugi saugykla</string>
   <string name="pref_secure_storage_delayed_sync_title">Uždelstas sinchronizavimas</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Saugių failų sistemų sinchronizavimas yra atimanti daug laiko operacija. Įjunkite šią parinktį norėdami leisti greitesnį atsaką po kiekvienos operacijos, atlikti sinchronizavimą kai failų sistema yra nenaudojama, tačiau rizikuodami prarasti nesinchronizuotą informaciją po netikėto programos sustojimo.</string>
   <string name="pref_secure_storage_reset_password_title">Atkurti slaptažodį</string>
   <string name="pref_secure_storage_delete_storage_title">Ištrinti saugyklą</string>
   <string name="pref_editor_behaviour_category">Elgsena</string>

@@ -328,6 +328,7 @@
   <string name="pref_remove_saved_search_terms_msg">Tüm kaydedilen arama terimleri silindi</string>
   <string name="pref_secure_storage_category">Güvenli depolama</string>
   <string name="pref_secure_storage_delayed_sync_title">Gecikmiş eşitleme</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Güvenli dosya sistemlerinin eşitlenmesi riskli bir işlemdir.Her işlemden sonra daha hızlı süreler için bu seçeneği etkinleştirin. Eşitleme dosya sistemi kullanılmazken yapılır. Ancak eğer uygulama çökerse eşitlenmeyi bekleyen bilgiler kaybolabilir.</string>
   <string name="pref_secure_storage_reset_password_title">Parolayı sıfırla</string>
   <string name="pref_secure_storage_delete_storage_title">Depolamayı sil</string>
   <string name="pref_editor_behaviour_category">Davranış</string>

@@ -317,18 +317,19 @@
   <string name="pref_show_relevance_widget">関連度ウィジェットを表示</string>
   <string name="pref_highlight_terms">検索語をハイライト表示</string>
   <string name="pref_sort_search_results_mode">検索結果の並べ替えモード</string>
-  <string name="pref_sort_search_results_mode_none">並べ替えない</string>
+  <string name="pref_sort_search_results_mode_none">並べ替えしない</string>
   <string name="pref_sort_search_results_mode_name">名前順</string>
   <string name="pref_sort_search_results_mode_relevance">関連度順</string>
   <string name="pref_search_privacity_category">プライバシー</string>
   <string name="pref_save_search_terms">検索語を保存</string>
-  <string name="pref_save_search_terms_on">検索語は保存され、今後の検索で候補として使用されます</string>
+  <string name="pref_save_search_terms_on">検索語は保存されて今後の検索で候補として使用されます</string>
   <string name="pref_save_search_terms_off">検索語は保存されません</string>
   <string name="pref_remove_saved_search_terms">保存されている検索語を削除</string>
   <string name="pref_remove_saved_search_terms_summary">タップして保存されているすべての検索語を削除する</string>
   <string name="pref_remove_saved_search_terms_msg">すべての保存されていた検索語が削除されました</string>
   <string name="pref_secure_storage_category">セキュアストレージ</string>
   <string name="pref_secure_storage_delayed_sync_title">遅延同期</string>
+  <string name="pref_secure_storage_delayed_sync_summary">セキュアファイルシステムの同期は負荷の高い動作です。このオプションを有効にすると、ファイルシステムが未使用の状態のときに同期を実行することによってあらゆる操作の後の反応を高速化できますが、アプリがクラッシュした場合に同期されていない保留中の情報が失われることを犠牲にしています。</string>
   <string name="pref_secure_storage_reset_password_title">パスワードをリセット</string>
   <string name="pref_secure_storage_delete_storage_title">ストレージを削除</string>
   <string name="pref_editor_behaviour_category">動作</string>
@@ -393,5 +394,5 @@
   <string name="security_warning_extract">警告！\n\n絶対パスまたは相対パスの書庫の解凍は、システムファイルを上書きして端末を損傷する可能性があります。\n\n続けますか？</string>
   <string name="changelog_title">更新履歴</string>
   <string name="welcome_title">ようこそ</string>
-  <string name="welcome_msg">CyanogenModファイルマネージャーへようこそ。\n\nこのアプリはシステムファイルの操作や、端末を破壊する可能性のある操作を許可します。損害を防ぐために、アプリは安全で低い権限を持つモードで開始します。\n\n上級者向けのすべての権限を持つモードは設定からアクセスできます。操作がシステムを破壊しないことを確認するのは個人の責任です。\n\nCyanogenModチーム</string>
+  <string name="welcome_msg">CyanogenModファイルマネージャーへようこそ。\n\nこのアプリはシステムファイルの操作や端末を破壊する可能性のある操作を許可します。損害を防ぐために、アプリは安全で低い権限を持つモードで開始します。\n\nすべての権限を持つ上級者向けのモードは設定からアクセスできます。操作がシステムを破壊しないことを確認するのは個人の責任です。\n\nCyanogenModチーム</string>
 </resources>

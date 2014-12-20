@@ -328,6 +328,7 @@
   <string name="pref_remove_saved_search_terms_msg">Toţi termenii de căutare salvaţi au fost eliminaţi</string>
   <string name="pref_secure_storage_category">Stocare securizată</string>
   <string name="pref_secure_storage_delayed_sync_title">Sincronizare întârziată</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Sincronizarea unor sisteme cu fişiere sigure este o operaţie costisitoare. Activaţi această opţiune pentru a permite răspunsuri în timp mai bune după fiecare operațiune, efectuând sincronizări atunci când sistemul de fişiere este în stare nefolosită, dar în detrimentul pierderii de informaţii în aşteptare de sincronizate în cazul unei erori a aplicației.</string>
   <string name="pref_secure_storage_reset_password_title">Resetare parolă</string>
   <string name="pref_secure_storage_delete_storage_title">Ştergeţi stocarea</string>
   <string name="pref_editor_behaviour_category">Comportament</string>

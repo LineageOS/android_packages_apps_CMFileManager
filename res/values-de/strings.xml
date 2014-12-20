@@ -325,6 +325,10 @@
   <string name="pref_save_search_terms_off">Suchergebnisse werden nicht gespeichert</string>
   <string name="pref_remove_saved_search_terms">Gespeicherte Suchergebnisse löschen</string>
   <string name="pref_remove_saved_search_terms_summary">Tippen, um alle gespeicherten Suchergebnisse zu löschen</string>
+  <string name="pref_remove_saved_search_terms_msg">Alle gespeicherten Sucheanfragen wurden gelöscht</string>
+  <string name="pref_secure_storage_category">Sicherer Speicher</string>
+  <string name="pref_secure_storage_delayed_sync_title">Verzögerte Synchronisierung</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Die Synchronisation eines sicheren Dateisystems ist ein aufwendiger Vorgang. Aktivieren Sie diese Option, um die Reaktionszeit nach jeder Operation zu verbessern, in dem die Synchronisation des Dateisystems erst erfolgt, wenn es gerade nicht verwendet wird, aber mit dem Risiko, dass Informationen die noch nicht synchronisiert sind bei einem Absturz der App verloren gehen.</string>
   <string name="pref_secure_storage_reset_password_title">Passwort zurücksetzen</string>
   <string name="pref_secure_storage_delete_storage_title">Speicher löschen</string>
   <string name="pref_editor_behaviour_category">Verhalten</string>
@@ -370,6 +374,7 @@
   <string name="secure_storage_unlock_key_prompt_msg">Geben Sie das Passwort zum Entsperren des sicheren Dateisystems ein.</string>
   <string name="secure_storage_unlock_key_new_msg">Geben Sie ein Passwort zum Schutz des sicheren Dateisystems ein.</string>
   <string name="secure_storage_unlock_key_reset_msg">Geben Sie das aktuelle und das neue Passwort ein, um das sichere Dateisystem zurückzuesetzen.</string>
+  <string name="secure_storage_unlock_key_delete_msg">Geben Sie das aktuelle Passwort ein, um das sichere Dateisystem zu löschen.</string>
   <string name="secure_storage_unlock_old_key_title">Altes Passwort:</string>
   <string name="secure_storage_unlock_new_key_title">Neues Passwort:</string>
   <string name="secure_storage_unlock_key_title">Passwort:</string>

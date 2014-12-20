@@ -80,6 +80,7 @@
   <string name="actionbar_button_overflow_cd">更多選項</string>
   <string name="actionbar_button_storage_cd">儲存裝置</string>
   <string name="actionbar_button_save_cd">儲存</string>
+  <string name="actionbar_button_print_cd">列印</string>
   <string name="sort_by_name_asc">按名稱排列 ▲</string>
   <string name="sort_by_name_desc">按名稱排列 ▼</string>
   <string name="sort_by_date_asc">按日期排列 ▲</string>
@@ -182,6 +183,7 @@
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>檔案</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <string name="waiting_dialog_extracting_title">正在解壓縮\u2026</string>
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>檔案</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <string name="waiting_dialog_compressing_title">正在壓縮\u2026</string>
   <string name="actions_dialog_title">動作</string>
   <string name="actions_menu_properties_current_folder">屬性</string>
   <string name="actions_menu_refresh">重新整理</string>
@@ -193,6 +195,8 @@
   <string name="actions_menu_deselect">取消選取</string>
   <string name="actions_menu_paste_selection">貼上選取的項目</string>
   <string name="actions_menu_move_selection">移動選取的項目</string>
+  <string name="actions_menu_delete_selection">刪除選取的項目</string>
+  <string name="actions_menu_compress_selection">壓縮選取的項目</string>
   <string name="actions_menu_create_link">建立連結</string>
   <string name="actions_menu_open">開啟</string>
   <string name="actions_menu_open_with">開啟方式</string>
@@ -204,11 +208,15 @@
   <string name="actions_menu_delete">刪除</string>
   <string name="actions_menu_rename">重新命名</string>
   <string name="actions_menu_create_copy">建立副本</string>
+  <string name="actions_menu_properties">屬性</string>
   <string name="actions_menu_add_to_bookmarks">新增至書籤</string>
   <string name="actions_menu_add_shortcut">新增捷徑</string>
   <string name="actions_menu_open_parent_folder">開啟上層目錄</string>
+  <string name="actions_menu_print">列印</string>
+  <string name="actions_ask_undone_operation_msg">此動作無法復原。您確定要繼續？</string>
   <string name="input_name_dialog_label">名稱：</string>
   <string name="input_name_dialog_message_empty_name">該名稱不能為空白。</string>
+  <string name="input_name_dialog_message_invalid_path_name">無效的名稱。名稱中不能包含以下字元：「<xliff:g id="invalid_characters">%1$s</xliff:g>」。</string>
   <string name="input_name_dialog_message_invalid_name">無效的名稱。名稱中不能包含「.」與「..」。</string>
   <string name="input_name_dialog_message_name_exists">此名稱已存在。</string>
   <string name="associations_dialog_title">關聯</string>
@@ -235,6 +243,8 @@
   <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
   <string name="selection_folders_and_files">已選取 <xliff:g id="folders">%1$s</xliff:g>和 <xliff:g id="files">%2$s</xliff:g></string>
+  <string name="category_app">應用程式</string>
+  <string name="category_audio">音訊</string>
   <string name="compression_mode_title">壓縮方式</string>
   <string name="shortcut_failed_msg">捷徑處理失敗。</string>
   <string name="shortcut_creation_success_msg">捷徑建立成功。</string>
@@ -269,6 +279,7 @@
   <string name="pref_save_search_terms">儲存關鍵字</string>
   <string name="pref_no_suggestions">不顯示建議</string>
   <string name="pref_no_suggestions_desc">編輯檔案時不要顯示字典建議</string>
+  <string name="pref_word_wrap">自動換行</string>
   <string name="pref_editor_syntax_highlight_category">醒目提示語法</string>
   <string name="pref_syntax_highlight">醒目提示語法</string>
   <string name="pref_syntax_highlight_color_scheme">色彩配置</string>
@@ -290,6 +301,10 @@
   <string name="ash_reset_color_scheme">恢復預設色彩配置</string>
   <string name="ash_text">文字</string>
   <string name="ash_keyword">關鍵字</string>
+  <string name="secure_storage_reset_title">重設密碼</string>
+  <string name="secure_storage_reset_button">重設</string>
+  <string name="secure_storage_delete_button">刪除</string>
+  <string name="secure_storage_unlock_validation_equals">密碼不相符</string>
   <string name="security_warning_extract">警告！\n\n解壓一個使用相對或絕對路徑的壓縮檔案將會覆寫系統檔案，並對你的裝置造成損壞。\n\n您確定要繼續嗎？</string>
   <string name="changelog_title">更新日誌</string>
   <string name="welcome_title">歡迎</string>

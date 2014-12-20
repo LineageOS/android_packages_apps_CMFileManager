@@ -335,6 +335,7 @@
   <string name="pref_remove_saved_search_terms_msg">Všetky hľadané výrazy boli vymazané</string>
   <string name="pref_secure_storage_category">Zabezpečené úložisko</string>
   <string name="pref_secure_storage_delayed_sync_title">Oneskorená synchronizácia</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Synchronizácia zabezpečených súborových systémov je náročná operácia. Povoľte túto možnosť pre rýchlejšiu odozvu po každej operácii, vykonaním synchronizácie v čase, keď je súborový systém v nepoužívanom stave, ale na úkor straty čakajúcich informácií, ktoré nebudú synchronizované, ak aplikácia zlyhá.</string>
   <string name="pref_secure_storage_reset_password_title">Obnoviť heslo</string>
   <string name="pref_secure_storage_delete_storage_title">Odstrániť úložisko</string>
   <string name="pref_editor_behaviour_category">Správanie</string>
