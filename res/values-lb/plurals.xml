@@ -17,18 +17,23 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> klasör</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> Dossier</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> Dossieren</item>
   </plurals>
   <plurals name="n_files">
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> dosya</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> Fichier</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> Fichieren</item>
   </plurals>
   <plurals name="search_found_items">
-    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> dosya bulundu</item>
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> Element fonnt</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> Elementer fonnt</item>
   </plurals>
   <plurals name="selection_folders">
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> klasör seçildi.</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> Dossier ausgewielt.</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> Dossieren ausgewielt.</item>
   </plurals>
   <plurals name="selection_files">
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> dosya seçildi.</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> Fichier ausgewielt.</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> Fichieren ausgewielt.</item>
   </plurals>
 </resources>

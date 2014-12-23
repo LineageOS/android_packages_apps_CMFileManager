@@ -268,7 +268,6 @@
   <string name="pref_editor">Redaktora opcijas</string>
   <string name="pref_themes">Tēmas</string>
   <string name="pref_about">Par</string>
-  <string name="pref_about_summary">Failu pārvaldnieks v<xliff:g id="version">%1$s</xliff:g>\nAutortiesības \u00A9 2012-2014 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">Vispārīgi</string>
   <string name="pref_case_sensitive_sort">Reģistrjutīgs</string>
   <string name="pref_case_sensitive_sort_summary">Navigējot un kārtojot meklēšanas rezultātus ņem vērā reģistru</string>
@@ -304,7 +303,6 @@
   <string name="pref_save_search_terms_off">Meklēšanas nosacījumi netiks saglabāti</string>
   <string name="pref_remove_saved_search_terms">Dzēst saglabātos meklēšanas nosacījumus</string>
   <string name="pref_remove_saved_search_terms_summary">Piesitiet, lai dzēstu visas saglabātos meklēšanas nosacījumus</string>
-  <string name="pref_remove_saved_search_terms_msg">Visi saglabātie meklēšanas nosacījumi ir izdzēsti.</string>
   <string name="pref_editor_behaviour_category">Uzvedība</string>
   <string name="pref_no_suggestions">Nav ieteikumu</string>
   <string name="pref_no_suggestions_desc">Mainot failu nerādīt vārdnīcas ieteikumus</string>
