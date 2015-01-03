@@ -322,14 +322,14 @@
   <string name="pref_sort_search_results_mode_relevance">関連度順</string>
   <string name="pref_search_privacity_category">プライバシー</string>
   <string name="pref_save_search_terms">検索語を保存</string>
-  <string name="pref_save_search_terms_on">検索語は保存されて今後の検索で候補として使用されます</string>
+  <string name="pref_save_search_terms_on">検索語は保存されて、今後の検索で候補として使用されます</string>
   <string name="pref_save_search_terms_off">検索語は保存されません</string>
   <string name="pref_remove_saved_search_terms">保存されている検索語を削除</string>
   <string name="pref_remove_saved_search_terms_summary">タップして保存されているすべての検索語を削除する</string>
   <string name="pref_remove_saved_search_terms_msg">すべての保存されていた検索語が削除されました</string>
   <string name="pref_secure_storage_category">セキュアストレージ</string>
   <string name="pref_secure_storage_delayed_sync_title">遅延同期</string>
-  <string name="pref_secure_storage_delayed_sync_summary">セキュアファイルシステムの同期は負荷の高い動作です。このオプションを有効にすると、ファイルシステムが未使用の状態のときに同期を実行することによってあらゆる操作の後の反応を高速化できますが、アプリがクラッシュした場合に同期されていない保留中の情報が失われることを犠牲にしています。</string>
+  <string name="pref_secure_storage_delayed_sync_summary">セキュアファイルシステムの同期は負荷の高い動作です。このオプションを有効にすると、ファイルシステムが未使用の状態のときに同期を実行することによってあらゆる操作の後の反応を高速化できますが、アプリがクラッシュした場合に同期されていない保留中の情報が失われることを犠牲にします。</string>
   <string name="pref_secure_storage_reset_password_title">パスワードをリセット</string>
   <string name="pref_secure_storage_delete_storage_title">ストレージを削除</string>
   <string name="pref_editor_behaviour_category">動作</string>

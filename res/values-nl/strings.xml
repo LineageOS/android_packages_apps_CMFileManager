@@ -285,7 +285,7 @@
   <string name="pref">Instellingen</string>
   <string name="pref_general">Algemeen</string>
   <string name="pref_search">Zoeken</string>
-  <string name="pref_storage">Instellingen opslag</string>
+  <string name="pref_storage">Opslag</string>
   <string name="pref_editor">Bewerker</string>
   <string name="pref_themes">Thema\'s</string>
   <string name="pref_about">Over</string>
@@ -328,8 +328,8 @@
   <string name="pref_remove_saved_search_terms_msg">Alle opgeslagen zoektermen zijn verwijderd</string>
   <string name="pref_secure_storage_category">Beveiligde opslag</string>
   <string name="pref_secure_storage_delayed_sync_title">Vertraagde synchronisatie</string>
-  <string name="pref_secure_storage_delayed_sync_summary">Synchronisatie van beveiligde opslagsystemen kan een grote impact hebben op het systeem. Door dit in te schakelen krijgt u snellere responstijden, doordat het pas gesynchroniseerd wordt wanneer het bestandssysteem niet bezig is, maar kunnen gegevens verloren gaan wanneer de app crasht voordat synchronisatie heeft plaatsgevonden.</string>
-  <string name="pref_secure_storage_reset_password_title">Wachtwoord resetten</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Synchronisatie van beveiligde opslagsystemen kan een grote impact hebben op het systeem. Door deze optie in te schakelen krijgt u snellere responstijden, doordat het bestandssysteem pas gesynchroniseerd wordt wanneer het niet in gebruik is, maar kunnen gegevens verloren gaan wanneer de app crasht voordat synchronisatie heeft plaatsgevonden.</string>
+  <string name="pref_secure_storage_reset_password_title">Wachtwoord opnieuw instellen</string>
   <string name="pref_secure_storage_delete_storage_title">Opslag verwijderen</string>
   <string name="pref_editor_behaviour_category">Gedrag</string>
   <string name="pref_no_suggestions">Geen suggesties</string>
@@ -369,11 +369,11 @@
   <string name="ash_variable">Variabele</string>
   <string name="secure_storage_unlock_title">Opslag ontgrendelen</string>
   <string name="secure_storage_create_title">Opslag aanmaken</string>
-  <string name="secure_storage_reset_title">Wachtwoord resetten</string>
+  <string name="secure_storage_reset_title">Wachtwoord opnieuw instellen</string>
   <string name="secure_storage_delete_title">Opslag verwijderen</string>
   <string name="secure_storage_unlock_key_prompt_msg">Typ het wachtwoord om het beveiligde opslagsysteem te ontgrendelen.</string>
-  <string name="secure_storage_unlock_key_new_msg">Typ een wachtwoord om het beveiligde opslagsysteem mee te beschermen.</string>
-  <string name="secure_storage_unlock_key_reset_msg">Typ de huidige en nieuwe wachtwoorden om het beveiligde opslagsysteem te resetten.</string>
+  <string name="secure_storage_unlock_key_new_msg">Typ een wachtwoord om het beveiligde opslagsysteem te beschermen.</string>
+  <string name="secure_storage_unlock_key_reset_msg">Typ het huidige en nieuwe wachtwoord om het beveiligde opslagsysteem opnieuw in te stellen.</string>
   <string name="secure_storage_unlock_key_delete_msg">Typ het huidige wachtwoord om het beveiligde opslagsysteem te verwijderen.</string>
   <string name="secure_storage_unlock_old_key_title">Oud wachtwoord:</string>
   <string name="secure_storage_unlock_new_key_title">Nieuw wachtwoord:</string>
