@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7aa08908_952b2694",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1401,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-01-09T12:34:37Z",
+      "side": 1,
+      "message": "Not a big deal, but ?get needs a space.",
+      "revId": "a0f70df8c36b7f20792843df94dba5e49283e71d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
