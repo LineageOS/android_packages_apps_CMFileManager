@@ -16,6 +16,24 @@
       "revId": "e6dee74c68974204b71d43b404cb5d374b68b2cc",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7aa08908_f5826a51",
+        "filename": "src/com/cyanogenmod/filemanager/activities/PickerActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 444,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-01-09T08:16:53Z",
+      "side": 1,
+      "message": "Oops! Fixed in: http://review.cyanogenmod.org/#/c/84403/",
+      "parentUuid": "7aa08908_3a9a2164",
+      "revId": "e6dee74c68974204b71d43b404cb5d374b68b2cc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
