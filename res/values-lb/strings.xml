@@ -62,7 +62,7 @@
   <string name="msgs_operation_failure">D\'Operatioun ass feelgeschloen.</string>
   <string name="msgs_console_alloc_failure">Et ass en interne Feeler opgetrueden.</string>
   <string name="msgs_operation_can_not_be_cancelled">Dës Operatioun kann net ofgebrach ginn.</string>
-  <string name="msgs_read_only_filesystem">De Fichierssystem ass schreifgeschützt. Probéier de Fichiersystem mat Schreifrechter anzebanne ier s de dës Operatioun probéiers.</string>
+  <string name="msgs_read_only_filesystem">De Fichierssystem ass schreifgeschützt. Probéier de Fichiersystem mat Schreifrechter anzebannen ier s de dës Operatioun probéiers.</string>
   <string name="msgs_illegal_argument">Ongëltegt Argument. Opruff feelgeschloen.</string>
   <string name="msgs_unresolved_inconsistencies">Dës Operatioun ass net erlaabert well se Inkonsistenze géif verursaachen.</string>
   <string name="msgs_operation_not_allowed_in_current_directory">Dës Operatioun ass am aktuellen Dossier net erlaabt.\n\nDen Zildossier kann net de selweschte si wéi den Ausganksdossier, an och keen Ënnerdossier dovun.</string>
@@ -127,7 +127,7 @@
   <string name="fso_properties_dialog_category">Rubrik:</string>
   <string name="fso_properties_dialog_link">Link:</string>
   <string name="fso_properties_dialog_size">Gréisst:</string>
-  <string name="fso_properties_dialog_contains">Enthält:</string>
+  <string name="fso_properties_dialog_contains">Huet:</string>
   <string name="fso_properties_dialog_last_accessed_date">Zougegraff:</string>
   <string name="fso_properties_dialog_last_modified_date">Modifizéiert:</string>
   <string name="fso_properties_dialog_last_changed_date">Geännert:</string>
@@ -138,9 +138,9 @@
   <string name="fso_failed_to_allow_media_scan">Mediescan konnt net aktivéiert ginn</string>
   <string name="fso_failed_to_prevent_media_scan">Mediescan konnt net iwwerspronge ginn</string>
   <string name="fso_delete_nomedia_dir_title">\".nomedia\"-Dossier läschen</string>
-  <string name="fso_delete_nomedia_dir_body">Dësen Dossier enthält en Dossier mam Numm \".nomedia\".\n\nWëlls du en zesumme mat sengem Inhalt läschen?</string>
+  <string name="fso_delete_nomedia_dir_body">Dësen Dossier huet en Dossier mam Numm \".nomedia\".\n\nWëlls du en zesumme mat sengem Inhalt läschen?</string>
   <string name="fso_delete_nomedia_non_empty_title">Fichier \".nomedia\" läschen</string>
-  <string name="fso_delete_nomedia_non_empty_body">Dësen Dossier enthält en \".nomedia\"-Fichier deen net eidel ass.\n\nWëlls du e läschen?</string>
+  <string name="fso_delete_nomedia_non_empty_body">Dësen Dossier huet en \".nomedia\"-Fichier deen net eidel ass.\n\nWëlls du e läschen?</string>
   <string name="history">Historique</string>
   <string name="msgs_history_empty">Den Historique ass eidel.</string>
   <string name="msgs_history_unknown">Onbekanntent Element am Historique.</string>

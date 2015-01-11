@@ -174,6 +174,8 @@
   <string name="bookmarks_home">Hem</string>
   <string name="bookmarks_root_folder">Rot</string>
   <string name="bookmarks_system_folder">System</string>
+  <string name="bookmarks_secure">Skyddad lagring</string>
+  <string name="bookmarks_remote">Fjärrlagring</string>
   <string name="bookmarks_button_config_cd">Välj hemmapp.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Ta bort bokmärket.</string>
   <string name="bookmarks_msgs_add_success">Bokmärket tillagt.</string>
@@ -328,6 +330,8 @@
   <string name="pref_save_search_terms_off">Söktermer kommer inte att sparas</string>
   <string name="pref_remove_saved_search_terms">Ta bort sparade söktermer</string>
   <string name="pref_remove_saved_search_terms_summary">Tryck för att ta bort alla sparade söktermer</string>
+  <string name="pref_secure_storage_reset_password_title">Återställ lösenord</string>
+  <string name="pref_secure_storage_delete_storage_title">Ta bort lagringsenhet</string>
   <string name="pref_editor_behaviour_category">Beteende</string>
   <string name="pref_no_suggestions">Inga förslag</string>
   <string name="pref_no_suggestions_desc">Visa inte ordboksförslag vid redigering av fil</string>
@@ -364,7 +368,24 @@
   <string name="ash_keyword">Nyckelord</string>
   <string name="ash_quoted_string">Statisk sträng</string>
   <string name="ash_variable">Variabel</string>
+  <string name="secure_storage_reset_title">Återställ lösenord</string>
+  <string name="secure_storage_unlock_key_new_msg">Ange ett lösenord för att skydda filsystemet.</string>
+  <string name="secure_storage_unlock_key_reset_msg">Ange det nuvarande och nya lösenordet för att återställa det skyddade filsystemet.</string>
+  <string name="secure_storage_unlock_key_delete_msg">Ange det aktuella lösenordet för att ta bort det skyddade filsystemet.</string>
+  <string name="secure_storage_unlock_old_key_title">Tidigare lösenord:</string>
+  <string name="secure_storage_unlock_new_key_title">Nytt Lösenord:</string>
+  <string name="secure_storage_unlock_key_title">Lösenord:</string>
+  <string name="secure_storage_unlock_repeat_title">Upprepa lösenord:</string>
+  <string name="secure_storage_create_button">Skapa</string>
+  <string name="secure_storage_unlock_button">Lås upp</string>
+  <string name="secure_storage_reset_button">Återställ</string>
   <string name="secure_storage_delete_button">Ta bort</string>
+  <string name="secure_storage_unlock_failed">Kan inte låsa upp filsystemet</string>
+  <string name="secure_storage_unlock_validation_length">Lösenordet måste ha minst <xliff:g id="characters">%1$d </xliff:g> tecken.</string>
+  <string name="secure_storage_unlock_validation_equals">Lösenorden stämmer inte överens.</string>
+  <string name="print_unsupported_document">Dokumentformatet stöds ej</string>
+  <string name="print_unsupported_image">Bildformat stöds ej</string>
+  <string name="print_document_header">Dokument: <xliff:g id="document_name">%1$s</xliff:g></string>
   <string name="print_document_footer">Sida <xliff:g id="page_number">%1$s</xliff:g></string>
   <string name="security_warning_extract">Varning!\n\nExtrahering av arkiv till relativa eller absolut sökvägar kan orsaka skada i din enhet genom att skriva över systemfiler.\n\nVill du fortsätta?</string>
   <string name="changelog_title">Ändringslogg</string>

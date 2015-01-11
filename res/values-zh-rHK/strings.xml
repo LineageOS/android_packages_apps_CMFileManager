@@ -23,7 +23,6 @@
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">GB</string>
   <string name="datetime_format_order">%1$s %2$s</string>
-  <string name="device_blockdevice">塊設備</string>
   <string name="device_characterdevice">字符設備</string>
   <string name="device_namedpipe">命名管道</string>
   <string name="device_domainsocket">網域終端 (Domain socket)</string>

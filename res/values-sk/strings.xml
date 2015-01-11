@@ -133,7 +133,7 @@
   <string name="fso_properties_dialog_last_changed_date">Zmenené:</string>
   <string name="fso_properties_dialog_owner">Vlastník:</string>
   <string name="fso_properties_dialog_group">Skupina:</string>
-  <string name="fso_properties_dialog_others">Ostatné:</string>
+  <string name="fso_properties_dialog_others">Ostatní:</string>
   <string name="fso_properties_dialog_include_in_media_scan">Vynechať prieskum médií:</string>
   <string name="fso_failed_to_allow_media_scan">Zlyhalo povolenie prieskumu médií</string>
   <string name="fso_failed_to_prevent_media_scan">Zlyhalo zabránenie prieskumu médií</string>
