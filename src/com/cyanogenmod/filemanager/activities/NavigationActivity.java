@@ -603,7 +603,9 @@ public class NavigationActivity extends Activity
     @Override
     protected void onResume() {
         super.onResume();
-        
+
+        onRequestBookmarksRefresh();
+
         if (mSearchView.getVisibility() == View.VISIBLE) {
             closeSearch();
         }
@@ -1290,6 +1292,10 @@ public class NavigationActivity extends Activity
                     .getStorageVolumes(getApplication());
             int cc = volumes.length;
             for (int i = 0; i < cc; i++) {
+                if (!android.os.Environment.MEDIA_MOUNTED.equals(volumes[i].getState()) &&
+                    !android.os.Environment.MEDIA_MOUNTED_READ_ONLY.equals(volumes[i].getState())) {
+                    continue;
+                }
                 if (volumes[i].getPath().toLowerCase(Locale.ROOT)
                         .indexOf("usb") != -1) { //$NON-NLS-1$
                     bookmarks.add(new Bookmark(BOOKMARK_TYPE.USB, StorageHelper
