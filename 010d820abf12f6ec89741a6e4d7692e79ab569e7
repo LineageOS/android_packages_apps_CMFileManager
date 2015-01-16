@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a9d85d2_f6459117",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 623,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-01-16T13:14:59Z",
+      "side": 1,
+      "message": "Just wondering myself, but do we want compare by size a folder and a regular file. symlinks, sockets, and other block devices have 0 size.",
+      "revId": "010d820abf12f6ec89741a6e4d7692e79ab569e7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
