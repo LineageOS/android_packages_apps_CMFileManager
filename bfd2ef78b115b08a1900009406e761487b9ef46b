@@ -16,6 +16,24 @@
       "revId": "bfd2ef78b115b08a1900009406e761487b9ef46b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a9d85d2_b62ae97c",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1296,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-01-16T13:09:31Z",
+      "side": 1,
+      "message": "good catch, I don\u0027t think it will be, but we should check just in case.  I\u0027ll add that into the patch.  I also noticed even though the SIM is in UICC isn\u0027t showing right.  this is also related to another ticket in internal jira.",
+      "parentUuid": "5a9d85d2_02445872",
+      "revId": "bfd2ef78b115b08a1900009406e761487b9ef46b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
