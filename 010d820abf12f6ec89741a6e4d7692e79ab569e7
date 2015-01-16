@@ -16,6 +16,24 @@
       "revId": "010d820abf12f6ec89741a6e4d7692e79ab569e7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a9d85d2_19a5ee03",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 623,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-01-16T19:42:54Z",
+      "side": 1,
+      "message": "The other sort modes show folders at the top always, so I didn\u0027t think it was necessary to sort folders and files together with this sort mode. But it might be a useful feature.",
+      "parentUuid": "5a9d85d2_f6459117",
+      "revId": "010d820abf12f6ec89741a6e4d7692e79ab569e7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
