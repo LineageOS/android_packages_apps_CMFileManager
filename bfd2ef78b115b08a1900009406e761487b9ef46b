@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a9d85d2_02445872",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1296,
+      "author": {
+        "id": 10293
+      },
+      "writtenOn": "2015-01-16T10:44:57Z",
+      "side": 1,
+      "message": "any chance that volumes[i].getState() can be null?",
+      "revId": "bfd2ef78b115b08a1900009406e761487b9ef46b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
