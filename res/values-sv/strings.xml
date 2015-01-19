@@ -276,9 +276,14 @@
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> och <xliff:g id="files">%2$s</xliff:g> markerade.</string>
   <string name="category_system">SYSTEM</string>
   <string name="category_app">APP</string>
+  <string name="category_binary">BINÄR</string>
   <string name="category_text">TEXT</string>
   <string name="category_document">DOKUMENT</string>
   <string name="category_ebook">E-BOK</string>
+  <string name="category_mail">E-POST</string>
+  <string name="category_compress">KOMPRIMERA</string>
+  <string name="category_exec">KÖRBAR FIL</string>
+  <string name="category_database">DATABAS</string>
   <string name="category_font">TYPSNITT</string>
   <string name="category_image">BILD</string>
   <string name="category_audio">LJUD</string>
@@ -291,9 +296,11 @@
   <string name="pref">Inställningar</string>
   <string name="pref_general">Allmäna inställningar</string>
   <string name="pref_search">Sökinställningar</string>
+  <string name="pref_storage">Lagringsalternativ</string>
   <string name="pref_editor">Redigerarinställningar</string>
   <string name="pref_themes">Teman</string>
   <string name="pref_about">Om</string>
+  <string name="pref_about_summary">Filhanterare v<xliff:g id="version">%1$s</xliff:g>\nCopyright \u00A9 2012-2014 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">Allmänt</string>
   <string name="pref_case_sensitive_sort">Skriftlägeskänslig</string>
   <string name="pref_case_sensitive_sort_summary">Överväger skriftläge vid navigering eller sortering av sökresultat</string>
@@ -330,6 +337,8 @@
   <string name="pref_save_search_terms_off">Söktermer kommer inte att sparas</string>
   <string name="pref_remove_saved_search_terms">Ta bort sparade söktermer</string>
   <string name="pref_remove_saved_search_terms_summary">Tryck för att ta bort alla sparade söktermer</string>
+  <string name="pref_remove_saved_search_terms_msg">Alla sparade söktermer togs bort</string>
+  <string name="pref_secure_storage_delayed_sync_title">Fördröjd synkronisering</string>
   <string name="pref_secure_storage_reset_password_title">Återställ lösenord</string>
   <string name="pref_secure_storage_delete_storage_title">Ta bort lagringsenhet</string>
   <string name="pref_editor_behaviour_category">Beteende</string>
