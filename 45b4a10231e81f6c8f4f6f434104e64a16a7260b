@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "fad55976_30dbb0ef",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 1060,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-01-21T17:38:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fad55976_ca16e354",
+      "revId": "45b4a10231e81f6c8f4f6f434104e64a16a7260b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fad55976_2a0cdf41",
         "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2015-01-21T07:09:16Z",
       "side": 1,
       "message": "This check is redundant, as instanceof returns false for null values. Also line continuations should be indented by 8 spaces.",
+      "revId": "45b4a10231e81f6c8f4f6f434104e64a16a7260b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad55976_70e528a7",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 1079,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-01-21T17:38:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fad55976_2a0cdf41",
       "revId": "45b4a10231e81f6c8f4f6f434104e64a16a7260b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
