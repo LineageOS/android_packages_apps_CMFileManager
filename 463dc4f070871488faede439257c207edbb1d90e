@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fad55976_0a6abb1a",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1085,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-01-21T02:52:10Z",
+      "side": 1,
+      "message": "Could this be this simplified? IMO, there is no need to check for an IOException. If ErrnoException is the cause then it should declare the OsConstants with the errno).\n\n// Check if this error is an out of space exception and throw that specifically\nfinal Throwable cause \u003d e.getCause();\nif (cause !\u003d null \u0026\u0026 cause instanceof ErrnoException \u0026\u0026\n   ((ErrnoException) exception.getCause()).errno \u003d\u003d OsConstants.ENOSPC) {\n    throw new ExecutionException(R.string.msgs_no_disk_space);\n}",
+      "revId": "463dc4f070871488faede439257c207edbb1d90e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
