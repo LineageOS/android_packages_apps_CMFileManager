@@ -16,6 +16,24 @@
       "revId": "463dc4f070871488faede439257c207edbb1d90e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad55976_ea3ac7e6",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1085,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-01-21T06:45:14Z",
+      "side": 1,
+      "message": "I agree, I have checked just the cause to be an ErrnoException instead in PS2.",
+      "parentUuid": "fad55976_0a6abb1a",
+      "revId": "463dc4f070871488faede439257c207edbb1d90e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
