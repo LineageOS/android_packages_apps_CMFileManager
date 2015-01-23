@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fad55976_7f9333fb",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1460,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-01-23T18:30:08Z",
+      "side": 1,
+      "message": "Could be:\n\nintent.putExtra(SearchActivity.EXTRA_SEARCH_MIMETYPE, new MimeTypeCategory[] {MimeTypeCategory.AUDIO});\n\nTo simplify the code in SearchActivity.java that receives this extra.",
+      "revId": "444c1260ad5ea4db834af313831363cd8870edae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad55976_1f8677b9",
+        "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 618,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-01-23T18:30:08Z",
+      "side": 1,
+      "message": "Can we just pass an array of one or two elements instead and then we don\u0027t need two cases here for an array and for a single item?",
+      "revId": "444c1260ad5ea4db834af313831363cd8870edae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
