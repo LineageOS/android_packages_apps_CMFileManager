@@ -1460,7 +1460,9 @@ public class NavigationActivity extends Activity
                 intent.putExtra(SearchActivity.EXTRA_SEARCH_MIMETYPE, MimeTypeCategory.AUDIO);
                 break;
             case 4:
-                intent.putExtra(SearchActivity.EXTRA_SEARCH_MIMETYPE, MimeTypeCategory.DOCUMENT);
+                // search for both DOCUMENT and TEXT mime types
+                MimeTypeCategory[] categories = { MimeTypeCategory.DOCUMENT, MimeTypeCategory.TEXT };
+                intent.putExtra(SearchActivity.EXTRA_SEARCH_MIMETYPE, categories);
                 break;
         }
         startActivity(intent);
