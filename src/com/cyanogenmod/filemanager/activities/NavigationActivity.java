@@ -1061,7 +1061,8 @@ public class NavigationActivity extends Activity
                 final int index = mDrawerBookmarks.indexOfChild(v);
                 final Bookmark bookmark = mBookmarks.get(index);
 
-                boolean showEasyMode = (mSdBookmarks.contains(bookmark));
+                boolean showEasyMode = (mSdBookmarks.contains(bookmark)) &&
+                        getResources().getBoolean(R.bool.cmcc_show_easy_mode);
 
                 // try to navigate to the bookmark path
                 try {
