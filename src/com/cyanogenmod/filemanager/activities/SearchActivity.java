@@ -621,10 +621,10 @@ public class SearchActivity extends Activity
         Serializable mimeTypeExtra = getIntent().getSerializableExtra(EXTRA_SEARCH_MIMETYPE);
 
         if (mimeTypeExtra != null) {
-            MimeTypeCategory[] categories = (MimeTypeCategory[]) getIntent()
+            ArrayList<MimeTypeCategory> categories = (ArrayList<MimeTypeCategory>) getIntent()
                     .getSerializableExtra(EXTRA_SEARCH_MIMETYPE);
             // setting load factor to 1 to avoid the backing map's resizing
-            mMimeTypeCategories = new HashSet<MimeTypeCategory>(categories.length, 1);
+            mMimeTypeCategories = new HashSet<MimeTypeCategory>(categories.size(), 1);
             for (MimeTypeCategory category : categories) {
                 mMimeTypeCategories.add(category);
             }
