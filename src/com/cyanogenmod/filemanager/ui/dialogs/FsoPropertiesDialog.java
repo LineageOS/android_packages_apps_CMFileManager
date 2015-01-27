@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -191,7 +192,7 @@ public class FsoPropertiesDialog
         this.mDialog.setButton(
                 DialogInterface.BUTTON_NEGATIVE,
                 this.mContext.getString(android.R.string.ok),
-                (DialogInterface.OnClickListener)null);
+                (DialogInterface.OnClickListener) null);
         this.mDialog.setOnCancelListener(this);
         this.mDialog.setOnDismissListener(this);
 
@@ -520,10 +521,6 @@ public class FsoPropertiesDialog
 
                     // Apply the them
                     applyTabTheme();
-
-                    // Adjust the size of the spinners
-                    adjustSpinnerSize(this.mSpnOwner);
-                    adjustSpinnerSize(this.mSpnGroup);
                 }
                 this.mInfoMsgView.setVisibility(
                         mIsVirtual || this.mHasPrivileged || !this.mIsAdvancedMode
@@ -1033,8 +1030,8 @@ public class FsoPropertiesDialog
         this.mInfoMsgView.setText(msg);
         this.mInfoMsgView.setVisibility(
                 mIsVirtual || !this.mIsAdvancedMode || (this.mHasPrivileged && msg == null) ?
-                        View.GONE :
-                        View.VISIBLE);
+                View.GONE :
+                View.VISIBLE);
     }
 
     /**
@@ -1166,27 +1163,6 @@ public class FsoPropertiesDialog
                 }
             });
         }
-    }
-
-    /**
-     * Method that adjust the size of the spinner to fit the window
-     *
-     * @param spinner The spinner
-     */
-    private void adjustSpinnerSize(final Spinner spinner) {
-        final View v = this.mContentView.findViewById(R.id.fso_properties_dialog_tabhost);
-        spinner.post(new Runnable() {
-            @Override
-            public void run() {
-                // Align with the last checkbox of the column
-                int vW = v.getMeasuredWidth();
-                int[] cbSpn = new int[2];
-                spinner.getLocationInWindow(cbSpn);
-
-                // Set the width
-                spinner.getLayoutParams().width = vW - cbSpn[0];
-            }
-        });
     }
 
     /**
