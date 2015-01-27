@@ -435,6 +435,7 @@ public class NavigationActivity extends Activity
             add(VIDEO);
             add(AUDIO);
             add(DOCUMENT);
+            add(APP);
         }
     };
 
@@ -605,6 +606,8 @@ public class NavigationActivity extends Activity
                 .ic_em_music));
         EASY_MODE_ICONS.put(MimeTypeCategory.DOCUMENT, getResources().getDrawable(R.drawable
                 .ic_em_document));
+        EASY_MODE_ICONS.put(MimeTypeCategory.APP, getResources().getDrawable(R.drawable
+                .ic_em_application));
 
         //Save state
         super.onCreate(state);
@@ -1420,7 +1423,7 @@ public class NavigationActivity extends Activity
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 convertView = (convertView == null) ?getLayoutInflater().inflate(R.layout
-                        .navigation_view_simple_item, null, true) : convertView;
+                        .navigation_view_simple_item, parent, false) : convertView;
                 MimeTypeCategory item = getItem(position);
                 String typeTitle = MIME_TYPE_LOCALIZED_NAMES[item.ordinal()];
                 TextView typeTitleTV = (TextView) convertView
