@@ -26,6 +26,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.preference.PreferenceActivity;
@@ -66,8 +68,11 @@ import com.cyanogenmod.filemanager.model.SearchResult;
 import com.cyanogenmod.filemanager.model.Symlink;
 import com.cyanogenmod.filemanager.parcelables.SearchInfoParcelable;
 import com.cyanogenmod.filemanager.preferences.AccessMode;
+import com.cyanogenmod.filemanager.preferences.DisplayRestrictions;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
+import com.cyanogenmod.filemanager.preferences.ObjectStringIdentifier;
 import com.cyanogenmod.filemanager.preferences.Preferences;
+import com.cyanogenmod.filemanager.preferences.SearchSortResultMode;
 import com.cyanogenmod.filemanager.providers.RecentSearchesContentProvider;
 import com.cyanogenmod.filemanager.tasks.SearchResultDrawingAsyncTask;
 import com.cyanogenmod.filemanager.ui.ThemeManager;
@@ -87,13 +92,16 @@ import com.cyanogenmod.filemanager.util.ExceptionUtil.OnRelaunchCommandResult;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
+import com.cyanogenmod.filemanager.util.SearchHelper;
 import com.cyanogenmod.filemanager.util.StorageHelper;
 
 import java.io.FileNotFoundException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * An activity for search files and folders.
@@ -155,7 +163,8 @@ public class SearchActivity extends Activity
                             // Recreate the adapter
                             int pos = SearchActivity.
                                         this.mSearchListView.getFirstVisiblePosition();
-                            drawResults();
+                            // drawResults();
+                            mAdapter.notifyDataSetChanged();
                             SearchActivity.this.mSearchListView.setSelection(pos);
                             return;
                         }
@@ -227,12 +236,8 @@ public class SearchActivity extends Activity
          */
         @Override
         public void onConcurrentAsyncStart() {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    SearchActivity.this.toggleResults(false, false);
-                }
-            });
+            mSearchInProgress = true;
+            mAdapter.startStreaming();
         }
 
         /**
@@ -240,21 +245,19 @@ public class SearchActivity extends Activity
          */
         @Override
         public void onConcurrentAsyncEnd(boolean cancelled) {
+            mSearchInProgress = false;
             mSearchListView.post(new Runnable() {
                 @Override
                 public void run() {
                     try {
-                        //Dismiss the dialog
-                        if (SearchActivity.this.mDialog != null) {
-                            SearchActivity.this.mDialog.dismiss();
+                        mAdapter.stopStreaming();
+                        int resultsSize = mAdapter.resultsSize();
+                        mStreamingSearchProgress.setVisibility(View.INVISIBLE);
+                        if (mMimeTypeCategories.size() > 1) {
+                            mMimeTypeSpinner.setVisibility(View.VISIBLE);
                         }
-
-                        // Resolve the symlinks
-                        FileHelper.resolveSymlinks(
-                                SearchActivity.this, SearchActivity.this.mResultList);
-
-                        // Draw the results
-                        drawResults();
+                        mSearchListView.setVisibility(resultsSize > 0 ? View.VISIBLE : View.GONE);
+                        mEmptyListMsg.setVisibility(resultsSize > 0 ? View.GONE : View.VISIBLE);
 
                     } catch (Throwable ex) {
                         Log.e(TAG, "onAsyncEnd method fails", ex); //$NON-NLS-1$
@@ -270,11 +273,13 @@ public class SearchActivity extends Activity
         @SuppressWarnings("unchecked")
         public void onConcurrentPartialResult(final Object partialResults) {
             //Saved in the global result list, for save at the end
+            FileSystemObject result = null;
             if (partialResults instanceof FileSystemObject) {
                 FileSystemObject fso = (FileSystemObject) partialResults;
                 if (mMimeTypeCategories == null || mMimeTypeCategories.contains(MimeTypeHelper
                         .getCategory(SearchActivity.this, fso))) {
                     SearchActivity.this.mResultList.add((FileSystemObject) partialResults);
+                    showSearchResult((FileSystemObject) partialResults);
                 }
             } else {
                 List<FileSystemObject> fsoList = (List<FileSystemObject>) partialResults;
@@ -282,6 +287,7 @@ public class SearchActivity extends Activity
                     if (mMimeTypeCategories == null || mMimeTypeCategories.contains(MimeTypeHelper
                             .getCategory(SearchActivity.this, fso))) {
                         SearchActivity.this.mResultList.add(fso);
+                        showSearchResult(fso);
                     }
                 }
             }
@@ -291,8 +297,16 @@ public class SearchActivity extends Activity
                 @Override
                 public void run() {
                     if (SearchActivity.this.mDialog != null) {
-                        int progress = SearchActivity.this.mResultList.size();
-                        setProgressMsg(progress);
+                        int progress = mAdapter.getCount();
+                        String foundItems =
+                                getResources().
+                                        getQuantityString(
+                                                R.plurals.search_found_items, progress, Integer.valueOf(progress));
+                        SearchActivity.this.mSearchFoundItems.setText(
+                                getString(
+                                        R.string.search_found_items_in_directory,
+                                        foundItems,
+                                        mSearchDirectory));
                     }
                 }
             });
@@ -372,6 +386,10 @@ public class SearchActivity extends Activity
      * @hide
      */
     HashSet<MimeTypeCategory> mMimeTypeCategories;
+
+    private SearchResultAdapter mAdapter;
+    private ProgressBar mStreamingSearchProgress;
+    private boolean mSearchInProgress;
 
     /**
      * {@inheritDoc}
@@ -543,16 +561,6 @@ public class SearchActivity extends Activity
         configuration.setImageResource(R.drawable.ic_material_light_config);
         configuration.setVisibility(View.VISIBLE);
         actionBar.setCustomView(customTitle);
-
-        // Specify a SpinnerAdapter to populate the dropdown list.
-        Spinner typeSpinner = (Spinner) findViewById(R.id.search_status_type_spinner);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                R.layout.search_spinner_item,
-                MimeTypeHelper.MimeTypeCategory.getFriendlyLocalizedNames(this));
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        typeSpinner.setAdapter(adapter);
-        typeSpinner.setOnItemSelectedListener(this);
     }
 
     /**
@@ -580,12 +588,25 @@ public class SearchActivity extends Activity
 
         //Other components
         this.mSearchWaiting = (ProgressBar)findViewById(R.id.search_waiting);
+        mStreamingSearchProgress = (ProgressBar) findViewById(R.id.streaming_progress_bar);
+        mStreamingSearchProgress.getIndeterminateDrawable()
+                .setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
+
         this.mSearchFoundItems = (TextView)findViewById(R.id.search_status_found_items);
         setFoundItems(0, ""); //$NON-NLS-1$
         this.mSearchTerms = (TextView)findViewById(R.id.search_status_query_terms);
         this.mSearchTerms.setText(
                 Html.fromHtml(getString(R.string.search_terms, ""))); //$NON-NLS-1$
-        this.mMimeTypeSpinner = (Spinner) findViewById(R.id.search_status_type_spinner);
+
+        // populate Mime Types spinner for search results filtering
+        mMimeTypeSpinner = (Spinner) findViewById(R.id.search_status_type_spinner);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                R.layout.search_spinner_item,
+                MimeTypeHelper.MimeTypeCategory.getFriendlyLocalizedNames(this));
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mMimeTypeSpinner.setAdapter(adapter);
+        mMimeTypeSpinner.setOnItemSelectedListener(this);
     }
 
     /**
@@ -624,7 +645,6 @@ public class SearchActivity extends Activity
                 mMimeTypeCategories.add(category);
             }
         }
-
         //Stop any pending action
         try {
             if (SearchActivity.this.mDrawingSearchResultTask != null
@@ -763,10 +783,10 @@ public class SearchActivity extends Activity
             ((SearchResultAdapter)this.mSearchListView.getAdapter()).dispose();
         }
         this.mResultList = new ArrayList<FileSystemObject>();
-        SearchResultAdapter adapter =
+        mAdapter =
                 new SearchResultAdapter(this,
                         new ArrayList<SearchResult>(), R.layout.search_item, this.mQuery);
-        this.mSearchListView.setAdapter(adapter);
+        this.mSearchListView.setAdapter(mAdapter);
 
         //Set terms
         if (mMimeTypeCategories == null) {
@@ -822,7 +842,7 @@ public class SearchActivity extends Activity
                                     return true;
                                 }
                             });
-                    SearchActivity.this.mDialog.show();
+                    // SearchActivity.this.mDialog.show();
 
                     // Execute the query (search in background)
                     SearchActivity.this.mExecutable =
@@ -857,6 +877,27 @@ public class SearchActivity extends Activity
                 }
             }
         });
+    }
+
+    /**
+     * Ensures the search result meets user preferences and passes it to the adapter for display
+     *
+     * @param result FileSystemObject that matches the search result criteria
+     */
+    private void showSearchResult(FileSystemObject result) {
+        // check against user's display preferences
+        if ( !FileHelper.compliesWithDisplayPreferences(result, null, mChRooted) ) {
+            return;
+        }
+
+        // resolve sym links
+        FileHelper.resolveSymlink(this, result);
+
+        // convert to search result
+        SearchResult searchResult = SearchHelper.convertToResult(result, mQuery);
+
+        // add to adapter
+        mAdapter.addNewItem(searchResult);
     }
 
     /**
@@ -1028,6 +1069,10 @@ public class SearchActivity extends Activity
      */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        // cancel search query if in progress
+        // *need* to do this as the executable holds a lock on the Console
+        if (mSearchInProgress) mExecutable.cancel();
+
         try {
             SearchResult result = ((SearchResultAdapter)parent.getAdapter()).getItem(position);
             FileSystemObject fso = result.getFso();
@@ -1145,7 +1190,7 @@ public class SearchActivity extends Activity
                 for (int i = 0; i < cc; i++) {
                     this.mResultList.add(results.get(i).getFso());
                 }
-                drawResults();
+                // drawResults();
             }
         }
     }
@@ -1164,7 +1209,7 @@ public class SearchActivity extends Activity
     @Override
     public void onRequestRemove(Object o, boolean clearSelection) {
         if (o instanceof FileSystemObject) {
-            removeItem((FileSystemObject)o);
+            removeItem((FileSystemObject) o);
         }
     }
 
@@ -1288,25 +1333,6 @@ public class SearchActivity extends Activity
             } catch (Exception ex) {/**NON BLOCK**/}
         }
         return false;
-    }
-
-    /**
-     * Method that draw the results in the listview
-     * @hide
-     */
-    void drawResults() {
-        //Toggle results
-        this.toggleResults(this.mResultList.size() > 0, true);
-        setFoundItems(this.mResultList.size(), this.mSearchDirectory);
-
-        //Create the task for drawing the data
-        this.mDrawingSearchResultTask =
-                                new SearchResultDrawingAsyncTask(
-                                        this.mSearchListView,
-                                        this.mSearchWaiting,
-                                        this.mResultList,
-                                        this.mQuery);
-        this.mDrawingSearchResultTask.execute();
     }
 
     /**

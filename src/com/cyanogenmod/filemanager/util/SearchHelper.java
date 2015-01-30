@@ -176,11 +176,22 @@ public final class SearchHelper {
         int cc = files.size();
         for (int i = 0; i < cc; i++) {
             FileSystemObject fso = files.get(i);
-            double relevance = calculateRelevance(fso, queries);
-            SearchResult result = new SearchResult(relevance, fso);
-            results.add(result);
+            results.add( convertToResult(fso, queries) );
         }
         return results;
+    }
+
+    /**
+     * Method that converts the list of file system object to a search result.
+     *
+     * @param fso FileSystemObject that needs to be converted to a SearchResult
+     * @param queries The terms of the search
+     * @return List<SearchResult> The files converted
+     */
+    public static SearchResult convertToResult(FileSystemObject fso, Query queries) {
+        //Converts the list of files in a list of search results
+        double relevance = calculateRelevance(fso, queries);
+        return new SearchResult(relevance, fso);
     }
 
     /**

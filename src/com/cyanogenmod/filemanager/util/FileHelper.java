@@ -634,6 +634,68 @@ public final class FileHelper {
     }
 
     /**
+     * Method that applies the configuration modes to the listed files
+     * (sort mode, hidden files, ...).
+     *
+     * @param files The listed files
+     * @param restrictions The restrictions to apply when displaying files
+     * @param noSort If sort must be applied
+     * @param chRooted If app run with no privileges
+     * @return List<FileSystemObject> The applied mode listed files
+     */
+    public static boolean compliesWithDisplayPreferences(
+            FileSystemObject fso, Map<DisplayRestrictions, Object> restrictions, boolean chRooted) {
+        //Retrieve user preferences
+        SharedPreferences prefs = Preferences.getSharedPreferences();
+        FileManagerSettings sortModePref = FileManagerSettings.SETTINGS_SORT_MODE;
+        FileManagerSettings showDirsFirstPref = FileManagerSettings.SETTINGS_SHOW_DIRS_FIRST;
+        FileManagerSettings showHiddenPref = FileManagerSettings.SETTINGS_SHOW_HIDDEN;
+        FileManagerSettings showSystemPref = FileManagerSettings.SETTINGS_SHOW_SYSTEM;
+        FileManagerSettings showSymlinksPref = FileManagerSettings.SETTINGS_SHOW_SYMLINKS;
+
+        //Remove all unnecessary files (no required by the user)
+
+        //Hidden files
+        if (!prefs.getBoolean(
+                showHiddenPref.getId(),
+                ((Boolean)showHiddenPref.getDefaultValue()).booleanValue()) || chRooted) {
+            if (fso.isHidden()) {
+                return false;
+            }
+        }
+
+        //System files
+        if (!prefs.getBoolean(
+                showSystemPref.getId(),
+                ((Boolean)showSystemPref.getDefaultValue()).booleanValue()) || chRooted) {
+            if (fso instanceof SystemFile) {
+                return false;
+            }
+        }
+
+        //Symlinks files
+        if (!prefs.getBoolean(
+                showSymlinksPref.getId(),
+                ((Boolean)showSymlinksPref.getDefaultValue()).booleanValue()) || chRooted) {
+            if (fso instanceof Symlink) {
+                return false;
+            }
+        }
+
+        // Restrictions (only apply to files)
+        if (restrictions != null) {
+            if (!isDirectory(fso)) {
+                if (!isDisplayAllowed(fso, restrictions)) {
+                    return false;
+                }
+            }
+        }
+
+        //Return the files
+        return true;
+    }
+
+    /**
      * Method that check if a file should be displayed according to the restrictions
      *
      * @param fso The file system object to check
@@ -721,13 +783,25 @@ public final class FileHelper {
         int cc = files.size();
         for (int i = 0; i < cc; i++) {
             FileSystemObject fso = files.get(i);
-            if (fso instanceof Symlink && ((Symlink)fso).getLinkRef() == null) {
-                try {
-                    FileSystemObject symlink =
-                            CommandHelper.resolveSymlink(context, fso.getFullPath(), null);
-                    ((Symlink)fso).setLinkRef(symlink);
-                } catch (Throwable ex) {/**NON BLOCK**/}
-            }
+            resolveSymlink(context, fso);
+        }
+    }
+
+    /**
+     * Method that resolve the symbolic links of a file passed in as argument.<br />
+     * This method invokes the {@link ResolveLinkCommand} in those files that hasn't a valid
+     * symlink reference
+     *
+     * @param context The current context
+     * @param fso FileSystemObject to resolve symlink
+     */
+    public static void resolveSymlink(Context context, FileSystemObject fso) {
+        if (fso instanceof Symlink && ((Symlink)fso).getLinkRef() == null) {
+            try {
+                FileSystemObject symlink =
+                        CommandHelper.resolveSymlink(context, fso.getFullPath(), null);
+                ((Symlink)fso).setLinkRef(symlink);
+            } catch (Throwable ex) {/**NON BLOCK**/}
         }
     }
 

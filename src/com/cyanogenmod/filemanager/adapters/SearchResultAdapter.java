@@ -18,7 +18,9 @@ package com.cyanogenmod.filemanager.adapters;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +36,10 @@ import com.cyanogenmod.filemanager.model.SearchResult;
 import com.cyanogenmod.filemanager.preferences.AccessMode;
 import com.cyanogenmod.filemanager.preferences.DisplayRestrictions;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
+import com.cyanogenmod.filemanager.preferences.NavigationSortMode;
+import com.cyanogenmod.filemanager.preferences.ObjectStringIdentifier;
 import com.cyanogenmod.filemanager.preferences.Preferences;
+import com.cyanogenmod.filemanager.preferences.SearchSortResultMode;
 import com.cyanogenmod.filemanager.ui.IconHolder;
 import com.cyanogenmod.filemanager.ui.ThemeManager;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
@@ -45,6 +50,8 @@ import com.cyanogenmod.filemanager.util.SearchHelper;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -55,6 +62,10 @@ import java.util.Map;
 public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
 
     private MimeTypeHelper.MimeTypeCategory mMimeFilter = MimeTypeHelper.MimeTypeCategory.NONE;
+
+    // delay for when the new items, if any, will be incorporated
+    // used to ensure that UI reamains responsible
+    private final int STREAMING_MODE_REFRESH_DELAY = 500;   // in ms
 
     /**
      * A class that conforms with the ViewHolder pattern to performance
@@ -72,6 +83,24 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         TextView mTvParentDir;
         RelevanceView mWgRelevance;
         TextView mMimeType;
+    }
+
+    /**
+     * A heads-up to the adapter to indicate that new items might be added
+     * Allows the adapter to setup a buffer to take in the new results and incorporate the new
+     * items periodically
+     */
+    public void startStreaming() {
+        mInStreamingMode = true;
+        mHandler.postDelayed(mParseNewResults, STREAMING_MODE_REFRESH_DELAY);
+    }
+
+    /**
+     * Called to indicate that the search has completed and new results won't be streamed to the
+     * adapter
+     */
+    public void stopStreaming() {
+        mInStreamingMode = false;
     }
 
     /**
@@ -103,6 +132,22 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
 
     private boolean mDisposed;
 
+    private Handler mHandler;
+    private boolean mInStreamingMode;
+    private List<SearchResult> mNewItems = new ArrayList<SearchResult>();
+    private SearchSortResultMode mSearchSortResultMode;
+    private Comparator<SearchResult> mSearchResultComparator;
+
+    private Runnable mParseNewResults = new Runnable() {
+        @Override
+        public void run() {
+            addPendingSearchResults();
+            if (mInStreamingMode) {
+                mHandler.postDelayed(mParseNewResults, 500);
+            }
+        }
+    };
+
     //The resource of the item icon
     private static final int RESOURCE_ITEM_ICON = R.id.search_item_icon;
     //The resource of the item name
@@ -126,7 +171,7 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
     public SearchResultAdapter(
             Context context, List<SearchResult> files, int itemViewResourceId, Query queries) {
         super(context, RESOURCE_ITEM_NAME, files);
-
+        mHandler = new Handler(context.getMainLooper());
         mOriginalList = new ArrayList<SearchResult>(files);
 
         this.mDisposed = false;
@@ -146,6 +191,9 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
                 FileManagerSettings.SETTINGS_SHOW_RELEVANCE_WIDGET.getId(),
                 ((Boolean)FileManagerSettings.SETTINGS_SHOW_RELEVANCE_WIDGET.
                         getDefaultValue()).booleanValue());
+
+        // determine the sort order of search results
+        setSortResultMode();
 
         //Do cache of the data for better performance
         loadDefaultIcons();
@@ -170,6 +218,60 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         }
         processData();
         super.notifyDataSetChanged();
+    }
+
+    /**
+     *
+     * @param newResult
+     */
+    public synchronized void addNewItem(SearchResult newResult) {
+        mNewItems.add(newResult);
+    }
+
+    /**
+     * Adds search results in the buffer to the adapter list
+     */
+    public synchronized void addPendingSearchResults() {
+        if (mNewItems.size() < 1) return;
+
+        // TODO: maintain a sorted buffer and implement Merge of two sorted lists
+        addAll(mNewItems);
+        sort(mSearchResultComparator);
+        mOriginalList.addAll(mNewItems);
+
+        // reset buffer
+        mNewItems.clear();
+    }
+
+    public void setSortResultMode() {
+        String defaultValue = ((ObjectStringIdentifier)FileManagerSettings.
+                SETTINGS_SORT_SEARCH_RESULTS_MODE.getDefaultValue()).getId();
+        String currValue = Preferences.getSharedPreferences().getString(
+                FileManagerSettings.SETTINGS_SORT_SEARCH_RESULTS_MODE.getId(),
+                defaultValue);
+        mSearchSortResultMode = SearchSortResultMode.fromId(currValue);
+
+        if (mSearchSortResultMode.compareTo(SearchSortResultMode.NAME) == 0) {
+            mSearchResultComparator = new Comparator<SearchResult>() {
+                @Override
+                public int compare(SearchResult lhs, SearchResult rhs) {
+                    return FileHelper.doCompare(
+                            lhs.getFso(), rhs.getFso(), NavigationSortMode.NAME_ASC);
+                }
+            };
+
+        } else if (mSearchSortResultMode.compareTo(SearchSortResultMode.RELEVANCE) == 0) {
+            mSearchResultComparator = new Comparator<SearchResult>() {
+                @Override
+                public int compare(SearchResult lhs, SearchResult rhs) {
+                    return lhs.compareTo(rhs);
+                }
+            };
+        }
+    }
+
+    public synchronized int resultsSize() {
+        return getCount() + mNewItems.size();
     }
 
     /**
