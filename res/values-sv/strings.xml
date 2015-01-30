@@ -338,6 +338,7 @@
   <string name="pref_remove_saved_search_terms">Ta bort sparade söktermer</string>
   <string name="pref_remove_saved_search_terms_summary">Tryck för att ta bort alla sparade söktermer</string>
   <string name="pref_remove_saved_search_terms_msg">Alla sparade söktermer togs bort</string>
+  <string name="pref_secure_storage_category">Skyddad lagring</string>
   <string name="pref_secure_storage_delayed_sync_title">Fördröjd synkronisering</string>
   <string name="pref_secure_storage_reset_password_title">Återställ lösenord</string>
   <string name="pref_secure_storage_delete_storage_title">Ta bort lagringsenhet</string>
@@ -377,7 +378,10 @@
   <string name="ash_keyword">Nyckelord</string>
   <string name="ash_quoted_string">Statisk sträng</string>
   <string name="ash_variable">Variabel</string>
+  <string name="secure_storage_create_title">Skapa lagringsenhet</string>
   <string name="secure_storage_reset_title">Återställ lösenord</string>
+  <string name="secure_storage_delete_title">Ta bort lagringsenhet</string>
+  <string name="secure_storage_unlock_key_prompt_msg">Ange ett lösenord för att skydda filsystemet.</string>
   <string name="secure_storage_unlock_key_new_msg">Ange ett lösenord för att skydda filsystemet.</string>
   <string name="secure_storage_unlock_key_reset_msg">Ange det nuvarande och nya lösenordet för att återställa det skyddade filsystemet.</string>
   <string name="secure_storage_unlock_key_delete_msg">Ange det aktuella lösenordet för att ta bort det skyddade filsystemet.</string>

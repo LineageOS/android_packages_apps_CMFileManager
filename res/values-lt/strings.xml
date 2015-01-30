@@ -23,7 +23,7 @@
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">GB</string>
   <string name="datetime_format_order">%1$s %2$s</string>
-  <string name="device_blockdevice">Blokuoti prietaisą</string>
+  <string name="device_blockdevice">Blokuoti įrenginį</string>
   <string name="device_characterdevice">Simbolių įrenginys</string>
   <string name="device_namedpipe">FIFO</string>
   <string name="device_domainsocket">Domeno lizdas</string>
@@ -106,7 +106,7 @@
   <string name="filesystem_info_dialog_tab_disk_usage">Disko naudojimas</string>
   <string name="filesystem_info_dialog_status">Statusas:</string>
   <string name="filesystem_info_dialog_mount_point">Pridėjimo vieta:</string>
-  <string name="filesystem_info_dialog_device">Prietaisas:</string>
+  <string name="filesystem_info_dialog_device">Įrenginys:</string>
   <string name="filesystem_info_dialog_type">Tipas:</string>
   <string name="filesystem_info_dialog_options">Pasirinkimai:</string>
   <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
@@ -160,7 +160,7 @@
   <string name="editor">Redaktorius</string>
   <string name="editor_invalid_file_msg">Netinkamas failas.</string>
   <string name="editor_file_not_found_msg">Failas nerastas.</string>
-  <string name="editor_file_exceed_size_msg">Failas yra per didelis, kad būtų atidarytas šiame prietaise.</string>
+  <string name="editor_file_exceed_size_msg">Failas yra per didelis, kad būtų atidarytas šiame įrenginyje.</string>
   <string name="editor_dirty_ask_title">Patvirtinkite išėjimą</string>
   <string name="editor_dirty_ask_msg">Yra neišsaugotų pakeitimų.\n\nIšeiti neišsaugant?</string>
   <string name="editor_successfully_saved">Failas sėkmingai išsaugotas.</string>
@@ -390,7 +390,7 @@
   <string name="print_unsupported_image">Nepalaikomas vaizdo formatas</string>
   <string name="print_document_header">Dokumentas: <xliff:g id="document_name">%1$s</xliff:g></string>
   <string name="print_document_footer">Puslapis <xliff:g id="page_number">%1$s</xliff:g></string>
-  <string name="security_warning_extract">Įspėjimas!\n\nIšpakuojant archyvo failą su susijusiu arba absoliučiu keliu gali pakenkti jūsų prietaisui perrašant sistemos failus.\n\nAr norite tęsti?</string>
+  <string name="security_warning_extract">Įspėjimas!\n\nIšpakuojant archyvo failą su susijusiu arba absoliučiu keliu gali pakenkti jūsų įrenginiui perrašant sistemos failus.\n\nAr norite tęsti?</string>
   <string name="changelog_title">Pakeitimų sąrašas</string>
   <string name="welcome_title">Sveiki</string>
   <string name="welcome_msg">Sveiki atvykę į „CyanogenMod“ failų tvarkyklę.\n\nŠi programa leidžia ieškoti sistemos failų ir daryti veiksmus kurie gali pažeisti jūsų įrenginį. Kad išvengtumėte galymos žalos, programa startuos saugiame, mažo privilegijuotumo režime.\n\nNaudodamiesi nustatymais jūs galite prisijungti prie pažangaus, pilnai priveligijuoto režimo. Jūsų atsakomybė yra užtikrinti, kad savo veiksmais nepažeisite sistemos.\n\n„CyanogenMod“ komanda</string>

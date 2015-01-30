@@ -16,5 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="dark_theme_name">অন্ধকার থিম</string>
+  <string name="dark_theme_name">গাঢ় থিম</string>
+  <string name="dark_theme_desc">সায়ানোজেনমড ফাইল ম্যানেজারের জন্য একটি গাঢ় থিম।</string>
 </resources>
