@@ -24,6 +24,8 @@
   <string name="size_gigabytes">জিবি</string>
   <string name="datetime_format_order">%1$s %2$s</string>
   <string name="device_blockdevice">আবদ্ধ ডিভাইস</string>
+  <string name="mount_point_readonly">RO</string>
+  <string name="mount_point_readwrite">RW</string>
   <string name="yes">হ্যাঁ</string>
   <string name="no">না</string>
   <string name="all">সমস্ত</string>
@@ -34,4 +36,23 @@
   <string name="loading_message">লোড হচ্ছে\u2026</string>
   <string name="cancelled_message">বাতিলকৃত।</string>
   <string name="error_message">ত্রুটি।</string>
+  <string name="usb_storage">ইউএসবি স্টোরেজ</string>
+  <string name="actionbar_button_selection_done_cd">সম্পন্ন</string>
+  <string name="actionbar_button_actions_cd">ক্রিয়াকলাপ</string>
+  <string name="actionbar_button_search_cd">অনুসন্ধান</string>
+  <string name="actionbar_button_save_cd">সংরক্ষণ</string>
+  <string name="actionbar_button_print_cd">প্রিন্ট</string>
+  <string name="filesystem_info_dialog_tab_info">তথ্য</string>
+  <string name="filesystem_info_dialog_device">ডিভাইসঃ</string>
+  <string name="filesystem_info_dialog_type">ধরনঃ</string>
+  <string name="filesystem_info_dialog_options">বিকল্পসমূহঃ</string>
+  <string name="filesystem_info_dialog_total_disk_usage">মোটঃ</string>
+  <string name="filesystem_info_dialog_used_disk_usage">ব্যবহৃতঃ</string>
+  <string name="filesystem_info_dialog_free_disk_usage">ফ্রীঃ</string>
+  <string name="fso_properties_dialog_tab_info">তথ্য</string>
+  <string name="fso_properties_dialog_name">নামঃ</string>
+  <string name="fso_properties_dialog_type">ধরনঃ</string>
+  <string name="fso_properties_dialog_link">লিঙ্কঃ</string>
+  <string name="fso_properties_dialog_size">আকারঃ</string>
+  <string name="pref_syntax_sh_use_theme_default">পূর্ব-নির্ধারিত থিম ব্যবহার করুন</string>
 </resources>

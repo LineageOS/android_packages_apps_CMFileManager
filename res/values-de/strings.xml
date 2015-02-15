@@ -211,13 +211,13 @@
   <string name="actions_menu_deselect_all">Alle abwählen</string>
   <string name="actions_menu_select">Auswählen</string>
   <string name="actions_menu_deselect">Abwählen</string>
-  <string name="actions_menu_paste_selection">Auswahl hier einfügen</string>
-  <string name="actions_menu_move_selection">Auswahl hierher verschieben</string>
+  <string name="actions_menu_paste_selection">Hierher kopieren</string>
+  <string name="actions_menu_move_selection">Hierher verschieben</string>
   <string name="actions_menu_delete_selection">Auswahl löschen</string>
-  <string name="actions_menu_compress_selection">Auswahl komprimieren</string>
+  <string name="actions_menu_compress_selection">Ausw. komprimieren</string>
   <string name="actions_menu_create_link">Verknüpfung anlegen</string>
   <string name="actions_menu_open">Öffnen</string>
-  <string name="actions_menu_open_with">Öffne mit</string>
+  <string name="actions_menu_open_with">Öffnen mit</string>
   <string name="actions_menu_execute">Ausführen</string>
   <string name="actions_menu_send">Senden</string>
   <string name="actions_menu_send_selection">Auswahl senden</string>
@@ -294,7 +294,7 @@
   <string name="pref_case_sensitive_sort">Groß- und Kleinschreibung</string>
   <string name="pref_case_sensitive_sort_summary">Beim Navigieren und Sortieren Groß- und Kleinschreibung berücksichtigen</string>
   <string name="pref_filetime_format_mode">Datums- und Zeitformat</string>
-  <string name="pref_disk_usage_warning_level">Speichernutzungswarnung</string>
+  <string name="pref_disk_usage_warning_level">Speicherplatz-Warnung</string>
   <string name="pref_disk_usage_warning_level_summary" formatted="false">Eine andere Farbe verwenden, wenn mehr als <xliff:g id="level">%1$s</xliff:g> Prozent des Speichers belegt sind</string>
   <string name="pref_compute_folder_statistics">Verzeichnisstatistiken</string>
   <string name="pref_compute_folder_statistics_on">Die Berechnung der Verzeichnisstatistiken kann die Systemleistung beeinträchtigen</string>

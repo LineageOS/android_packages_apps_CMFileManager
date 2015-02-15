@@ -296,7 +296,7 @@
   <string name="pref_case_sensitive_sort_summary">検索結果の並べ替えや移動で大文字と小文字を区別する</string>
   <string name="pref_filetime_format_mode">日付と時刻の形式</string>
   <string name="pref_disk_usage_warning_level">ディスク使用量の警告</string>
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">ディスク使用量が空きディスク容量の<xliff:g id="level">%1$s</xliff:g>パーセントに達したときは、ディスク使用量ウィジェットでは異なる色で表示する</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">ディスク使用量が空きディスク容量の<xliff:g id="level">%1$s</xliff:g>パーセントに達したときは、ディスク使用量ウィジェットでは別の色で表示する</string>
   <string name="pref_compute_folder_statistics">フォルダの統計情報を計算</string>
   <string name="pref_compute_folder_statistics_on">警告！フォルダの統計情報の計算は多くの時間とシステムリソースを消費します</string>
   <string name="pref_display_thumbs">プレビュー</string>
