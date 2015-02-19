@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bacf61ea_0ba61ac1",
+        "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1042,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-02-19T12:36:06Z",
+      "side": 1,
+      "message": "You can use a Uri builder here and android.content.ContentResolver.SCHEME_FILE instead of this hardcoded String.\n\nMaybe make this a reusable method and call it here and also on line 1047 as well.",
+      "revId": "7c744648db35930f14976d21f73aa914bd8f1892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bacf61ea_2ba15eaa",
+        "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1047,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-02-19T12:36:06Z",
+      "side": 1,
+      "message": "You can use a Uri builder here and android.content.ContentResolver.SCHEME_FILE instead of this hardcoded String.",
+      "revId": "7c744648db35930f14976d21f73aa914bd8f1892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bacf61ea_6bab568a",
+        "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1081,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-02-19T12:36:06Z",
+      "side": 1,
+      "message": "Don\u0027t return null here, return an empty list. The code above will crash with an NPE on line 1041 if you return null here.",
+      "revId": "7c744648db35930f14976d21f73aa914bd8f1892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
