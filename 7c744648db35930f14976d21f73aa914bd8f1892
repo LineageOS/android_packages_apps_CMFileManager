@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "bacf61ea_0b09fa95",
+        "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1042,
+      "author": {
+        "id": 11035
+      },
+      "writtenOn": "2015-02-19T14:31:53Z",
+      "side": 1,
+      "message": "didn\u0027t know abt uri-builder\ngood call\nwill add it to FSO class itself\nthanks",
+      "parentUuid": "bacf61ea_0ba61ac1",
+      "revId": "7c744648db35930f14976d21f73aa914bd8f1892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bacf61ea_2ba15eaa",
         "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "bacf61ea_4e25c0a9",
+        "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1047,
+      "author": {
+        "id": 11035
+      },
+      "writtenOn": "2015-02-19T14:31:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bacf61ea_2ba15eaa",
+      "revId": "7c744648db35930f14976d21f73aa914bd8f1892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bacf61ea_6bab568a",
         "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2015-02-19T12:36:06Z",
       "side": 1,
       "message": "Don\u0027t return null here, return an empty list. The code above will crash with an NPE on line 1041 if you return null here.",
+      "revId": "7c744648db35930f14976d21f73aa914bd8f1892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bacf61ea_4bec92c7",
+        "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1081,
+      "author": {
+        "id": 11035
+      },
+      "writtenOn": "2015-02-19T14:31:53Z",
+      "side": 1,
+      "message": "By the time you get to 1041, you will always get back a list that is atleast size 1.\nWe are in the onClick and do a category check on fso and request to filter by that same category, so the list will always be greater than 1.\n\nThe empty list seems like a more innocuous solution. Adding it.",
+      "parentUuid": "bacf61ea_6bab568a",
       "revId": "7c744648db35930f14976d21f73aa914bd8f1892",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
