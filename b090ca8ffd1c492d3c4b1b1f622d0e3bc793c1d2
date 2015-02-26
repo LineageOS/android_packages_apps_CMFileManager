@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bacf61ea_d0abfe87",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 11035
+      },
+      "writtenOn": "2015-02-26T22:09:20Z",
+      "side": 1,
+      "message": "typo towards the end of line: \"present\"",
+      "revId": "b090ca8ffd1c492d3c4b1b1f622d0e3bc793c1d2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bacf61ea_90b6a6da",
+        "filename": "src/com/cyanogenmod/filemanager/activities/PickerActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 11035
+      },
+      "writtenOn": "2015-02-26T22:09:20Z",
+      "side": 1,
+      "message": "No need to iterate through the mimeTypes if only the last mimeType applies.\n\nIf we plan on supporting filtering by multiple mimeTypes, we should add support for that in FileHelper#isDisplayAllowed. Maybe also look for a string[] in the case of a MIME_TYPE_RESTRICTION.",
+      "revId": "b090ca8ffd1c492d3c4b1b1f622d0e3bc793c1d2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
