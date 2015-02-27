@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ad45d7e_a7cf6ab2",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 733,
+      "author": {
+        "id": 11035
+      },
+      "writtenOn": "2015-02-27T17:17:57Z",
+      "side": 1,
+      "message": "Should we return true without checking if the other restrictions have been met ?",
+      "revId": "b79eb483c5f4f1e0a8f7669738e837f6b7d57831",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
