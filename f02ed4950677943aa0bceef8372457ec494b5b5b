@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ad45d7e_b9c49d40",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 846,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-03-06T18:11:29Z",
+      "side": 1,
+      "message": "This javadoc looks incomplete",
+      "revId": "f02ed4950677943aa0bceef8372457ec494b5b5b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ad45d7e_d9e191d2",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 850,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-03-06T18:11:29Z",
+      "side": 1,
+      "message": "This variable isn\u0027t neccessary. Just return false.",
+      "revId": "f02ed4950677943aa0bceef8372457ec494b5b5b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ad45d7e_59c76145",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 862,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-03-06T18:11:29Z",
+      "side": 1,
+      "message": "Typo: just",
+      "revId": "f02ed4950677943aa0bceef8372457ec494b5b5b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ad45d7e_f9dc551a",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 867,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-03-06T18:11:29Z",
+      "side": 1,
+      "message": "Should we assume that the operation finished successfully? I guess it\u0027s better\n\nreturn srcFile.renameTo(dstFile);",
+      "revId": "f02ed4950677943aa0bceef8372457ec494b5b5b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
