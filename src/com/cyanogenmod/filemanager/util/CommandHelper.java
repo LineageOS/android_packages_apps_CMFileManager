@@ -19,6 +19,7 @@ package com.cyanogenmod.filemanager.util;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaScannerConnection;
+import android.os.Environment;
 import android.provider.MediaStore.Files;
 
 import android.provider.MediaStore;
@@ -766,6 +767,11 @@ public final class CommandHelper {
             CommandNotFoundException, OperationTimeoutException,
             ExecutionException, InvalidCommandDefinitionException, ReadOnlyFilesystemException,
             CancelledOperationException {
+
+        // special case
+        boolean handled = innocuousFileRename(src, dst);
+        if (handled) return true;
+
         Console cSrc = ensureConsoleForFile(context, console, src);
         Console cDst = ensureConsoleForFile(context, console, dst);
         boolean ret = true;
@@ -825,6 +831,45 @@ public final class CommandHelper {
         return ret;
     }
 
+    /**
+     * Account for case-insensitive file systems (like the SD Card) when moving / copying files
+     *
+     * Short-circuits the move and copy commands on a case-insensitive filesystem. If src and dst
+     * are considered the same by the underlying filesystem but lexically different, this function
+     * renames the src to the functionally-same-but-lexically-different name
+     * Ex : renaming 'mydocuments' to 'MyDocuments'
+     *
+     * Rather than leaving it up to each of the {@link Console} implementations to handle this
+     * edge-case we are handling it here.
+     *
+     * @param src path of the src file
+     * @param dst path fo the
+     * @return boolean whether this function intervened to perform the requested command
+     */
+    private static boolean innocuousFileRename(String src, String dst) {
+        boolean notHandled = false;
+        File srcFile = new File(src);
+        File dstFile = new File(dst);
+
+        if (!srcFile.exists()) return notHandled;
+
+        String srcAbsPath = srcFile.getAbsolutePath();
+        String dstAbsPath = dstFile.getAbsolutePath();
+        String externalStoragePath = Environment.getExternalStorageDirectory().getAbsolutePath();
+
+        boolean isCaseInSensitiveFilesystem = (srcAbsPath.startsWith(externalStoragePath) &&
+                dstAbsPath.startsWith(externalStoragePath));
+        // if src and dst refer to the same location, then the we'll jst rename src
+        boolean renameRequired = dstAbsPath.equalsIgnoreCase(srcAbsPath);
+
+        if (isCaseInSensitiveFilesystem && renameRequired) {
+            srcFile.renameTo(dstFile);
+            return true;
+        }
+
+        return notHandled;
+    }
+
     private static void removeFromMediaStore(Context context, String path) {
         context.getContentResolver().delete(Files.getContentUri(MediaHelper.EXTERNAL_VOLUME),
             MediaStore.Files.FileColumns.DATA + "=?", new String[]{path});
@@ -858,6 +903,11 @@ public final class CommandHelper {
             CommandNotFoundException, OperationTimeoutException,
             ExecutionException, InvalidCommandDefinitionException, ReadOnlyFilesystemException,
             CancelledOperationException {
+
+        // special case
+        boolean handled = innocuousFileRename(src, dst);
+        if (handled) return true;
+
         Console cSrc = ensureConsoleForFile(context, console, src);
         Console cDst = ensureConsoleForFile(context, console, dst);
         boolean ret = true;
