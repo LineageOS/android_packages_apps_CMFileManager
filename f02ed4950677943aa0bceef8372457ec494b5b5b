@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "9ad45d7e_f903b574",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 860,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-03-06T18:23:28Z",
+      "side": 1,
+      "message": "This doesn\u0027t determine a in sensitive filesystem, but just that the operation will happen in an external device. Maybe we should additional to check this that the path.tolower and path.toupper both exists. A insensitive case filesystem will return tru in both cases.",
+      "revId": "f02ed4950677943aa0bceef8372457ec494b5b5b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ad45d7e_59c76145",
         "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
         "patchSetId": 2
