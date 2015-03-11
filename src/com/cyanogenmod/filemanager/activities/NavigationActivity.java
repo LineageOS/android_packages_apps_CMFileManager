@@ -644,6 +644,11 @@ public class NavigationActivity extends Activity
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred.
@@ -1708,16 +1713,18 @@ public class NavigationActivity extends Activity
             }
             return true;
         }
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if (checkBackAction()) {
-                performHideEasyMode();
-                return true;
-            }
-
-            // An exit event has occurred, force the destroy the consoles
-            exit();
-        }
         return super.onKeyUp(keyCode, event);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (checkBackAction()) {
+            performHideEasyMode();
+            return;
+        }
+
+        // An exit event has occurred, force the destroy the consoles
+        exit();
     }
 
     /**
