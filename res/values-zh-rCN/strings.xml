@@ -389,13 +389,13 @@
     <string name="category_audio">音频</string>
     <string name="pref_secure_storage_reset_password_title">重置密码</string>
     <string name="pref_secure_storage_delayed_sync_summary">同步是一个繁琐的过程。启动这个选项可以延迟同步从而使操作更快， 但是可能会遗失信息，例如应用崩溃。</string>
-    <string name="sort_by_type_asc">按类型</string>
-    <string name="sort_by_size_desc">按大小</string>
+    <string name="sort_by_type_asc">按类型 \u25B2</string>
+    <string name="sort_by_size_desc">按大小 \u25BC</string>
     <string name="secure_storage_create_title">新建安全存储</string>
     <string name="category_app">应用</string>
     <string name="secure_storage_unlock_button">解锁</string>
     <string name="bookmarks_secure">安全存储</string>
-    <string name="sort_by_type_desc">按类型</string>
+    <string name="sort_by_type_desc">按类型 \u25BC</string>
     <string name="secure_storage_unlock_key_new_msg">输入密码保护安全文件系统</string>
     <string name="secure_storage_unlock_validation_length">密码必须最少字符</string>
     <string name="category_security">安全</string>
@@ -418,7 +418,7 @@
     <string name="secure_storage_delete_button">删除</string>
     <string name="secure_storage_reset_button">重置</string>
     <string name="category_font">字体</string>
-    <string name="sort_by_size_asc">按大小</string>
+    <string name="sort_by_size_asc">按大小 \u25B2</string>
     <string name="msgs_no_disk_space">操作出错，存储盘已满</string>
     <string name="category_compress">压缩</string>
     <string name="category_mail">邮件</string>
