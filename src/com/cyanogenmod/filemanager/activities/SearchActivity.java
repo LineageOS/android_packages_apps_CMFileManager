@@ -1109,12 +1109,12 @@ public class SearchActivity extends Activity
                 fso = symlink.getLinkRef();
             }
 
-            // special treatment for video files
-            // all of the video files in the current search will also be sent as an extra in the
-            // intent along with the item that was clicked
+            // special treatment for video/audio files
+            // all of the video/audio files in the current search will also be sent as an extra in
+            // the intent along with the item that was clicked
             MimeTypeCategory fileCategory = MimeTypeHelper.getCategoryFromExt(this,
                     FileHelper.getExtension(fso), fso.getFullPath());
-            if (fileCategory == MimeTypeCategory.VIDEO) {
+            if (fileCategory == MimeTypeCategory.VIDEO || fileCategory == MimeTypeCategory.AUDIO) {
 
                 ArrayList<FileSystemObject> filteredList = filterSearchResults(fileCategory);
                 ArrayList<Uri> uris = new ArrayList<Uri>(filteredList.size());
@@ -1131,13 +1131,13 @@ public class SearchActivity extends Activity
                 }
 
                 if (DEBUG) {
-                    Log.i(TAG, "video intent : " + intent);
+                    Log.i(TAG, "video/audio intent : " + intent);
                 }
 
                 try {
                     startActivity(intent);
                 } catch(ActivityNotFoundException e) {
-                    Log.e(TAG, "ActivityNotFoundException when opening a video file");
+                    Log.e(TAG, "ActivityNotFoundException when opening a video/audio file");
                     Toast.makeText(this, R.string.activity_not_found_exception, Toast.LENGTH_SHORT);
                 }
 
