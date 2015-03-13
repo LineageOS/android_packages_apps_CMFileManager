@@ -1622,6 +1622,9 @@ public class NavigationActivity extends Activity
         }
 
         boolean needsEasyMode = false;
+        if (mSdBookmarks == null ) {
+            loadBookmarks();
+        }
         for (Bookmark bookmark :mSdBookmarks) {
             if (bookmark.mPath.equalsIgnoreCase(initialDir)) {
                 needsEasyMode = true;
