@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Gestor de Ficheiros</string>
+  <string name="app_name">Gestor de ficheiros</string>
   <string name="app_description">Um gestor de ficheiros da CyanogenMod</string>
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">kB</string>
@@ -351,7 +351,7 @@
   <string name="pref_secure_storage_category">Armazenamento seguro</string>
   <string name="pref_secure_storage_delayed_sync_title">Sincronização atrasada</string>
   <string name="pref_secure_storage_delayed_sync_summary">A sincronização de sistemas de ficheiros seguros é uma operação demorada. Ativar esta opção para permitir melhor resposta de tempo após cada operação, executar a sincronização quando o sistema de ficheiros está no estado de não utilizacão, mas à custa de perder as informações pendentes não sincronizadas, se a aplicacão falhar.</string>
-  <string name="pref_secure_storage_reset_password_title">Redefinir senha</string>
+  <string name="pref_secure_storage_reset_password_title">Repor palavra-passe</string>
   <string name="pref_secure_storage_delete_storage_title">Eliminar o armazenamento</string>
   <string name="pref_editor_behaviour_category">Comportamento</string>
   <string name="pref_no_suggestions">Sem sugestões</string>
@@ -393,23 +393,23 @@
   <string name="ash_variable">Variável</string>
   <string name="secure_storage_unlock_title">Desbloquear o armazenamento</string>
   <string name="secure_storage_create_title">Criar o armazenamento</string>
-  <string name="secure_storage_reset_title">Redefinir senha</string>
+  <string name="secure_storage_reset_title">Repor palavra-passe</string>
   <string name="secure_storage_delete_title">Eliminar o armazenamento</string>
-  <string name="secure_storage_unlock_key_prompt_msg">Digite a senha para desbloquear o sistema de ficheiros do armazenamento seguro.</string>
-  <string name="secure_storage_unlock_key_new_msg">Digite uma senha para proteger o sistema de ficheiros do armazenamento seguro.</string>
-  <string name="secure_storage_unlock_key_reset_msg">Introduza a senha atual e a nova senha para redefinir o sistema de ficheiros de armazenamento seguro.</string>
-  <string name="secure_storage_unlock_key_delete_msg">Digite a senha atual para eliminar o sistema de ficheiros de armazenamento seguro.</string>
-  <string name="secure_storage_unlock_old_key_title">Senha antiga:</string>
-  <string name="secure_storage_unlock_new_key_title">Nova senha:</string>
-  <string name="secure_storage_unlock_key_title">Senha:</string>
-  <string name="secure_storage_unlock_repeat_title">Repetir a senha:</string>
+  <string name="secure_storage_unlock_key_prompt_msg">Digite a palavra-passe para desbloquear o sistema de ficheiros do armazenamento seguro.</string>
+  <string name="secure_storage_unlock_key_new_msg">Digite uma palavra-passe para proteger o sistema de ficheiros do armazenamento seguro.</string>
+  <string name="secure_storage_unlock_key_reset_msg">Digite a palavra-passe atual e a nova para repor o sistema de ficheiros seguro do armazenamento.</string>
+  <string name="secure_storage_unlock_key_delete_msg">Digite a palavra-passe atual para eliminar o sistema de ficheiros de armazenamento seguro.</string>
+  <string name="secure_storage_unlock_old_key_title">Palavra-passe antiga:</string>
+  <string name="secure_storage_unlock_new_key_title">Nova palavra-passe:</string>
+  <string name="secure_storage_unlock_key_title">Palavra-passe:</string>
+  <string name="secure_storage_unlock_repeat_title">Repetir a palavra-passe:</string>
   <string name="secure_storage_create_button">Criar</string>
   <string name="secure_storage_unlock_button">Desbloquear</string>
   <string name="secure_storage_reset_button">Redefinir</string>
   <string name="secure_storage_delete_button">Eliminar</string>
   <string name="secure_storage_unlock_failed">Não é possível desbloquear o armazenamento</string>
-  <string name="secure_storage_unlock_validation_length">A senha deve ter no mínimo <xliff:g id="characters">%1$d</xliff:g> caracteres.</string>
-  <string name="secure_storage_unlock_validation_equals">As senhas não coincidem.</string>
+  <string name="secure_storage_unlock_validation_length">A palavra-passe deve ter no mínimo <xliff:g id="characters">%1$d</xliff:g> caracteres.</string>
+  <string name="secure_storage_unlock_validation_equals">As palavras-passe não coincidem.</string>
   <string name="print_unsupported_document">Formato de documento não suportado</string>
   <string name="print_unsupported_image">Formato de imagem não suportado</string>
   <string name="print_document_header">Documento: <xliff:g id="document_name">%1$s</xliff:g></string>

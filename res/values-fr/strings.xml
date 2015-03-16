@@ -51,12 +51,12 @@
   <string name="msgs_cant_create_console">Impossible d\'obtenir les privilèges requis pour fonctionner</string>
   <string name="msgs_privileged_console_alloc_failed">Impossible de passer en mode Root. Retour au mode normal.</string>
   <string name="msgs_settings_save_failure">Impossible d\'appliquer ou d\'enregistrer le réglage</string>
-  <string name="msgs_settings_invalid_initial_directory">Le dossier d\'accueil \"<xliff:g id="initial_dir">%1$s</xliff:g>\" est invalide. Changement vers le dossier racine.</string>
+  <string name="msgs_settings_invalid_initial_directory">Le dossier d\'accueil « <xliff:g id="initial_dir">%1$s</xliff:g> » est incorrect. Changement vers le dossier racine.</string>
   <string name="msgs_success">Opération réussie</string>
   <string name="msgs_unknown">Une erreur a été détectée. L\'opération a échoué</string>
   <string name="msgs_insufficient_permissions">Cette opération nécessite une élévation des droits. Tentative d\'accès Root.</string>
   <string name="msgs_file_not_found">Fichier ou dossier introuvable</string>
-  <string name="msgs_command_not_found">Commande introuvable ou définition invalide</string>
+  <string name="msgs_command_not_found">Commande introuvable ou définition incorrecte.</string>
   <string name="msgs_io_failed">Lecture/Ecriture échouée</string>
   <string name="msgs_operation_timeout">Opération expirée</string>
   <string name="msgs_operation_failure">Opération échouée</string>
@@ -158,7 +158,7 @@
   <string name="picker_title">Choisissez un fichier</string>
   <string name="directory_picker_title">Choisissez un dossier</string>
   <string name="editor">Éditeur</string>
-  <string name="editor_invalid_file_msg">Fichier non valide</string>
+  <string name="editor_invalid_file_msg">Fichier incorrect.</string>
   <string name="editor_file_not_found_msg">Fichier non trouvé</string>
   <string name="editor_file_exceed_size_msg">Fichier trop volumineux pour être ouvert sur votre appareil</string>
   <string name="editor_dirty_ask_title">Quitter</string>
@@ -245,8 +245,8 @@
   <string name="actions_ask_undone_operation_msg">Cette action ne peut pas être annulée. Voulez-vous continuer\u00A0?</string>
   <string name="input_name_dialog_label">Nom\u00A0:</string>
   <string name="input_name_dialog_message_empty_name">Nom requis</string>
-  <string name="input_name_dialog_message_invalid_path_name">Nom invalide. Les caractères \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' ne sont pas autorisés.</string>
-  <string name="input_name_dialog_message_invalid_name">Nom invalide. Les noms \'.\' et \'..\' ne sont pas autorisés.</string>
+  <string name="input_name_dialog_message_invalid_path_name">Nom incorrect. Les caractères « <xliff:g id="invalid_characters">%1$s</xliff:g> » ne sont pas autorisés.</string>
+  <string name="input_name_dialog_message_invalid_name">Nom incorrect. Les noms « . » et « .. » ne sont pas autorisés.</string>
   <string name="input_name_dialog_message_name_exists">Nom déjà attribué</string>
   <string name="associations_dialog_title">Associations</string>
   <string name="associations_dialog_remember">Se souvenir de la sélection</string>
@@ -309,7 +309,7 @@
   <string name="pref_compute_folder_statistics_on">Attention\u00A0! Le calcul des statistiques de dossiers est coûteux en temps et en ressources système.</string>
   <string name="pref_display_thumbs">Aperçu</string>
   <string name="pref_display_thumbs_summary">Afficher un aperçu pour les applications, les musiques, les images et les vidéos</string>
-  <string name="pref_use_flinger">Utiliser les mouvements de glissement</string>
+  <string name="pref_use_flinger">Utiliser les gestes de balayage</string>
   <string name="pref_use_flinger_summary">Utiliser un mouvement de gauche à droite pour supprimer un fichier ou un dossier</string>
   <string name="pref_general_advanced_settings_category">Avancé</string>
   <string name="pref_access_mode">Mode d\'accès</string>
