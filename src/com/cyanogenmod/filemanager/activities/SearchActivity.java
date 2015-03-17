@@ -131,6 +131,7 @@ public class SearchActivity extends Activity
 
     //Minimum characters to allow query
     private static final int MIN_CHARS_SEARCH = 3;
+    private boolean Visible=false;
 
     private final BroadcastReceiver mNotificationReceiver = new BroadcastReceiver() {
         @Override
@@ -482,12 +483,23 @@ public class SearchActivity extends Activity
         //Set out transition
         overridePendingTransition(R.anim.hold_in, R.anim.translate_to_left_out);
         super.onPause();
+        Visible=true;
         // stop search if the activity moves out of the foreground
         if (mExecutable != null) {
             mExecutable.end();
         }
     }
 
+    @Override
+    protected void onStop() {
+        Visible=false;
+        super.onStop();
+    }
+    @Override
+    protected void onResume() {
+        Visible=false;
+        super.onResume();
+    }
     /**
      * {@inheritDoc}
      */
@@ -975,6 +987,10 @@ public class SearchActivity extends Activity
         switch (keyCode) {
             case KeyEvent.KEYCODE_BACK:
                 // release Console lock held by the async search task
+                if(Visible) {
+                    Visible=false;
+                    return super.onKeyUp(keyCode, event);
+                }
                 if (mExecutable != null) {
                     mExecutable.end();
                 }
