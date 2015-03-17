@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac665da_d9e1a300",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1628,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-03-17T10:54:18Z",
+      "side": 1,
+      "message": "Elsewhere loadBookmarks() is called in an asynctask, should you be doing this on the UI thread here (applyInitialDir can be called from onResume, for example).\n\nAlso, does this not always happen? Without this change, I don\u0027t see any crash.",
+      "revId": "cb48abdf1ce580605b85b40ff4d05598b24ba993",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
