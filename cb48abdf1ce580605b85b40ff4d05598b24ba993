@@ -16,6 +16,24 @@
       "revId": "cb48abdf1ce580605b85b40ff4d05598b24ba993",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac665da_7406b621",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1628,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-03-18T05:08:08Z",
+      "side": 1,
+      "message": "Good point, if this isn\u0027t available, it makes sense to just not execute this block if mSdBookmarks is null.",
+      "parentUuid": "5ac665da_d9e1a300",
+      "revId": "cb48abdf1ce580605b85b40ff4d05598b24ba993",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
