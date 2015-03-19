@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac665da_0e580afa",
+        "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 974,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-03-19T11:28:28Z",
+      "side": 1,
+      "message": "You can delete this, no point in overriding the method if you\u0027ll only call super().",
+      "revId": "38812d7b967c582672dadc8a1a2044e7a245fd2d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
