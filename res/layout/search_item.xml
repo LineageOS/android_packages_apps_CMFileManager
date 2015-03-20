@@ -22,9 +22,10 @@
 
   <ImageView
     android:id="@+id/search_item_icon"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
+    android:layout_width="@dimen/default_row_height"
+    android:layout_height="@dimen/default_row_height"
     android:layout_alignParentLeft="true"
+    android:scaleType="centerCrop"
     android:contentDescription="@null"
     android:src="@null" />
 
