@@ -340,8 +340,8 @@
   <string name="pref_editor_syntax_highlight_category">Syntax highlight</string>
   <string name="pref_syntax_highlight">Syntax highlight</string>
   <string name="pref_syntax_highlight_desc">Highlight the syntax of the file displayed in the editor (only when a syntax highlight processor is available for the type of file)</string>
-  <string name="pref_syntax_highlight_color_scheme">Color scheme</string>
-  <string name="pref_syntax_highlight_color_scheme_desc">Select the syntax highlight color scheme</string>
+  <string name="pref_syntax_highlight_color_scheme">Colour scheme</string>
+  <string name="pref_syntax_highlight_color_scheme_desc">Select the syntax highlight colour scheme</string>
   <string name="pref_syntax_sh_use_theme_default">Use theme default</string>
   <string name="pref_syntax_sh_use_theme_default_desc">Use the default syntax highlight of the current theme</string>
   <string name="pref_editor_sh_item_category">Items</string>
@@ -358,8 +358,8 @@
   <string name="color_picker_alpha_slider_text">Alpha</string>
   <string name="color_picker_current_text">Current:</string>
   <string name="color_picker_new_text">New:</string>
-  <string name="color_picker_color">Color:</string>
-  <string name="ash_reset_color_scheme">Restore the default theme color scheme</string>
+  <string name="color_picker_color">Colour:</string>
+  <string name="ash_reset_color_scheme">Restore the default theme colour scheme</string>
   <string name="ash_text">Text</string>
   <string name="ash_assignment">Assignment</string>
   <string name="ash_singleline_comment">Single-Line comment</string>
