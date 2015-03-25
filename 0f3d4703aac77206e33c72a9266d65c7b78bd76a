@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac665da_b906591e",
+        "filename": "src/com/cyanogenmod/filemanager/commands/shell/FolderUsageCommand.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-03-25T12:07:03Z",
+      "side": 1,
+      "message": "This is redundant. One can use new File(mDirectory, name) directly, and although this is unnecessary, because mDirectory is a full path (FsoPropertiesDialog passed the full path)",
+      "revId": "0f3d4703aac77206e33c72a9266d65c7b78bd76a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac665da_fcfeff03",
+        "filename": "src/com/cyanogenmod/filemanager/commands/shell/FolderUsageCommand.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-03-25T12:07:03Z",
+      "side": 1,
+      "message": "This should be added to the java and secure commands also",
+      "revId": "0f3d4703aac77206e33c72a9266d65c7b78bd76a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac665da_3c09b72d",
+        "filename": "src/com/cyanogenmod/filemanager/util/AmbiguousExtensionHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-03-25T12:07:03Z",
+      "side": 1,
+      "message": "This could be simpliefied as\n\n if (is3GPP(extension)) {\n     return hasVideo ? VIDEO_3GPP_MIME_TYPE : AUDIO_3GPP_MIME_TYPE;\n } else is3GPP2(extension) {\n     return hasVideo ? VIDEO_3GPP2_MIME_TYPE : AUDIO_3GPP2_MIME_TYPE;\n }\n return null;",
+      "revId": "0f3d4703aac77206e33c72a9266d65c7b78bd76a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
