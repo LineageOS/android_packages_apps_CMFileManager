@@ -19,6 +19,7 @@ package com.cyanogenmod.filemanager.activities;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.SearchManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -474,6 +475,8 @@ public class NavigationActivity extends Activity
     private boolean mExitFlag = false;
     private long mExitBackTimeout = -1;
 
+    private Dialog mActiveDialog = null;
+
     private int mOrientation;
 
     /**
@@ -690,6 +693,10 @@ public class NavigationActivity extends Activity
     protected void onDestroy() {
         if (DEBUG) {
             Log.d(TAG, "NavigationActivity.onDestroy"); //$NON-NLS-1$
+        }
+
+        if (mActiveDialog != null && mActiveDialog.isShowing()) {
+            mActiveDialog.dismiss();
         }
 
         // Unregister the receiver
@@ -2709,4 +2716,7 @@ public class NavigationActivity extends Activity
         theme.setImageDrawable(this, (ButtonItem) v, "ab_delete_drawable"); //$NON-NLS-1$
     }
 
+    public void updateActiveDialog(Dialog dialog) {
+        mActiveDialog = dialog;
+    }
 }
