@@ -65,7 +65,7 @@
   <string name="msgs_read_only_filesystem">De Fichierssystem ass schreifgeschützt. Probéier de Fichiersystem mat Schreifrechter anzebannen ier s de dës Operatioun probéiers.</string>
   <string name="msgs_illegal_argument">Ongëltegt Argument. Opruff feelgeschloen.</string>
   <string name="msgs_unresolved_inconsistencies">Dës Operatioun ass net erlaabert well se Inkonsistenze géif verursaachen.</string>
-  <string name="msgs_operation_not_allowed_in_current_directory">Dës Operatioun ass am aktuellen Dossier net erlaabt.\n\nDen Zildossier kann net de selweschte si wéi den Ausganksdossier, an och keen Ënnerdossier dovun.</string>
+  <string name="msgs_operation_not_allowed_in_current_directory">Dës Operatioun ass am aktuellen Dossier net erlaabt.\n\nDen Zildossier kann net de selwechte si wéi den Ausganksdossier, an och keen Ënnerdossier dovun.</string>
   <string name="msgs_push_again_to_exit">Nach eemol drécke fir zouzemaachen.</string>
   <string name="msgs_not_registered_app">Fir den ausgewielte Fichierstyp ass keng App registréiert.</string>
   <string name="msgs_overwrite_files">Verschidde Fichieren existéiere schonn am Zildossier.\n\nIwwerschreiwen?</string>
@@ -97,7 +97,7 @@
   <string name="cm_filemanager_show_system">Systemfichieren uweisen</string>
   <string name="cm_filemanager_show_symlinks">Symbolech Ofkierzungen uweisen</string>
   <string name="filesystem_info_warning_title">Keng Informatiounen</string>
-  <string name="filesystem_info_warning_msg">Et si keng Informatiounen iwwer den Fichierssystem disponibel.</string>
+  <string name="filesystem_info_warning_msg">Et si keng Informatiounen iwwer de Fichierssystem disponibel.</string>
   <string name="filesystem_info_cant_be_mounted_msg">De Fichiersystem kann net agebonnen/getrennt ginn.</string>
   <string name="filesystem_info_mount_not_allowed_msg">Abannen/Trenne vu Fichierssystemen ass am séchere Modus net erlaabt. Dréck fir op de Root-Zougrëffsmodus ze wiesselen.</string>
   <string name="filesystem_info_mount_failed_msg">Abannen/Trenne vum Fichierssystem ass feelgeschloen. Op verschidde Fichierssystemer, wéi SD-Kaarten, kënnen dës Operatiounen net ausgefouert gi well se schreifgeschützt an de System agebaut sinn.</string>
