@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5ac665da_305f1374",
+        "filename": "src/com/cyanogenmod/filemanager/util/DialogHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 586,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-03-31T06:05:22Z",
+      "side": 1,
+      "message": "For now I don\u0027t think other Activity Contexts are used to delegate the Dialog showing, but if they do use other activities, I don\u0027t want the finishing() condition check to fail out because it isn\u0027t the specific activity I\u0027m targeting.",
+      "parentUuid": "5ac665da_b074a3fd",
+      "revId": "3a7e64a1b55a8cdd0b2053fd6b16c294c3137d05",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac665da_f0645b4a",
         "filename": "src/com/cyanogenmod/filemanager/util/DialogHelper.java",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-03-31T06:02:07Z",
       "side": 1,
       "message": "Since you are declaring the interface specifically and targeting a specific activity only, you could probably move the is finishing and show into the activity.  That way the view logic is in the Activity instead of this utility class.",
+      "revId": "3a7e64a1b55a8cdd0b2053fd6b16c294c3137d05",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac665da_d04e7fc0",
+        "filename": "src/com/cyanogenmod/filemanager/util/DialogHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 594,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-03-31T06:05:22Z",
+      "side": 1,
+      "message": "This doesn\u0027t get called directly from the activity, there\u0027s a bunch of abstractions which will flow into this utility method. Which is why I put the conditional check here, instead of trying to handle all of those places where the activity passes on it\u0027s context as the dialog decision isn\u0027t made till much further into the code path.",
+      "parentUuid": "5ac665da_f0645b4a",
       "revId": "3a7e64a1b55a8cdd0b2053fd6b16c294c3137d05",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
