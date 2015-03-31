@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac665da_b074a3fd",
+        "filename": "src/com/cyanogenmod/filemanager/util/DialogHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 586,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-03-31T06:02:07Z",
+      "side": 1,
+      "message": "Can you not just \n\n(context instanceof NavigationActivity)\n\nI don\u0027t think you need two conditionals.",
+      "revId": "3a7e64a1b55a8cdd0b2053fd6b16c294c3137d05",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac665da_f0645b4a",
+        "filename": "src/com/cyanogenmod/filemanager/util/DialogHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 594,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-03-31T06:02:07Z",
+      "side": 1,
+      "message": "Since you are declaring the interface specifically and targeting a specific activity only, you could probably move the is finishing and show into the activity.  That way the view logic is in the Activity instead of this utility class.",
+      "revId": "3a7e64a1b55a8cdd0b2053fd6b16c294c3137d05",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
