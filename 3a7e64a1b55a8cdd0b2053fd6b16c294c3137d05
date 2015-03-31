@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "5ac665da_30bb9374",
+        "filename": "src/com/cyanogenmod/filemanager/util/DialogHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 586,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-03-31T06:08:37Z",
+      "side": 1,
+      "message": "Yeah ok, that makes sense.",
+      "parentUuid": "5ac665da_305f1374",
+      "revId": "3a7e64a1b55a8cdd0b2053fd6b16c294c3137d05",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ac665da_f0645b4a",
         "filename": "src/com/cyanogenmod/filemanager/util/DialogHelper.java",
         "patchSetId": 2
