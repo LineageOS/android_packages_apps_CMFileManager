@@ -883,6 +883,7 @@ public class NavigationActivity extends Activity
                 super.onDrawerOpened(drawerView);
             }
         };
+        getActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Set the drawer toggle as the DrawerListener
         mDrawerLayout.setDrawerListener(mDrawerToggle);
