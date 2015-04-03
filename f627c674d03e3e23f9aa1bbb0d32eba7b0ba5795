@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac665da_0349e65f",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 511,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-04-03T11:25:24Z",
+      "side": 1,
+      "message": "Sorry to make you upload another patchset... but can we just say \"File name is too long, it must be less than 255 characters?\" I feel like the user deserves to know how long is allowed in the case where maxlength is not specified and they\u0027ve typed 350 characters and have no idea what is acceptable.",
+      "revId": "f627c674d03e3e23f9aa1bbb0d32eba7b0ba5795",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
