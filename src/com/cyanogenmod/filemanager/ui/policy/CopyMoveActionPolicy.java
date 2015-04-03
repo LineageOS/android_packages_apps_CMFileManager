@@ -19,10 +19,12 @@ package com.cyanogenmod.filemanager.ui.policy;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.text.Html;
 import android.text.Spanned;
 
 import com.cyanogenmod.filemanager.R;
+import com.cyanogenmod.filemanager.console.Console;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.RelaunchableException;
 import com.cyanogenmod.filemanager.listeners.OnRequestRefreshListener;
@@ -280,7 +282,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             }
             @Override
             public boolean isDialogCancellable() {
-                return false;
+                return true;
             }
 
             @Override
@@ -341,6 +343,19 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                 }
             }
 
+            @Override
+            public void onCancel() {
+                if (mSrcConsole != null) {
+                    mSrcConsole.onCancel();
+                }
+                if (mDstConsole != null) {
+                    mDstConsole.onCancel();
+                }
+            }
+
+            private Console mSrcConsole;
+            private Console mDstConsole;
+
             /**
              * Method that copy or move the file to another location
              *
@@ -361,6 +376,12 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                     String source = src.getAbsolutePath() +
                             (src.isDirectory() ? File.separator : "");
 
+                    mSrcConsole = CommandHelper.ensureConsoleForFile(ctx, null, source);
+
+                    String dest = dst.getAbsolutePath() +
+                            (dst.isDirectory() ? File.separator : "");
+                    mDstConsole = CommandHelper.ensureConsoleForFile(ctx, null, dest);
+
                     // Copy or move?
                     if (operation.compareTo(COPY_MOVE_OPERATION.MOVE) == 0 ||
                             operation.compareTo(COPY_MOVE_OPERATION.RENAME) == 0) {
@@ -368,13 +389,13 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                                 ctx,
                                 source,
                                 dst.getAbsolutePath(),
-                                null);
+                                mSrcConsole);
                     } else {
                         CommandHelper.copy(
                                 ctx,
                                 source,
                                 dst.getAbsolutePath(),
-                                null);
+                                mSrcConsole);
                     }
                 } catch (Exception e) {
                     // Need to be relaunched?
