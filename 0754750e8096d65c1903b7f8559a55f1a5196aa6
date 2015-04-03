@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac665da_e33acacc",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/InputNameDialog.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-04-03T11:04:31Z",
+      "side": 1,
+      "message": "I know you already protected this by setting maxlength of the edit text to 255, but I would like to see a string here so that it matches the below error conditions. \"The file name cannot be longer than 255 characters.\"",
+      "revId": "0754750e8096d65c1903b7f8559a55f1a5196aa6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
