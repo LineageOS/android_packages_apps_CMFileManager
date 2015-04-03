@@ -24,6 +24,7 @@ import android.text.Html;
 import android.text.Spanned;
 
 import com.cyanogenmod.filemanager.R;
+import com.cyanogenmod.filemanager.console.CancelledOperationException;
 import com.cyanogenmod.filemanager.console.Console;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.RelaunchableException;
@@ -303,8 +304,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                 return Html.fromHtml(progress);
             }
 
-            @Override
-            public void onSuccess() {
+            private void refreshUIAfterCompletion() {
                 // Remove orphan bookmark paths
                 if (files != null) {
                     for (LinkedResource linkedFiles : files) {
@@ -317,6 +317,11 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                   // The reference is not the same, so refresh the complete navigation view
                   this.mOnRequestRefreshListener.onRequestRefresh(null, true);
                 }
+            }
+
+            @Override
+            public void onSuccess() {
+                refreshUIAfterCompletion();
                 ActionsPolicy.showOperationSuccessMsg(ctx);
             }
 
@@ -351,6 +356,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                 if (mDstConsole != null) {
                     mDstConsole.onCancel();
                 }
+                refreshUIAfterCompletion();
             }
 
             // Handles required for issuing command death to the consoles

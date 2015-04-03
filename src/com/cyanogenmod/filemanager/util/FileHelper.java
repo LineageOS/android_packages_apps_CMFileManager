@@ -1162,6 +1162,9 @@ public final class FileHelper {
             if (e.getCause() instanceof ErrnoException
                         && ((ErrnoException)e.getCause()).errno == OsConstants.ENOSPC) {
                 throw new ExecutionException(R.string.msgs_no_disk_space);
+            } if (e instanceof CancelledOperationException) {
+                // If the user cancelled this operation, let it through.
+                throw (CancelledOperationException)e;
             }
 
             return false;

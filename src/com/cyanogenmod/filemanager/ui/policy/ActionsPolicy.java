@@ -124,7 +124,8 @@ public abstract class ActionsPolicy {
                 @Override
                 public boolean onCancel() {
                     mCallable.onCancel();
-                    return task.cancel(true);
+                    task.cancel(true);
+                    return true;
                 }
             });
             Spanned progress = this.mCallable.requestProgress();
@@ -162,8 +163,7 @@ public abstract class ActionsPolicy {
 
         @Override
         protected void onCancelled() {
-            //Operation complete.
-            this.mCallable.onSuccess();
+            this.mCallable.onCancel();
         }
 
         @Override
