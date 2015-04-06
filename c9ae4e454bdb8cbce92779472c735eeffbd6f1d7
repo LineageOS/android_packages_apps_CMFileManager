@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ac371cc_24d1b2fc",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 383,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-06T11:10:12Z",
+      "side": 1,
+      "message": "Could you add a comment here explained why is necessary the dst console? Otherwise retrieve an unused console in this class will made not sense for other devs.",
+      "revId": "c9ae4e454bdb8cbce92779472c735eeffbd6f1d7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
