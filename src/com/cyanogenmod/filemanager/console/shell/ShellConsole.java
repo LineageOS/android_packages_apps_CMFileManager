@@ -46,6 +46,7 @@ import com.cyanogenmod.filemanager.model.Identity;
 import com.cyanogenmod.filemanager.util.CommandHelper;
 import com.cyanogenmod.filemanager.util.FileHelper;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -118,7 +119,7 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
     /**
      * @hide
      */
-    StringBuffer mSbIn = null;
+    ByteArrayOutputStream mSbIn = null;
     /**
      * @hide
      */
@@ -151,7 +152,7 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
         this.mBufferSize = DEFAULT_BUFFER;
 
         //Restart the buffers
-        this.mSbIn = new StringBuffer();
+        this.mSbIn = new ByteArrayOutputStream();
         this.mSbErr = new StringBuffer();
 
         //Generate an aleatory secure random generator
@@ -476,7 +477,7 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
             //Reset the buffers
             this.mStarted = false;
             this.mCancelled = false;
-            this.mSbIn = new StringBuffer();
+            this.mSbIn = new ByteArrayOutputStream();
             this.mSbErr = new StringBuffer();
 
             //Random start/end identifiers
@@ -674,7 +675,7 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
             public void run() {
                 final ShellConsole shell = ShellConsole.this;
                 int read = 0;
-                StringBuffer sb = null;
+                ByteArrayOutputStream sb = null;
                 try {
                     while (shell.mActive) {
                         //Read only one byte with active wait
@@ -688,27 +689,33 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
                                 shell.mActiveCommand != null &&
                                 shell.mActiveCommand instanceof AsyncResultProgram;
                         if (!async || sb == null) {
-                            sb = new StringBuffer();
+                            sb = new ByteArrayOutputStream();
                         }
 
                         if (!shell.mCancelled) {
-                            shell.mSbIn.append((char)r);
+                            shell.mSbIn.write(r);
+//                            shell.mSbIn.append((char)r);
                             if (!shell.mStarted) {
                                 shell.mStarted = isCommandStarted(shell.mSbIn);
                                 if (shell.mStarted) {
-                                    sb = new StringBuffer(shell.mSbIn.toString());
+                                    sb = new ByteArrayOutputStream();
+                                    byte[] buffer = shell.mSbIn.toString().getBytes();
+                                    sb.write(buffer, 0, buffer.length);
                                     if (async) {
                                         synchronized (shell.mPartialSync) {
                                             ((AsyncResultProgram)
                                                     shell.mActiveCommand).
-                                                        onRequestStartParsePartialResult();
+                                                    onRequestStartParsePartialResult();
                                         }
                                     }
                                 } else {
-                                    sb.append(shell.mSbIn.toString());
+                                    byte[] buffer = shell.mSbIn.toString().getBytes();
+                                    sb.write(buffer, 0, buffer.length);
+//                                    sb.append(shell.mSbIn.toString());
                                 }
                             } else {
-                                sb.append((char)r);
+                                sb.write(r);
+//                                sb.append((char)r);
                             }
 
                             // New data received
@@ -724,11 +731,11 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
                                 String partial = sb.toString();
                                 int cc = shell.mEndControlPattern.length();
                                 if (partial.length() >= cc) {
-                                    program.onRequestParsePartialResult(partial);
+                                    program.onRequestParsePartialResult(sb.toByteArray());
                                     shell.toStdIn(partial);
 
                                     // Reset the temp buffer
-                                    sb = new StringBuffer();
+                                    sb = new ByteArrayOutputStream();
                                 }
                             }
 
@@ -740,7 +747,7 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
                                             ((AsyncResultProgram)shell.mActiveCommand);
                                     String partial = sb.toString();
                                     if (program != null) {
-                                        program.onRequestParsePartialResult(partial);
+                                        program.onRequestParsePartialResult(sb.toByteArray());
                                     }
                                     shell.toStdIn(partial);
                                 }
@@ -773,11 +780,13 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
                             if (shell.mCancelled) continue;
 
                             final String s = new String(data, 0, read);
-                            shell.mSbIn.append(s);
+                            shell.mSbIn.write(data, 0, read);
                             if (!shell.mStarted) {
                                 shell.mStarted = isCommandStarted(shell.mSbIn);
                                 if (shell.mStarted) {
-                                    sb = new StringBuffer(shell.mSbIn.toString());
+                                    sb = new ByteArrayOutputStream();
+                                    byte[] buffer = shell.mSbIn.toString().getBytes();
+                                    sb.write(buffer, 0, buffer.length);
                                     if (async) {
                                         synchronized (shell.mPartialSync) {
                                             AsyncResultProgram p =
@@ -788,10 +797,12 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
                                         }
                                     }
                                 } else {
-                                    sb.append(shell.mSbIn.toString());
+                                    byte[] buffer = shell.mSbIn.toString().getBytes();
+                                    sb.write(buffer, 0, buffer.length);
                                 }
                             } else {
-                                sb.append(s);
+                                sb.write(data, 0, read);
+//                                sb.append(s);
                             }
 
                             // New data received
@@ -807,12 +818,12 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
                                 int cc = shell.mEndControlPattern.length();
                                 if (partial.length() >= cc) {
                                     if (program != null) {
-                                        program.onRequestParsePartialResult(partial);
+                                        program.onRequestParsePartialResult(sb.toByteArray());
                                     }
                                     shell.toStdIn(partial);
 
                                     // Reset the temp buffer
-                                    sb = new StringBuffer();
+                                    sb = new ByteArrayOutputStream();
                                 }
                             }
 
@@ -824,7 +835,7 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
                                             ((AsyncResultProgram)shell.mActiveCommand);
                                     String partial = sb.toString();
                                     if (program != null) {
-                                        program.onRequestParsePartialResult(partial);
+                                        program.onRequestParsePartialResult(sb.toByteArray());
                                     }
                                     shell.toStdIn(partial);
                                 }
@@ -846,7 +857,7 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
                         //Asynchronous programs can cause a lot of output, control buffers
                         //for a low memory footprint
                         if (async) {
-                            trimBuffer(shell.mSbIn);
+//                            trimBuffer(shell.mSbIn);
                             trimBuffer(shell.mSbErr);
                         }
 
@@ -981,7 +992,7 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
                         //for a low memory footprint
                         if (shell.mActiveCommand != null &&
                                 shell.mActiveCommand instanceof AsyncResultProgram) {
-                            trimBuffer(shell.mSbIn);
+//                            trimBuffer(shell.mSbIn);
                             trimBuffer(shell.mSbErr);
                         }
                     }
@@ -1091,12 +1102,16 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
      * @return boolean If the command has started
      * @hide
      */
-    boolean isCommandStarted(StringBuffer stdin) {
+    boolean isCommandStarted(ByteArrayOutputStream stdin) {
         if (stdin == null) return false;
+        final String str = stdin.toString();
         Pattern pattern = Pattern.compile(this.mStartControlPattern);
-        Matcher matcher = pattern.matcher(stdin.toString());
+        Matcher matcher = pattern.matcher(str);
+        byte[] data = stdin.toByteArray();
         if (matcher.find()) {
-            stdin.replace(0, matcher.end(), ""); //$NON-NLS-1$
+            stdin.reset();
+            stdin.write(data, matcher.end(), data.length - matcher.end());
+//            stdin.replace(0, matcher.end(), ""); //$NON-NLS-1$
             return true;
         }
         return false;
@@ -1110,7 +1125,7 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
      * @return boolean If the command has finished
      * @hide
      */
-    boolean isCommandFinished(StringBuffer stdin, StringBuffer partial) {
+    boolean isCommandFinished(ByteArrayOutputStream stdin, ByteArrayOutputStream partial) {
         Pattern pattern = Pattern.compile(this.mEndControlPattern);
         if (stdin == null) return false;
         Matcher matcher = pattern.matcher(stdin.toString());
@@ -1119,7 +1134,12 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
         if (ret && partial != null) {
             matcher = pattern.matcher(partial.toString());
             if (matcher.find()) {
-                partial.replace(matcher.start(), matcher.end(), ""); //$NON-NLS-1$
+                byte[] data = partial.toByteArray();
+                partial.reset();
+                for (int i = matcher.start(); i < matcher.end(); i++) {
+                    partial.write(data[i]);
+                }
+//                partial.replace(matcher.start(), matcher.end(), ""); //$NON-NLS-1$
             }
         }
         return ret;
@@ -1141,7 +1161,7 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
      * @param stdin The standard in buffer
      * @return int The exit code of the last executed command
      */
-    private int getExitCode(StringBuffer stdin) {
+    private int getExitCode(ByteArrayOutputStream stdin) {
         // If process was cancelled, don't expect a exit code.
         // Returns always 143 code
         if (this.mCancelled) {
@@ -1153,7 +1173,9 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
         Pattern pattern = Pattern.compile(this.mEndControlPattern);
         Matcher matcher = pattern.matcher(txt);
         if (matcher.find()) {
-            this.mSbIn = new StringBuffer(txt.substring(0, matcher.start()));
+            this.mSbIn = new ByteArrayOutputStream();
+            byte[] buffer = txt.substring(0, matcher.start()).getBytes();
+            mSbIn.write(buffer, 0, buffer.length);
             String exitTxt = matcher.group();
             return Integer.parseInt(
                     exitTxt.substring(
