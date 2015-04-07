@@ -29,11 +29,13 @@ import android.os.Message;
 import android.os.Handler.Callback;
 import android.os.ParcelFileDescriptor;
 import android.provider.OpenableColumns;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.model.RegularFile;
+import com.cyanogenmod.filemanager.providers.secure.SuchHttpServer;
 import com.cyanogenmod.filemanager.util.CommandHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 
@@ -62,6 +64,10 @@ public final class SecureResourceProvider extends ContentProvider {
     private static final String COLUMS_ID = "auth_id";
     private static final String COLUMS_NAME = OpenableColumns.DISPLAY_NAME;
     private static final String COLUMS_SIZE = OpenableColumns.SIZE;
+
+    // [TODO][MSB]: Fix old pipeline
+    private static final long ONE_MB = 0; // 1000000; The old path is broken for some reason, it
+    // calls the open path twice and fails the second time.  its weird
 
     private static final String[] COLUMN_PROJECTION = {
         COLUMS_ID, COLUMS_NAME, COLUMS_SIZE
@@ -185,7 +191,7 @@ public final class SecureResourceProvider extends ContentProvider {
         }
     };
 
-    private static final long MAX_AUTH_LIVE_TIME = 20000L;
+    public static final long MAX_AUTH_LIVE_TIME = 20000L;
     private static final int MSG_CLEAR_AUTHORIZATIONS = 1;
     private static final String EXTRA_AUTH_ID = "auth_id";
     private static final Handler CLEAR_AUTH_HANDLER = new Handler(CLEAR_AUTH_CALLBACK);
@@ -222,7 +228,19 @@ public final class SecureResourceProvider extends ContentProvider {
         bundle.putString(EXTRA_AUTH_ID, uuid.toString());
         msg.setData(bundle);
         CLEAR_AUTH_HANDLER.sendMessageDelayed(msg, MAX_AUTH_LIVE_TIME);
-        return createAuthorizationUri(uuid);
+
+        // Check size, and only make remote uri if above 1MB
+        boolean veryFile = file.getSize() >= ONE_MB;
+        if (veryFile) {
+            // Open the socket server to stream data
+            SuchHttpServer secureHttpServer = SuchHttpServer.createInstance();
+            try {
+                secureHttpServer.startListening();
+            } catch (IOException e) {
+                Log.e(TAG, e.getMessage(), e);
+            }
+        }
+        return createAuthorizationUri(uuid, veryFile);
     }
 
     /**
@@ -339,6 +357,43 @@ public final class SecureResourceProvider extends ContentProvider {
         throw new SecurityException("Update is not allowed");
     }
 
+    /**
+     * Get a file system object from the uri and authenticate it with the package name
+     * @param uri {@link android.net.Uri}
+     * @param packageName {@link java.lang.String}
+     * @return {@link com.cyanogenmod.filemanager.model.FileSystemObject}
+     */
+    public static FileSystemObject getFileSystemObject(Uri uri, String packageName)
+            throws IllegalArgumentException, SecurityException{
+        // Ensure arguments
+        if (TextUtils.isEmpty(packageName)) {
+            throw new IllegalArgumentException("'packageName' cannot be null or empty!");
+        }
+        if (uri == null){
+            throw new IllegalArgumentException("'uri' cannot be null!");
+        }
+
+        // Fetch the resource (this resource times out after 20 seconds)
+        AuthorizationResource authResource = getAuthorizacionResourceForUri(uri);
+        if (authResource == null) {
+            throw new SecurityException("Authorization not exists");
+        }
+
+        // Verify package name
+        boolean isPackageAuthorized = false;
+        if (packageName.equals(authResource.mPackage)) {
+            isPackageAuthorized = true;
+        }
+
+        // If check failed, don't return file!
+        if (!isPackageAuthorized) {
+            throw new SecurityException("Authorization denied. Package mismatch");
+        }
+
+        // Return the file to the caller
+        return authResource.mFile;
+    }
+
     @Override
     public ParcelFileDescriptor openFile(Uri uri, String mode) throws FileNotFoundException {
         return this.openFile(uri, mode, null);
@@ -412,10 +467,16 @@ public final class SecureResourceProvider extends ContentProvider {
      * Method that returns an authorization URI from the authorization UUID
      *
      * @param uuid The UUID of the authorization
+     * @param veryFile Flag whether or not the file is very big (bigger than or equal to 1MB)
      * @return Uri The authorization Uri
      */
-    private static Uri createAuthorizationUri(UUID uuid) {
-        return Uri.withAppendedPath(Uri.parse(CONTENT_AUTHORITY),
-                uuid.toString());
+    private static Uri createAuthorizationUri(UUID uuid, boolean veryFile) {
+
+        if (veryFile) {
+            Uri uri = Uri.parse(SuchHttpServer.URL_LOCAL);
+            return Uri.withAppendedPath(uri, uuid.toString());
+        } else {
+            return Uri.withAppendedPath(Uri.parse(CONTENT_AUTHORITY), uuid.toString());
+        }
     }
 }
