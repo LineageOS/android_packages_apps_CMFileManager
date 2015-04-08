@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ac371cc_fe08c12a",
+        "filename": "Android.mk",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-04-08T12:57:41Z",
+      "side": 1,
+      "message": "tabs",
+      "revId": "375197ceb66b158bf84306f5875cbfe465833800",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_de0d0539",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 341,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-04-08T12:57:41Z",
+      "side": 1,
+      "message": "Probably don\u0027t want to keep this. maybe log it as a debug statement?",
+      "revId": "375197ceb66b158bf84306f5875cbfe465833800",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_3e13795e",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1093,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-04-08T12:57:41Z",
+      "side": 1,
+      "message": "Does this have any issues when reading files that require root privileges?",
+      "revId": "375197ceb66b158bf84306f5875cbfe465833800",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
