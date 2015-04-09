@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ac371cc_aed73822",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 1121,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-04-09T17:14:18Z",
+      "side": 1,
+      "message": "Can probably put this back on one line, but not a big deal.",
+      "revId": "41df7334bddb8c13adab3dd553686b1a3d299c8f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_0eddac42",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 697,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-04-09T17:14:18Z",
+      "side": 1,
+      "message": "Don\u0027t need this line anymore.",
+      "revId": "41df7334bddb8c13adab3dd553686b1a3d299c8f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
