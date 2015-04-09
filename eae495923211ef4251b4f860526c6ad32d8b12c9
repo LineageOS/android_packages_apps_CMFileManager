@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ac371cc_6e69c08b",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 702,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-04-09T16:49:21Z",
+      "side": 1,
+      "message": "You can just call shell.mSbIn.toByteArray() here instead of turning it into a string first, I believe.",
+      "revId": "eae495923211ef4251b4f860526c6ad32d8b12c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_ce0434c8",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 712,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-04-09T16:49:21Z",
+      "side": 1,
+      "message": "Same here.",
+      "revId": "eae495923211ef4251b4f860526c6ad32d8b12c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_ae09f8df",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 788,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-04-09T16:49:21Z",
+      "side": 1,
+      "message": "And here.",
+      "revId": "eae495923211ef4251b4f860526c6ad32d8b12c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_0e0f6ce2",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 800,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-04-09T16:49:21Z",
+      "side": 1,
+      "message": "And here.",
+      "revId": "eae495923211ef4251b4f860526c6ad32d8b12c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
