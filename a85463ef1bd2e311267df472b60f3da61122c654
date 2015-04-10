@@ -16,6 +16,24 @@
       "revId": "a85463ef1bd2e311267df472b60f3da61122c654",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_4402e33f",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 1190,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-10T12:22:46Z",
+      "side": 1,
+      "message": "final int BUFFER_SIZE \u003d 200;\n byte[] data \u003d sb.toByteArray();\n if (data.length \u003e BUFFER_SIZE) {\n     sb.reset();\n     sb.write(data, data.length - BUFFER_SIZE, BUFFER_SIZE);\n }",
+      "parentUuid": "3ac371cc_a462b7ab",
+      "revId": "a85463ef1bd2e311267df472b60f3da61122c654",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }

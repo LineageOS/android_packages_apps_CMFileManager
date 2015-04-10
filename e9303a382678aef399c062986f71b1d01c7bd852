@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ac371cc_64f9df4d",
+        "filename": "src/com/cyanogenmod/filemanager/commands/shell/AsyncResultProgram.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-10T12:22:46Z",
+      "side": 0,
+      "message": "Remove this object",
+      "revId": "e9303a382678aef399c062986f71b1d01c7bd852",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_24ffe735",
+        "filename": "src/com/cyanogenmod/filemanager/commands/shell/AsyncResultProgram.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-10T12:22:46Z",
+      "side": 0,
+      "message": "remove this block by (there is a dead lock here)\n\n this.mWorkerThread.join();",
+      "revId": "e9303a382678aef399c062986f71b1d01c7bd852",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_84fcdb3f",
+        "filename": "src/com/cyanogenmod/filemanager/commands/shell/AsyncResultProgram.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 399,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-10T12:22:46Z",
+      "side": 0,
+      "message": "remove this finally",
+      "revId": "e9303a382678aef399c062986f71b1d01c7bd852",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
