@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ac371cc_2409a732",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 19
+      },
+      "lineNbr": 475,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-10T13:47:57Z",
+      "side": 1,
+      "message": "final boolean async \u003d program instanceof AsyncResultProgram;",
+      "revId": "78d4d83a1dff3451ffa7db1816ced09cd09e298a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_84069b1e",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 19
+      },
+      "lineNbr": 508,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-10T13:47:57Z",
+      "side": 1,
+      "message": "if (async) {",
+      "revId": "78d4d83a1dff3451ffa7db1816ced09cd09e298a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_64039f10",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 19
+      },
+      "lineNbr": 585,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-10T13:47:57Z",
+      "side": 1,
+      "message": "if (async) {",
+      "revId": "78d4d83a1dff3451ffa7db1816ced09cd09e298a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_bf03e00c",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 19
+      },
+      "lineNbr": 592,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-10T13:47:57Z",
+      "side": 1,
+      "message": "int exitCode \u003d getExitCode(this.mSbIn, async);",
+      "revId": "78d4d83a1dff3451ffa7db1816ced09cd09e298a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_dffe9c04",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 19
+      },
+      "lineNbr": 593,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-10T13:47:57Z",
+      "side": 1,
+      "message": "if (async) {",
+      "revId": "78d4d83a1dff3451ffa7db1816ced09cd09e298a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_1f09542d",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 19
+      },
+      "lineNbr": 1156,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-10T13:47:57Z",
+      "side": 1,
+      "message": "private int getExitCode(ByteArrayOutputStream stdin, boolean async) {",
+      "revId": "78d4d83a1dff3451ffa7db1816ced09cd09e298a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_ff0d5838",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 19
+      },
+      "lineNbr": 1169,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-10T13:47:57Z",
+      "side": 1,
+      "message": "// In asynchronous commands we only are interested in the exit code\n if (!async) {\n     byte[] buffer \u003d stdin.toByteArray();\n     mSbIn.reset();\n     mSbIn.write(buffer, 0, matcher.start());\n }",
+      "revId": "78d4d83a1dff3451ffa7db1816ced09cd09e298a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
