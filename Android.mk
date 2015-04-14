@@ -21,9 +21,18 @@ LOCAL_SRC_FILES := $(call all-subdir-java-files)
 LOCAL_SRC_FILES += $(call all-java-files-under, libs/android-syntax-highlight/src)
 LOCAL_SRC_FILES += $(call all-java-files-under, libs/color-picker-view/src)
 
-LOCAL_STATIC_JAVA_LIBRARIES += libtruezip
-LOCAL_STATIC_JAVA_LIBRARIES += android-support-v4
-LOCAL_STATIC_JAVA_LIBRARIES += juniversalchardet
+LOCAL_RESOURCE_DIR := \
+    frameworks/support/v17/leanback/res \
+    $(LOCAL_PATH)/res
+
+LOCAL_STATIC_JAVA_LIBRARIES += \
+    android-support-v4 \
+    android-support-v7-recyclerview \
+    android-support-v17-leanback \
+    juniversalchardet \
+    libtruezip
+
+LOCAL_AAPT_FLAGS += --auto-add-overlay --extra-packages android.support.v17.leanback
 
 LOCAL_PACKAGE_NAME := CMFileManager
 LOCAL_CERTIFICATE := platform
