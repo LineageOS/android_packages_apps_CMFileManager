@@ -960,7 +960,7 @@ public final class FileHelper {
         int cc = files.size();
         for (int i = 0; i < cc; i++) {
             FileSystemObject fso = files.get(i);
-            if (fso.getName().compareTo(name) == 0) {
+            if (fso.getName().compareToIgnoreCase(name) == 0) {
                 return true;
             }
         }
