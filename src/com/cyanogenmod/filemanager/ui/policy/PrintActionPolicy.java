@@ -351,8 +351,8 @@ public final class PrintActionPolicy extends ActionsPolicy {
         }
 
         private int calculatePageCount(int rowsPerPage) {
-            int pages = mAdjustedLines.size() / rowsPerPage;
-            return pages <= 0 ? PrintDocumentInfo.PAGE_COUNT_UNKNOWN : pages;
+            double pages = (double)mAdjustedLines.size() / rowsPerPage;
+            return pages <= 0 ? PrintDocumentInfo.PAGE_COUNT_UNKNOWN : ((Double)Math.ceil(pages)).intValue();
         }
 
         private int rowsPerPage(Rect pageContentRect) {
