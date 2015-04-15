@@ -17,7 +17,6 @@
 package com.cyanogenmod.filemanager.ui.policy;
 
 import android.content.ComponentName;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnDismissListener;
@@ -30,7 +29,6 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.Toast;
-
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.ShortcutActivity;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
@@ -38,6 +36,8 @@ import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.model.RegularFile;
 import com.cyanogenmod.filemanager.providers.SecureResourceProvider;
 import com.cyanogenmod.filemanager.providers.SecureResourceProvider.AuthorizationResource;
+import com.cyanogenmod.filemanager.providers.secure.ISecureChoiceCompleteListener;
+import com.cyanogenmod.filemanager.providers.secure.SecureChoiceClickListener;
 import com.cyanogenmod.filemanager.ui.dialogs.AssociationsDialog;
 import com.cyanogenmod.filemanager.util.DialogHelper;
 import com.cyanogenmod.filemanager.util.ExceptionUtil;
@@ -89,8 +89,8 @@ public final class IntentsActionPolicy extends ActionsPolicy {
     public static final String GALLERY2_PACKAGE = "com.android.gallery3d";
 
     /**
-     * Method that opens a {@link FileSystemObject} with the default registered application
-     * by the system, or ask the user for select a registered application.
+     * Method that opens a {@link FileSystemObject} with the default registered application by the
+     * system, or ask the user for select a registered application.
      *
      * @param ctx The current context
      * @param fso The file system object
@@ -100,11 +100,55 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      */
     public static void openFileSystemObject(
             final Context ctx, final FileSystemObject fso, final boolean choose,
-            OnCancelListener onCancelListener, OnDismissListener onDismissListener) {
+            final OnCancelListener onCancelListener, final OnDismissListener onDismissListener) {
         try {
             // Create the intent to open the file
-            Intent intent = new Intent();
+            final Intent intent = new Intent();
             intent.setAction(android.content.Intent.ACTION_VIEW);
+
+            // [NOTE][MSB]: Short circuit to pop up dialog informing user we need to copy out the
+            // file until we find a better solution.
+            if (fso.isSecure()) {
+                // [TODO][MSB]: Check visible cache for existing file
+                // [TODO][MSB]: Handle copy cancelled
+                // [TODO][MSB]: Implement cache cleanup
+                DialogHelper.createTwoButtonsQuestionDialog(
+                        ctx,
+                        R.string.ok,
+                        R.string.cancel,
+                        R.string.warning_title,
+                        ctx.getResources().getString(R.string.secure_storage_open_file_warning),
+                        new SecureChoiceClickListener(ctx, fso,
+                                new ISecureChoiceCompleteListener() {
+                                    @Override
+                                    public void onComplete(File cacheFile) {
+                                        FileSystemObject cacheFso = FileHelper
+                                                .createFileSystemObject(cacheFile);
+                                        // Obtain the mime/type and passed it to intent
+                                        String mime = MimeTypeHelper.getMimeType(ctx, cacheFso);
+                                        if (mime != null) {
+                                            intent.setDataAndType(getUriFromFile(ctx, cacheFso),
+                                                    mime);
+                                        } else {
+                                            intent.setData(getUriFromFile(ctx, cacheFso));
+                                        }
+                                        // Resolve the intent
+                                        resolveIntent(
+                                                ctx,
+                                                intent,
+                                                choose,
+                                                createInternalIntents(ctx, cacheFso),
+                                                0,
+                                                R.string.associations_dialog_openwith_title,
+                                                R.string.associations_dialog_openwith_action,
+                                                true,
+                                                onCancelListener,
+                                                onDismissListener);
+                                    }
+                                }))
+                        .show();
+                return;
+            }
 
             // Obtain the mime/type and passed it to intent
             String mime = MimeTypeHelper.getMimeType(ctx, fso);
@@ -119,7 +163,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                     ctx,
                     intent,
                     choose,
-                    createInternalIntents(ctx,  fso),
+                    createInternalIntents(ctx, fso),
                     0,
                     R.string.associations_dialog_openwith_title,
                     R.string.associations_dialog_openwith_action,
@@ -131,8 +175,8 @@ public final class IntentsActionPolicy extends ActionsPolicy {
     }
 
     /**
-     * Method that sends a {@link FileSystemObject} with the default registered application
-     * by the system, or ask the user for select a registered application.
+     * Method that sends a {@link FileSystemObject} with the default registered application by the
+     * system, or ask the user for select a registered application.
      *
      * @param ctx The current context
      * @param fso The file system object
@@ -168,8 +212,8 @@ public final class IntentsActionPolicy extends ActionsPolicy {
     }
 
     /**
-     * Method that sends a {@link FileSystemObject} with the default registered application
-     * by the system, or ask the user for select a registered application.
+     * Method that sends a {@link FileSystemObject} with the default registered application by the
+     * system, or ask the user for select a registered application.
      *
      * @param ctx The current context
      * @param fsos The file system objects
@@ -194,7 +238,8 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                 FileSystemObject fso = fsos.get(i);
 
                 // Folders are not allowed
-                if (FileHelper.isDirectory(fso)) continue;
+                if (FileHelper.isDirectory(fso))
+                    continue;
 
                 // Check if we can use a unique mime/type
                 String mimeType = MimeTypeHelper.getMimeType(ctx, fso);
@@ -202,8 +247,8 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                     sameMimeType = false;
                 }
                 if (sameMimeType &&
-                    (mimeType != null && lastMimeType != null &&
-                     mimeType.compareTo(lastMimeType) != 0)) {
+                        (mimeType != null && lastMimeType != null &&
+                                mimeType.compareTo(lastMimeType) != 0)) {
                     sameMimeType = false;
                 }
                 lastMimeType = mimeType;
@@ -260,7 +305,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
         }
         List<ResolveInfo> info =
                 packageManager.
-                    queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+                        queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         Collections.sort(info, new Comparator<ResolveInfo>() {
             @Override
             public int compare(ResolveInfo lhs, ResolveInfo rhs) {
@@ -286,7 +331,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                 Intent ii = internals.get(i);
                 List<ResolveInfo> ie =
                         packageManager.
-                            queryIntentActivities(ii, 0);
+                                queryIntentActivities(ii, 0);
                 if (ie.size() > 0) {
                     ResolveInfo rie = ie.get(0);
 
@@ -297,8 +342,8 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                         ResolveInfo ri = info.get(j);
                         if (ri.activityInfo.packageName.compareTo(
                                 rie.activityInfo.packageName) == 0 &&
-                            ri.activityInfo.name.compareTo(
-                                    rie.activityInfo.name) == 0) {
+                                ri.activityInfo.name.compareTo(
+                                        rie.activityInfo.name) == 0) {
 
                             // Mark as internal
                             if (ri.activityInfo.metaData == null) {
@@ -347,7 +392,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
         // Is a simple open and we have an application that can handle the file?
         //---
         // If we have a preferred application, then use it
-        if (!choose && (mPreferredInfo  != null && mPreferredInfo.match != 0)) {
+        if (!choose && (mPreferredInfo != null && mPreferredInfo.match != 0)) {
             ctx.startActivity(getIntentFromResolveInfo(mPreferredInfo, intent));
             if (onDismissListener != null) {
                 onDismissListener.onDismiss(null);
@@ -395,7 +440,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
             shortcutIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             if (FileHelper.isDirectory(fso)) {
                 shortcutIntent.putExtra(
-                        ShortcutActivity.EXTRA_TYPE,ShortcutActivity.SHORTCUT_TYPE_NAVIGATE);
+                        ShortcutActivity.EXTRA_TYPE, ShortcutActivity.SHORTCUT_TYPE_NAVIGATE);
             } else {
                 shortcutIntent.putExtra(
                         ShortcutActivity.EXTRA_TYPE, ShortcutActivity.SHORTCUT_TYPE_OPEN);
@@ -453,9 +498,9 @@ public final class IntentsActionPolicy extends ActionsPolicy {
         //- Internal Editor. This editor can handle TEXT and NONE mime categories but
         //  not system files, directories, ..., only regular files (no symlinks)
         if (fso instanceof RegularFile &&
-            (category.compareTo(MimeTypeCategory.NONE) == 0 ||
-             category.compareTo(MimeTypeCategory.EXEC) == 0 ||
-             category.compareTo(MimeTypeCategory.TEXT) == 0)) {
+                (category.compareTo(MimeTypeCategory.NONE) == 0 ||
+                        category.compareTo(MimeTypeCategory.EXEC) == 0 ||
+                        category.compareTo(MimeTypeCategory.TEXT) == 0)) {
             Intent editorIntent = new Intent();
             editorIntent.setAction(Intent.ACTION_VIEW);
             editorIntent.addCategory(CATEGORY_INTERNAL_VIEWER);
@@ -471,15 +516,16 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      *
      * @param ri The ResolveInfo
      * @param request The requested intent
+     *
      * @return Intent The intent
      */
     public static final Intent getIntentFromResolveInfo(ResolveInfo ri, Intent request) {
         Intent intent =
                 getIntentFromComponentName(
-                    new ComponentName(
-                        ri.activityInfo.applicationInfo.packageName,
-                        ri.activityInfo.name),
-                    request);
+                        new ComponentName(
+                                ri.activityInfo.applicationInfo.packageName,
+                                ri.activityInfo.name),
+                        request);
         boolean isInternalEditor = isInternalEditor(ri);
         if (isInternalEditor) {
             String a = Intent.ACTION_VIEW;
@@ -493,9 +539,9 @@ public final class IntentsActionPolicy extends ActionsPolicy {
             // Opening image files with Gallery2 will behave incorrectly when started
             // as a new task. We want to be able to return to CMFM with the back button.
             if (!(Intent.ACTION_VIEW.equals(intent.getAction())
-                  && isGallery2(ri)
-                  && intent.getData() != null
-                  && MediaStore.AUTHORITY.equals(intent.getData().getAuthority()))) {
+                    && isGallery2(ri)
+                    && intent.getData() != null
+                    && MediaStore.AUTHORITY.equals(intent.getData().getAuthority()))) {
                 // Create a new stack for the activity
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             }
@@ -561,16 +607,17 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      *
      * @param cn The ComponentName
      * @param request The requested intent
+     *
      * @return Intent The intent
      */
     public static final Intent getIntentFromComponentName(ComponentName cn, Intent request) {
         Intent intent = new Intent(request);
         intent.setFlags(
-                intent.getFlags() &~
-                Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+                intent.getFlags() & ~
+                        Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
         intent.addFlags(
                 Intent.FLAG_ACTIVITY_FORWARD_RESULT |
-                Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
+                        Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
         intent.setComponent(
                 new ComponentName(
                         cn.getPackageName(),
@@ -582,7 +629,9 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      * Method that returns if the selected resolve info is about an internal viewer
      *
      * @param ri The resolve info
+     *
      * @return boolean  If the selected resolve info is about an internal viewer
+     *
      * @hide
      */
     public static final boolean isInternalEditor(ResolveInfo ri) {
@@ -596,12 +645,13 @@ public final class IntentsActionPolicy extends ActionsPolicy {
     }
 
     /**
-     * Method that retrieve the finds the preferred activity, if one exists. In case
-     * of multiple preferred activity exists the try to choose the better
+     * Method that retrieve the finds the preferred activity, if one exists. In case of multiple
+     * preferred activity exists the try to choose the better
      *
      * @param ctx The current context
      * @param intent The query intent
      * @param info The initial info list
+     *
      * @return ResolveInfo The resolved info
      */
     private static final ResolveInfo findPreferredActivity(
@@ -616,8 +666,10 @@ public final class IntentsActionPolicy extends ActionsPolicy {
         int cc = info.size();
         for (int i = 0; i < cc; i++) {
             ResolveInfo ri = info.get(i);
-            if (isInternalEditor(ri)) continue;
-            if (ri.activityInfo == null || ri.activityInfo.packageName == null) continue;
+            if (isInternalEditor(ri))
+                continue;
+            if (ri.activityInfo == null || ri.activityInfo.packageName == null)
+                continue;
             List<ComponentName> prefActList = new ArrayList<ComponentName>();
             List<IntentFilter> intentList = new ArrayList<IntentFilter>();
             IntentFilter filter = new IntentFilter();

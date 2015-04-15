@@ -23,6 +23,7 @@ import android.content.DialogInterface.OnCancelListener;
 import android.text.Html;
 import android.text.Spanned;
 
+import android.util.Log;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.console.CancelledOperationException;
 import com.cyanogenmod.filemanager.console.Console;
