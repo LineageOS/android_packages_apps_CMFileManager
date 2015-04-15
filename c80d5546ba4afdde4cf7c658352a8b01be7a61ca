@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ac371cc_9f4b7db0",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1579,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-15T00:01:31Z",
+      "side": 1,
+      "message": "this isn\u0027t needed anymore since the loop will set it",
+      "revId": "c80d5546ba4afdde4cf7c658352a8b01be7a61ca",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_5f510562",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1580,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-15T00:01:31Z",
+      "side": 1,
+      "message": "code style (spaces) and improve loop\n\n int count \u003d volumes.length;\n for (int i \u003d 0; i \u003c count; i++) {",
+      "revId": "c80d5546ba4afdde4cf7c658352a8b01be7a61ca",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_bf4e39bf",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1582,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-15T00:01:31Z",
+      "side": 1,
+      "message": "volume is not null here",
+      "revId": "c80d5546ba4afdde4cf7c658352a8b01be7a61ca",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_7f54c153",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1584,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-15T00:01:31Z",
+      "side": 1,
+      "message": "volume is not null here\n\n if (Environment.MEDIA_MOUNTED.equalsIgnoreCase(volume.getState()) {\n\nwrap to 100 chars",
+      "revId": "c80d5546ba4afdde4cf7c658352a8b01be7a61ca",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
