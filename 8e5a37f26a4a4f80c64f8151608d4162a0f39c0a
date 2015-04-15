@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ac371cc_905fea0d",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1587,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-15T22:15:58Z",
+      "side": 1,
+      "message": "This doesn\u0027t compile, Isn\u0027t it?\n\nremove this brace and align the code",
+      "revId": "8e5a37f26a4a4f80c64f8151608d4162a0f39c0a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
