@@ -40,6 +40,7 @@ import com.cyanogenmod.filemanager.ui.ThemeManager;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
 import com.cyanogenmod.filemanager.util.AIDHelper;
 import com.cyanogenmod.filemanager.util.AndroidHelper;
+import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 
 import java.io.File;
@@ -104,6 +105,8 @@ public final class FileManagerApplication extends Application {
                             }
                         } catch (Throwable _throw) {/**NON BLOCK**/}
                     }
+                } else if(intent.getAction().equals(Intent.ACTION_LOCALE_CHANGED)){
+                    FileHelper.sReloadDateTimeFormats = true;
                 }
             }
         }
@@ -223,6 +226,7 @@ public final class FileManagerApplication extends Application {
         // Register the notify broadcast receiver
         IntentFilter filter = new IntentFilter();
         filter.addAction(FileManagerSettings.INTENT_SETTING_CHANGED);
+        filter.addAction(Intent.ACTION_LOCALE_CHANGED);
         registerReceiver(this.mNotificationReceiver, filter);
 
         // Register the uninstall broadcast receiver
