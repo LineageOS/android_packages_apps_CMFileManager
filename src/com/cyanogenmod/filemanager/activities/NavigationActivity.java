@@ -1946,6 +1946,11 @@ public class NavigationActivity extends Activity
         // Ignored
     }
 
+    @Override
+    public void onCancel(){
+        // nop
+    }
+
     /**
      * {@inheritDoc}
      */

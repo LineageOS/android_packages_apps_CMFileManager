@@ -1211,6 +1211,11 @@ public class SearchActivity extends Activity
         }
     }
 
+    @Override
+    public void onCancel() {
+        // nop
+    }
+
     /**
      * Method that returns to previous activity.
      *
