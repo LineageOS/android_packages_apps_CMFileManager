@@ -250,8 +250,8 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             }
         }
         // 3.- Check the operation consistency
-        if (operation.compareTo(COPY_MOVE_OPERATION.MOVE) == 0) {
-            if (!checkMoveConsistency(ctx, files, currentDirectory)) {
+        if (operation.compareTo(COPY_MOVE_OPERATION.MOVE) == 0 || operation.compareTo(COPY_MOVE_OPERATION.COPY) == 0) {
+            if (!checkCopyOrMoveConsistency(ctx, files, currentDirectory, operation)) {
                 return;
             }
         }
@@ -534,23 +534,24 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
 
 
     /**
-     * Method that check the consistency of move operations.<br/>
+     * Method that check the consistency of copy or move operations.<br/>
      * <br/>
      * The method checks the following rules:<br/>
      * <ul>
-     * <li>Any of the files of the move operation can not include the
+     * <li>Any of the files of the copy or move operation can not include the
      * current directory.</li>
-     * <li>Any of the files of the move operation can not include the
+     * <li>Any of the files of the copy or move operation can not include the
      * current directory.</li>
      * </ul>
      *
      * @param ctx The current context
      * @param files The list of source/destination files
      * @param currentDirectory The current directory
+     * @param operation the operation is copy or move
      * @return boolean If the consistency is validate successfully
      */
-    private static boolean checkMoveConsistency(
-            Context ctx, List<LinkedResource> files, String currentDirectory) {
+    private static boolean checkCopyOrMoveConsistency(
+            Context ctx, List<LinkedResource> files, String currentDirectory, final COPY_MOVE_OPERATION operation) {
         int cc = files.size();
         for (int i = 0; i < cc; i++) {
             LinkedResource linkRes = files.get(i);
@@ -558,7 +559,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             String dst = linkRes.mDst.getAbsolutePath();
 
             // 1.- Current directory can't be moved
-            if (currentDirectory != null && currentDirectory.startsWith(src)) {
+            if (currentDirectory != null && currentDirectory.startsWith(src) && operation.compareTo(COPY_MOVE_OPERATION.MOVE) == 0) {
                 // Operation not allowed
                 AlertDialog dialog =
                         DialogHelper.createErrorDialog(
