@@ -686,11 +686,19 @@ public final class IntentsActionPolicy extends ActionsPolicy {
             intentList.add(filter);
             packageManager.getPreferredActivities(
                     intentList, prefActList, ri.activityInfo.packageName);
-            if (prefActList.size() > 0) {
+            if( prefActList.size() == 1 ){
                 pref.add(ri);
+            } else if (prefActList.size() > 2) {
+                int count = prefActList.size();
+                String activityName = ri.activityInfo.name;
+                for (int index = 0;index < count; index++) {
+                    if (prefActList.get(index).getClassName().equals(activityName)) {
+                        pref.add(ri);
+                        break;
+                    }
+                }
             }
         }
-
         // No preferred activity is selected
         if (pref.size() == 0) {
             return null;
