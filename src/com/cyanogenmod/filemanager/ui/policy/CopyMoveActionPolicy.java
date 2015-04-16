@@ -257,6 +257,11 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                 return;
             }
         }
+        if (operation.compareTo(COPY_MOVE_OPERATION.COPY) == 0) {
+            if (!checkCopyConsistency(ctx, files, currentDirectory)) {
+                return;
+            }
+        }
 
         // The callable interface
         final BackgroundCallable callable = new BackgroundCallable() {
@@ -530,8 +535,39 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
         }
         return askUser;
     }
-
-
+    /**
+     * Method that check the consistency of copy operations.<br/>
+     * <br/>
+     * The method checks the following rules:<br/>
+     * <ul>
+     * <li>Any of the files can't copy to child folders</li>
+     *
+     * @param ctx The current context
+     * @param files The list of source/destination files
+     * @param currentDirectory The current directory
+     * @return boolean If the consistency is validate successfully
+     */
+    private static boolean checkCopyConsistency(
+            Context ctx, List<LinkedResource> files, String currentDirectory) {
+        int cc = files.size();
+        for (int i = 0; i < cc; i++) {
+            LinkedResource linkRes = files.get(i);
+            String src = linkRes.mSrc.getAbsolutePath();
+            String dst = linkRes.mDst.getAbsolutePath();
+            // 1.- Destination can't be a child of source
+            if (dst.startsWith(src) && !dst.equals(src)) {
+                // Operation not allowed
+                AlertDialog dialog =
+                        DialogHelper.createErrorDialog(
+                                ctx,
+                                R.string.error_title,
+                                R.string.msgs_operation_not_allowed_in_current_directory);
+                DialogHelper.delegateDialogShow(ctx, dialog);
+                return false;
+            }
+        }
+        return true;
+    }
     /**
      * Method that check the consistency of move operations.<br/>
      * <br/>
