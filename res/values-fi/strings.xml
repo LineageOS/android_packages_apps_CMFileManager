@@ -134,7 +134,7 @@
   <string name="fso_properties_dialog_owner">Omistaja:</string>
   <string name="fso_properties_dialog_group">Ryhmä:</string>
   <string name="fso_properties_dialog_others">Muut:</string>
-  <string name="fso_properties_dialog_include_in_media_scan">Ohita mediaskannausSkip media scan:</string>
+  <string name="fso_properties_dialog_include_in_media_scan">Ohita mediaskannaus:</string>
   <string name="fso_failed_to_allow_media_scan">Mediaskannauksen suorittaminen epäonnistui</string>
   <string name="fso_failed_to_prevent_media_scan">Mediaskannauksen estäminen epäonnistui</string>
   <string name="fso_delete_nomedia_dir_title">Poista .nomedia kansio</string>
