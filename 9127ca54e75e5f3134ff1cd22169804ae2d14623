@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa7ab95a_6876f73f",
+        "filename": "src/com/cyanogenmod/filemanager/providers/secure/SecureChoiceClickListener.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-04-17T12:23:54Z",
+      "side": 1,
+      "message": "how about we change this to a more meaningful name :)",
+      "revId": "9127ca54e75e5f3134ff1cd22169804ae2d14623",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_88733b4d",
+        "filename": "src/com/cyanogenmod/filemanager/providers/secure/SecureChoiceRefreshListener.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-04-17T12:23:54Z",
+      "side": 1,
+      "message": ":(",
+      "revId": "9127ca54e75e5f3134ff1cd22169804ae2d14623",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
