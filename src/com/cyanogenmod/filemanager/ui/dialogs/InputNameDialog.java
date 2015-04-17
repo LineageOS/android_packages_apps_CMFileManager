@@ -261,9 +261,9 @@ public class InputNameDialog
         }
 
         // Too long
-        if (name.length() > FILENAME_CHAR_LIMIT) {
+        if (name.length() >= FILENAME_CHAR_LIMIT) {
             setMsg(InputNameDialog.this.mContext.getString(
-                    R.string.input_name_dialog_message_invalid_name_length), false);
+                    R.string.input_name_dialog_message_invalid_name_length), true);
             return;
         }
 
