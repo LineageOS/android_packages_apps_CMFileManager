@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa7ab95a_c803830c",
+        "filename": "src/com/cyanogenmod/filemanager/providers/secure/SecureCacheCleanupService.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-04-17T11:07:20Z",
+      "side": 1,
+      "message": "So this is supposed to run every 1 hour after boot?",
+      "revId": "662d27eac2dda6a556bb2cb9ebb624473dd8c384",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_a8fe3f03",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-04-17T11:07:20Z",
+      "side": 1,
+      "message": "Shouldn\u0027t the cache clean up service also get triggered from here after oncomplete?",
+      "revId": "662d27eac2dda6a556bb2cb9ebb624473dd8c384",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_a5174853",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 666,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-04-17T11:07:20Z",
+      "side": 1,
+      "message": "Unnecessary white space added.",
+      "revId": "662d27eac2dda6a556bb2cb9ebb624473dd8c384",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
