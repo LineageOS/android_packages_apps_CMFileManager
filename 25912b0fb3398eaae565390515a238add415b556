@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ac06dbe_6349e2d0",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/PrintActionPolicy.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 354,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-17T03:00:30Z",
+      "side": 1,
+      "message": "space between cast and mAdjustedLines and Math#ceil returns a double, so isn\u0027t needed the double cast\n\n double pages \u003d (double) mAdjustedLines.size() / rowsPerPage;\n return pages \u003c\u003d 0 ? PrintDocumentInfo.PAGE_COUNT_UNKNOWN : (int) Math.ceil(pages);",
+      "revId": "25912b0fb3398eaae565390515a238add415b556",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
