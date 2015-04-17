@@ -17,23 +17,23 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="one">Karpeta <xliff:g id="folders">%1$d</xliff:g></item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> karpeta</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> carpeta</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> carpetas</item>
   </plurals>
   <plurals name="n_files">
-    <item quantity="one">Fitxategi 1</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> fitxategi</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> archivo</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> archivos</item>
   </plurals>
   <plurals name="search_found_items">
-    <item quantity="one">Elementu 1 aurkitu da</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> elementu aurkitu dira</item>
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> elemento encontrado</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> elementos encontrados</item>
   </plurals>
   <plurals name="selection_folders">
-    <item quantity="one">Karpeta 1 aukeratuta</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> karpeta aukeratuta.</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> carpeta seleccionada.</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> carpetas seleccionadas.</item>
   </plurals>
   <plurals name="selection_files">
-    <item quantity="one">Fitxategi 1 aukeratuta.</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> fitxategi aukeratuta.</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> archivo seleccionado.</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> archivos seleccionados.</item>
   </plurals>
 </resources>
