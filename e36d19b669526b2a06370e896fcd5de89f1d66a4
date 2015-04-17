@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa7ab95a_22afaee4",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-04-17T06:57:09Z",
+      "side": 1,
+      "message": "Can probably get rid of this",
+      "revId": "e36d19b669526b2a06370e896fcd5de89f1d66a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
