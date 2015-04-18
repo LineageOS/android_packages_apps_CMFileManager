@@ -16,6 +16,24 @@
       "revId": "4e0eb96dfc7d0e97850ae9ad034fd5fa206f88f5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_d7bebed3",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/InputNameDialog.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-04-18T11:38:10Z",
+      "side": 1,
+      "message": "Oh man, I had it true.  I guess I reverted too much of my changes.  Will add that ASAP",
+      "parentUuid": "fa7ab95a_b7d21a33",
+      "revId": "4e0eb96dfc7d0e97850ae9ad034fd5fa206f88f5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
