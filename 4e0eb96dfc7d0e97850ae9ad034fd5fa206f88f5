@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa7ab95a_b7d21a33",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/InputNameDialog.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-04-18T11:32:44Z",
+      "side": 1,
+      "message": "Can we pass true here so the OK button will be enabled when the user hits 255? Right now I can enter 255 and no more because of maxLength in xml, but the OK button is disabled so I have to backspace to 254 in order to save it.",
+      "revId": "4e0eb96dfc7d0e97850ae9ad034fd5fa206f88f5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
