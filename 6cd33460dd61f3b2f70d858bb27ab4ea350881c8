@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa7ab95a_cb353df8",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-18T00:18:12Z",
+      "side": 1,
+      "message": "This checks is the same thant the previous. My suggestion is rename the method to hold boths checks passing the operation inside and ignore the extra checks for move operations\n\n        if (operation.compareTo(COPY_MOVE_OPERATION.MOVE) \u003d\u003d 0 || operation.compareTo(COPY_MOVE_OPERATION.COPY) \u003d\u003d 0) {\n            if (!checkCopyOrMoveConsistency(ctx, files, currentDirectory,  operation)) {\n                return;\n            }\n        }",
+      "revId": "6cd33460dd61f3b2f70d858bb27ab4ea350881c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_eb3a01e7",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 550,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-18T00:18:12Z",
+      "side": 1,
+      "message": "Remove this method",
+      "revId": "6cd33460dd61f3b2f70d858bb27ab4ea350881c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_0b400556",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 586,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-18T00:18:12Z",
+      "side": 1,
+      "message": "Named this checkCopyOrMoveConsistency and pass it the operation",
+      "revId": "6cd33460dd61f3b2f70d858bb27ab4ea350881c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_2b25c9c1",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 595,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-18T00:18:12Z",
+      "side": 1,
+      "message": "Ignore this check if the operation is move",
+      "revId": "6cd33460dd61f3b2f70d858bb27ab4ea350881c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
