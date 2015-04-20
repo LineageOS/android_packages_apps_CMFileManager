@@ -1166,6 +1166,9 @@ public final class FileHelper {
             while ((read = bis.read(data, 0, bufferSize)) != -1) {
                 // Short circuit if we've been cancelled. Show's over :(
                 if (program.isCancelled()) {
+                    if (!dst.delete()) {
+                        Log.e(TAG, "Failed to delete the dest file");
+                    }
                     throw new CancelledOperationException();
                 }
                 bos.write(data, 0, read);
