@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa7ab95a_18f3f20b",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1169,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-20T22:54:07Z",
+      "side": 1,
+      "message": "This should probably be do it in the finally and after bos is closed. Otherwise you aren\u0027t going to be able to delete the file, because there is a open buffer point to it.",
+      "revId": "e141abcb475c1dbc6c077766f2c14b30a1b7d156",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
