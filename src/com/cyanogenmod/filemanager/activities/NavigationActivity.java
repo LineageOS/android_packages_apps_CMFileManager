@@ -1741,6 +1741,10 @@ public class NavigationActivity extends Activity
 
     @Override
     public void onBackPressed() {
+        if (mDrawerLayout.isDrawerOpen(Gravity.START)) {
+            mDrawerLayout.closeDrawer(Gravity.START);
+            return;
+        }
         if (checkBackAction()) {
             performHideEasyMode();
             return;
