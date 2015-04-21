@@ -158,6 +158,10 @@ public class SecureStorageKeyPromptDialog
                 public void onDismiss(DialogInterface dialog) {
                     mDialog.dismiss();
                     finish();
+                    // Unlock the wait
+                    synchronized (WAIT_SYNC) {
+                        WAIT_SYNC.notify();
+                    }
                 }
             });
             mDialog.setOnCancelListener(new OnCancelListener() {
@@ -186,11 +190,6 @@ public class SecureStorageKeyPromptDialog
         @Override
         protected void onDestroy() {
             super.onDestroy();
-
-            // Unlock the wait
-            synchronized (WAIT_SYNC) {
-                WAIT_SYNC.notify();
-            }
         }
 
         @Override
