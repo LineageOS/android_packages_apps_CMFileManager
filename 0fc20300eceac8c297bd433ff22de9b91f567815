@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da7fb54a_95cb4672",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 692,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-04-30T10:10:52Z",
+      "side": 1,
+      "message": "I think if you remove the if/elseif and keep this block starting at \"int count\" you will accomplish the same thing as above with less code.  \n\nint count \u003d 1;\nfor (int index \u003d 0; index \u003c count; index++) {\n  // This will still run one time and pref.add(ri)\n}",
+      "revId": "0fc20300eceac8c297bd433ff22de9b91f567815",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
