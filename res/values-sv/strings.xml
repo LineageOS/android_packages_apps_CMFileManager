@@ -95,6 +95,7 @@
   <string name="cm_filemanager_show_dirs_first">Visa mappar först</string>
   <string name="cm_filemanager_show_hidden">Visa dolda filer</string>
   <string name="cm_filemanager_show_system">Visa systemfiler</string>
+  <string name="cm_filemanager_show_symlinks">Visa symlänkar</string>
   <string name="filesystem_info_warning_title">Ingen information</string>
   <string name="filesystem_info_warning_msg">Det finns ingen information tillgänglig om filsystemet.</string>
   <string name="filesystem_info_cant_be_mounted_msg">Filsystemet kan inte monteras/avmonteras.</string>
