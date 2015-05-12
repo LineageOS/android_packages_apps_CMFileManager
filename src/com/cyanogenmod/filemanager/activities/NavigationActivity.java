@@ -50,6 +50,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageButton;
@@ -198,6 +199,7 @@ public class NavigationActivity extends Activity
     private Toolbar mToolBar;
     private SearchView mSearchView;
     private NavigationCustomTitleView mCustomTitleView;
+    private InputMethodManager mImm;
 
     private final BroadcastReceiver mNotificationReceiver = new BroadcastReceiver() {
         @Override
@@ -511,6 +513,10 @@ public class NavigationActivity extends Activity
         newFilter.addAction(Intent.ACTION_MEDIA_UNMOUNTED);
         newFilter.addDataScheme(ContentResolver.SCHEME_FILE);
         registerReceiver(mNotificationReceiver, newFilter);
+
+        //the input manager service
+        mImm = (InputMethodManager) this.getSystemService(
+                Context.INPUT_METHOD_SERVICE);
 
         // Set the theme before setContentView
         Theme theme = ThemeManager.getCurrentTheme(this);
@@ -887,6 +893,7 @@ public class NavigationActivity extends Activity
 
             /** Called when a drawer has settled in a completely open state. */
             public void onDrawerOpened(View drawerView) {
+                onDrawerLayoutOpened(drawerView);
                 super.onDrawerOpened(drawerView);
             }
         };
@@ -894,6 +901,26 @@ public class NavigationActivity extends Activity
 
         // Set the drawer toggle as the DrawerListener
         mDrawerLayout.setDrawerListener(mDrawerToggle);
+    }
+
+    /***
+     * Method that do something when the DrawerLayout opened.
+     */
+    private void onDrawerLayoutOpened(View drawerView){
+        if (mSearchView != null && mSearchView.getVisibility() == View.VISIBLE) {
+            closeSearch();
+            hideSoftInput(drawerView);
+        }
+    }
+
+    /**
+     * Method that hide the software when the software showing.
+     *
+     * */
+    private void hideSoftInput(View view){
+        if (mImm != null) {
+            mImm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 
     /**
