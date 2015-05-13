@@ -92,7 +92,7 @@
     </style>
 
     <!-- Action bar -->
-    <style name="FileManager.Widget.ActionBar.White" parent="@android:style/Widget.Material.Light.ActionBar">
+    <style name="FileManager.Widget.ActionBar.White" parent="@android:style/Theme.Material">
         <item name="android:textColorPrimary">@android:color/white</item>
         <item name="android:titleTextStyle">@style/primary_text_appearance</item>
         <item name="android:colorControlHighlight">@color/material_palette_blue_primary_dark</item>
