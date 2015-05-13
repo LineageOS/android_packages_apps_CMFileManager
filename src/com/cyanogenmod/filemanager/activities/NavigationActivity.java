@@ -473,6 +473,8 @@ public class NavigationActivity extends Activity
 
     private int mOrientation;
 
+    private boolean mNeedsEasyMode = false;
+
     /**
      * @hide
      */
@@ -687,6 +689,16 @@ public class NavigationActivity extends Activity
     public boolean onOptionsItemSelected(MenuItem item) {
         if (mDrawerToggle.onOptionsItemSelected(item)) {
           return true;
+        }
+
+        if (mNeedsEasyMode) {
+            if (item.getItemId() == android.R.id.home) {
+                if (mHistory.size() == 0 && !isEasyModeVisible()) {
+                    performShowEasyMode();
+                } else {
+                    back();
+                }
+            }
         }
         return super.onOptionsItemSelected(item);
     }
@@ -995,6 +1007,7 @@ public class NavigationActivity extends Activity
     private void performShowEasyMode() {
         mEasyModeListView.setVisibility(View.VISIBLE);
         getCurrentNavigationView().setVisibility(View.GONE);
+        performShowBackArrow(false);
     }
 
     /**
@@ -1003,6 +1016,16 @@ public class NavigationActivity extends Activity
     private void performHideEasyMode() {
         mEasyModeListView.setVisibility(View.GONE);
         getCurrentNavigationView().setVisibility(View.VISIBLE);
+    }
+
+    private void performShowBackArrow(boolean showBackArrow) {
+        if (mNeedsEasyMode) {
+            mDrawerToggle.setDrawerIndicatorEnabled(!showBackArrow);
+        }
+    }
+
+    private boolean isEasyModeVisible() {
+        return mEasyModeListView.getVisibility() != View.GONE;
     }
 
     /**
@@ -1111,6 +1134,7 @@ public class NavigationActivity extends Activity
                         } else {
                             performHideEasyMode();
                         }
+                        performShowBackArrow(!mDrawerToggle.isDrawerIndicatorEnabled());
                         getCurrentNavigationView().open(fso);
                         mDrawerLayout.closeDrawer(Gravity.START);
                     }
@@ -1486,7 +1510,9 @@ public class NavigationActivity extends Activity
         intent.putExtra(SearchManager.QUERY, "*"); // Use wild-card '*'
 
         if (position == 0) {
+            // the user has selected all items, they want to see their folders so let's do that.
             performHideEasyMode();
+            performShowBackArrow(true);
             return;
 
         } else {
@@ -1684,8 +1710,9 @@ public class NavigationActivity extends Activity
             }
         }
 
-        needsEasyMode = needsEasyMode
-                && getResources().getBoolean(R.bool.cmcc_show_easy_mode);
+        mNeedsEasyMode = getResources().getBoolean(R.bool.cmcc_show_easy_mode);
+
+        needsEasyMode = needsEasyMode && mNeedsEasyMode;
         if (needsEasyMode) {
             performShowEasyMode();
         } else {
@@ -1775,6 +1802,11 @@ public class NavigationActivity extends Activity
         if (checkBackAction()) {
             performHideEasyMode();
             return;
+        } else {
+            if (mNeedsEasyMode && !isEasyModeVisible()) {
+                performShowEasyMode();
+                return;
+            }
         }
 
         // An exit event has occurred, force the destroy the consoles
@@ -2161,7 +2193,11 @@ public class NavigationActivity extends Activity
             //Communicate the user that the next time the application will be closed
             this.mExitBackTimeout = System.currentTimeMillis();
             DialogHelper.showToast(this, R.string.msgs_push_again_to_exit, Toast.LENGTH_SHORT);
-            return true;
+            if (mNeedsEasyMode) {
+                return isEasyModeVisible();
+            } else {
+                return true;
+            }
         }
 
         //Back action not applied
