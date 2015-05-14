@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "9a89bdaa_7420844a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-05-14T08:08:05Z",
+      "side": 1,
+      "message": "Can you add some more details as to what scenarios this fixes? It will help later if someone is looking through the history and wants to know why these changes were made.",
+      "revId": "fd4cfb54bddc9e05d7f360eb103efe88fa2357ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a89bdaa_1431f8a2",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 685,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-05-14T08:08:05Z",
+      "side": 1,
+      "message": "I\u0027d recommend retrieving this value once in onCreate and storing it in an instance variable to reference so you don\u0027t have to write this line in multiple places like here and below.",
+      "revId": "fd4cfb54bddc9e05d7f360eb103efe88fa2357ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a89bdaa_d40070ad",
         "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
         "patchSetId": 7
