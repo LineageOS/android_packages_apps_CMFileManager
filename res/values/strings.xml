@@ -778,13 +778,13 @@
 
     <!-- Secure Storage -->
     <!-- Secure Storage dialog title - Unlock -->
-    <string name="secure_storage_unlock_title">Unlock storage</string>
+    <string name="secure_storage_unlock_title">Unlock secure storage</string>
     <!-- Secure Storage dialog title - Create -->
-    <string name="secure_storage_create_title">Create storage</string>
+    <string name="secure_storage_create_title">Create secure storage</string>
     <!-- Secure Storage dialog title - Reset -->
     <string name="secure_storage_reset_title">Reset password</string>
     <!-- Secure Storage dialog title - Delete -->
-    <string name="secure_storage_delete_title">Delete storage</string>
+    <string name="secure_storage_delete_title">Delete secure storage</string>
     <!-- Secure Storage unlock dialog message (secure storage exists) -->
     <string name="secure_storage_unlock_key_prompt_msg">Type the password to unlock the secure storage filesystem.</string>
     <!-- Secure Storage unlock dialog message (new secure storage) -->
