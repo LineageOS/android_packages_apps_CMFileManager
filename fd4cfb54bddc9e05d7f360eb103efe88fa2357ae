@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_d40070ad",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 1774,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-05-14T08:07:35Z",
+      "side": 1,
+      "message": "Maybe consolidate this \"needs easy mode\" logic into a function?\n\nif (needsEasyMode()) { ... }",
+      "revId": "fd4cfb54bddc9e05d7f360eb103efe88fa2357ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a89bdaa_f42bb431",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 1776,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-05-14T08:07:35Z",
+      "side": 1,
+      "message": "This is a good test, maybe we should move this test into the performShowEasyMode() function for easier maintenance?",
+      "revId": "fd4cfb54bddc9e05d7f360eb103efe88fa2357ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a89bdaa_3426fc68",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 2168,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-05-14T08:07:35Z",
+      "side": 1,
+      "message": "if (needsEasyMode \u0026\u0026 mEasyModeListView.getVisibility() \u003d\u003d View.GONE) { \n    return false;\n} else {\n    return true;\n}",
+      "revId": "fd4cfb54bddc9e05d7f360eb103efe88fa2357ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
