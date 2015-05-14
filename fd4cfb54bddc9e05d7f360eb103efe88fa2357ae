@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "9a89bdaa_b41a0c16",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 685,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-05-14T08:18:49Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "9a89bdaa_1431f8a2",
+      "revId": "fd4cfb54bddc9e05d7f360eb103efe88fa2357ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a89bdaa_d40070ad",
         "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
         "patchSetId": 7
