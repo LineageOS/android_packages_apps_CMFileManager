@@ -33,7 +33,7 @@
   <string name="no">Ez</string>
   <string name="all">Dena</string>
   <string name="overwrite">Gainidatzi</string>
-  <string name="select">Aukeratu</string>
+  <string name="select">Hautatu</string>
   <string name="root_directory_name"><![CDATA[<Sustrai karpeta>]]></string>
   <string name="search_result_name">Bilatu: <xliff:g id="terms">%1$s</xliff:g></string>
   <string name="loading_message">Kargatzen\u2026</string>
@@ -57,7 +57,7 @@
   <string name="msgs_illegal_argument">Lege kontrako argumentua. Inbokazioak huts egin du.</string>
   <string name="msgs_unresolved_inconsistencies">Funtsik eza sor dezakenez operazioa ez dago baimenduta.</string>
   <string name="msgs_push_again_to_exit">Berriro sakatu irtetzeko.</string>
-  <string name="msgs_not_registered_app">Ez dago aukeratutako fitxategia irekitzeko aplikaziorik erregistratuta.</string>
+  <string name="msgs_not_registered_app">Ez dago hautatutako fitxategia irekitzeko aplikaziorik erregistratuta.</string>
   <string name="msgs_overwrite_files">Fitxategiren bat helmugako karpetan existitzen da jada.\n\n Gainidatzi?</string>
   <string name="msgs_action_association_failed">Ekintza aplikazioari lotzean akats bat egon da.</string>
   <string name="advise_insufficient_permissions">Operazioak Supererabiltzaile baimena behar du.\n\n Supererabiltzaile modura aldatu?</string>
@@ -116,13 +116,13 @@
   <string name="fso_properties_dialog_owner">Jabea:</string>
   <string name="fso_properties_dialog_group">Taldea:</string>
   <string name="fso_properties_dialog_others">Besteak:</string>
-  <string name="fso_properties_dialog_include_in_media_scan">Euskarriaren eskaneatzea baztertu:</string>
+  <string name="fso_properties_dialog_include_in_media_scan">Saltatu euskarria eskaneatzea:</string>
   <string name="fso_failed_to_allow_media_scan">Euskarriaren eskaneatzea baimentzerakoan akatsa egon da</string>
   <string name="fso_failed_to_prevent_media_scan">Euskarrien eskaneatzea ekiditean akatsa egon da</string>
-  <string name="fso_delete_nomedia_dir_title">\u00AB.nomedia\u00BB karpeta ezabatu</string>
-  <string name="fso_delete_nomedia_dir_body">Karpeta honek \u00AB.nomedia\u00BB karpeta bat du.\n\nKarpeta eta edukin guztak ezabatu?</string>
-  <string name="fso_delete_nomedia_non_empty_title">\u00AB.nomedia\u00BB fitxategia ezabatu</string>
-  <string name="fso_delete_nomedia_non_empty_body">Karpeta honek \u00AB.nomedia\u00BB fitxategi ez huts bat dauka.\n\nEzabatu nahi duzu?</string>
+  <string name="fso_delete_nomedia_dir_title">Ezabatu .nomedia direktorioa</string>
+  <string name="fso_delete_nomedia_dir_body">Direktorio honek .nomedia direktorio bat du.\n\n Berau eta bere eta eduki guztiak ezabatu nahi dituzu?</string>
+  <string name="fso_delete_nomedia_non_empty_title">ezabatu .nomedia fitxategia</string>
+  <string name="fso_delete_nomedia_non_empty_body">Direktorio honek hutsik ez dagoen .nomedia fitxategi bat du.\n\nEzabatu nahi duzu?</string>
   <string name="history">Historia</string>
   <string name="msgs_history_empty">Historia hutsik dago.</string>
   <string name="msgs_history_unknown">Gai ezezaguna historian.</string>
@@ -137,8 +137,8 @@
   <string name="search_few_characters_msg">Bilatuko den elementuren bat oso laburra da eta operazioak normalean baino denbora eta sistemaren baliabide gehiago beharko ditu.\n\nJarraitu?</string>
   <string name="searching">Itxaron, mesedez\u2026</string>
   <string name="searching_action_label">Bilaketa martxan</string>
-  <string name="picker_title">Aukeratu fitxategi bat</string>
-  <string name="directory_picker_title">Karpeta bat aukeratu</string>
+  <string name="picker_title">Hautatu fitxategi bat</string>
+  <string name="directory_picker_title">Karpeta bat hautatu</string>
   <string name="editor">Editorea</string>
   <string name="editor_invalid_file_msg">Fitxategi okerra.</string>
   <string name="editor_file_not_found_msg">Fitxategia ez da aurkitu.</string>
@@ -157,7 +157,7 @@
   <string name="bookmarks_button_remove_bookmark_cd">Laster marka ezabatu.</string>
   <string name="bookmarks_msgs_add_success">Laster marka arrakastaz gehitu da.</string>
   <string name="initial_directory_dialog_title">Hasierako karpeta</string>
-  <string name="initial_directory_label">Hasierako karpeta aukeratu:</string>
+  <string name="initial_directory_label">Hasierako karpeta hautatu:</string>
   <string name="initial_directory_error_msg">Hasierako karpeta berrezartzean akats bat egon da.</string>
   <string name="menu_search">Bilaketa</string>
   <string name="menu_settings">Ezarpenak</string>
@@ -186,36 +186,40 @@
   <string name="actions_menu_refresh">Berritu</string>
   <string name="actions_menu_new_directory">Karpeta berria</string>
   <string name="actions_menu_new_file">Fitxategi berria</string>
-  <string name="actions_menu_select_all">Dena aukeratu</string>
-  <string name="actions_menu_deselect_all">Ez aukeratu ezer</string>
-  <string name="actions_menu_select">Aukeratu</string>
-  <string name="actions_menu_deselect">Aukeraketa kendu</string>
-  <string name="actions_menu_paste_selection">Hemen itsatsi</string>
-  <string name="actions_menu_move_selection">Hona mugitu</string>
-  <string name="actions_menu_delete_selection">Aukeraketa ezabatu</string>
-  <string name="actions_menu_compress_selection">Aukeraketa konprimatu</string>
+  <string name="actions_menu_select_all">Dena hautatu</string>
+  <string name="actions_menu_deselect_all">Desautatu guztiak</string>
+  <string name="actions_menu_select">Hautatu</string>
+  <string name="actions_menu_deselect">Desautatu</string>
+  <string name="actions_menu_paste_selection">Kopiatu hona hautapena</string>
+  <string name="actions_menu_move_selection">Mugitu hona hautapena</string>
+  <string name="actions_menu_delete_selection">Ezabatu hautapena</string>
+  <string name="actions_menu_compress_selection">Konprimitu hautapena</string>
   <string name="actions_menu_create_link">Esteka sortu</string>
   <string name="actions_menu_open">Ireki</string>
   <string name="actions_menu_open_with">Honekin ireki</string>
   <string name="actions_menu_execute">Exekutatu</string>
   <string name="actions_menu_send">Bidali</string>
-  <string name="actions_menu_send_selection">Aukeraketa bidali</string>
+  <string name="actions_menu_send_selection">Bidali hautapena</string>
   <string name="actions_menu_compress">Konprimatu</string>
   <string name="actions_menu_extract">Erauzi</string>
   <string name="actions_menu_delete">Ezabatu</string>
   <string name="actions_menu_rename">Berrizendatu</string>
   <string name="actions_menu_create_copy">Kopia sortu</string>
   <string name="actions_menu_properties">Xehetasunak</string>
-  <string name="actions_menu_add_to_bookmarks">Laster marketara gehitu</string>
-  <string name="actions_menu_add_shortcut">Lasterbidea</string>
+  <string name="actions_menu_add_to_bookmarks">Gehitu laster-marketara</string>
+  <string name="actions_menu_add_shortcut">Gehitu lasterbidea</string>
   <string name="actions_menu_open_parent_folder">Karpeta ireki</string>
   <string name="actions_menu_compute_checksum">Checksum</string>
+  <string name="actions_menu_set_as_home">Ezarri hasiera gisa</string>
   <string name="actions_ask_undone_operation_msg">Eragiketa hau ezin da desegin. Jarraitu?</string>
   <string name="input_name_dialog_label">Izena:</string>
   <string name="input_name_dialog_message_empty_name">Izena ezin da hutsik geratu.</string>
-  <string name="input_name_dialog_message_name_exists">Izena jada existitzen da.</string>
+  <string name="input_name_dialog_message_invalid_path_name">Baliogabeko izena. \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' karaktereak ez dira onartzen.</string>
+  <string name="input_name_dialog_message_invalid_name_length">Gehieneko karaktere kopurura heldu da.</string>
+  <string name="input_name_dialog_message_invalid_name">Baliogabeko izena.  \'.\' eta \'..\' izenak ez dira onartzen.</string>
+  <string name="input_name_dialog_message_name_exists">Izen hori badago aurretik.</string>
   <string name="associations_dialog_title">Elkarketak</string>
-  <string name="associations_dialog_remember">Aukeraketa gogoratu</string>
+  <string name="associations_dialog_remember">Gogoratu hautapena</string>
   <string name="associations_dialog_openwith_title">Honekin ireki</string>
   <string name="associations_dialog_openwith_action">Ireki</string>
   <string name="associations_dialog_sendwith_title">Honekin bidali</string>
@@ -237,7 +241,7 @@
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">ee/hh/uuuu hh:mm:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">hh/ee/uuuu hh:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">uuuu-hh-ee hh:mm:ss</string>
-  <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> eta <xliff:g id="files">%2$s</xliff:g> aukeratuta.</string>
+  <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> eta <xliff:g id="files">%2$s</xliff:g> hautatuta.</string>
   <string name="compression_mode_title">Konprimatze era</string>
   <string name="shortcut_failed_msg">Akatsa lasterbidea irekitzerakoan.</string>
   <string name="shortcut_creation_success_msg">Lasterbidea arrakastaz sortua.</string>
@@ -253,7 +257,7 @@
   <string name="pref_case_sensitive_sort_summary">Bilaketa emaitzetan edo nabigatzean maiuskulak/minuskulak kontuan izan</string>
   <string name="pref_filetime_format_mode">Data/ordua formatua</string>
   <string name="pref_disk_usage_warning_level">Disko erabileraren abisua</string>
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">Disko erabileraren widget-entzat kolore ezberdin bat ezarri, okupaturiko espazio totalaren ehuneko <xliff:g id="level">%1$s</xliff:g> -a gainditzean</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">Ezarri kolore desberdin bat disko erabileraren trepetan kolore, okupaturiko espazio totalaren ehuneko <xliff:g id="level">%1$s</xliff:g>a gainditzean</string>
   <string name="pref_compute_folder_statistics">Karpeten estatistikak</string>
   <string name="pref_compute_folder_statistics_on">Kontuz! karpeten estatistiken kalkuluak denbora eta sistema baliabide gehiago beharko ditu</string>
   <string name="pref_display_thumbs">Aurrebista</string>
@@ -270,7 +274,6 @@
   <string name="pref_restrict_secondary_users_access_title">Sarbidea mugatu</string>
   <string name="pref_restrict_secondary_users_access_summary">Sistema osorako sarbidea bigarren mailako erabiltzaileei mugatu</string>
   <string name="pref_search_results_category">Emaitzak</string>
-  <string name="pref_show_relevance_widget">Lehentasuna erakutsi</string>
   <string name="pref_highlight_terms">Bilaketa baldintzak nabarmendu</string>
   <string name="pref_sort_search_results_mode">Emaitzen ordenazioa</string>
   <string name="pref_sort_search_results_mode_none">Ordenatu barik</string>
@@ -280,8 +283,10 @@
   <string name="pref_save_search_terms">Bilaketa baldintzak gorde</string>
   <string name="pref_save_search_terms_on">Bilaketa baldintzak hurrengo bilaketentzako iradokizun bezala gordeko dira</string>
   <string name="pref_save_search_terms_off">Bilaketa baldintzak ez dira gordeko</string>
-  <string name="pref_remove_saved_search_terms">Bilaketa baldintzak ezabatu</string>
+  <string name="pref_remove_saved_search_terms">Ezabatu gordetako bilaketa baldintzak</string>
   <string name="pref_remove_saved_search_terms_summary">Sakatu gordetako bilaketa baldintza guztiak ezabatzeko</string>
+  <string name="pref_remove_saved_search_terms_msg">Gordetako bilaketa baldintza guztiak ezabatu dira</string>
+  <string name="pref_secure_storage_category">Biltegiratze segurua</string>
   <string name="pref_editor_behaviour_category">Izaera</string>
   <string name="pref_no_suggestions">Iradokizunik gabe</string>
   <string name="pref_no_suggestions_desc">Ez erakutsi hiztegiaren iradokizunik fitxategiak editatzerakoan</string>
@@ -290,7 +295,7 @@
   <string name="pref_hexdump_desc">Fitxategi binario bat irakurtzean, iraulketa hexadezimal bat sortu eta pantailatik erakutsi</string>
   <string name="pref_syntax_highlight">Sintaxia nabarmendu</string>
   <string name="pref_syntax_highlight_color_scheme">Kolore eskema</string>
-  <string name="pref_syntax_highlight_color_scheme_desc">Sintaxiaren nabarmentzerako kolore eskema aukeratu</string>
+  <string name="pref_syntax_highlight_color_scheme_desc">Sintaxiaren nabarmentzerako kolore eskema hautatu</string>
   <string name="pref_syntax_sh_use_theme_default_desc">Uneko gaiaren sintaxi nabarmentze lehenetsia erabili</string>
   <string name="pref_editor_sh_item_category">Elementuak</string>
   <string name="pref_themes_selection_category">Gaiak</string>
@@ -316,5 +321,6 @@
   <string name="ash_variable">Aldagaia</string>
   <string name="security_warning_extract">Kontuz!\n\nIbilbide absolutu edo erlatiboak dituzten fitxategiak erauztea gailuan kalteak sor ditzake sistemaren fitxategiak gainidatzi ditzaketelako.\n\nJarraitu?</string>
   <string name="changelog_title">Aldaketa erregistroa</string>
-  <string name="welcome_title">Ongi Etorri</string>
+  <string name="welcome_title">Ongi etorri</string>
+  <string name="welcome_msg">Ongi etorri CyanogenMod fitxategi kudeatzailera.\n\nAplikazio honen bidez fitxategi sistema kudeatu dezakezu eta, honela, zure gailua blokeatu ditzaketen operazioak burutu. Hau ekiditeko, aplikazioa modu babestuan abiatuko da.\n\nSupererabiltzaile modu aurreratuan sar zaitezke ezarpen menuan hala ezarriz, baina zure ardura izango da operazioren batek zure gailua kaltetzea ekiditea.\n\nCyanogenMod taldea.\n</string>
 </resources>

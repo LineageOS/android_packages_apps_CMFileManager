@@ -110,6 +110,7 @@
   <string name="filesystem_info_dialog_title">Informatiounen zum Fichierssystem</string>
   <string name="filesystem_info_dialog_tab_info">Informatiounen</string>
   <string name="filesystem_info_dialog_tab_disk_usage">Späichernotzung</string>
+  <string name="filesystem_info_dialog_status">Agebonnen:</string>
   <string name="filesystem_info_dialog_mount_point">Abannungspunkt:</string>
   <string name="filesystem_info_dialog_device">Apparat:</string>
   <string name="filesystem_info_dialog_type">Typ:</string>
@@ -162,7 +163,7 @@
   <string name="searching_action_label">Sich leeft</string>
   <string name="picker_title">E Fichier wielen</string>
   <string name="directory_picker_title">En Dossier wielen</string>
-  <string name="editor">Editeur</string>
+  <string name="editor">Editor</string>
   <string name="editor_invalid_file_msg">Ongëltege Fichier.</string>
   <string name="editor_file_not_found_msg">Fichier net fonnt.</string>
   <string name="editor_file_exceed_size_msg">De Fichier ass ze grouss, fir op dengem Apparat opgemaach ze ginn.</string>
@@ -242,6 +243,7 @@
   <string name="input_name_dialog_label">Numm:</string>
   <string name="input_name_dialog_message_empty_name">Den Numm kann net eidel sinn.</string>
   <string name="input_name_dialog_message_invalid_path_name">Ongëltegen Numm. D\'Zeechen \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' sinn net erlaabt.</string>
+  <string name="input_name_dialog_message_invalid_name_length">Maximal Zeechelimitt erreecht.</string>
   <string name="input_name_dialog_message_invalid_name">Ongëltegen Numm. D\'Nimm \".\" an \"..\" sinn net erlaabt.</string>
   <string name="input_name_dialog_message_name_exists">Den Numm existéiert schonn.</string>
   <string name="associations_dialog_title">Associatiounen</string>
@@ -344,6 +346,7 @@
   <string name="pref_hexdump_desc">Beim Opmaache vun engem Binärfichier en Hexdump vum Fichier generéieren an am Hex-Editor uweisen</string>
   <string name="pref_editor_syntax_highlight_category">Afierwung vun der Syntax</string>
   <string name="pref_syntax_highlight">Syntaxervirhiewung</string>
+  <string name="pref_syntax_highlight_desc">Hieft d\'Syntax vum Fichier ervir, deen am Editor ugewise gëtt (just wann e Syntaxervirhiewungsveraarbechter fir dëse Fichierstyp disponibel ass)</string>
   <string name="pref_syntax_highlight_color_scheme">Faarfschema</string>
   <string name="pref_syntax_highlight_color_scheme_desc">Faarfschema fir d\'Syntaxervirhiewung auswielen</string>
   <string name="pref_syntax_sh_use_theme_default">Standard-Design benotzen</string>
@@ -390,6 +393,7 @@
   <string name="secure_storage_unlock_failed">Kann de Späicher net entspären</string>
   <string name="secure_storage_unlock_validation_length">D\'Passwuert muss mindestens <xliff:g id="characters">%1$d</xliff:g> Zeechen hunn.</string>
   <string name="secure_storage_unlock_validation_equals">D\'Passwierder stëmmen net iwwereneen.</string>
+  <string name="secure_storage_open_file_warning">Doduerch gëtt de Fichier temporär op eng onverschlësselt Plaz kopéiert. E gëtt no enger Stonn geläscht.</string>
   <string name="print_unsupported_document">Dokumenteformat net ënnerstëtzt</string>
   <string name="print_unsupported_image">Bildformat net ënnerstëtzt</string>
   <string name="print_document_header">Dokument: <xliff:g id="document_name">%1$s</xliff:g></string>
