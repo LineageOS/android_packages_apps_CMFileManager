@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_777c0621",
+        "filename": "res/values/config.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-05-15T06:37:13Z",
+      "side": 1,
+      "message": "Do not change this default please",
+      "revId": "8889fe4926256011aef27ed1d8ca2388a5a0d9af",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
