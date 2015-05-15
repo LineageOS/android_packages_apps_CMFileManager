@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_57170251",
+        "filename": "res/values/styles.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-05-15T10:51:44Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be more specific in saying @android:style/Theme.Material.Light.ActionBar? or does that not exist?",
+      "revId": "1b40a0402449db23db0d8d8ca880ba110269e4b7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
