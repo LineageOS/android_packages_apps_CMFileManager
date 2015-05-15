@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_7772467e",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 1028,
+      "author": {
+        "id": 6334
+      },
+      "writtenOn": "2015-05-15T06:05:21Z",
+      "side": 1,
+      "message": "probably could be converted to a oneliner\n\nreturn mEasyMoveListView.getVisibility() \u003d\u003d View.VISIBLE\n\nor\n\nreturn mEasyMoveListView.getVisibility() !\u003d View.GONE",
+      "revId": "42b33dcd7f20d3a0474a37fb391c19f419324f72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
