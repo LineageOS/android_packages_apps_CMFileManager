@@ -34,6 +34,24 @@
       "revId": "1b40a0402449db23db0d8d8ca880ba110269e4b7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a89bdaa_9a10cf50",
+        "filename": "res/values/styles.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-05-15T10:55:59Z",
+      "side": 1,
+      "message": "I think he did this to fix the back arrow issue btw",
+      "parentUuid": "9a89bdaa_57170251",
+      "revId": "1b40a0402449db23db0d8d8ca880ba110269e4b7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
