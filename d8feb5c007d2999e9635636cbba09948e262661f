@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_1763bab2",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 692,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-05-15T05:55:08Z",
+      "side": 1,
+      "message": "Let me think this out here...\n\n    You are grabbing the preferred activity from the perferred list, then fetching the classname, then checking if that preferred activity\u0027s class name is equal to the activity name of the resolve info?  \n\n    I\u0027m not sure this is doing what you want.  You want to fix \"remember selection\" you should be comparing the preferred activity with a persistent variable.\n\n    I don\u0027t seem to be experiencing this issue either.",
+      "revId": "d8feb5c007d2999e9635636cbba09948e262661f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
