@@ -16,6 +16,24 @@
       "revId": "66e12581415ea48be358238995a84ecd934a85a5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a89bdaa_e55f8073",
+        "filename": "res/values/styles.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-05-16T05:56:12Z",
+      "side": 1,
+      "message": "or what about NavigationActivityActionBarReallyAToolBar?\n\n...\n\nI think NavigationActionBar is good.",
+      "parentUuid": "9a89bdaa_a5773801",
+      "revId": "66e12581415ea48be358238995a84ecd934a85a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
