@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_a5773801",
+        "filename": "res/values/styles.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-05-16T05:51:41Z",
+      "side": 1,
+      "message": "Can we name this something else? Maybe NavigationActionBar since it\u0027s used in the navigation activity? Anything more description would be great.",
+      "revId": "66e12581415ea48be358238995a84ecd934a85a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
