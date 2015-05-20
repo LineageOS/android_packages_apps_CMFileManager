@@ -729,6 +729,7 @@ public class NavigationActivity extends Activity
             /**NON BLOCK**/
         }
 
+        recycle();
         //All destroy. Continue
         super.onDestroy();
     }
@@ -2525,6 +2526,10 @@ public class NavigationActivity extends Activity
      * @hide
      */
     void exit() {
+        finish();
+    }
+
+    private void recycle() {
         // Recycle the navigation views
         int cc = this.mNavigationViews.length;
         for (int i = 0; i < cc; i++) {
@@ -2540,7 +2545,6 @@ public class NavigationActivity extends Activity
         } catch (Throwable ex) {
             /**NON BLOCK**/
         }
-        finish();
     }
 
     /**
