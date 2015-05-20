@@ -19,7 +19,7 @@
     android:elevation="4dp"
     android:layout_width="match_parent"
     android:layout_height="@dimen/default_row_height"
-    android:background="@drawable/bg_material_statusbar"
+    android:background="@color/primary"
     android:visibility="invisible">
 
   <RelativeLayout

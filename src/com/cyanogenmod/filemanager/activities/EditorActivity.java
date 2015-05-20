@@ -669,7 +669,7 @@ public class EditorActivity extends Activity implements TextWatcher {
     private void initTitleActionBar() {
         //Configure the action bar options
         getActionBar().setBackgroundDrawable(
-                getResources().getDrawable(R.drawable.bg_material_titlebar));
+                getResources().getDrawable(R.color.primary));
         getActionBar().setDisplayOptions(
                 ActionBar.DISPLAY_SHOW_CUSTOM);
         getActionBar().setDisplayHomeAsUpEnabled(true);
