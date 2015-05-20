@@ -20,10 +20,10 @@
     android:drawable="@color/blue_transparent"
     android:state_selected="true"/>
   <item
-    android:drawable="@color/material_palette_blue_primary"
+    android:drawable="@color/primary"
     android:state_pressed="true"/>
   <item
-    android:drawable="@color/material_palette_blue_primary"
+    android:drawable="@color/primary"
     android:state_enabled="true"
     android:state_focused="true"/>
   <item

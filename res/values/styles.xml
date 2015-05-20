@@ -26,26 +26,26 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:colorPrimary">@color/material_palette_blue_primary</item>
-        <item name="android:colorPrimaryDark">@color/material_palette_blue_primary_dark</item>
-        <item name="android:colorControlHighlight">@color/material_palette_blue_accent_dark</item>
-        <item name="android:colorAccent">@color/material_palette_blue_primary_dark</item>
-        <item name="android:actionMenuTextColor">@android:color/white</item>
-        <item name="android:colorControlNormal">@android:color/white</item>
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorControlHighlight">@color/accent_dark</item>
+        <item name="android:colorAccent">@color/primary_dark</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+        <item name="android:colorControlNormal">@color/white</item>
     </style>
 
     <!-- Base themes -->
     <style name="FileManager.Theme.Material.Light" parent="@android:style/Theme.Material.Light">
         <item name="android:windowBackground">@color/default_background</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:colorPrimary">@color/material_palette_blue_primary</item>
-        <item name="android:colorPrimaryDark">@color/material_palette_blue_primary_dark</item>
-        <item name="android:colorControlHighlight">@color/material_palette_blue_accent_dark</item>
-        <item name="android:colorAccent">@color/material_palette_blue_primary</item>
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorControlHighlight">@color/accent_dark</item>
+        <item name="android:colorAccent">@color/primary</item>
         <item name="android:actionBarStyle">@style/FileManager.Widget.ActionBar.White</item>
         <item name="android:homeAsUpIndicator">@drawable/material_ripple_up_arrow</item>
-        <item name="android:actionMenuTextColor">@android:color/white</item>
-        <item name="android:colorControlNormal">@android:color/white</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+        <item name="android:colorControlNormal">@color/white</item>
     </style>
 
     <style name="FileManager.Theme.Material.NoActionBar" parent="@android:style/Theme.Material.NoActionBar">
@@ -54,22 +54,22 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
-        <item name="android:colorPrimary">@color/material_palette_blue_primary</item>
-        <item name="android:colorPrimaryDark">@color/material_palette_blue_primary_dark</item>
-        <item name="android:colorControlHighlight">@color/material_palette_blue_accent_dark</item>
-        <item name="android:colorAccent">@color/material_palette_blue_accent</item>
-        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorControlHighlight">@color/accent_dark</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
     </style>
 
     <style name="FileManager.Theme.Material" parent="@android:style/Theme.Material">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:colorPrimary">@color/material_palette_blue_primary</item>
-        <item name="android:colorPrimaryDark">@color/material_palette_blue_primary_dark</item>
-        <item name="android:colorControlHighlight">@color/material_palette_blue_accent_dark</item>
-        <item name="android:colorAccent">@color/material_palette_blue_primary</item>
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorControlHighlight">@color/accent_dark</item>
+        <item name="android:colorAccent">@color/primary</item>
         <item name="android:actionBarStyle">@style/FileManager.Widget.ActionBar.White</item>
         <item name="android:homeAsUpIndicator">@drawable/material_ripple_up_arrow</item>
-        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
     </style>
 
     <!-- A theme with overlay -->
@@ -97,15 +97,16 @@
     <style name="FileManager.Widget.ActionBar.White" parent="@android:style/Widget.Material.Light.ActionBar">
         <item name="android:textColorPrimary">@android:color/white</item>
         <item name="android:titleTextStyle">@style/primary_text_appearance</item>
-        <item name="android:colorControlHighlight">@color/material_palette_blue_primary_dark</item>
-        <item name="android:colorAccent">@color/material_palette_blue_primary</item>
-        <item name="android:colorPrimary">@color/material_palette_blue_primary</item>
-        <item name="android:colorPrimaryDark">@color/material_palette_blue_primary_dark</item>
-        <item name="android:background">@color/material_palette_blue_primary</item>
+        <item name="android:colorControlHighlight">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/primary</item>
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:background">@color/primary</item>
     </style>
 
     <style name="FileManager.NavigationActionBar" parent="@android:style/Theme.Material">
-       <item name="android:colorControlNormal">@android:color/white</item>
+       <item name="android:colorControlNormal">@color/white</item>
+       <item name="android:background">@color/primary</item>
     </style>
 
     <!-- Title -->
@@ -151,7 +152,7 @@
     <!-- The text appearance for dialog titles -->
     <style name="dialog_title_text_appearance">
         <item name="android:textSize">@dimen/dialog_title_text_size</item>
-        <item name="android:textColor">@color/material_palette_blue_primary_dark</item>
+        <item name="android:textColor">@color/primary_dark</item>
         <item name="android:textStyle">bold</item>
     </style>
 

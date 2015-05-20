@@ -17,11 +17,11 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android"
               android:exitFadeDuration="@android:integer/config_shortAnimTime">
 
-        <item android:drawable="@color/material_palette_blue_accent"
+        <item android:drawable="@color/accent"
               android:state_selected="true"/>
-        <item android:drawable="@color/material_palette_blue_accent"
+        <item android:drawable="@color/accent"
               android:state_enabled="true"
               android:state_focused="true"/>
-        <item android:drawable="@color/material_palette_blue_accent_dark"/>
+        <item android:drawable="@color/accent_dark"/>
 
 </selector>
