@@ -15,14 +15,14 @@
  -->
 <ripple
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:color="@color/material_palette_blue_accent_dark">
+        android:color="@color/accent_dark">
 
     <selector>
-        <item android:drawable="@color/material_palette_blue_accent"
+        <item android:drawable="@color/accent"
               android:state_selected="true"/>
         <item android:drawable="@android:color/background_light"
               android:state_enabled="false"/>
-        <item android:drawable="@color/material_palette_blue_accent"
+        <item android:drawable="@color/accent"
               android:state_enabled="true"/>
     </selector>
 </ripple>

@@ -44,7 +44,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/default_row_height"
     android:layout_alignParentBottom="true"
-    android:background="@drawable/bg_material_statusbar" >
+    android:background="@color/primary" >
 
     <ProgressBar
       android:id="@+id/streaming_progress_bar"

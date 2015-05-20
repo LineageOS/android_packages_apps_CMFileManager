@@ -60,11 +60,14 @@
     <color name="console_bg">#99000000</color>
     <color name="console_fg">#99FFFFFF</color>
 
-    <color name="material_palette_blue_accent">#77E0E0E0</color>
-    <color name="material_palette_blue_accent_dark">#77BDBDBD</color>
-    <color name="material_palette_blue_primary">#1E88E5</color>
-    <color name="material_palette_blue_primary_dark">#1976D2</color>
-    <color name="actionbar_palette_blue_primary">#1E88E5</color>
+    <color name="accent">#E91E63</color>
+    <color name="accent_dark">@color/accent</color>
+    <color name="primary">#009688</color>
+    <color name="primary_dark">#00796B</color>
+
+    <color name="white">#FAFAFA</color>
+    <color name="black">#212121</color>
+    <color name="grey">#424242</color>
 
 
     <!-- Disk usage blue -->
