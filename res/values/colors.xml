@@ -16,8 +16,13 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <color name="white">#FAFAFA</color>
+    <color name="black">#212121</color>
+    <color name="grey">#424242</color>
+
     <!-- The default background color -->
-    <color name="default_background">@android:color/white</color>
+    <color name="default_background">@color/white</color>
     <!-- The default dissabled background color -->
     <color name="default_background_disabled">#f2f2f2</color>
 
@@ -60,11 +65,10 @@
     <color name="console_bg">#99000000</color>
     <color name="console_fg">#99FFFFFF</color>
 
-    <color name="material_palette_blue_accent">#77E0E0E0</color>
-    <color name="material_palette_blue_accent_dark">#77BDBDBD</color>
-    <color name="material_palette_blue_primary">#1E88E5</color>
-    <color name="material_palette_blue_primary_dark">#1976D2</color>
-    <color name="actionbar_palette_blue_primary">#1E88E5</color>
+    <color name="accent">#8BC34A</color>
+    <color name="accent_dark">#689F38</color>
+    <color name="primary">#009688</color>
+    <color name="primary_dark">#00796B</color>
 
 
     <!-- Disk usage blue -->

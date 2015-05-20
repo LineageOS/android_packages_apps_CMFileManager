@@ -36,13 +36,13 @@
     <drawable name="theme_no_preview_drawable">@drawable/theme_no_preview</drawable>
 
     <!-- The drawable for the title bar -->
-    <drawable name="titlebar_drawable">@drawable/bg_material_titlebar</drawable>
+    <drawable name="titlebar_drawable">@color/primary</drawable>
 
     <!-- The background drawable -->
     <drawable name="background_drawable">@drawable/bg_material_background</drawable>
 
     <!-- The drawable for the status bar -->
-    <drawable name="statusbar_drawable">@drawable/bg_material_statusbar</drawable>
+    <drawable name="statusbar_drawable">@color/primary_dark</drawable>
 
     <!-- The drawable for the selection bar -->
     <drawable name="selectionbar_drawable">@drawable/bg_material_selectionbar</drawable>
@@ -85,16 +85,16 @@
     <color name="text_color">@color/black_transparent</color>
 
     <!-- The text color of the ActionBar -->
-    <color name="action_bar_text_color">@android:color/white</color>
+    <color name="action_bar_text_color">@color/white</color>
 
     <!-- The text color of Dialog -->
-    <color name="dialog_text_color">@color/material_palette_blue_primary_dark</color>
+    <color name="dialog_text_color">@color/primary_dark</color>
 
     <!-- The highlight color for terms found in the search result -->
     <color name="search_highlight_color">@color/search_highlight</color>
 
     <!-- The background color of the navigation drawer -->
-    <color name="drawer_color">#ffffffff</color>
+    <color name="drawer_color">@color/white</color>
 
     <!-- The drawer icon -->
     <drawable name="drawer_icon">@drawable/ic_material_light_navigation_drawer</drawable>
@@ -145,7 +145,7 @@
     <!-- Icons -->
     <drawable name="ic_close_drawable">@drawable/ic_material_light_close</drawable>
     <drawable name="ic_config_drawable">@drawable/ic_material_light_config</drawable>
-    <drawable name="ic_home_drawable">@drawable/ic_material_light_home</drawable>
+    <drawable name="ic_home_drawable">@drawable/ic_material_light_fav</drawable>
     <drawable name="ic_filesystem_drawable">@drawable/ic_material_light_filesystem</drawable>
     <drawable name="ic_sdcard_drawable">@drawable/ic_material_light_sdcard</drawable>
     <drawable name="ic_usb_drawable">@drawable/ic_material_light_usb</drawable>

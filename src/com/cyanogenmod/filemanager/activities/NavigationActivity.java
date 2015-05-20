@@ -811,7 +811,7 @@ public class NavigationActivity extends Activity
 
         //Configure the action bar options
         getActionBar().setBackgroundDrawable(
-                getResources().getDrawable(R.drawable.bg_material_titlebar));
+                getResources().getDrawable(R.color.primary));
         mToolBar.addView(titleLayout);
     }
 
@@ -869,7 +869,7 @@ public class NavigationActivity extends Activity
     private void initDrawer() {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         //Set our status bar color
-        mDrawerLayout.setStatusBarBackgroundColor(R.color.material_palette_blue_primary_dark);
+        mDrawerLayout.setStatusBarBackgroundColor(R.color.primary_dark);
         mDrawer = (ViewGroup) findViewById(R.id.drawer);
         mDrawerBookmarks = (LinearLayout) findViewById(R.id.bookmarks_list);
         mDrawerHistory = (LinearLayout) findViewById(R.id.history_list);

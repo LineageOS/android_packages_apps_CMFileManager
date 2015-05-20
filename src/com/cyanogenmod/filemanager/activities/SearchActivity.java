@@ -540,7 +540,7 @@ public class SearchActivity extends Activity
         final ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setBackgroundDrawable(
-                getResources().getDrawable(R.drawable.bg_material_titlebar));
+                getResources().getDrawable(R.color.primary));
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
@@ -1391,4 +1391,3 @@ public class SearchActivity extends Activity
         //ignore
     }
 }
-
