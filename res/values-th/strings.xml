@@ -376,10 +376,7 @@
   <string name="ash_keyword">คีย์เวิร์ด</string>
   <string name="ash_quoted_string">ข้อความที่ยกมา</string>
   <string name="ash_variable">ตัวแปร</string>
-  <string name="secure_storage_unlock_title">ปลดล็อคที่เก็บข้อมูล</string>
-  <string name="secure_storage_create_title">สร้างที่เก็บข้อมูล</string>
   <string name="secure_storage_reset_title">รีเซ็ตรหัสผ่าน</string>
-  <string name="secure_storage_delete_title">ลบที่เก็บข้อมูล</string>
   <string name="secure_storage_unlock_key_prompt_msg">ใส่รหัสผ่านเพื่อปลดล็อกที่เก็บไฟล์ที่ปลอดภัย</string>
   <string name="secure_storage_unlock_key_new_msg">ใส่รหัสผ่านเพื่อป้องกันที่เก็บข้อมูลที่ปลอดภัย</string>
   <string name="secure_storage_unlock_key_reset_msg">ใส่รหัสผ่านปัจจุบันและรหัสผ่านใหม่เพื่อรีเซ็ทที่เก็บข้อมูลที่ปลอดภัย</string>

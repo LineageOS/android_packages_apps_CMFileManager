@@ -375,10 +375,7 @@
   <string name="ash_keyword">キーワード</string>
   <string name="ash_quoted_string">引用文字列</string>
   <string name="ash_variable">変数</string>
-  <string name="secure_storage_unlock_title">ストレージをロック解除</string>
-  <string name="secure_storage_create_title">ストレージを作成</string>
   <string name="secure_storage_reset_title">パスワードをリセット</string>
-  <string name="secure_storage_delete_title">ストレージを削除</string>
   <string name="secure_storage_unlock_key_prompt_msg">セキュアストレージファイルシステムのロックを解除するには、パスワードを入力してください。</string>
   <string name="secure_storage_unlock_key_new_msg">セキュアストレージファイルシステムを保護するには、パスワードを入力してください。</string>
   <string name="secure_storage_unlock_key_reset_msg">セキュアストレージファイルシステムをリセットするには、現在のパスワードと新しいパスワードを入力してください。</string>

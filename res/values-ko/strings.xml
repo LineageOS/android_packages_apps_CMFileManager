@@ -373,10 +373,7 @@
   <string name="ash_keyword">키워드</string>
   <string name="ash_quoted_string">따옴표 붙은 문자열</string>
   <string name="ash_variable">변수</string>
-  <string name="secure_storage_unlock_title">저장소 잠금 해제</string>
-  <string name="secure_storage_create_title">저장소 만들기</string>
   <string name="secure_storage_reset_title">비밀번호 재설정</string>
-  <string name="secure_storage_delete_title">저장소 삭제</string>
   <string name="secure_storage_unlock_key_prompt_msg">보호된 저장소의 파일 시스템에 접근하기 위한 암호를 입력하세요.</string>
   <string name="secure_storage_unlock_key_new_msg">보호된 저장소에 접근할 때 사용할 새 비밀번호를 입력하세요.</string>
   <string name="secure_storage_unlock_key_reset_msg">보호된 저장소의 암호를 재설정하려면 이전 암호와 새 암호를 입력하세요.</string>

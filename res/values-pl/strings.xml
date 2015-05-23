@@ -383,10 +383,7 @@
   <string name="ash_keyword">Słowo kluczowe</string>
   <string name="ash_quoted_string">Fraza w cudzysłowie</string>
   <string name="ash_variable">Zmienna</string>
-  <string name="secure_storage_unlock_title">Odblokuj pamięć</string>
-  <string name="secure_storage_create_title">Utwórz pamięć</string>
   <string name="secure_storage_reset_title">Resetuj hasło</string>
-  <string name="secure_storage_delete_title">Usuń pamięć</string>
   <string name="secure_storage_unlock_key_prompt_msg">Wpisz hasło, aby bezpiecznie odblokować przechowywane pliki.</string>
   <string name="secure_storage_unlock_key_new_msg">Wpisz hasło, aby chronić przechowywane pliki.</string>
   <string name="secure_storage_unlock_key_reset_msg">Podaj obecne i nowe hasło, aby zresetować chroniony system plików.</string>

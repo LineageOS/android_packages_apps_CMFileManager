@@ -365,10 +365,7 @@
   <string name="ash_keyword">Atslēgvārds</string>
   <string name="ash_quoted_string">Pēdiņās iekļauta virkne</string>
   <string name="ash_variable">Mainīgais</string>
-  <string name="secure_storage_unlock_title">Atbloķēt krātuvi</string>
-  <string name="secure_storage_create_title">Izveidot krātuvi</string>
   <string name="secure_storage_reset_title">Pārstatīt paroli</string>
-  <string name="secure_storage_delete_title">Dzēst krātuvi</string>
   <string name="secure_storage_unlock_key_prompt_msg">Ievadiet paroli, lai atbloķētu drošās krātuves failu sistēmu.</string>
   <string name="secure_storage_unlock_key_new_msg">Ievadiet paroli, lai aizsargātu drošās krātuves failu sistēmu.</string>
   <string name="secure_storage_unlock_key_reset_msg">Ierakstiet tekošo un jauno paroli lai pārstatītu drošās krātuves failu sistēmu.</string>

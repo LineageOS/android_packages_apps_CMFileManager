@@ -386,10 +386,7 @@
   <string name="ash_keyword">Nøgleord</string>
   <string name="ash_quoted_string">Citeret streng</string>
   <string name="ash_variable">Variabel</string>
-  <string name="secure_storage_unlock_title">Lås lager op</string>
-  <string name="secure_storage_create_title">Opret lager</string>
   <string name="secure_storage_reset_title">Nulstil adgangskode</string>
-  <string name="secure_storage_delete_title">Slet lager</string>
   <string name="secure_storage_unlock_key_prompt_msg">Indtast adgangskoden for at låse det sikre filsystem op.</string>
   <string name="secure_storage_unlock_key_new_msg">Indtast en adgangskode for at beskytte det sikre filsystem.</string>
   <string name="secure_storage_unlock_key_reset_msg">Indtast den aktuelle og nye adgangskode for at nulstille det sikre filsystem.</string>

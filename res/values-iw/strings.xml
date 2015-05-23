@@ -377,10 +377,7 @@
   <string name="ash_keyword">מילת מפתח</string>
   <string name="ash_quoted_string">מחרוזת מצוטטת</string>
   <string name="ash_variable">משתנה</string>
-  <string name="secure_storage_unlock_title">בטל נעילת אחסון</string>
-  <string name="secure_storage_create_title">צור אחסון</string>
   <string name="secure_storage_reset_title">איפוס סיסמה</string>
-  <string name="secure_storage_delete_title">מחק אחסון</string>
   <string name="secure_storage_unlock_key_prompt_msg">הקלד את הסיסמה כדי לבטל את נעילת מערכת האחסון המאובטחת.</string>
   <string name="secure_storage_unlock_key_new_msg">הקלד את הסיסמה כדי לנעול את מערכת האחסון המאובטחת.</string>
   <string name="secure_storage_unlock_key_reset_msg">הקלד את העכשוית וסיסמה חדשה כדי לאפס את נעילת מערכת האחסון המאובטחת.</string>

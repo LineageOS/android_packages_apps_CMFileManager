@@ -378,10 +378,7 @@
   <string name="ash_keyword">Palabra clave</string>
   <string name="ash_quoted_string">Cadena</string>
   <string name="ash_variable">Variable</string>
-  <string name="secure_storage_unlock_title">Desbloquear almacenamiento</string>
-  <string name="secure_storage_create_title">Crear almacenamiento</string>
   <string name="secure_storage_reset_title">Restablecer contraseña</string>
-  <string name="secure_storage_delete_title">Borrar almacenamiento</string>
   <string name="secure_storage_unlock_key_prompt_msg">Escribe la contraseña para desbloquear el sistema de almacenamiento de archivos seguro.</string>
   <string name="secure_storage_unlock_key_new_msg">Escribe una contraseña para proteger el sistema de almacenamiento de archivos seguro.</string>
   <string name="secure_storage_unlock_key_reset_msg">Escribe la contraseña actual y unas nuevas para restablecer el sistema de almacenamiento de archivos seguro.</string>

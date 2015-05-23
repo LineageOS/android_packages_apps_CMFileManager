@@ -359,10 +359,7 @@
   <string name="ash_keyword">යතුරුපදය</string>
   <string name="ash_quoted_string">උධෘත අනුලකුණු වැල</string>
   <string name="ash_variable">විචල්‍යය</string>
-  <string name="secure_storage_unlock_title">ගබඩාව අගුළු අරින්න</string>
-  <string name="secure_storage_create_title">ගබඩාව තනන්න</string>
   <string name="secure_storage_reset_title">මුරපදය යළි සකසන්න</string>
-  <string name="secure_storage_delete_title">ගබඩාව මකන්න</string>
   <string name="secure_storage_unlock_key_prompt_msg">සුරක්ෂිත ගබඩා ගොනු පද්ධතිය අගුළු ඇරීමට මුරපදය ටයිප් කරන්න.</string>
   <string name="secure_storage_unlock_key_new_msg">සුරක්ෂිත ගබඩා ගොනු පද්ධතිය ආරක්ෂා කිරීමට මුරපදයක් ටයිප් කරන්න.</string>
   <string name="secure_storage_unlock_key_reset_msg">සුරක්ෂිත ගබඩා ගොනු පද්ධතිය යළි පිහිටුවීමට පවත්නා සහ අලුත් මුරපද ටයිප් කරන්න.</string>

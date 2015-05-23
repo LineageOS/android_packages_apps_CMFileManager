@@ -381,10 +381,7 @@
   <string name="ash_keyword">Ключевое слово</string>
   <string name="ash_quoted_string">Строка в кавычках</string>
   <string name="ash_variable">Переменная</string>
-  <string name="secure_storage_unlock_title">Разблокировка хранилища</string>
-  <string name="secure_storage_create_title">Создание хранилища</string>
   <string name="secure_storage_reset_title">Изменить пароль</string>
-  <string name="secure_storage_delete_title">Удалить хранилище</string>
   <string name="secure_storage_unlock_key_prompt_msg">Введите пароль для разблокировки файлов защищённого хранилища.</string>
   <string name="secure_storage_unlock_key_new_msg">Введите пароль для защиты ФС защищённого хранилища.</string>
   <string name="secure_storage_unlock_key_reset_msg">Введите текущий и новый пароли для повторной инициализации ФС защищённого хранилища.</string>
