@@ -374,10 +374,10 @@
   <string name="ash_keyword">Sleutelwoord</string>
   <string name="ash_quoted_string">Quoted string</string>
   <string name="ash_variable">Variabele</string>
-  <string name="secure_storage_unlock_title">Opslag ontgrendelen</string>
-  <string name="secure_storage_create_title">Opslag aanmaken</string>
+  <string name="secure_storage_unlock_title">Beveiligde opslag ontgrendelen</string>
+  <string name="secure_storage_create_title">Beveiligde opslag aanmaken</string>
   <string name="secure_storage_reset_title">Wachtwoord opnieuw instellen</string>
-  <string name="secure_storage_delete_title">Opslag verwijderen</string>
+  <string name="secure_storage_delete_title">Beveiligde opslag verwijderen</string>
   <string name="secure_storage_unlock_key_prompt_msg">Typ het wachtwoord om het beveiligde opslagsysteem te ontgrendelen.</string>
   <string name="secure_storage_unlock_key_new_msg">Typ een wachtwoord om het beveiligde opslagsysteem te beschermen.</string>
   <string name="secure_storage_unlock_key_reset_msg">Typ het huidige en nieuwe wachtwoord om het beveiligde opslagsysteem opnieuw in te stellen.</string>

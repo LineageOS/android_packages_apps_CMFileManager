@@ -374,10 +374,10 @@
   <string name="ash_keyword">Parola chiave</string>
   <string name="ash_quoted_string">Stringa tra virgolette</string>
   <string name="ash_variable">Variabile</string>
-  <string name="secure_storage_unlock_title">Sblocca memoria</string>
-  <string name="secure_storage_create_title">Crea memoria</string>
+  <string name="secure_storage_unlock_title">Sblocca memoria sicura</string>
+  <string name="secure_storage_create_title">Crea memoria sicura</string>
   <string name="secure_storage_reset_title">Reimposta password</string>
-  <string name="secure_storage_delete_title">Elimina memoria</string>
+  <string name="secure_storage_delete_title">Elimina memoria sicura</string>
   <string name="secure_storage_unlock_key_prompt_msg">Inserisci la password per sbloccare il filesystem dell\'archivio protetto.</string>
   <string name="secure_storage_unlock_key_new_msg">Inserisci una password per bloccare il filesystem dell\'archivio protetto.</string>
   <string name="secure_storage_unlock_key_reset_msg">Inserisci la password attuale e quella nuova per resettare l\'archivio protetto.</string>

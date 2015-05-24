@@ -374,10 +374,10 @@
   <string name="ash_keyword">Λέξη-κλειδί</string>
   <string name="ash_quoted_string">Κείμενο σε εισαγωγικά</string>
   <string name="ash_variable">Μεταβλητή</string>
-  <string name="secure_storage_unlock_title">Ξεκλείδωμα αποθ. χώρου</string>
-  <string name="secure_storage_create_title">Δημιουργία αποθ. χώρου</string>
+  <string name="secure_storage_unlock_title">Ξεκλείδωμα ασφαλούς αποθ. χώρου</string>
+  <string name="secure_storage_create_title">Δημιουργία ασφαλούς αποθ. χώρου</string>
   <string name="secure_storage_reset_title">Επαναφορά κωδικού πρόσβασης</string>
-  <string name="secure_storage_delete_title">Διαγραφή αποθ. χώρου</string>
+  <string name="secure_storage_delete_title">Διαγραφή ασφαλούς αποθ. χώρου</string>
   <string name="secure_storage_unlock_key_prompt_msg">Πληκτρολογήστε τον κωδικό πρόσβασης για να ξεκλειδώσετε τον ασφαλή αποθ. χώρο.</string>
   <string name="secure_storage_unlock_key_new_msg">Πληκτρολογήστε έναν κωδικό πρόσβασης για την προστασία του ασφαλούς αποθ. χώρου.</string>
   <string name="secure_storage_unlock_key_reset_msg">Πληκτρολογήστε τον τρέχοντα και τον νέο κωδικό πρόσβασης για να επαναφέρετε τον ασφαλή αποθ. χώρο.</string>

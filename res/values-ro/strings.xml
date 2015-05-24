@@ -374,10 +374,7 @@
   <string name="ash_keyword">Cuvânt cheie</string>
   <string name="ash_quoted_string">Șir de citate</string>
   <string name="ash_variable">Variabila</string>
-  <string name="secure_storage_unlock_title">Deblochează stocarea</string>
-  <string name="secure_storage_create_title">Crearea de stocare</string>
   <string name="secure_storage_reset_title">Resetare parolă</string>
-  <string name="secure_storage_delete_title">Ştergeţi stocarea</string>
   <string name="secure_storage_unlock_key_prompt_msg">Introduceţi parola pentru a debloca sistemul de fişiere sigure de stocare.</string>
   <string name="secure_storage_unlock_key_new_msg">Tastaţi o parolă pentru a proteja sistemul de fişiere sigure de stocare.</string>
   <string name="secure_storage_unlock_key_reset_msg">Tastați parola curentă şi ceea nouă pentru a reseta sistemul de fişiere sigure de stocare.</string>

@@ -365,10 +365,7 @@
   <string name="ash_keyword">關鍵字</string>
   <string name="ash_quoted_string">帶引號的字串</string>
   <string name="ash_variable">變數</string>
-  <string name="secure_storage_unlock_title">解鎖儲存</string>
-  <string name="secure_storage_create_title">建立儲存</string>
   <string name="secure_storage_reset_title">重設密碼</string>
-  <string name="secure_storage_delete_title">移除儲存</string>
   <string name="secure_storage_unlock_key_prompt_msg">輸入密碼以解開安全儲存檔案系統。</string>
   <string name="secure_storage_unlock_key_new_msg">輸入密碼以保護安全儲存檔案系統。</string>
   <string name="secure_storage_unlock_key_reset_msg">輸入當前密碼和新密碼來重新設定安全儲存檔案系統。</string>

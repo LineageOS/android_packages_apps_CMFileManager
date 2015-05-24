@@ -383,10 +383,7 @@
   <string name="ash_keyword">Mot-clé</string>
   <string name="ash_quoted_string">Chaîne entre guillemets</string>
   <string name="ash_variable">Variable</string>
-  <string name="secure_storage_unlock_title">Déverrouiller le stockage</string>
-  <string name="secure_storage_create_title">Créer un stockage</string>
   <string name="secure_storage_reset_title">Réinitialiser le mot de passe</string>
-  <string name="secure_storage_delete_title">Supprimer le stockage</string>
   <string name="secure_storage_unlock_key_prompt_msg">Entrer le mot de passe pour déverrouiller le système de stockage sécurisé.</string>
   <string name="secure_storage_unlock_key_new_msg">Entrer un mot de passe pour protéger le système de stockage sécurisé.</string>
   <string name="secure_storage_unlock_key_reset_msg">Entrer le mot de passe actuel et le nouveau pour réinitialiser le système de fichier sécurisé.</string>

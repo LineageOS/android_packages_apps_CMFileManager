@@ -375,10 +375,10 @@
   <string name="ash_keyword">Paraula clau</string>
   <string name="ash_quoted_string">Cadena comentada</string>
   <string name="ash_variable">Variable</string>
-  <string name="secure_storage_unlock_title">Desbloqueja emmagatzematge</string>
-  <string name="secure_storage_create_title">Crea emmagatzematge</string>
+  <string name="secure_storage_unlock_title">Desbloqueja l\'emmagatzematge segur</string>
+  <string name="secure_storage_create_title">Crea un emmagatzematge segur</string>
   <string name="secure_storage_reset_title">Restableix contrasenya</string>
-  <string name="secure_storage_delete_title">Esborra emmagatzematge</string>
+  <string name="secure_storage_delete_title">Esborra l\'emmagatzematge segur</string>
   <string name="secure_storage_unlock_key_prompt_msg">Escriu la contrasenya per desbloquejar el sistema de fitxers de l\'emmagatzematge segur.</string>
   <string name="secure_storage_unlock_key_new_msg">Escriu una contrasenya per protegir el sistema de fitxers de l\'emmagatzematge segur.</string>
   <string name="secure_storage_unlock_key_reset_msg">Escriu la contrasenya actual i la nova contrasenya per restablir el sistema de fitxers de l\'emmagatzematge segur.</string>

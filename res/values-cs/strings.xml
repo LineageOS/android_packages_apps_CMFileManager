@@ -374,10 +374,10 @@
   <string name="ash_keyword">Klíčové slovo</string>
   <string name="ash_quoted_string">Řetězec v uvozovkách</string>
   <string name="ash_variable">Proměnná</string>
-  <string name="secure_storage_unlock_title">Odemknout úložiště</string>
-  <string name="secure_storage_create_title">Vytvořit úložiště</string>
+  <string name="secure_storage_unlock_title">Odemknout zabezpečené úložiště</string>
+  <string name="secure_storage_create_title">Vytvořit zabezpečené úložiště</string>
   <string name="secure_storage_reset_title">Obnovit heslo</string>
-  <string name="secure_storage_delete_title">Smazat úložiště</string>
+  <string name="secure_storage_delete_title">Odstranit zabezpečené úložiště</string>
   <string name="secure_storage_unlock_key_prompt_msg">Zdaejte heslo pro odemčení zabezpečeného úložiště souborového systému.</string>
   <string name="secure_storage_unlock_key_new_msg">Zdaejte heslo pro ochranu zabezpečeného úložiště souborového systému.</string>
   <string name="secure_storage_unlock_key_reset_msg">Pro obnovení zabezpečeného souborového úložiště zadejte stávající a nové heslo.</string>

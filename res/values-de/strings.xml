@@ -374,10 +374,7 @@
   <string name="ash_keyword">Schlüsselwort</string>
   <string name="ash_quoted_string">Text in Anführungszeichen</string>
   <string name="ash_variable">Variable</string>
-  <string name="secure_storage_unlock_title">Speicher entsperren</string>
-  <string name="secure_storage_create_title">Speicher erstellen</string>
   <string name="secure_storage_reset_title">Passwort zurücksetzen</string>
-  <string name="secure_storage_delete_title">Speicher löschen</string>
   <string name="secure_storage_unlock_key_prompt_msg">Geben Sie das Passwort zum Entsperren des sicheren Dateisystems ein.</string>
   <string name="secure_storage_unlock_key_new_msg">Geben Sie ein Passwort zum Schutz des sicheren Dateisystems ein.</string>
   <string name="secure_storage_unlock_key_reset_msg">Geben Sie das aktuelle und das neue Passwort ein, um das sichere Dateisystem zurückzuesetzen.</string>

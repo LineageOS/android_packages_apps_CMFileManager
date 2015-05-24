@@ -374,10 +374,10 @@
   <string name="ash_keyword">Hakusana</string>
   <string name="ash_quoted_string">Merkkijono</string>
   <string name="ash_variable">Muuttuja</string>
-  <string name="secure_storage_unlock_title">Avaa tallennustila</string>
-  <string name="secure_storage_create_title">Luo tallennustila</string>
+  <string name="secure_storage_unlock_title">Avaa turvallinen tallennustila</string>
+  <string name="secure_storage_create_title">Luo turvallinen tallennustila</string>
   <string name="secure_storage_reset_title">Nollaa salasana</string>
-  <string name="secure_storage_delete_title">Poista tallennustila</string>
+  <string name="secure_storage_delete_title">Poista turvallinen tallennustila</string>
   <string name="secure_storage_unlock_key_prompt_msg">Kirjoita salasana avataksesi turvallisen tallennustilan.</string>
   <string name="secure_storage_unlock_key_new_msg">Kirjoita salasana suojataksesi turvallisen tallennustilan.</string>
   <string name="secure_storage_unlock_key_reset_msg">Kirjoita nykyinen ja uusi salasana palauttaaksesi turvallisen tallennustilan.</string>

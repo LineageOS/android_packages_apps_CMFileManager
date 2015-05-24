@@ -373,10 +373,7 @@
   <string name="ash_keyword">Açar söz</string>
   <string name="ash_quoted_string">Sitat sətir</string>
   <string name="ash_variable">Dəyişkən</string>
-  <string name="secure_storage_unlock_title">Saxlama kilidini aç</string>
-  <string name="secure_storage_create_title">Saxlama yarat</string>
   <string name="secure_storage_reset_title">Şifrəni sıfırla</string>
-  <string name="secure_storage_delete_title">Saxlamanı sil</string>
   <string name="secure_storage_unlock_key_prompt_msg">Təhlükəsiz saxlama fayl sistemini açmaq üçün şifrəni daxil edin.</string>
   <string name="secure_storage_unlock_key_new_msg">Təhlükəsiz saxlama fayl sistemini kilidləmək üçün şifrəni daxil edin.</string>
   <string name="secure_storage_unlock_key_reset_msg">Təhlükəsiz saxlama fayl sistemini sıfırlamaq üçün mövcud və yeni şifrələri daxil edin.</string>
