@@ -374,10 +374,7 @@
   <string name="ash_keyword">Raktinis žodis</string>
   <string name="ash_quoted_string">Cituojama eilutė</string>
   <string name="ash_variable">Kintamasis</string>
-  <string name="secure_storage_unlock_title">Atrakinti saugyklą</string>
-  <string name="secure_storage_create_title">Sukurti saugyklą</string>
   <string name="secure_storage_reset_title">Nustatyti iš naujo slaptažodį</string>
-  <string name="secure_storage_delete_title">Ištrinti saugyklą</string>
   <string name="secure_storage_unlock_key_prompt_msg">Įveskite slaptažodį, kad atrakintumėte saugią failų sistemą.</string>
   <string name="secure_storage_unlock_key_new_msg">Įveskite slaptažodį, kad apsaugotumėte failų sistemą.</string>
   <string name="secure_storage_unlock_key_reset_msg">Įrašykite esamą ir naują slaptažodžius, kad nustatytumėte iš naujo saugią failų sistemą.</string>

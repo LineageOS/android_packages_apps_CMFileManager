@@ -373,10 +373,7 @@
   <string name="ash_keyword">Keyword</string>
   <string name="ash_quoted_string">Quoted string</string>
   <string name="ash_variable">Variable</string>
-  <string name="secure_storage_unlock_title">Unlock storage</string>
-  <string name="secure_storage_create_title">Create storage</string>
   <string name="secure_storage_reset_title">Reset password</string>
-  <string name="secure_storage_delete_title">Delete storage</string>
   <string name="secure_storage_unlock_key_prompt_msg">Type the password to unlock the secure storage filesystem.</string>
   <string name="secure_storage_unlock_key_new_msg">Type a password to protect the secure storage filesystem.</string>
   <string name="secure_storage_unlock_key_reset_msg">Type the current and new passwords to reset the secure storage filesystem.</string>

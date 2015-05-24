@@ -22,7 +22,7 @@
   <string name="size_kilobytes">کیلۆبایت</string>
   <string name="size_megabytes">مێگابایت</string>
   <string name="size_gigabytes">گێگابایت</string>
-  <string name="datetime_format_order">%1$s %2$s</string>
+  <string name="datetime_format_order">%١$s %٢$s</string>
   <string name="device_blockdevice">ڕێگریکردن لە ئامێر</string>
   <string name="device_characterdevice">ڕەنووسی ئامێر</string>
   <string name="device_namedpipe">لوله‌ی ناونراو</string>
@@ -246,7 +246,7 @@
   <string name="execution_console_script_name_label">سکریپت:</string>
   <string name="execution_console_script_execution_time_label">کات:</string>
   <string name="execution_console_script_exitcode_label">کۆدی دەرچوون:</string>
-  <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> sec.</string>
+  <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%١$s</xliff:g> sec.</string>
   <string name="compute_checksum_title">ژماردنی پشکنه‌بڕ</string>
   <string name="compute_checksum_filename_label">فایل:</string>
   <string name="compute_checksum_computing_checksum_msg">ژماردنی پشکنه‌بڕ\u2026</string>

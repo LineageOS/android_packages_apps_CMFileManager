@@ -381,10 +381,10 @@
   <string name="ash_keyword">Kľúčové slovo</string>
   <string name="ash_quoted_string">Reťazec v úvodzovkách</string>
   <string name="ash_variable">Premenná</string>
-  <string name="secure_storage_unlock_title">Odomknúť úložisko</string>
-  <string name="secure_storage_create_title">Vytvoriť úložisko</string>
+  <string name="secure_storage_unlock_title">Odomknúť zabezpečené úložisko</string>
+  <string name="secure_storage_create_title">Vytvoriť zabezpečené úložisko</string>
   <string name="secure_storage_reset_title">Obnoviť heslo</string>
-  <string name="secure_storage_delete_title">Odstrániť úložisko</string>
+  <string name="secure_storage_delete_title">Vymazať zabezpečené úložisko</string>
   <string name="secure_storage_unlock_key_prompt_msg">Zadajte heslo na odomknutie zabezpečeného úložiska súborového systému.</string>
   <string name="secure_storage_unlock_key_new_msg">Zadajte heslo na ochránenie zabezpečeného úložiska súborového systému.</string>
   <string name="secure_storage_unlock_key_reset_msg">Zadajte aktuálne a nové heslo pre obnovenie zabezpečeného úložiska súborového systému.</string>

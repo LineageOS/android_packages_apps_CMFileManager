@@ -398,10 +398,10 @@
   <string name="ash_keyword">Palavra-chave</string>
   <string name="ash_quoted_string">frase mencionada</string>
   <string name="ash_variable">Variável</string>
-  <string name="secure_storage_unlock_title">Desbloquear o armazenamento</string>
-  <string name="secure_storage_create_title">Criar o armazenamento</string>
+  <string name="secure_storage_unlock_title">Desbloquear o armazenamento seguro</string>
+  <string name="secure_storage_create_title">Criar o armazenamento seguro</string>
   <string name="secure_storage_reset_title">Repor palavra-passe</string>
-  <string name="secure_storage_delete_title">Eliminar o armazenamento</string>
+  <string name="secure_storage_delete_title">Eliminar o armazenamento seguro</string>
   <string name="secure_storage_unlock_key_prompt_msg">Digite a palavra-passe para desbloquear o sistema de ficheiros do armazenamento seguro.</string>
   <string name="secure_storage_unlock_key_new_msg">Digite uma palavra-passe para proteger o sistema de ficheiros do armazenamento seguro.</string>
   <string name="secure_storage_unlock_key_reset_msg">Digite a palavra-passe atual e a nova para repor o sistema de ficheiros do armazenamento seguro.</string>

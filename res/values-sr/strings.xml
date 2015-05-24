@@ -382,10 +382,10 @@
   <string name="ash_keyword">Кључна реч</string>
   <string name="ash_quoted_string">Цитирани стринг</string>
   <string name="ash_variable">Варијабла</string>
-  <string name="secure_storage_unlock_title">Откључај складиште</string>
-  <string name="secure_storage_create_title">Направи складиште</string>
+  <string name="secure_storage_unlock_title">Откључај сигурно складиште</string>
+  <string name="secure_storage_create_title">Направи сигурно складиште</string>
   <string name="secure_storage_reset_title">Ресетујте лозинку</string>
-  <string name="secure_storage_delete_title">Обриши складиште</string>
+  <string name="secure_storage_delete_title">Обриши сигурно складиште</string>
   <string name="secure_storage_unlock_key_prompt_msg">Укуцајте лозинку за откључавање безбедног складишта фајл система.</string>
   <string name="secure_storage_unlock_key_new_msg">Укуцајте лозинку за заштиту фајл система безбедног складишта.</string>
   <string name="secure_storage_unlock_key_reset_msg">Укуцајте тренутну и нову лозинку за ресетовање фајл система безбедног складишта.</string>

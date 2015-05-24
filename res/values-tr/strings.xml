@@ -374,10 +374,10 @@
   <string name="ash_keyword">Anahtar kelime</string>
   <string name="ash_quoted_string">Alıntılanan dize</string>
   <string name="ash_variable">Değişken</string>
-  <string name="secure_storage_unlock_title">Depolama kilidini aç</string>
-  <string name="secure_storage_create_title">Depolama oluştur</string>
+  <string name="secure_storage_unlock_title">Güvenli belleğin kilidini aç</string>
+  <string name="secure_storage_create_title">Güvenli bellek oluştur</string>
   <string name="secure_storage_reset_title">Parolayı sıfırla</string>
-  <string name="secure_storage_delete_title">Depolamayı sil</string>
+  <string name="secure_storage_delete_title">Güvenli belleği sil</string>
   <string name="secure_storage_unlock_key_prompt_msg">Güvenli depolama dosya sistemini açmak için şifreyi girin.</string>
   <string name="secure_storage_unlock_key_new_msg">Güvenli depolama dosya sistemini kilitlemek için bir şifre girin.</string>
   <string name="secure_storage_unlock_key_reset_msg">Güvenli depolama dosya sistemini sıfırlamak için mevcut ve yeni şifrelerinizi girin.</string>

@@ -42,6 +42,7 @@
   <string name="copy_text_cd">Tryck för att kopiera till urklipp</string>
   <string name="copy_text_msg">Text kopierad till urklipp</string>
   <string name="warning_title">Varning</string>
+  <string name="error_title">Fel</string>
   <string name="confirm_operation">Bekräfta åtgärd</string>
   <string name="confirm_overwrite">Bekräfta överskrivning</string>
   <string name="confirm_deletion">Bekräfta radering</string>
@@ -285,6 +286,7 @@
   <string name="category_audio">LJUD</string>
   <string name="category_video">VIDEO</string>
   <string name="category_security">SÄKERHET</string>
+  <string name="category_all">ALLA</string>
   <string name="compression_mode_title">Kompressionstyp</string>
   <string name="shortcut_failed_msg">Misslyckades med att hantera genvägen.</string>
   <string name="shortcut_creation_success_msg">Genvägen skapades framgångsrikt.</string>
@@ -335,6 +337,7 @@
   <string name="pref_remove_saved_search_terms_msg">Alla sparade söktermer togs bort</string>
   <string name="pref_secure_storage_category">Skyddad lagring</string>
   <string name="pref_secure_storage_delayed_sync_title">Fördröjd synkronisering</string>
+  <string name="pref_secure_storage_reset_password_title">Byt lösenord</string>
   <string name="pref_secure_storage_delete_storage_title">Ta bort lagringsenhet</string>
   <string name="pref_editor_behaviour_category">Beteende</string>
   <string name="pref_no_suggestions">Inga förslag</string>
@@ -370,9 +373,7 @@
   <string name="ash_keyword">Nyckelord</string>
   <string name="ash_quoted_string">Statisk sträng</string>
   <string name="ash_variable">Variabel</string>
-  <string name="secure_storage_create_title">Skapa lagringsenhet</string>
   <string name="secure_storage_reset_title">Återställ lösenord</string>
-  <string name="secure_storage_delete_title">Ta bort lagringsenhet</string>
   <string name="secure_storage_unlock_key_prompt_msg">Ange ett lösenord för att skydda filsystemet.</string>
   <string name="secure_storage_unlock_key_new_msg">Ange ett lösenord för att skydda filsystemet.</string>
   <string name="secure_storage_unlock_key_reset_msg">Ange det nuvarande och nya lösenordet för att återställa det skyddade filsystemet.</string>

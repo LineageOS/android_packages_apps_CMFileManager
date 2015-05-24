@@ -379,10 +379,7 @@
   <string name="ash_keyword">Pallabra clave</string>
   <string name="ash_quoted_string">Cadena</string>
   <string name="ash_variable">Variable</string>
-  <string name="secure_storage_unlock_title">Desbloquiar almacenamientu</string>
-  <string name="secure_storage_create_title">Crear almacenamientu</string>
   <string name="secure_storage_reset_title">Restablecer contraseña</string>
-  <string name="secure_storage_delete_title">Desaniciar almacenamientu</string>
   <string name="secure_storage_unlock_key_prompt_msg">Escribi la contraseña pa desbloquiar el sistema d\'almacenamientu de ficheros seguru.</string>
   <string name="secure_storage_unlock_key_new_msg">Escribi una contraseña pa protexer el sistema d\'almacenamientu de ficheros seguru.</string>
   <string name="secure_storage_unlock_key_reset_msg">Escribi la contraseña actual y unes nueves pa restablecer el sistema d\'almacenamientu de ficheros seguru.</string>

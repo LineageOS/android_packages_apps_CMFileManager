@@ -66,7 +66,7 @@
   <string name="msgs_operation_can_not_be_cancelled">Dës Operatioun kann net ofgebrach ginn.</string>
   <string name="msgs_read_only_filesystem">De Fichierssystem ass schreifgeschützt. Probéier de Fichiersystem mat Schreifrechter anzebannen ier s de dës Operatioun probéiers.</string>
   <string name="msgs_illegal_argument">Ongëltegt Argument. Opruff feelgeschloen.</string>
-  <string name="msgs_unresolved_inconsistencies">Dës Operatioun ass net erlaabert well se Inkonsistenze géif verursaachen.</string>
+  <string name="msgs_unresolved_inconsistencies">Dës Operatioun ass net erlaabt well s\'Inkonsistenze géif verursaachen.</string>
   <string name="msgs_operation_not_allowed_in_current_directory">Den Destinatiounsdossier ka keen Ënnerdossier vun der Source oder identesch mat der Source sinn.</string>
   <string name="msgs_push_again_to_exit">Nach eemol drécke fir zouzemaachen.</string>
   <string name="msgs_not_registered_app">Fir den ausgewielte Fichierstyp ass keng App registréiert.</string>
@@ -374,10 +374,7 @@
   <string name="ash_keyword">Schlësselwuert</string>
   <string name="ash_quoted_string">Text tëscht Gänseféisercher</string>
   <string name="ash_variable">Variabel</string>
-  <string name="secure_storage_unlock_title">Späicher entspären</string>
-  <string name="secure_storage_create_title">Späicher erstellen</string>
   <string name="secure_storage_reset_title">Passwuert zrécksetzen</string>
-  <string name="secure_storage_delete_title">Späicher läschen</string>
   <string name="secure_storage_unlock_key_prompt_msg">Passwuert agi fir de séchere Fichierssystem z\'entspären.</string>
   <string name="secure_storage_unlock_key_new_msg">Gëff e Passwuert a fir de séchere Fichierssystem ze schützen.</string>
   <string name="secure_storage_unlock_key_reset_msg">Gëff dat aktuellt an dat neit Passwuert an, fir de séchere Fichierssystem zréckzesetzen.</string>

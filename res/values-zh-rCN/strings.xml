@@ -398,10 +398,10 @@
   <string name="ash_keyword">关键词</string>
   <string name="ash_quoted_string">带引号的字符串</string>
   <string name="ash_variable">变量</string>
-  <string name="secure_storage_unlock_title">解锁存储</string>
-  <string name="secure_storage_create_title">创建存储</string>
+  <string name="secure_storage_unlock_title">解锁安全存储</string>
+  <string name="secure_storage_create_title">创建安全存储</string>
   <string name="secure_storage_reset_title">重置密码</string>
-  <string name="secure_storage_delete_title">删除存储</string>
+  <string name="secure_storage_delete_title">删除安全存储</string>
   <string name="secure_storage_unlock_key_prompt_msg">输入密码以解锁安全存储文件系统。</string>
   <string name="secure_storage_unlock_key_new_msg">输入密码以保护安全存储文件系统。</string>
   <string name="secure_storage_unlock_key_reset_msg">输入当前密码和新密码来重置安全存储文件系统。</string>
