@@ -341,6 +341,7 @@
   <string name="pref_remove_saved_search_terms_msg">Alla sparade söktermer togs bort</string>
   <string name="pref_secure_storage_category">Skyddad lagring</string>
   <string name="pref_secure_storage_delayed_sync_title">Fördröjd synkronisering</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Synkronisering av skyddat filsystem är en kostsam operation. Aktivera detta alternativ för att tillåta snabbare respons efter varje operation, utför synkroniseringen när filsystemet inte används, men på bekostnad av att förlora den väntande informationen om appen kraschar.</string>
   <string name="pref_secure_storage_reset_password_title">Återställ lösenord</string>
   <string name="pref_secure_storage_delete_storage_title">Ta bort lagringsenhet</string>
   <string name="pref_editor_behaviour_category">Beteende</string>
@@ -379,6 +380,7 @@
   <string name="ash_keyword">Nyckelord</string>
   <string name="ash_quoted_string">Statisk sträng</string>
   <string name="ash_variable">Variabel</string>
+  <string name="secure_storage_unlock_title">Lås upp lagringsenhet</string>
   <string name="secure_storage_create_title">Skapa lagringsenhet</string>
   <string name="secure_storage_reset_title">Återställ lösenord</string>
   <string name="secure_storage_delete_title">Ta bort lagringsenhet</string>
