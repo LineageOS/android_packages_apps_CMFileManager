@@ -217,8 +217,8 @@
   <string name="actions_menu_deselect_all">Alle abwählen</string>
   <string name="actions_menu_select">Auswählen</string>
   <string name="actions_menu_deselect">Abwählen</string>
-  <string name="actions_menu_paste_selection">Auswahl hier einfügen</string>
-  <string name="actions_menu_move_selection">Auswahl hierher verschieben</string>
+  <string name="actions_menu_paste_selection">Hierher kopieren</string>
+  <string name="actions_menu_move_selection">Hierher verschieben</string>
   <string name="actions_menu_delete_selection">Auswahl löschen</string>
   <string name="actions_menu_compress_selection">Auswahl komprimieren</string>
   <string name="actions_menu_create_link">Verknüpfung anlegen</string>
@@ -374,7 +374,10 @@
   <string name="ash_keyword">Schlüsselwort</string>
   <string name="ash_quoted_string">Text in Anführungszeichen</string>
   <string name="ash_variable">Variable</string>
+  <string name="secure_storage_unlock_title">Sicheren Speicher entsperren</string>
+  <string name="secure_storage_create_title">Sicheren Speicher erstellen</string>
   <string name="secure_storage_reset_title">Passwort zurücksetzen</string>
+  <string name="secure_storage_delete_title">Sicheren Speicher löschen</string>
   <string name="secure_storage_unlock_key_prompt_msg">Geben Sie das Passwort zum Entsperren des sicheren Dateisystems ein.</string>
   <string name="secure_storage_unlock_key_new_msg">Geben Sie ein Passwort zum Schutz des sicheren Dateisystems ein.</string>
   <string name="secure_storage_unlock_key_reset_msg">Geben Sie das aktuelle und das neue Passwort ein, um das sichere Dateisystem zurückzuesetzen.</string>

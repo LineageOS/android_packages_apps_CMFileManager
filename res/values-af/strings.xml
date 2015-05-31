@@ -394,7 +394,10 @@
   <string name="ash_keyword">Sleutelwoord</string>
   <string name="ash_quoted_string">Aangehaalde teks</string>
   <string name="ash_variable">Veranderlike</string>
+  <string name="secure_storage_unlock_title">Ontsluit sekuriteit stoor spasie</string>
+  <string name="secure_storage_create_title">Skep sekuriteit stoor spasie</string>
   <string name="secure_storage_reset_title">Herstel wagwoord</string>
+  <string name="secure_storage_delete_title">Verwyder sekuriteit stoor spasie</string>
   <string name="secure_storage_unlock_key_prompt_msg">Tik die wagwoord in om die veilige berging lêerstelsel te ontsluit.</string>
   <string name="secure_storage_unlock_key_new_msg">Tik \'n wagwoord om die veilige berging lêerstelsel te beskerm.</string>
   <string name="secure_storage_unlock_key_reset_msg">Tik die huidige en nuwe wagwoorde in om die veilige berging lêerstelsel te herstel.</string>

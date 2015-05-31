@@ -374,7 +374,10 @@
   <string name="ash_keyword">Kulcsszó</string>
   <string name="ash_quoted_string">Idézett karakterlánc</string>
   <string name="ash_variable">Változó</string>
+  <string name="secure_storage_unlock_title">Biztonságos tároló feloldása</string>
+  <string name="secure_storage_create_title">Biztonságos tároló létrehozása</string>
   <string name="secure_storage_reset_title">Jelszó visszaállítása</string>
+  <string name="secure_storage_delete_title">Biztonságos tároló törlése</string>
   <string name="secure_storage_unlock_key_prompt_msg">A jelszó megadásával feloldhatja a biztonságos tároló fájlrendszert.</string>
   <string name="secure_storage_unlock_key_new_msg">Jelszó megadása a biztonsági tároló védelméhez.</string>
   <string name="secure_storage_unlock_key_reset_msg">Írja be a jelenlegi és az új jelszót a biztonsági tároló fájlrendszerének alaphelyzetbe állításához.</string>

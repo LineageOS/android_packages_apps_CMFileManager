@@ -109,7 +109,7 @@
   <string name="filesystem_info_mount_failed_msg">Abannen/Trenne vum Fichierssystem ass feelgeschloen. Op verschidde Fichierssystemer, wéi SD-Kaarten, kënnen dës Operatiounen net ausgefouert gi well se schreifgeschützt an de System agebaut sinn.</string>
   <string name="filesystem_info_dialog_title">Informatiounen zum Fichierssystem</string>
   <string name="filesystem_info_dialog_tab_info">Informatiounen</string>
-  <string name="filesystem_info_dialog_tab_disk_usage">Späichernotzung</string>
+  <string name="filesystem_info_dialog_tab_disk_usage">Späicherbenotzung</string>
   <string name="filesystem_info_dialog_status">Agebonnen:</string>
   <string name="filesystem_info_dialog_mount_point">Abannungspunkt:</string>
   <string name="filesystem_info_dialog_device">Apparat:</string>
@@ -301,7 +301,7 @@
   <string name="pref_case_sensitive_sort">Grouss-/Klengschreiwung respektéieren</string>
   <string name="pref_case_sensitive_sort_summary">Grouss-/Klengschreiwung respektéiere beim Navigéieren oder Zortéiere vu Sichresultater</string>
   <string name="pref_filetime_format_mode">Datums- an Zäitformat</string>
-  <string name="pref_disk_usage_warning_level">Späichernotzungswarnung</string>
+  <string name="pref_disk_usage_warning_level">Späicherbenotzungswarnung</string>
   <string name="pref_disk_usage_warning_level_summary" formatted="false">Aner Faarf uweise, wa méi wéI <xliff:g id="level">%1$s</xliff:g> Prozent vun der Späicherplaz beluecht sinn</string>
   <string name="pref_compute_folder_statistics">Dossiersstatistike berechnen</string>
   <string name="pref_compute_folder_statistics_on">Warnung! D\'Berechnung vun den Dossiersstatistiken ass Zäit- a Ressourcen-opwänneg</string>
