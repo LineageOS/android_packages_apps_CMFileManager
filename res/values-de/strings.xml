@@ -134,7 +134,7 @@
   <string name="fso_properties_dialog_owner">Besitzer:</string>
   <string name="fso_properties_dialog_group">Gruppe:</string>
   <string name="fso_properties_dialog_others">Andere:</string>
-  <string name="fso_properties_dialog_include_in_media_scan">Medienscan überspringen:</string>
+  <string name="fso_properties_dialog_include_in_media_scan">Medienscan\nüberspringen:</string>
   <string name="fso_failed_to_allow_media_scan">Medienscan konnte nicht aktiviert werden</string>
   <string name="fso_failed_to_prevent_media_scan">Medienscan konnte nicht übersprungen werden</string>
   <string name="fso_delete_nomedia_dir_title">Verzeichnis \'.nomedia\' löschen</string>
