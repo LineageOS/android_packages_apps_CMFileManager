@@ -34,7 +34,6 @@ import android.widget.Toast;
 
 import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
-import com.cyanogenmod.filemanager.activities.NavigationActivity;
 import com.cyanogenmod.filemanager.adapters.TwoColumnsMenuListAdapter;
 import com.cyanogenmod.filemanager.console.VirtualMountPointConsole;
 import com.cyanogenmod.filemanager.listeners.OnRequestRefreshListener;
@@ -83,7 +82,7 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
      * @hide
      */
     final Context mContext;
-    final NavigationActivity mBackRef;
+    final com.cyanogenmod.filemanager.activities.NavActivity mBackRef;
     private final boolean mGlobal;
     private final boolean mSearch;
     private final boolean mChRooted;
@@ -115,7 +114,7 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
      * @param global If the menu to display will be the global one (Global actions)
      * @param search If the call is from search activity
      */
-    public ActionsDialog(Context context, NavigationActivity backRef, FileSystemObject fso,
+    public ActionsDialog(Context context, com.cyanogenmod.filemanager.activities.NavActivity backRef, FileSystemObject fso,
             boolean global, boolean search) {
         super();
 
@@ -401,7 +400,7 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
                 Bookmark bookmark = BookmarksActionPolicy.addToBookmarks(
                         this.mContext, this.mFso);
                 if (mBackRef != null) {
-                    // tell NavigationActivity's drawer to add the bookmark
+                    // tell NavActivity's drawer to add the bookmark
                     mBackRef.addBookmark(bookmark);
                 }
                 break;
