@@ -546,9 +546,6 @@ public class NavigationFragment extends Fragment
         // Apply the theme
         applyTheme();
 
-        // Show welcome message
-        showWelcomeMsg();
-
         this.mHandler = new Handler();
         this.mHandler.post(new Runnable() {
             @Override
@@ -672,14 +669,6 @@ public class NavigationFragment extends Fragment
         this.mHistory = new ArrayList<History>();
         this.mHistorySaved = new ArrayList<History>();
         this.mChRooted = FileManagerApplication.getAccessMode().compareTo(AccessMode.SAFE) == 0;
-    }
-
-    /**
-     * Method that displays a welcome message the first time the user
-     * access the application
-     */
-    private void showWelcomeMsg() {
-        // TODO: implement new initial welcome message
     }
 
     /**
