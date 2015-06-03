@@ -130,27 +130,19 @@ public class HomeFragment extends Fragment {
 
     private void initEasyModePlus() {
 
-        MIME_TYPE_LOCALIZED_NAMES = MimeTypeHelper.MimeTypeCategory.getFriendlyLocalizedNames(
-                getActivity());
-
+        MIME_TYPE_LOCALIZED_NAMES = MimeTypeCategory.getFriendlyLocalizedNames(getActivity());
         EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.NONE, getResources().getDrawable(
-                R.drawable
-                        .ic_em_all));
+                R.drawable.ic_em_all));
         EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.IMAGE, getResources().getDrawable(
-                R.drawable
-                        .ic_em_image));
+                R.drawable.ic_em_image));
         EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.VIDEO, getResources().getDrawable(
-                R.drawable
-                        .ic_em_video));
+                R.drawable.ic_em_video));
         EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.AUDIO, getResources().getDrawable(
-                R.drawable
-                        .ic_em_music));
+                R.drawable.ic_em_music));
         EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.DOCUMENT, getResources().getDrawable(
-                R.drawable
-                        .ic_em_document));
+                R.drawable.ic_em_document));
         EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.APP, getResources().getDrawable(
-                R.drawable
-                        .ic_em_application));
+                R.drawable.ic_em_application));
 
 
         GridView gridview = (GridView) mView.findViewById(R.id.easy_modeView);
