@@ -248,6 +248,14 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                 DialogHelper.delegateDialogShow(ctx, dialog);
                 return;
             }
+            if (linkedRes.mDst.getParent().equals(linkedRes.mSrc.getAbsolutePath())) {
+                AlertDialog dialog =
+                        DialogHelper.createErrorDialog(ctx,
+                                R.string.error_title,
+                                R.string.msgs_illegal_folder_copy);
+                DialogHelper.delegateDialogShow(ctx, dialog);
+                return;
+            }
         }
         // 3.- Check the operation consistency
         if (operation.compareTo(COPY_MOVE_OPERATION.MOVE) == 0) {

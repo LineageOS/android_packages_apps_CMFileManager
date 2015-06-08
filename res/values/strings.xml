@@ -124,6 +124,8 @@
     <string name="msgs_read_only_filesystem">The file system is read-only. Try to mount the file system as read-write before attempting the operation.</string>
     <!-- Illegal argument (normally caused by a development error when calling internal api) -->
     <string name="msgs_illegal_argument">Illegal argument. Invocation failed.</string>
+    <!-- Illegal folder copy, cannot copy folders into themselves -->
+    <string name="msgs_illegal_folder_copy">You cannot copy folders into themselves.</string>
     <!-- The operation will cause inconsistencies -->
     <string name="msgs_unresolved_inconsistencies">The operation is not permitted because it would create inconsistencies.</string>
     <!-- Operation not permitted in current directory -->
