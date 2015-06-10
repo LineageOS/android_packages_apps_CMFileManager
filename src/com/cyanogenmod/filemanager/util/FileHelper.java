@@ -1176,6 +1176,13 @@ public final class FileHelper {
             Log.e(TAG,
                     String.format(TAG, "Failed to copy from %s to %d", src, dst), e); //$NON-NLS-1$
 
+            try {
+                // delete the destination file if it exists since the operation failed
+                if (dst.exists()) {
+                    dst.delete();
+                }
+            } catch (Throwable t) {/**NON BLOCK**/}
+
             // Check if this error is an out of space exception and throw that specifically.
             // ENOSPC -> Error No Space
             if (e.getCause() instanceof ErrnoException
