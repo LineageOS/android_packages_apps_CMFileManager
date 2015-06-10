@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba5201f7_501acc18",
+        "filename": "res/anim/flip_in.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-06-10T04:53:36Z",
+      "side": 1,
+      "message": "What does setting these pivots to 50% do? I think default pivot is the center of the view, so not sure if this is necessary.",
+      "revId": "fc21c4896e8901387db9774f553e1bf0b6865e35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba5201f7_7017d0ed",
+        "filename": "res/anim/flip_in.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-06-10T04:53:36Z",
+      "side": 1,
+      "message": "YScale isn\u0027t changing, probably not worth putting this here.",
+      "revId": "fc21c4896e8901387db9774f553e1bf0b6865e35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba5201f7_b0d77822",
+        "filename": "res/anim/flip_out.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-06-10T04:53:36Z",
+      "side": 1,
+      "message": "Default pivot is center, does setting this to 50% change anything?",
+      "revId": "fc21c4896e8901387db9774f553e1bf0b6865e35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba5201f7_90d27433",
+        "filename": "res/anim/flip_out.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-06-10T04:53:36Z",
+      "side": 1,
+      "message": "YScale isn\u0027t changing",
+      "revId": "fc21c4896e8901387db9774f553e1bf0b6865e35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba5201f7_d0dcfc48",
+        "filename": "res/drawable/ic_details.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-06-10T04:53:36Z",
+      "side": 1,
+      "message": "the line wrap on this looks a little odd. should this be tabbed in?",
+      "revId": "fc21c4896e8901387db9774f553e1bf0b6865e35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
