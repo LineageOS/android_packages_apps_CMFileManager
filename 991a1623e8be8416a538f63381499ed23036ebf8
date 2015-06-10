@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba5201f7_164bdc2c",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 797,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-06-10T12:51:20Z",
+      "side": 1,
+      "message": "unnecessary newline",
+      "revId": "991a1623e8be8416a538f63381499ed23036ebf8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
