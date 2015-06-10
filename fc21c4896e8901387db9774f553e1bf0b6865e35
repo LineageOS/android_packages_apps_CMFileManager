@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ba5201f7_f0eca091",
+        "filename": "res/anim/flip_in.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-10T05:46:13Z",
+      "side": 1,
+      "message": "Default pivot was left when I removed this. So I\u0027m leaving it for pivotX.",
+      "parentUuid": "ba5201f7_501acc18",
+      "revId": "fc21c4896e8901387db9774f553e1bf0b6865e35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba5201f7_7017d0ed",
         "filename": "res/anim/flip_in.xml",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-06-10T04:53:36Z",
       "side": 1,
       "message": "YScale isn\u0027t changing, probably not worth putting this here.",
+      "revId": "fc21c4896e8901387db9774f553e1bf0b6865e35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba5201f7_1002043f",
+        "filename": "res/anim/flip_in.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-10T05:46:13Z",
+      "side": 1,
+      "message": "Removing toYScale caused toYScale to mimic toXScale. Combined with removing pivotY, it caused an animation that flipped and slid toward the top.",
+      "parentUuid": "ba5201f7_7017d0ed",
       "revId": "fc21c4896e8901387db9774f553e1bf0b6865e35",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ba5201f7_30ce285b",
+        "filename": "res/anim/flip_out.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-10T05:46:13Z",
+      "side": 1,
+      "message": "Default pivot was left when I removed this. So I\u0027m leaving it for pivotX.",
+      "parentUuid": "ba5201f7_b0d77822",
+      "revId": "fc21c4896e8901387db9774f553e1bf0b6865e35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba5201f7_90d27433",
         "filename": "res/anim/flip_out.xml",
         "patchSetId": 2
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "ba5201f7_30ff0836",
+        "filename": "res/anim/flip_out.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-10T05:46:13Z",
+      "side": 1,
+      "message": "Removing toYScale caused toYScale to mimic toXScale. Combined with removing pivotY, it caused an animation that flipped and slid toward the top.",
+      "parentUuid": "ba5201f7_90d27433",
+      "revId": "fc21c4896e8901387db9774f553e1bf0b6865e35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba5201f7_d0dcfc48",
         "filename": "res/drawable/ic_details.xml",
         "patchSetId": 2
@@ -81,6 +153,24 @@
       "writtenOn": "2015-06-10T04:53:36Z",
       "side": 1,
       "message": "the line wrap on this looks a little odd. should this be tabbed in?",
+      "revId": "fc21c4896e8901387db9774f553e1bf0b6865e35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba5201f7_908ef425",
+        "filename": "res/drawable/ic_details.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-10T05:46:13Z",
+      "side": 1,
+      "message": "Leaving as is for the moment.\nThis vector is a place holder, and a new one will be dropped in from design later.\nAlso, tabbing in causes issues when loading the vector.",
+      "parentUuid": "ba5201f7_d0dcfc48",
       "revId": "fc21c4896e8901387db9774f553e1bf0b6865e35",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
