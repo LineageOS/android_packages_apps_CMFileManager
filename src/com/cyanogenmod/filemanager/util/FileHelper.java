@@ -1179,6 +1179,12 @@ public final class FileHelper {
                     bos.close();
                 }
             } catch (Throwable e) {/**NON BLOCK**/}
+            try {
+                // delete the destination file if it exists since the operation failed
+                if (dst.exists()) {
+                    dst.delete();
+                }
+            } catch (Throwable e) {/**NON BLOCK**/}
         }
     }
 
