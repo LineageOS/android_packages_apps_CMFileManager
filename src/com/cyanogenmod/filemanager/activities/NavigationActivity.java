@@ -102,6 +102,7 @@ import com.cyanogenmod.filemanager.ui.dialogs.ActionsDialog;
 import com.cyanogenmod.filemanager.ui.dialogs.FilesystemInfoDialog;
 import com.cyanogenmod.filemanager.ui.dialogs.InitialDirectoryDialog;
 import com.cyanogenmod.filemanager.ui.dialogs.FilesystemInfoDialog.OnMountListener;
+import com.cyanogenmod.filemanager.ui.policy.CopyMoveActionPolicy;
 import com.cyanogenmod.filemanager.ui.widgets.Breadcrumb;
 import com.cyanogenmod.filemanager.ui.widgets.ButtonItem;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationCustomTitleView;
@@ -129,6 +130,7 @@ import java.util.Locale;
 import java.util.Map;
 
 import static com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory.*;
+import static com.cyanogenmod.filemanager.activities.PickerActivity.EXTRA_FOLDER_PATH;
 
 /**
  * The main navigation activity. This activity is the center of the application.
@@ -1945,6 +1947,42 @@ public class NavigationActivity extends Activity
                     // reset bookmarks list to default as the user could have set a
                     // new bookmark in the search activity
                     initBookmarks();
+                    break;
+
+                // Paste selection
+                case R.id.mnu_actions_paste_selection:
+                    if (resultCode == Activity.RESULT_OK) {
+                        Bundle extras = data.getExtras();
+                        String destination = extras.getString(EXTRA_FOLDER_PATH);
+                        List<FileSystemObject> selection =
+                                getCurrentNavigationView().onRequestSelectedFiles();
+                        if (!TextUtils.isEmpty(destination)) {
+                            CopyMoveActionPolicy.copyFileSystemObjects(
+                                    this,
+                                    selection,
+                                    destination,
+                                    getCurrentNavigationView(),
+                                    this);
+                        }
+                    }
+                    break;
+
+                // Move selection
+                case R.id.mnu_actions_move_selection:
+                    if (resultCode == Activity.RESULT_OK) {
+                        Bundle extras = data.getExtras();
+                        String destination = extras.getString(EXTRA_FOLDER_PATH);
+                        List<FileSystemObject> selection =
+                                getCurrentNavigationView().onRequestSelectedFiles();
+                        if (!TextUtils.isEmpty(destination)) {
+                            CopyMoveActionPolicy.moveFileSystemObjects(
+                                    this,
+                                    selection,
+                                    destination,
+                                    getCurrentNavigationView(),
+                                    this);
+                        }
+                    }
                     break;
 
                 default:
