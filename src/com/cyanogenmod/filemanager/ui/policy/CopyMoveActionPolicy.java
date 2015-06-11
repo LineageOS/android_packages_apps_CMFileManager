@@ -39,6 +39,7 @@ import com.cyanogenmod.filemanager.util.ExceptionUtil.OnRelaunchCommandResult;
 import com.cyanogenmod.filemanager.util.FileHelper;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,7 +47,6 @@ import java.util.List;
  * A class with the convenience methods for resolve copy/move related actions
  */
 public final class CopyMoveActionPolicy extends ActionsPolicy {
-
     private static final String TAG = CopyMoveActionPolicy.class.getSimpleName();
 
     /**
@@ -114,11 +114,15 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
         List<LinkedResource> files = new ArrayList<LinkedResource>(1);
         files.add(linkRes);
 
+        // Destination must have the same parent and it must be currentDirectory,
+        final String destination = onSelectionListener.onRequestCurrentDir();
+
         // Internal copy
         copyOrMoveFileSystemObjects(
                 ctx,
                 COPY_MOVE_OPERATION.RENAME,
                 files,
+                destination,
                 onSelectionListener,
                 onRequestRefreshListener);
     }
@@ -150,11 +154,24 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
         List<LinkedResource> files = new ArrayList<LinkedResource>(1);
         files.add(linkRes);
 
+        if (onSelectionListener == null) {
+            AlertDialog dialog =
+                    DialogHelper.createErrorDialog(ctx,
+                            R.string.error_title,
+                            R.string.msgs_illegal_argument);
+            DialogHelper.delegateDialogShow(ctx, dialog);
+            return;
+        }
+
+        // Destination must have the same parent and it must be currentDirectory,
+        final String destination = onSelectionListener.onRequestCurrentDir();
+
         // Internal copy
         copyOrMoveFileSystemObjects(
                 ctx,
                 COPY_MOVE_OPERATION.CREATE_COPY,
                 files,
+                destination,
                 onSelectionListener,
                 onRequestRefreshListener);
     }
@@ -172,11 +189,39 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             final List<LinkedResource> files,
             final OnSelectionListener onSelectionListener,
             final OnRequestRefreshListener onRequestRefreshListener) {
+        // Destination must have the same parent and it must be currentDirectory,
+        final String destination = onSelectionListener.onRequestCurrentDir();
+
         // Internal copy
         copyOrMoveFileSystemObjects(
                 ctx,
                 COPY_MOVE_OPERATION.COPY,
                 files,
+                destination,
+                onSelectionListener,
+                onRequestRefreshListener);
+    }
+
+    /**
+     * Method that copy an existing file system object.
+     *
+     * @param ctx The current context
+     * @param files The list of files to copy
+     * @param onSelectionListener The listener for obtain selection information (required)
+     * @param onRequestRefreshListener The listener for request a refresh (optional)
+     */
+    public static void copyFileSystemObjects(
+            final Context ctx,
+            final List<FileSystemObject> files,
+            final String destination,
+            final OnSelectionListener onSelectionListener,
+            final OnRequestRefreshListener onRequestRefreshListener) {
+        // Internal copy
+        copyOrMoveFileSystemObjects(
+                ctx,
+                COPY_MOVE_OPERATION.COPY,
+                createLinkedResource(files, destination),
+                destination,
                 onSelectionListener,
                 onRequestRefreshListener);
     }
@@ -191,14 +236,16 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
      */
     public static void moveFileSystemObjects(
             final Context ctx,
-            final List<LinkedResource> files,
+            final List<FileSystemObject> files,
+            final String destination,
             final OnSelectionListener onSelectionListener,
             final OnRequestRefreshListener onRequestRefreshListener) {
         // Internal move
         copyOrMoveFileSystemObjects(
                 ctx,
                 COPY_MOVE_OPERATION.MOVE,
-                files,
+                createLinkedResource(files, destination),
+                destination,
                 onSelectionListener,
                 onRequestRefreshListener);
     }
@@ -216,6 +263,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             final Context ctx,
             final COPY_MOVE_OPERATION operation,
             final List<LinkedResource> files,
+            final String destination,
             final OnSelectionListener onSelectionListener,
             final OnRequestRefreshListener onRequestRefreshListener) {
 
@@ -229,9 +277,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             DialogHelper.delegateDialogShow(ctx, dialog);
             return;
         }
-        // 2.- All the destination files must have the same parent and it must be currentDirectory,
-        // and not be null
-        final String currentDirectory = onSelectionListener.onRequestCurrentDir();
+
         int cc = files.size();
         for (int i = 0; i < cc; i++) {
             LinkedResource linkedRes = files.get(i);
@@ -244,7 +290,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                 return;
             }
             if (linkedRes.mDst.getParent() == null ||
-                linkedRes.mDst.getParent().compareTo(currentDirectory) != 0) {
+                linkedRes.mDst.getParent().compareTo(destination) != 0) {
                 AlertDialog dialog =
                         DialogHelper.createErrorDialog(ctx,
                                 R.string.error_title,
@@ -256,7 +302,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
         // 3.- Check the operation consistency
         if (operation.equals(COPY_MOVE_OPERATION.MOVE)
                 || operation.equals(COPY_MOVE_OPERATION.COPY)) {
-            if (!checkCopyOrMoveConsistency(ctx, files, currentDirectory, operation)) {
+            if (!checkCopyOrMoveConsistency(ctx, files, destination, operation)) {
                 return;
             }
         }
@@ -488,7 +534,12 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
         final BackgroundAsyncTask task = new BackgroundAsyncTask(ctx, callable);
 
         // Prior to execute, we need to check if some of the files will be overwritten
-        List<FileSystemObject> curFiles = onSelectionListener.onRequestCurrentItems();
+        List<FileSystemObject> curFiles = null;
+        try {
+            curFiles = CommandHelper.listFiles(ctx, destination, null);
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to get destiniation directory contents. Error=" + e);
+        }
         if (curFiles != null) {
             // Is necessary to ask the user?
             if (isOverwriteNeeded(files, curFiles)) {
@@ -517,6 +568,27 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
 
         // Execute background task
         task.execute(task);
+    }
+
+    /**
+     * Method that creates a {@link LinkedResource} for the list of object to the
+     * destination directory
+     *
+     * @param items The list of the source items
+     * @param directory The destination directory
+     */
+    private static List<LinkedResource> createLinkedResource(
+            List<FileSystemObject> items, String directory) {
+        List<LinkedResource> resources =
+                new ArrayList<LinkedResource>(items.size());
+        int cc = items.size();
+        for (int i = 0; i < cc; i++) {
+            FileSystemObject fso = items.get(i);
+            File src = new File(fso.getFullPath());
+            File dst = new File(directory, fso.getName());
+            resources.add(new LinkedResource(src, dst));
+        }
+        return resources;
     }
 
     /**

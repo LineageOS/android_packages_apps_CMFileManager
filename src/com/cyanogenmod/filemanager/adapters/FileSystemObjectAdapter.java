@@ -200,7 +200,6 @@ public class FileSystemObjectAdapter
     public View getView(int position, View convertView, ViewGroup parent) {
         //Check to reuse view
         View v = convertView;
-        Theme theme = ThemeManager.getCurrentTheme(getContext());
 
         if (v == null) {
             //Create the view holder
@@ -211,9 +210,13 @@ public class FileSystemObjectAdapter
             viewHolder.mIvIcon = (ImageView)v.findViewById(RESOURCE_ITEM_ICON);
             viewHolder.mTvName = (TextView)v.findViewById(RESOURCE_ITEM_NAME);
             viewHolder.mTvSummary = (TextView)v.findViewById(RESOURCE_ITEM_SUMMARY);
-            viewHolder.mBtInfo = (ImageButton)v.findViewById(RESOURCE_ITEM_INFO);
-            viewHolder.mIvIcon.setOnClickListener(this);
-            viewHolder.mBtInfo.setOnClickListener(this);
+            viewHolder.mBtInfo = (ImageButton) v.findViewById(RESOURCE_ITEM_INFO);
+            if (!mPickable) {
+                viewHolder.mIvIcon.setOnClickListener(this);
+                viewHolder.mBtInfo.setOnClickListener(this);
+            } else {
+                viewHolder.mBtInfo.setVisibility(View.GONE);
+            }
             v.setTag(viewHolder);
         }
 
@@ -229,22 +232,27 @@ public class FileSystemObjectAdapter
         }
 
         viewHolder.mTvName.setText(fso.getName());
-        theme.setTextColor(getContext(), viewHolder.mTvName, "text_color"); //$NON-NLS-1$
 
         if (viewHolder.mTvSummary != null) {
+            Resources res = getContext().getResources();
             StringBuilder sbSummary = new StringBuilder();
             if (fso instanceof ParentDirectory) {
-                sbSummary.append(getContext().getResources().getString(R.string.parent_dir));
+                sbSummary.append(res.getString(R.string.parent_dir));
             } else {
+                if (!FileHelper.isDirectory(fso)) {
+                    sbSummary.append(FileHelper.getHumanReadableSize(fso));
+                    sbSummary.append(" - "); //$NON-NLS-1$
+                }
                 sbSummary.append(
-                        FileHelper.formatFileTime(
-                                getContext(), fso.getLastModifiedTime()));
-                sbSummary.append("   "); //$NON-NLS-1$
-                sbSummary.append(fso.toRawPermissionString());
+                        FileHelper.getRelativeDateString(
+                                getContext(), fso.getLastModifiedTime().getTime(),
+                                DateUtils.SECOND_IN_MILLIS, DateUtils.WEEK_IN_MILLIS,
+                                DateUtils.FORMAT_ABBREV_MONTH | DateUtils.FORMAT_SHOW_DATE |
+                                        DateUtils.FORMAT_SHOW_YEAR));
             }
             viewHolder.mTvSummary.setText(sbSummary);
-            theme.setTextColor(getContext(), viewHolder.mTvSummary, "text_color"); //$NON-NLS-1$
         }
+
         if (!this.mPickable) {
             if (viewHolder.mBtInfo != null) {
                 viewHolder.mBtInfo.setVisibility(
