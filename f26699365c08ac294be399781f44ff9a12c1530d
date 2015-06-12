@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "5a3905b3_cddc6949",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1156,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-06-12T04:10:19Z",
+      "side": 1,
+      "message": "If you put the delete block in this catch block, I think that would do what we want.",
+      "revId": "f26699365c08ac294be399781f44ff9a12c1530d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3905b3_8dd26133",
         "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
         "patchSetId": 1
