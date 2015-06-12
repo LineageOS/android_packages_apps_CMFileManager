@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3905b3_2d516d63",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-06-12T06:33:13Z",
+      "side": 1,
+      "message": "LW",
+      "revId": "2364ce6c31ea1d51f23c72a34f46d912ff92ebbe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3905b3_4d4eb9c2",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-06-12T06:33:13Z",
+      "side": 1,
+      "message": "LW",
+      "revId": "2364ce6c31ea1d51f23c72a34f46d912ff92ebbe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
