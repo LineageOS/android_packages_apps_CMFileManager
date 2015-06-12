@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5a3905b3_8db981ef",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1156,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-06-12T04:34:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a3905b3_cddc6949",
+      "revId": "f26699365c08ac294be399781f44ff9a12c1530d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a3905b3_8dd26133",
         "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-06-12T04:09:14Z",
       "side": 1,
       "message": "Since this is in the finally block on the same try where the actual copy is completed, won\u0027t this always run? So, even on a successful copy where you return true above, you\u0027ll just delete the file. I believe finally is run even after a return statement [1]\n\n[1] http://stackoverflow.com/a/65049/815679",
+      "revId": "f26699365c08ac294be399781f44ff9a12c1530d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a3905b3_adbe3dd2",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1182,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-06-12T04:34:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a3905b3_8dd26133",
       "revId": "f26699365c08ac294be399781f44ff9a12c1530d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
