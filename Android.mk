@@ -17,33 +17,42 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
+LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
+	frameworks/support/design/res \
+    frameworks/support/v7/appcompat/res \
+    frameworks/support/v7/cardview/res \
+    external/uicommon/res
+
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 LOCAL_SRC_FILES += $(call all-java-files-under, libs/android-syntax-highlight/src)
 LOCAL_SRC_FILES += $(call all-java-files-under, libs/color-picker-view/src)
-
-uicommon_dir := ../../../external/uicommon
-
-LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
-        $(LOCAL_PATH)/$(uicommon_dir)/res
 
 LOCAL_AAPT_FLAGS := \
         --auto-add-overlay \
         --extra-packages com.cyngn.uicommon
 
+LOCAL_AAPT_FLAGS += --extra-packages android.support.design:android.support.v7.appcompat:android.support.v7.cardview
+
 LOCAL_STATIC_JAVA_LIBRARIES += libtruezip
-LOCAL_STATIC_JAVA_LIBRARIES += android-support-v4
 LOCAL_STATIC_JAVA_LIBRARIES += juniversalchardet
 LOCAL_STATIC_JAVA_LIBRARIES += uicommon
+LOCAL_STATIC_JAVA_LIBRARIES += android-support-v4
+LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-appcompat
+LOCAL_STATIC_JAVA_LIBRARIES += android-support-design
+LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-cardview
 
 LOCAL_PACKAGE_NAME := CMFileManager
 LOCAL_CERTIFICATE := platform
-LOCAL_PROGUARD_FLAG_FILES := proguard.flags
+#LOCAL_PROGUARD_FLAG_FILES := proguard.flags
+LOCAL_PROGUARD_ENABLED := disabled
+
+LOCAL_AAPT_FLAGS := --auto-add-overlay
 
 include $(BUILD_PACKAGE)
 include $(CLEAR_VARS)
 
 LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := \
-    juniversalchardet:libs/juniversalchardet/juniversalchardet-1.0.3.jar
+    juniversalchardet:libs/juniversalchardet/juniversalchardet-1.0.3.jar 
 
 include $(BUILD_MULTI_PREBUILT)
 include $(call all-makefiles-under,$(LOCAL_PATH))

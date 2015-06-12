@@ -37,7 +37,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cyanogenmod.filemanager.R;
-import com.cyanogenmod.filemanager.activities.NavigationActivity;
+import com.cyanogenmod.filemanager.activities.MainActivity;
 import com.cyanogenmod.filemanager.adapters.CheckableListAdapter;
 import com.cyanogenmod.filemanager.ui.ThemeManager;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
@@ -600,8 +600,8 @@ public final class DialogHelper {
         boolean isActivityFinishing = false;
         if (context instanceof Activity) {
             Activity activity = (Activity) context;
-            if (activity instanceof NavigationActivity) {
-                ((NavigationActivity) activity).updateActiveDialog(dialog);
+            if (activity instanceof MainActivity) {
+                ((MainActivity) activity).updateActiveDialog(dialog);
             }
             isActivityFinishing = activity.isFinishing();
         }
