@@ -165,6 +165,13 @@ public class SettingsPreferences extends PreferenceActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // in case of a locale change, invalidate the headers
+        invalidateHeaders();
+    }
+
     /**
      * Method that applies the current theme to the activity
      * @hide
