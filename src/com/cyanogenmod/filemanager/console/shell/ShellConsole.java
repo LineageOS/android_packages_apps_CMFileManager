@@ -1104,10 +1104,10 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
         final String str = stdin.toString();
         Pattern pattern = Pattern.compile(this.mStartControlPattern);
         Matcher matcher = pattern.matcher(str);
-        byte[] data = stdin.toByteArray();
         if (matcher.find()) {
+            byte[] data = str.substring(matcher.end()).getBytes();
             stdin.reset();
-            stdin.write(data, matcher.end(), data.length - matcher.end());
+            stdin.write(data, 0, data.length);
             return true;
         }
         return false;
@@ -1128,11 +1128,12 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
         boolean ret = matcher.find();
         // Remove partial
         if (ret && partial != null) {
-            matcher = pattern.matcher(partial.toString());
+            String str = partial.toString();
+            matcher = pattern.matcher(str);
             if (matcher.find()) {
-                byte[] data = partial.toByteArray();
+                byte[] data = str.substring(0, matcher.start()).getBytes();
                 partial.reset();
-                partial.write(data, 0, matcher.start());
+                partial.write(data, 0, data.length);
             }
         }
         return ret;
@@ -1163,12 +1164,13 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
 
         // Parse the stdin seeking exit code pattern
         Pattern pattern = Pattern.compile(this.mEndControlPattern);
-        Matcher matcher = pattern.matcher(stdin.toString());
+        String s = stdin.toString();
+        Matcher matcher = pattern.matcher(s);
         if (matcher.find()) {
             if (!async) {
-                byte[] data = stdin.toByteArray();
+                byte[] data = s.substring(0, matcher.start()).getBytes();
                 mSbIn.reset();
-                mSbIn.write(data, 0, matcher.start());
+                mSbIn.write(data, 0, data.length);
             }
             String exitTxt = matcher.group();
             return Integer.parseInt(
