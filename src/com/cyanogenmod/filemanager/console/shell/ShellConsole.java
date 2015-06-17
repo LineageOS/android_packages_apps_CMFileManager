@@ -1102,15 +1102,39 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
     boolean isCommandStarted(ByteArrayOutputStream stdin) {
         if (stdin == null) return false;
         final String str = stdin.toString();
-        Pattern pattern = Pattern.compile(this.mStartControlPattern);
-        Matcher matcher = pattern.matcher(str);
         byte[] data = stdin.toByteArray();
-        if (matcher.find()) {
+        final int[] match = findControlPattern(data, mStartControlPattern.getBytes());
+        if (match != null) {
             stdin.reset();
-            stdin.write(data, matcher.end(), data.length - matcher.end());
+            stdin.write(data, match[1], data.length - match[1]);
             return true;
         }
         return false;
+    }
+
+    private int[] findControlPattern(byte[] bytes, byte[] controlBytes) {
+        for (int i = 0; i < bytes.length; i++) {
+            boolean foundControlBytePattern = true;
+            int patternEnd = -1;
+            if (bytes[i] == controlBytes[0]) {
+
+                int start = i;
+                for (int j = start; j < controlBytes.length + start; j++) {
+                    if (bytes[j] != controlBytes[j-start]) {
+                        foundControlBytePattern = false;
+                    } else {
+                        patternEnd = j;
+                    }
+                    if (!foundControlBytePattern) {
+                        break;
+                    }
+                }
+                if (foundControlBytePattern) {
+                    return new int[] {start, patternEnd};
+                }
+            }
+        }
+        return null;
     }
 
     /**
@@ -1122,17 +1146,20 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
      * @hide
      */
     boolean isCommandFinished(ByteArrayOutputStream stdin, ByteArrayOutputStream partial) {
-        Pattern pattern = Pattern.compile(this.mEndControlPattern);
         if (stdin == null) return false;
-        Matcher matcher = pattern.matcher(stdin.toString());
-        boolean ret = matcher.find();
+
+        byte[] bytes = stdin.toByteArray();
+        int[] match = findControlPattern(bytes, mEndControlPattern.getBytes());
+
+        boolean ret = match != null;
         // Remove partial
         if (ret && partial != null) {
-            matcher = pattern.matcher(partial.toString());
-            if (matcher.find()) {
-                byte[] data = partial.toByteArray();
+            bytes = partial.toByteArray();
+            match = findControlPattern(bytes, mEndControlPattern.getBytes());
+
+            if (match != null) {
                 partial.reset();
-                partial.write(data, 0, matcher.start());
+                partial.write(bytes, 0, match[0]);
             }
         }
         return ret;
@@ -1161,16 +1188,17 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
             return 143;
         }
 
-        // Parse the stdin seeking exit code pattern
-        Pattern pattern = Pattern.compile(this.mEndControlPattern);
-        Matcher matcher = pattern.matcher(stdin.toString());
-        if (matcher.find()) {
+        byte[] bytes = stdin.toByteArray();
+        int[] match = findControlPattern(bytes, mEndControlPattern.getBytes());
+
+        if (match != null) {
             if (!async) {
-                byte[] data = stdin.toByteArray();
                 mSbIn.reset();
-                mSbIn.write(data, 0, matcher.start());
+                mSbIn.write(bytes, 0, match[0]);
             }
-            String exitTxt = matcher.group();
+            byte[] exitBytes = new byte[match[1] - match[0]];
+            System.arraycopy(bytes, match[0], exitBytes, 0, exitBytes.length);
+            String exitTxt = exitBytes.toString();
             return Integer.parseInt(
                     exitTxt.substring(
                             exitTxt.indexOf("#/") + 2,  //$NON-NLS-1$
