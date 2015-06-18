@@ -22,20 +22,27 @@ import android.app.Dialog;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 
 import com.cyanogenmod.filemanager.R;
+import com.cyanogenmod.filemanager.activities.preferences.SettingsPreferences;
 import com.cyanogenmod.filemanager.model.Bookmark;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
@@ -61,7 +68,8 @@ import java.util.List;
  * {@link Activity#onRestoreInstanceState(Bundle)} are not implemented, and every time
  * the app is killed, is restarted from his initial state.
  */
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -72,6 +80,11 @@ public class MainActivity extends ActionBarActivity {
     private static final String TAG_BOOKMARK = "bookmark"; //$NON-NLS-1$
 
     private static final String STR_USB = "usb"; // $NON-NLS-1$
+
+    /**
+     * Intent code for request a search.
+     */
+    public static final int INTENT_REQUEST_SETTINGS = 20001;
 
     /**
      * Constant for extra information about selected search entry.
@@ -110,9 +123,21 @@ public class MainActivity extends ActionBarActivity {
 
     static String MIME_TYPE_LOCALIZED_NAMES[];
 
-    public HomeFragment mHomeFragment;
-    public Toolbar mToolbar;
-    Fragment currentFragment;
+    int[][] color_states = new int[][] {
+            new int[] {android.R.attr.state_checked}, // checked
+            new int[0] // default
+    };
+
+    // TODO: Replace with legitimate colors per item.
+    int[] colors = new int[] {
+            R.color.favorites_primary,
+            Color.BLACK
+    };
+
+    private Toolbar mToolbar;
+    private Fragment currentFragment;
+    private DrawerLayout mDrawerLayout;
+    private NavigationView mNavigationDrawer;
 
     private static final int REQUEST_CODE_STORAGE_PERMS = 321;
     private boolean hasPermissions() {
@@ -222,6 +247,16 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void finishOnCreate() {
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mNavigationDrawer = (NavigationView) findViewById(R.id.navigation_view);
+        mNavigationDrawer.setNavigationItemSelectedListener(this);
+        ColorStateList colorStateList = new ColorStateList(color_states, colors);
+        // TODO: Figure out why the following doesn't work correctly...
+        mNavigationDrawer.setItemTextColor(colorStateList);
+        mNavigationDrawer.setItemIconTintList(colorStateList);
+
+        setCurrentFragment(FragmentType.HOME);
+
         //Initialize nfc adapter
         NfcAdapter mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
         if (mNfcAdapter != null) {
@@ -289,6 +324,58 @@ public class MainActivity extends ActionBarActivity {
         //stub
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public boolean onNavigationItemSelected(MenuItem menuItem) {
+        int id = menuItem.getItemId();
+        switch (id) {
+            case R.id.navigation_item_home:
+                if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_home");
+                setCurrentFragment(FragmentType.HOME);
+                break;
+            case R.id.navigation_item_favorites:
+                // TODO: Implement this path
+                if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_favorites");
+                break;
+            case R.id.navigation_item_internal:
+                if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_favorites");
+                setCurrentFragment(FragmentType.NAVIGATION);
+                break;
+            case R.id.navigation_item_root_d:
+                // TODO: Implement this path
+                if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_root_d");
+                break;
+            case R.id.navigation_item_sd_card:
+                // TODO: Implement this path
+                if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_sd_card");
+                break;
+            case R.id.navigation_item_usb:
+                // TODO: Implement this path
+                if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_usb");
+                break;
+            case R.id.navigation_item_protected:
+                // TODO: Implement this path
+                if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_protected");
+                break;
+            case R.id.navigation_item_manage:
+                // TODO: Implement this path
+                if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_manage");
+                break;
+            case R.id.navigation_item_settings:
+                if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_settings");
+                openSettings();
+                break;
+            default:
+                // TODO: Implement this path
+                if (DEBUG) Log.d(TAG, "onNavigationItemSelected::default");
+                setCurrentFragment(FragmentType.NAVIGATION); // Temporary...
+                break;
+        }
+        mDrawerLayout.closeDrawers();
+        return true;
+    }
 
     /**
      * Method invoked when an action item is clicked.
@@ -391,4 +478,14 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    /**
+     * Method that opens the settings activity.
+     *
+     * @hide
+     */
+    void openSettings() {
+        Intent settingsIntent = new Intent(MainActivity.this,
+                SettingsPreferences.class);
+        startActivityForResult(settingsIntent, INTENT_REQUEST_SETTINGS);
+    }
 }
