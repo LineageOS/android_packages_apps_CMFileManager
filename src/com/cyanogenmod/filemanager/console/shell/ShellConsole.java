@@ -59,6 +59,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.Locale;
 
 /**
  * An implementation of a {@link Console} based in the execution of shell commands.<br/>
@@ -483,13 +484,13 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
 
             //Random start/end identifiers
             String startId1 =
-                    String.format("/#%d#/", Long.valueOf(this.mRandom.nextLong())); //$NON-NLS-1$
+                    String.format(Locale.US, "/#%d#/", Long.valueOf(this.mRandom.nextLong())); //$NON-NLS-1$
             String startId2 =
-                    String.format("/#%d#/", Long.valueOf(this.mRandom.nextLong())); //$NON-NLS-1$
+                    String.format(Locale.US, "/#%d#/", Long.valueOf(this.mRandom.nextLong())); //$NON-NLS-1$
             String endId1 =
-                    String.format("/#%d#/", Long.valueOf(this.mRandom.nextLong())); //$NON-NLS-1$
+                    String.format(Locale.US, "/#%d#/", Long.valueOf(this.mRandom.nextLong())); //$NON-NLS-1$
             String endId2 =
-                    String.format("/#%d#/", Long.valueOf(this.mRandom.nextLong())); //$NON-NLS-1$
+                    String.format(Locale.US, "/#%d#/", Long.valueOf(this.mRandom.nextLong())); //$NON-NLS-1$
 
             //Create command string
             String cmd = program.getCommand();
