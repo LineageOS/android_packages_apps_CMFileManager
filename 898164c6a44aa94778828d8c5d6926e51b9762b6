@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba2be162_0ec4af90",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 10414
+      },
+      "writtenOn": "2015-06-20T17:07:01Z",
+      "side": 1,
+      "message": "endId2 \u003d\u003e mEndId2",
+      "range": {
+        "startLine": 131,
+        "startChar": 24,
+        "endLine": 131,
+        "endChar": 30
+      },
+      "revId": "898164c6a44aa94778828d8c5d6926e51b9762b6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba2be162_ae3ba39b",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 10414
+      },
+      "writtenOn": "2015-06-20T17:07:01Z",
+      "side": 1,
+      "message": "Suggestion: refactor this method to constructor and make ControlPatternInfo class immutable.",
+      "range": {
+        "startLine": 135,
+        "startChar": 20,
+        "endLine": 135,
+        "endChar": 33
+      },
+      "revId": "898164c6a44aa94778828d8c5d6926e51b9762b6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba2be162_8e36dfb2",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 1280,
+      "author": {
+        "id": 10414
+      },
+      "writtenOn": "2015-06-20T17:07:01Z",
+      "side": 1,
+      "message": "Instead of using substring here, which still defeated by the problem we want to fix here.\nUse\n  new String(bytes, match[0], match[1] - match[0])\nshould fix it.",
+      "range": {
+        "startLine": 1280,
+        "startChar": 36,
+        "endLine": 1280,
+        "endChar": 73
+      },
+      "revId": "898164c6a44aa94778828d8c5d6926e51b9762b6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba2be162_4ebea700",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 1280,
+      "author": {
+        "id": 10414
+      },
+      "writtenOn": "2015-06-20T17:07:01Z",
+      "side": 1,
+      "message": "Remove $NON-NLS-1$ annotation. Here are no string literals.",
+      "range": {
+        "startLine": 1280,
+        "startChar": 76,
+        "endLine": 1280,
+        "endChar": 89
+      },
+      "revId": "898164c6a44aa94778828d8c5d6926e51b9762b6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
