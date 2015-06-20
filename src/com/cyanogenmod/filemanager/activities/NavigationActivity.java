@@ -78,6 +78,7 @@ import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.VirtualConsole;
 import com.cyanogenmod.filemanager.console.VirtualMountPointConsole;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
+import com.cyanogenmod.filemanager.dialogs.SortViewOptions;
 import com.cyanogenmod.filemanager.listeners.OnHistoryListener;
 import com.cyanogenmod.filemanager.listeners.OnRequestRefreshListener;
 import com.cyanogenmod.filemanager.model.Bookmark;
@@ -1859,10 +1860,21 @@ public class NavigationActivity extends Activity
             //Navigation view options
             //######################
             case R.id.ab_sort_mode:
-                showSettingsPopUp(view,
-                        Arrays.asList(
-                                new FileManagerSettings[]{
-                                        FileManagerSettings.SETTINGS_SORT_MODE}));
+                final SortViewOptions sortViewOptions = (SortViewOptions) getLayoutInflater()
+                        .inflate(R.layout.sort_view_options, null);
+                AlertDialog dialog =  DialogHelper.createTwoButtonsDialog(this,
+                        R.string.ok, R.string.cancel, 0, getString(R.string.sort_options),
+                        sortViewOptions, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                if (which == DialogInterface.BUTTON_POSITIVE) {
+                                    updateSetting(FileManagerSettings.SETTINGS_SORT_MODE,
+                                            sortViewOptions.getSortId());
+                                }
+                            }
+                        });
+                dialog.show();
+
                 break;
             case R.id.ab_layout_mode:
                 showSettingsPopUp(view,
@@ -2094,6 +2106,55 @@ public class NavigationActivity extends Activity
     }
 
     /**
+     * Updates the {@link FileManagerSettings} to the value passed in and refreshes the view
+     *
+     * @param setting {@link FileManagerSettings} to modify
+     * @param value The value to set the setting to
+     */
+    private void updateSetting(FileManagerSettings setting, final int value) {
+        try {
+            if (setting.compareTo(FileManagerSettings.SETTINGS_LAYOUT_MODE) == 0) {
+                //Need to change the layout
+                getCurrentNavigationView().changeViewMode(
+                        NavigationLayoutMode.fromId(value));
+            } else {
+                //Save and refresh
+                if (setting.getDefaultValue() instanceof Enum<?>) {
+                    //Enumeration
+                    Preferences.savePreference(setting, new ObjectIdentifier() {
+                        @Override
+                        public int getId() {
+                            return value;
+                        }
+                    }, false);
+                } else {
+                    //Boolean
+                    boolean newval =
+                            Preferences.getSharedPreferences().
+                                    getBoolean(
+                                            setting.getId(),
+                                            ((Boolean)setting.getDefaultValue()).booleanValue());
+                    Preferences.savePreference(setting, Boolean.valueOf(!newval), false);
+                }
+                getCurrentNavigationView().refresh();
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error applying navigation option", e); //$NON-NLS-1$
+            NavigationActivity.this.mHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                    DialogHelper.showToast(
+                            NavigationActivity.this,
+                            R.string.msgs_settings_save_failure, Toast.LENGTH_SHORT);
+                }
+            });
+
+        } finally {
+            getCurrentNavigationView().getCustomTitle().restoreView();
+        }
+    }
+
+    /**
      * Method that shows a popup with a menu associated a {@link FileManagerSettings}.
      *
      * @param anchor The action button that was pressed
@@ -2112,48 +2173,8 @@ public class NavigationActivity extends Activity
                         ((MenuSettingsAdapter)parent.getAdapter()).getSetting(position);
                 final int value = ((MenuSettingsAdapter)parent.getAdapter()).getId(position);
                 popup.dismiss();
-                try {
-                    if (setting.compareTo(FileManagerSettings.SETTINGS_LAYOUT_MODE) == 0) {
-                        //Need to change the layout
-                        getCurrentNavigationView().changeViewMode(
-                                NavigationLayoutMode.fromId(value));
-                    } else {
-                        //Save and refresh
-                        if (setting.getDefaultValue() instanceof Enum<?>) {
-                            //Enumeration
-                            Preferences.savePreference(setting, new ObjectIdentifier() {
-                                @Override
-                                public int getId() {
-                                    return value;
-                                }
-                            }, false);
-                        } else {
-                            //Boolean
-                            boolean newval =
-                                    Preferences.getSharedPreferences().
-                                        getBoolean(
-                                            setting.getId(),
-                                            ((Boolean)setting.getDefaultValue()).booleanValue());
-                            Preferences.savePreference(setting, Boolean.valueOf(!newval), false);
-                        }
-                        getCurrentNavigationView().refresh();
-                    }
-                } catch (Exception e) {
-                    Log.e(TAG, "Error applying navigation option", e); //$NON-NLS-1$
-                    NavigationActivity.this.mHandler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            DialogHelper.showToast(
-                                    NavigationActivity.this,
-                                    R.string.msgs_settings_save_failure, Toast.LENGTH_SHORT);
-                        }
-                    });
-
-                } finally {
-                    adapter.dispose();
-                    getCurrentNavigationView().getCustomTitle().restoreView();
-                }
-
+                updateSetting(setting, value);
+                adapter.dispose();
             }
         });
         popup.setOnDismissListener(new PopupWindow.OnDismissListener() {
