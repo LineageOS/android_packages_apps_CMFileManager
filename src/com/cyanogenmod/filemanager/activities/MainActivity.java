@@ -17,8 +17,10 @@
 package com.cyanogenmod.filemanager.activities;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
@@ -38,6 +40,7 @@ import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.preferences.SettingsPreferences;
 import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
 import com.cyanogenmod.filemanager.controllers.NavigationDrawerController;
+import com.cyanogenmod.filemanager.dialogs.SortViewOptions;
 import com.cyanogenmod.filemanager.model.Bookmark;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
@@ -45,6 +48,7 @@ import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.ui.fragments.HomeFragment;
 import com.cyanogenmod.filemanager.ui.fragments.LoginFragment;
 import com.cyanogenmod.filemanager.ui.fragments.NavigationFragment;
+import com.cyanogenmod.filemanager.util.DialogHelper;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
 import com.cyanogenmod.filemanager.util.StorageHelper;
@@ -370,10 +374,20 @@ public class MainActivity extends ActionBarActivity
                 //Navigation view options
                 //######################
                 case com.cyanogenmod.filemanager.R.id.ab_sort_mode:
-                    ((NavigationFragment)currentFragment).showSettingsPopUp(view,
-                            java.util.Arrays.asList(
-                                    new FileManagerSettings[]{
-                                            FileManagerSettings.SETTINGS_SORT_MODE}));
+                    final SortViewOptions sortViewOptions = (SortViewOptions) getLayoutInflater()
+                            .inflate(R.layout.sort_view_options, null);
+                    AlertDialog dialog =  DialogHelper.createTwoButtonsDialog(this,
+                            R.string.ok, R.string.cancel, 0, getString(R.string.sort_options),
+                            sortViewOptions, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    if (which == DialogInterface.BUTTON_POSITIVE) {
+                                        ((NavigationFragment) currentFragment).updateSetting(
+                                                FileManagerSettings.SETTINGS_SORT_MODE, sortViewOptions.getSortId());
+                                    }
+                                }
+                            });
+                    dialog.show();
                     break;
                 case com.cyanogenmod.filemanager.R.id.ab_layout_mode:
                     ((NavigationFragment)currentFragment).showSettingsPopUp(view,
