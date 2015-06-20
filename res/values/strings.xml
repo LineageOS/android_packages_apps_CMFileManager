@@ -181,6 +181,13 @@
     <!-- ActionBar Buttons - Print -->
     <string name="actionbar_button_print_cd">Print</string>
 
+    <string name="sort_options">Sort options</string>
+    <string name="sort_by_name">Name</string>
+    <string name="sort_by_date">Date</string>
+    <string name="sort_by_size">Size</string>
+    <string name="sort_by_type">Type</string>
+    <string name="sort_by_asc">Ascending</string>
+    <string name="sort_by_desc">Descending</string>
     <!-- Navigation View - Sort - Sort by name (ascending) -->
     <string name="sort_by_name_asc">By name \u25B2</string>
     <!-- Navigation View - Sort - Sort by name (descending) -->

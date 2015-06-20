@@ -41,6 +41,9 @@
 
     <!-- A black color with some transparency -->
     <color name="black_transparent">#8a000000</color>
+
+    <color name="lighter_black">#42000000</color>
+    <color name="darker_black">#C9000000</color>
     <!-- A derivated blue from @color/material_palette_blue_primary with some transparency -->
     <color name="blue_transparent">#9933b5e5</color>
 

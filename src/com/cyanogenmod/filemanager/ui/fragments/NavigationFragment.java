@@ -87,6 +87,7 @@ import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.VirtualConsole;
 import com.cyanogenmod.filemanager.console.VirtualMountPointConsole;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
+import com.cyanogenmod.filemanager.dialogs.SortViewOptions;
 import com.cyanogenmod.filemanager.listeners.OnHistoryListener;
 import com.cyanogenmod.filemanager.listeners.OnRequestRefreshListener;
 import com.cyanogenmod.filemanager.model.Bookmark;
@@ -1886,6 +1887,55 @@ public class NavigationFragment extends Fragment
     }
 
     /**
+     * Updates the {@link FileManagerSettings} to the value passed in and refreshes the view
+     *
+     * @param setting {@link FileManagerSettings} to modify
+     * @param value The value to set the setting to
+     */
+    public void updateSetting(FileManagerSettings setting, final int value) {
+        try {
+            if (setting.compareTo(FileManagerSettings.SETTINGS_LAYOUT_MODE) == 0) {
+                //Need to change the layout
+                getCurrentNavigationView().changeViewMode(
+                        NavigationLayoutMode.fromId(value));
+            } else {
+                //Save and refresh
+                if (setting.getDefaultValue() instanceof Enum<?>) {
+                    //Enumeration
+                    Preferences.savePreference(setting, new ObjectIdentifier() {
+                        @Override
+                        public int getId() {
+                            return value;
+                        }
+                    }, false);
+                } else {
+                    //Boolean
+                    boolean newval =
+                            Preferences.getSharedPreferences().
+                                    getBoolean(
+                                            setting.getId(),
+                                            ((Boolean)setting.getDefaultValue()).booleanValue());
+                    Preferences.savePreference(setting, Boolean.valueOf(!newval), false);
+                }
+                getCurrentNavigationView().refresh();
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error applying navigation option", e); //$NON-NLS-1$
+            this.mHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                    DialogHelper.showToast(
+                            getActivity(),
+                            R.string.msgs_settings_save_failure, Toast.LENGTH_SHORT);
+                }
+            });
+
+        } finally {
+            getCurrentNavigationView().getCustomTitle().restoreView();
+        }
+    }
+
+    /**
      * Method that shows a popup with a menu associated a {@link FileManagerSettings}.
      *
      * @param anchor The action button that was pressed
@@ -1905,48 +1955,9 @@ public class NavigationFragment extends Fragment
                 final int value = ((MenuSettingsAdapter)parent.getAdapter()).getId(position);
                 mPopupWindow.dismiss();
                 mPopupWindow = null;
-                try {
-                    if (setting.compareTo(FileManagerSettings.SETTINGS_LAYOUT_MODE) == 0) {
-                        //Need to change the layout
-                        getCurrentNavigationView().changeViewMode(
-                                NavigationLayoutMode.fromId(value));
-                    } else {
-                        //Save and refresh
-                        if (setting.getDefaultValue() instanceof Enum<?>) {
-                            //Enumeration
-                            Preferences.savePreference(setting, new ObjectIdentifier() {
-                                @Override
-                                public int getId() {
-                                    return value;
-                                }
-                            }, false);
-                        } else {
-                            //Boolean
-                            boolean newval =
-                                    Preferences.getSharedPreferences().
-                                        getBoolean(
-                                            setting.getId(),
-                                            ((Boolean)setting.getDefaultValue()).booleanValue());
-                            Preferences.savePreference(setting, Boolean.valueOf(!newval), false);
-                        }
-                        getCurrentNavigationView().refresh();
-                    }
-                } catch (Exception e) {
-                    Log.e(TAG, "Error applying navigation option", e); //$NON-NLS-1$
-                    NavigationFragment.this.mHandler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            DialogHelper.showToast(
-                                    getActivity(),
-                                    R.string.msgs_settings_save_failure, Toast.LENGTH_SHORT);
-                        }
-                    });
-
-                } finally {
-                    adapter.dispose();
-                    getCurrentNavigationView().getCustomTitle().restoreView();
-                }
-
+ 
+                updateSetting(setting, value);
+                adapter.dispose();
             }
         });
         mPopupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
