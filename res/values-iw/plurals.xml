@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="one">תקייה <xliff:g id="folders">%1$d</xliff:g></item>
+    <item quantity="one">תיקייה <xliff:g id="folders">%1$d</xliff:g></item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> תקיות</item>
   </plurals>
   <plurals name="n_files">

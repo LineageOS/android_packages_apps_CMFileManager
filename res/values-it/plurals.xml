@@ -18,7 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> cartella</item>
-    <item quantity="other">1 cartella</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> cartelle</item>
   </plurals>
   <plurals name="n_files">
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> file</item>
@@ -26,7 +26,7 @@
   </plurals>
   <plurals name="search_found_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> elemento trovato</item>
-    <item quantity="other">1 elemento trovato</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> elementi trovati</item>
   </plurals>
   <plurals name="selection_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> cartella selezionata.</item>
