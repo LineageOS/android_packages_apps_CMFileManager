@@ -35,7 +35,13 @@
   <string name="actions_menu_delete">حذف</string>
   <string name="actions_menu_add_to_bookmarks">افزودن به نشانک‌ها</string>
   <string name="actions_menu_set_as_home">تنظیم به عنوان صفحه اصلی</string>
+  <string name="mime_unknown">ناشناخته</string>
+  <string name="pref_themes">مضامین</string>
+  <string name="pref_search_privacity_category">حریم خصوصی</string>
   <string name="pref_no_suggestions_desc">هنگام ویرایش فایل پیشنهادهای واژه‌نامه را نمایش نده</string>
+  <string name="pref_themes_selection_category">مضامین</string>
+  <string name="pref_themes_set_theme">تنظیم مضمون</string>
+  <string name="themes_author">سایانوژن‌مود</string>
   <string name="secure_storage_unlock_button">بازگشایی</string>
   <string name="secure_storage_delete_button">حذف</string>
   <string name="changelog_title">لیست تغییرات</string>
