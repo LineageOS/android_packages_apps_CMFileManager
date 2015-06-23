@@ -1236,7 +1236,11 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
 
             if (match != null) {
                 partial.reset();
-                partial.write(bytes, match[0], match[1]);
+                if (match.size() == 2) {
+                    partial.write(bytes, match[0], match[1]);
+                } else if (match.size() == 1) {
+                    partial.write(bytes, match[0]);
+                }
             }
         }
         return ret;
