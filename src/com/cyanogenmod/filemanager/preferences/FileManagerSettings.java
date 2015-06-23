@@ -134,8 +134,8 @@ public enum FileManagerSettings {
      * @hide
      */
     SETTINGS_SORT_SEARCH_RESULTS_MODE(
-            "cm_filemanager_sort_search_results_mode", //$NON-NLS-1$
-            SearchSortResultMode.RELEVANCE),
+            "cm_filemanager_sort_search_results_mode2", //$NON-NLS-1$
+            NavigationSortMode.SEARCH_RELEVANCE_DESC),
     /**
      * When to save the search terms
      * @hide

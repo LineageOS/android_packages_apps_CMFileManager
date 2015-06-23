@@ -36,9 +36,8 @@ import com.cyanogenmod.filemanager.preferences.AccessMode;
 import com.cyanogenmod.filemanager.preferences.DisplayRestrictions;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
 import com.cyanogenmod.filemanager.preferences.NavigationSortMode;
-import com.cyanogenmod.filemanager.preferences.ObjectStringIdentifier;
+import com.cyanogenmod.filemanager.preferences.ObjectIdentifier;
 import com.cyanogenmod.filemanager.preferences.Preferences;
-import com.cyanogenmod.filemanager.preferences.SearchSortResultMode;
 import com.cyanogenmod.filemanager.ui.IconHolder;
 import com.cyanogenmod.filemanager.ui.ThemeManager;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
@@ -125,7 +124,7 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
     private Handler mHandler;
     private boolean mInStreamingMode;
     private List<SearchResult> mNewItems = new ArrayList<SearchResult>();
-    private SearchSortResultMode mSearchSortResultMode;
+    private NavigationSortMode mSearchSortResultMode;
     private Comparator<SearchResult> mSearchResultComparator;
 
     private Runnable mParseNewResults = new Runnable() {
@@ -135,6 +134,14 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
             if (mInStreamingMode) {
                 mHandler.postDelayed(mParseNewResults, STREAMING_MODE_REFRESH_DELAY);
             }
+        }
+    };
+
+    private Runnable mSortResults = new Runnable() {
+        @Override
+        public void run() {
+            sortLists();
+            processData();
         }
     };
 
@@ -213,7 +220,12 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         if (this.mDisposed) {
             return;
         }
-        processData();
+        // determine the sort order of search results
+        if (setSortResultMode()) {
+            mHandler.post(mSortResults);
+        } else {
+            processData();
+        }
         super.notifyDataSetChanged();
     }
 
@@ -232,42 +244,61 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
 
         // TODO: maintain a sorted buffer and implement Merge of two sorted lists
         addAll(mNewItems);
-        sort(mSearchResultComparator);
         mOriginalList.addAll(mNewItems);    // cache files so enable mime type filtering later on
-        Collections.sort(mOriginalList, mSearchResultComparator);
+        sortLists();
 
         // reset buffer
         mNewItems.clear();
     }
 
+    public synchronized void sortLists() {
+        sort(mSearchResultComparator);
+        Collections.sort(mOriginalList, mSearchResultComparator);
+    }
+
     /**
      * Determine the sort order for Search Results
+     * @return true if the sort result mode has changed
      */
-    public void setSortResultMode() {
-        String defaultValue = ((ObjectStringIdentifier)FileManagerSettings.
+    public boolean setSortResultMode() {
+        int defaultValue = ((ObjectIdentifier)FileManagerSettings.
                 SETTINGS_SORT_SEARCH_RESULTS_MODE.getDefaultValue()).getId();
-        String currValue = Preferences.getSharedPreferences().getString(
+        final int currValue = Preferences.getSharedPreferences().getInt(
                 FileManagerSettings.SETTINGS_SORT_SEARCH_RESULTS_MODE.getId(),
                 defaultValue);
-        mSearchSortResultMode = SearchSortResultMode.fromId(currValue);
+        final NavigationSortMode currentSortMode = NavigationSortMode.fromId(currValue);
 
-        if (mSearchSortResultMode.compareTo(SearchSortResultMode.NAME) == 0) {
+        if (currentSortMode == mSearchSortResultMode) {
+            return false;
+        }
+
+        mSearchSortResultMode = currentSortMode;
+
+        if (mSearchSortResultMode.compareTo(NavigationSortMode.SEARCH_RELEVANCE_ASC) == 0
+                || mSearchSortResultMode.compareTo(NavigationSortMode.SEARCH_RELEVANCE_DESC) == 0) {
+            final boolean desc =
+                    mSearchSortResultMode.compareTo(NavigationSortMode.SEARCH_RELEVANCE_DESC) == 0;
+            mSearchResultComparator = new Comparator<SearchResult>() {
+                @Override
+                public int compare(SearchResult lhs, SearchResult rhs) {
+                    if (desc) {
+                        return lhs.compareTo(rhs);
+                    } else {
+                        return rhs.compareTo(lhs);
+                    }
+                }
+            };
+        } else {
             mSearchResultComparator = new Comparator<SearchResult>() {
                 @Override
                 public int compare(SearchResult lhs, SearchResult rhs) {
                     return FileHelper.doCompare(
-                            lhs.getFso(), rhs.getFso(), NavigationSortMode.NAME_ASC);
-                }
-            };
-
-        } else if (mSearchSortResultMode.compareTo(SearchSortResultMode.RELEVANCE) == 0) {
-            mSearchResultComparator = new Comparator<SearchResult>() {
-                @Override
-                public int compare(SearchResult lhs, SearchResult rhs) {
-                    return lhs.compareTo(rhs);
+                            lhs.getFso(), rhs.getFso(), currentSortMode);
                 }
             };
         }
+
+        return true;
     }
 
     /**
