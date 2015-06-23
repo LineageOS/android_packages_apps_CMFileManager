@@ -16,6 +16,7 @@
 package com.cyanogenmod.filemanager.dialogs;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -34,6 +35,7 @@ public class SortViewOptions extends LinearLayout {
     private int mSelectedTextColor;
     private int mUnselectedTextColor;
 
+    private IconGroup mGroupRelevance;
     private IconGroup mGroupABC;
     private IconGroup mGroupDate;
     private IconGroup mGroupSize;
@@ -43,6 +45,10 @@ public class SortViewOptions extends LinearLayout {
 
     private IconGroup[] mTopGroup;
     private IconGroup[] mBottomGroup;
+
+    public abstract static class OnClickListener {
+        public abstract void onClick(DialogInterface dialog, int which, int result);
+    };
 
     /**
      * Holds points to the different views and sort types for an icon group
@@ -105,17 +111,47 @@ public class SortViewOptions extends LinearLayout {
         mUnselectedTextColor = getResources().getColor(R.color.lighter_black);
     }
 
+    /**
+     * Sets the setting type of the dialog - this changes the options the user can choose from
+     * @param settingType {@link FileManagerSettings} type
+     */
+    public void setSettingType(FileManagerSettings settingType) {
+        if (settingType == FileManagerSettings.SETTINGS_SORT_MODE) {
+            mGroupRelevance.mGroup.setVisibility(View.GONE);
+        } else if (settingType == FileManagerSettings.SETTINGS_SORT_SEARCH_RESULTS_MODE) {
+            mGroupDate.mGroup.setVisibility(View.GONE);
+            mGroupSize.mGroup.setVisibility(View.GONE);
+        }  else {
+            throw new IllegalArgumentException("Unsupported setting type");
+        }
+
+        boolean ascending = true;
+        int defaultId = ((ObjectIdentifier) settingType.getDefaultValue()).getId();
+        int selected = Preferences.getSharedPreferences().getInt(settingType.getId(), defaultId);
+        NavigationSortMode selectedSortMode = NavigationSortMode.fromId(selected);
+
+        for (IconGroup ig : mTopGroup) {
+            if (ig.mAsc == selectedSortMode || ig.mDesc == selectedSortMode) {
+                ascending = (ig.mAsc == selectedSortMode);
+                ig.setSelected(true);
+                break;
+            }
+        }
+
+        if (ascending) {
+            mGroupAsc.setSelected(true);
+        } else {
+            mGroupDesc.setSelected(true);
+        }
+    }
+
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
 
-        boolean asc = true;
-        int defaultId = ((ObjectIdentifier) FileManagerSettings.SETTINGS_SORT_MODE
-                .getDefaultValue()).getId();
-        int selected = Preferences.getSharedPreferences()
-                .getInt(FileManagerSettings.SETTINGS_SORT_MODE.getId(), defaultId);
-        NavigationSortMode selectedSortMode = NavigationSortMode.fromId(selected);
-
+        mGroupRelevance = setupIcon(this, R.id.sort_item_relevance, R.drawable.ic_sort_relevance,
+                R.string.sort_by_relevance, NavigationSortMode.SEARCH_RELEVANCE_ASC,
+                NavigationSortMode.SEARCH_RELEVANCE_DESC);
         mGroupABC = setupIcon(this, R.id.sort_item_abc, R.drawable.ic_sort_abc,
                 R.string.sort_by_name, NavigationSortMode.NAME_ASC, NavigationSortMode.NAME_DESC);
         mGroupDate = setupIcon(this, R.id.sort_item_date, R.drawable.ic_sort_date,
@@ -126,6 +162,7 @@ public class SortViewOptions extends LinearLayout {
                 R.string.sort_by_type, NavigationSortMode.TYPE_ASC, NavigationSortMode.TYPE_DESC);
 
         mTopGroup = new IconGroup[] {
+                mGroupRelevance,
                 mGroupABC,
                 mGroupDate,
                 mGroupSize,
@@ -135,10 +172,6 @@ public class SortViewOptions extends LinearLayout {
         final GroupClickListener topClickListener = new GroupClickListener(mTopGroup);
         for (IconGroup ig : mTopGroup) {
             ig.mGroup.setOnClickListener(topClickListener);
-            if (ig.mAsc == selectedSortMode || ig.mDesc == selectedSortMode) {
-                asc = (ig.mAsc == selectedSortMode);
-                ig.setSelected(true);
-            }
         }
 
         mGroupAsc = setupIcon(this, R.id.sort_item_asc, R.drawable.ic_sort_asc,
@@ -155,8 +188,6 @@ public class SortViewOptions extends LinearLayout {
         for (IconGroup ig : mBottomGroup) {
             ig.mGroup.setOnClickListener(botClickListener);
         }
-
-        mBottomGroup[asc ? 0 : 1].setSelected(true);
     }
 
     private IconGroup setupIcon(View view, int groupId, int imageDrawableId, int textId,
