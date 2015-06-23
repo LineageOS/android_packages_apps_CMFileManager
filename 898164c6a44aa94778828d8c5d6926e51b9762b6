@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "7a25e98e_66f9ce4d",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 9045
+      },
+      "writtenOn": "2015-06-23T05:48:30Z",
+      "side": 1,
+      "message": "I purposefully made it mutable to use less memory allocations, since the pattern gets updated quite frequently.",
+      "parentUuid": "ba2be162_ae3ba39b",
+      "range": {
+        "startLine": 135,
+        "startChar": 20,
+        "endLine": 135,
+        "endChar": 33
+      },
+      "revId": "898164c6a44aa94778828d8c5d6926e51b9762b6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba2be162_8e36dfb2",
         "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
         "patchSetId": 4
