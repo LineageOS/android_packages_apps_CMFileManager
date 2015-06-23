@@ -52,7 +52,15 @@ public enum NavigationSortMode implements ObjectIdentifier {
     /**
      * That mode sorts objects by type (descending).
      */
-    TYPE_DESC(7);
+    TYPE_DESC(7),
+    /**
+     * Sort results by relevance (ascending) - only applies to Search
+     */
+    SEARCH_RELEVANCE_ASC(8),
+    /**
+     * Sort results by relevance (descending) - only applies to Search
+     */
+    SEARCH_RELEVANCE_DESC(9);
 
     private int mId;
 

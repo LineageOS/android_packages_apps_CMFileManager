@@ -26,6 +26,11 @@
         android:layout_gravity="center_horizontal"
         android:orientation="horizontal">
         <include
+            android:id="@+id/sort_item_relevance"
+            android:layout_width="64dp"
+            android:layout_height="80dp"
+            layout="@layout/sort_item" />
+        <include
             android:id="@+id/sort_item_abc"
             android:layout_width="64dp"
             android:layout_height="80dp"

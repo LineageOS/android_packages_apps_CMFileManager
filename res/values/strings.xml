@@ -186,6 +186,7 @@
     <string name="sort_by_date">Date</string>
     <string name="sort_by_size">Size</string>
     <string name="sort_by_type">Type</string>
+    <string name="sort_by_relevance">Relevance</string>
     <string name="sort_by_asc">Ascending</string>
     <string name="sort_by_desc">Descending</string>
     <!-- Navigation View - Sort - Sort by name (ascending) -->
@@ -204,6 +205,10 @@
     <string name="sort_by_type_asc">By type \u25B2</string>
     <!-- Navigation View - Sort - Sort by type (descending) -->
     <string name="sort_by_type_desc">By type \u25BC</string>
+    <!-- Search - Sort by relevance (ascending) -->
+    <string name="sort_by_relevance_asc">By relevance \u25B2</string>
+    <!-- Search - Sort by relevance (descending) -->
+    <string name="sort_by_relevance_desc">By relevance \u25BC</string>
 
     <!-- Navigation View - Layout - Icons -->
     <string name="layout_icons">Icons</string>
@@ -708,12 +713,6 @@
     <string name="pref_highlight_terms">Highlight search terms</string>
     <!-- Preferences - Search - Sort results mode -->
     <string name="pref_sort_search_results_mode">Sort results mode</string>
-    <!-- Preferences - Search - Sort results mode. None -->
-    <string name="pref_sort_search_results_mode_none">No sort</string>
-    <!-- Preferences - Search - Sort results mode. None -->
-    <string name="pref_sort_search_results_mode_name">By name</string>
-    <!-- Preferences - Search - Sort results mode. Relevance -->
-    <string name="pref_sort_search_results_mode_relevance">By relevance</string>
     <!-- Preferences - Search - Privacity category -->
     <string name="pref_search_privacity_category">Privacy</string>
     <!-- Preferences - Search - Save search terms -->

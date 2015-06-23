@@ -39,6 +39,8 @@ import android.widget.Toast;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.MainActivity;
 import com.cyanogenmod.filemanager.adapters.CheckableListAdapter;
+import com.cyanogenmod.filemanager.dialogs.SortViewOptions;
+import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
 import com.cyanogenmod.filemanager.ui.ThemeManager;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
 
@@ -638,4 +640,20 @@ public final class DialogHelper {
         showToast(context, context.getString(msgResourceId), duration);
     }
 
+    public static AlertDialog createSortDialog(Context context, FileManagerSettings setting,
+                                               final SortViewOptions.OnClickListener listener) {
+        LayoutInflater li =
+                (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        final SortViewOptions sortViewOptions = (SortViewOptions) li.inflate(
+                R.layout.sort_view_options, null);
+        sortViewOptions.setSettingType(setting);
+        return DialogHelper.createTwoButtonsDialog(context,
+                R.string.ok, R.string.cancel, 0, context.getString(R.string.sort_options),
+                sortViewOptions, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        listener.onClick(dialog, which, sortViewOptions.getSortId());
+                    }
+                });
+    }
 }

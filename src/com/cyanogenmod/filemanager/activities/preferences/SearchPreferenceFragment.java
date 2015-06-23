@@ -17,9 +17,9 @@
 package com.cyanogenmod.filemanager.activities.preferences;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
@@ -29,8 +29,9 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.cyanogenmod.filemanager.R;
+import com.cyanogenmod.filemanager.dialogs.SortViewOptions;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
-import com.cyanogenmod.filemanager.preferences.ObjectStringIdentifier;
+import com.cyanogenmod.filemanager.preferences.ObjectIdentifier;
 import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.providers.RecentSearchesContentProvider;
 import com.cyanogenmod.filemanager.util.DialogHelper;
@@ -50,7 +51,7 @@ public class SearchPreferenceFragment extends TitlePreferenceFragment {
 
     private SwitchPreference mHighlightTerms;
     private SwitchPreference mShowRelevanceWidget;
-    private ListPreference mSortSearchResultMode;
+    private Preference mSortSearchResultMode;
     private SwitchPreference mSaveSearchTerms;
     private Preference mRemoveSearchTerms;
 
@@ -83,10 +84,9 @@ public class SearchPreferenceFragment extends TitlePreferenceFragment {
             // Sort search result mode
             } else if (FileManagerSettings.SETTINGS_SORT_SEARCH_RESULTS_MODE.
                     getId().compareTo(key) == 0) {
-                int value = Integer.valueOf((String)newValue).intValue();
                 String[] summary = getResources().getStringArray(
                         R.array.sort_search_results_mode_labels);
-                preference.setSummary(summary[value]);
+                preference.setSummary(summary[(Integer)newValue]);
             }
 
             // Notify the change (only if fragment is loaded. Default values are loaded
@@ -148,16 +148,38 @@ public class SearchPreferenceFragment extends TitlePreferenceFragment {
         this.mShowRelevanceWidget.setOnPreferenceChangeListener(this.mOnChangeListener);
 
         // Sort search result mode
-        this.mSortSearchResultMode =
-                (ListPreference)findPreference(
+        this.mSortSearchResultMode = findPreference(
                         FileManagerSettings.SETTINGS_SORT_SEARCH_RESULTS_MODE.getId());
         this.mSortSearchResultMode.setOnPreferenceChangeListener(this.mOnChangeListener);
-        String defaultValue = ((ObjectStringIdentifier)FileManagerSettings.
-                                SETTINGS_SORT_SEARCH_RESULTS_MODE.getDefaultValue()).getId();
-        String value = Preferences.getSharedPreferences().getString(
-                                FileManagerSettings.SETTINGS_SORT_SEARCH_RESULTS_MODE.getId(),
-                                defaultValue);
+        int defaultValue = ((ObjectIdentifier)FileManagerSettings
+                .SETTINGS_SORT_SEARCH_RESULTS_MODE.getDefaultValue()).getId();
+        int value = Preferences.getSharedPreferences().getInt(
+                FileManagerSettings.SETTINGS_SORT_SEARCH_RESULTS_MODE.getId(),
+                defaultValue);
         this.mOnChangeListener.onPreferenceChange(this.mSortSearchResultMode, value);
+        this.mSortSearchResultMode.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                DialogHelper.createSortDialog(getActivity(),
+                    FileManagerSettings.SETTINGS_SORT_SEARCH_RESULTS_MODE,
+                    new SortViewOptions.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which, int result) {
+                            if (which == DialogInterface.BUTTON_POSITIVE) {
+                                mSortSearchResultMode.getEditor().putInt(
+                                        mSortSearchResultMode.getKey(), result)
+                                        .commit();
+
+                                mOnChangeListener.onPreferenceChange(mSortSearchResultMode,
+                                        result);
+                            }
+                        }
+                    })
+                    .show();
+
+                return true;
+            }
+        });
 
         // Saved search terms
         this.mSaveSearchTerms =
