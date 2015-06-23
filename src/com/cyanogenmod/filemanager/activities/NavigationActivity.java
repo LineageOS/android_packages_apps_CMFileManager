@@ -1860,21 +1860,18 @@ public class NavigationActivity extends Activity
             //Navigation view options
             //######################
             case R.id.ab_sort_mode:
-                final SortViewOptions sortViewOptions = (SortViewOptions) getLayoutInflater().inflate(R.layout
-                        .sort_view_options, null);
-                AlertDialog dialog =  DialogHelper.createTwoButtonsDialog(this,
-                        R.string.ok, R.string.cancel, 0, getString(R.string.sort_options),
-                        sortViewOptions, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                if (which == DialogInterface.BUTTON_POSITIVE) {
-                                    updateSetting(FileManagerSettings.SETTINGS_SORT_MODE,
-                                            sortViewOptions.getSortId());
-                                }
+                DialogHelper.createSortDialog(this,
+                    FileManagerSettings.SETTINGS_SORT_MODE,
+                    new SortViewOptions.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which, int result) {
+                            if (which == DialogInterface.BUTTON_POSITIVE) {
+                                updateSetting(FileManagerSettings.SETTINGS_SORT_MODE,
+                                        result);
                             }
-                        });
-                dialog.show();
-
+                        }
+                    })
+                    .show();
                 break;
             case R.id.ab_layout_mode:
                 showSettingsPopUp(view,
