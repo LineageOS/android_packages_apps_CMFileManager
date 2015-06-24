@@ -890,7 +890,6 @@
 
     <string name="activity_not_found_exception">Couldn\'t find an app to open this file</string>
 
-
     <string name="add_cloud_storage">Add cloud storage</string>
     <string name="add_cloud_storage_desc">Important files are a tap away when you link cloud storage to your device. Tap here to set up.</string>
     <string name="oobe_add_cloud_storage_desc">Important files are a tap away when you link cloud storage to your device.</string>
@@ -899,5 +898,5 @@
     <string name="manager">Manager</string>
     <string name="welcome_desc">Simple, powerful access to all your data from anywhere.</string>
 
-
+    <string name="safe_mode_not_allowed">Setting not available in safe mode</string>
 </resources>

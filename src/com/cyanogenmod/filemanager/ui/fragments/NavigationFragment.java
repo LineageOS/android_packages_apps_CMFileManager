@@ -70,6 +70,7 @@ import com.android.internal.util.XmlUtils;
 import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.SearchActivity;
+import com.cyanogenmod.filemanager.preferences.PreferenceHelper;
 import com.cyanogenmod.filemanager.activities.preferences.SettingsPreferences;
 import com.cyanogenmod.filemanager.adapters.MenuSettingsAdapter;
 import com.cyanogenmod.filemanager.console.Console;
@@ -242,9 +243,17 @@ public class NavigationFragment extends Fragment
                             return;
                         }
 
-                        // Case sensitive sort
+                        // Case sensitive sort, show dir first, show hidden, system, symlink files
                         if (key.compareTo(FileManagerSettings.
-                                SETTINGS_CASE_SENSITIVE_SORT.getId()) == 0) {
+                                SETTINGS_CASE_SENSITIVE_SORT.getId()) == 0
+                                || key.compareTo(FileManagerSettings.
+                                SETTINGS_SHOW_DIRS_FIRST.getId()) == 0
+                                || key.compareTo(FileManagerSettings.
+                                SETTINGS_SHOW_HIDDEN.getId()) == 0
+                                || key.compareTo(FileManagerSettings.
+                                SETTINGS_SHOW_SYSTEM.getId()) == 0
+                                || key.compareTo(FileManagerSettings.
+                                SETTINGS_SHOW_SYMLINKS.getId()) == 0) {
                             getCurrentNavigationView().refresh();
                             return;
                         }
