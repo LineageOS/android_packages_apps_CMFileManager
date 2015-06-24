@@ -50,9 +50,6 @@ public class GeneralPreferenceFragment extends TitlePreferenceFragment {
     private SwitchPreference mCaseSensitiveSort;
     private ListPreference mFiletimeFormatMode;
     private ListPreference mFreeDiskSpaceWarningLevel;
-    private SwitchPreference mComputeFolderStatistics;
-    private SwitchPreference mDisplayThumbs;
-    private SwitchPreference mUseFlinger;
     private ListPreference mAccessMode;
     private SwitchPreference mRestrictSecondaryUsersAccess;
     private SwitchPreference mDebugTraces;
@@ -132,6 +129,8 @@ public class GeneralPreferenceFragment extends TitlePreferenceFragment {
                 String[] summary = getResources().getStringArray(
                         R.array.access_mode_summaries);
                                     preference.setSummary(summary[valueId]);
+
+                updateAccessModePreferences(newMode.compareTo(AccessMode.SAFE) == 0);
             }
 
             // Restricted secondary users access
@@ -203,23 +202,20 @@ public class GeneralPreferenceFragment extends TitlePreferenceFragment {
         this.mOnChangeListener.onPreferenceChange(this.mFreeDiskSpaceWarningLevel, value);
         this.mFreeDiskSpaceWarningLevel.setOnPreferenceChangeListener(this.mOnChangeListener);
 
-        // Compute folder statistics
-        this.mComputeFolderStatistics =
-                (SwitchPreference)findPreference(
-                        FileManagerSettings.SETTINGS_COMPUTE_FOLDER_STATISTICS.getId());
-        this.mComputeFolderStatistics.setOnPreferenceChangeListener(this.mOnChangeListener);
+        FileManagerSettings[] switchSettings = new FileManagerSettings[] {
+                FileManagerSettings.SETTINGS_COMPUTE_FOLDER_STATISTICS,
+                FileManagerSettings.SETTINGS_DISPLAY_THUMBS,
+                FileManagerSettings.SETTINGS_USE_FLINGER,
+                FileManagerSettings.SETTINGS_SHOW_DIRS_FIRST,
+                FileManagerSettings.SETTINGS_SHOW_HIDDEN,
+                FileManagerSettings.SETTINGS_SHOW_SYSTEM,
+                FileManagerSettings.SETTINGS_SHOW_SYMLINKS,
+        };
 
-        // Display thumbs
-        this.mDisplayThumbs =
-                (SwitchPreference)findPreference(
-                        FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getId());
-        this.mDisplayThumbs.setOnPreferenceChangeListener(this.mOnChangeListener);
-
-        // Use flinger
-        this.mUseFlinger =
-                (SwitchPreference)findPreference(
-                        FileManagerSettings.SETTINGS_USE_FLINGER.getId());
-        this.mUseFlinger.setOnPreferenceChangeListener(this.mOnChangeListener);
+        for (FileManagerSettings switchSetting : switchSettings) {
+            findPreference(switchSetting.getId())
+                    .setOnPreferenceChangeListener(this.mOnChangeListener);
+        }
 
         // Access mode
         this.mAccessMode =
@@ -272,6 +268,17 @@ public class GeneralPreferenceFragment extends TitlePreferenceFragment {
             PreferenceCategory category = (PreferenceCategory) findPreference(
                     "general_advanced_settings");
             category.removePreference(mAccessMode);
+        }
+    }
+
+    private void updateAccessModePreferences(boolean safeMode) {
+        FileManagerSettings[] rootSettings = new FileManagerSettings[] {
+                FileManagerSettings.SETTINGS_SHOW_HIDDEN,
+                FileManagerSettings.SETTINGS_SHOW_SYSTEM,
+                FileManagerSettings.SETTINGS_SHOW_SYMLINKS,
+        };
+        for (FileManagerSettings setting : rootSettings) {
+            findPreference(setting.getId()).setEnabled(!safeMode);
         }
     }
 

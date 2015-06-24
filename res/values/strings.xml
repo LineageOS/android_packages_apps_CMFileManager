@@ -902,4 +902,6 @@
     <string name="file">File</string>
     <string name="manager">Manager</string>
     <string name="welcome_desc">Simple, powerful access to all your data from anywhere.</string>
+
+    <string name="safe_mode_not_allowed">Setting not available in safe mode</string>
 </resources>

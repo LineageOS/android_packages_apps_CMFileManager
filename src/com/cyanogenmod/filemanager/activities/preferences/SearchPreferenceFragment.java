@@ -160,7 +160,7 @@ public class SearchPreferenceFragment extends TitlePreferenceFragment {
         this.mSortSearchResultMode.setOnPreferenceClickListener(new OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                DialogHelper.createSortDialog(getActivity(),
+                SortViewOptions.createSortDialog(getActivity(),
                     FileManagerSettings.SETTINGS_SORT_SEARCH_RESULTS_MODE,
                     new SortViewOptions.OnClickListener() {
                         @Override

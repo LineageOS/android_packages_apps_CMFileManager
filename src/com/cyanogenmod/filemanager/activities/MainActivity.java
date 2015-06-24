@@ -49,6 +49,7 @@ import com.cyanogenmod.filemanager.dialogs.SortViewOptions;
 import com.cyanogenmod.filemanager.model.Bookmark;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
+import com.cyanogenmod.filemanager.preferences.PreferenceHelper;
 import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.ui.ThemeManager;
 import com.cyanogenmod.filemanager.ui.fragments.HomeFragment;
@@ -442,14 +443,17 @@ public class MainActivity extends ActionBarActivity
                 //Navigation view options
                 //######################
                 case com.cyanogenmod.filemanager.R.id.ab_sort_mode:
-                    DialogHelper.createSortDialog(this,
+                    SortViewOptions.createSortDialog(this,
                             FileManagerSettings.SETTINGS_SORT_MODE,
                             new SortViewOptions.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which, int result) {
                                     if (which == DialogInterface.BUTTON_POSITIVE) {
-                                        ((NavigationFragment) currentFragment).updateSetting(
-                                                FileManagerSettings.SETTINGS_SORT_MODE, result);
+                                        if (PreferenceHelper.getIntPreference(
+                                                FileManagerSettings.SETTINGS_SORT_MODE) != result) {
+                                            ((NavigationFragment) currentFragment).updateSetting(
+                                                    FileManagerSettings.SETTINGS_SORT_MODE, result);
+                                        }
                                     }
                                 }
                             })
