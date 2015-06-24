@@ -55,7 +55,6 @@ public class NavigationDrawerController
         implements ResultCallback<ProviderInfoListResult> {
     private static final String TAG = NavigationDrawerController.class.getSimpleName();
     private static boolean DEBUG = false;
-
     private static final String STR_USB = "usb"; // $NON-NLS-1$
 
     int[][] color_states = new int[][] {
@@ -73,6 +72,7 @@ public class NavigationDrawerController
     private NavigationView mNavigationDrawer;
     private Map<Integer, StorageProviderInfo> mProvidersMap;
     private Map<Integer, Bookmark> mStorageBookmarks;
+    public List<StorageProviderInfo> mProviderInfoList;
 
     public NavigationDrawerController(Context ctx, NavigationView navigationView) {
         mCtx = ctx;
@@ -88,15 +88,15 @@ public class NavigationDrawerController
 
     @Override
     public void onResult(StorageProviderInfo.ProviderInfoListResult providerInfoListResult) {
-        List<StorageProviderInfo> providerInfoList =
+        mProviderInfoList =
                 providerInfoListResult.getProviderInfoList();
-        if (providerInfoList == null) {
+        if (mProviderInfoList == null) {
             Log.e(TAG, "no results returned");
             return;
         }
-        if (DEBUG) Log.v(TAG, "got result(s)! " + providerInfoList.size());
+        if (DEBUG) Log.v(TAG, "got result(s)! " + mProviderInfoList.size());
         // TODO: Add to Navigation Drawer alphabetically
-        for (StorageProviderInfo providerInfo : providerInfoList) {
+        for (StorageProviderInfo providerInfo : mProviderInfoList) {
             StorageApi sapi = StorageApi.getInstance();
 
             if (!providerInfo.needAuthentication()) {
@@ -109,6 +109,11 @@ public class NavigationDrawerController
                 addProviderInfoItem(providerHashCode, providerInfo);
             }
         }
+    }
+
+
+    public List<StorageProviderInfo> getProviderList() {
+        return mProviderInfoList;
     }
 
     public void loadNavigationDrawerItems() {
