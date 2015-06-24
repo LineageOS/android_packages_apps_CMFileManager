@@ -16,6 +16,24 @@
       "revId": "696bba472e91438bab891e5d0eb0f4ee4866869d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_435978fc",
+        "filename": "res/xml/preferences_search.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 10394
+      },
+      "writtenOn": "2015-06-24T23:46:36Z",
+      "side": 1,
+      "message": "previously it was using a different sort values and they were all strings, but i changed it to use the same one as navigation sort mode which are ints",
+      "parentUuid": "bff0334d_a0727a10",
+      "revId": "696bba472e91438bab891e5d0eb0f4ee4866869d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
