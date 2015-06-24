@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "bff0334d_23d0b450",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 10394
+      },
+      "writtenOn": "2015-06-24T23:45:41Z",
+      "side": 1,
+      "message": "I was going to remove it, but it is actually currently being used in the sort settings option - until we remove it from that settings page we still need to keep these",
+      "parentUuid": "bff0334d_607d92e6",
+      "revId": "490c05d5ac3606198076d7536324207df666383e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bff0334d_40828eca",
         "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "bff0334d_03c5b08e",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1863,
+      "author": {
+        "id": 10394
+      },
+      "writtenOn": "2015-06-24T23:45:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bff0334d_40828eca",
+      "revId": "490c05d5ac3606198076d7536324207df666383e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bff0334d_20878ada",
         "filename": "src/com/cyanogenmod/filemanager/dialogs/SortViewOptions.java",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2015-06-24T19:34:49Z",
       "side": 1,
       "message": "whitespace",
+      "revId": "490c05d5ac3606198076d7536324207df666383e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_e3c1ac82",
+        "filename": "src/com/cyanogenmod/filemanager/dialogs/SortViewOptions.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 10394
+      },
+      "writtenOn": "2015-06-24T23:45:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bff0334d_20878ada",
       "revId": "490c05d5ac3606198076d7536324207df666383e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
