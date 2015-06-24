@@ -13,8 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
-<com.cyanogenmod.filemanager.dialogs.SortViewOptions
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:orientation="vertical"
@@ -68,5 +67,4 @@
             android:layout_height="80dp"
             layout="@layout/sort_item" />
     </LinearLayout>
-
-</com.cyanogenmod.filemanager.dialogs.SortViewOptions>
+</LinearLayout>
