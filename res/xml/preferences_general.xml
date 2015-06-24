@@ -72,6 +72,33 @@
         android:persistent="true"
         android:defaultValue="false" />
 
+      <SwitchPreference
+          android:key="cm_filemanager_show_dirs_first"
+          android:title="@string/cm_filemanager_show_dirs_first"
+          android:persistent="true"
+          android:defaultValue="true" />
+
+      <SwitchPreference
+          android:key="cm_filemanager_show_hidden"
+          android:title="@string/cm_filemanager_show_hidden"
+          android:summary="@string/safe_mode_not_allowed"
+          android:persistent="true"
+          android:defaultValue="true" />
+
+      <SwitchPreference
+          android:key="cm_filemanager_show_system"
+          android:title="@string/cm_filemanager_show_system"
+          android:summary="@string/safe_mode_not_allowed"
+          android:persistent="true"
+          android:defaultValue="true" />
+
+      <SwitchPreference
+          android:key="cm_filemanager_show_symlinks"
+          android:title="@string/cm_filemanager_show_symlinks"
+          android:summary="@string/safe_mode_not_allowed"
+          android:persistent="true"
+          android:defaultValue="true" />
+
     </PreferenceCategory>
 
     <!-- Advanced settings -->
