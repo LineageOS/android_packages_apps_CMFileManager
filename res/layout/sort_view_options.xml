@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.cyanogenmod.filemanager.dialogs.SortViewOptions
-    xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-              android:padding="12dp">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="12dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -55,4 +54,14 @@
             layout="@layout/sort_item" />
     </LinearLayout>
 
-</com.cyanogenmod.filemanager.dialogs.SortViewOptions>
+    <CheckBox
+        android:id="@+id/show_hidden"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="17dp"
+        android:paddingEnd="17dp"
+        android:theme="@android:style/Theme.Holo.Light"
+        android:text="@string/cm_filemanager_show_hidden" />
+
+</LinearLayout>
