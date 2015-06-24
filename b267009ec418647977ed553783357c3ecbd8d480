@@ -16,6 +16,24 @@
       "revId": "b267009ec418647977ed553783357c3ecbd8d480",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_23131410",
+        "filename": "src/com/cyanogenmod/filemanager/activities/preferences/PreferenceHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 10394
+      },
+      "writtenOn": "2015-06-24T23:47:52Z",
+      "side": 1,
+      "message": "damn it was too late - didn\u0027t even notice there is a normal preferences package - i\u0027ll move it there",
+      "parentUuid": "bff0334d_405bae86",
+      "revId": "b267009ec418647977ed553783357c3ecbd8d480",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
