@@ -15,22 +15,25 @@
  */
 package com.cyanogenmod.filemanager.dialogs;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
-import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
+import com.cyanogenmod.filemanager.preferences.PreferenceHelper;
+import com.cyanogenmod.filemanager.preferences.AccessMode;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
 import com.cyanogenmod.filemanager.preferences.NavigationSortMode;
-import com.cyanogenmod.filemanager.preferences.ObjectIdentifier;
-import com.cyanogenmod.filemanager.preferences.Preferences;
+import com.cyanogenmod.filemanager.util.DialogHelper;
 
-public class SortViewOptions extends LinearLayout {
+public class SortViewOptions {
     private Drawable mSelectedShape;
     private int mSelectedTextColor;
     private int mUnselectedTextColor;
@@ -45,6 +48,8 @@ public class SortViewOptions extends LinearLayout {
 
     private IconGroup[] mTopGroup;
     private IconGroup[] mBottomGroup;
+
+    private Context mContext;
 
     public abstract static class OnClickListener {
         public abstract void onClick(DialogInterface dialog, int which, int result);
@@ -94,28 +99,21 @@ public class SortViewOptions extends LinearLayout {
         }
     };
 
-    public SortViewOptions(Context context, AttributeSet attrs) {
-        super(context, attrs);
+    public SortViewOptions(Context ctx, View parent, FileManagerSettings settingType) {
+        mContext = ctx;
+        mSelectedShape = mContext.getResources().getDrawable(R.drawable.ic_sort_selector);
+        mSelectedTextColor = mContext.getResources().getColor(R.color.darker_black);
+        mUnselectedTextColor = mContext.getResources().getColor(R.color.lighter_black);
 
-        init();
-    }
-
-    public SortViewOptions(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        init();
-    }
-
-    private void init() {
-        mSelectedShape = getResources().getDrawable(R.drawable.ic_sort_selector);
-        mSelectedTextColor = getResources().getColor(R.color.darker_black);
-        mUnselectedTextColor = getResources().getColor(R.color.lighter_black);
+        init(parent);
+        setSettingType(settingType);
     }
 
     /**
      * Sets the setting type of the dialog - this changes the options the user can choose from
      * @param settingType {@link FileManagerSettings} type
      */
-    public void setSettingType(FileManagerSettings settingType) {
+    private void setSettingType(FileManagerSettings settingType) {
         if (settingType == FileManagerSettings.SETTINGS_SORT_MODE) {
             mGroupRelevance.mGroup.setVisibility(View.GONE);
         } else if (settingType == FileManagerSettings.SETTINGS_SORT_SEARCH_RESULTS_MODE) {
@@ -126,8 +124,7 @@ public class SortViewOptions extends LinearLayout {
         }
 
         boolean ascending = true;
-        int defaultId = ((ObjectIdentifier) settingType.getDefaultValue()).getId();
-        int selected = Preferences.getSharedPreferences().getInt(settingType.getId(), defaultId);
+        int selected = PreferenceHelper.getIntPreference(settingType);
         NavigationSortMode selectedSortMode = NavigationSortMode.fromId(selected);
 
         for (IconGroup ig : mTopGroup) {
@@ -145,20 +142,17 @@ public class SortViewOptions extends LinearLayout {
         }
     }
 
-    @Override
-    protected void onFinishInflate() {
-        super.onFinishInflate();
-
-        mGroupRelevance = setupIcon(this, R.id.sort_item_relevance, R.drawable.ic_sort_relevance,
+    private void init(View parent) {
+        mGroupRelevance = setupIcon(parent, R.id.sort_item_relevance, R.drawable.ic_sort_relevance,
                 R.string.sort_by_relevance, NavigationSortMode.SEARCH_RELEVANCE_ASC,
                 NavigationSortMode.SEARCH_RELEVANCE_DESC);
-        mGroupABC = setupIcon(this, R.id.sort_item_abc, R.drawable.ic_sort_abc,
+        mGroupABC = setupIcon(parent, R.id.sort_item_abc, R.drawable.ic_sort_abc,
                 R.string.sort_by_name, NavigationSortMode.NAME_ASC, NavigationSortMode.NAME_DESC);
-        mGroupDate = setupIcon(this, R.id.sort_item_date, R.drawable.ic_sort_date,
+        mGroupDate = setupIcon(parent, R.id.sort_item_date, R.drawable.ic_sort_date,
                 R.string.sort_by_date, NavigationSortMode.DATE_ASC, NavigationSortMode.DATE_DESC);
-        mGroupSize = setupIcon(this, R.id.sort_item_size, R.drawable.ic_sort_size,
+        mGroupSize = setupIcon(parent, R.id.sort_item_size, R.drawable.ic_sort_size,
                 R.string.sort_by_size, NavigationSortMode.SIZE_ASC, NavigationSortMode.SIZE_DESC);
-        mGroupType = setupIcon(this, R.id.sort_item_type, R.drawable.ic_sort_type,
+        mGroupType = setupIcon(parent, R.id.sort_item_type, R.drawable.ic_sort_type,
                 R.string.sort_by_type, NavigationSortMode.TYPE_ASC, NavigationSortMode.TYPE_DESC);
 
         mTopGroup = new IconGroup[] {
@@ -174,9 +168,9 @@ public class SortViewOptions extends LinearLayout {
             ig.mGroup.setOnClickListener(topClickListener);
         }
 
-        mGroupAsc = setupIcon(this, R.id.sort_item_asc, R.drawable.ic_sort_asc,
+        mGroupAsc = setupIcon(parent, R.id.sort_item_asc, R.drawable.ic_sort_asc,
                 R.string.sort_by_asc, null, null);
-        mGroupDesc = setupIcon(this, R.id.sort_item_desc, R.drawable.ic_sort_desc,
+        mGroupDesc = setupIcon(parent, R.id.sort_item_desc, R.drawable.ic_sort_desc,
                 R.string.sort_by_desc, null, null);
 
         mBottomGroup = new IconGroup[] {
@@ -197,8 +191,8 @@ public class SortViewOptions extends LinearLayout {
         iconGroup.mIcon = (ImageView)iconGroup.mGroup.findViewById(R.id.sort_item_icon);
         iconGroup.mText = (TextView)iconGroup.mGroup.findViewById(R.id.sort_item_title);
 
-        iconGroup.mIcon.setImageDrawable(getResources().getDrawable(imageDrawableId));
-        iconGroup.mText.setText(getResources().getString(textId));
+        iconGroup.mIcon.setImageDrawable(mContext.getResources().getDrawable(imageDrawableId));
+        iconGroup.mText.setText(mContext.getResources().getString(textId));
 
         iconGroup.mAsc = asc;
         iconGroup.mDesc = desc;
@@ -221,5 +215,21 @@ public class SortViewOptions extends LinearLayout {
         }
 
         return NavigationSortMode.NAME_ASC.getId();
+    }
+
+    public static AlertDialog createSortDialog(Context context, FileManagerSettings setting,
+                                               final SortViewOptions.OnClickListener listener) {
+        LayoutInflater li =
+                (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        final View layout = li.inflate(R.layout.sort_view_options, null);
+        final SortViewOptions sortViewOptions = new SortViewOptions(context, layout, setting);
+        return DialogHelper.createTwoButtonsDialog(context,
+                R.string.ok, R.string.cancel, 0, context.getString(R.string.sort_options),
+                layout, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        listener.onClick(dialog, which, sortViewOptions.getSortId());
+                    }
+                });
     }
 }
