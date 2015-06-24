@@ -41,4 +41,6 @@
     <integer name="default_underline_indicator_fade_length">400</integer>
     <integer name="default_title_indicator_line_position">0</integer>
 
+    <!-- Timeout used for waiting on Storage API to return document list -->
+    <integer name="storageapi_timeout">5000</integer>
 </resources>

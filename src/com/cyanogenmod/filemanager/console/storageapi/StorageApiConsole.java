@@ -17,6 +17,7 @@
 package com.cyanogenmod.filemanager.console.storageapi;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.Log;
 import com.cyanogen.ambient.storage.StorageApi;
 import com.cyanogen.ambient.storage.provider.StorageProviderInfo;
@@ -25,7 +26,17 @@ import com.cyanogenmod.filemanager.commands.Executable;
 import com.cyanogenmod.filemanager.commands.ExecutableFactory;
 import com.cyanogenmod.filemanager.commands.storageapi.Program;
 import com.cyanogenmod.filemanager.commands.storageapi.StorageApiExecutableFactory;
-import com.cyanogenmod.filemanager.console.*;
+import com.cyanogenmod.filemanager.console.AuthenticationFailedException;
+import com.cyanogenmod.filemanager.console.CancelledOperationException;
+import com.cyanogenmod.filemanager.console.CommandNotFoundException;
+import com.cyanogenmod.filemanager.console.ConsoleAllocException;
+import com.cyanogenmod.filemanager.console.ExecutionException;
+import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
+import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
+import com.cyanogenmod.filemanager.console.OperationTimeoutException;
+import com.cyanogenmod.filemanager.console.ReadOnlyFilesystemException;
+import com.cyanogenmod.filemanager.console.VirtualConsole;
+import com.cyanogenmod.filemanager.util.FileHelper;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -39,8 +50,12 @@ import java.util.List;
  */
 public class StorageApiConsole extends VirtualConsole {
     private static final String TAG = StorageApiConsole.class.getSimpleName();
+    private static final String PATH_SEPARATOR = "://";
 
     private static List<StorageApiConsole> sStorageApiConsoles;
+
+    private final StorageApi mStorageApi;
+    private final StorageProviderInfo mProviderInfo;
     private final int mBufferSize;
     private Program mActiveProgram;
 
@@ -49,8 +64,11 @@ public class StorageApiConsole extends VirtualConsole {
      *
      * @param ctx The current context
      */
-    public StorageApiConsole(Context ctx, int bufferSize) {
+    public StorageApiConsole(Context ctx, StorageApi storageApi, StorageProviderInfo providerInfo,
+            int bufferSize) {
         super(ctx);
+        mStorageApi = storageApi;
+        mProviderInfo = providerInfo;
         mBufferSize = bufferSize;
     }
 
@@ -60,6 +78,20 @@ public class StorageApiConsole extends VirtualConsole {
     @Override
     public String getName() {
         return "StorageApi";
+    }
+
+    /*
+     * Get StorageApi associated with this console.
+     */
+    public StorageApi getStorageApi() {
+        return mStorageApi;
+    }
+
+    /*
+     * Get StorageProviderInfo associated with this console.
+     */
+    public StorageProviderInfo getStorageProviderInfo() {
+        return mProviderInfo;
     }
 
     /**
@@ -147,6 +179,10 @@ public class StorageApiConsole extends VirtualConsole {
         return true;
     }
 
+    public int getProviderHash() {
+        return StorageApiConsole.getHashCodeFromProvider(mProviderInfo);
+    }
+
     /**
      * Method that register a storage api console. This method should
      * be called only once per storage api on instantiation.
@@ -169,7 +205,7 @@ public class StorageApiConsole extends VirtualConsole {
 
         // Register new storage api console
         StorageApiConsole console =
-                new StorageApiConsole(context, bufferSize);
+                new StorageApiConsole(context, storageApi, providerInfo, bufferSize);
         sStorageApiConsoles.add(console);
         return console;
     }
@@ -182,13 +218,82 @@ public class StorageApiConsole extends VirtualConsole {
      * @return VirtualMountPointConsole The found console
      */
     public static StorageApiConsole getStorageApiConsoleForPath(String path) {
-        File file = new File(path);
-        for (StorageApiConsole console : sStorageApiConsoles) {
-            // TODO: Implement this
-            //if (FileHelper.belongsToDirectory(file, console.getMountPoint())) {
-            //    return console;
-            //}
+        int hashCode = getHashCodeFromStorageApiPath(path);
+
+        if (hashCode == -1) {
+            return null;
         }
+
+        return getConsoleForHashCode(hashCode);
+    }
+
+    /**
+     * Returns a hash code for this Storage Provider
+     * @param storageProviderInfo
+     * @return
+     */
+    public static int getHashCodeFromProvider(StorageProviderInfo storageProviderInfo) {
+        String rootTitle = String.format("%s %s", storageProviderInfo.getTitle(),
+                storageProviderInfo.getSummary());
+
+        return rootTitle.hashCode();
+    }
+
+    /**
+     * Returns the StorageApiConsole from sStorageApiConsoles that matches this hash
+     * @param hashCode to match against to get the correct StorageApiConsole
+     */
+    public static StorageApiConsole getConsoleForHashCode (int hashCode) {
+        for (StorageApiConsole console : sStorageApiConsoles) {
+            if (console.getProviderHash() == hashCode) {
+                return console;
+            }
+        }
+
         return null;
+    }
+
+    /**
+     * All paths for StorageApi Providers are prefixed with their hash and the
+     * {@link StorageApiConsole#PATH_SEPARATOR}. This helper method constructs this prefix.
+     * @param hashCode
+     */
+    public static String constructStorageApiPrefixFromHash(int hashCode) {
+        return Integer.valueOf(hashCode) + PATH_SEPARATOR;
+    }
+
+    /**
+     * All paths for StorageApi Providers are prefixed with their hash and the
+     * {@link StorageApiConsole#PATH_SEPARATOR}. This helper method constructs a full path
+     * with the Provider prefix and the Provider relative path.
+     * @param path
+     * @param hashCode
+     */
+    public static String constructStorageApiFilePathFromProvider(String path, int hashCode) {
+        return Integer.valueOf(hashCode) + PATH_SEPARATOR + path;
+    }
+
+    /**
+     * Helper method to return the hash code from a full path containing a Provider prefix
+     * @param fullPath
+     */
+    public static int getHashCodeFromStorageApiPath(String fullPath) {
+        if (fullPath.contains(PATH_SEPARATOR)) {
+            return Integer.valueOf(fullPath.substring(0, fullPath.indexOf(PATH_SEPARATOR)));
+        } else {
+            return -1;
+        }
+    }
+
+    /**
+     * Helper method to return the Provider relative path from the full path
+     * @param fullPath
+     */
+    public static String getProviderPathFromFullPath(String fullPath) {
+        if (fullPath.contains(PATH_SEPARATOR)) {
+            return fullPath.substring(fullPath.indexOf(PATH_SEPARATOR) + PATH_SEPARATOR.length());
+        } else {
+            return null;
+        }
     }
 }
