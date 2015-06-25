@@ -146,7 +146,6 @@ public class MainActivity extends ActionBarActivity
         NavigationView navigationDrawer = (NavigationView) findViewById(R.id.navigation_view);
         navigationDrawer.setNavigationItemSelectedListener(this);
         mNavigationDrawerController = new NavigationDrawerController(this, navigationDrawer);
-        mNavigationDrawerController.loadNavigationDrawerItems();
 
         MIME_TYPE_LOCALIZED_NAMES = MimeTypeCategory.getFriendlyLocalizedNames(this);
 
@@ -233,6 +232,12 @@ public class MainActivity extends ActionBarActivity
     @Override
     protected void onNewIntent(Intent intent) {
         //stub
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mNavigationDrawerController.loadNavigationDrawerItems();
     }
 
     /**

@@ -115,7 +115,6 @@ public class LoginFragment extends Fragment implements
             // logout
             // TODO: at some point this will apparently be in the storage area of the Settings
         }
-
     }
 
     public void updateAccountList() {
