@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "bff0334d_86754e9b",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-25T05:25:01Z",
+      "side": 1,
+      "message": "noooope",
+      "revId": "abb39b7f49016f582b19a67655c94ba7c728d332",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_667a4a89",
+        "filename": "res/drawable/rectangle.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-25T05:25:01Z",
+      "side": 1,
+      "message": "indentation",
+      "revId": "abb39b7f49016f582b19a67655c94ba7c728d332",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bff0334d_26744299",
         "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
         "patchSetId": 7
@@ -13,6 +47,57 @@
       "writtenOn": "2015-06-25T05:20:05Z",
       "side": 1,
       "message": "wat",
+      "revId": "abb39b7f49016f582b19a67655c94ba7c728d332",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_869aeec2",
+        "filename": "src/com/cyanogenmod/filemanager/activities/WelcomeActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-25T05:25:01Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "abb39b7f49016f582b19a67655c94ba7c728d332",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_06aedee6",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/HomeFragment.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-25T05:25:01Z",
+      "side": 1,
+      "message": "what",
+      "revId": "abb39b7f49016f582b19a67655c94ba7c728d332",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_c6b7d63a",
+        "filename": "src/com/cyanogenmod/filemanager/views/CirclePageIndicator.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-25T05:25:01Z",
+      "side": 1,
+      "message": "LW... but this isn\u0027t your code.",
       "revId": "abb39b7f49016f582b19a67655c94ba7c728d332",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
