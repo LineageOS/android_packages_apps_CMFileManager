@@ -22,35 +22,26 @@
         android:id="@+id/navigation_group_home">
         <item android:id="@+id/navigation_item_home"
             android:icon="@drawable/ic_home"
-            android:title="Home"
-            android:checked="true" />
+            android:title="@string/navigation_item_title_home" />
         <item android:id="@+id/navigation_item_favorites"
             android:icon="@drawable/ic_favorite_on"
-            android:title="Favorites"
+            android:title="@string/navigation_item_title_favorites"
             android:visible="false" /> <!-- hidden until wired up -->
     </group>
+
     <group
         android:checkableBehavior="none"
         android:id="@+id/navigation_group_roots">
-        <!-- TODO: Replace with dynamically created roots -->
         <item android:id="@+id/navigation_item_internal"
             android:icon="@drawable/ic_source_internal"
-            android:title="Local storage" />
+            android:title="@string/navigation_item_title_local" />
         <item android:id="@+id/navigation_item_root_d"
             android:icon="@drawable/ic_source_root_d"
-            android:title="Root directory"
-            android:visible="false" /> <!-- hidden until wired up -->
-        <item android:id="@+id/navigation_item_sd_card"
-            android:icon="@drawable/ic_source_sd_card"
-            android:title="SD card"
-            android:visible="false" /> <!-- hidden until wired up -->
-        <item android:id="@+id/navigation_item_usb"
-            android:icon="@drawable/ic_source_usb"
-            android:title="USB storage"
-            android:visible="false" /> <!-- hidden until wired up -->
+            android:title="@string/navigation_item_title_root"
+            android:visible="false" />
         <item android:id="@+id/navigation_item_protected"
             android:icon="@drawable/ic_source_protected"
-            android:title="Protected storage"
+            android:title="@string/navigation_item_title_protected"
             android:orderInCategory="@integer/navigation_item_order_after_roots"
             android:visible="false" /> <!-- hidden until wired up -->
     </group>
@@ -60,12 +51,12 @@
         android:id="@+id/navigation_group_settings">
         <item android:id="@+id/navigation_item_manage"
             android:icon="@drawable/ic_storage_sources"
-            android:title="Manage storage sources"
+            android:title="@string/navigation_item_title_manage"
             android:orderInCategory="@integer/navigation_item_order_after_roots"
             android:visible="false" /> <!-- hidden until wired up -->
         <item android:id="@+id/navigation_item_settings"
             android:icon="@drawable/ic_settings"
-            android:title="Settings"
+            android:title="@string/navigation_item_title_settings"
             android:orderInCategory="@integer/navigation_item_order_after_roots" />
     </group>
 </menu>
