@@ -29,6 +29,9 @@
     <!-- The virtual storage directory (virtual filesystem are listed here) -->
     <string name="virtual_storage_dir" translatable="false">/storage</string>
 
+    <!-- The internal (local) storage directory -->
+    <string name="local_storage_path" translatable="false">/storage/emulated/0</string>
+
     <!-- The shell commands used by this application. All of this commands should
          exist to allow the use of a shell console (and access to root). If any
          of this commands are not present in the system, then app will start in

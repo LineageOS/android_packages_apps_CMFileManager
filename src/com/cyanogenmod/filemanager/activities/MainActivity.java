@@ -25,12 +25,15 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.storage.StorageVolume;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import com.cyanogenmod.filemanager.FileManagerApplication;
@@ -45,19 +48,26 @@ import com.cyanogenmod.filemanager.console.ConsoleHolder;
 import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
 import com.cyanogenmod.filemanager.model.Bookmark;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
+import com.cyanogenmod.filemanager.preferences.AccessMode;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
 import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.ui.fragments.HomeFragment;
 import com.cyanogenmod.filemanager.ui.fragments.NavigationFragment;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
+import com.cyanogenmod.filemanager.util.StorageHelper;
 
 import java.io.File;
 import java.io.InvalidClassException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
+
+import static com.cyanogenmod.filemanager.model.Bookmark.BOOKMARK_TYPE.SDCARD;
+import static com.cyanogenmod.filemanager.model.Bookmark.BOOKMARK_TYPE.SECURE;
+import static com.cyanogenmod.filemanager.model.Bookmark.BOOKMARK_TYPE.USB;
 
 /**
  * The main navigation activity. This activity is the center of the application.
@@ -143,6 +153,7 @@ public class MainActivity extends ActionBarActivity
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationDrawer;
     private Map<Integer, StorageProviderInfo> mProvidersMap;
+    private Map<Integer, Bookmark> mStorageBookmarks;
 
     /**
      * {@inheritDoc}
@@ -154,6 +165,9 @@ public class MainActivity extends ActionBarActivity
         //Set the main layout of the activity
         setContentView(R.layout.navigation);
 
+        mProvidersMap = new HashMap<Integer, StorageProviderInfo>();
+        mStorageBookmarks = new HashMap<Integer, Bookmark>();
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mNavigationDrawer = (NavigationView) findViewById(R.id.navigation_view);
         mNavigationDrawer.setNavigationItemSelectedListener(this);
@@ -161,20 +175,11 @@ public class MainActivity extends ActionBarActivity
         // TODO: Figure out why the following doesn't work correctly...
         mNavigationDrawer.setItemTextColor(colorStateList);
         mNavigationDrawer.setItemIconTintList(colorStateList);
+        loadNavigationDrawerItems();
 
         MIME_TYPE_LOCALIZED_NAMES = MimeTypeCategory.getFriendlyLocalizedNames(this);
 
         showWelcomeMsg();
-
-        /*
-         * TEST CODE
-         * TODO: MOVE SOMEWHERE MORE LEGITIMATE
-         */
-        mProvidersMap = new HashMap<Integer, StorageProviderInfo>();
-        StorageApi storageApi = StorageApi.getInstance();
-        PendingResult<StorageProviderInfo.ProviderInfoListResult> pendingResult =
-                storageApi.fetchProviders(this);
-        pendingResult.setResultCallback(this);
 
         setCurrentFragment(FragmentType.HOME);
 
@@ -250,11 +255,11 @@ public class MainActivity extends ActionBarActivity
      */
     @Override
     public boolean onNavigationItemSelected(MenuItem menuItem) {
+        menuItem.setChecked(false);
         int id = menuItem.getItemId();
         switch (id) {
             case R.id.navigation_item_home:
                 if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_home");
-                getIntent().putExtra(EXTRA_NAVIGATE_TO, FileHelper.ROOT_DIRECTORY);
                 setCurrentFragment(FragmentType.HOME);
                 break;
             case R.id.navigation_item_favorites:
@@ -263,20 +268,13 @@ public class MainActivity extends ActionBarActivity
                 break;
             case R.id.navigation_item_internal:
                 if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_favorites");
-                getIntent().putExtra(EXTRA_NAVIGATE_TO, FileHelper.ROOT_DIRECTORY);
+                getIntent().putExtra(EXTRA_NAVIGATE_TO, StorageHelper.getLocalStoragePath(this));
                 setCurrentFragment(FragmentType.NAVIGATION);
                 break;
             case R.id.navigation_item_root_d:
-                // TODO: Implement this path
                 if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_root_d");
-                break;
-            case R.id.navigation_item_sd_card:
-                // TODO: Implement this path
-                if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_sd_card");
-                break;
-            case R.id.navigation_item_usb:
-                // TODO: Implement this path
-                if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_usb");
+                getIntent().putExtra(EXTRA_NAVIGATE_TO, FileHelper.ROOT_DIRECTORY);
+                setCurrentFragment(FragmentType.NAVIGATION);
                 break;
             case R.id.navigation_item_protected:
                 // TODO: Implement this path
@@ -292,13 +290,29 @@ public class MainActivity extends ActionBarActivity
                 break;
             default:
                 if (DEBUG) Log.d(TAG, String.format("onNavigationItemSelected::default (%d)", id));
-                // Check for item id in remote roots
-                StorageProviderInfo providerInfo = mProvidersMap.get(id);
-                getIntent().putExtra(EXTRA_NAVIGATE_TO,
-                        StorageApiConsole.constructStorageApiFilePathFromProvider(
+                String path = null;
+                // Check for item id in storage bookmarks
+                Bookmark bookmark = mStorageBookmarks.get(id);
+                if (bookmark != null) {
+                    path = bookmark.getPath();
+                } else {
+                    // Check for item id in remote roots
+                    StorageProviderInfo providerInfo = mProvidersMap.get(id);
+
+                    if (providerInfo != null) {
+                        path = StorageApiConsole.constructStorageApiFilePathFromProvider(
                                 providerInfo.getRootDocumentId(),
-                                StorageApiConsole.getHashCodeFromProvider(providerInfo)));
-                setCurrentFragment(FragmentType.NAVIGATION);
+                                StorageApiConsole.getHashCodeFromProvider(providerInfo));
+                    }
+                }
+
+                if (!TextUtils.isEmpty(path)) {
+                    // Check for item id in remote roots
+                    getIntent().putExtra(EXTRA_NAVIGATE_TO, path);
+                    setCurrentFragment(FragmentType.NAVIGATION);
+                } else {
+                    return false;
+                }
                 break;
         }
         mDrawerLayout.closeDrawers();
@@ -314,24 +328,38 @@ public class MainActivity extends ActionBarActivity
             return;
         }
         if (DEBUG) Log.v(TAG, "got result(s)! " + providerInfoList.size());
+        // TODO: Add to Navigation Drawer alphabetically
         for (StorageProviderInfo providerInfo : providerInfoList) {
             StorageApi sapi = StorageApi.getInstance();
 
-            // Add provider to map
-            int providerHashCode = StorageApiConsole.getHashCodeFromProvider(providerInfo);
-            mProvidersMap.put(providerHashCode, providerInfo);
+            if (!providerInfo.needAuthentication()) {
+                // Add provider to map
+                int providerHashCode = StorageApiConsole.getHashCodeFromProvider(providerInfo);
+                mProvidersMap.put(providerHashCode, providerInfo);
 
-            // Verify console exists, or create one
-            StorageApiConsole.registerStorageApiConsole(this, sapi, providerInfo);
+                // Verify console exists, or create one
+                StorageApiConsole.registerStorageApiConsole(this, sapi, providerInfo);
 
-            // Concatenate title and summary
-            // TODO: Change to two line menu items
-            String title = providerInfo.getTitle() + " " + providerInfo.getSummary();
+                // Concatenate title and summary
+                // TODO: Change to two line menu items
+                String title = providerInfo.getTitle() + " " + providerInfo.getSummary();
 
-            // Add to navigation drawer
-            mNavigationDrawer.getMenu()
-                    .add(R.id.navigation_group_roots, providerHashCode, 0, title)
-                    .setIcon(R.drawable.ic_fso_folder);
+                // Add to navigation drawer
+                addMenuItemToDrawer(providerHashCode, title, R.drawable.ic_remote_drawable);
+            }
+        }
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == INTENT_REQUEST_SETTINGS) {
+            // reset bookmarks list to default as the user could changed the
+            // root mode which changes the system bookmarks
+            loadNavigationDrawerItems();
+            return;
         }
     }
 
@@ -433,6 +461,106 @@ public class MainActivity extends ActionBarActivity
                 default:
                     break;
             }
+        }
+    }
+
+    private void loadNavigationDrawerItems() {
+        // clear current special nav drawer items
+        removeAllDynamicMenuItemsFromDrawer();
+
+        // Show/hide root
+        boolean showRoot = FileManagerApplication.getAccessMode().compareTo(AccessMode.SAFE) != 0;
+        mNavigationDrawer.getMenu().findItem(R.id.navigation_item_root_d).setVisible(showRoot);
+
+        loadExternalStorageItems();
+        StorageApi storageApi = StorageApi.getInstance();
+        PendingResult<StorageProviderInfo.ProviderInfoListResult> pendingResult =
+                storageApi.fetchProviders(this);
+        pendingResult.setResultCallback(this);
+    }
+
+    /**
+     * Method that loads the secure digital card and usb storage menu items from the system.
+     *
+     * @return List<MenuItem> The storage items to be displayed
+     */
+    private void loadExternalStorageItems() {
+        List<Bookmark> sdBookmarks = new ArrayList<Bookmark>();
+        List<Bookmark> usbBookmarks = new ArrayList<Bookmark>();
+
+        try {
+            // Recovery sdcards and usb from storage manager
+            StorageVolume[] volumes =
+                    StorageHelper.getStorageVolumes(getApplication(), true);
+            for (StorageVolume volume: volumes) {
+                if (volume != null) {
+                    String mountedState = volume.getState();
+                    String path = volume.getPath();
+                    if (!Environment.MEDIA_MOUNTED.equalsIgnoreCase(mountedState) &&
+                            !Environment.MEDIA_MOUNTED_READ_ONLY.equalsIgnoreCase(mountedState)) {
+                        if (DEBUG) {
+                            Log.w(TAG, "Ignoring '" + path + "' with state of '"
+                                    + mountedState + "'");
+                        }
+                        continue;
+                    }
+                    if (!TextUtils.isEmpty(path)) {
+                        String lowerPath = path.toLowerCase(Locale.ROOT);
+                        Bookmark bookmark;
+                        if (lowerPath.contains(STR_USB)) {
+                            usbBookmarks.add(new Bookmark(USB, StorageHelper
+                                    .getStorageVolumeDescription(getApplication(),
+                                            volume), path));
+                        } else {
+                            sdBookmarks.add(new Bookmark(SDCARD, StorageHelper
+                                    .getStorageVolumeDescription(getApplication(),
+                                            volume), path));
+                        }
+                    }
+                }
+            }
+
+            // preoad this.
+            String localStorage = getResources().getString(R.string.local_storage_path);
+
+            // Load the bookmarks
+            for (Bookmark b : sdBookmarks) {
+                if (TextUtils.equals(b.getPath(), localStorage)) continue;
+                int hash = b.hashCode();
+                addMenuItemToDrawer(hash, b.getName(), R.drawable.ic_sdcard_drawable);
+                mStorageBookmarks.put(hash, b);
+            }
+            for (Bookmark b : usbBookmarks) {
+                int hash = b.hashCode();
+                addMenuItemToDrawer(hash, b.getName(), R.drawable.ic_usb_drawable);
+                mStorageBookmarks.put(hash, b);
+            }
+        }
+        catch (Throwable ex) {
+            Log.e(TAG, "Load filesystem bookmarks failed", ex); //$NON-NLS-1$
+        }
+    }
+
+    private void addMenuItemToDrawer(int hash, String title, int iconDrawable) {
+        if (mNavigationDrawer.getMenu().findItem(hash) == null) {
+            mNavigationDrawer.getMenu()
+                    .add(R.id.navigation_group_roots, hash, 0, title)
+                    .setIcon(iconDrawable);
+        }
+    }
+
+    private void removeMenuItemFromDrawer(int hash) {
+        mNavigationDrawer.getMenu().removeItem(hash);
+    }
+
+    private void removeAllDynamicMenuItemsFromDrawer() {
+        for (int key : mStorageBookmarks.keySet()) {
+            removeMenuItemFromDrawer(key);
+            mStorageBookmarks.remove(key);
+        }
+        for (int key : mProvidersMap.keySet()) {
+            removeMenuItemFromDrawer(key);
+            mProvidersMap.remove(key);
         }
     }
 
