@@ -38,7 +38,6 @@ import java.util.Locale;
 import java.util.Map;
 
 import static com.cyanogenmod.filemanager.model.Bookmark.BOOKMARK_TYPE.SDCARD;
-import static com.cyanogenmod.filemanager.model.Bookmark.BOOKMARK_TYPE.SECURE;
 import static com.cyanogenmod.filemanager.model.Bookmark.BOOKMARK_TYPE.USB;
 
 /**
@@ -164,8 +163,9 @@ public class NavigationDrawerController {
     public void removeAllDynamicMenuItemsFromDrawer() {
         for (int key : mStorageBookmarks.keySet()) {
             removeMenuItemFromDrawer(key);
-            mStorageBookmarks.remove(key);
         }
+        // reset hashmaps
+        mStorageBookmarks.clear();
     }
 
     public Bookmark getBookmarkFromMenuItem(int key) {

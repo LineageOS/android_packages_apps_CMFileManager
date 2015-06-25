@@ -22,7 +22,7 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.ImageView;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.adapters.WelcomeAdapter;
 import com.cyanogenmod.filemanager.views.CirclePageIndicator;
@@ -38,9 +38,10 @@ public class WelcomeActivity extends Activity {
 
     private static boolean DEBUG = false;
 
-    Button nextButton;
+    ImageView mNextButton;
     ViewPager vp;
     WelcomeAdapter adapter;
+    ImageView mPrevButton;
 
     /**
      * {@inheritDoc}
@@ -55,15 +56,15 @@ public class WelcomeActivity extends Activity {
 
         adapter = new WelcomeAdapter();
         vp = (ViewPager) findViewById(R.id.intro_pager);
-        nextButton = (Button) findViewById(R.id.nextButton);
+        mNextButton = (ImageView) findViewById(R.id.nextButton);
         PageIndicator indicator = (CirclePageIndicator)findViewById(R.id.pagination);
-        Button skipButton = (Button) findViewById(R.id.skipButton);
+        mPrevButton = (ImageView) findViewById(R.id.prevButton);
 
-        endButton(skipButton);
         vp.setAdapter(adapter);
         vp.setOffscreenPageLimit(3);
 
         indicator.setViewPager(vp);
+
         pagePrepare(vp.getCurrentItem());
 
         indicator.setOnPageChangeListener(new OnPageChangeListener() {
@@ -85,7 +86,7 @@ public class WelcomeActivity extends Activity {
         super.onCreate(state);
     }
 
-    private void endButton(Button b) {
+    private void endButton(ImageView b) {
         b.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,18 +94,31 @@ public class WelcomeActivity extends Activity {
             }
         });
     }
+
     private void pagePrepare(int currentPage) {
         int maxCount = adapter.getCount();
         if (maxCount == currentPage + 1) {
-            nextButton.setText("Done");
-            endButton(nextButton);
+            mNextButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_oobe_finish));
+            endButton(mNextButton);
         } else {
-            nextButton.setText("Next");
-            nextButton.setOnClickListener(new OnClickListener() {
+            mNextButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_oobe_forward));
+            mNextButton.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     int current = vp.getCurrentItem();
                     vp.setCurrentItem(current + 1);
+                }
+            });
+        }
+        if (currentPage == 0) {
+            mPrevButton.setVisibility(View.INVISIBLE);
+        } else {
+            mPrevButton.setVisibility(View.VISIBLE);
+            mPrevButton.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int current = vp.getCurrentItem();
+                    vp.setCurrentItem(current - 1);
                 }
             });
         }
