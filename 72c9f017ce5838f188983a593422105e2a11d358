@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bff0334d_a6bbb20c",
+        "filename": "res/drawable/rectangle.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2015-06-25T07:24:29Z",
+      "side": 1,
+      "message": "Oo",
+      "revId": "72c9f017ce5838f188983a593422105e2a11d358",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_e6c1ba82",
+        "filename": "res/layout/welcome.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2015-06-25T07:24:29Z",
+      "side": 1,
+      "message": "2012?",
+      "revId": "72c9f017ce5838f188983a593422105e2a11d358",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_26d0c250",
+        "filename": "res/values/bool.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2015-06-25T07:24:29Z",
+      "side": 1,
+      "message": "wrong year",
+      "revId": "72c9f017ce5838f188983a593422105e2a11d358",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
