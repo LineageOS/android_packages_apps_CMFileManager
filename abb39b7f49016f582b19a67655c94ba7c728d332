@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bff0334d_26744299",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2015-06-25T05:20:05Z",
+      "side": 1,
+      "message": "wat",
+      "revId": "abb39b7f49016f582b19a67655c94ba7c728d332",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
