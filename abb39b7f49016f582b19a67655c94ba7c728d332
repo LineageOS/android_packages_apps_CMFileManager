@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "bff0334d_86d1ce5a",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-06-25T05:42:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bff0334d_86754e9b",
+      "revId": "abb39b7f49016f582b19a67655c94ba7c728d332",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bff0334d_667a4a89",
         "filename": "res/drawable/rectangle.xml",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2015-06-25T05:25:01Z",
       "side": 1,
       "message": "indentation",
+      "revId": "abb39b7f49016f582b19a67655c94ba7c728d332",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_66d6ca52",
+        "filename": "res/drawable/rectangle.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-06-25T05:42:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bff0334d_667a4a89",
       "revId": "abb39b7f49016f582b19a67655c94ba7c728d332",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "bff0334d_46cbc6a4",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-06-25T05:42:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bff0334d_26744299",
+      "revId": "abb39b7f49016f582b19a67655c94ba7c728d332",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bff0334d_869aeec2",
         "filename": "src/com/cyanogenmod/filemanager/activities/WelcomeActivity.java",
         "patchSetId": 7
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "bff0334d_06c5be8e",
+        "filename": "src/com/cyanogenmod/filemanager/activities/WelcomeActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-06-25T05:42:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bff0334d_869aeec2",
+      "revId": "abb39b7f49016f582b19a67655c94ba7c728d332",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bff0334d_06aedee6",
         "filename": "src/com/cyanogenmod/filemanager/ui/fragments/HomeFragment.java",
         "patchSetId": 7
@@ -81,6 +153,24 @@
       "writtenOn": "2015-06-25T05:25:01Z",
       "side": 1,
       "message": "what",
+      "revId": "abb39b7f49016f582b19a67655c94ba7c728d332",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_c6beb6fe",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/HomeFragment.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-06-25T05:42:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bff0334d_06aedee6",
       "revId": "abb39b7f49016f582b19a67655c94ba7c728d332",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
