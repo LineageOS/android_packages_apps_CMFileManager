@@ -195,7 +195,7 @@ public class StorageApiConsole extends VirtualConsole {
             return null;
         }
         if (storageApi == null) {
-            storageApi = StorageApi.newInstance(context);
+            storageApi = StorageApi.getInstance();
         }
         if (sStorageApiConsoles == null) {
             sStorageApiConsoles = new ArrayList<StorageApiConsole>();

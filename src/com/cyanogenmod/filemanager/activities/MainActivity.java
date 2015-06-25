@@ -171,7 +171,7 @@ public class MainActivity extends ActionBarActivity
          * TODO: MOVE SOMEWHERE MORE LEGITIMATE
          */
         mProvidersMap = new HashMap<Integer, StorageProviderInfo>();
-        StorageApi storageApi = StorageApi.newInstance(MainActivity.this);
+        StorageApi storageApi = StorageApi.getInstance();
         PendingResult<StorageProviderInfo.ProviderInfoListResult> pendingResult =
                 storageApi.fetchProviders(this);
         pendingResult.setResultCallback(this);
@@ -315,7 +315,7 @@ public class MainActivity extends ActionBarActivity
         }
         if (DEBUG) Log.v(TAG, "got result(s)! " + providerInfoList.size());
         for (StorageProviderInfo providerInfo : providerInfoList) {
-            StorageApi sapi = StorageApi.newInstance(MainActivity.this);
+            StorageApi sapi = StorageApi.getInstance();
 
             // Add provider to map
             int providerHashCode = StorageApiConsole.getHashCodeFromProvider(providerInfo);
