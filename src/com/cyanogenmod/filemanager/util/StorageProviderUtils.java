@@ -26,6 +26,8 @@ import android.graphics.drawable.Drawable;
  */
 public final class StorageProviderUtils {
 
+    public static final String CACHE_DIR = ".storage-provider-files";
+
     private static final String TAG = StorageProviderUtils.class.getSimpleName();
 
     /**
