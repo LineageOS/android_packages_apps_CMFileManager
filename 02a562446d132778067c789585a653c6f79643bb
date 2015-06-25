@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bff0334d_269d6259",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-06-25T07:41:47Z",
+      "side": 1,
+      "message": "extra whitespace",
+      "revId": "02a562446d132778067c789585a653c6f79643bb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_06a25e9b",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-06-25T07:41:47Z",
+      "side": 1,
+      "message": "There\u0027s an overloaded method that we recently exposed in the api that sets the resultCallback in the \"fetchProviders\" call. Lets use that to make sure we don\u0027t miss the call back.",
+      "revId": "02a562446d132778067c789585a653c6f79643bb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_e69e5a53",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-06-25T07:41:47Z",
+      "side": 1,
+      "message": "Remove this or hide this behind a debug check",
+      "revId": "02a562446d132778067c789585a653c6f79643bb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
