@@ -387,6 +387,21 @@
     <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
     <string name="bookmarks_msgs_add_exists">The bookmark already exists.</string>
 
+    <!-- Navigation Drawer Item Titles - Home -->
+    <string name="navigation_item_title_home">Home</string>
+    <!-- Navigation Drawer Item Titles - Favorites -->
+    <string name="navigation_item_title_favorites">Favorites</string>
+    <!-- Navigation Drawer Item Titles - Local storage -->
+    <string name="navigation_item_title_local">Local storage</string>
+    <!-- Navigation Drawer Item Titles - Root directory -->
+    <string name="navigation_item_title_root">Root directory</string>
+    <!-- Navigation Drawer Item Titles - protected -->
+    <string name="navigation_item_title_protected">Protected storage</string>
+    <!-- Navigation Drawer Item Titles - Manage storage sources -->
+    <string name="navigation_item_title_manage">Manage storage sources</string>
+    <!-- Navigation Drawer Item Titles - Settings -->
+    <string name="navigation_item_title_settings">Settings</string>
+
     <!-- Initial directory dialog title -->
     <string name="initial_directory_dialog_title">Initial folder</string>
     <!-- Initial directory label -->

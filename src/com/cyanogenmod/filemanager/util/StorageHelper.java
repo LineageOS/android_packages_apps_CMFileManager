@@ -186,4 +186,14 @@ public final class StorageHelper {
         return null;
     }
 
+    public static String getLocalStoragePath(Context ctx) {
+        String path = null;
+        StorageVolume[] volumes =
+                StorageHelper.getStorageVolumes(ctx, false);
+        if (volumes != null && volumes.length > 0) {
+            //Ensure that initial directory is an absolute directory
+            path = FileHelper.getAbsPath(volumes[0].getPath());
+        }
+        return path;
+    }
 }

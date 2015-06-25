@@ -261,4 +261,11 @@ public class Bookmark implements Serializable, Comparable<Bookmark>, Parcelable 
                 ", path=" + this.mPath + "]"; //$NON-NLS-1$//$NON-NLS-2$
     }
 
+    public String getName() {
+        return mName;
+    }
+
+    public String getPath() {
+        return mPath;
+    }
 }
