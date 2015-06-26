@@ -19,10 +19,12 @@ package com.cyanogenmod.filemanager.ui.fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -66,6 +68,7 @@ public class LoginFragment extends Fragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -93,8 +96,6 @@ public class LoginFragment extends Fragment implements
         ((ActionBarActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-
-
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState)
     {
@@ -106,7 +107,6 @@ public class LoginFragment extends Fragment implements
         super.onResume();
         updateAccountList();
     }
-
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -128,7 +128,6 @@ public class LoginFragment extends Fragment implements
                 storageApi.fetchProviders(this);
     }
 
-
     @Override
     public void onResult(StorageProviderInfo.ProviderInfoListResult providerInfoListResult) {
         List<StorageProviderInfo> providerInfoList =
@@ -144,7 +143,6 @@ public class LoginFragment extends Fragment implements
         mAdapter.notifyDataSetChanged();
     }
 
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == getActivity().RESULT_OK) {
@@ -152,4 +150,18 @@ public class LoginFragment extends Fragment implements
         }
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                if (fm.getBackStackEntryCount() > 0) {
+                    fm.popBackStack();
+                }
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
