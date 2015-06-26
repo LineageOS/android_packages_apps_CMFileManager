@@ -17,8 +17,11 @@
 package com.cyanogenmod.filemanager.controllers;
 
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.content.pm.ProviderInfo;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Environment;
 import android.os.storage.StorageVolume;
 import android.support.design.widget.NavigationView;
@@ -36,6 +39,7 @@ import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
 import com.cyanogenmod.filemanager.model.Bookmark;
 import com.cyanogenmod.filemanager.preferences.AccessMode;
 import com.cyanogenmod.filemanager.util.StorageHelper;
+import com.cyanogenmod.filemanager.util.StorageProviderUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -199,6 +203,14 @@ public class NavigationDrawerController
         }
     }
 
+    private void addMenuItemToDrawer(int hash, String title, Drawable iconDrawable) {
+        if (mNavigationDrawer.getMenu().findItem(hash) == null) {
+            mNavigationDrawer.getMenu()
+                    .add(R.id.navigation_group_roots, hash, 0, title)
+                    .setIcon(iconDrawable);
+        }
+    }
+
     public void removeMenuItemFromDrawer(int hash) {
         mNavigationDrawer.getMenu().removeItem(hash);
     }
@@ -218,9 +230,10 @@ public class NavigationDrawerController
         // Concatenate title and summary
         // TODO: Change to two line menu items
         String title = providerInfo.getTitle() + " " + providerInfo.getSummary();
-
+        Drawable icon = StorageProviderUtils.loadPackageIcon(mCtx, providerInfo.getAuthority(),
+                providerInfo.getIcon());
         mProvidersMap.put(providerHashCode, providerInfo);
-        addMenuItemToDrawer(providerHashCode, title, R.drawable.ic_remote_drawable);
+        addMenuItemToDrawer(providerHashCode, title, icon);
     }
 
     public StorageProviderInfo getProviderInfoFromMenuItem(int key) {
