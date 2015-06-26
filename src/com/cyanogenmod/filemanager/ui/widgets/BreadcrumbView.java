@@ -209,7 +209,8 @@ public class BreadcrumbView extends RelativeLayout implements Breadcrumb, OnClic
 
         // The first is always the root (except if we are in a ChRooted environment)
         if (!chRooted) {
-            this.mBreadcrumbBar.addView(createBreadcrumbItem(new File(FileHelper.ROOT_DIRECTORY)));
+            this.mBreadcrumbBar.addView(createBreadcrumbItem(
+                    new File(FileHelper.ROOT_DIRECTORY)));
         }
 
         //Add the rest of the path
