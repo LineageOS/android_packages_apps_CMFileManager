@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bff0334d_89efa186",
+        "filename": "res/menu/navigation.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2015-06-26T02:26:09Z",
+      "side": 1,
+      "message": "localization?",
+      "revId": "d412f6124456e51235ebf2221afaabffe3b8a764",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
