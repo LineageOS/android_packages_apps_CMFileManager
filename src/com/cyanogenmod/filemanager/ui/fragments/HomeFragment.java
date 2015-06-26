@@ -108,10 +108,12 @@ public class HomeFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-        mToolBar = (Toolbar) mView.findViewById(
-                com.cyanogenmod.filemanager.R.id.material_toolbar);
-        ((ActionBarActivity) getActivity()).setSupportActionBar(mToolBar);
-        ((ActionBarActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mToolBar = (Toolbar) mView.findViewById(R.id.material_toolbar);
+        ActionBarActivity actionBarActivity = (ActionBarActivity) getActivity();
+        actionBarActivity.setSupportActionBar(mToolBar);
+        actionBarActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        actionBarActivity.getSupportActionBar().setHomeButtonEnabled(true);
+        actionBarActivity.getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
 
         initEasyModePlus();
     }

@@ -532,9 +532,11 @@ public class NavigationFragment extends Fragment
         super.onStart();
 
         mToolBar = (Toolbar) mView.findViewById(R.id.material_toolbar);
-        ((ActionBarActivity) getActivity()).setSupportActionBar(mToolBar);
-        ((ActionBarActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        ((ActionBarActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
+        ActionBarActivity actionBarActivity = (ActionBarActivity) getActivity();
+        actionBarActivity.setSupportActionBar(mToolBar);
+        actionBarActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        actionBarActivity.getSupportActionBar().setHomeButtonEnabled(true);
+        actionBarActivity.getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
 
         //Initialize action bars
         initTitleActionBar();

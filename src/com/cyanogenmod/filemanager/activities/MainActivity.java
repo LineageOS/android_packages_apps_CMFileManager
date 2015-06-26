@@ -35,6 +35,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -141,6 +142,8 @@ public class MainActivity extends ActionBarActivity
     private Fragment currentFragment;
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationDrawer;
+
+    private boolean mPopBackStack = false;
 
     private static final int REQUEST_CODE_STORAGE_PERMS = 321;
     private boolean hasPermissions() {
@@ -297,11 +300,12 @@ public class MainActivity extends ActionBarActivity
 
         switch (fragmentType) {
             case NAVIGATION:
+                mPopBackStack = false;
                 currentFragment = new NavigationFragment();
                 break;
             case HOME:
             default:
-                // Default to HOME
+                mPopBackStack = false;
                 currentFragment = HomeFragment.newInstance();
                 break;
         }
@@ -516,6 +520,24 @@ public class MainActivity extends ActionBarActivity
             } catch (InvalidClassException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                if (mPopBackStack) {
+                    FragmentManager fm = getSupportFragmentManager();
+                    if (fm.getBackStackEntryCount() > 0) {
+                        fm.popBackStack();
+                    }
+                } else {
+                    mDrawerLayout.openDrawer(Gravity.START);
+                }
+                return true;
+            default:
+                return false;
         }
     }
 }
