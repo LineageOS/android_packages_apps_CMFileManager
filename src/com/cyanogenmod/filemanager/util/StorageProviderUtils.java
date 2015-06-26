@@ -20,6 +20,17 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
 import android.graphics.drawable.Drawable;
+import android.text.TextUtils;
+import android.util.Log;
+import com.cyanogen.ambient.common.api.PendingResult;
+import com.cyanogen.ambient.storage.StorageApi;
+import com.cyanogen.ambient.storage.StorageApi.Document;
+import com.cyanogen.ambient.storage.StorageApi.Document.DocumentResult;
+import com.cyanogen.ambient.storage.provider.StorageProviderInfo;
+import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * A helper class with useful methods for dealing with Storage Providers.
@@ -27,6 +38,24 @@ import android.graphics.drawable.Drawable;
 public final class StorageProviderUtils {
 
     private static final String TAG = StorageProviderUtils.class.getSimpleName();
+
+    public static class PathInfo {
+        private String mDisplayName;
+        private String mPath;
+
+        public PathInfo(String displayName, String path) {
+            mDisplayName = displayName;
+            mPath = path;
+        }
+
+        public String getDisplayName() {
+            return mDisplayName;
+        }
+
+        public String getPath() {
+            return mPath;
+        }
+    }
 
     /**
      * Return the Drawable for this Storage Provider
@@ -47,5 +76,54 @@ public final class StorageProviderUtils {
             }
         }
         return null;
+    }
+
+    public static List<PathInfo> reconstructStorageApiFilePath(final String file) {
+        final LinkedList<PathInfo> pathList = new LinkedList<PathInfo>();
+
+        StorageApiConsole console = StorageApiConsole.getStorageApiConsoleForPath(file);
+        if (console != null) {
+            StorageApi storageApi = console.getStorageApi();
+            final StorageProviderInfo providerInfo = console.getStorageProviderInfo();
+            if (storageApi == null) {
+                return null;
+            } else if (providerInfo == null || TextUtils.isEmpty(file)) {
+                return null;
+            }
+            final int hashCode = StorageApiConsole.getHashCodeFromProvider(providerInfo);
+            final String rootId = StorageApiConsole.constructStorageApiFilePathFromProvider(
+                    providerInfo.getRootDocumentId(), hashCode);
+            String path = StorageApiConsole.getProviderPathFromFullPath(file);
+
+            do {
+                PendingResult<DocumentResult> pendingResult =
+                        storageApi.getMetadata(providerInfo, path, false);
+                DocumentResult documentResult = pendingResult.await();
+                if (documentResult == null) {
+                    Log.e(TAG, "Result: FAIL. No results returned."); //$NON-NLS-1$
+                    break;
+                }
+                Document document = documentResult.getDocument();
+                String documentPath =
+                        StorageApiConsole
+                                .constructStorageApiFilePathFromProvider(
+                                        document.getId(), hashCode);
+
+                String documentName;
+                if (TextUtils.equals(rootId, documentPath)) {
+                    documentName = providerInfo.getTitle();
+                    path = null;
+                } else {
+                    documentName = document.getDisplayName();
+                    path = document.getParentId();
+
+                }
+
+                PathInfo pathInfo;
+                pathInfo = new PathInfo(documentName, documentPath);
+                pathList.addFirst(pathInfo);
+            } while (!TextUtils.isEmpty(path));
+        }
+        return pathList;
     }
 }

@@ -100,7 +100,7 @@
     <drawable name="drawer_icon">@drawable/ic_material_light_navigation_drawer</drawable>
 
     <!-- The breadcrumb divider drawable -->
-    <drawable name="breadcrumb_divider_drawable">@drawable/ic_material_light_breadcrumb_divider</drawable>
+    <drawable name="breadcrumb_divider_drawable">@drawable/ic_breadcrumb</drawable>
 
     <!-- FileSystem locked drawable -->
     <drawable name="filesystem_locked_drawable">@drawable/ic_material_light_fs_locked</drawable>

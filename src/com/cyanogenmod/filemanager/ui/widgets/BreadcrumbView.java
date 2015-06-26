@@ -29,6 +29,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
 import com.cyanogenmod.filemanager.R;
+import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
 import com.cyanogenmod.filemanager.model.DiskUsage;
 import com.cyanogenmod.filemanager.model.MountPoint;
 import com.cyanogenmod.filemanager.tasks.FilesystemAsyncTask;
@@ -37,6 +38,8 @@ import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MountPointHelper;
 import com.cyanogenmod.filemanager.util.StorageHelper;
+import com.cyanogenmod.filemanager.util.StorageProviderUtils;
+import com.cyanogenmod.filemanager.util.StorageProviderUtils.PathInfo;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -205,30 +208,43 @@ public class BreadcrumbView extends RelativeLayout implements Breadcrumb, OnClic
         //Remove all views
         this.mBreadcrumbBar.removeAllViews();
 
-        // The first is always the root (except if we are in a ChRooted environment)
-        if (!chRooted) {
-            this.mBreadcrumbBar.addView(createBreadcrumbItem(new File(FileHelper.ROOT_DIRECTORY)));
-        }
-
-        //Add the rest of the path
-        String[] dirs = newPath.split(File.separator);
-        int cc = dirs.length;
-        if (chRooted) {
+        if (StorageApiConsole.getStorageApiConsoleForPath(newPath) != null) {
+            List<PathInfo> path = StorageProviderUtils.reconstructStorageApiFilePath(newPath);
             boolean first = true;
-            for (int i = 1; i < cc; i++) {
-                File f = createFile(dirs, i);
-                if (StorageHelper.isPathInStorageVolume(f.getAbsolutePath())) {
-                    if (!first) {
-                        this.mBreadcrumbBar.addView(createItemDivider());
-                    }
-                    first = false;
-                    this.mBreadcrumbBar.addView(createBreadcrumbItem(f));
+            for (PathInfo item : path) {
+                if (!first) {
+                    this.mBreadcrumbBar.addView(createItemDivider());
                 }
+                first = false;
+                this.mBreadcrumbBar.addView(createBreadcrumbItem(item));
             }
         } else {
-            for (int i = 1; i < cc; i++) {
-                this.mBreadcrumbBar.addView(createItemDivider());
-                this.mBreadcrumbBar.addView(createBreadcrumbItem(createFile(dirs, i)));
+            // The first is always the root (except if we are in a ChRooted environment)
+            if (!chRooted) {
+                this.mBreadcrumbBar.addView(createBreadcrumbItem(
+                        new File(FileHelper.ROOT_DIRECTORY)));
+            }
+
+            //Add the rest of the path
+            String[] dirs = newPath.split(File.separator);
+            int cc = dirs.length;
+            if (chRooted) {
+                boolean first = true;
+                for (int i = 1; i < cc; i++) {
+                    File f = createFile(dirs, i);
+                    if (StorageHelper.isPathInStorageVolume(f.getAbsolutePath())) {
+                        if (!first) {
+                            this.mBreadcrumbBar.addView(createItemDivider());
+                        }
+                        first = false;
+                        this.mBreadcrumbBar.addView(createBreadcrumbItem(f));
+                    }
+                }
+            } else {
+                for (int i = 1; i < cc; i++) {
+                    this.mBreadcrumbBar.addView(createItemDivider());
+                    this.mBreadcrumbBar.addView(createBreadcrumbItem(createFile(dirs, i)));
+                }
             }
         }
 
@@ -287,6 +303,24 @@ public class BreadcrumbView extends RelativeLayout implements Breadcrumb, OnClic
                         R.layout.breadcrumb_item, this.mBreadcrumbBar, false);
         item.setText(dir.getName().length() != 0 ? dir.getName() : dir.getPath());
         item.setItemPath(dir.getPath());
+        item.setOnClickListener(this);
+        return item;
+    }
+
+    /**
+     * Method that creates a new split path.
+     *
+     * @param info The current path info item
+     * @return BreadcrumbItem The view create
+     */
+    private BreadcrumbItem createBreadcrumbItem(PathInfo info) {
+        LayoutInflater inflater =
+                (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        BreadcrumbItem item =
+                (BreadcrumbItem)inflater.inflate(
+                        R.layout.breadcrumb_item, this.mBreadcrumbBar, false);
+        item.setText(info.getDisplayName());
+        item.setItemPath(info.getPath());
         item.setOnClickListener(this);
         return item;
     }

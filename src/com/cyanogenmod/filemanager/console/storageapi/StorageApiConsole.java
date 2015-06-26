@@ -296,4 +296,13 @@ public class StorageApiConsole extends VirtualConsole {
             return null;
         }
     }
+
+    public static String getProviderNameFromFullPath(String fullPath) {
+        String name = null;
+        StorageApiConsole storageApiConsole = getStorageApiConsoleForPath(fullPath);
+        if (storageApiConsole != null) {
+            name = storageApiConsole.getStorageProviderInfo().getTitle();
+        }
+        return name;
+    }
 }
