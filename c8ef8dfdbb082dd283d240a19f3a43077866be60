@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bff0334d_94efb486",
+        "filename": "src/com/cyanogenmod/filemanager/controllers/NavigationDrawerController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-06-26T22:49:38Z",
+      "side": 1,
+      "message": "Is there a good utils class for this?",
+      "revId": "c8ef8dfdbb082dd283d240a19f3a43077866be60",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
