@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bff0334d_499e3908",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-26T03:15:37Z",
+      "side": 1,
+      "message": "dupes",
+      "revId": "28c875c8438439d64791a941d24386a4588151da",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_098831c4",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-26T03:15:37Z",
+      "side": 1,
+      "message": "spaaace man",
+      "revId": "28c875c8438439d64791a941d24386a4588151da",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_e984edb3",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-26T03:15:37Z",
+      "side": 1,
+      "message": "merge home with default... again",
+      "revId": "28c875c8438439d64791a941d24386a4588151da",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_c99129f4",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-26T03:15:37Z",
+      "side": 1,
+      "message": "space",
+      "revId": "28c875c8438439d64791a941d24386a4588151da",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_89bd616a",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 448,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-26T03:15:37Z",
+      "side": 1,
+      "message": "LW",
+      "revId": "28c875c8438439d64791a941d24386a4588151da",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_69c21dec",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 465,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-26T03:15:37Z",
+      "side": 1,
+      "message": "Declare up top, why the integers?",
+      "revId": "28c875c8438439d64791a941d24386a4588151da",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_49b75988",
+        "filename": "src/com/cyanogenmod/filemanager/controllers/NavigationDrawerController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-26T03:15:37Z",
+      "side": 1,
+      "message": "put with other globals down there vvv",
+      "revId": "28c875c8438439d64791a941d24386a4588151da",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_29bc1568",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/HomeFragment.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-26T03:15:37Z",
+      "side": 1,
+      "message": "nope",
+      "revId": "28c875c8438439d64791a941d24386a4588151da",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_09b15190",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/HomeFragment.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-26T03:15:37Z",
+      "side": 1,
+      "message": "this too",
+      "revId": "28c875c8438439d64791a941d24386a4588151da",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
