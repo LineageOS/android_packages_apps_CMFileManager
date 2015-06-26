@@ -133,8 +133,11 @@ public class HomeFragment extends Fragment {
 
         mToolBar = (Toolbar) mView.findViewById(
                 R.id.material_toolbar);
-        ((ActionBarActivity) getActivity()).setSupportActionBar(mToolBar);
-        ((ActionBarActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        ActionBarActivity actionBarActivity = (ActionBarActivity) getActivity();
+        actionBarActivity.setSupportActionBar(mToolBar);
+        actionBarActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        actionBarActivity.getSupportActionBar().setHomeButtonEnabled(true);
+        actionBarActivity.getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
 
         initEasyModePlus();
     }
