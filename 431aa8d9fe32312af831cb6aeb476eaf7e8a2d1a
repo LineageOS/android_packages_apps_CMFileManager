@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bff0334d_e923cd04",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 467,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-06-26T01:25:13Z",
+      "side": 1,
+      "message": "The from here down seem to all target the the NavigationDrawer is some way. Does it make sense to put this code in a different Class (NavigationDrawerController.java)? It\u0027ll keep the bloat on this MainActivity down and can assume the responsibility for updating the Drawer\u0027s UI elements.",
+      "revId": "431aa8d9fe32312af831cb6aeb476eaf7e8a2d1a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_096cb134",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-06-26T01:25:13Z",
+      "side": 1,
+      "message": "preload?",
+      "revId": "431aa8d9fe32312af831cb6aeb476eaf7e8a2d1a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
