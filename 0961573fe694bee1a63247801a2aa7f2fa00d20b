@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bff0334d_54e92c7e",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-06-26T22:57:25Z",
+      "side": 1,
+      "message": "Util class?",
+      "revId": "0961573fe694bee1a63247801a2aa7f2fa00d20b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
