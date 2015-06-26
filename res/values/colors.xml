@@ -46,6 +46,9 @@
     <!-- Navigation Drawer Selected Item Background Color -->
     <color name="navigation_drawer_selected">#e8e8e8</color>
 
+    <!-- Navigation View Item Details Icon -->
+    <color name="navigation_view_item_detail_icon">#33000000</color>
+
     <!-- Disk usage total color -->
     <color name="disk_usage_total">#7ecccccc</color>
     <!-- Disk usage used color -->
