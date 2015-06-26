@@ -30,6 +30,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.MenuItem;
 import com.cyanogen.ambient.storage.provider.StorageProviderInfo;
 import com.cyanogenmod.filemanager.FileManagerApplication;
@@ -129,6 +130,7 @@ public class MainActivity extends ActionBarActivity
     private NavigationDrawerController mNavigationDrawerController;
 
     private List<StorageProviderInfo> mProviderInfoList;
+    private boolean mPopBackStack = false;
 
     /**
      * {@inheritDoc}
@@ -187,13 +189,16 @@ public class MainActivity extends ActionBarActivity
 
         switch (fragmentType) {
             case NAVIGATION:
+                mPopBackStack = false;
                 currentFragment = new NavigationFragment();
                 break;
             case LOGIN:
+                mPopBackStack = true;
                 currentFragment = LoginFragment.newInstance();
                 break;
             case HOME:
             default:
+                mPopBackStack = false;
                 noBackStack = true;
                 currentFragment = HomeFragment.newInstance();
                 break;
@@ -457,16 +462,20 @@ public class MainActivity extends ActionBarActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         switch (item.getItemId()) {
             case android.R.id.home:
-                FragmentManager fm = getSupportFragmentManager();
-                if (fm.getBackStackEntryCount() > 0) {
-                    fm.popBackStack();
+                if (mPopBackStack) {
+                    FragmentManager fm = getSupportFragmentManager();
+                    if (fm.getBackStackEntryCount() > 0) {
+                        fm.popBackStack();
+                    }
+                    return true;
+                } else {
+                    mDrawerLayout.openDrawer(Gravity.START);
                 }
                 return true;
             default:
-                return super.onOptionsItemSelected(item);
+                return false;
         }
     }
 }

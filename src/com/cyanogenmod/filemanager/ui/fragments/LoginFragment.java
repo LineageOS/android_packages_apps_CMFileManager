@@ -36,8 +36,6 @@ import com.cyanogen.ambient.storage.provider.StorageProviderInfo.ProviderInfoLis
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.MainActivity;
 import com.cyanogenmod.filemanager.adapters.ProviderAdapter;
-import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
-import com.cyanogenmod.filemanager.controllers.NavigationDrawerController;
 
 import java.util.List;
 
@@ -66,6 +64,7 @@ public class LoginFragment extends Fragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -93,8 +92,6 @@ public class LoginFragment extends Fragment implements
         ((ActionBarActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-
-
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState)
     {
@@ -106,7 +103,6 @@ public class LoginFragment extends Fragment implements
         super.onResume();
         updateAccountList();
     }
-
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -128,7 +124,6 @@ public class LoginFragment extends Fragment implements
                 storageApi.fetchProviders(this);
     }
 
-
     @Override
     public void onResult(StorageProviderInfo.ProviderInfoListResult providerInfoListResult) {
         List<StorageProviderInfo> providerInfoList =
@@ -144,12 +139,10 @@ public class LoginFragment extends Fragment implements
         mAdapter.notifyDataSetChanged();
     }
 
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == getActivity().RESULT_OK) {
             updateAccountList();
         }
     }
-
 }
