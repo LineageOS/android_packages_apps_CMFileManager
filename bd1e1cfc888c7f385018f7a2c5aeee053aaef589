@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bff0334d_ef650de3",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-06-27T02:25:05Z",
+      "side": 1,
+      "message": "//$NON-NLS-1$",
+      "range": {
+        "startLine": 260,
+        "startChar": 63,
+        "endLine": 260,
+        "endChar": 65
+      },
+      "revId": "bd1e1cfc888c7f385018f7a2c5aeee053aaef589",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bff0334d_cf6249d9",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-06-27T02:25:05Z",
+      "side": 1,
+      "message": "//$NON-NLS-1$",
+      "range": {
+        "startLine": 273,
+        "startChar": 41,
+        "endLine": 273,
+        "endChar": 55
+      },
+      "revId": "bd1e1cfc888c7f385018f7a2c5aeee053aaef589",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
