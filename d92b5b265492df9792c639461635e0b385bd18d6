@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bff0334d_cf900999",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/BreadcrumbView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-06-27T02:35:57Z",
+      "side": 1,
+      "message": "LW",
+      "range": {
+        "startLine": 224,
+        "startChar": 96,
+        "endLine": 225,
+        "endChar": 13
+      },
+      "revId": "d92b5b265492df9792c639461635e0b385bd18d6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
