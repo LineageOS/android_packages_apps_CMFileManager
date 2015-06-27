@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bff0334d_ef0e2d31",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 472,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-06-27T01:59:36Z",
+      "side": 1,
+      "message": "hm, unnecessary line? it\u0027ll just exit the if block and return true; anyway.",
+      "revId": "38d610c4dd4a18d9172f66091258f92393e07ddc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
