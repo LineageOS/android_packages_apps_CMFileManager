@@ -32,6 +32,7 @@ import com.cyanogenmod.filemanager.util.DialogHelper;
 public class BreadcrumbItem extends TextView implements OnLongClickListener {
 
     private String mItemPath;
+    private String mReadablePath;
 
     /**
      * Constructor of <code>BreadcrumbItem</code>.
@@ -99,11 +100,20 @@ public class BreadcrumbItem extends TextView implements OnLongClickListener {
     }
 
     /**
+     * Method that sets the readable path associated with with this breadcrumb item.
+     *
+     * @param readablePath The item path
+     */
+    protected void setReadablePath(String readablePath) {
+        this.mReadablePath = readablePath;
+    }
+
+    /**
      * {@inheritDoc}
      */
     @Override
     public boolean onLongClick(View v) {
-        DialogHelper.showToast(getContext(), this.mItemPath, Toast.LENGTH_SHORT);
+        DialogHelper.showToast(getContext(), this.mReadablePath, Toast.LENGTH_SHORT);
         return true;
     }
 

@@ -210,13 +210,16 @@ public class BreadcrumbView extends RelativeLayout implements Breadcrumb, OnClic
 
         if (StorageApiConsole.getStorageApiConsoleForPath(newPath) != null) {
             List<PathInfo> path = StorageProviderUtils.reconstructStorageApiFilePath(newPath);
+            String readablePath = "";
             boolean first = true;
             for (PathInfo item : path) {
                 if (!first) {
+                    readablePath += File.separator;
                     this.mBreadcrumbBar.addView(createItemDivider());
                 }
                 first = false;
-                this.mBreadcrumbBar.addView(createBreadcrumbItem(item));
+                readablePath += item.getDisplayName();
+                this.mBreadcrumbBar.addView(createBreadcrumbItem(item, readablePath));
             }
         } else {
             // The first is always the root (except if we are in a ChRooted environment)
@@ -303,6 +306,7 @@ public class BreadcrumbView extends RelativeLayout implements Breadcrumb, OnClic
                         R.layout.breadcrumb_item, this.mBreadcrumbBar, false);
         item.setText(dir.getName().length() != 0 ? dir.getName() : dir.getPath());
         item.setItemPath(dir.getPath());
+        item.setReadablePath(dir.getPath());
         item.setOnClickListener(this);
         return item;
     }
@@ -313,7 +317,7 @@ public class BreadcrumbView extends RelativeLayout implements Breadcrumb, OnClic
      * @param info The current path info item
      * @return BreadcrumbItem The view create
      */
-    private BreadcrumbItem createBreadcrumbItem(PathInfo info) {
+    private BreadcrumbItem createBreadcrumbItem(PathInfo info, String readablePath) {
         LayoutInflater inflater =
                 (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         BreadcrumbItem item =
@@ -321,6 +325,7 @@ public class BreadcrumbView extends RelativeLayout implements Breadcrumb, OnClic
                         R.layout.breadcrumb_item, this.mBreadcrumbBar, false);
         item.setText(info.getDisplayName());
         item.setItemPath(info.getPath());
+        item.setReadablePath(readablePath);
         item.setOnClickListener(this);
         return item;
     }
