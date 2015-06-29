@@ -21,11 +21,10 @@
     <style name="FileManager.Theme.Material.Light.NoActionBar" parent="@android:style/Theme.Material.Light.NoActionBar">
         <item name="android:windowBackground">@color/default_background</item>
         <item name="android:windowActionBar">false</item>
-        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowActionModeOverlay">false</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:colorPrimary">@color/material_palette_blue_primary</item>
         <item name="android:colorPrimaryDark">@color/material_palette_blue_primary_dark</item>
         <item name="android:colorControlHighlight">@color/material_palette_blue_accent_dark</item>
@@ -48,7 +47,7 @@
 
     <style name="FileManager.Theme.Material.NoActionBar" parent="@android:style/Theme.Material.NoActionBar">
         <item name="android:windowActionBar">false</item>
-        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowActionModeOverlay">false</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
