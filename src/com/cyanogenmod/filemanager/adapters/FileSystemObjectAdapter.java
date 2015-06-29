@@ -516,14 +516,16 @@ public class FileSystemObjectAdapter
      * @param item The path or the {@link FileSystemObject}
      */
     private void openPropertiesDialog(Object item) {
+        FileSystemObject fso = null;
         // Resolve the full path
         String path = String.valueOf(item);
         if (item instanceof FileSystemObject) {
             path = ((FileSystemObject)item).getFullPath();
+            fso = (FileSystemObject) item;
         }
 
         // Prior to show the dialog, refresh the item reference
-        FileSystemObject fso = null;
+        /*FileSystemObject fso = null;
         try {
             fso = CommandHelper.getFileInfo(getContext(), path, false, null);
             if (fso == null) {
@@ -545,7 +547,7 @@ public class FileSystemObjectAdapter
                 }
             }
             return;
-        }
+        }*/
 
         // Show the dialog
         InfoActionPolicy.showPropertiesDialog(getContext(), fso, null);
