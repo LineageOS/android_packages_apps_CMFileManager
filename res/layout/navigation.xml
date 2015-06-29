@@ -19,8 +19,7 @@
     xmlns:filemanager="http://schemas.android.com/apk/res/com.cyanogenmod.filemanager"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    android:layout_height="match_parent">
 
     <com.cyanogenmod.filemanager.ui.widgets.ScrimInsetsFrameLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
@@ -35,7 +34,6 @@
                 android:id="@+id/navigation_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="25dp"
                 android:orientation="vertical">
 
             <!-- We use a Toolbar so that our drawer can be displayed in front of the action bar -->
