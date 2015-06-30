@@ -80,6 +80,7 @@ import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.VirtualConsole;
 import com.cyanogenmod.filemanager.console.VirtualMountPointConsole;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
+import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
 import com.cyanogenmod.filemanager.listeners.OnHistoryListener;
 import com.cyanogenmod.filemanager.listeners.OnRequestRefreshListener;
 import com.cyanogenmod.filemanager.model.Bookmark;
@@ -1452,12 +1453,16 @@ public class NavigationFragment extends Fragment
                 }
             }
         } else {
+            boolean storageProvider = StorageApiConsole.getStorageApiConsoleForPath(initialDir)
+                    != null;
             //Ensure that initial directory is an absolute directory
             final String userInitialDir = initialDir;
-            initialDir = FileHelper.getAbsPath(initialDir);
+            if (!storageProvider) {
+                initialDir = FileHelper.getAbsPath(initialDir);
+            }
             final String absInitialDir = initialDir;
             File f = new File(initialDir);
-            boolean exists = f.exists();
+            boolean exists = f.exists() || storageProvider;
             if (!exists) {
                 // Fix for /data/media/0. Libcore doesn't detect it correctly.
                 try {
