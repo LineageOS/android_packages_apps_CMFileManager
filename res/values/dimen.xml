@@ -98,6 +98,33 @@
     <dimen name="horizontal_divider_width">0.25dp</dimen>
     <!-- The vertical divider height -->
     <dimen name="vertical_divider_height">0.75dp</dimen>
+    <!-- The navigation drawer divider line thickness (divider line, not overall view) -->
+    <dimen name="navigation_drawer_divider_thickness">1dp</dimen>
+    <!-- The navigation drawer divider height (overall height, not the divider line) -->
+    <dimen name="navigation_drawer_divider_height">16dp</dimen>
+    <!-- The navigation drawer divider margin top -->
+    <dimen name="navigation_drawer_divider_margintop">7dp</dimen>
+    <!-- The navigation drawer divider margin bottom -->
+    <dimen name="navigation_drawer_divider_marginbottom">8dp</dimen>
+
+    <!-- The navigation drawer item icon size -->
+    <dimen name="navigation_drawer_item_icon_size">24dp</dimen>
+
+    <!-- Navigation drawer item (single line) height -->
+    <dimen name="navigation_drawer_item_single_height">48dp</dimen>
+    <!-- Navigation drawer item (double line) height -->
+    <dimen name="navigation_drawer_item_double_height">56dp</dimen>
+
+    <!-- Navigation drawer item margins -->
+    <dimen name="navigation_drawer_item_default_margin">16dp</dimen>
+    <dimen name="navigation_drawer_item_single_line_icon_top_bottom_margin">12dp</dimen>
+    <dimen name="navigation_drawer_item_single_line_title_top_margin">15dp</dimen>
+    <dimen name="navigation_drawer_item_double_line_title_top_margin">11dp</dimen>
+    <dimen name="navigation_drawer_item_double_line_summary_top_margin">4dp</dimen>
+    <dimen name="navigation_drawer_item_far_right_margin">40dp</dimen>
+
+    <!-- Navigation drawer item text size -->
+    <dimen name="navigation_drawer_item_text_size">14sp</dimen>
 
     <!-- The relevance widget width -->
     <dimen name="relevance_item_width">16dp</dimen>
@@ -126,7 +153,9 @@
     <!-- Scrim layout elevation -->
     <dimen name="scrim_layout_elevation">10dp</dimen>
     <!-- Drawer header height -->
-    <dimen name="drawer_header_height">172dp</dimen>
+    <dimen name="drawer_header_height">180dp</dimen>
+    <!-- Drawer header background (image) height -->
+    <dimen name="drawer_header_backgound_height">172dp</dimen>
 
     <!-- usage graph stuff -->
     <dimen name="legend_title_textSize">9sp</dimen>
