@@ -529,14 +529,6 @@ public class NavigationFragment extends Fragment
 
         initNavigationViews();
 
-        return mView;
-    }
-
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
         mToolBar = (Toolbar) mView.findViewById(R.id.material_toolbar);
         ActionBarActivity actionBarActivity = (ActionBarActivity) getActivity();
         actionBarActivity.setSupportActionBar(mToolBar);
@@ -578,6 +570,8 @@ public class NavigationFragment extends Fragment
             onLayoutChanged();
         }
         this.mOrientation = orientation;
+
+        return mView;
     }
 
     /**
@@ -1565,12 +1559,6 @@ public class NavigationFragment extends Fragment
 
         // Add to history
         final boolean addToHistory = intent.getBooleanExtra(EXTRA_ADD_TO_HISTORY, true);
-
-        // We cannot navigate to a secure console if it is unmounted. So go to root in that case
-        VirtualConsole vc = VirtualMountPointConsole.getVirtualConsoleForPath(initialDir);
-        if (vc != null && vc instanceof SecureConsole && !((SecureConsole) vc).isMounted()) {
-            initialDir = FileHelper.ROOT_DIRECTORY;
-        }
 
         if (this.mChRooted) {
             // Initial directory is the first external sdcard (sdcard, emmc, usb, ...)

@@ -40,6 +40,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 
 import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
@@ -79,7 +81,7 @@ import java.util.List;
  * the app is killed, is restarted from his initial state.
  */
 public class MainActivity extends ActionBarActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements OnItemClickListener {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -248,8 +250,8 @@ public class MainActivity extends ActionBarActivity
 
     private void finishOnCreate() {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        NavigationView navigationDrawer = (NavigationView) findViewById(R.id.navigation_view);
-        navigationDrawer.setNavigationItemSelectedListener(this);
+        NavigationView navigationDrawer =
+                (NavigationView) findViewById(R.id.navigation_view);
         mNavigationDrawerController = new NavigationDrawerController(this, navigationDrawer);
 
         MIME_TYPE_LOCALIZED_NAMES = MimeTypeCategory.getFriendlyLocalizedNames(this);
@@ -336,10 +338,11 @@ public class MainActivity extends ActionBarActivity
      * {@inheritDoc}
      */
     @Override
-    public boolean onNavigationItemSelected(MenuItem menuItem) {
-        menuItem.setChecked(false);
-        int id = menuItem.getItemId();
-        switch (id) {
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        view.setSelected(true);
+        mNavigationDrawerController.setSelected(position);
+        int itemId = view.getId();
+        switch (itemId) {
             case R.id.navigation_item_home:
                 if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_home");
                 setCurrentFragment(FragmentType.HOME);
@@ -358,10 +361,6 @@ public class MainActivity extends ActionBarActivity
                 getIntent().putExtra(EXTRA_NAVIGATE_TO, FileHelper.ROOT_DIRECTORY);
                 setCurrentFragment(FragmentType.NAVIGATION);
                 break;
-            case R.id.navigation_item_protected:
-                // TODO: Implement this path
-                if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_protected");
-                break;
             case R.id.navigation_item_manage:
                 // TODO: Implement this path
                 if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_manage");
@@ -371,34 +370,22 @@ public class MainActivity extends ActionBarActivity
                 openSettings();
                 break;
             default:
-                if (DEBUG) Log.d(TAG, String.format("onNavigationItemSelected::default (%d)", id));
+                if (DEBUG) {
+                    Log.d(TAG, String.format("onNavigationItemSelected::default (%d)", itemId));
+                }
                 String path = null;
                 // Check for item id in storage bookmarks
-                Bookmark bookmark = mNavigationDrawerController.getBookmarkFromMenuItem(id);
+                Bookmark bookmark = mNavigationDrawerController.getBookmarkFromMenuItem(itemId);
                 if (bookmark != null) {
                     path = bookmark.getPath();
                 }
 
                 if (TextUtils.isEmpty(path)) {
-                    return false;
+                    return;
                 }
                 break;
         }
         mDrawerLayout.closeDrawers();
-        return true;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == INTENT_REQUEST_SETTINGS) {
-            // reset bookmarks list to default as the user could changed the
-            // root mode which changes the system bookmarks
-            mNavigationDrawerController.loadNavigationDrawerItems();
-            return;
-        }
     }
 
     /**
