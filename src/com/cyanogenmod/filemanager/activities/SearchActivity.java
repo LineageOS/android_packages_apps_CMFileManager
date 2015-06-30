@@ -256,6 +256,8 @@ public class SearchActivity extends Activity
                             mMimeTypeSpinner.setVisibility(View.VISIBLE);
                         }
                     } catch (Throwable ex) {
+                        // hide the search progress spinner if the search fails
+                        mStreamingSearchProgress.setVisibility(View.INVISIBLE);
                         Log.e(TAG, "onAsyncEnd method fails", ex); //$NON-NLS-1$
                     }
                 }
