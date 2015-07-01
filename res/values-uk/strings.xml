@@ -374,7 +374,10 @@
   <string name="ash_keyword">Ключове слово</string>
   <string name="ash_quoted_string">Цитований рядок</string>
   <string name="ash_variable">Змінна</string>
+  <string name="secure_storage_unlock_title">Розблокувати захищене сховище</string>
+  <string name="secure_storage_create_title">Створити захищене сховище</string>
   <string name="secure_storage_reset_title">Скинути пароль</string>
+  <string name="secure_storage_delete_title">Видалити захищене сховище</string>
   <string name="secure_storage_unlock_key_prompt_msg">Введіть пароль для розблокування файлової системи безпечного сховища.</string>
   <string name="secure_storage_unlock_key_new_msg">Введіть пароль для захисту файлової системи безпечного сховища.</string>
   <string name="secure_storage_unlock_key_reset_msg">Введіть поточний і новий паролі для скидання файлової системи безпечного сховища.</string>
