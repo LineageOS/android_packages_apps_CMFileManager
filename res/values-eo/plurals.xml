@@ -32,4 +32,8 @@
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> dosierujo elektita.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> dosierujoj selektitaj.</item>
   </plurals>
+  <plurals name="selection_files">
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> dosiero elektita.</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> dosieroj elektitaj.</item>
+  </plurals>
 </resources>

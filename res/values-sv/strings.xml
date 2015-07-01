@@ -88,6 +88,10 @@
   <string name="sort_by_name_desc">Efter namn ▼</string>
   <string name="sort_by_date_asc">Efter datum ▲</string>
   <string name="sort_by_date_desc">Efter datum ▼</string>
+  <string name="sort_by_size_asc">Per storlek \u25B2</string>
+  <string name="sort_by_size_desc">Per storlek \u25B2</string>
+  <string name="sort_by_type_asc">Per typ \u25B2</string>
+  <string name="sort_by_type_desc">Per typ \u25BC</string>
   <string name="layout_icons">Ikoner</string>
   <string name="layout_simple">Enkel</string>
   <string name="layout_details">Detaljerad</string>
@@ -337,6 +341,7 @@
   <string name="pref_remove_saved_search_terms_msg">Alla sparade söktermer togs bort</string>
   <string name="pref_secure_storage_category">Skyddad lagring</string>
   <string name="pref_secure_storage_delayed_sync_title">Fördröjd synkronisering</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Synkronisering av skyddade filsystem är en kostsam operation. Aktivera detta alternativ för att tillåta snabbare respons efter varje operation, utför synkroniseringen när filsystemet inte används, men på bekostnad av att förlora den väntande informationen om appen kraschar.</string>
   <string name="pref_secure_storage_reset_password_title">Byt lösenord</string>
   <string name="pref_secure_storage_delete_storage_title">Ta bort lagringsenhet</string>
   <string name="pref_editor_behaviour_category">Beteende</string>
@@ -345,7 +350,9 @@
   <string name="pref_word_wrap">Radbrytning</string>
   <string name="pref_hexdump">Hexdumpbinärfiler</string>
   <string name="pref_hexdump_desc">Vid öppning av en binärfil genereras en hexdump av filen som sedan öppnas i hexläsaren</string>
+  <string name="pref_editor_syntax_highlight_category">Markera syntax</string>
   <string name="pref_syntax_highlight">Markera syntax</string>
+  <string name="pref_syntax_highlight_desc">Markera syntaxen för den fil som visas i redigeraren (endast när en processor för att markera syntaxen för filtypen är tillgänglig)</string>
   <string name="pref_syntax_highlight_color_scheme">Färgschema</string>
   <string name="pref_syntax_highlight_color_scheme_desc">Välj färgschema för syntaxmarkering</string>
   <string name="pref_syntax_sh_use_theme_default">Använd standardtema</string>
@@ -373,7 +380,10 @@
   <string name="ash_keyword">Nyckelord</string>
   <string name="ash_quoted_string">Statisk sträng</string>
   <string name="ash_variable">Variabel</string>
+  <string name="secure_storage_unlock_title">Lås upp säker lagring</string>
+  <string name="secure_storage_create_title">Skapa säker lagring</string>
   <string name="secure_storage_reset_title">Återställ lösenord</string>
+  <string name="secure_storage_delete_title">Ta bort säker lagring</string>
   <string name="secure_storage_unlock_key_prompt_msg">Ange ett lösenord för att skydda filsystemet.</string>
   <string name="secure_storage_unlock_key_new_msg">Ange ett lösenord för att skydda filsystemet.</string>
   <string name="secure_storage_unlock_key_reset_msg">Ange det nuvarande och nya lösenordet för att återställa det skyddade filsystemet.</string>
@@ -389,6 +399,7 @@
   <string name="secure_storage_unlock_failed">Kan inte låsa upp filsystemet</string>
   <string name="secure_storage_unlock_validation_length">Lösenordet måste ha minst <xliff:g id="characters">%1$d </xliff:g> tecken.</string>
   <string name="secure_storage_unlock_validation_equals">Lösenorden stämmer inte överens.</string>
+  <string name="secure_storage_open_file_warning">Detta kommer att kopiera filen till en tillfällig okrypterad plats. Detta kommer att nollställas efter 1 timme.</string>
   <string name="print_unsupported_document">Dokumentformatet stöds ej</string>
   <string name="print_unsupported_image">Bildformat stöds ej</string>
   <string name="print_document_header">Dokument: <xliff:g id="document_name">%1$s</xliff:g></string>

@@ -206,7 +206,7 @@
   <string name="waiting_dialog_compressing_title">Komprimiere\u2026</string>
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>File</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Analysiere\u2026</b>]]></string>
-  <string name="msgs_extracting_success">Das Entpacken war erfolgreich. Die Daten wurden in das Verzeichnis <xliff:g id="destination">%1$s</xliff:g>entpackt.</string>
+  <string name="msgs_extracting_success">Das Entpacken war erfolgreich. Die Daten wurden in das Verzeichnis <xliff:g id="destination">%1$s</xliff:g> entpackt.</string>
   <string name="msgs_compressing_success">Das Komprimieren war erfolgreich. Die Daten wurden im Verzeichnis <xliff:g id="destination">%1$s</xliff:g>komprimiert.</string>
   <string name="actions_dialog_title">Aktionen</string>
   <string name="actions_menu_properties_current_folder">Eigenschaften</string>

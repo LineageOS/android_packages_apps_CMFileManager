@@ -153,7 +153,7 @@
   <string name="search">Rezultatele căutării</string>
   <string name="search_hint">Introduceți căutarea</string>
   <string name="search_voice_hint">Rostiți căutarea</string>
-  <string name="search_error_msg">O eroare a avut loc în timpul cautării. Niciun rezultat găsit.</string>
+  <string name="search_error_msg">O eroare a avut loc în timpul căutării. Niciun rezultat găsit.</string>
   <string name="search_no_results_msg">Niciun rezultat găsit.</string>
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> în<xliff:g id="path">%2$s</xliff:g></string>
   <string name="search_terms"><![CDATA[<b>Termeni:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
