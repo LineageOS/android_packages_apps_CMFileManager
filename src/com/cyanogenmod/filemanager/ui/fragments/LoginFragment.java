@@ -110,7 +110,12 @@ public class LoginFragment extends Fragment implements
         if (providerItem.needAuthentication()) {
             // login
             Intent i = providerItem.authenticateUser();
-            startActivityForResult(i, LOGIN_TO_PROVIDER);
+            try {
+                startActivityForResult(i, LOGIN_TO_PROVIDER);
+            } catch (Exception e) {
+                // Unable to launch auth intent
+                Log.e(TAG, "Unable to log into provider", e);
+            }
         } else {
             // logout
             // TODO: at some point this will apparently be in the storage area of the Settings
