@@ -536,14 +536,6 @@ public class NavigationFragment extends Fragment
 
         initNavigationViews();
 
-        return mView;
-    }
-
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
         mToolBar = (Toolbar) mView.findViewById(R.id.material_toolbar);
         ActionBarActivity actionBarActivity = (ActionBarActivity) getActivity();
         actionBarActivity.setSupportActionBar(mToolBar);
@@ -584,6 +576,14 @@ public class NavigationFragment extends Fragment
             onLayoutChanged();
         }
         this.mOrientation = orientation;
+
+        return mView;
+    }
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
     }
 
     @Override
