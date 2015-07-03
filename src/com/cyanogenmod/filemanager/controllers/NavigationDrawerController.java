@@ -61,6 +61,8 @@ public class NavigationDrawerController {
 
     private static final String STR_USB = "usb"; // $NON-NLS-1$
 
+    public static final int NAVIGATION_DRAWER_HOME = 1;
+
     private Context mCtx;
     private NavigationView mNavigationDrawer;
     private NavigationDrawerAdapter mAdapter;
@@ -75,7 +77,7 @@ public class NavigationDrawerController {
         mStorageBookmarks = new HashMap<Integer, Bookmark>();
         mNavigationDrawerItemList = new ArrayList<NavigationDrawerItem>();
         mLastRoot = 0;
-        mCurrentSelection = -1;
+        mCurrentSelection = NAVIGATION_DRAWER_HOME;
         ListView listView = (ListView)mNavigationDrawer.findViewById(R.id.navigation_view_listview);
         listView.setOnItemClickListener(((MainActivity)mCtx));
         mAdapter = new NavigationDrawerAdapter(mCtx, mNavigationDrawerItemList);
@@ -158,7 +160,7 @@ public class NavigationDrawerController {
                 NavigationDrawerItemType.SINGLE, title, summary, R.drawable.ic_settings, color));
 
         // Notify dataset changed here because we aren't sure when/if storage providers will return.
-        mAdapter.notifyDataSetChanged();
+        updateDataSet();
 
     }
 
@@ -251,6 +253,18 @@ public class NavigationDrawerController {
         }
     }
 
+    private void updateDataSet() {
+        if (mCurrentSelection > 0 && mCurrentSelection < mNavigationDrawerItemList.size()) {
+            NavigationDrawerItem item = mNavigationDrawerItemList.get(mCurrentSelection);
+            NavigationDrawerItemType type = item.getType();
+            if (type != NavigationDrawerItemType.DIVIDER &&
+                    type != NavigationDrawerItemType.HEADER) {
+                item.setSelected(true);
+            }
+        }
+        mAdapter.notifyDataSetChanged();
+    }
+
     public void removeAllItemsFromDrawer() {
         // reset menu list
         mNavigationDrawerItemList.clear();
@@ -270,13 +284,7 @@ public class NavigationDrawerController {
             item.setSelected(false);
         }
 
-        // Set new selection
-        if (position > 0 && position < mNavigationDrawerItemList.size()) {
-            NavigationDrawerItem item = mNavigationDrawerItemList.get(position);
-            item.setSelected(true);
-        }
-
         mCurrentSelection = position;
-        mAdapter.notifyDataSetChanged();
+        updateDataSet();
     }
 }

@@ -116,6 +116,7 @@ import com.cyanogenmod.filemanager.ui.widgets.Breadcrumb;
 import com.cyanogenmod.filemanager.ui.widgets.ButtonItem;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationCustomTitleView;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationView;
+import com.cyanogenmod.filemanager.ui.widgets.NavigationView.OnBackRequestListener;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationView.OnNavigationRequestMenuListener;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationView.OnNavigationSelectionChangedListener;
 import com.cyanogenmod.filemanager.ui.widgets.SelectionView;
@@ -227,6 +228,7 @@ public class NavigationFragment extends Fragment
     private View mTitleLayout;
     private View mStatusBar;
 
+    private OnBackRequestListener mOnBackRequestListener;
 
     private final BroadcastReceiver mNotificationReceiver = new BroadcastReceiver() {
         @Override
@@ -1480,6 +1482,7 @@ public class NavigationFragment extends Fragment
         //- 0
         this.mNavigationViews[0] = (NavigationView) mView.findViewById(R.id.navigation_view);
         this.mNavigationViews[0].setId(0);
+        this.mNavigationViews[0].setOnBackRequestListener(mOnBackRequestListener);
     }
 
     /**
@@ -2129,14 +2132,6 @@ public class NavigationFragment extends Fragment
                 this.mHistory.remove(i);
             }
 
-            if (mDrawerHistory.getChildCount() == 0) {
-                mDrawerHistoryEmpty.setVisibility(View.VISIBLE);
-            }
-
-            //Navigate
-            final boolean clearHistory =
-                    mHistoryTab.isSelected() && mHistorySaved.size() > 0;
-            mClearHistory.setVisibility(clearHistory ? View.VISIBLE : View.GONE);
             return true;
 
         } catch (Throwable ex) {
@@ -2197,7 +2192,6 @@ public class NavigationFragment extends Fragment
         }
 
         //Nothing to apply
-        mClearHistory.setVisibility(View.GONE);
         return false;
     }
 
@@ -2647,5 +2641,14 @@ public class NavigationFragment extends Fragment
         public String getDescription() {
             return mDescription;
         }
+    }
+
+    /*
+     * Method that sets the listener for back requests
+     *
+     * @param onBackRequestListener The listener reference
+     */
+    public void setOnBackRequestListener(OnBackRequestListener onBackRequestListener) {
+        mOnBackRequestListener = onBackRequestListener;
     }
 }
