@@ -117,6 +117,7 @@ import com.cyanogenmod.filemanager.ui.widgets.ButtonItem;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationCustomTitleView;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationView;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationView.OnBackRequestListener;
+import com.cyanogenmod.filemanager.ui.widgets.NavigationView.OnDirectoryChangedListener;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationView.OnNavigationRequestMenuListener;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationView.OnNavigationSelectionChangedListener;
 import com.cyanogenmod.filemanager.ui.widgets.SelectionView;
@@ -229,6 +230,7 @@ public class NavigationFragment extends Fragment
     private View mStatusBar;
 
     private OnBackRequestListener mOnBackRequestListener;
+    private OnDirectoryChangedListener mOnDirectoryChangedListener;
 
     private final BroadcastReceiver mNotificationReceiver = new BroadcastReceiver() {
         @Override
@@ -1483,6 +1485,7 @@ public class NavigationFragment extends Fragment
         this.mNavigationViews[0] = (NavigationView) mView.findViewById(R.id.navigation_view);
         this.mNavigationViews[0].setId(0);
         this.mNavigationViews[0].setOnBackRequestListener(mOnBackRequestListener);
+        this.mNavigationViews[0].setOnDirectoryChangedListener(mOnDirectoryChangedListener);
     }
 
     /**
@@ -2650,5 +2653,19 @@ public class NavigationFragment extends Fragment
      */
     public void setOnBackRequestListener(OnBackRequestListener onBackRequestListener) {
         mOnBackRequestListener = onBackRequestListener;
+    }
+
+    /**
+     * Method that sets the listener for directory changes
+     *
+     * @param onDirectoryChangedListener The listener reference
+     */
+    public void setOnDirectoryChangedListener(
+            OnDirectoryChangedListener onDirectoryChangedListener) {
+        mOnDirectoryChangedListener = onDirectoryChangedListener;
+        NavigationView current = getCurrentNavigationView();
+        if (current != null) {
+            current.setOnDirectoryChangedListener(mOnDirectoryChangedListener);
+        }
     }
 }

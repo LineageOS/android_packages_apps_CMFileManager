@@ -35,10 +35,12 @@ import com.cyanogenmod.filemanager.adapters.NavigationDrawerAdapter;
 import com.cyanogenmod.filemanager.console.VirtualMountPointConsole;
 import com.cyanogenmod.filemanager.model.Bookmark;
 import com.cyanogenmod.filemanager.model.Bookmark.BOOKMARK_TYPE;
+import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.model.MountPoint;
 import com.cyanogenmod.filemanager.model.NavigationDrawerItem;
 import com.cyanogenmod.filemanager.model.NavigationDrawerItem.NavigationDrawerItemType;
 import com.cyanogenmod.filemanager.preferences.AccessMode;
+import com.cyanogenmod.filemanager.ui.widgets.NavigationView.OnDirectoryChangedListener;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.StorageHelper;
 
@@ -55,7 +57,7 @@ import static com.cyanogenmod.filemanager.model.Bookmark.BOOKMARK_TYPE.USB;
  * NavigationDrawerController. This class is contains logic to add/remove and manage items in
  * the NavigationDrawer which uses android support libraries NavigationView.
  */
-public class NavigationDrawerController {
+public class NavigationDrawerController implements OnDirectoryChangedListener {
     private static final String TAG = NavigationDrawerController.class.getSimpleName();
     private static boolean DEBUG = false;
 
@@ -77,7 +79,7 @@ public class NavigationDrawerController {
         mStorageBookmarks = new HashMap<Integer, Bookmark>();
         mNavigationDrawerItemList = new ArrayList<NavigationDrawerItem>();
         mLastRoot = 0;
-        mCurrentSelection = NAVIGATION_DRAWER_HOME;
+        mCurrentSelection = R.id.navigation_item_home;
         ListView listView = (ListView)mNavigationDrawer.findViewById(R.id.navigation_view_listview);
         listView.setOnItemClickListener(((MainActivity)mCtx));
         mAdapter = new NavigationDrawerAdapter(mCtx, mNavigationDrawerItemList);
@@ -254,15 +256,24 @@ public class NavigationDrawerController {
     }
 
     private void updateDataSet() {
-        if (mCurrentSelection > 0 && mCurrentSelection < mNavigationDrawerItemList.size()) {
-            NavigationDrawerItem item = mNavigationDrawerItemList.get(mCurrentSelection);
-            NavigationDrawerItemType type = item.getType();
-            if (type != NavigationDrawerItemType.DIVIDER &&
-                    type != NavigationDrawerItemType.HEADER) {
-                item.setSelected(true);
+        for (NavigationDrawerItem item : mNavigationDrawerItemList) {
+            if (mCurrentSelection == item.getId()) {
+                NavigationDrawerItemType type = item.getType();
+                if (type != NavigationDrawerItemType.DIVIDER &&
+                        type != NavigationDrawerItemType.HEADER) {
+                    item.setSelected(true);
+                }
             }
         }
         mAdapter.notifyDataSetChanged();
+    }
+
+    private void deselectAll() {
+        if (mNavigationDrawerItemList != null && !mNavigationDrawerItemList.isEmpty()) {
+            for (NavigationDrawerItem item : mNavigationDrawerItemList) {
+                item.setSelected(false);
+            }
+        }
     }
 
     public void removeAllItemsFromDrawer() {
@@ -277,14 +288,37 @@ public class NavigationDrawerController {
         return mStorageBookmarks.get(key);
     }
 
-    public void setSelected(int position) {
+    public void setSelected(int id) {
         // Unset old selection
-        if (mCurrentSelection >= 0 && mCurrentSelection < mNavigationDrawerItemList.size()) {
-            NavigationDrawerItem item = mNavigationDrawerItemList.get(mCurrentSelection);
-            item.setSelected(false);
+        deselectAll();
+
+        mCurrentSelection = id;
+        updateDataSet();
+    }
+
+    /*
+     * Set navigation item closest related to path as selected
+     * This is for use with paths, and thus only works with paths from navigation fragment
+     */
+    private void setSelected(String path) {
+        deselectAll();
+        String volumePath = StorageHelper.getStorageVolumeFromPath(path);
+
+        for (NavigationDrawerItem item : mNavigationDrawerItemList) {
+            if (!TextUtils.isEmpty(volumePath) &&
+                    TextUtils.equals(item.getSummary(), volumePath)) {
+                mCurrentSelection = item.getId();
+                item.setSelected(true);
+                break;
+            }
         }
 
-        mCurrentSelection = position;
-        updateDataSet();
+        mAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onDirectoryChanged(FileSystemObject item) {
+        if (DEBUG) Log.d(TAG, "onDirectoryChanged::" + item.getFullPath());
+        setSelected(item.getFullPath());
     }
 }
