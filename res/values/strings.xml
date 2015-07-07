@@ -410,6 +410,10 @@
     <string name="navigation_item_title_local">Local storage</string>
     <!-- Navigation Drawer Item Titles - Root directory -->
     <string name="navigation_item_title_root">Root directory</string>
+    <!-- Navigation Drawer Item Titles - SDCard -->
+    <string name="navigation_item_title_sdcard">SD card</string>
+    <!-- Navigation Drawer Item Titles - USB storage -->
+    <string name="navigation_item_title_usb">USB storage</string>
     <!-- Navigation Drawer Item Titles - protected -->
     <string name="navigation_item_title_protected">Protected storage</string>
     <!-- Navigation Drawer Item Titles - Manage storage sources -->
@@ -904,4 +908,8 @@
     <string name="welcome_desc">Simple, powerful access to all your data from anywhere.</string>
 
     <string name="safe_mode_not_allowed">Setting not available in safe mode</string>
+
+    <!-- Snackbar messages -->
+    <!-- Snackbar message - Storage volume unmounted -->
+    <string name="snackbar_storage_volume_unmounted"><xliff:g id="characters">%1$s</xliff:g> was removed.</string>
 </resources>

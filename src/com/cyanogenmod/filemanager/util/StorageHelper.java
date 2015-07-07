@@ -20,6 +20,7 @@ import android.os.Environment;
 import android.os.storage.StorageManager;
 import android.os.storage.StorageVolume;
 
+import android.text.TextUtils;
 import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.console.VirtualMountPointConsole;
@@ -36,7 +37,7 @@ import java.util.Locale;
  * A helper class with useful methods for deal with storages.
  */
 public final class StorageHelper {
-
+    private static final String STR_USB = "usb"; // $NON-NLS-1$
     private static StorageVolume[] sStorageVolumes;
 
     /**
@@ -194,6 +195,67 @@ public final class StorageHelper {
             }
         }
         return volumePath;
+    }
+
+    /**
+     * Method that returns the name of the root if no longer mounted
+     *
+     * @param path Path to directory
+     * @return readableName, valid string if the path is in an unmounted volume storage, else null
+     */
+    public static String getStorageVolumeNameIfUnMounted(Context ctx, String path) {
+        String readableName = null;
+        boolean mountStatus = false;
+
+        String fso = FileHelper.getAbsPath(path);
+
+        // Check root
+        String volumePath = fileStartsWithPath(fso, FileHelper.ROOT_DIRECTORY, null);
+        if (!TextUtils.isEmpty(volumePath)) {
+            mountStatus = true;
+        }
+
+        // Check virtual mount points (secure storage)
+        List<MountPoint> mps = VirtualMountPointConsole.getVirtualMountPoints();
+        for (MountPoint mp : mps) {
+            if (mp.isSecure()) {
+                String previousPath = volumePath;
+                volumePath = fileStartsWithPath(fso, mp.getMountPoint(), volumePath);
+                if (!TextUtils.equals(previousPath, volumePath)) {
+                    mountStatus = true;
+                }
+            }
+        }
+
+        // Check storage volumes (sdcard, usb, etc)
+        StorageVolume[] volumes =
+                getStorageVolumes(FileManagerApplication.getInstance().getApplicationContext(),
+                        false);
+        int cc = volumes.length;
+        for (int i = 0; i < cc; i++) {
+            StorageVolume vol = volumes[i];
+            String previousPath = volumePath;
+            volumePath = fileStartsWithPath(fso, vol.getPath(), volumePath);
+            if (!TextUtils.equals(previousPath, volumePath)) {
+                String volumeState = vol.getState();
+                if (!Environment.MEDIA_MOUNTED.equalsIgnoreCase(volumeState) &&
+                        !Environment.MEDIA_MOUNTED_READ_ONLY.equalsIgnoreCase(volumeState)) {
+                    mountStatus = false;
+                    if (!TextUtils.isEmpty(path)) {
+                        String lowerPath = volumePath.toLowerCase(Locale.ROOT);
+                        if (lowerPath.contains(STR_USB)) {
+                            readableName = ctx.getString(R.string.navigation_item_title_usb);
+                        } else {
+                            readableName = ctx.getString(R.string.navigation_item_title_sdcard);
+                        }
+                    }
+                } else {
+                    mountStatus = true;
+                }
+            }
+        }
+
+        return mountStatus ? null : readableName;
     }
 
     /**
