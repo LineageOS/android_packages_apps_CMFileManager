@@ -20,6 +20,7 @@ import android.os.Environment;
 import android.os.storage.StorageManager;
 import android.os.storage.StorageVolume;
 
+import android.text.TextUtils;
 import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.console.VirtualMountPointConsole;
@@ -202,6 +203,63 @@ public final class StorageHelper {
             }
         }
         return volumePath;
+    }
+
+    /**
+     * Method that returns whether or not a path exists in a mounted volume
+     *
+     * @param path Path to directory
+     * @return mountedState, true if the path is in a mounted volume storage, else false
+     */
+    public static boolean isStorageVolumeForPathMounted(String path) {
+        boolean mountStatus = false;
+
+        String volumePath = null;
+        if (StorageApiConsole.getStorageApiConsoleForPath(path) != null) {
+            return true;
+        }
+
+        String fso = FileHelper.getAbsPath(path);
+
+        // Check root
+        volumePath = fileStartsWithPath(fso, FileHelper.ROOT_DIRECTORY, volumePath);
+        if (!TextUtils.isEmpty(volumePath)) {
+            mountStatus = true;
+        }
+
+        // Check virtual mount points (secure storage)
+        List<MountPoint> mps = VirtualMountPointConsole.getVirtualMountPoints();
+        for (MountPoint mp : mps) {
+            if (mp.isSecure()) {
+                String previousPath = volumePath;
+                volumePath = fileStartsWithPath(fso, mp.getMountPoint(), volumePath);
+                if (!TextUtils.equals(previousPath, volumePath)) {
+                    mountStatus = true;
+                }
+            }
+        }
+
+        // Check storage volumes (sdcard, usb, etc)
+        StorageVolume[] volumes =
+                getStorageVolumes(FileManagerApplication.getInstance().getApplicationContext(),
+                        false);
+        int cc = volumes.length;
+        for (int i = 0; i < cc; i++) {
+            StorageVolume vol = volumes[i];
+            String previousPath = volumePath;
+            volumePath = fileStartsWithPath(fso, vol.getPath(), volumePath);
+            if (!TextUtils.equals(previousPath, volumePath)) {
+                String volumeState = vol.getState();
+                if (!Environment.MEDIA_MOUNTED.equalsIgnoreCase(volumeState) &&
+                        !Environment.MEDIA_MOUNTED_READ_ONLY.equalsIgnoreCase(volumeState)) {
+                    mountStatus = false;
+                } else {
+                    mountStatus = true;
+                }
+            }
+        }
+
+        return mountStatus;
     }
 
     /**
