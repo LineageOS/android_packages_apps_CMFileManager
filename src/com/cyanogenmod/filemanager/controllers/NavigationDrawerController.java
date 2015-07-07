@@ -240,15 +240,16 @@ public class NavigationDrawerController implements ResultCallback<ProviderInfoLi
                     }
                     if (!TextUtils.isEmpty(path)) {
                         String lowerPath = path.toLowerCase(Locale.ROOT);
+                        String name = null;
                         Bookmark bookmark;
                         if (lowerPath.contains(STR_USB)) {
-                            usbBookmarks.add(new Bookmark(USB, StorageHelper
-                                    .getStorageVolumeDescription(mCtx,
-                                            volume), path));
+                            name = mCtx.getResources()
+                                    .getString(R.string.navigation_item_title_usb);
+                            usbBookmarks.add(new Bookmark(USB, name, path));
                         } else {
-                            sdBookmarks.add(new Bookmark(SDCARD, StorageHelper
-                                    .getStorageVolumeDescription(mCtx,
-                                            volume), path));
+                            name = mCtx.getResources()
+                                    .getString(R.string.navigation_item_title_sdcard);
+                            sdBookmarks.add(new Bookmark(SDCARD, name, path));
                         }
                     }
                 }
