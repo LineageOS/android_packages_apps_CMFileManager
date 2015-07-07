@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ff73747_807898f8",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 585,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-07-07T22:44:39Z",
+      "side": 1,
+      "message": "un-needed",
+      "range": {
+        "startLine": 585,
+        "startChar": 14,
+        "endLine": 585,
+        "endChar": 21
+      },
+      "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
