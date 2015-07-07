@@ -16,6 +16,24 @@
       "revId": "9492f54d8934b00e1096ea3fb8ac4de0402f3254",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_fd494732",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 1126,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-07-07T03:54:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ffa3b31_8462ea15",
+      "revId": "9492f54d8934b00e1096ea3fb8ac4de0402f3254",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
