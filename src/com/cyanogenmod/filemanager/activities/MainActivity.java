@@ -17,15 +17,19 @@
 package com.cyanogenmod.filemanager.activities;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
+import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentManager.OnBackStackChangedListener;
@@ -53,8 +57,8 @@ import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.ui.fragments.HomeFragment;
 import com.cyanogenmod.filemanager.ui.fragments.LoginFragment;
 import com.cyanogenmod.filemanager.ui.fragments.NavigationFragment;
+import com.cyanogenmod.filemanager.ui.fragments.NavigationFragment.OnGoHomeRequestListener;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationView.OnBackRequestListener;
-import com.cyanogenmod.filemanager.util.DialogHelper;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
 import com.cyanogenmod.filemanager.util.StorageHelper;
@@ -63,9 +67,6 @@ import java.io.File;
 import java.io.InvalidClassException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.cyanogenmod.filemanager.controllers.NavigationDrawerController
-        .NAVIGATION_DRAWER_HOME;
 
 /**
  * The main navigation activity. This activity is the center of the application.
@@ -80,7 +81,7 @@ import static com.cyanogenmod.filemanager.controllers.NavigationDrawerController
  * the app is killed, is restarted from his initial state.
  */
 public class MainActivity extends ActionBarActivity
-        implements OnItemClickListener, OnBackRequestListener {
+        implements OnItemClickListener, OnBackRequestListener, OnGoHomeRequestListener {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -144,6 +145,18 @@ public class MainActivity extends ActionBarActivity
     private List<StorageProviderInfo> mProviderInfoList;
     private boolean mPopBackStack = false;
 
+    private final BroadcastReceiver mNotificationReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent != null) {
+                if (intent.getAction().equals(Intent.ACTION_MEDIA_MOUNTED) ||
+                        intent.getAction().equals(Intent.ACTION_MEDIA_UNMOUNTED)) {
+                    mNavigationDrawerController.loadNavigationDrawerItems();
+                }
+            }
+        }
+    };
+
     /**
      * {@inheritDoc}
      */
@@ -151,6 +164,13 @@ public class MainActivity extends ActionBarActivity
     protected void onCreate(Bundle state) {
         //Save state
         super.onCreate(state);
+
+        IntentFilter newFilter = new IntentFilter();
+        newFilter.addAction(Intent.ACTION_MEDIA_MOUNTED);
+        newFilter.addAction(Intent.ACTION_MEDIA_UNMOUNTED);
+        newFilter.addDataScheme(ContentResolver.SCHEME_FILE);
+        registerReceiver(mNotificationReceiver, newFilter);
+
         //Set the main layout of the activity
         setContentView(R.layout.navigation);
 
@@ -204,6 +224,21 @@ public class MainActivity extends ActionBarActivity
         }
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void onDestroy() {
+        if (DEBUG) {
+            Log.d(TAG, "MainActivity.onDestroy"); //$NON-NLS-1$
+        }
+
+        // Unregister the receiver
+        unregisterReceiver(this.mNotificationReceiver);
+
+        super.onDestroy();
+    }
+
     public void setCurrentFragment(FragmentType fragmentType) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         boolean noBackStack = false;
@@ -213,8 +248,8 @@ public class MainActivity extends ActionBarActivity
             case NAVIGATION:
                 mPopBackStack = false;
                 currentFragment = new NavigationFragment();
-                ((NavigationFragment)currentFragment)
-                        .setOnBackRequestListener(this);
+                ((NavigationFragment) currentFragment).setOnBackRequestListener(this);
+                ((NavigationFragment) currentFragment).setOnGoHomeRequestListener(this);
                 ((NavigationFragment)currentFragment)
                         .setOnDirectoryChangedListener(mNavigationDrawerController);
                 fragmentTag = fragmentType.name();
@@ -549,5 +584,18 @@ public class MainActivity extends ActionBarActivity
     @Override
     public void onBackRequested() {
         onBackPressed();
+    }
+
+    @Override
+    public void onGoHomeRequested(String message) {
+        if (DEBUG) Log.d(TAG, "onGoHomeRequested");
+        setCurrentFragment(FragmentType.HOME);
+        mNavigationDrawerController.setSelected(R.id.navigation_item_home);
+
+        if (!TextUtils.isEmpty(message)) {
+            // Alert the user of what happened.
+            final View view = findViewById(R.id.navigation_fragment_container);
+            Snackbar.make(view, message, Snackbar.LENGTH_LONG).show();
+        }
     }
 }

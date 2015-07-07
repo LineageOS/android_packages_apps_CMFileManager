@@ -107,7 +107,7 @@ public class ListCommand extends Program implements ListExecutable {
                 new ResultCallback<DocumentResult>() {
                     @Override
                     public void onResult(DocumentResult documentResult) {
-                        if (documentResult == null) {
+                        if (documentResult == null || !documentResult.getStatus().isSuccess()) {
                             Log.e(TAG, "Result: FAIL. No results returned."); //$NON-NLS-1$
                             return;
                         }
