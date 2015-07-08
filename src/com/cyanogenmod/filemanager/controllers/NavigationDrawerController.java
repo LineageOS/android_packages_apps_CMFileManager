@@ -17,17 +17,12 @@
 package com.cyanogenmod.filemanager.controllers;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Environment;
 import android.os.storage.StorageVolume;
 import android.support.design.widget.NavigationView;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import com.cyanogen.ambient.common.api.ResultCallback;
 import com.cyanogen.ambient.storage.StorageApi;
@@ -337,8 +332,8 @@ public class NavigationDrawerController implements ResultCallback<ProviderInfoLi
     public void addProviderInfoItem(int providerHashCode, StorageProviderInfo providerInfo) {
         Drawable icon = StorageProviderUtils.loadPackageIcon(mCtx, providerInfo.getAuthority(),
                 providerInfo.getIcon());
-        // TODO: use storageprovider primary color, for now use misc_primary (black)
-        int color = mCtx.getResources().getColor(R.color.misc_primary);
+        int color = StorageProviderUtils.loadProviderColor(mCtx, providerInfo.getAuthority(),
+                providerInfo.getPrimaryColor());
         mProvidersMap.put(providerHashCode, providerInfo);
         mNavigationDrawerItemList.add(mLastRoot++, new NavigationDrawerItem(providerHashCode,
                 NavigationDrawerItemType.DOUBLE, providerInfo.getTitle(), providerInfo.getSummary(),
