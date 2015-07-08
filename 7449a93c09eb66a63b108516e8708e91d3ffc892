@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5ff73747_60990c1e",
+        "filename": "res/layout/navigation.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-08T00:36:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ff73747_405bb086",
+      "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ff73747_2060a432",
         "filename": "res/layout/navigation_drawer_divider.xml",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2015-07-07T23:14:25Z",
       "side": 1,
       "message": "define in dimens.xml",
+      "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_008808c4",
+        "filename": "res/layout/navigation_drawer_divider.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-08T00:36:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ff73747_2060a432",
       "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "5ff73747_c09100f4",
+        "filename": "res/layout/navigation_drawer_double_line_item.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-08T00:36:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ff73747_0055a850",
+      "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ff73747_e0519c64",
         "filename": "res/layout/navigation_drawer_double_line_item.xml",
         "patchSetId": 9
@@ -64,6 +118,24 @@
       "writtenOn": "2015-07-07T23:14:25Z",
       "side": 1,
       "message": "If we\u0027re using single line here, do we have want o add ellipse or anything so that the display title isn\u0027t just truncated?",
+      "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_e084fcb3",
+        "filename": "res/layout/navigation_drawer_double_line_item.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-08T00:36:01Z",
+      "side": 1,
+      "message": "textview already has the ellipsis",
+      "parentUuid": "5ff73747_e0519c64",
       "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "5ff73747_a08ef4cd",
+        "filename": "res/layout/navigation_drawer_single_line_item.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-08T00:36:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ff73747_c04ea0c0",
+      "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ff73747_a04b94ae",
         "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
         "patchSetId": 9
@@ -98,6 +188,24 @@
       "writtenOn": "2015-07-07T23:14:25Z",
       "side": 1,
       "message": "Can drop this method override if we aren\u0027t doing anything here.",
+      "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_60c22cec",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 327,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-08T00:36:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ff73747_a04b94ae",
       "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "5ff73747_40b73088",
+        "filename": "src/com/cyanogenmod/filemanager/controllers/NavigationDrawerController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-08T00:36:01Z",
+      "side": 1,
+      "message": "Nope... Done",
+      "parentUuid": "5ff73747_60cb4c1e",
+      "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ff73747_40d050ca",
         "filename": "src/com/cyanogenmod/filemanager/controllers/NavigationDrawerController.java",
         "patchSetId": 9
@@ -132,6 +258,24 @@
       "writtenOn": "2015-07-07T23:14:25Z",
       "side": 1,
       "message": "should this be \"\u003e\u003d 0\"?",
+      "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_20bc2468",
+        "filename": "src/com/cyanogenmod/filemanager/controllers/NavigationDrawerController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-08T00:36:01Z",
+      "side": 1,
+      "message": "HEADER is always 0, and should never be selected.\nThat said, this is addressed in a later patch, but i\u0027ll change it to \u003e\u003d  incase mCurrentSelection does become zero.",
+      "parentUuid": "5ff73747_40d050ca",
       "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -155,6 +299,24 @@
         "endLine": 585,
         "endChar": 21
       },
+      "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_00b12890",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 585,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-08T00:36:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ff73747_807898f8",
       "revId": "7449a93c09eb66a63b108516e8708e91d3ffc892",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
