@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ff73747_e6d654c4",
+        "filename": "src/com/cyanogenmod/filemanager/controllers/NavigationDrawerController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 1448
+      },
+      "writtenOn": "2015-07-08T23:31:41Z",
+      "side": 1,
+      "message": "Should this be done async?",
+      "revId": "b6dcd54d5f35991414c88e306e9d7cfceb95a80f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
