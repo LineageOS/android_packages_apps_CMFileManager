@@ -17,17 +17,13 @@
 package com.cyanogenmod.filemanager.controllers;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Environment;
 import android.os.storage.StorageVolume;
 import android.support.design.widget.NavigationView;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import com.cyanogen.ambient.common.api.ResultCallback;
 import com.cyanogen.ambient.storage.StorageApi;
@@ -335,14 +331,40 @@ public class NavigationDrawerController implements ResultCallback<ProviderInfoLi
     }
 
     public void addProviderInfoItem(int providerHashCode, StorageProviderInfo providerInfo) {
-        Drawable icon = StorageProviderUtils.loadPackageIcon(mCtx, providerInfo.getAuthority(),
-                providerInfo.getIcon());
-        // TODO: use storageprovider primary color, for now use misc_primary (black)
-        int color = mCtx.getResources().getColor(R.color.misc_primary);
-        mProvidersMap.put(providerHashCode, providerInfo);
-        mNavigationDrawerItemList.add(mLastRoot++, new NavigationDrawerItem(providerHashCode,
-                NavigationDrawerItemType.DOUBLE, providerInfo.getTitle(), providerInfo.getSummary(),
-                icon, color));
+        new AddProviderInfoTask(providerInfo, providerHashCode).execute();
+    }
+
+    private class AddProviderInfoTask extends AsyncTask<Void, Void, Integer> {
+        private StorageProviderInfo mProviderInfo;
+        int mProviderHashCode;
+
+        AddProviderInfoTask (StorageProviderInfo providerInfo, int providerHashCode) {
+            mProviderInfo = providerInfo;
+            mProviderHashCode = providerHashCode;
+        }
+
+        @Override
+        protected Integer doInBackground(Void... params) {
+            if (mProviderInfo == null) {
+                return -1;
+            }
+
+            return StorageProviderUtils.loadProviderColor(mCtx, mProviderInfo.getAuthority(),
+                    mProviderInfo.getPrimaryColor());
+        }
+
+        @Override
+        protected void onPostExecute(Integer integer) {
+            int color = integer.intValue();
+            Drawable icon = StorageProviderUtils.loadPackageIcon(mCtx,
+                    mProviderInfo.getAuthority(), mProviderInfo.getIcon());
+            mProvidersMap.put(mProviderHashCode, mProviderInfo);
+            mNavigationDrawerItemList.add(mLastRoot++,
+                    new NavigationDrawerItem(mProviderHashCode,
+                    NavigationDrawerItemType.DOUBLE, mProviderInfo.getTitle(),
+                            mProviderInfo.getSummary(),
+                    icon, color));
+        }
     }
 
     public StorageProviderInfo getProviderInfoFromMenuItem(int key) {

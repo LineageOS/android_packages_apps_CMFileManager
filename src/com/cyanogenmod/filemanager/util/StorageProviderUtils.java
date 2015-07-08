@@ -19,6 +19,7 @@ package com.cyanogenmod.filemanager.util;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.Log;
@@ -27,6 +28,7 @@ import com.cyanogen.ambient.storage.StorageApi;
 import com.cyanogen.ambient.storage.StorageApi.Document;
 import com.cyanogen.ambient.storage.StorageApi.Document.DocumentResult;
 import com.cyanogen.ambient.storage.provider.StorageProviderInfo;
+import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
 
 import java.util.LinkedList;
@@ -78,6 +80,28 @@ public final class StorageProviderUtils {
             }
         }
         return null;
+    }
+
+    public static int loadProviderColor(Context context, String authority, int colorResId) {
+        int color = context.getResources().getColor(R.color.misc_primary);
+        if (colorResId != 0) {
+            if (authority != null) {
+                final PackageManager pm = context.getPackageManager();
+                final ProviderInfo info = pm.resolveContentProvider(authority, 0);
+                if (info != null) {
+                    Resources res = null;
+                    try {
+                        res = pm.getResourcesForApplication(info.packageName);
+                    } catch (PackageManager.NameNotFoundException e) {
+                        // No-op let's just return the default
+                    }
+                    if (res != null) {
+                        color = res.getColor(colorResId);
+                    }
+                }
+            }
+        }
+        return color;
     }
 
     public static List<PathInfo> reconstructStorageApiFilePath(final String file) {
