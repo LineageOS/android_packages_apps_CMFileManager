@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ff73747_e36526e3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-08T03:41:59Z",
+      "side": 1,
+      "message": "Fragment sp*",
+      "revId": "c06b85b78745082b9e333caa5f7e541ff8368c1b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_2382ee50",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 2459,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-08T03:41:59Z",
+      "side": 1,
+      "message": "Method*",
+      "revId": "c06b85b78745082b9e333caa5f7e541ff8368c1b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
