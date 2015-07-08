@@ -1801,12 +1801,14 @@ public class NavigationActivity extends Activity
             mDrawerLayout.closeDrawer(Gravity.START);
             return;
         }
-        if (checkBackAction()) {
-            performHideEasyMode();
+
+        boolean upToParent = mHistory.size() > 0;
+
+        if (mNeedsEasyMode && !isEasyModeVisible() && !upToParent) {
+            performShowEasyMode();
             return;
         } else {
-            if (mNeedsEasyMode && !isEasyModeVisible()) {
-                performShowEasyMode();
+            if (checkBackAction()) {
                 return;
             }
         }
