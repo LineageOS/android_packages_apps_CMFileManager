@@ -385,6 +385,7 @@ public class MainActivity extends ActionBarActivity
      */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        view.setSelected(true);
         int itemId = view.getId();
         switch (itemId) {
             case R.id.navigation_item_home:
