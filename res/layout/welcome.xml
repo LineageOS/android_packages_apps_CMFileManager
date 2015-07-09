@@ -44,6 +44,7 @@
                 android:layout_margin="24dp">
 
                 <TextView
+                    android:id="@+id/welcome_textview_0"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/welcome_to"
@@ -51,6 +52,7 @@
                     android:textColor="@android:color/white"/>
 
                 <TextView
+                    android:id="@+id/welcome_textview_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/file"
@@ -58,6 +60,7 @@
                     android:textColor="@android:color/white"/>
 
                 <TextView
+                    android:id="@+id/welcome_textview_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/manager"
@@ -65,6 +68,7 @@
                     android:textColor="@android:color/white"/>
 
                 <TextView
+                    android:id="@+id/welcome_textview_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/welcome_desc"
