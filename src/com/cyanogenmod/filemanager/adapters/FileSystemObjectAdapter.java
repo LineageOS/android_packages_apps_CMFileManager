@@ -21,6 +21,7 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
+import android.util.Log;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
@@ -59,6 +60,7 @@ import java.util.List;
  */
 public class FileSystemObjectAdapter
     extends ArrayAdapter<FileSystemObject> implements OnClickListener {
+    private static final String TAG = FileSystemObjectAdapter.class.getSimpleName();
 
     /**
      * An interface to communicate selection changes events.
@@ -522,34 +524,14 @@ public class FileSystemObjectAdapter
      * @param item The path or the {@link FileSystemObject}
      */
     private void openPropertiesDialog(Object item) {
+        FileSystemObject fso = null;
         // Resolve the full path
         String path = String.valueOf(item);
         if (item instanceof FileSystemObject) {
             path = ((FileSystemObject)item).getFullPath();
-        }
-
-        // Prior to show the dialog, refresh the item reference
-        FileSystemObject fso = null;
-        try {
-            fso = CommandHelper.getFileInfo(getContext(), path, false, null);
-            if (fso == null) {
-                throw new NoSuchFileOrDirectory(path);
-            }
-
-        } catch (Exception e) {
-            // Notify the user
-            ExceptionUtil.translateException(getContext(), e);
-
-            // Remove the object
-            if (e instanceof FileNotFoundException || e instanceof NoSuchFileOrDirectory) {
-                // If have a FileSystemObject reference then there is no need to search
-                // the path (less resources used)
-                if (item instanceof FileSystemObject) {
-                    //removeItem((FileSystemObject)item);
-                } else {
-                    //removeItem((String)item);
-                }
-            }
+            fso = (FileSystemObject)item;
+        } else {
+            Log.e(TAG, "Failed to open Properties Dialog. Invalid file object.");
             return;
         }
 
