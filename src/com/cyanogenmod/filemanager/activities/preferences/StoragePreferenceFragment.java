@@ -128,6 +128,8 @@ public class StoragePreferenceFragment extends TitlePreferenceFragment {
         // Add the preferences
         addPreferencesFromResource(R.xml.preferences_storage);
 
+        getPreferenceScreen().setWidgetLayoutResource(R.layout.long_preference);
+
         // Reset password
         mResetPassword = findPreference(KEY_RESET_PASSWORD);
         mResetPassword.setOnPreferenceClickListener(mOnClickListener);
