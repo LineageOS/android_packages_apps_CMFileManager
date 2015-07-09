@@ -36,10 +36,12 @@
       <SwitchPreference
         android:key="cm_filemanager_secure_storage_delayed_sync"
         android:title="@string/pref_secure_storage_delayed_sync_title"
-        android:summary="@string/pref_secure_storage_delayed_sync_summary"
         android:persistent="true"
         android:defaultValue="true" />
 
+      <Preference
+        android:summary="@string/pref_secure_storage_delayed_sync_summary"
+        android:selectable="false"/>
     </PreferenceCategory>
 
 </PreferenceScreen>
