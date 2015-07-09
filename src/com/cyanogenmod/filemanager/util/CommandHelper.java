@@ -772,7 +772,8 @@ public final class CommandHelper {
         Console cSrc = ensureConsoleForFile(context, console, src);
         Console cDst = ensureConsoleForFile(context, console, dst);
         boolean ret = true;
-        if (cSrc.equals(cDst) && !FileHelper.isSamePath(src, dst)) {
+        if (cSrc.equals(cDst) && (!FileHelper.isSamePath(src, dst) ||
+                cSrc instanceof StorageApiConsole || cDst instanceof StorageApiConsole)) {
             // Is safe to use the same console
             MoveExecutable executable =
                     cSrc.getExecutableFactory().newCreator().createMoveExecutable(src, dst);
