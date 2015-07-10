@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ff73747_d2e5523a",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-10T05:35:44Z",
+      "side": 1,
+      "message": "why is this in a try block?",
+      "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_b2e2c62e",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-10T05:35:44Z",
+      "side": 1,
+      "message": "??",
+      "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_92d10a5b",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 601,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-10T05:35:44Z",
+      "side": 1,
+      "message": "Alert the user *of* what happened",
+      "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_72d67e52",
+        "filename": "src/com/cyanogenmod/filemanager/controllers/NavigationDrawerController.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-10T05:35:44Z",
+      "side": 1,
+      "message": "Context has a \"getString\" that\u0027ll take a resId",
+      "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_52cb82a4",
+        "filename": "src/com/cyanogenmod/filemanager/controllers/NavigationDrawerController.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-10T05:35:44Z",
+      "side": 1,
+      "message": "Same as above.",
+      "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_12c5fa8e",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 658,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-10T05:35:44Z",
+      "side": 1,
+      "message": "?? what does this comment mean?",
+      "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_b2bbe60c",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 2487,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-10T05:35:44Z",
+      "side": 1,
+      "message": "low pri - \nI like this listener mechanism, I think it makes sense to maintain a map or list of listeners so that we can have multiple listeners we can notify. It may just be a future proofing mechanism, so feel free to disregard.",
+      "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
