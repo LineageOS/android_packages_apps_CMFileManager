@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ff73747_d7f2e49a",
+        "filename": "androidTest/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-10T02:35:30Z",
+      "side": 1,
+      "message": "don\u0027t use tabs, always use 4 spaces",
+      "revId": "4e871d1fbc49d581d5a46d39886b9295a24ac022",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_f7f5e084",
+        "filename": "androidTest/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-10T02:35:30Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "4e871d1fbc49d581d5a46d39886b9295a24ac022",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_17f96c7f",
+        "filename": "androidTest/AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-10T02:35:30Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "4e871d1fbc49d581d5a46d39886b9295a24ac022",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_b7ef58af",
+        "filename": "androidTest/res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-10T02:35:30Z",
+      "side": 1,
+      "message": "update the year",
+      "revId": "4e871d1fbc49d581d5a46d39886b9295a24ac022",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff73747_972a1ce5",
+        "filename": "androidTest/src/com/cyanogenmod/filemanager/activities/WelcomeActivityTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-10T02:35:30Z",
+      "side": 1,
+      "message": "copyright header",
+      "revId": "4e871d1fbc49d581d5a46d39886b9295a24ac022",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
