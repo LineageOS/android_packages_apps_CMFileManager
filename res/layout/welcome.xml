@@ -115,6 +115,7 @@
             android:id="@+id/itemThree">
 
             <TextView
+                android:id="@+id/titleMessageTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/second_title"
@@ -122,6 +123,7 @@
                 android:textColor="@android:color/white"/>
 
             <TextView
+                android:id="@+id/bottomMessageTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/second_message"
