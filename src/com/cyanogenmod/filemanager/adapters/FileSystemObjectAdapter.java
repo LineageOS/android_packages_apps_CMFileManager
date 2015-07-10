@@ -37,6 +37,7 @@ import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.model.ParentDirectory;
+import com.cyanogenmod.filemanager.model.RootDirectory;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
 import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.ui.IconHolder;
@@ -247,6 +248,11 @@ public class FileSystemObjectAdapter
             StringBuilder sbSummary = new StringBuilder();
             if (fso instanceof ParentDirectory) {
                 sbSummary.append(res.getString(R.string.parent_dir));
+            } else if (fso instanceof RootDirectory) {
+                // TODO: add summary for root list directories
+                // Currently RootDirectory is only used in picker activity, which uses simple view
+                // by default (no summary).
+                // Roots List needs to add a summary if the user is in privileged mode
             } else {
                 if (!FileHelper.isDirectory(fso)) {
                     sbSummary.append(FileHelper.getHumanReadableSize(fso));
