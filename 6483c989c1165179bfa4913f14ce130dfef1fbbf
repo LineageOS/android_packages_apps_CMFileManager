@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f013ff3_7b941fe9",
+        "filename": "res/xml/preferences_storage.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-07-10T22:49:05Z",
+      "side": 1,
+      "message": "You might want to set selectable to false or disable this preference since it\u0027s just there for displaying text.",
+      "range": {
+        "startLine": 42,
+        "startChar": 7,
+        "endLine": 42,
+        "endChar": 17
+      },
+      "revId": "6483c989c1165179bfa4913f14ce130dfef1fbbf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
