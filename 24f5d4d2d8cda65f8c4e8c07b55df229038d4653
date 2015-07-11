@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1f013ff3_5e66f153",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-11T04:10:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ff73747_d2e5523a",
+      "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ff73747_b2e2c62e",
         "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2015-07-10T05:35:44Z",
       "side": 1,
       "message": "??",
+      "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f013ff3_3e5b2588",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-11T04:10:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ff73747_b2e2c62e",
       "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "1f013ff3_5ecb911d",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 601,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-11T04:10:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ff73747_92d10a5b",
+      "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ff73747_72d67e52",
         "filename": "src/com/cyanogenmod/filemanager/controllers/NavigationDrawerController.java",
         "patchSetId": 7
@@ -64,6 +118,24 @@
       "writtenOn": "2015-07-10T05:35:44Z",
       "side": 1,
       "message": "Context has a \"getString\" that\u0027ll take a resId",
+      "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f013ff3_1e606932",
+        "filename": "src/com/cyanogenmod/filemanager/controllers/NavigationDrawerController.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-11T04:10:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ff73747_72d67e52",
       "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "1f013ff3_fe549d56",
+        "filename": "src/com/cyanogenmod/filemanager/controllers/NavigationDrawerController.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-11T04:10:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ff73747_52cb82a4",
+      "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ff73747_12c5fa8e",
         "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
         "patchSetId": 7
@@ -98,6 +188,24 @@
       "writtenOn": "2015-07-10T05:35:44Z",
       "side": 1,
       "message": "?? what does this comment mean?",
+      "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f013ff3_9e4b59af",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 658,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-11T04:10:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ff73747_12c5fa8e",
       "revId": "24f5d4d2d8cda65f8c4e8c07b55df229038d4653",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
