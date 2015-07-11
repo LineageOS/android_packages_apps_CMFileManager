@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f013ff3_9efeb9ac",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 1130,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-07-11T01:41:33Z",
+      "side": 1,
+      "message": "What does the UI look if this case happens?  Looks like we publish 100% progress and consider it a success and return true?",
+      "revId": "67dcd91bab19cf8e9e039f9fc909c3956f76fc38",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
