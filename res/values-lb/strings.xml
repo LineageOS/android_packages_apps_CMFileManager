@@ -374,7 +374,10 @@
   <string name="ash_keyword">Schlësselwuert</string>
   <string name="ash_quoted_string">Text tëscht Gänseféisercher</string>
   <string name="ash_variable">Variabel</string>
+  <string name="secure_storage_unlock_title">Séchere Späicher entspären</string>
+  <string name="secure_storage_create_title">Séchere Späicher erstellen</string>
   <string name="secure_storage_reset_title">Passwuert zrécksetzen</string>
+  <string name="secure_storage_delete_title">Séchere Späicher läschen</string>
   <string name="secure_storage_unlock_key_prompt_msg">Passwuert agi fir de séchere Fichierssystem z\'entspären.</string>
   <string name="secure_storage_unlock_key_new_msg">Gëff e Passwuert a fir de séchere Fichierssystem ze schützen.</string>
   <string name="secure_storage_unlock_key_reset_msg">Gëff dat aktuellt an dat neit Passwuert an, fir de séchere Fichierssystem zréckzesetzen.</string>

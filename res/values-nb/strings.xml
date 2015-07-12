@@ -381,7 +381,10 @@
   <string name="ash_keyword">Nøkkelord</string>
   <string name="ash_quoted_string">Streng i anførselstegn</string>
   <string name="ash_variable">Variabel</string>
+  <string name="secure_storage_unlock_title">Lås opp sikker lagring</string>
+  <string name="secure_storage_create_title">Opprett sikker lagring</string>
   <string name="secure_storage_reset_title">Tilbakestill Passord</string>
+  <string name="secure_storage_delete_title">Slett sikker lagring</string>
   <string name="secure_storage_unlock_key_prompt_msg">Skriv inn passordet for å låse opp Sikker lagring.</string>
   <string name="secure_storage_unlock_key_new_msg">Skriv inn et passord for å beskytte sikker lagring.</string>
   <string name="secure_storage_unlock_key_reset_msg">Skriv inn gjeldende og nye passordet for å tilbakestille Sikker lagring.</string>
