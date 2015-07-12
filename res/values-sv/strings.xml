@@ -52,9 +52,11 @@
   <string name="msgs_privileged_console_alloc_failed">Kan inte köra med Rootläge. Växlar lite Säkert läge.</string>
   <string name="msgs_settings_save_failure">Denna inställning kunde inte verkställas eller lagras.</string>
   <string name="msgs_settings_invalid_initial_directory">Hemmappen \"<xliff:g id="initial_dir">%1$s</xliff:g>\" är felaktig. Växlar till rotmapp.</string>
+  <string name="root_not_available_msg">Root är inte tillgänglig på den här enheten. Kan inte utföra den här åtgärden.</string>
   <string name="msgs_success">Åtgärden genomfördes framgångsrikt.</string>
   <string name="msgs_unknown">Ett fel upptäcktes. Åtgärden misslyckades.</string>
   <string name="msgs_insufficient_permissions">Denna åtgärd kräver förhöjda rättigheter. Försök att ändra till Rootläge.</string>
+  <string name="msgs_no_disk_space">Åtgärden misslyckades eftersom det inte finns något utrymme kvar på enheten.</string>
   <string name="msgs_file_not_found">Filen eller mappen kunde inte hittas.</string>
   <string name="msgs_command_not_found">Åtgärdens kommando kunde inte hittas eller har en felaktig definition.</string>
   <string name="msgs_io_failed">Read/write-fel.</string>
@@ -247,6 +249,7 @@
   <string name="input_name_dialog_message_empty_name">Namnet kan inte vara tomt.</string>
   <string name="input_name_dialog_message_invalid_path_name">Ogiltigt namn. Tecknena
     \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' är inte tillåtna.</string>
+  <string name="input_name_dialog_message_invalid_name_length">Högsta tillåtna teckengränsen nådd.</string>
   <string name="input_name_dialog_message_invalid_name">Ogiltigt namn. Namnen \'.\' och
     \'..\' är inte tillåtna.</string>
   <string name="input_name_dialog_message_name_exists">Namnet finns redan.</string>

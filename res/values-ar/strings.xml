@@ -278,7 +278,7 @@
   <string name="pref_access_mode_prompt">وضع المستخدم السريع</string>
   <string name="pref_access_mode_prompt_summary">وضعالمستخدم السريع\n\n التطبيق قيد التشغيل مع إمكانية الوصول الكامل إلى نظام الملفات، لكن سيتم المطالبة للحصول على إذن قبل تنفيذ أية إجراءات مميزة</string>
   <string name="pref_access_mode_root">وضع صلاحيات الجذر</string>
-  <string name="pref_access_mode_root_summary">وضع صلاحيات الجذور\n\nتحذير! هذا الوضع يسمح للعمليات التي يمكن أن تكسر الجهاز الخاص بك. هو مسؤوليتك التأكد من أن عملية آمنة</string>
+  <string name="pref_access_mode_root_summary">وضع الوصول إلى root\n\nتحذير! هذا الوضع يسمح للعمليات التي يمكن أن تكسر الجهاز الخاص بك. هو مسؤوليتك التأكد من أن عملية آمنة</string>
   <string name="pref_restrict_secondary_users_access_title">تقييد الوصول إلى المستخدمين</string>
   <string name="pref_restrict_secondary_users_access_summary">تقييد الوصول إلى النظام برمته للمستخدمين الثانوية</string>
   <string name="pref_search_results_category">النتائج</string>
