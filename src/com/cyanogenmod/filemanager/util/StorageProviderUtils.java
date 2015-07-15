@@ -125,7 +125,7 @@ public final class StorageProviderUtils {
                 PendingResult<DocumentResult> pendingResult =
                         storageApi.getMetadata(providerInfo, path, false);
                 DocumentResult documentResult = pendingResult.await();
-                if (documentResult == null) {
+                if (documentResult == null || !documentResult.getStatus().isSuccess()) {
                     Log.e(TAG, "Result: FAIL. No results returned."); //$NON-NLS-1$
                     break;
                 }

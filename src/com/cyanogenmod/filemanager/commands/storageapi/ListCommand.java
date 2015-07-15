@@ -110,6 +110,10 @@ public class ListCommand extends Program implements ListExecutable {
                     public void onResult(DocumentResult documentResult) {
                         if (documentResult == null || !documentResult.getStatus().isSuccess()) {
                             Log.e(TAG, "Result: FAIL. No results returned."); //$NON-NLS-1$
+                            mFinished = true;
+                            synchronized (mSync) {
+                                mSync.notify();
+                            }
                             return;
                         }
                         try {
