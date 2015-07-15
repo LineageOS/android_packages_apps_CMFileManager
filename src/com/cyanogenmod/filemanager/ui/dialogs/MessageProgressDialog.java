@@ -118,6 +118,7 @@ public class MessageProgressDialog implements DialogInterface.OnClickListener {
                                         titleResourceId,
                                         layout);
         this.mDialog.setCancelable(cancellable);
+        this.mDialog.setCanceledOnTouchOutside(false);
         if (cancellable) {
             this.mDialog.setButton(
                     DialogInterface.BUTTON_NEUTRAL, context.getString(android.R.string.cancel), this);
