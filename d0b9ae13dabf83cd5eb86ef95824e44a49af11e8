@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff0f0b1f_9730db09",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-16T05:02:45Z",
+      "side": 1,
+      "message": "should try to keep the commit message \u003c 70 char line wrap",
+      "revId": "d0b9ae13dabf83cd5eb86ef95824e44a49af11e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
