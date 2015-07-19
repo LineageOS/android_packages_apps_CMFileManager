@@ -374,7 +374,10 @@
   <string name="ash_keyword">Kata kunci</string>
   <string name="ash_quoted_string">Teks dikutip</string>
   <string name="ash_variable">Variabel</string>
+  <string name="secure_storage_unlock_title">Buka penyimpanan aman</string>
+  <string name="secure_storage_create_title">Buat penyimpanan aman</string>
   <string name="secure_storage_reset_title">Atur ulang kata sandi</string>
+  <string name="secure_storage_delete_title">Hapus penyimpanan aman</string>
   <string name="secure_storage_unlock_key_prompt_msg">Ketik kata sandi untuk membuka penyimpanan sistem file yang aman.</string>
   <string name="secure_storage_unlock_key_new_msg">Ketik kata sandi untuk melindungi penyimpanan sistem file yang aman.</string>
   <string name="secure_storage_unlock_key_reset_msg">Ketik kata sandi saat ini dan yang baru untuk menyetel ulang penyimpanan sistem file yang aman.</string>
