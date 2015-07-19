@@ -73,7 +73,7 @@
   <string name="msgs_overwrite_files">Fitxategiren bat helmugako karpetan existitzen da jada.\n\n Gainidatzi?</string>
   <string name="msgs_action_association_failed">Ekintza aplikazioari lotzeak huts egin du.</string>
   <string name="advise_insufficient_permissions">Eragiketa honek super-erabiltzaile baimenak behar ditu. \n\nRoot sarbide modura aldatu nahi duzu?</string>
-  <string name="parent_dir">Guraso karpeta</string>
+  <string name="parent_dir">Karpeta gurasoa</string>
   <string name="external_storage">Kanpo biltegiratzea</string>
   <string name="usb_storage">USB biltegiratzea</string>
   <string name="actionbar_button_filesystem_cd">Fitxategi sistema</string>
