@@ -209,6 +209,8 @@ public class NavigationActivity extends Activity
     private NavigationCustomTitleView mCustomTitleView;
     private InputMethodManager mImm;
 
+    private boolean mRefreshOnResume = true;
+
     private final BroadcastReceiver mNotificationReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -647,7 +649,9 @@ public class NavigationActivity extends Activity
         if (curDir != null) {
             VirtualMountPointConsole vc = VirtualMountPointConsole.getVirtualConsoleForPath(
                     mNavigationViews[mCurrentNavigationView].getCurrentDir());
-            getCurrentNavigationView().refresh(true);
+            if (mRefreshOnResume) {
+                getCurrentNavigationView().refresh(true);
+            }
             if (vc != null && !vc.isMounted()) {
                 onRequestBookmarksRefresh();
                 removeUnmountedHistory();
@@ -1907,6 +1911,7 @@ public class NavigationActivity extends Activity
             switch (requestCode) {
                 case INTENT_REQUEST_SEARCH:
                     if (resultCode == RESULT_OK) {
+                        mRefreshOnResume = false;
                         //Change directory?
                         Bundle bundle = data.getExtras();
                         if (bundle != null) {
@@ -1916,7 +1921,7 @@ public class NavigationActivity extends Activity
                                     bundle.getParcelable(EXTRA_SEARCH_LAST_SEARCH_DATA);
                             if (fso != null) {
                                 //Goto to new directory
-                                getCurrentNavigationView().open(fso, searchInfo);
+                                getCurrentNavigationView().open(fso, null);
                                 performHideEasyMode();
                             }
                         }
