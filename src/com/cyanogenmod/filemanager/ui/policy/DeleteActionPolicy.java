@@ -314,7 +314,6 @@ public final class DeleteActionPolicy extends ActionsPolicy {
                 // Check that the operation was completed retrieving the deleted fso
                 boolean failed = false;
                 try {
-                    CommandHelper.getFileInfo(ctx, fso.getFullPath(), false, null);
                     FileSystemObject fso2 =
                             CommandHelper.getFileInfo(ctx, fso.getFullPath(), false, null);
                     if (fso2 != null) {
