@@ -127,7 +127,7 @@ public class StorageApiExecutableCreator implements ExecutableCreator {
     @Override
     public DeleteDirExecutable createDeleteDirExecutable(String dir)
             throws CommandNotFoundException {
-        throw new CommandNotFoundException("Not implemented"); //$NON-NLS-1$
+        return new DeleteDirCommand(mConsole, dir);
     }
 
     /**
@@ -136,7 +136,7 @@ public class StorageApiExecutableCreator implements ExecutableCreator {
     @Override
     public DeleteFileExecutable createDeleteFileExecutable(String file)
             throws CommandNotFoundException {
-        throw new CommandNotFoundException("Not implemented"); //$NON-NLS-1$
+        return new DeleteFileCommand(mConsole, file);
     }
 
     /**
