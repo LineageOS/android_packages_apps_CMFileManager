@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df140735_5f03830e",
+        "filename": "androidTest/src/com/cyanogenmod/filemanager/activities/WelcomeActivityTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-21T21:43:01Z",
+      "side": 1,
+      "message": "try to keep imports specific, like you\u0027ve done with ViewActions and ViewAssertions above.",
+      "range": {
+        "startLine": 41,
+        "startChar": 64,
+        "endLine": 41,
+        "endChar": 67
+      },
+      "revId": "2654d68b58a0d5d181bcf74303afa3dc1892176e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
