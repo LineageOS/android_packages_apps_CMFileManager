@@ -1117,7 +1117,7 @@ public final class FileHelper {
      * @param providerPrefix The prefix to file path that represents a specific provider
      * @return FileSystemObject The file system object reference
      */
-    public static FileSystemObject createFileSystemObject(Document document, Document parent,
+    public static FileSystemObject createFileSystemObject(Document document,
             String providerPrefix) {
         try {
             // The user and group name of the files. Use the defaults one for sdcards
@@ -1141,7 +1141,7 @@ public final class FileHelper {
                 return
                         new Directory(
                                 document.getDisplayName(),
-                                parent.getParentId(),
+                                document.getParentId(),
                                 providerPrefix,
                                 document.getId(),
                                 user, group, perm,
@@ -1152,7 +1152,7 @@ public final class FileHelper {
             return
                     new RegularFile(
                             document.getDisplayName(),
-                            parent.getParentId(),
+                            document.getParentId(),
                             providerPrefix,
                             document.getId(),
                             user, group, perm,

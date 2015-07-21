@@ -443,6 +443,11 @@ public abstract class FileSystemObject implements Serializable, Comparable<FileS
                 return false;
         } else if (!this.mParent.equals(other.mParent))
             return false;
+        if (this.mProviderPrefix == null) {
+            if (other.mProviderPrefix != null)
+                return false;
+        } else if (!this.mProviderPrefix.equals(other.mProviderPrefix))
+            return false;
         return true;
     }
 
