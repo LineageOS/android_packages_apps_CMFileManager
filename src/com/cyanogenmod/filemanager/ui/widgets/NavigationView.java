@@ -238,9 +238,12 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         private final SearchInfoParcelable mSearchInfo;
         private final FileSystemObject mScrollTo;
         private FileSystemObject mNewDirFSO;
+        private final Map<DisplayRestrictions, Object> mRestrictions;
+        private final boolean mChRooted;
 
         public NavigationTask(boolean useCurrent, boolean addToHistory, boolean reload,
-                SearchInfoParcelable searchInfo, FileSystemObject scrollTo) {
+                SearchInfoParcelable searchInfo, FileSystemObject scrollTo,
+                Map<DisplayRestrictions, Object> restrictions, boolean chRooted) {
             super();
             this.mUseCurrent = useCurrent;
             this.mAddToHistory = addToHistory;
@@ -248,6 +251,8 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             this.mReload = reload;
             this.mScrollTo = scrollTo;
             this.mNewDirFSO = null;
+            this.mRestrictions = restrictions;
+            this.mChRooted = chRooted;
         }
 
         /**
@@ -312,7 +317,17 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
                         mNewDirFSO = CommandHelper.getFileInfo(getContext(), mNewDirChecked, null);
                     }
                 }
-                return files;
+
+                List<FileSystemObject> sortedFiles = null;
+                if (!TextUtils.equals(FileHelper.ROOTS_LIST, mNewDirChecked)) {
+                    //Apply user preferences
+                    sortedFiles = FileHelper.applyUserPreferences(files, this.mRestrictions,
+                            this.mChRooted);
+                } else {
+                    sortedFiles = files;
+                }
+
+                return sortedFiles;
 
             } catch (final ConsoleAllocException e) {
                 //Show exception and exists
@@ -1082,7 +1097,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             final boolean reload, final boolean useCurrent,
             final SearchInfoParcelable searchInfo, final FileSystemObject scrollTo) {
         NavigationTask task = new NavigationTask(useCurrent, addToHistory, reload,
-                searchInfo, scrollTo);
+                searchInfo, scrollTo, mRestrictions, mChRooted);
         task.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, newDir);
     }
 
@@ -1131,15 +1146,6 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
                 return;
             }
 
-            List<FileSystemObject> sortedFiles = null;
-            if (!TextUtils.equals(FileHelper.ROOTS_LIST, newDir)) {
-                //Apply user preferences
-                sortedFiles =
-                        FileHelper.applyUserPreferences(files, this.mRestrictions, this.mChRooted);
-            } else {
-                sortedFiles = files;
-            }
-
             //Remove parent directory if we are in the root of a chrooted environment
             if (this.mChRooted && StorageHelper.isStorageVolume(newDir) ||
                     TextUtils.equals(newDir, FileHelper.ROOT_DIRECTORY)) {
@@ -1165,8 +1171,8 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             }
 
             //Load the data
-            loadData(sortedFiles);
-            this.mFiles = sortedFiles;
+            loadData(files);
+            this.mFiles = files;
             if (searchInfo != null) {
                 searchInfo.setSuccessNavigation(true);
             }
