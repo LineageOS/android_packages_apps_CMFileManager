@@ -19,6 +19,7 @@ package com.cyanogenmod.filemanager.commands.storageapi;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.cyanogen.ambient.common.api.PendingResult;
 import com.cyanogen.ambient.common.api.ResultCallback;
 import com.cyanogen.ambient.storage.StorageApi;
 import com.cyanogen.ambient.storage.StorageApi.Document;
@@ -51,7 +52,6 @@ public class ListCommand extends Program implements ListExecutable {
     private final LIST_MODE mMode;
     private final List<FileSystemObject> mFiles;
     private final Object mSync = new Object();
-    private boolean mFinished = false;
 
     /**
      * Constructor of <code>ListCommand</code>. List mode.
@@ -72,15 +72,6 @@ public class ListCommand extends Program implements ListExecutable {
      */
     @Override
     public List<FileSystemObject> getResult() {
-        if (!mFinished) {
-            synchronized (mSync) {
-                try {
-                    mSync.wait(R.integer.storageapi_timeout);
-                } catch (InterruptedException e) {
-                    Log.e(TAG, "Result timeout. No valid results returned."); //$NON-NLS-1$
-                }
-            }
-        }
         return this.mFiles;
     }
 
@@ -104,29 +95,26 @@ public class ListCommand extends Program implements ListExecutable {
             return;
         }
 
-        storageApi.getMetadata(storageProviderInfo, mSrc, true,
-                new ResultCallback<DocumentResult>() {
-                    @Override
-                    public void onResult(DocumentResult documentResult) {
-                        if (documentResult == null || !documentResult.getStatus().isSuccess()) {
-                            Log.e(TAG, "Result: FAIL. No results returned."); //$NON-NLS-1$
-                            return;
-                        }
-                        try {
-                            processDocumentResult(documentResult);
-                        } catch (Exception e) {
-                            Log.e(TAG, "Result: Error parsing results. e=" + e); //$NON-NLS-1$
-                        }
-                        synchronized (mSync) {
-                            mSync.notify();
-                        }
-                        mFinished = true;
+        PendingResult<DocumentResult> pendingResult = storageApi.getMetadata(storageProviderInfo,
+                mSrc, true);
 
-                        if (isTrace()) {
-                            Log.v(TAG, "Result: OK"); //$NON-NLS-1$
-                        }
-                    }
-                });
+        DocumentResult result = pendingResult.await();
+        if (result == null || !result.getStatus().isSuccess()) {
+            Log.e(TAG, "Result: FAIL. No results returned."); //$NON-NLS-1$
+            return;
+        }
+        try {
+            processDocumentResult(result);
+        } catch (Exception e) {
+            Log.e(TAG, "Result: Error parsing results. e=" + e); //$NON-NLS-1$
+        }
+        synchronized (mSync) {
+            mSync.notify();
+        }
+
+        if (isTrace()) {
+            Log.v(TAG, "Result: OK"); //$NON-NLS-1$
+        }
     }
 
     private void processDocumentResult(DocumentResult result)
