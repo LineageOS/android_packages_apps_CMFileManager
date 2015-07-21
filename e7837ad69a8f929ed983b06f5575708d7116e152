@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df140735_dcad6132",
+        "filename": "src/com/cyanogenmod/filemanager/commands/storageapi/DeleteDirCommand.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-21T20:59:39Z",
+      "side": 1,
+      "message": "back to the future",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "e7837ad69a8f929ed983b06f5575708d7116e152",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df140735_fc75c5cd",
+        "filename": "src/com/cyanogenmod/filemanager/commands/storageapi/DeleteFileCommand.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-21T20:59:39Z",
+      "side": 1,
+      "message": "year",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "e7837ad69a8f929ed983b06f5575708d7116e152",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df140735_5c671127",
+        "filename": "src/com/cyanogenmod/filemanager/commands/storageapi/ListCommand.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-21T20:59:39Z",
+      "side": 1,
+      "message": "don\u0027t need this anymore",
+      "range": {
+        "startLine": 54,
+        "startChar": 25,
+        "endLine": 54,
+        "endChar": 30
+      },
+      "revId": "e7837ad69a8f929ed983b06f5575708d7116e152",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df140735_9ca7e950",
+        "filename": "src/com/cyanogenmod/filemanager/commands/storageapi/ListCommand.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-21T20:59:39Z",
+      "side": 1,
+      "message": "don\u0027t need this anymore",
+      "range": {
+        "startLine": 113,
+        "startChar": 8,
+        "endLine": 113,
+        "endChar": 9
+      },
+      "revId": "e7837ad69a8f929ed983b06f5575708d7116e152",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
