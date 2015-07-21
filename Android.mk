@@ -53,7 +53,7 @@ include $(CLEAR_VARS)
 
 LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := \
     juniversalchardet:libs/juniversalchardet/juniversalchardet-1.0.3.jar \
-    cmfm-ambientsdk:../../../vendor/ambient/ambientsdk/release/classes.jar \
+    cmfm-ambientsdk:libs/classes.jar \
     cmfm-android-support-v4:../../../external/android/support-prebuilt/appcompat/android-support-v4.jar \
     cmfm-android-support-v7-appcompat:../../../external/android/support-prebuilt/appcompat/android-support-v7-appcompat.jar \
     cmfm-android-support-design:../../../external/android/support-prebuilt/support-design/android-support-design.jar
