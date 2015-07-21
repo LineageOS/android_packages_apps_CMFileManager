@@ -28,6 +28,7 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
+import android.support.annotation.VisibleForTesting;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -291,7 +292,8 @@ public class MainActivity extends ActionBarActivity
         }
     }
 
-    private boolean isCurrentFragment(FragmentType fragmentType) {
+    @VisibleForTesting
+    protected boolean isCurrentFragment(FragmentType fragmentType) {
         Fragment fragment = getSupportFragmentManager().findFragmentByTag(fragmentType.name());
         return (fragment != null && fragment.isVisible());
     }
