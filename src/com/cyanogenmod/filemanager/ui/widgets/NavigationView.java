@@ -238,9 +238,12 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         private final SearchInfoParcelable mSearchInfo;
         private final FileSystemObject mScrollTo;
         private FileSystemObject mNewDirFSO;
+        private final Map<DisplayRestrictions, Object> mRestrictions;
+        private final boolean mChRooted;
 
         public NavigationTask(boolean useCurrent, boolean addToHistory, boolean reload,
-                SearchInfoParcelable searchInfo, FileSystemObject scrollTo) {
+                SearchInfoParcelable searchInfo, FileSystemObject scrollTo,
+                Map<DisplayRestrictions, Object> restrictions, boolean chRooted) {
             super();
             this.mUseCurrent = useCurrent;
             this.mAddToHistory = addToHistory;
@@ -248,6 +251,8 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             this.mReload = reload;
             this.mScrollTo = scrollTo;
             this.mNewDirFSO = null;
+            this.mRestrictions = restrictions;
+            this.mChRooted = chRooted;
         }
 
         /**
@@ -266,11 +271,6 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             }
 
             //Check that it is really necessary change the directory
-            if (!mReload && NavigationView.this.mCurrentDir != null &&
-                    NavigationView.this.mCurrentDir.compareTo(mNewDirChecked) == 0) {
-                return null;
-            }
-
             mHasChanged = !(NavigationView.this.mCurrentDir != null &&
                     NavigationView.this.mCurrentDir.compareTo(mNewDirChecked) == 0);
             mIsNewHistory = (NavigationView.this.mCurrentDir != null);
@@ -312,7 +312,17 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
                         mNewDirFSO = CommandHelper.getFileInfo(getContext(), mNewDirChecked, null);
                     }
                 }
-                return files;
+
+                List<FileSystemObject> sortedFiles = null;
+                if (!TextUtils.equals(FileHelper.ROOTS_LIST, mNewDirChecked)) {
+                    //Apply user preferences
+                    sortedFiles = FileHelper.applyUserPreferences(files, this.mRestrictions,
+                            this.mChRooted);
+                } else {
+                    sortedFiles = files;
+                }
+
+                return sortedFiles;
 
             } catch (final ConsoleAllocException e) {
                 //Show exception and exists
@@ -407,28 +417,11 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         @Override
         protected void onPostExecute(List<FileSystemObject> files) {
             // This means an exception. This method will be recalled then
-            if (files != null) {
-                onPostExecuteTask(files, mAddToHistory, mIsNewHistory, mHasChanged,
+            onPostExecuteTask(files, mAddToHistory, mIsNewHistory, mHasChanged,
                         mSearchInfo, mNewDirChecked, mNewDirFSO, mScrollTo);
 
-                // Do animation
-                fadeEfect(false);
-            } else {
-                if (TextUtils.isEmpty(mCurrentDir)) {
-                    if (mOnBackRequestListener != null) {
-                        // Go back to previous view
-                        post(new Runnable() {
-                            @Override
-                            public void run() {
-                                mOnBackRequestListener.onBackRequested();
-                            }
-                        });
-                    }
-                } else {
-                    // Reload current directory
-                    changeCurrentDir(mCurrentDir);
-                }
-            }
+            // Do animation
+            fadeEfect(false);
         }
 
         /**
@@ -456,6 +449,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
     private int mId;
     private String mCurrentDir;
     private FileSystemObject mCurrentFileSystemObject;
+    private String mPreviousDir;
     private NavigationLayoutMode mCurrentMode;
     /**
      * @hide
@@ -476,6 +470,8 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
 
     // Restrictions
     private Map<DisplayRestrictions, Object> mRestrictions;
+
+    private NavigationTask mNavigationTask;
 
     /**
      * @hide
@@ -549,7 +545,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         //Return the persistent the data
         NavigationViewInfoParcelable parcel = new NavigationViewInfoParcelable();
         parcel.setId(this.mId);
-        parcel.setCurrentDir(this.mCurrentDir);
+        parcel.setCurrentDir(this.mPreviousDir);
         parcel.setCurrentFso(this.mCurrentFileSystemObject);
         parcel.setChRooted(this.mChRooted);
         parcel.setSelectedFiles(this.mAdapter.getSelectedItems());
@@ -865,6 +861,11 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             return;
         }
 
+        if (this.mNavigationTask != null) {
+            this.mNavigationTask.cancel(true);
+            this.mNavigationTask = null;
+        }
+
         //Reload data
         changeCurrentDir(this.mCurrentDir, false, true, false, null, scrollTo);
     }
@@ -1081,9 +1082,11 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             final String newDir, final boolean addToHistory,
             final boolean reload, final boolean useCurrent,
             final SearchInfoParcelable searchInfo, final FileSystemObject scrollTo) {
-        NavigationTask task = new NavigationTask(useCurrent, addToHistory, reload,
-                searchInfo, scrollTo);
-        task.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, newDir);
+        this.mPreviousDir = this.mCurrentDir;
+        this.mCurrentDir = newDir;
+        mNavigationTask = new NavigationTask(useCurrent, addToHistory, reload,
+                searchInfo, scrollTo, mRestrictions, mChRooted);
+        mNavigationTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, newDir);
     }
 
     /**
@@ -1128,16 +1131,19 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         try {
             //Check that there is not errors and have some data
             if (files == null) {
+                this.mCurrentDir = this.mPreviousDir;
+                if (TextUtils.isEmpty(mCurrentDir)) {
+                    if (mOnBackRequestListener != null) {
+                        // Go back to previous view
+                        post(new Runnable() {
+                            @Override
+                            public void run() {
+                                mOnBackRequestListener.onBackRequested();
+                            }
+                        });
+                    }
+                }
                 return;
-            }
-
-            List<FileSystemObject> sortedFiles = null;
-            if (!TextUtils.equals(FileHelper.ROOTS_LIST, newDir)) {
-                //Apply user preferences
-                sortedFiles =
-                        FileHelper.applyUserPreferences(files, this.mRestrictions, this.mChRooted);
-            } else {
-                sortedFiles = files;
             }
 
             //Remove parent directory if we are in the root of a chrooted environment
@@ -1165,8 +1171,8 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             }
 
             //Load the data
-            loadData(sortedFiles);
-            this.mFiles = sortedFiles;
+            loadData(files);
+            this.mFiles = files;
             if (searchInfo != null) {
                 searchInfo.setSuccessNavigation(true);
             }
@@ -1180,18 +1186,21 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             scrollTo(scrollTo);
 
             //The current directory is now the "newDir"
-            this.mCurrentDir = newDir;
             this.mCurrentFileSystemObject = newDirFSO;
             if (this.mOnDirectoryChangedListener != null) {
                 FileSystemObject dir = (newDirFSO != null) ?
                         newDirFSO : FileHelper.createFileSystemObject(new File(newDir));
                 this.mOnDirectoryChangedListener.onDirectoryChanged(dir);
             }
+
         } finally {
             //If calling activity is search, then save the search history
             if (searchInfo != null) {
                 this.mOnHistoryListener.onNewHistory(searchInfo);
             }
+
+            this.mPreviousDir = null;
+            mNavigationTask = null;
 
             //End of loading data
             try {
