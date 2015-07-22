@@ -291,10 +291,6 @@ public class FileSystemObjectAdapter
         }
 
         //Set the data
-        if (convertView != null) {
-            // Cancel load for previous usage
-            mIconHolder.cancelLoad(viewHolder.mIvIcon);
-        }
         mIconHolder.loadDrawable(viewHolder.mIvIcon, getItem(position), dataHolder.mDwIcon);
 
         viewHolder.mTvName.setText(dataHolder.mName);
