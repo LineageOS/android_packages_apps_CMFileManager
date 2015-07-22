@@ -388,11 +388,13 @@ public final class CommandHelper {
                 c.getExecutableFactory().newCreator().createDeleteDirExecutable(directory);
         writableExecute(context, executable, c);
 
-        // Do media scan
-        File parent = new File(directory).getParentFile();
-        if (parent != null) {
-            MediaScannerConnection.scanFile(context, new String[]{
-                    MediaHelper.normalizeMediaPath(parent.getAbsolutePath())}, null, null);
+        if (!(c instanceof StorageApiConsole)) {
+            // Do media scan
+            File parent = new File(directory).getParentFile();
+            if (parent != null) {
+                MediaScannerConnection.scanFile(context, new String[]{
+                        MediaHelper.normalizeMediaPath(parent.getAbsolutePath())}, null, null);
+            }
         }
 
         return executable.getResult().booleanValue();
@@ -430,8 +432,10 @@ public final class CommandHelper {
                 c.getExecutableFactory().newCreator().createDeleteFileExecutable(file);
         writableExecute(context, executable, c);
 
-        // Remove from media scanner
-        removeFromMediaStore(context, file);
+        if (!(c instanceof StorageApiConsole)) {
+            // Remove from media scanner
+            removeFromMediaStore(context, file);
+        }
 
         return executable.getResult().booleanValue();
     }
@@ -795,18 +799,17 @@ public final class CommandHelper {
             // is a safe location)
             File tmp = FileHelper.createTempFilename(context, true);
             try {
-                MoveExecutable moveExecutable =
-                        cSrc.getExecutableFactory().newCreator().createMoveExecutable(
+                CopyExecutable copyExecutable =
+                        cSrc.getExecutableFactory().newCreator().createCopyExecutable(
                                 src, tmp.getAbsolutePath(), null);
-                writableExecute(context, moveExecutable, cSrc);
-                ret = moveExecutable.getResult().booleanValue();
+                writableExecute(context, copyExecutable, cSrc);
+                ret = copyExecutable.getResult().booleanValue();
 
                 // 2.- Move the temporary file to the final filesystem with the destination console
                 if (ret) {
                     // Reset return status at start of next command
                     ret = false;
-                    CopyExecutable copyExecutable =
-                            cDst.getExecutableFactory().newCreator().createCopyExecutable(
+                    copyExecutable = cDst.getExecutableFactory().newCreator().createCopyExecutable(
                                     tmp.getAbsolutePath(), dst, name);
                     writableExecute(context, copyExecutable, cDst);
                     ret = copyExecutable.getResult().booleanValue();
@@ -818,20 +821,36 @@ public final class CommandHelper {
                 }
 
             } finally {
-                // 3.- If unsuccessful, copy temp back to source files
-                // TODO: Properly implement this error case,
-                // Currently files aren't restored to previous location if failure (files lost).
-                // The following code has issues restoring files back onto storage provider (puts
-                // files in wrong location)
-                /*if (!ret && tmp.exists()) {
-                    MoveExecutable moveExecutable =
-                            cSrc.getExecutableFactory().newCreator().createMoveExecutable(
-                                    tmp.getAbsolutePath(), src, null);
-                    writableExecute(context, moveExecutable, cSrc);
-                    if (!moveExecutable.getResult().booleanValue()) {
-                        Log.d(TAG, "Failed to restore file.");
+                // 3.- If successful, delete the original source
+                // We do a copy-copy-delete to prevent any lost files in the case of a failure.
+                if(ret) {
+                    // Since everything was successful, attempt to delete the source files
+                    File source = new File(src);
+                    if (source.isDirectory()) {
+                        DeleteDirExecutable executable = cSrc.getExecutableFactory().newCreator()
+                                .createDeleteDirExecutable(src);
+                        writableExecute(context, executable, cSrc);
+
+                        if (!(cSrc instanceof StorageApiConsole)) {
+                            // Do media scan
+                            File parent = source.getParentFile();
+                            if (parent != null) {
+                                MediaScannerConnection.scanFile(context, new String[]{
+                                        MediaHelper.normalizeMediaPath(parent.getAbsolutePath())}, null, null);
+                            }
+                        }
+                    } else {
+                        DeleteFileExecutable executable = cSrc.getExecutableFactory().newCreator()
+                                .createDeleteFileExecutable(src);
+                        writableExecute(context, executable, cSrc);
+
+                        if (!(cSrc instanceof StorageApiConsole)) {
+                            // Remove from media scanner
+                            removeFromMediaStore(context, src);
+                        }
                     }
-                }*/
+                }
+
 
                 FileHelper.deleteFileOrFolder(tmp);
             }
