@@ -6,3 +6,7 @@
 /.project
 /lint.xml
 /project.properties
+
+# Android Studio
+.idea
+*.iml

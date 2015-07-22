@@ -49,7 +49,7 @@ public class CopyCommandTest extends AbstractConsoleTest {
     @SmallTest
     public void testCopyOk() throws Exception {
         try {
-            CommandHelper.createFile(getContext(), PATH_FILE_SRC, getConsole());
+            CommandHelper.createFile(getContext(), PATH_FILE_SRC, null, getConsole());
             boolean ret = CommandHelper.copy(
                     getContext(), PATH_FILE_SRC, PATH_FILE_DST, null, getConsole(), getConsole());
             assertTrue("response==false", ret); //$NON-NLS-1$

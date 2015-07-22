@@ -16,6 +16,7 @@
 
 package com.cyanogenmod.filemanager.commands.secure;
 
+import android.text.TextUtils;
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.ChangeOwnerExecutable;
 import com.cyanogenmod.filemanager.commands.ChangePermissionsExecutable;
@@ -58,6 +59,8 @@ import com.cyanogenmod.filemanager.model.Permissions;
 import com.cyanogenmod.filemanager.model.Query;
 import com.cyanogenmod.filemanager.model.User;
 import com.cyanogenmod.filemanager.preferences.CompressionMode;
+
+import java.io.File;
 
 /**
  * A class for create shell {@link "Executable"} objects.
@@ -107,18 +110,26 @@ public class SecureExecutableCreator implements ExecutableCreator {
      * {@inheritDoc}
      */
     @Override
-    public CreateDirExecutable createCreateDirectoryExecutable(String dir)
+    public CreateDirExecutable createCreateDirectoryExecutable(String dir, String name)
             throws CommandNotFoundException {
-        return new CreateDirCommand(mConsole, dir);
+        if (TextUtils.isEmpty(name)) {
+            return new CreateDirCommand(mConsole, dir);
+        } else {
+            return new CreateDirCommand(mConsole, dir + File.separator + name);
+        }
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public CreateFileExecutable createCreateFileExecutable(String file)
+    public CreateFileExecutable createCreateFileExecutable(String dir, String name)
             throws CommandNotFoundException {
-        return new CreateFileCommand(mConsole, file);
+        if (TextUtils.isEmpty(name)) {
+            return new CreateFileCommand(mConsole, dir);
+        } else {
+            return new CreateFileCommand(mConsole, dir + File.separator + name);
+        }
     }
 
     /**

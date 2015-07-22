@@ -48,7 +48,7 @@ public class ParentDirCommandTest extends AbstractConsoleTest {
     @SmallTest
     public void testParentDirOk() throws Exception {
         try {
-            CommandHelper.createFile(getContext(), FILE, getConsole());
+            CommandHelper.createFile(getContext(), FILE, null, getConsole());
             String parent = CommandHelper.getParentDir(getContext(), FILE, getConsole());
             assertNotNull("parent==null", parent); //$NON-NLS-1$
             assertTrue(

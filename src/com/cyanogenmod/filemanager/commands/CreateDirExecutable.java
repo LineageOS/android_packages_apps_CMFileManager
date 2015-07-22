@@ -25,5 +25,5 @@ public interface CreateDirExecutable extends WritableExecutable {
      * {@inheritDoc}
      */
     @Override
-    Boolean getResult();
+    String getResult();
 }
