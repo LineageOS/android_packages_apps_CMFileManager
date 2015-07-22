@@ -39,8 +39,10 @@ import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MediaHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.KnownMimeTypeResolver;
 
+import java.lang.ref.WeakReference;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.WeakHashMap;
 import java.util.Map;
 
 /**
@@ -59,7 +61,7 @@ public class IconHolder {
 
     private Map<String, Long> mAlbums;      // Media albums
 
-    private Map<ImageView, FileSystemObject> mRequests;
+    private final WeakHashMap<ImageView, Loadable> mRequests;
 
     private final Context mContext;
     private final boolean mUseThumbs;
@@ -68,9 +70,136 @@ public class IconHolder {
     private HandlerThread mWorkerThread;
     private Handler mWorkerHandler;
 
-    private static class LoadResult {
+    /**
+     * This is kind of a hack, we should have a loadable for each MimeType we run into.
+     * TODO: Refactor this to have different loadables
+     */
+    private static class Loadable {
+        private Context mContext;
+        private static boolean sAlbumsDirty = true;
+        private static Map<String, Long> sAlbums;
+
         FileSystemObject fso;
+        WeakReference<ImageView> view;
         Drawable result;
+
+        public Loadable(Context context, ImageView view, FileSystemObject fso) {
+            this.mContext = context.getApplicationContext();
+            this.fso = fso;
+            this.view = new WeakReference<ImageView>(view);
+            this.result = null;
+        }
+
+        private static synchronized Map<String, Long> getAlbums(Context context) {
+            if (sAlbumsDirty) {
+                sAlbums = MediaHelper.getAllAlbums(context.getContentResolver());
+                sAlbumsDirty = false;
+            }
+            return sAlbums;
+        }
+
+        public static synchronized void dirtyAlbums() {
+            sAlbumsDirty = true;
+        }
+
+        public boolean load() {
+            return (result = loadDrawable(fso)) != null;
+        }
+
+        private Drawable loadDrawable(FileSystemObject fso) {
+            final String filePath = MediaHelper.normalizeMediaPath(fso.getFullPath());
+
+            if (KnownMimeTypeResolver.isAndroidApp(mContext, fso)) {
+                return getAppDrawable(fso);
+            } else if (KnownMimeTypeResolver.isImage(mContext, fso)) {
+                return getImageDrawable(filePath);
+            } else if (KnownMimeTypeResolver.isVideo(mContext, fso)) {
+                return getVideoDrawable(filePath);
+            } else if (FileHelper.isDirectory(fso)) {
+                Map<String, Long> albums = getAlbums(mContext);
+                if (albums.containsKey(filePath)) {
+                    return getAlbumDrawable(albums.get(filePath));
+                }
+            } else {
+                Log.w(TAG, "Unknown MimeType: Image not found for " + fso.getFullPath());
+            }
+            return null;
+        }
+
+        /**
+         * Method that returns the main icon of the app
+         *
+         * @param fso The FileSystemObject
+         * @return Drawable The drawable or null if cannot be extracted
+         */
+        private Drawable getAppDrawable(FileSystemObject fso) {
+            final String filepath = fso.getFullPath();
+            PackageManager pm = mContext.getPackageManager();
+            PackageInfo packageInfo = pm.getPackageArchiveInfo(filepath,
+                    PackageManager.GET_ACTIVITIES);
+            if (packageInfo != null) {
+                // Read http://code.google.com/p/android/issues/detail?id=9151, CM fixed this
+                // issue. We retain it for compatibility with older versions and roms without
+                // this fix. Required to access apk which are not installed.
+                final ApplicationInfo appInfo = packageInfo.applicationInfo;
+                appInfo.sourceDir = filepath;
+                appInfo.publicSourceDir = filepath;
+                return pm.getDrawable(appInfo.packageName, appInfo.icon, appInfo);
+            }
+            return null;
+        }
+
+        /**
+         * Method that returns a thumbnail of the picture
+         *
+         * @param file The path to the file
+         * @return Drawable The drawable or null if cannot be extracted
+         */
+        private Drawable getImageDrawable(String file) {
+            Bitmap thumb = ThumbnailUtils.createImageThumbnail(
+                    MediaHelper.normalizeMediaPath(file),
+                    ThumbnailUtils.TARGET_SIZE_MICRO_THUMBNAIL);
+            if (thumb == null) {
+                Log.w(TAG, "Cannot generate thumbnail for " + file);
+                return null;
+            }
+            return new BitmapDrawable(mContext.getResources(), thumb);
+        }
+
+        /**
+         * Method that returns a thumbnail of the video
+         *
+         * @param file The path to the file
+         * @return Drawable The drawable or null if cannot be extracted
+         */
+        private Drawable getVideoDrawable(String file) {
+            Bitmap thumb = ThumbnailUtils.createVideoThumbnail(
+                    MediaHelper.normalizeMediaPath(file),
+                    ThumbnailUtils.TARGET_SIZE_MICRO_THUMBNAIL);
+            if (thumb == null) {
+                return null;
+            }
+            return new BitmapDrawable(mContext.getResources(), thumb);
+        }
+
+        /**
+         * Method that returns a thumbnail of the album folder
+         *
+         * @param albumId The album identifier
+         * @return Drawable The drawable or null if cannot be extracted
+         */
+        private Drawable getAlbumDrawable(long albumId) {
+            String path = MediaHelper.getAlbumThumbnailPath(mContext.getContentResolver(), albumId);
+            if (path == null) {
+                return null;
+            }
+            Bitmap thumb = ThumbnailUtils.createImageThumbnail(path,
+                    ThumbnailUtils.TARGET_SIZE_MICRO_THUMBNAIL);
+            if (thumb == null) {
+                return null;
+            }
+            return new BitmapDrawable(mContext.getResources(), thumb);
+        }
     }
 
     private Handler mHandler = new Handler() {
@@ -78,8 +207,7 @@ public class IconHolder {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case MSG_LOADED:
-                    processResult((LoadResult) msg.obj);
-                    sendEmptyMessageDelayed(MSG_DESTROY, 3000);
+                    processResult((Loadable) msg.obj);
                     break;
                 case MSG_DESTROY:
                     shutdownWorker();
@@ -87,30 +215,30 @@ public class IconHolder {
             }
         }
 
-        private void processResult(LoadResult result) {
+        private void processResult(Loadable result) {
+            ImageView view = result.view.get();
+            if (view == null) {
+                return;
+            }
+
+            Loadable requestedForImageView = mRequests.get(view);
+            if (requestedForImageView != result) {
+                return;
+            }
+
             // Cache the new drawable
             final String filePath = MediaHelper.normalizeMediaPath(result.fso.getFullPath());
-            mAppIcons.put(filePath, result.result);
-
-            // find the request for it
-            for (Map.Entry<ImageView, FileSystemObject> entry : mRequests.entrySet()) {
-                final ImageView imageView = entry.getKey();
-                final FileSystemObject fso = entry.getValue();
-                if (fso == result.fso) {
-                    imageView.setImageDrawable(result.result);
-                    mRequests.remove(imageView);
-                    break;
-                }
+            if (result.result != null) {
+                mAppIcons.put(filePath, result.result);
             }
+            view.setImageDrawable(result.result);
         }
     };
 
     private ContentObserver mMediaObserver = new ContentObserver(new Handler()) {
         @Override
         public void onChange(boolean selfChange) {
-            synchronized (this) {
-                mNeedAlbumUpdate = true;
-            }
+            Loadable.dirtyAlbums();
         }
     };
 
@@ -124,7 +252,7 @@ public class IconHolder {
         super();
         this.mContext = context;
         this.mUseThumbs = useThumbs;
-        this.mRequests = new HashMap<ImageView, FileSystemObject>();
+        this.mRequests = new WeakHashMap<ImageView, Loadable>();
         this.mIcons = new HashMap<String, Drawable>();
         this.mAppIcons = new LinkedHashMap<String, Drawable>(MAX_CACHE, .75F, true) {
             private static final long serialVersionUID = 1L;
@@ -182,28 +310,17 @@ public class IconHolder {
             return;
         }
 
-        mRequests.put(iconView, fso);
+        Loadable loadable = new Loadable(mContext, iconView, fso);
+        mRequests.put(iconView, loadable);
         iconView.setImageDrawable(defaultIcon);
 
-        mHandler.removeMessages(MSG_DESTROY);
         if (mWorkerThread == null) {
             mWorkerThread = new HandlerThread("IconHolderLoader");
             mWorkerThread.start();
             mWorkerHandler = new WorkerHandler(mWorkerThread.getLooper());
         }
-        Message msg = mWorkerHandler.obtainMessage(MSG_LOAD, fso);
-        msg.sendToTarget();
-    }
-
-    /**
-     * Cancel loading of a drawable for a certain ImageView.
-     */
-    public void cancelLoad(ImageView view) {
-        FileSystemObject fso = mRequests.get(view);
-        if (fso != null && mWorkerHandler != null) {
-            mWorkerHandler.removeMessages(MSG_LOAD, fso);
-        }
-        mRequests.remove(view);
+        Message msg = mWorkerHandler.obtainMessage(MSG_LOAD, loadable);
+        mWorkerHandler.sendMessageAtFrontOfQueue(msg);
     }
 
     private class WorkerHandler extends Handler {
@@ -215,114 +332,12 @@ public class IconHolder {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case MSG_LOAD:
-                    FileSystemObject fso = (FileSystemObject) msg.obj;
-                    Drawable d = loadDrawable(fso);
-                    if (d != null) {
-                        LoadResult result = new LoadResult();
-                        result.fso = fso;
-                        result.result = d;
-                        mHandler.obtainMessage(MSG_LOADED, result).sendToTarget();
+                    Loadable l = (Loadable) msg.obj;
+                    if (l.load()) {
+                        mHandler.obtainMessage(MSG_LOADED, l).sendToTarget();
                     }
                     break;
             }
-        }
-
-        private Drawable loadDrawable(FileSystemObject fso) {
-            final String filePath = MediaHelper.normalizeMediaPath(fso.getFullPath());
-
-            if (KnownMimeTypeResolver.isAndroidApp(mContext, fso)) {
-                return getAppDrawable(fso);
-            } else if (KnownMimeTypeResolver.isImage(mContext, fso)) {
-                return getImageDrawable(filePath);
-            } else if (KnownMimeTypeResolver.isVideo(mContext, fso)) {
-                return getVideoDrawable(filePath);
-            } else if (FileHelper.isDirectory(fso)) {
-                synchronized (mMediaObserver) {
-                    if (mNeedAlbumUpdate) {
-                        mNeedAlbumUpdate = false;
-                        mAlbums = MediaHelper.getAllAlbums(mContext.getContentResolver());
-                    }
-                }
-                if (mAlbums.containsKey(filePath)) {
-                    return getAlbumDrawable(mAlbums.get(filePath));
-                }
-            }
-
-            return null;
-        }
-
-        /**
-         * Method that returns the main icon of the app
-         *
-         * @param fso The FileSystemObject
-         * @return Drawable The drawable or null if cannot be extracted
-         */
-        private Drawable getAppDrawable(FileSystemObject fso) {
-            final String filepath = fso.getFullPath();
-            PackageManager pm = mContext.getPackageManager();
-            PackageInfo packageInfo = pm.getPackageArchiveInfo(filepath,
-                    PackageManager.GET_ACTIVITIES);
-            if (packageInfo != null) {
-                // Read http://code.google.com/p/android/issues/detail?id=9151, CM fixed this
-                // issue. We retain it for compatibility with older versions and roms without
-                // this fix. Required to access apk which are not installed.
-                final ApplicationInfo appInfo = packageInfo.applicationInfo;
-                appInfo.sourceDir = filepath;
-                appInfo.publicSourceDir = filepath;
-                return pm.getDrawable(appInfo.packageName, appInfo.icon, appInfo);
-            }
-            return null;
-        }
-
-        /**
-         * Method that returns a thumbnail of the picture
-         *
-         * @param file The path to the file
-         * @return Drawable The drawable or null if cannot be extracted
-         */
-        private Drawable getImageDrawable(String file) {
-            Bitmap thumb = ThumbnailUtils.createImageThumbnail(
-                    MediaHelper.normalizeMediaPath(file),
-                    ThumbnailUtils.TARGET_SIZE_MICRO_THUMBNAIL);
-            if (thumb == null) {
-                return null;
-            }
-            return new BitmapDrawable(mContext.getResources(), thumb);
-        }
-
-        /**
-         * Method that returns a thumbnail of the video
-         *
-         * @param file The path to the file
-         * @return Drawable The drawable or null if cannot be extracted
-         */
-        private Drawable getVideoDrawable(String file) {
-            Bitmap thumb = ThumbnailUtils.createVideoThumbnail(
-                    MediaHelper.normalizeMediaPath(file),
-                    ThumbnailUtils.TARGET_SIZE_MICRO_THUMBNAIL);
-            if (thumb == null) {
-                return null;
-            }
-            return new BitmapDrawable(mContext.getResources(), thumb);
-        }
-
-        /**
-         * Method that returns a thumbnail of the album folder
-         *
-         * @param albumId The album identifier
-         * @return Drawable The drawable or null if cannot be extracted
-         */
-        private Drawable getAlbumDrawable(long albumId) {
-            String path = MediaHelper.getAlbumThumbnailPath(mContext.getContentResolver(), albumId);
-            if (path == null) {
-                return null;
-            }
-            Bitmap thumb = ThumbnailUtils.createImageThumbnail(path,
-                    ThumbnailUtils.TARGET_SIZE_MICRO_THUMBNAIL);
-            if (thumb == null) {
-                return null;
-            }
-            return new BitmapDrawable(mContext.getResources(), thumb);
         }
     }
 
