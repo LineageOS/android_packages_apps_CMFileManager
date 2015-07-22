@@ -39,8 +39,10 @@ import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MediaHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.KnownMimeTypeResolver;
 
+import java.lang.ref.WeakReference;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.WeakHashMap;
 import java.util.Map;
 
 /**
@@ -52,14 +54,13 @@ public class IconHolder {
 
     private static final int MSG_LOAD = 1;
     private static final int MSG_LOADED = 2;
-    private static final int MSG_DESTROY = 3;
 
     private final Map<String, Drawable> mIcons;     // Themes based
     private final Map<String, Drawable> mAppIcons;  // App based
 
     private Map<String, Long> mAlbums;      // Media albums
 
-    private Map<ImageView, FileSystemObject> mRequests;
+    private final WeakHashMap<ImageView, Loadable> mRequests;
 
     private final Context mContext;
     private final boolean mUseThumbs;
@@ -68,163 +69,40 @@ public class IconHolder {
     private HandlerThread mWorkerThread;
     private Handler mWorkerHandler;
 
-    private static class LoadResult {
+    /**
+     * This is kind of a hack, we should have a loadable for each MimeType we run into.
+     * TODO: Refactor this to have different loadables
+     */
+    private static class Loadable {
+        private Context mContext;
+        private static boolean sAlbumsDirty = true;
+        private static Map<String, Long> sAlbums;
+
         FileSystemObject fso;
+        WeakReference<ImageView> view;
         Drawable result;
-    }
 
-    private Handler mHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case MSG_LOADED:
-                    processResult((LoadResult) msg.obj);
-                    sendEmptyMessageDelayed(MSG_DESTROY, 3000);
-                    break;
-                case MSG_DESTROY:
-                    shutdownWorker();
-                    break;
+        public Loadable(Context context, ImageView view, FileSystemObject fso) {
+            this.mContext = context.getApplicationContext();
+            this.fso = fso;
+            this.view = new WeakReference<ImageView>(view);
+            this.result = null;
+        }
+
+        private static synchronized Map<String, Long> getAlbums(Context context) {
+            if (sAlbumsDirty) {
+                sAlbums = MediaHelper.getAllAlbums(context.getContentResolver());
+                sAlbumsDirty = false;
             }
+            return sAlbums;
         }
 
-        private void processResult(LoadResult result) {
-            // Cache the new drawable
-            final String filePath = MediaHelper.normalizeMediaPath(result.fso.getFullPath());
-            mAppIcons.put(filePath, result.result);
-
-            // find the request for it
-            for (Map.Entry<ImageView, FileSystemObject> entry : mRequests.entrySet()) {
-                final ImageView imageView = entry.getKey();
-                final FileSystemObject fso = entry.getValue();
-                if (fso == result.fso) {
-                    imageView.setImageDrawable(result.result);
-                    mRequests.remove(imageView);
-                    break;
-                }
-            }
-        }
-    };
-
-    private ContentObserver mMediaObserver = new ContentObserver(new Handler()) {
-        @Override
-        public void onChange(boolean selfChange) {
-            synchronized (this) {
-                mNeedAlbumUpdate = true;
-            }
-        }
-    };
-
-    /**
-     * Constructor of <code>IconHolder</code>.
-     *
-     * @param useThumbs If thumbs of images, videos, apps, ... should be returned
-     * instead of the default icon.
-     */
-    public IconHolder(Context context, boolean useThumbs) {
-        super();
-        this.mContext = context;
-        this.mUseThumbs = useThumbs;
-        this.mRequests = new HashMap<ImageView, FileSystemObject>();
-        this.mIcons = new HashMap<String, Drawable>();
-        this.mAppIcons = new LinkedHashMap<String, Drawable>(MAX_CACHE, .75F, true) {
-            private static final long serialVersionUID = 1L;
-            @Override
-            protected boolean removeEldestEntry(Entry<String, Drawable> eldest) {
-                return size() > MAX_CACHE;
-            }
-        };
-        this.mAlbums = new HashMap<String, Long>();
-        if (useThumbs) {
-            final ContentResolver cr = mContext.getContentResolver();
-            for (Uri uri : MediaHelper.RELEVANT_URIS) {
-                cr.registerContentObserver(uri, true, mMediaObserver);
-            }
-        }
-    }
-
-    /**
-     * Method that returns a drawable reference of a icon.
-     *
-     * @param resid The resource identifier
-     * @return Drawable The drawable icon reference
-     */
-    public Drawable getDrawable(final String resid) {
-        //Check if the icon exists in the cache
-        if (this.mIcons.containsKey(resid)) {
-            return this.mIcons.get(resid);
+        public static synchronized void dirtyAlbums() {
+            sAlbumsDirty = true;
         }
 
-        //Load the drawable, cache and returns reference
-        Theme theme = ThemeManager.getCurrentTheme(mContext);
-        Drawable dw = theme.getDrawable(mContext, resid);
-        this.mIcons.put(resid, dw);
-        return dw;
-    }
-
-    /**
-     * Method that returns a drawable reference of a FileSystemObject.
-     *
-     * @param iconView View to load the drawable into
-     * @param fso The FileSystemObject reference
-     * @param defaultIcon Drawable to be used in case no specific one could be found
-     * @return Drawable The drawable reference
-     */
-    public void loadDrawable(ImageView iconView, FileSystemObject fso, Drawable defaultIcon) {
-        if (!mUseThumbs) {
-            iconView.setImageDrawable(defaultIcon);
-            return;
-        }
-
-        // Is cached?
-        final String filePath = MediaHelper.normalizeMediaPath(fso.getFullPath());
-        if (this.mAppIcons.containsKey(filePath)) {
-            iconView.setImageDrawable(this.mAppIcons.get(filePath));
-            return;
-        }
-
-        mRequests.put(iconView, fso);
-        iconView.setImageDrawable(defaultIcon);
-
-        mHandler.removeMessages(MSG_DESTROY);
-        if (mWorkerThread == null) {
-            mWorkerThread = new HandlerThread("IconHolderLoader");
-            mWorkerThread.start();
-            mWorkerHandler = new WorkerHandler(mWorkerThread.getLooper());
-        }
-        Message msg = mWorkerHandler.obtainMessage(MSG_LOAD, fso);
-        msg.sendToTarget();
-    }
-
-    /**
-     * Cancel loading of a drawable for a certain ImageView.
-     */
-    public void cancelLoad(ImageView view) {
-        FileSystemObject fso = mRequests.get(view);
-        if (fso != null && mWorkerHandler != null) {
-            mWorkerHandler.removeMessages(MSG_LOAD, fso);
-        }
-        mRequests.remove(view);
-    }
-
-    private class WorkerHandler extends Handler {
-        public WorkerHandler(Looper looper) {
-            super(looper);
-        }
-
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case MSG_LOAD:
-                    FileSystemObject fso = (FileSystemObject) msg.obj;
-                    Drawable d = loadDrawable(fso);
-                    if (d != null) {
-                        LoadResult result = new LoadResult();
-                        result.fso = fso;
-                        result.result = d;
-                        mHandler.obtainMessage(MSG_LOADED, result).sendToTarget();
-                    }
-                    break;
-            }
+        public boolean load() {
+            return (result = loadDrawable(fso)) != null;
         }
 
         private Drawable loadDrawable(FileSystemObject fso) {
@@ -237,17 +115,11 @@ public class IconHolder {
             } else if (KnownMimeTypeResolver.isVideo(mContext, fso)) {
                 return getVideoDrawable(filePath);
             } else if (FileHelper.isDirectory(fso)) {
-                synchronized (mMediaObserver) {
-                    if (mNeedAlbumUpdate) {
-                        mNeedAlbumUpdate = false;
-                        mAlbums = MediaHelper.getAllAlbums(mContext.getContentResolver());
-                    }
-                }
-                if (mAlbums.containsKey(filePath)) {
-                    return getAlbumDrawable(mAlbums.get(filePath));
+                Map<String, Long> albums = getAlbums(mContext);
+                if (albums.containsKey(filePath)) {
+                    return getAlbumDrawable(albums.get(filePath));
                 }
             }
-
             return null;
         }
 
@@ -323,6 +195,146 @@ public class IconHolder {
                 return null;
             }
             return new BitmapDrawable(mContext.getResources(), thumb);
+        }
+    }
+
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case MSG_LOADED:
+                    processResult((Loadable) msg.obj);
+                    break;
+            }
+        }
+
+        private void processResult(Loadable result) {
+            ImageView view = result.view.get();
+            if (view == null) {
+                return;
+            }
+
+            Loadable requestedForImageView = mRequests.get(view);
+            if (requestedForImageView != result) {
+                return;
+            }
+
+            // Cache the new drawable
+            final String filePath = MediaHelper.normalizeMediaPath(result.fso.getFullPath());
+            if (result.result != null) {
+                mAppIcons.put(filePath, result.result);
+            }
+            view.setImageDrawable(result.result);
+        }
+    };
+
+    private ContentObserver mMediaObserver = new ContentObserver(new Handler()) {
+        @Override
+        public void onChange(boolean selfChange) {
+            Loadable.dirtyAlbums();
+        }
+    };
+
+    /**
+     * Constructor of <code>IconHolder</code>.
+     *
+     * @param useThumbs If thumbs of images, videos, apps, ... should be returned
+     * instead of the default icon.
+     */
+    public IconHolder(Context context, boolean useThumbs) {
+        super();
+        this.mContext = context;
+        this.mUseThumbs = useThumbs;
+        this.mRequests = new WeakHashMap<ImageView, Loadable>();
+        this.mIcons = new HashMap<String, Drawable>();
+        this.mAppIcons = new LinkedHashMap<String, Drawable>(MAX_CACHE, .75F, true) {
+            private static final long serialVersionUID = 1L;
+            @Override
+            protected boolean removeEldestEntry(Entry<String, Drawable> eldest) {
+                return size() > MAX_CACHE;
+            }
+        };
+        this.mAlbums = new HashMap<String, Long>();
+        if (useThumbs) {
+            final ContentResolver cr = mContext.getContentResolver();
+            for (Uri uri : MediaHelper.RELEVANT_URIS) {
+                cr.registerContentObserver(uri, true, mMediaObserver);
+            }
+        }
+    }
+
+    /**
+     * Method that returns a drawable reference of a icon.
+     *
+     * @param resid The resource identifier
+     * @return Drawable The drawable icon reference
+     */
+    public Drawable getDrawable(final String resid) {
+        //Check if the icon exists in the cache
+        if (this.mIcons.containsKey(resid)) {
+            return this.mIcons.get(resid);
+        }
+
+        //Load the drawable, cache and returns reference
+        Theme theme = ThemeManager.getCurrentTheme(mContext);
+        Drawable dw = theme.getDrawable(mContext, resid);
+        this.mIcons.put(resid, dw);
+        return dw;
+    }
+
+    /**
+     * Method that returns a drawable reference of a FileSystemObject.
+     *
+     * @param iconView View to load the drawable into
+     * @param fso The FileSystemObject reference
+     * @param defaultIcon Drawable to be used in case no specific one could be found
+     * @return Drawable The drawable reference
+     */
+    public void loadDrawable(ImageView iconView, FileSystemObject fso, Drawable defaultIcon) {
+        if (!mUseThumbs) {
+            iconView.setImageDrawable(defaultIcon);
+            return;
+        }
+
+        // Is cached?
+        final String filePath = MediaHelper.normalizeMediaPath(fso.getFullPath());
+        if (this.mAppIcons.containsKey(filePath)) {
+            iconView.setImageDrawable(this.mAppIcons.get(filePath));
+            return;
+        }
+
+        if (mWorkerThread == null) {
+            mWorkerThread = new HandlerThread("IconHolderLoader");
+            mWorkerThread.start();
+            mWorkerHandler = new WorkerHandler(mWorkerThread.getLooper());
+        }
+        Loadable previousForView = mRequests.get(iconView);
+        if (previousForView != null) {
+            mWorkerHandler.removeMessages(MSG_LOAD, previousForView);
+        }
+
+        Loadable loadable = new Loadable(mContext, iconView, fso);
+        mRequests.put(iconView, loadable);
+        iconView.setImageDrawable(defaultIcon);
+
+         mWorkerHandler.obtainMessage(MSG_LOAD, loadable).sendToTarget();
+    }
+
+    private class WorkerHandler extends Handler {
+        public WorkerHandler(Looper looper) {
+            super(looper);
+        }
+
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case MSG_LOAD:
+                    Loadable l = (Loadable) msg.obj;
+                    if (l.load()) {
+                        mHandler.obtainMessage(MSG_LOADED, l).sendToTarget();
+                    }
+                    break;
+            }
         }
     }
 
