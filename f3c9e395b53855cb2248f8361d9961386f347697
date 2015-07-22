@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df140735_edf50d85",
+        "filename": "src/com/cyanogenmod/filemanager/commands/storageapi/CreateDirCommand.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-22T21:53:51Z",
+      "side": 1,
+      "message": "year",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "f3c9e395b53855cb2248f8361d9961386f347697",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df140735_cdf2499b",
+        "filename": "src/com/cyanogenmod/filemanager/commands/storageapi/CreateDirCommand.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-22T21:53:51Z",
+      "side": 1,
+      "message": "private static final String TAG \u003d CreateDirCommand.class.getSimpleName();",
+      "range": {
+        "startLine": 36,
+        "startChar": 39,
+        "endLine": 36,
+        "endChar": 56
+      },
+      "revId": "f3c9e395b53855cb2248f8361d9961386f347697",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df140735_adef15af",
+        "filename": "src/com/cyanogenmod/filemanager/commands/storageapi/CreateFileCommand.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-22T21:53:51Z",
+      "side": 1,
+      "message": "year",
+      "revId": "f3c9e395b53855cb2248f8361d9961386f347697",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df140735_8d2a11e5",
+        "filename": "src/com/cyanogenmod/filemanager/commands/storageapi/CreateFileCommand.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-22T21:53:51Z",
+      "side": 1,
+      "message": "private static final String TAG \u003d CreateFileCommand.class.getSimpleName();",
+      "range": {
+        "startLine": 41,
+        "startChar": 32,
+        "endLine": 41,
+        "endChar": 35
+      },
+      "revId": "f3c9e395b53855cb2248f8361d9961386f347697",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df140735_0df9617f",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 1516,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-22T21:53:51Z",
+      "side": 1,
+      "message": "parent isn\u0027t the file you\u0027re touching. this message is incorrect.",
+      "range": {
+        "startLine": 1516,
+        "startChar": 77,
+        "endLine": 1516,
+        "endChar": 83
+      },
+      "revId": "f3c9e395b53855cb2248f8361d9961386f347697",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
