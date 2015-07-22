@@ -22,6 +22,7 @@ import android.media.MediaScannerConnection;
 import android.provider.MediaStore.Files;
 
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.util.Log;
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.ChangeOwnerExecutable;
@@ -283,7 +284,8 @@ public final class CommandHelper {
      * Method that creates a directory.
      *
      * @param context The current context (needed if console == null)
-     * @param directory The directory to create
+     * @param directory The directory in which to create the directory
+     * @param name The display name for the directory {@code null} if directory is fully qualified
      * @param console The console in which execute the program. <code>null</code>
      * to attach to the default console
      * @return boolean The operation result
@@ -300,24 +302,26 @@ public final class CommandHelper {
      * @throws CancelledOperationException If the operation was cancelled
      * @see CreateDirExecutable
      */
-    public static boolean createDirectory(Context context, String directory, Console console)
-            throws FileNotFoundException, IOException, ConsoleAllocException,
+    public static String createDirectory(Context context, String directory, String name,
+            Console console) throws FileNotFoundException, IOException, ConsoleAllocException,
             NoSuchFileOrDirectory, InsufficientPermissionsException,
             CommandNotFoundException, OperationTimeoutException,
             ExecutionException, InvalidCommandDefinitionException, ReadOnlyFilesystemException,
             CancelledOperationException {
         Console c = ensureConsoleForFile(context, console, directory);
         CreateDirExecutable executable =
-                c.getExecutableFactory().newCreator().createCreateDirectoryExecutable(directory);
+                c.getExecutableFactory().newCreator().createCreateDirectoryExecutable(directory,
+                        name);
         writableExecute(context, executable, c);
-        return executable.getResult().booleanValue();
+        return executable.getResult();
     }
 
     /**
      * Method that creates a file.
      *
      * @param context The current context (needed if console == null)
-     * @param file The file to create
+     * @param directory The directory in which to create the file
+     * @param name The display name for the file {@code null} if directory is fully qualified
      * @param console The console in which execute the program. <code>null</code>
      * to attach to the default console
      * @return boolean The operation result
@@ -334,22 +338,22 @@ public final class CommandHelper {
      * @throws CancelledOperationException If the operation was cancelled
      * @see CreateFileExecutable
      */
-    public static boolean createFile(Context context, String file, Console console)
+    public static String createFile(Context context, String directory, String name, Console console)
             throws FileNotFoundException, IOException, ConsoleAllocException,
             NoSuchFileOrDirectory, InsufficientPermissionsException,
             CommandNotFoundException, OperationTimeoutException,
             ExecutionException, InvalidCommandDefinitionException, ReadOnlyFilesystemException,
             CancelledOperationException {
-        Console c = ensureConsoleForFile(context, console, file);
+        Console c = ensureConsoleForFile(context, console, directory);
         CreateFileExecutable executable =
-                c.getExecutableFactory().newCreator().createCreateFileExecutable(file);
+                c.getExecutableFactory().newCreator().createCreateFileExecutable(directory, name);
         writableExecute(context, executable, c);
 
         // Do media scan
         MediaScannerConnection.scanFile(context, new String[]{
-                MediaHelper.normalizeMediaPath(file)}, null, null);
+                MediaHelper.normalizeMediaPath(directory)}, null, null);
 
-        return executable.getResult().booleanValue();
+        return executable.getResult();
     }
 
     /**
@@ -1455,7 +1459,8 @@ public final class CommandHelper {
      * Method that writes data to disk.
      *
      * @param context The current context (needed if console == null)
-     * @param file The file where to write the data
+     * @param parent The parent directory where to write the data
+     * @param name The file name where to write the data {@code null} if parent is full path
      * @param asyncResultListener The partial result listener
      * @param console The console in which execute the program.
      * <code>null</code> to attach to the default console
@@ -1474,14 +1479,14 @@ public final class CommandHelper {
      * @see WriteExecutable
      */
     public static WriteExecutable write(
-            Context context, String file,
+            Context context, String parent, String name,
             AsyncResultListener asyncResultListener, Console console)
             throws FileNotFoundException, IOException, ConsoleAllocException,
             NoSuchFileOrDirectory, InsufficientPermissionsException,
             CommandNotFoundException, OperationTimeoutException,
             ExecutionException, InvalidCommandDefinitionException, ReadOnlyFilesystemException,
             CancelledOperationException {
-        Console c = ensureConsoleForFile(context, console, file);
+        Console c = ensureConsoleForFile(context, console, parent);
 
         // Create a wrapper listener, for unmount the filesystem if necessary
         UnmountAsyncResultListener wrapperListener = new UnmountAsyncResultListener();
@@ -1493,9 +1498,10 @@ public final class CommandHelper {
         // createFile method
         //- Create
         CreateFileExecutable executable1 =
-                c.getExecutableFactory().newCreator().createCreateFileExecutable(file);
+                c.getExecutableFactory().newCreator().createCreateFileExecutable(parent, name);
         boolean unmount = writableExecute(context, executable1, c, true);
-        if (executable1.getResult().booleanValue()) {
+        String path = executable1.getResult();
+        if (!TextUtils.isEmpty(path)) {
             // Configure the rest of attributes of the wrapper listener
             wrapperListener.mUnmount = unmount;
             wrapperListener.mMountPoint = executable1.getDstWritableMountPoint();
@@ -1503,11 +1509,11 @@ public final class CommandHelper {
             //- Write
             WriteExecutable executable2 =
                     c.getExecutableFactory().newCreator().
-                        createWriteExecutable(file, wrapperListener);
+                        createWriteExecutable(path, wrapperListener);
             execute(context, executable2, c);
             return executable2;
         }
-        throw new ExecutionException(String.format("Fail to create file %s", file)); //$NON-NLS-1$
+        throw new ExecutionException(String.format("Fail to create file %s", parent)); //$NON-NLS-1$
     }
 
     /**
@@ -1557,13 +1563,14 @@ public final class CommandHelper {
         // Prior to write to disk the data, ensure that can write to the disk using
         // createFile method
         //- Create
+        // TODO: compress needs to work for Storage Providers
         String compressOutFile = executable1.getOutCompressedFile();
         CreateFileExecutable executable2 =
                 c.getExecutableFactory().
                     newCreator().
-                        createCreateFileExecutable(compressOutFile);
+                        createCreateFileExecutable(compressOutFile, null);
         boolean unmount = writableExecute(context, executable2, c, true);
-        if (executable2.getResult().booleanValue()) {
+        if (!TextUtils.isEmpty(executable2.getResult())) {
             // Configure the rest of attributes of the wrapper listener
             wrapperListener.mUnmount = unmount;
             wrapperListener.mMountPoint = executable2.getDstWritableMountPoint();
@@ -1632,12 +1639,13 @@ public final class CommandHelper {
         // createFile method
         //- Create
         String compressOutFile = executable1.getOutCompressedFile();
+        // TODO: compress needs to work for Storage Providers
         CreateFileExecutable executable2 =
                 c.getExecutableFactory().
                     newCreator().
-                        createCreateFileExecutable(compressOutFile);
+                        createCreateFileExecutable(compressOutFile, null);
         boolean unmount = writableExecute(context, executable2, c, true);
-        if (executable2.getResult().booleanValue()) {
+        if (!TextUtils.isEmpty(executable2.getResult())) {
             // Configure the rest of attributes of the wrapper listener
             wrapperListener.mUnmount = unmount;
             wrapperListener.mMountPoint = executable2.getDstWritableMountPoint();
@@ -1699,18 +1707,19 @@ public final class CommandHelper {
 
         String compressOutFile = executable1.getOutUncompressedFile();
         WritableExecutable executable2 = null;
+        // TODO: uncompress needs to work for Storage Providers
         if (executable1.IsArchive()) {
             //- Create Folder
             executable2 =
                     c.getExecutableFactory().
                         newCreator().
-                            createCreateDirectoryExecutable(compressOutFile);
+                            createCreateDirectoryExecutable(compressOutFile, null);
         } else {
             //- Create File
             executable2 =
                     c.getExecutableFactory().
                         newCreator().
-                            createCreateFileExecutable(compressOutFile);
+                            createCreateFileExecutable(compressOutFile, null);
         }
         boolean unmount = writableExecute(context, executable2, c, true);
         if (((Boolean)executable2.getResult()).booleanValue()) {

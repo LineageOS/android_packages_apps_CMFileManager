@@ -66,7 +66,7 @@ public class ExecCommandTest extends AbstractConsoleTest {
         try {
             // Create the test program
             WriteExecutable writeCmd =
-                    CommandHelper.write(getContext(), EXEC_CMD, null, getConsole());
+                    CommandHelper.write(getContext(), EXEC_CMD, null, null, getConsole());
             OutputStream os = writeCmd.createOutputStream();
             os.write(EXEC_PROGRAM.getBytes());
             writeCmd.end();

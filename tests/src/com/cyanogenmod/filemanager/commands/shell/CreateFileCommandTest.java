@@ -19,8 +19,10 @@ package com.cyanogenmod.filemanager.commands.shell;
 import android.os.Environment;
 import android.test.suitebuilder.annotation.SmallTest;
 
+import android.text.TextUtils;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.util.CommandHelper;
+import org.w3c.dom.Text;
 
 /**
  * A class for testing the {@link CreateFileCommand} command.
@@ -49,8 +51,8 @@ public class CreateFileCommandTest extends AbstractConsoleTest {
     @SmallTest
     public void testCreateFileOk() throws Exception {
         try {
-            boolean ret = CommandHelper.createFile(getContext(), PATH_NEWFILE_OK, getConsole());
-            assertTrue("response==false", ret); //$NON-NLS-1$
+            String ret = CommandHelper.createFile(getContext(), PATH_NEWFILE_OK, null, getConsole());
+            assertTrue("response==false", !TextUtils.isEmpty(ret)); //$NON-NLS-1$
         } finally {
             try {
                 CommandHelper.deleteFile(getContext(), PATH_NEWFILE_OK, getConsole());
@@ -68,7 +70,7 @@ public class CreateFileCommandTest extends AbstractConsoleTest {
     @SmallTest
     public void testCreateFileFail() throws Exception {
         try {
-            CommandHelper.createFile(getContext(), PATH_NEWFILE_ERROR, getConsole());
+            CommandHelper.createFile(getContext(), PATH_NEWFILE_ERROR, null, getConsole());
             assertTrue("exit code==0", false); //$NON-NLS-1$
         } catch (NoSuchFileOrDirectory error) {
           //This command must failed. exit code !=0

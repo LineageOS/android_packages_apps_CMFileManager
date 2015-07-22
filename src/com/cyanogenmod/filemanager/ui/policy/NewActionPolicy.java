@@ -18,14 +18,17 @@ package com.cyanogenmod.filemanager.ui.policy;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.cyanogenmod.filemanager.console.RelaunchableException;
 import com.cyanogenmod.filemanager.listeners.OnRequestRefreshListener;
 import com.cyanogenmod.filemanager.listeners.OnSelectionListener;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
+import com.cyanogenmod.filemanager.model.RegularFile;
 import com.cyanogenmod.filemanager.util.CommandHelper;
 import com.cyanogenmod.filemanager.util.ExceptionUtil;
+import org.w3c.dom.Text;
 
 import java.io.File;
 
@@ -86,29 +89,29 @@ public final class NewActionPolicy extends ActionsPolicy {
             final OnSelectionListener onSelectionListener,
             final OnRequestRefreshListener onRequestRefreshListener) {
 
-        //Create the absolute file name
-        File newFso = new File(
-                onSelectionListener.onRequestCurrentDir(), name);
-        final String newName = newFso.getAbsolutePath();
+        String parent = onSelectionListener.onRequestCurrentDir();
+        String newName = null;
 
         try {
             if (folder) {
                 if (DEBUG) {
-                    Log.d(TAG, String.format("Creating new directory: %s", newName)); //$NON-NLS-1$
+                    Log.d(TAG, String.format("Creating new directory: %s in %s", newName, parent)); //$NON-NLS-1$
                 }
-                CommandHelper.createDirectory(ctx, newName, null);
+                newName = CommandHelper.createDirectory(ctx, parent, name, null);
             } else {
                 if (DEBUG) {
-                    Log.d(TAG, String.format("Creating new file: %s", newName)); //$NON-NLS-1$
+                    Log.d(TAG, String.format("Creating new file: %s in %s", newName, parent)); //$NON-NLS-1$
                 }
-                CommandHelper.createFile(ctx, newName, null);
+                newName = CommandHelper.createFile(ctx, parent, name, null);
             }
 
             //Operation complete. Show refresh
             if (onRequestRefreshListener != null) {
                 FileSystemObject fso = null;
                 try {
-                    fso = CommandHelper.getFileInfo(ctx, newName, false, null);
+                    if (!TextUtils.isEmpty(newName)) {
+                        fso = CommandHelper.getFileInfo(ctx, newName, false, null);
+                    }
                 } catch (Throwable ex2) {/**NON BLOCK**/}
                 onRequestRefreshListener.onRequestRefresh(fso, false);
             }
@@ -117,6 +120,7 @@ public final class NewActionPolicy extends ActionsPolicy {
         } catch (Throwable ex) {
             //Capture the exception
             if (ex instanceof RelaunchableException) {
+                final String finalNewName = newName;
                 ExceptionUtil.attachAsyncTask(ex, new AsyncTask<Object, Integer, Boolean>() {
                     /**
                      * {@inheritDoc}
@@ -127,7 +131,9 @@ public final class NewActionPolicy extends ActionsPolicy {
                         if (onRequestRefreshListener != null) {
                             FileSystemObject fso = null;
                             try {
-                                fso = CommandHelper.getFileInfo(ctx, newName, false, null);
+                                if (!TextUtils.isEmpty(finalNewName)) {
+                                    fso = CommandHelper.getFileInfo(ctx, finalNewName, false, null);
+                                }
                             } catch (Throwable ex2) {/**NON BLOCK**/}
                             onRequestRefreshListener.onRequestRefresh(fso, false);
                         }

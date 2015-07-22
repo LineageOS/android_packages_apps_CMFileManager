@@ -34,7 +34,6 @@ import java.text.ParseException;
 public class CreateDirCommand extends SyncResultProgram implements CreateDirExecutable {
 
     private static final String ID = "mkdir";  //$NON-NLS-1$
-    private Boolean mRet;
     private final String mFileName;
 
     /**
@@ -52,17 +51,14 @@ public class CreateDirCommand extends SyncResultProgram implements CreateDirExec
      * {@inheritDoc}
      */
     @Override
-    public void parse(String in, String err) throws ParseException {
-        //Release the return object
-        this.mRet = Boolean.TRUE;
-    }
+    public void parse(String in, String err) throws ParseException { }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Boolean getResult() {
-        return this.mRet;
+    public String getResult() {
+        return this.mFileName;
     }
 
     /**

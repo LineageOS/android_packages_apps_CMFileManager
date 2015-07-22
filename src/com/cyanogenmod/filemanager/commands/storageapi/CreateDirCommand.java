@@ -14,39 +14,45 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.filemanager.commands.java;
+package com.cyanogenmod.filemanager.commands.storageapi;
 
 import android.util.Log;
-
-import com.cyanogenmod.filemanager.commands.CreateFileExecutable;
+import com.cyanogen.ambient.common.api.PendingResult;
+import com.cyanogen.ambient.storage.StorageApi;
+import com.cyanogenmod.filemanager.commands.CreateDirExecutable;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
+import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
 import com.cyanogenmod.filemanager.model.MountPoint;
 import com.cyanogenmod.filemanager.util.MountPointHelper;
-
-import java.io.File;
-import java.io.IOException;
 
 
 /**
  * A class for create a file.
  */
-public class CreateFileCommand extends Program implements CreateFileExecutable {
+public class CreateDirCommand extends Program implements CreateDirExecutable {
 
     private static final String TAG = "CreateFileCommand"; //$NON-NLS-1$
 
 
-    private final String mPath;
+    private final StorageApiConsole mConsole;
+    private final String mParent;
+    private final String mName;
+    private String mResult;
 
     /**
      * Constructor of <code>CreateFileCommand</code>.
      *
-     * @param path The name of the new file
+     * @param console The StorageApiConsole for creating this directory
+     * @param dir The id of the parent directory
+     * @param name The name of the new directory
      */
-    public CreateFileCommand(String path) {
+    public CreateDirCommand(StorageApiConsole console, String dir, String name) {
         super();
-        this.mPath = path;
+        this.mConsole = console;
+        this.mParent = dir;
+        this.mName = name;
     }
 
     /**
@@ -54,7 +60,7 @@ public class CreateFileCommand extends Program implements CreateFileExecutable {
      */
     @Override
     public String getResult() {
-        return this.mPath;
+        return mResult;
     }
 
     /**
@@ -65,39 +71,21 @@ public class CreateFileCommand extends Program implements CreateFileExecutable {
             throws InsufficientPermissionsException, NoSuchFileOrDirectory, ExecutionException {
         if (isTrace()) {
             Log.v(TAG,
-                    String.format("Creating file: %s", this.mPath)); //$NON-NLS-1$
+                    String.format("Creating directory: %s", this.mParent)); //$NON-NLS-1$
         }
 
-        File f = new File(this.mPath);
-        try {
-            // Check that if the path exist, it need to be a file. Otherwise something is
-            // wrong
-            if (f.exists() && !f.isFile()) {
-                if (isTrace()) {
-                    Log.v(TAG, "Result: FAIL. ExecutionException"); //$NON-NLS-1$
-                }
-                throw new ExecutionException("the path exists but is not a file"); //$NON-NLS-1$
-            }
+        String parentId = StorageApiConsole.getProviderPathFromFullPath(mParent);
+        PendingResult<StorageApi.Document.DocumentResult> pendingResult = mConsole.getStorageApi()
+                .createFolder(mConsole.getStorageProviderInfo(), parentId, mName);
+        StorageApi.Document.DocumentResult statusResult = pendingResult.await();
 
-            // Only create the file if the file not exists. Otherwise createNewFile
-            // will return false
-            if (!f.exists()) {
-                if (!f.createNewFile()) {
-                    if (isTrace()) {
-                        Log.v(TAG, "Result: FAIL. InsufficientPermissionsException"); //$NON-NLS-1$
-                    }
-                    throw new InsufficientPermissionsException();
-                }
-            }
-        } catch (IOException ioe) {
-            if (isTrace()) {
-                Log.v(TAG, "Result: FAIL. InsufficientPermissionsException"); //$NON-NLS-1$
-            }
-            throw new InsufficientPermissionsException();
+        if (statusResult.getStatus().isSuccess()) {
+            mResult = StorageApiConsole.getFullPathForConsoleDocument(mConsole,
+                    statusResult.getDocument().getId());
         }
 
         if (isTrace()) {
-            Log.v(TAG, "Result: OK"); //$NON-NLS-1$
+            Log.v(TAG, "Result: " + mResult); //$NON-NLS-1$
         }
     }
 
@@ -114,6 +102,6 @@ public class CreateFileCommand extends Program implements CreateFileExecutable {
      */
     @Override
     public MountPoint getDstWritableMountPoint() {
-        return MountPointHelper.getMountPointFromDirectory(this.mPath);
+        return null;
     }
 }

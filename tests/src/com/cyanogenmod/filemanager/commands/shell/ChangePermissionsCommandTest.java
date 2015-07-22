@@ -50,7 +50,7 @@ public class ChangePermissionsCommandTest extends AbstractConsoleTest {
     public void testChangePermissionsOk() throws Exception {
         try {
             //Create and list the file
-            CommandHelper.createFile(getContext(), PATH_FILE, getConsole());
+            CommandHelper.createFile(getContext(), PATH_FILE, null, getConsole());
             FileSystemObject file =
                     CommandHelper.getFileInfo(getContext(), PATH_FILE, false, getConsole());
 
