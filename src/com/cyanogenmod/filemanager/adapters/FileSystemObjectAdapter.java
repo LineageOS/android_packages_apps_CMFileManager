@@ -320,10 +320,6 @@ public class FileSystemObjectAdapter
         ViewHolder viewHolder = (ViewHolder)v.getTag();
 
         //Set the data
-        if (convertView != null) {
-            // Cancel load for previous usage
-            mIconHolder.cancelLoad(viewHolder.mIvIcon);
-        }
         if (dataHolder.mSelected) {
             viewHolder.mIvIcon.setImageResource(R.drawable.ic_check_selected);
         } else {

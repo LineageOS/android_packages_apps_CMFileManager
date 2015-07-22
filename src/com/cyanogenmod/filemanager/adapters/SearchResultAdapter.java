@@ -474,9 +474,6 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         ViewHolder viewHolder = (ViewHolder) v.getTag();
 
         //Set the data
-        if (convertView != null) {
-            mIconHolder.cancelLoad(viewHolder.mIvIcon);
-        }
         mIconHolder.loadDrawable(viewHolder.mIvIcon,
                 getItem(position).getFso(), dataHolder.mDwIcon);
 
