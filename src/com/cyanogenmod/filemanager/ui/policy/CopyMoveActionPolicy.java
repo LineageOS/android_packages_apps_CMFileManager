@@ -342,16 +342,30 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                 FileSystemObject src = this.mFiles.get(this.mCurrent).mSrc;
                 FileSystemObject dst = this.mFiles.get(this.mCurrent).mDst;
 
+                // Storage providers don't always have a "path". Construct a workaround
+                String srcPath = null;
+                if (TextUtils.isEmpty(src.getProviderPrefix())) {
+                    srcPath = src.getFullPath();
+                } else {
+                    srcPath = StorageApiConsole.getProviderNameFromFullPath(src.getFullPath()) +
+                            File.pathSeparator + src.getName();
+                }
+                String dstPath = null;
+                if (TextUtils.isEmpty(dst.getProviderPrefix())) {
+                    dstPath = dst.getFullPath();
+                } else {
+                    dstPath = StorageApiConsole.getProviderNameFromFullPath(dst.getFullPath()) +
+                            File.pathSeparator + dst.getName();
+                }
                 // Return the current operation
                 String progress =
-                      this.mCtx.getResources().
-                          getString(
-                              this.mOperation.equals(COPY_MOVE_OPERATION.MOVE)
-                              || this.mOperation.equals(COPY_MOVE_OPERATION.RENAME) ?
-                                  R.string.waiting_dialog_moving_msg :
-                                  R.string.waiting_dialog_copying_msg,
-                              src.getFullPath(),
-                              dst.getFullPath());
+                        this.mCtx.getResources().getString(
+                                this.mOperation.equals(COPY_MOVE_OPERATION.MOVE) ||
+                                        this.mOperation.equals(COPY_MOVE_OPERATION.RENAME) ?
+                                        R.string.waiting_dialog_moving_msg :
+                                        R.string.waiting_dialog_copying_msg,
+                                srcPath,
+                                dstPath);
                 return Html.fromHtml(progress);
             }
 
