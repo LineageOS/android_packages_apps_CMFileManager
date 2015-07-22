@@ -60,7 +60,7 @@ public class WriteCommandTest extends AbstractConsoleTest {
         try {
             WriteExecutable cmd =
                     CommandHelper.write(getContext(),
-                    WRITE_FILE_SMALL, new AsyncResultListener() {
+                    WRITE_FILE_SMALL, null, new AsyncResultListener() {
                             @Override
                             public void onAsyncStart() {/**NON BLOCK**/}
                             @Override
@@ -97,7 +97,7 @@ public class WriteCommandTest extends AbstractConsoleTest {
         try {
             WriteExecutable cmd =
                     CommandHelper.write(getContext(),
-                    WRITE_FILE_LARGE, new AsyncResultListener() {
+                    WRITE_FILE_LARGE, null, new AsyncResultListener() {
                             @Override
                             public void onAsyncStart() {/**NON BLOCK**/}
                             @Override

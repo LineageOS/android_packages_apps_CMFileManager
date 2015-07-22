@@ -16,6 +16,7 @@
 
 package com.cyanogenmod.filemanager.commands.shell;
 
+import android.text.TextUtils;
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.ChangeOwnerExecutable;
 import com.cyanogenmod.filemanager.commands.ChangePermissionsExecutable;
@@ -59,6 +60,8 @@ import com.cyanogenmod.filemanager.model.Permissions;
 import com.cyanogenmod.filemanager.model.Query;
 import com.cyanogenmod.filemanager.model.User;
 import com.cyanogenmod.filemanager.preferences.CompressionMode;
+
+import java.io.File;
 
 /**
  * A class for create shell {@link "Executable"} objects.
@@ -120,10 +123,15 @@ public class ShellExecutableCreator implements ExecutableCreator {
      * {@inheritDoc}
      */
     @Override
-    public CreateDirExecutable createCreateDirectoryExecutable(String dir)
+    public CreateDirExecutable createCreateDirectoryExecutable(String dir, String name)
             throws CommandNotFoundException {
         try {
-            return new CreateDirCommand(dir);
+            if (TextUtils.isEmpty(name)) {
+                return new CreateDirCommand(dir);
+            } else {
+                return new CreateDirCommand(dir + File.separator + name);
+            }
+
         } catch (InvalidCommandDefinitionException icdEx) {
             throw new CommandNotFoundException("CreateDirCommand", icdEx); //$NON-NLS-1$
         }
@@ -133,10 +141,14 @@ public class ShellExecutableCreator implements ExecutableCreator {
      * {@inheritDoc}
      */
     @Override
-    public CreateFileExecutable createCreateFileExecutable(String file)
+    public CreateFileExecutable createCreateFileExecutable(String dir, String name)
             throws CommandNotFoundException {
         try {
-            return new CreateFileCommand(file);
+            if (TextUtils.isEmpty(name)) {
+                return new CreateFileCommand(dir);
+            } else {
+                return new CreateFileCommand(dir + File.separator + name);
+            }
         } catch (InvalidCommandDefinitionException icdEx) {
             throw new CommandNotFoundException("CreateFileCommand", icdEx); //$NON-NLS-1$
         }

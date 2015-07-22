@@ -51,8 +51,8 @@ public class CreateDirCommand extends Program implements CreateDirExecutable {
      * {@inheritDoc}
      */
     @Override
-    public Boolean getResult() {
-        return Boolean.TRUE;
+    public String getResult() {
+        return this.mPath;
     }
 
     /**

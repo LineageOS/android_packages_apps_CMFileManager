@@ -49,7 +49,7 @@ public class MoveCommandTest extends AbstractConsoleTest {
     @SmallTest
     public void testMoveOk() throws Exception {
         try {
-            CommandHelper.createFile(getContext(), PATH_FILE_SRC, getConsole());
+            CommandHelper.createFile(getContext(), PATH_FILE_SRC, null, getConsole());
             boolean ret =
                     CommandHelper.move(getContext(), PATH_FILE_SRC, PATH_FILE_DST, null,
                             getConsole(), getConsole());

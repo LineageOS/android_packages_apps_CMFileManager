@@ -58,7 +58,7 @@ public class LinkCommandTest extends AbstractConsoleTest {
     @SmallTest
     public void testCreateSymlinkOk() throws Exception {
         try {
-            CommandHelper.createFile(getContext(), PATH_SOURCE_OK, getConsole());
+            CommandHelper.createFile(getContext(), PATH_SOURCE_OK, null, getConsole());
             boolean ret = CommandHelper.createLink(
                     getContext(), PATH_SOURCE_OK, PATH_LINK_OK, getConsole());
             FileSystemObject fso =
@@ -84,7 +84,7 @@ public class LinkCommandTest extends AbstractConsoleTest {
     @SmallTest
     public void testCreateSymlinkFail() throws Exception {
         try {
-            CommandHelper.createFile(getContext(), PATH_SOURCE_ERROR, getConsole());
+            CommandHelper.createFile(getContext(), PATH_SOURCE_ERROR, null, getConsole());
             boolean ret = CommandHelper.createLink(
                     getContext(), PATH_SOURCE_ERROR, PATH_LINK_ERROR, getConsole());
             assertTrue("response==false", ret); //$NON-NLS-1$
