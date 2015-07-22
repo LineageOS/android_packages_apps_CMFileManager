@@ -35,7 +35,6 @@ import java.text.ParseException;
 public class CreateFileCommand extends SyncResultProgram implements CreateFileExecutable {
 
     private static final String ID = "touch";  //$NON-NLS-1$
-    private Boolean mRet;
     private final String mFileName;
 
     /**
@@ -53,17 +52,14 @@ public class CreateFileCommand extends SyncResultProgram implements CreateFileEx
      * {@inheritDoc}
      */
     @Override
-    public void parse(String in, String err) throws ParseException {
-        //Release the return object
-        this.mRet = Boolean.TRUE;
-    }
+    public void parse(String in, String err) throws ParseException { }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Boolean getResult() {
-        return this.mRet;
+    public String getResult() {
+        return this.mFileName;
     }
 
     /**

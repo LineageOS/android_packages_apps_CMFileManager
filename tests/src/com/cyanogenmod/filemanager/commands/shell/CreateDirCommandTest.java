@@ -19,6 +19,7 @@ package com.cyanogenmod.filemanager.commands.shell;
 import android.os.Environment;
 import android.test.suitebuilder.annotation.SmallTest;
 
+import android.text.TextUtils;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.util.CommandHelper;
 
@@ -49,8 +50,9 @@ public class CreateDirCommandTest extends AbstractConsoleTest {
     @SmallTest
     public void testCreateDirOk() throws Exception {
         try {
-            boolean ret = CommandHelper.createDirectory(getContext(), PATH_NEWDIR_OK, getConsole());
-            assertTrue("response==false", ret); //$NON-NLS-1$
+            String ret = CommandHelper.createDirectory(getContext(), PATH_NEWDIR_OK, null,
+                    getConsole());
+            assertTrue("response==false", !TextUtils.isEmpty(ret)); //$NON-NLS-1$
 
         } finally {
             try {
@@ -67,7 +69,7 @@ public class CreateDirCommandTest extends AbstractConsoleTest {
     @SmallTest
     public void testCreateDirFail() throws Exception {
         try {
-            CommandHelper.createDirectory(getContext(), PATH_NEWDIR_ERROR, getConsole());
+            CommandHelper.createDirectory(getContext(), PATH_NEWDIR_ERROR, null, getConsole());
             assertTrue("exit code==0", false); //$NON-NLS-1$
         } catch (NoSuchFileOrDirectory error) {
           //This command must failed. exit code !=0

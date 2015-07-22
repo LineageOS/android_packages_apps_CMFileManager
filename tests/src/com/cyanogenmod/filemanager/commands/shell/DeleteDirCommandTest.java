@@ -49,7 +49,7 @@ public class DeleteDirCommandTest extends AbstractConsoleTest {
     @SmallTest
     public void testDeleteDirOk() throws Exception {
         try {
-            CommandHelper.createDirectory(getContext(), PATH_DELDIR_OK, getConsole());
+            CommandHelper.createDirectory(getContext(), PATH_DELDIR_OK, null, getConsole());
         } finally {
             boolean ret = CommandHelper.deleteDirectory(getContext(), PATH_DELDIR_OK, getConsole());
             assertTrue("response==false", ret); //$NON-NLS-1$

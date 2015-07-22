@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012 The CyanogenMod Project
+ * Copyright (C) 2015 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,37 +14,44 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.filemanager.commands.java;
+package com.cyanogenmod.filemanager.commands.storageapi;
 
 import android.util.Log;
-
+import com.cyanogen.ambient.common.api.PendingResult;
+import com.cyanogen.ambient.storage.StorageApi;
 import com.cyanogenmod.filemanager.commands.CreateDirExecutable;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
+import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
 import com.cyanogenmod.filemanager.model.MountPoint;
-import com.cyanogenmod.filemanager.util.MountPointHelper;
-
-import java.io.File;
 
 
 /**
- * A class for create a directory.
+ * A class for create a file.
  */
 public class CreateDirCommand extends Program implements CreateDirExecutable {
 
-    private static final String TAG = "CreateDirCommand"; //$NON-NLS-1$
+    private static final String TAG = CreateDirCommand.class.getSimpleName();
 
-    private final String mPath;
+
+    private final StorageApiConsole mConsole;
+    private final String mParent;
+    private final String mName;
+    private String mResult;
 
     /**
-     * Constructor of <code>CreateDirCommand</code>.
+     * Constructor of <code>CreateFileCommand</code>.
      *
-     * @param path The name of the new directory
+     * @param console The StorageApiConsole for creating this directory
+     * @param dir The id of the parent directory
+     * @param name The name of the new directory
      */
-    public CreateDirCommand(String path) {
+    public CreateDirCommand(StorageApiConsole console, String dir, String name) {
         super();
-        this.mPath = path;
+        this.mConsole = console;
+        this.mParent = dir;
+        this.mName = name;
     }
 
     /**
@@ -52,7 +59,7 @@ public class CreateDirCommand extends Program implements CreateDirExecutable {
      */
     @Override
     public String getResult() {
-        return this.mPath;
+        return mResult;
     }
 
     /**
@@ -63,31 +70,21 @@ public class CreateDirCommand extends Program implements CreateDirExecutable {
             throws InsufficientPermissionsException, NoSuchFileOrDirectory, ExecutionException {
         if (isTrace()) {
             Log.v(TAG,
-                    String.format("Creating directory: %s", this.mPath)); //$NON-NLS-1$
+                    String.format("Creating directory: %s", this.mParent)); //$NON-NLS-1$
         }
 
-        File f = new File(this.mPath);
-        // Check that if the path exist, it need to be a directory. Otherwise something is
-        // wrong
-        if (f.exists() && !f.isDirectory()) {
-            if (isTrace()) {
-                Log.v(TAG, "Result: FAIL. ExecutionException"); //$NON-NLS-1$
-            }
-            throw new ExecutionException("the path exists but is not a folder"); //$NON-NLS-1$
-        }
+        String parentId = StorageApiConsole.getProviderPathFromFullPath(mParent);
+        PendingResult<StorageApi.Document.DocumentResult> pendingResult = mConsole.getStorageApi()
+                .createFolder(mConsole.getStorageProviderInfo(), parentId, mName);
+        StorageApi.Document.DocumentResult statusResult = pendingResult.await();
 
-        // Only create the directory if the folder not exists. Otherwise mkdir will return false
-        if (!f.exists()) {
-            if (!f.mkdir()) {
-                if (isTrace()) {
-                    Log.v(TAG, "Result: FAIL. InsufficientPermissionsException"); //$NON-NLS-1$
-                }
-                throw new InsufficientPermissionsException();
-            }
+        if (statusResult.getStatus().isSuccess()) {
+            mResult = StorageApiConsole.getFullPathForConsoleDocument(mConsole,
+                    statusResult.getDocument().getId());
         }
 
         if (isTrace()) {
-            Log.v(TAG, "Result: OK"); //$NON-NLS-1$
+            Log.v(TAG, "Result: " + mResult); //$NON-NLS-1$
         }
     }
 
@@ -104,6 +101,6 @@ public class CreateDirCommand extends Program implements CreateDirExecutable {
      */
     @Override
     public MountPoint getDstWritableMountPoint() {
-        return MountPointHelper.getMountPointFromDirectory(this.mPath);
+        return null;
     }
 }

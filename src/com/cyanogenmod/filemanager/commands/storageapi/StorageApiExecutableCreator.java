@@ -16,6 +16,7 @@
 
 package com.cyanogenmod.filemanager.commands.storageapi;
 
+import android.text.TextUtils;
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.ChangeOwnerExecutable;
 import com.cyanogenmod.filemanager.commands.ChangePermissionsExecutable;
@@ -107,19 +108,26 @@ public class StorageApiExecutableCreator implements ExecutableCreator {
      * {@inheritDoc}
      */
     @Override
-    public CreateDirExecutable createCreateDirectoryExecutable(String dir)
+    public CreateDirExecutable createCreateDirectoryExecutable(String dir, String name)
             throws CommandNotFoundException {
-        throw new CommandNotFoundException("Not implemented"); //$NON-NLS-1$
+        if (TextUtils.isEmpty(name)) {
+            throw new CommandNotFoundException("Not implemented"); //$NON-NLS-1$
+        } else {
+            return new CreateDirCommand(mConsole, dir, name);
+        }
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public CreateFileExecutable createCreateFileExecutable(String file)
+    public CreateFileExecutable createCreateFileExecutable(String dir, String name)
             throws CommandNotFoundException {
-        throw new CommandNotFoundException("Not implemented"); //$NON-NLS-1$
-    }
+        if (TextUtils.isEmpty(name)) {
+            throw new CommandNotFoundException("Not implemented"); //$NON-NLS-1$
+        } else {
+            return new CreateFileCommand(mConsole, dir, name);
+        }    }
 
     /**
      * {@inheritDoc}

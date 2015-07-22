@@ -53,8 +53,8 @@ public class CreateFileCommand extends Program implements CreateFileExecutable {
      * {@inheritDoc}
      */
     @Override
-    public Boolean getResult() {
-        return Boolean.TRUE;
+    public String getResult() {
+        return this.mPath;
     }
 
     /**

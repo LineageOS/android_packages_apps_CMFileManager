@@ -1452,7 +1452,7 @@ public class EditorActivity extends Activity implements TextWatcher {
     private void syncWrite(AsyncWriter writer, byte[] bytes) throws Exception {
         // Create the writable command
         WriteExecutable cmd =
-                CommandHelper.write(this, this.mFso.getFullPath(), writer, null);
+                CommandHelper.write(this, this.mFso.getParent(), this.mFso.getName(), writer, null);
 
         // Obtain access to the buffer (IMP! don't close the buffer here, it's manage
         // by the command)

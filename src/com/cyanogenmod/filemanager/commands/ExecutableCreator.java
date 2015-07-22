@@ -81,29 +81,32 @@ public interface ExecutableCreator {
     /**
      * Method that creates an executable for create a new directory.
      *
-     * @param dir The absolute path of the new directory
+     * @param dir The directory to create directory in
+     * @param name The display name for the file to create
      * @return CreateDirExecutable A {@link CreateDirExecutable} executable implementation
      * reference
      * @throws CommandNotFoundException If the executable can't be created
      * @throws NoSuchFileOrDirectory If the file or directory was not found
      * @throws InsufficientPermissionsException If an operation requires elevated permissions
      */
-    CreateDirExecutable createCreateDirectoryExecutable(String dir)
+    CreateDirExecutable createCreateDirectoryExecutable(String dir, String name)
             throws CommandNotFoundException,
             NoSuchFileOrDirectory, InsufficientPermissionsException;
 
     /**
      * Method that creates an executable for create a new file.
      *
-     * @param file The absolute path of the new file
+     * @param dir The directory to create file in
+     * @param name The display name for the file to create
      * @return CreateFileExecutable A {@link CreateFileExecutable} executable
      * implementation reference
      * @throws CommandNotFoundException If the executable can't be created
      * @throws NoSuchFileOrDirectory If the file or directory was not found
      * @throws InsufficientPermissionsException If an operation requires elevated permissions
      */
-    CreateFileExecutable createCreateFileExecutable(String file) throws CommandNotFoundException,
-            NoSuchFileOrDirectory, InsufficientPermissionsException;
+    CreateFileExecutable createCreateFileExecutable(String dir, String name)
+            throws CommandNotFoundException, NoSuchFileOrDirectory,
+            InsufficientPermissionsException;
 
     /**
      * Method that creates an executable for delete a directory.
