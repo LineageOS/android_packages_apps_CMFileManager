@@ -21,6 +21,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.os.ParcelFileDescriptor;
 import android.system.ErrnoException;
 import android.system.OsConstants;
 import android.text.TextUtils;
@@ -413,7 +414,9 @@ public final class StorageProviderUtils {
 
             PendingResult<DocumentResult> pendingResult =
                     console.getStorageApi().putFile(console.getStorageProviderInfo(),
-                            dst.getId(), fileName, inputStream, mimetype, false, null);
+                            dst.getId(), fileName,
+                            ParcelFileDescriptor.open(src, ParcelFileDescriptor.MODE_READ_WRITE),
+                            mimetype, false, null);
 
             DocumentResult result = pendingResult.await();
 
