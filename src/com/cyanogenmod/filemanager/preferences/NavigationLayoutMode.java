@@ -24,7 +24,8 @@ public enum NavigationLayoutMode implements ObjectIdentifier {
     /**
      * That mode shows a icon based view (icon + name) on a {@link "GridView"}.
      */
-    ICONS(0),
+    // TODO: Re-enable icon layout mode when fully implemented
+    //ICONS(0),
     /**
      * That mode shows a simple item view (icon + name) on a {@link "ListView"}.
      */

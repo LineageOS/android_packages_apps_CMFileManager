@@ -778,10 +778,11 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
      * @param useFlinger If the view should use flinger gesture detection
      */
     public void setUseFlinger(boolean useFlinger) {
-        if (this.mCurrentMode.compareTo(NavigationLayoutMode.ICONS) == 0) {
+        // TODO: Re-enable when icons layout implementation is finished
+        /*if (this.mCurrentMode.compareTo(NavigationLayoutMode.ICONS) == 0) {
             // Not supported
             return;
-        }
+        }*/
         // Set the flinger listener (only when navigate)
         if (this.mNavigationMode.compareTo(NAVIGATION_MODE.BROWSABLE) == 0) {
             if (this.mAdapterView instanceof FlingerListView) {
@@ -929,12 +930,13 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         //Creates the new layout
         AdapterView<ListAdapter> newView = null;
         int itemResourceId = -1;
-        if (newMode.compareTo(NavigationLayoutMode.ICONS) == 0) {
+        // TODO: Re-enable when icons layout implementation is finished
+        /*if (newMode.compareTo(NavigationLayoutMode.ICONS) == 0) {
             newView = (AdapterView<ListAdapter>)inflate(
                     getContext(), RESOURCE_MODE_ICONS_LAYOUT, null);
             itemResourceId = RESOURCE_MODE_ICONS_ITEM;
 
-        } else if (newMode.compareTo(NavigationLayoutMode.SIMPLE) == 0) {
+        } else */if (newMode.compareTo(NavigationLayoutMode.SIMPLE) == 0) {
             newView =  (AdapterView<ListAdapter>)inflate(
                     getContext(), RESOURCE_MODE_SIMPLE_LAYOUT, null);
             itemResourceId = RESOURCE_MODE_SIMPLE_ITEM;
