@@ -22,6 +22,30 @@
       "revId": "a849763cc71577ff31f5ef5ab6af533dfd7841c5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df140735_13cbc453",
+        "filename": "src/com/cyanogenmod/filemanager/util/StorageProviderUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 401,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-23T20:59:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "df140735_53981c69",
+      "range": {
+        "startLine": 401,
+        "startChar": 12,
+        "endLine": 401,
+        "endChar": 23
+      },
+      "revId": "a849763cc71577ff31f5ef5ab6af533dfd7841c5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
