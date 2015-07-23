@@ -788,7 +788,7 @@ public final class CommandHelper {
                 cSrc instanceof StorageApiConsole || cDst instanceof StorageApiConsole)) {
             // Is safe to use the same console
             MoveExecutable executable =
-                    cSrc.getExecutableFactory().newCreator().createMoveExecutable(src, dst, null);
+                    cSrc.getExecutableFactory().newCreator().createMoveExecutable(src, dst, name);
             writableExecute(context, executable, cSrc);
             ret = executable.getResult().booleanValue();
         } else {
@@ -919,7 +919,7 @@ public final class CommandHelper {
                 cSrc instanceof StorageApiConsole || cDst instanceof StorageApiConsole)) {
             // Is safe to use the same console
             CopyExecutable executable =
-                    cSrc.getExecutableFactory().newCreator().createCopyExecutable(src, dst, null);
+                    cSrc.getExecutableFactory().newCreator().createCopyExecutable(src, dst, name);
             writableExecute(context, executable, cSrc);
             ret = executable.getResult().booleanValue();
         } else {

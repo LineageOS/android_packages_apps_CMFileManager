@@ -117,7 +117,8 @@ public class CopyCommand extends Program implements CopyExecutable {
         final String dstPath = StorageApiConsole.getProviderPathFromFullPath(mDst);
 
         PendingResult<DocumentResult> pendingResult =
-                mConsole.getStorageApi().copy(mConsole.getStorageProviderInfo(), srcPath, dstPath);
+                mConsole.getStorageApi().copy(mConsole.getStorageProviderInfo(),
+                        srcPath, dstPath, mName);
 
         DocumentResult result = pendingResult.await();
 

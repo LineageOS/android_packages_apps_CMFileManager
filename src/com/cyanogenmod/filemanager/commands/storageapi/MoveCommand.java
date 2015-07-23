@@ -111,7 +111,8 @@ public class MoveCommand extends Program implements MoveExecutable {
         final String dstPath = StorageApiConsole.getProviderPathFromFullPath(mDst);
 
         PendingResult<DocumentResult> pendingResult =
-                mConsole.getStorageApi().move(mConsole.getStorageProviderInfo(), srcPath, dstPath);
+                mConsole.getStorageApi().move(mConsole.getStorageProviderInfo(),
+                        srcPath, dstPath, mName);
 
         DocumentResult result = pendingResult.await();
 

@@ -51,6 +51,14 @@
       android:showAsAction="ifRoom"
       android:title="@string/actions_menu_move_selection"/>
     <item
+        android:id="@+id/mnu_actions_create_copy_from_selection"
+        android:showAsAction="ifRoom"
+        android:title="@string/actions_menu_create_copy"/>
+    <item
+        android:id="@+id/mnu_actions_rename_selection"
+        android:showAsAction="ifRoom"
+        android:title="@string/actions_menu_rename"/>
+    <item
       android:id="@+id/mnu_actions_delete_selection"
       android:showAsAction="ifRoom"
       android:title="@string/actions_menu_delete_selection"/>
@@ -67,17 +75,9 @@
       android:showAsAction="ifRoom"
       android:title="@string/actions_menu_send_selection"/>
     <item
-      android:id="@+id/mnu_actions_add_to_bookmarks_current_folder"
-      android:showAsAction="ifRoom"
-      android:title="@string/actions_menu_add_to_bookmarks"/>
-    <item
       android:id="@+id/mnu_actions_add_shortcut_current_folder"
       android:showAsAction="ifRoom"
       android:title="@string/actions_menu_add_shortcut"/>
-    <item
-      android:id="@+id/mnu_actions_global_set_as_home"
-      android:showAsAction="ifRoom"
-      android:title="@string/actions_menu_set_as_home"/>
   </group>
 
   <!-- FileSystemObject Actions -->
@@ -139,10 +139,6 @@
       android:showAsAction="ifRoom"
       android:title="@string/actions_menu_print"/>
     <item
-      android:id="@+id/mnu_actions_add_to_bookmarks"
-      android:showAsAction="ifRoom"
-      android:title="@string/actions_menu_add_to_bookmarks"/>
-    <item
       android:id="@+id/mnu_actions_add_shortcut"
       android:showAsAction="ifRoom"
       android:title="@string/actions_menu_add_shortcut"/>
@@ -154,10 +150,6 @@
       android:id="@+id/mnu_actions_open_parent_folder"
       android:showAsAction="ifRoom"
       android:title="@string/actions_menu_open_parent_folder"/>
-    <item
-      android:id="@+id/mnu_actions_set_as_home"
-      android:showAsAction="ifRoom"
-      android:title="@string/actions_menu_set_as_home"/>
   </group>
 
 </menu>
