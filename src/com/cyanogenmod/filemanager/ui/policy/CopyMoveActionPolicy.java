@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.text.Html;
 import android.text.Spanned;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.cyanogenmod.filemanager.R;
@@ -65,8 +66,8 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
      * his destination {@link File}
      */
     public static class LinkedResource implements Comparable<LinkedResource> {
-        final File mSrc;
-        final File mDst;
+        final FileSystemObject mSrc;
+        final FileSystemObject mDst;
 
         /**
          * Constructor of <code>LinkedResource</code>
@@ -74,7 +75,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
          * @param src The source file system object
          * @param dst The destination file system object
          */
-        public LinkedResource(File src, File dst) {
+        public LinkedResource(FileSystemObject src, FileSystemObject dst) {
             super();
             this.mSrc = src;
             this.mDst = dst;
@@ -104,18 +105,8 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             final String newName,
             final OnSelectionListener onSelectionListener,
             final OnRequestRefreshListener onRequestRefreshListener) {
-
-        // Create the destination filename
-        File dst = new File(fso.getParent(), newName);
-        File src = new File(fso.getFullPath());
-
-        // Create arguments
-        LinkedResource linkRes = new LinkedResource(src, dst);
-        List<LinkedResource> files = new ArrayList<LinkedResource>(1);
-        files.add(linkRes);
-
-        // Destination must have the same parent and it must be currentDirectory,
-        final String destination = onSelectionListener.onRequestCurrentDir();
+        final String destination = fso.getParent();
+        List<LinkedResource> files = createLinkedResource(fso, newName);
 
         // Internal copy
         copyOrMoveFileSystemObjects(
@@ -140,19 +131,14 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             final FileSystemObject fso,
             final OnSelectionListener onSelectionListener,
             final OnRequestRefreshListener onRequestRefreshListener) {
-
         // Create a non-existing name
         String curDir = onSelectionListener.onRequestCurrentDir();
         String  newName =
                 FileHelper.createNonExistingName(
                         ctx, curDir, fso.getName(), R.string.create_copy_regexp);
-        final File dst = new File(fso.getParent(), newName);
-        File src = new File(fso.getFullPath());
 
-        // Create arguments
-        LinkedResource linkRes = new LinkedResource(src, dst);
-        List<LinkedResource> files = new ArrayList<LinkedResource>(1);
-        files.add(linkRes);
+        final String destination = fso.getParent();
+        List<LinkedResource> files = createLinkedResource(fso, newName);
 
         if (onSelectionListener == null) {
             AlertDialog dialog =
@@ -162,9 +148,6 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             DialogHelper.delegateDialogShow(ctx, dialog);
             return;
         }
-
-        // Destination must have the same parent and it must be currentDirectory,
-        final String destination = onSelectionListener.onRequestCurrentDir();
 
         // Internal copy
         copyOrMoveFileSystemObjects(
@@ -338,8 +321,8 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
 
             @Override
             public Spanned requestProgress() {
-                File src = this.mFiles.get(this.mCurrent).mSrc;
-                File dst = this.mFiles.get(this.mCurrent).mDst;
+                FileSystemObject src = this.mFiles.get(this.mCurrent).mSrc;
+                FileSystemObject dst = this.mFiles.get(this.mCurrent).mDst;
 
                 // Return the current operation
                 String progress =
@@ -349,8 +332,8 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                               || this.mOperation.equals(COPY_MOVE_OPERATION.RENAME) ?
                                   R.string.waiting_dialog_moving_msg :
                                   R.string.waiting_dialog_copying_msg,
-                              src.getAbsolutePath(),
-                              dst.getAbsolutePath());
+                              src.getFullPath(),
+                              dst.getFullPath());
                 return Html.fromHtml(progress);
             }
 
@@ -358,17 +341,17 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                 // Remove orphan bookmark paths
                 if (files != null) {
                     for (LinkedResource linkedFiles : files) {
-                        Bookmarks.deleteOrphanBookmarks(ctx, linkedFiles.mSrc.getAbsolutePath());
+                        Bookmarks.deleteOrphanBookmarks(ctx, linkedFiles.mSrc.getFullPath());
                         //Operation complete. Show refresh
                         if (mOnRequestRefreshListener != null) {
                             FileSystemObject fso = null;
                             try {
                                 fso = CommandHelper.getFileInfo(ctx,
-                                        linkedFiles.mDst.getAbsolutePath(), false, null);
+                                        linkedFiles.mDst.getFullPath(), false, null);
                                 mOnRequestRefreshListener.onClearCache(fso);
                             } catch (Exception e) {
                                 Log.w(TAG, "Exception getting file info for " +
-                                        linkedFiles.mDst.getAbsolutePath(), e);
+                                        linkedFiles.mDst.getFullPath(), e);
                             }
                         }
                     }
@@ -395,8 +378,8 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
 
                 int cc2 = this.mFiles.size();
                 for (int i = 0; i < cc2; i++) {
-                    File src = this.mFiles.get(i).mSrc;
-                    File dst = this.mFiles.get(i).mDst;
+                    FileSystemObject src = this.mFiles.get(i).mSrc;
+                    FileSystemObject dst = this.mFiles.get(i).mDst;
 
                     doOperation(this.mCtx, src, dst, this.mOperation);
 
@@ -435,7 +418,8 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
              * @param operation Indicates the operation to do
              */
             private void doOperation(
-                    Context ctx, File src, File dst, COPY_MOVE_OPERATION operation)
+                    Context ctx, FileSystemObject src, FileSystemObject dst,
+                    COPY_MOVE_OPERATION operation)
                     throws Throwable {
                 // If the source is the same as destiny then don't do the operation
                 if (src.compareTo(dst) == 0) return;
@@ -443,10 +427,10 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                 try {
                     // Be sure to append a / if source is a folder (otherwise system crashes
                     // under using absolute paths) Issue: CYAN-2791
-                    String source = src.getAbsolutePath() +
-                            (src.isDirectory() ? File.separator : "");
-                    String dest = dst.getAbsolutePath() +
-                            (dst.isDirectory() ? File.separator : "");
+                    String source = src.getFullPath() +
+                            ((new File(src.getFullPath())).isDirectory() ? File.separator : "");
+                    String dest = dst.getFullPath() +
+                            ((new File(dst.getFullPath())).isDirectory() ? File.separator : "");
 
                     /*
                         There is a possibility that the src and dst can have different consoles.
@@ -467,13 +451,13 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                         CommandHelper.move(
                                 ctx,
                                 source,
-                                dst.getAbsolutePath(),
+                                dst.getFullPath(),
                                 mSrcConsole);
                     } else {
                         CommandHelper.copy(
                                 ctx,
                                 source,
-                                dst.getAbsolutePath(),
+                                dst.getFullPath(),
                                 mSrcConsole);
                     }
                 } catch (Exception e) {
@@ -525,9 +509,9 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
 
                 // Check that the operation was completed retrieving the fso modified
                 FileSystemObject fso =
-                        CommandHelper.getFileInfo(ctx, dst.getAbsolutePath(), false, null);
+                        CommandHelper.getFileInfo(ctx, dst.getFullPath(), false, null);
                 if (fso == null) {
-                    throw new NoSuchFileOrDirectory(dst.getAbsolutePath());
+                    throw new NoSuchFileOrDirectory(dst.getFullPath());
                 }
             }
         };
@@ -584,9 +568,28 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
         int cc = items.size();
         for (int i = 0; i < cc; i++) {
             FileSystemObject fso = items.get(i);
-            File src = new File(fso.getFullPath());
-            File dst = new File(directory, fso.getName());
-            resources.add(new LinkedResource(src, dst));
+            FileSystemObject dst = FileHelper.createFileSystemObject(
+                    new File(directory, fso.getName()));
+            resources.add(new LinkedResource(fso, dst));
+        }
+        return resources;
+    }
+
+    /**
+     * Method that creates a {@link LinkedResource} for a single object to the
+     * destination directory with a new name
+     *
+     * @param fso The single source item
+     * @param newName The new name for the source item
+     */
+    private static List<LinkedResource> createLinkedResource(
+            FileSystemObject fso, String newName) {
+        List<LinkedResource> resources = new ArrayList<LinkedResource>(1);
+        if (fso != null && !TextUtils.isEmpty(newName)) {
+            String path = fso.getParent();
+            FileSystemObject dst =
+                FileHelper.createFileSystemObject(new File(fso.getParent(), newName));
+            resources.add(new LinkedResource(fso, dst));
         }
         return resources;
     }
@@ -607,10 +610,10 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             int cc2 = files.size();
             for (int j = 0; j < cc2; j++) {
                 FileSystemObject dst1 =  currentFiles.get(i);
-                File dst2 = files.get(j).mDst;
+                FileSystemObject dst2 = files.get(j).mDst;
 
                 // The file exists in the destination directory
-                if (dst1.getFullPath().compareTo(dst2.getAbsolutePath()) == 0) {
+                if (dst1.getName().compareTo(dst2.getName()) == 0) {
                     askUser = true;
                     break;
                 }
@@ -643,8 +646,8 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
         int cc = files.size();
         for (int i = 0; i < cc; i++) {
             LinkedResource linkRes = files.get(i);
-            String src = FileHelper.addTrailingSlash(linkRes.mSrc.getAbsolutePath());
-            String dst = linkRes.mDst.getAbsolutePath();
+            String src = linkRes.mSrc.getFullPath();
+            String dst = linkRes.mDst.getFullPath();
 
             // 1.- Current directory can't be moved
             if (operation.equals(COPY_MOVE_OPERATION.MOVE) &&

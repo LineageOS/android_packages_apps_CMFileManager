@@ -20,6 +20,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.text.TextUtils;
 import android.view.HapticFeedbackConstants;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -235,11 +236,17 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
 
             //- Rename
             case R.id.mnu_actions_rename:
+            case R.id.mnu_actions_rename_selection:
+                FileSystemObject fso = mFso;
                 // Dialog is dismissed inside showInputNameDialog
                 if (this.mOnSelectionListener != null) {
-                    showFsoInputNameDialog(menuItem, this.mFso, false);
-                    return;
+                    List<FileSystemObject> selection = this.mOnSelectionListener
+                            .onRequestSelectedFiles();
+                    if (selection.size() == 1) {
+                        fso = selection.get(0);
+                    }
                 }
+                showFsoInputNameDialog(menuItem, fso, false);
                 break;
 
             //- Create link
@@ -393,24 +400,20 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
 
             //- Create copy
             case R.id.mnu_actions_create_copy:
+            case R.id.mnu_actions_create_copy_from_selection:
+                fso = mFso;
                 // Create a copy of the fso
                 if (this.mOnSelectionListener != null) {
+                    List<FileSystemObject> selection = this.mOnSelectionListener
+                            .onRequestSelectedFiles();
+                    if (selection.size() == 1) {
+                        fso = selection.get(0);
+                    }
                     CopyMoveActionPolicy.createCopyFileSystemObject(
                                 this.mContext,
-                                this.mFso,
+                                fso,
                                 this.mOnSelectionListener,
                                 this.mOnRequestRefreshListener);
-                }
-                break;
-
-            //- Add to bookmarks
-            case R.id.mnu_actions_add_to_bookmarks:
-            case R.id.mnu_actions_add_to_bookmarks_current_folder:
-                Bookmark bookmark = BookmarksActionPolicy.addToBookmarks(
-                        this.mContext, this.mFso);
-                if (mBackRef != null && bookmark != null) {
-                    // tell MainActivity's drawer to add the bookmark
-                    mBackRef.addBookmark(bookmark);
                 }
                 break;
 
@@ -433,7 +436,7 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
             //- Properties
             case R.id.mnu_actions_properties:
             case R.id.mnu_actions_properties_current_folder:
-                FileSystemObject fso = this.mFso;
+                fso = this.mFso;
                 if (this.mOnSelectionListener != null) {
                     List<FileSystemObject> selection = this.mOnSelectionListener
                             .onRequestSelectedFiles();
@@ -449,19 +452,6 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
             case R.id.mnu_actions_open_parent_folder:
                 NavigationActionPolicy.openParentFolder(
                         this.mContext, this.mFso, this.mOnRequestRefreshListener);
-                break;
-
-                // Set as home
-            case R.id.mnu_actions_set_as_home:
-            case R.id.mnu_actions_global_set_as_home:
-                try {
-                    Preferences.savePreference(
-                            FileManagerSettings.SETTINGS_INITIAL_DIR, mFso.getFullPath(), true);
-                    mOnRequestRefreshListener.onRequestBookmarksRefresh();
-                    DialogHelper.showToast(mContext, R.string.msgs_success, Toast.LENGTH_SHORT);
-                } catch (InvalidClassException e) {
-                    ExceptionUtil.translateException(mContext, e);
-                }
                 break;
 
             default:
@@ -547,6 +537,7 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
                     String name = inputNameDialog.getName();
                     switch (menuItem.getItemId()) {
                         case R.id.mnu_actions_rename:
+                        case R.id.mnu_actions_rename_selection:
                             // Rename the fso
                             if (ActionsDialog.this.mOnSelectionListener != null) {
                                 CopyMoveActionPolicy.renameFileSystemObject(
@@ -685,12 +676,9 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
             if (!PrintActionPolicy.isPrintedAllowed(mContext, mFso)) {
                 menu.removeItem(R.id.mnu_actions_print);
             }
-        }
-
-        //- Add to bookmarks -> Only directories
-        if (this.mFso != null && FileHelper.isRootDirectory(this.mFso)) {
-            menu.removeItem(R.id.mnu_actions_add_to_bookmarks);
-            menu.removeItem(R.id.mnu_actions_add_to_bookmarks_current_folder);
+        } else if (mGlobal && (selection != null && selection.size() != 1)) {
+            menu.removeItem(R.id.mnu_actions_rename_selection);
+            menu.removeItem(R.id.mnu_actions_create_copy_from_selection);
         }
 
         //- Remove properties option if multiple files selected
@@ -781,7 +769,6 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
         // Shotcuts and Bookmarks (not available in virtual filesystems)
         if (!mGlobal && (mFso.isSecure() || mFso.isRemote())) {
             menu.removeItem(R.id.mnu_actions_add_shortcut);
-            menu.removeItem(R.id.mnu_actions_add_to_bookmarks);
         } else if (mGlobal) {
             // Remove shortcuts for secure folders
             if (mFso != null && mFso.isSecure()) {
@@ -791,22 +778,10 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
                 for (FileSystemObject fso : selection) {
                     if (fso.isSecure() || fso.isRemote()) {
                         menu.removeItem(R.id.mnu_actions_add_shortcut_current_folder);
-                        menu.removeItem(R.id.mnu_actions_add_to_bookmarks_current_folder);
                         break;
                     }
                 }
             }
-        }
-
-        // Set as home
-        if (!mGlobal && !FileHelper.isDirectory(mFso)) {
-            menu.removeItem(R.id.mnu_actions_set_as_home);
-        } else if (mGlobal && (selection != null && selection.size() > 0)) {
-            menu.removeItem(R.id.mnu_actions_global_set_as_home);
-        } else if (!mGlobal && (mFso.isSecure() || mFso.isRemote())) {
-            menu.removeItem(R.id.mnu_actions_set_as_home);
-        } else if (mGlobal && (mFso.isSecure() || mFso.isRemote())) {
-            menu.removeItem(R.id.mnu_actions_global_set_as_home);
         }
 
         // Not allowed in search
@@ -828,7 +803,6 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
             menu.removeItem(R.id.mnu_actions_create_copy);
             menu.removeItem(R.id.mnu_actions_create_link);
             menu.removeItem(R.id.mnu_actions_add_shortcut);
-            menu.removeItem(R.id.mnu_actions_add_to_bookmarks);
         } else if (mGlobal) {
             if (selection != null && selection.size() > 0) {
                 for (FileSystemObject fso : selection) {
@@ -836,6 +810,7 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
                         menu.removeItem(R.id.mnu_actions_paste_selection);
                         menu.removeItem(R.id.mnu_actions_move_selection);
                         menu.removeItem(R.id.mnu_actions_delete_selection);
+                        menu.removeItem(R.id.mnu_actions_rename);
                         menu.removeItem(R.id.mnu_actions_compress_selection);
                         menu.removeItem(R.id.mnu_actions_create_link_global);
                         menu.removeItem(R.id.mnu_actions_send_selection);
@@ -843,7 +818,6 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
                         menu.removeItem(R.id.mnu_actions_create_link_global);
                         menu.removeItem(R.id.mnu_actions_create_link_global);
                         menu.removeItem(R.id.mnu_actions_add_shortcut_current_folder);
-                        menu.removeItem(R.id.mnu_actions_add_to_bookmarks_current_folder);
                         break;
                     }
                 }
