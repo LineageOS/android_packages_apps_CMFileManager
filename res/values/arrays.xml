@@ -29,7 +29,6 @@
 
     <!-- The strings of the menu for navigation layout mode enumeration -->
     <string-array name="cm_filemanager_layout_mode" translatable="false">
-        <item>@string/layout_icons</item>
         <item>@string/layout_simple</item>
         <item>@string/layout_details</item>
     </string-array>
