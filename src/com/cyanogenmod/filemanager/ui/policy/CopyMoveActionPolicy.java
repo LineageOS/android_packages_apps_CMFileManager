@@ -106,18 +106,8 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             final String newName,
             final OnSelectionListener onSelectionListener,
             final OnRequestRefreshListener onRequestRefreshListener) {
-
-        // Create the destination filename
-        FileSystemObject dst =
-                FileHelper.createFileSystemObject(new File(fso.getParent(), newName));
-
-        // Create arguments
-        LinkedResource linkRes = new LinkedResource(fso, dst);
-        List<LinkedResource> files = new ArrayList<LinkedResource>(1);
-        files.add(linkRes);
-
-        // Destination must have the same parent and it must be currentDirectory,
-        final String destination = onSelectionListener.onRequestCurrentDir();
+        final String destination = fso.getParent();
+        List<LinkedResource> files = createLinkedResource(fso, newName);
 
         // Internal copy
         copyOrMoveFileSystemObjects(
@@ -142,19 +132,14 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             final FileSystemObject fso,
             final OnSelectionListener onSelectionListener,
             final OnRequestRefreshListener onRequestRefreshListener) {
-
         // Create a non-existing name
         List<FileSystemObject> curFiles = onSelectionListener.onRequestCurrentItems();
         String  newName =
                 FileHelper.createNonExistingName(
                         ctx, curFiles, fso.getName(), R.string.create_copy_regexp);
-        final FileSystemObject dst =
-                FileHelper.createFileSystemObject(new File(fso.getParent(), newName));
 
-        // Create arguments
-        LinkedResource linkRes = new LinkedResource(fso, dst);
-        List<LinkedResource> files = new ArrayList<LinkedResource>(1);
-        files.add(linkRes);
+        final String destination = fso.getParent();
+        List<LinkedResource> files = createLinkedResource(fso, newName);
 
         if (onSelectionListener == null) {
             AlertDialog dialog =
@@ -164,9 +149,6 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             DialogHelper.delegateDialogShow(ctx, dialog);
             return;
         }
-
-        // Destination must have the same parent and it must be currentDirectory,
-        final String destination = onSelectionListener.onRequestCurrentDir();
 
         // Internal copy
         copyOrMoveFileSystemObjects(
@@ -654,6 +636,36 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                         providerPrefix);
             } else {
                 dst = FileHelper.createFileSystemObject(new File(directory, fso.getName()));
+            }
+            resources.add(new LinkedResource(fso, dst));
+        }
+        return resources;
+    }
+
+    /**
+     * Method that creates a {@link LinkedResource} for a single object to the
+     * destination directory with a new name
+     *
+     * @param fso The single source item
+     * @param newName The new name for the source item
+     */
+    private static List<LinkedResource> createLinkedResource(
+            FileSystemObject fso, String newName) {
+        List<LinkedResource> resources = new ArrayList<LinkedResource>(1);
+        if (fso != null && !TextUtils.isEmpty(newName)) {
+            String path = fso.getParent();
+            FileSystemObject dst;
+            if (StorageApiConsole.getStorageApiConsoleForPath(path) != null) {
+                // Special case for Storage Provider
+                int hash = StorageApiConsole.getHashCodeFromStorageApiPath(path);
+                String providerPrefix = StorageApiConsole.constructStorageApiPrefixFromHash(hash);
+                dst = FileHelper.createFileSystemObject(
+                        StorageApiConsole.getProviderPathFromFullPath(path),
+                        newName,
+                        null,
+                        providerPrefix);
+            } else {
+                dst = FileHelper.createFileSystemObject(new File(fso.getParent(), newName));
             }
             resources.add(new LinkedResource(fso, dst));
         }
