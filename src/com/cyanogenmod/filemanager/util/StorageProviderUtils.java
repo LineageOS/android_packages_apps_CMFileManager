@@ -21,6 +21,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.os.ParcelFileDescriptor;
 import android.system.ErrnoException;
 import android.system.OsConstants;
 import android.text.TextUtils;
@@ -392,12 +393,10 @@ public final class StorageProviderUtils {
             final Document dst, final String name, Program program)
             throws ExecutionException, CancelledOperationException {
         String fileName = name;
-        InputStream inputStream = null;
         try {
             if (!src.exists()) {
                 throw new NoSuchFileOrDirectory(src.getAbsolutePath());
             }
-            inputStream = new FileInputStream(src);
 
             // Check destination name
             if (TextUtils.isEmpty(name)) {
@@ -413,7 +412,9 @@ public final class StorageProviderUtils {
 
             PendingResult<DocumentResult> pendingResult =
                     console.getStorageApi().putFile(console.getStorageProviderInfo(),
-                            dst.getId(), fileName, inputStream, mimetype, false, null);
+                            dst.getId(), fileName,
+                            ParcelFileDescriptor.open(src, ParcelFileDescriptor.MODE_READ_WRITE),
+                            mimetype, false, null);
 
             DocumentResult result = pendingResult.await();
 
