@@ -22,6 +22,30 @@
       "revId": "54449cce7040dbdf7bab66fff6e3a2d68485aa16",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df140735_02380bd1",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 846,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-24T10:57:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "df140735_a2feff02",
+      "range": {
+        "startLine": 846,
+        "startChar": 29,
+        "endLine": 846,
+        "endChar": 57
+      },
+      "revId": "54449cce7040dbdf7bab66fff6e3a2d68485aa16",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
