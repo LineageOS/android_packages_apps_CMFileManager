@@ -107,7 +107,12 @@ public class MoveCommand extends Program implements MoveExecutable {
             try {
                 TFile.mv(s, d, SecureConsole.DETECTOR);
             } catch (IOException ex) {
-                throw new ExecutionException("Failed to rename file or directory", ex);
+                // Make sure truecrypt was right
+                // There's a strange bug in it where it thinks that a file did not
+                // move over. However, it actually did.
+                if (!d.exists()) {
+                    throw new ExecutionException("Failed to rename file or directory", ex);
+                }
             }
         }
 
