@@ -74,7 +74,7 @@ public class CreateFileCommand extends Program implements CreateFileExecutable {
 
         String parentId = StorageApiConsole.getProviderPathFromFullPath(mParent);
         PendingResult<StorageApi.Document.DocumentResult> pendingResult = mConsole.getStorageApi()
-                .createDocument(mConsole.getStorageProviderInfo(), parentId, mName, null);
+                .createDocument(mConsole.getStorageProviderInfo(), mName, parentId, null);
         StorageApi.Document.DocumentResult statusResult = pendingResult.await();
 
         if (statusResult.getStatus().isSuccess()) {

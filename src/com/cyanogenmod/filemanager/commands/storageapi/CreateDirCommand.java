@@ -75,7 +75,7 @@ public class CreateDirCommand extends Program implements CreateDirExecutable {
 
         String parentId = StorageApiConsole.getProviderPathFromFullPath(mParent);
         PendingResult<StorageApi.Document.DocumentResult> pendingResult = mConsole.getStorageApi()
-                .createFolder(mConsole.getStorageProviderInfo(), parentId, mName);
+                .createFolder(mConsole.getStorageProviderInfo(), mName, parentId);
         StorageApi.Document.DocumentResult statusResult = pendingResult.await();
 
         if (statusResult.getStatus().isSuccess()) {
