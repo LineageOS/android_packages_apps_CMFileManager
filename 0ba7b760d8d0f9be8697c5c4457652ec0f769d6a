@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df140735_0e971793",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-24T02:26:40Z",
+      "side": 1,
+      "message": "you\u0027re no longer calling with this message. did you mean to add it back in?",
+      "range": {
+        "startLine": 57,
+        "startChar": 29,
+        "endLine": 57,
+        "endChar": 40
+      },
+      "revId": "0ba7b760d8d0f9be8697c5c4457652ec0f769d6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df140735_2e82db50",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-07-24T02:26:40Z",
+      "side": 1,
+      "message": "you\u0027re no longer calling with this message. did you mean to add it back in?",
+      "range": {
+        "startLine": 209,
+        "startChar": 21,
+        "endLine": 209,
+        "endChar": 32
+      },
+      "revId": "0ba7b760d8d0f9be8697c5c4457652ec0f769d6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
