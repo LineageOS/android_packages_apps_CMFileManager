@@ -73,7 +73,7 @@ public class DeleteDirCommand extends Program implements DeleteDirExecutable {
                 mConsole.getStorageProviderInfo(), path);
         StorageApi.StatusResult statusResult = pendingResult.await();
 
-        mResult = statusResult.getCommonStatus().isSuccess();
+        mResult = statusResult.getProviderStatus().isSuccess();
 
         if (isTrace()) {
             Log.v(TAG, "Result: " + mResult); //$NON-NLS-1$
