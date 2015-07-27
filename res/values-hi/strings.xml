@@ -374,7 +374,10 @@
   <string name="ash_keyword">कुंजीशब्द</string>
   <string name="ash_quoted_string">उद्धृत चिह्न</string>
   <string name="ash_variable">चर</string>
+  <string name="secure_storage_unlock_title">सुरक्षित भंडारण को अनलॉक करें</string>
+  <string name="secure_storage_create_title">सुरक्षित भंडारण निर्मित करें</string>
   <string name="secure_storage_reset_title">पासवर्ड को रीसेट करें</string>
+  <string name="secure_storage_delete_title">सुरक्षित भंडारण को हटाएँ</string>
   <string name="secure_storage_unlock_key_prompt_msg">सुरक्षित भंडारण फ़ाइल प्रणाली को अनलॉक करने के लिए पासवर्ड टाइप करें।</string>
   <string name="secure_storage_unlock_key_new_msg">सुरक्षित भंडारण फ़ाइल प्रणाली को रक्षित करने के लिए पासवर्ड टाइप करें।</string>
   <string name="secure_storage_unlock_key_reset_msg">सुरक्षित भंडारण फ़ाइल प्रणाली को रीसेट करने के लिए वर्तमान और नया पासवर्ड टाइप करें।</string>
