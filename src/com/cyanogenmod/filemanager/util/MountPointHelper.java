@@ -83,6 +83,24 @@ public final class MountPointHelper {
     }
 
     /**
+     * Method that refresh the mount point information.
+     *
+     * @return boolean refresh success or not.
+     */
+    public synchronized static boolean refreshMountPoints() {
+        synchronized(sMountPoints) {
+            try {
+                sMountPoints =
+                        CommandHelper.getMountPoints(null, null);
+                return true;
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to update the mount point information", e); //$NON-NLS-1$
+            }
+        }
+        return false;
+    }
+
+    /**
      * Method that retrieve the mount point information for a directory.
      *
      * @param console The console in which realize the operation
