@@ -117,6 +117,7 @@ import com.cyanogenmod.filemanager.util.ExceptionUtil;
 import com.cyanogenmod.filemanager.util.ExceptionUtil.OnRelaunchCommandResult;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
+import com.cyanogenmod.filemanager.util.MountPointHelper;
 import com.cyanogenmod.filemanager.util.StorageHelper;
 
 import java.io.File;
@@ -326,6 +327,8 @@ public class NavigationActivity extends Activity
                         FileManagerSettings.INTENT_MOUNT_STATUS_CHANGED) == 0 ||
                             intent.getAction().equals(Intent.ACTION_MEDIA_MOUNTED) ||
                             intent.getAction().equals(Intent.ACTION_MEDIA_UNMOUNTED)) {
+                    MountPointHelper.refreshMountPoints(
+                            FileManagerApplication.getBackgroundConsole());
                     onRequestBookmarksRefresh();
                     removeUnmountedHistory();
                     removeUnmountedSelection();
