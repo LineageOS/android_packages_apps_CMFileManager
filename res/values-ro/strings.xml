@@ -98,7 +98,7 @@
   <string name="layout_icons">Pictograme</string>
   <string name="layout_simple">Simplu</string>
   <string name="layout_details">Detaliat</string>
-  <string name="cm_filemanager_show_dirs_first">Afişare dosare întâi</string>
+  <string name="cm_filemanager_show_dirs_first">Afișare dosare întâi</string>
   <string name="cm_filemanager_show_hidden">Afişare fişiere ascunse</string>
   <string name="cm_filemanager_show_system">Afişare fişiere de sistem</string>
   <string name="cm_filemanager_show_symlinks">Afişare legături simbolice</string>
@@ -399,5 +399,5 @@
   <string name="changelog_title">Istoria schimbărilor</string>
   <string name="welcome_title">Bun venit</string>
   <string name="welcome_msg">Bine ați venit la managerul de fișiere CyanogenMod.\n\nAceastă aplicație vă permite să explorați sistemul de fișiere și să efectuați operații care ar putea deteriora dispozitivul dvs. Pentru a preveni stricăciunile, aplicația pornește în modul sigur, un mod cu privilegii reduse.\n\nPuteți accesa modul avansat, cu privilegii complete via Setări. Este responsabilitatea dvs să vă asigurați că operațile făcute de dvs nu distrug dispozitivul.\n\nEchipa CyanogenMod</string>
-  <string name="activity_not_found_exception">Nu s-a găsit un app pentru a deschide acest fişier</string>
+  <string name="activity_not_found_exception">Nu s-a găsit o aplicație pentru a deschide acest fișier</string>
 </resources>
