@@ -624,8 +624,8 @@ public class NavigationActivity extends Activity
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
+    protected void onStart() {
+        super.onStart();
 
         if (mSearchView.getVisibility() == View.VISIBLE) {
             closeSearch();
