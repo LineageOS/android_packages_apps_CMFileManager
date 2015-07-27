@@ -90,6 +90,18 @@ public final class MountPointHelper {
      * @return MountPoint The mount point information
      */
     public synchronized static MountPoint getMountPointFromDirectory(Console console, String dir) {
+        return getMountPointFromDirectory(console, dir, false);
+    }
+
+    /**
+     * Method that retrieve the mount point information for a directory.
+     *
+     * @param console The console in which realize the operation
+     * @param dir The directory of which recovers his mount point information
+     * @param needRefresh The flag that refresh the mount point information
+     * @return MountPoint The mount point information
+     */
+    public synchronized static MountPoint getMountPointFromDirectory(Console console, String dir, boolean needRefresh) {
         try {
             // For non-rooted devices, which console is java and runs under a chrooted
             // device, mount point info mustn't be a main objective. Caching the status
@@ -97,7 +109,7 @@ public final class MountPointHelper {
             // Refresh mount points after some time (5 minutes should be enough)
             long now = System.currentTimeMillis();
             if (sMountPoints == null || (now - sLastCachedTime) > MAX_CACHED_TIME ||
-                FileManagerApplication.hasShellCommands()) {
+                FileManagerApplication.hasShellCommands() || needRefresh)  {
                 //Retrieve the mount points
                 List<MountPoint> mps =
                         CommandHelper.getMountPoints(null, console);
@@ -113,6 +125,10 @@ public final class MountPointHelper {
                     return lhs.compareTo(rhs) * -1;
                 }
             });
+
+            if (dir == null) {
+                return null;
+            }
 
             //Search for the mount point information
             int cc = sMountPoints.size();
