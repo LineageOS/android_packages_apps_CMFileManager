@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf091321_21bc3468",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1914,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-07-28T05:50:49Z",
+      "side": 1,
+      "message": "This is never set back to true, so later if you leave the activity and then try to come back the refresh will not be triggered.\n\nI think instead of selectively turning off the refresh, we could make sure that the open call below sets the current directory to the right value so that the refresh succeeds. Right now, it is async but if we can at least set the current dir synchronously, this should be successful.",
+      "revId": "02a69270db827f5130ba7c06e09f038681318a58",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
