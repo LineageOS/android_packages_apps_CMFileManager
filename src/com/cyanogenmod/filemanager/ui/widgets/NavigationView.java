@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.AsyncTask;
+import android.os.FileObserver;
 import android.os.storage.StorageVolume;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -438,6 +439,8 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
     // Restrictions
     private Map<DisplayRestrictions, Object> mRestrictions;
 
+    private FileObserver mCurrentDirObserver;
+
     /**
      * @hide
      */
@@ -828,6 +831,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
     public void recycle() {
         if (this.mAdapter != null) {
             this.mAdapter.dispose();
+            this.mCurrentDirObserver.stopWatching();
         }
     }
 
@@ -941,38 +945,6 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
     }
 
     /**
-     * Method that removes a {@link FileSystemObject} from the view
-     *
-     * @param fso The file system object
-     */
-    public void removeItem(FileSystemObject fso) {
-        // Delete also from internal list
-        if (fso != null) {
-            int cc = this.mFiles.size()-1;
-            for (int i = cc; i >= 0; i--) {
-                FileSystemObject f = this.mFiles.get(i);
-                if (f != null && f.compareTo(fso) == 0) {
-                    this.mFiles.remove(i);
-                    break;
-                }
-            }
-        }
-        this.mAdapter.remove(fso);
-    }
-
-    /**
-     * Method that removes a file system object from his path from the view
-     *
-     * @param path The file system object path
-     */
-    public void removeItem(String path) {
-        FileSystemObject fso = this.mAdapter.getItem(path);
-        if (fso != null) {
-            this.mAdapter.remove(fso);
-        }
-    }
-
-    /**
      * Method that returns the current directory.
      *
      * @return String The current directory
@@ -1024,6 +996,10 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             final String newDir, final boolean addToHistory,
             final boolean reload, final boolean useCurrent,
             final SearchInfoParcelable searchInfo, final FileSystemObject scrollTo) {
+        if (mCurrentDirObserver != null) {
+            mCurrentDirObserver.stopWatching();
+            mCurrentDirObserver = null;
+        }
         NavigationTask task = new NavigationTask(useCurrent, addToHistory, reload,
                 searchInfo, scrollTo, mRestrictions, mChRooted);
         task.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, newDir);
@@ -1066,7 +1042,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
     void onPostExecuteTask(
             List<FileSystemObject> files, boolean addToHistory, boolean isNewHistory,
             boolean hasChanged, SearchInfoParcelable searchInfo,
-            String newDir, final FileSystemObject scrollTo) {
+            final String newDir, final FileSystemObject scrollTo) {
         try {
             //Check that there is not errors and have some data
             if (files == null) {
@@ -1105,6 +1081,66 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
 
             //The current directory is now the "newDir"
             this.mCurrentDir = newDir;
+            mCurrentDirObserver = new FileObserver(newDir) {
+                @Override
+                public void onEvent(int event, final String path) {
+                    Runnable runnable = null;
+                    final String fullPath = newDir + '/' + path;
+                    // This is done because the implementation doesn't match the documentation
+                    // for FileObserver and we are given undocumented flags.
+                    event &= FileObserver.ALL_EVENTS;
+
+                    switch (event) {
+                        case FileObserver.CREATE:
+                        case FileObserver.MOVED_TO: {
+                            final FileSystemObject fso = FileHelper.createFileSystemObject(
+                                    new File(fullPath));
+
+                            if (FileHelper.shouldShow(fso, mRestrictions, mChRooted)) {
+                                runnable = new Runnable() {
+                                    @Override
+                                            public void run() {
+                                        mAdapter.add(fso);
+                                        // TODO: refactor to move this off of UI thread
+                                        mAdapter.sort(FileHelper.getSortComparator());
+                                    }
+                                };
+                                break;
+                            }
+                        } case FileObserver.DELETE:
+                          case FileObserver.MOVED_FROM: {
+                              runnable = new Runnable() {
+                                  @Override
+                                  public void run() {
+                                      mAdapter.remove(mAdapter.getItem(fullPath));
+                                  }
+                              };
+                            break;
+                        } case FileObserver.DELETE_SELF: {
+                            // TODO: Actually handle this
+                            break;
+
+                        } case FileObserver.MODIFY: {
+                            runnable = new Runnable() {
+                                @Override
+                                public void run() {
+                                    FileHelper.updateFileSystemObject(mAdapter.getItem(fullPath));
+                                    mAdapter.notifyDataSetChanged();
+                                }
+                            };
+                            break;
+                        }
+                        default:
+                            Log.w(TAG, "Unknown event " + event + " for " + fullPath);
+                    }
+
+                    if (runnable != null) {
+                        post(runnable);
+                    }
+                }
+            };
+            mCurrentDirObserver.startWatching();
+
             if (this.mOnDirectoryChangedListener != null) {
                 FileSystemObject dir = FileHelper.createFileSystemObject(new File(newDir));
                 this.mOnDirectoryChangedListener.onDirectoryChanged(dir);
@@ -1240,11 +1276,6 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
      */
     @Override
     public void onRequestRefresh(Object o, boolean clearSelection) {
-        if (o instanceof FileSystemObject) {
-            refresh((FileSystemObject)o);
-        } else if (o == null) {
-            refresh();
-        }
         if (clearSelection) {
             onDeselectAll();
         }
@@ -1263,11 +1294,6 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
      */
     @Override
     public void onRequestRemove(Object o, boolean clearSelection) {
-        if (o != null && o instanceof FileSystemObject) {
-            removeItem((FileSystemObject)o);
-        } else {
-            onRequestRefresh(null, clearSelection);
-        }
         if (clearSelection) {
             onDeselectAll();
         }

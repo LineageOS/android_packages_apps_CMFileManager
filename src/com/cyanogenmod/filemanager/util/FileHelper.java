@@ -515,6 +515,103 @@ public final class FileHelper {
         return fso;
     }
 
+
+    public static boolean shouldShow(FileSystemObject file,
+                                     Map<DisplayRestrictions, Object> restrictions,
+                                     boolean chRooted) {
+        //Retrieve user preferences
+        SharedPreferences prefs = Preferences.getSharedPreferences();
+        FileManagerSettings showHiddenPref = FileManagerSettings.SETTINGS_SHOW_HIDDEN;
+        FileManagerSettings showSystemPref = FileManagerSettings.SETTINGS_SHOW_SYSTEM;
+        FileManagerSettings showSymlinksPref = FileManagerSettings.SETTINGS_SHOW_SYMLINKS;
+
+        //Hidden files
+        if (!prefs.getBoolean(
+                showHiddenPref.getId(),
+                ((Boolean)showHiddenPref.getDefaultValue()).booleanValue()) || chRooted) {
+            if (file.isHidden()) {
+                return false;
+            }
+        }
+
+        //System files
+        if (!prefs.getBoolean(
+                showSystemPref.getId(),
+                ((Boolean)showSystemPref.getDefaultValue()).booleanValue()) || chRooted) {
+            if (file instanceof SystemFile) {
+                return false;
+            }
+        }
+
+        //Symlinks files
+        if (!prefs.getBoolean(
+                showSymlinksPref.getId(),
+                ((Boolean)showSymlinksPref.getDefaultValue()).booleanValue()) || chRooted) {
+            if (file instanceof Symlink) {
+                return false;
+            }
+        }
+
+        // Restrictions (only apply to files)
+        if (restrictions != null) {
+            if (!isDirectory(file)) {
+                if (!isDisplayAllowed(file, restrictions)) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    public static Comparator<FileSystemObject> getSortComparator() {
+
+        //Retrieve user preferences
+        SharedPreferences prefs = Preferences.getSharedPreferences();
+        FileManagerSettings sortModePref = FileManagerSettings.SETTINGS_SORT_MODE;
+        FileManagerSettings showDirsFirstPref = FileManagerSettings.SETTINGS_SHOW_DIRS_FIRST;
+
+        final boolean showDirsFirst =
+                prefs.getBoolean(
+                        showDirsFirstPref.getId(),
+                        ((Boolean)showDirsFirstPref.getDefaultValue()).booleanValue());
+        final NavigationSortMode sortMode =
+                NavigationSortMode.fromId(
+                        prefs.getInt(sortModePref.getId(),
+                                ((ObjectIdentifier) sortModePref.getDefaultValue()).getId()));
+
+        return new Comparator<FileSystemObject>() {
+            @Override
+            public int compare(FileSystemObject lhs, FileSystemObject rhs) {
+                //Parent directory always goes first
+                boolean isLhsParentDirectory = lhs instanceof ParentDirectory;
+                boolean isRhsParentDirectory = rhs instanceof ParentDirectory;
+                if (isLhsParentDirectory || isRhsParentDirectory) {
+                    if (isLhsParentDirectory && isRhsParentDirectory) {
+                        return 0;
+                    }
+                    return (isLhsParentDirectory) ? -1 : 1;
+                }
+
+                //Need to sort directory first?
+                if (showDirsFirst) {
+                    boolean isLhsDirectory = FileHelper.isDirectory(lhs);
+                    boolean isRhsDirectory = FileHelper.isDirectory(rhs);
+                    if (isLhsDirectory || isRhsDirectory) {
+                        if (isLhsDirectory && isRhsDirectory) {
+                            //Apply sort mode
+                            return FileHelper.doCompare(lhs, rhs, sortMode);
+                        }
+                        return (isLhsDirectory) ? -1 : 1;
+                    }
+                }
+
+                //Apply sort mode
+                return FileHelper.doCompare(lhs, rhs, sortMode);
+            }
+        };
+    }
+
     /**
      * Method that applies the configuration modes to the listed files
      * (sort mode, hidden files, ...).
@@ -543,101 +640,18 @@ public final class FileHelper {
     public static List<FileSystemObject> applyUserPreferences(
             List<FileSystemObject> files, Map<DisplayRestrictions, Object> restrictions,
             boolean noSort, boolean chRooted) {
-        //Retrieve user preferences
-        SharedPreferences prefs = Preferences.getSharedPreferences();
-        FileManagerSettings sortModePref = FileManagerSettings.SETTINGS_SORT_MODE;
-        FileManagerSettings showDirsFirstPref = FileManagerSettings.SETTINGS_SHOW_DIRS_FIRST;
-        FileManagerSettings showHiddenPref = FileManagerSettings.SETTINGS_SHOW_HIDDEN;
-        FileManagerSettings showSystemPref = FileManagerSettings.SETTINGS_SHOW_SYSTEM;
-        FileManagerSettings showSymlinksPref = FileManagerSettings.SETTINGS_SHOW_SYMLINKS;
 
         //Remove all unnecessary files (no required by the user)
         int cc = files.size();
         for (int i = cc - 1; i >= 0; i--) {
-            FileSystemObject file = files.get(i);
-
-            //Hidden files
-            if (!prefs.getBoolean(
-                    showHiddenPref.getId(),
-                    ((Boolean)showHiddenPref.getDefaultValue()).booleanValue()) || chRooted) {
-                if (file.isHidden()) {
-                    files.remove(i);
-                    continue;
-                }
-            }
-
-            //System files
-            if (!prefs.getBoolean(
-                    showSystemPref.getId(),
-                    ((Boolean)showSystemPref.getDefaultValue()).booleanValue()) || chRooted) {
-                if (file instanceof SystemFile) {
-                    files.remove(i);
-                    continue;
-                }
-            }
-
-            //Symlinks files
-            if (!prefs.getBoolean(
-                    showSymlinksPref.getId(),
-                    ((Boolean)showSymlinksPref.getDefaultValue()).booleanValue()) || chRooted) {
-                if (file instanceof Symlink) {
-                    files.remove(i);
-                    continue;
-                }
-            }
-
-            // Restrictions (only apply to files)
-            if (restrictions != null) {
-                if (!isDirectory(file)) {
-                    if (!isDisplayAllowed(file, restrictions)) {
-                        files.remove(i);
-                        continue;
-                    }
-                }
+            if (!shouldShow(files.get(i), restrictions, chRooted)) {
+                files.remove(i);
             }
         }
 
         //Apply sort mode
         if (!noSort) {
-            final boolean showDirsFirst =
-                    prefs.getBoolean(
-                            showDirsFirstPref.getId(),
-                        ((Boolean)showDirsFirstPref.getDefaultValue()).booleanValue());
-            final NavigationSortMode sortMode =
-                    NavigationSortMode.fromId(
-                            prefs.getInt(sortModePref.getId(),
-                            ((ObjectIdentifier)sortModePref.getDefaultValue()).getId()));
-            Collections.sort(files, new Comparator<FileSystemObject>() {
-                @Override
-                public int compare(FileSystemObject lhs, FileSystemObject rhs) {
-                    //Parent directory always goes first
-                    boolean isLhsParentDirectory = lhs instanceof ParentDirectory;
-                    boolean isRhsParentDirectory = rhs instanceof ParentDirectory;
-                    if (isLhsParentDirectory || isRhsParentDirectory) {
-                        if (isLhsParentDirectory && isRhsParentDirectory) {
-                            return 0;
-                        }
-                        return (isLhsParentDirectory) ? -1 : 1;
-                    }
-
-                    //Need to sort directory first?
-                    if (showDirsFirst) {
-                        boolean isLhsDirectory = FileHelper.isDirectory(lhs);
-                        boolean isRhsDirectory = FileHelper.isDirectory(rhs);
-                        if (isLhsDirectory || isRhsDirectory) {
-                            if (isLhsDirectory && isRhsDirectory) {
-                                //Apply sort mode
-                                return FileHelper.doCompare(lhs, rhs, sortMode);
-                            }
-                            return (isLhsDirectory) ? -1 : 1;
-                        }
-                    }
-
-                    //Apply sort mode
-                    return FileHelper.doCompare(lhs, rhs, sortMode);
-                }
-
-            });
+            Collections.sort(files, getSortComparator());
         }
 
         //Return the files
@@ -1053,6 +1067,35 @@ public final class FileHelper {
         return relative.toString() + s1.substring(s2.length());
     }
 
+    private static void applyFileToFileSystemObject(File file, FileSystemObject fso) {
+        // The user and group name of the files. Use the defaults one for sdcards
+        final String USER = "root"; //$NON-NLS-1$
+        final String GROUP = "sdcard_r"; //$NON-NLS-1$
+
+        // The user and group name of the files. In ChRoot, aosp give restrict access to
+        // this user and group. This applies for permission also. This has no really much
+        // interest if we not allow to change the permissions
+        AID userAID = AIDHelper.getAIDFromName(USER);
+        AID groupAID = AIDHelper.getAIDFromName(GROUP);
+        User user = new User(userAID.getId(), userAID.getName());
+        Group group = new Group(groupAID.getId(), groupAID.getName());
+        Permissions perm = file.isDirectory()
+                ? Permissions.createDefaultFolderPermissions()
+                : Permissions.createDefaultFilePermissions();
+
+        // Build a directory?
+        Date lastModified = new Date(file.lastModified());
+
+        fso.setName(file.getName());
+        fso.setParent(file.getParent());
+        fso.setUser(user);
+        fso.setGroup(group);
+        fso.setPermissions(perm);
+        fso.setLastModifiedTime(lastModified);
+        fso.setLastAccessedTime(lastModified);
+        fso.setLastChangedTime(lastModified);
+    }
+
     /**
      * Method that creates a {@link FileSystemObject} from a {@link File}
      *
@@ -1061,44 +1104,27 @@ public final class FileHelper {
      */
     public static FileSystemObject createFileSystemObject(File file) {
         try {
-            // The user and group name of the files. Use the defaults one for sdcards
-            final String USER = "root"; //$NON-NLS-1$
-            final String GROUP = "sdcard_r"; //$NON-NLS-1$
-
-            // The user and group name of the files. In ChRoot, aosp give restrict access to
-            // this user and group. This applies for permission also. This has no really much
-            // interest if we not allow to change the permissions
-            AID userAID = AIDHelper.getAIDFromName(USER);
-            AID groupAID = AIDHelper.getAIDFromName(GROUP);
-            User user = new User(userAID.getId(), userAID.getName());
-            Group group = new Group(groupAID.getId(), groupAID.getName());
-            Permissions perm = file.isDirectory()
-                    ? Permissions.createDefaultFolderPermissions()
-                    : Permissions.createDefaultFilePermissions();
-
-            // Build a directory?
-            Date lastModified = new Date(file.lastModified());
-            if (file.isDirectory()) {
-                return
-                    new Directory(
-                            file.getName(),
-                            file.getParent(),
-                            user, group, perm,
-                            lastModified, lastModified, lastModified); // The only date we have
-            }
-
-            // Build a regular file
-            return
-                new RegularFile(
-                        file.getName(),
-                        file.getParent(),
-                        user, group, perm,
-                        file.length(),
-                        lastModified, lastModified, lastModified); // The only date we have
+            FileSystemObject fso = file.isDirectory() ? new Directory() : new RegularFile();
+            applyFileToFileSystemObject(file, fso);
+            return fso;
         } catch (Exception e) {
             Log.e(TAG, "Exception retrieving the fso", e); //$NON-NLS-1$
         }
         return null;
+    }
+
+
+    /**
+     * Method that updates a {@link FileSystemObject}
+     *
+     * @param fso The {@link FileSystemObject} to update
+     */
+    public static void updateFileSystemObject(FileSystemObject fso) {
+        try {
+            applyFileToFileSystemObject(new File(fso.getFullPath()), fso);
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to apply changes to " + fso.getFullPath(), e);
+        }
     }
 
     /**
