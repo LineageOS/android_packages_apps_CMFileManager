@@ -302,20 +302,6 @@ public class NavigationActivity extends Activity
                     }
 
                 } else if (intent.getAction().compareTo(
-                        FileManagerSettings.INTENT_FILE_CHANGED) == 0) {
-                    // Retrieve the file that was changed
-                    String file =
-                            intent.getStringExtra(FileManagerSettings.EXTRA_FILE_CHANGED_KEY);
-                    try {
-                        FileSystemObject fso = CommandHelper.getFileInfo(context, file, null);
-                        if (fso != null) {
-                            getCurrentNavigationView().refresh(fso);
-                        }
-                    } catch (Exception e) {
-                        ExceptionUtil.translateException(context, e, true, false);
-                    }
-
-                } else if (intent.getAction().compareTo(
                         FileManagerSettings.INTENT_THEME_CHANGED) == 0) {
                     applyTheme();
 
@@ -641,7 +627,6 @@ public class NavigationActivity extends Activity
         if (curDir != null) {
             VirtualMountPointConsole vc = VirtualMountPointConsole.getVirtualConsoleForPath(
                     mNavigationViews[mCurrentNavigationView].getCurrentDir());
-            getCurrentNavigationView().refresh(true);
             if (vc != null && !vc.isMounted()) {
                 onRequestBookmarksRefresh();
                 removeUnmountedHistory();
@@ -1898,10 +1883,6 @@ public class NavigationActivity extends Activity
                         if (searchInfo != null && searchInfo.isSuccessNavigation()) {
                             //Navigate to previous history
                             back();
-                        } else {
-                            // I don't know is the search view was changed, so try to do a refresh
-                            // of the navigation view
-                            getCurrentNavigationView().refresh(true);
                         }
                     }
                     // reset bookmarks list to default as the user could have set a
@@ -1938,13 +1919,6 @@ public class NavigationActivity extends Activity
      */
     @Override
     public void onRequestRefresh(Object o, boolean clearSelection) {
-        if (o instanceof FileSystemObject) {
-            // Refresh only the item
-            this.getCurrentNavigationView().refresh((FileSystemObject)o);
-        } else if (o == null) {
-            // Refresh all
-            getCurrentNavigationView().refresh();
-        }
         if (clearSelection) {
             this.getCurrentNavigationView().onDeselectAll();
         }
@@ -1964,13 +1938,8 @@ public class NavigationActivity extends Activity
     @Override
     public void onRequestRemove(Object o, boolean clearSelection) {
         if (o instanceof FileSystemObject) {
-            // Remove from view
-            this.getCurrentNavigationView().removeItem((FileSystemObject)o);
-
             //Remove from history
             removeFromHistory((FileSystemObject)o);
-        } else {
-            onRequestRefresh(null, clearSelection);
         }
         if (clearSelection) {
             this.getCurrentNavigationView().onDeselectAll();
@@ -2323,19 +2292,8 @@ public class NavigationActivity extends Activity
             }
 
         } catch (Exception e) {
-            // Notify the user
+            // Do nothing, objects should be removed by the FileObserver in NavigationView
             ExceptionUtil.translateException(this, e);
-
-            // Remove the object
-            if (e instanceof FileNotFoundException || e instanceof NoSuchFileOrDirectory) {
-                // If have a FileSystemObject reference then there is no need to search
-                // the path (less resources used)
-                if (item instanceof FileSystemObject) {
-                    getCurrentNavigationView().removeItem((FileSystemObject)item);
-                } else {
-                    getCurrentNavigationView().removeItem((String)item);
-                }
-            }
             return;
         }
 
