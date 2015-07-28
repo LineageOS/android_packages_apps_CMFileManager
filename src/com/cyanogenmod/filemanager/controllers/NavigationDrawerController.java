@@ -27,6 +27,7 @@ import android.util.Log;
 import android.widget.ListView;
 import com.cyanogen.ambient.common.api.ResultCallback;
 import com.cyanogen.ambient.storage.StorageApi;
+import com.cyanogen.ambient.storage.provider.StorageProvider;
 import com.cyanogen.ambient.storage.provider.StorageProviderInfo;
 import com.cyanogen.ambient.storage.provider.StorageProviderInfo.ProviderInfoListResult;
 import com.cyanogenmod.filemanager.FileManagerApplication;
@@ -106,7 +107,7 @@ public class NavigationDrawerController implements ResultCallback<ProviderInfoLi
         for (StorageProviderInfo providerInfo : mProviderInfoList) {
             StorageApi sapi = StorageApi.getInstance();
 
-            if (!providerInfo.needAuthentication() &&
+            if (StorageProviderUtils.isStorageProviderAdded(mCtx, providerInfo.getAuthority()) &&
                     !TextUtils.isEmpty(providerInfo.getPackage()) &&
                     !TextUtils.isEmpty(providerInfo.getTitle()) &&
                     !TextUtils.isEmpty(providerInfo.getSummary())) {
@@ -371,9 +372,10 @@ public class NavigationDrawerController implements ResultCallback<ProviderInfoLi
         protected void onPostExecute(Integer integer) {
             int color = integer.intValue();
             if (mIcon != null) {
+                String summary =  mProviderInfo.getSummary();
                 NavigationDrawerItem item = new NavigationDrawerItem(mProviderHashCode,
                         NavigationDrawerItemType.DOUBLE, mProviderInfo.getTitle(),
-                        mProviderInfo.getSummary(),
+                        summary == null ? "" : summary,
                         mIcon, color);
                 mNavigationDrawerItemList.add(mLastRoot++, item);
                 updateItemSelectionAndInvalidate(item);

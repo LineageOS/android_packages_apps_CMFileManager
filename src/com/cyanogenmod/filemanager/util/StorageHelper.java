@@ -496,7 +496,7 @@ public final class StorageHelper {
             for (StorageProviderInfo providerInfo : providerInfoList) {
                 StorageApi sapi = StorageApi.getInstance();
 
-                if (!providerInfo.needAuthentication() &&
+                if (StorageProviderUtils.isStorageProviderAdded(ctx, providerInfo.getAuthority()) &&
                         !TextUtils.isEmpty(providerInfo.getPackage()) &&
                         !TextUtils.isEmpty(providerInfo.getTitle()) &&
                         !TextUtils.isEmpty(providerInfo.getSummary())) {

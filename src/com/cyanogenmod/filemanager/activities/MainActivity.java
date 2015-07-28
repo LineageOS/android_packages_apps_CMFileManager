@@ -377,6 +377,10 @@ public class MainActivity extends ActionBarActivity
                             mNavigationDrawerController.getProviderInfoFromMenuItem(itemId);
 
                     if (providerInfo != null) {
+                        if (providerInfo.needAuthentication()) {
+                            startActivity(providerInfo.authenticateUser());
+                            return;
+                        }
                         path = StorageApiConsole.constructStorageApiFilePathFromProvider(
                                 providerInfo.getRootDocumentId(),
                                 StorageApiConsole.getHashCodeFromProvider(providerInfo));

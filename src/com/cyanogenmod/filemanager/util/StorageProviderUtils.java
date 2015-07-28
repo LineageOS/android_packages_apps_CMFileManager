@@ -17,6 +17,7 @@
 package com.cyanogenmod.filemanager.util;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
 import android.content.res.Resources;
@@ -40,6 +41,7 @@ import com.cyanogenmod.filemanager.console.CancelledOperationException;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
+import com.cyanogenmod.filemanager.preferences.Preferences;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -440,5 +442,12 @@ public final class StorageProviderUtils {
 
             return false;
         }
+    }
+
+    public static boolean isStorageProviderAdded(Context context, String authority) {
+        SharedPreferences sharedPreferences =
+                context.getSharedPreferences(Preferences.SETTINGS_FILENAME,
+                        Context.MODE_PRIVATE);
+        return sharedPreferences.getBoolean(authority, false);
     }
 }

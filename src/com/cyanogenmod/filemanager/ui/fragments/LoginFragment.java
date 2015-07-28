@@ -16,11 +16,14 @@
 
 package com.cyanogenmod.filemanager.ui.fragments;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,6 +39,8 @@ import com.cyanogen.ambient.storage.provider.StorageProviderInfo.ProviderInfoLis
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.MainActivity;
 import com.cyanogenmod.filemanager.adapters.ProviderAdapter;
+import com.cyanogenmod.filemanager.preferences.Preferences;
+import com.cyanogenmod.filemanager.util.StorageProviderUtils;
 
 import java.util.List;
 
@@ -49,6 +54,8 @@ public class LoginFragment extends Fragment implements
     ProviderAdapter mAdapter;
     static final int LOGIN_TO_PROVIDER = 1;
     List<StorageProviderInfo> mProviderInfoList;
+
+    private String mProviderToAdd;
 
     private static final String TAG = "LoginFragment";
 
@@ -111,14 +118,15 @@ public class LoginFragment extends Fragment implements
             // login
             Intent i = providerItem.authenticateUser();
             try {
+                mProviderToAdd = providerItem.getAuthority();
                 startActivityForResult(i, LOGIN_TO_PROVIDER);
             } catch (Exception e) {
                 // Unable to launch auth intent
                 Log.e(TAG, "Unable to log into provider", e);
             }
-        } else {
-            // logout
-            // TODO: at some point this will apparently be in the storage area of the Settings
+        } else if (!StorageProviderUtils.isStorageProviderAdded(getActivity(),
+                providerItem.getAuthority())) {
+               addProvider(providerItem.getAuthority());
         }
     }
 
@@ -146,7 +154,18 @@ public class LoginFragment extends Fragment implements
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == getActivity().RESULT_OK) {
+            if (!TextUtils.isEmpty(mProviderToAdd)) {
+                addProvider(mProviderToAdd);
+            }
             updateAccountList();
         }
+        mProviderToAdd = null;
+    }
+
+    private void addProvider(String authority) {
+        SharedPreferences sharedPreferences =
+                getActivity().getSharedPreferences(Preferences.SETTINGS_FILENAME,
+                        Context.MODE_PRIVATE);
+        sharedPreferences.edit().putBoolean(authority, true).commit();
     }
 }
