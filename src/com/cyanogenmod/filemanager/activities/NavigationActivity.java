@@ -641,7 +641,6 @@ public class NavigationActivity extends Activity
         if (curDir != null) {
             VirtualMountPointConsole vc = VirtualMountPointConsole.getVirtualConsoleForPath(
                     mNavigationViews[mCurrentNavigationView].getCurrentDir());
-            getCurrentNavigationView().refresh(true);
             if (vc != null && !vc.isMounted()) {
                 onRequestBookmarksRefresh();
                 removeUnmountedHistory();
@@ -2367,16 +2366,7 @@ public class NavigationActivity extends Activity
             // Notify the user
             ExceptionUtil.translateException(this, e);
 
-            // Remove the object
-            if (e instanceof FileNotFoundException || e instanceof NoSuchFileOrDirectory) {
-                // If have a FileSystemObject reference then there is no need to search
-                // the path (less resources used)
-                if (item instanceof FileSystemObject) {
-                    getCurrentNavigationView().removeItem((FileSystemObject)item);
-                } else {
-                    getCurrentNavigationView().removeItem((String)item);
-                }
-            }
+            // Do nothing, objects should be removed by the FileObserver in NavigationView
             return;
         }
 
