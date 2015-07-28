@@ -16,7 +16,6 @@
 
 package com.cyanogenmod.filemanager.activities;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -28,7 +27,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.database.Cursor;
 import android.graphics.Color;
@@ -41,7 +39,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Parcelable;
-import android.os.storage.StorageManager;
 import android.os.storage.StorageVolume;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
@@ -49,8 +46,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -64,20 +59,17 @@ import android.widget.LinearLayout;
 import android.widget.ListPopupWindow;
 import android.widget.ListView;
 import android.widget.PopupWindow;
-import android.widget.ScrollView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import android.widget.Toolbar;
 import android.widget.ArrayAdapter;
+
 import com.android.internal.util.XmlUtils;
 import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.preferences.SettingsPreferences;
-import com.cyanogenmod.filemanager.adapters.HighlightedSimpleMenuListAdapter;
 import com.cyanogenmod.filemanager.adapters.MenuSettingsAdapter;
-import com.cyanogenmod.filemanager.adapters.SimpleMenuListAdapter;
 import com.cyanogenmod.filemanager.console.Console;
 import com.cyanogenmod.filemanager.console.ConsoleAllocException;
 import com.cyanogenmod.filemanager.console.ConsoleBuilder;
@@ -125,6 +117,7 @@ import com.cyanogenmod.filemanager.util.ExceptionUtil;
 import com.cyanogenmod.filemanager.util.ExceptionUtil.OnRelaunchCommandResult;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
+import com.cyanogenmod.filemanager.util.MountPointHelper;
 import com.cyanogenmod.filemanager.util.StorageHelper;
 
 import java.io.File;
@@ -304,26 +297,13 @@ public class NavigationActivity extends Activity
                     }
 
                 } else if (intent.getAction().compareTo(
-                        FileManagerSettings.INTENT_FILE_CHANGED) == 0) {
-                    // Retrieve the file that was changed
-                    String file =
-                            intent.getStringExtra(FileManagerSettings.EXTRA_FILE_CHANGED_KEY);
-                    try {
-                        FileSystemObject fso = CommandHelper.getFileInfo(context, file, null);
-                        if (fso != null) {
-                            getCurrentNavigationView().refresh(fso);
-                        }
-                    } catch (Exception e) {
-                        ExceptionUtil.translateException(context, e, true, false);
-                    }
-
-                } else if (intent.getAction().compareTo(
                         FileManagerSettings.INTENT_THEME_CHANGED) == 0) {
                     applyTheme();
 
                 } else if (intent.getAction().compareTo(Intent.ACTION_TIME_CHANGED) == 0 ||
                            intent.getAction().compareTo(Intent.ACTION_DATE_CHANGED) == 0 ||
-                           intent.getAction().compareTo(Intent.ACTION_TIMEZONE_CHANGED) == 0) {
+                           intent.getAction().compareTo(Intent.ACTION_TIMEZONE_CHANGED) == 0 ||
+                           intent.getAction().compareTo(Intent.ACTION_LOCALE_CHANGED) == 0) {
                     // Refresh the data
                     synchronized (FileHelper.DATETIME_SYNC) {
                         FileHelper.sReloadDateTimeFormats = true;
@@ -481,8 +461,6 @@ public class NavigationActivity extends Activity
     private int mOrientation;
 
     private boolean mNeedsEasyMode = false;
-
-    private boolean mNoRefreshOnResume;
 
     /**
      * @hide
@@ -649,10 +627,6 @@ public class NavigationActivity extends Activity
         if (curDir != null) {
             VirtualMountPointConsole vc = VirtualMountPointConsole.getVirtualConsoleForPath(
                     mNavigationViews[mCurrentNavigationView].getCurrentDir());
-            if (!mNoRefreshOnResume) {
-                mNoRefreshOnResume = false;
-                getCurrentNavigationView().refresh(true);
-            }
             if (vc != null && !vc.isMounted()) {
                 onRequestBookmarksRefresh();
                 removeUnmountedHistory();
@@ -1912,7 +1886,6 @@ public class NavigationActivity extends Activity
             switch (requestCode) {
                 case INTENT_REQUEST_SEARCH:
                     if (resultCode == RESULT_OK) {
-                        mNoRefreshOnResume = true;
                         //Change directory?
                         Bundle bundle = data.getExtras();
                         if (bundle != null) {
@@ -1932,10 +1905,6 @@ public class NavigationActivity extends Activity
                         if (searchInfo != null && searchInfo.isSuccessNavigation()) {
                             //Navigate to previous history
                             back();
-                        } else {
-                            // I don't know is the search view was changed, so try to do a refresh
-                            // of the navigation view
-                            getCurrentNavigationView().refresh(true);
                         }
                     }
                     // reset bookmarks list to default as the user could have set a
@@ -1972,13 +1941,6 @@ public class NavigationActivity extends Activity
      */
     @Override
     public void onRequestRefresh(Object o, boolean clearSelection) {
-        if (o instanceof FileSystemObject) {
-            // Refresh only the item
-            this.getCurrentNavigationView().refresh((FileSystemObject)o);
-        } else if (o == null) {
-            // Refresh all
-            getCurrentNavigationView().refresh();
-        }
         if (clearSelection) {
             this.getCurrentNavigationView().onDeselectAll();
         }
@@ -1998,13 +1960,8 @@ public class NavigationActivity extends Activity
     @Override
     public void onRequestRemove(Object o, boolean clearSelection) {
         if (o instanceof FileSystemObject) {
-            // Remove from view
-            this.getCurrentNavigationView().removeItem((FileSystemObject)o);
-
             //Remove from history
             removeFromHistory((FileSystemObject)o);
-        } else {
-            onRequestRefresh(null, clearSelection);
         }
         if (clearSelection) {
             this.getCurrentNavigationView().onDeselectAll();
@@ -2357,19 +2314,8 @@ public class NavigationActivity extends Activity
             }
 
         } catch (Exception e) {
-            // Notify the user
+            // Do nothing, objects should be removed by the FileObserver in NavigationView
             ExceptionUtil.translateException(this, e);
-
-            // Remove the object
-            if (e instanceof FileNotFoundException || e instanceof NoSuchFileOrDirectory) {
-                // If have a FileSystemObject reference then there is no need to search
-                // the path (less resources used)
-                if (item instanceof FileSystemObject) {
-                    getCurrentNavigationView().removeItem((FileSystemObject)item);
-                } else {
-                    getCurrentNavigationView().removeItem((String)item);
-                }
-            }
             return;
         }
 

@@ -32,6 +32,12 @@ public class RegularFile extends FileSystemObject {
     public static final char UNIX_ID = '-';
 
     /**
+     * Normally, you shouldn't call this, however, this is in to be able
+     * to further abstract some calls in FileHelper.
+     **/
+    public RegularFile() {}
+
+    /**
      * Constructor of <code>RegularFile</code>.
      *
      * @param name The name of the object
