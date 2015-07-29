@@ -25,6 +25,7 @@ import android.os.storage.StorageVolume;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
@@ -944,8 +945,8 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             itemResourceId = RESOURCE_MODE_ICONS_ITEM;
 
         } else */if (newMode.compareTo(NavigationLayoutMode.SIMPLE) == 0) {
-            newView =  (AdapterView<ListAdapter>)inflate(
-                    getContext(), RESOURCE_MODE_SIMPLE_LAYOUT, null);
+            newView = (AdapterView<ListAdapter>)LayoutInflater.from(getContext()).inflate(
+                    RESOURCE_MODE_SIMPLE_LAYOUT, this, false);
             itemResourceId = RESOURCE_MODE_SIMPLE_ITEM;
 
             // Set the flinger listener (only when navigate)
@@ -957,8 +958,8 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             }
 
         } else if (newMode.compareTo(NavigationLayoutMode.DETAILS) == 0) {
-            newView =  (AdapterView<ListAdapter>)inflate(
-                    getContext(), RESOURCE_MODE_DETAILS_LAYOUT, null);
+            newView = (AdapterView<ListAdapter>)LayoutInflater.from(getContext()).inflate(
+                    RESOURCE_MODE_DETAILS_LAYOUT, this, false);
             itemResourceId = RESOURCE_MODE_DETAILS_ITEM;
 
             // Set the flinger listener (only when navigate)
@@ -1396,14 +1397,6 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
      * {@inheritDoc}
      */
     @Override
-    public void onRequestBookmarksRefresh() {
-        // Ignore
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
     public void onRequestRemove(Object o, boolean clearSelection) {
         if (o != null && o instanceof FileSystemObject) {
             removeItem((FileSystemObject)o);
@@ -1572,24 +1565,4 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         }
         return newDir;
     }
-
-    /**
-     * Method that applies the current theme to the activity
-     */
-    public void applyTheme() {
-        //- Breadcrumb
-        if (getBreadcrumb() != null) {
-            getBreadcrumb().applyTheme();
-        }
-
-        //- Redraw the adapter view
-        Theme theme = ThemeManager.getCurrentTheme(getContext());
-        theme.setBackgroundDrawable(getContext(), this, "background_drawable"); //$NON-NLS-1$
-        if (this.mAdapterView instanceof ListView) {
-            ((ListView)this.mAdapterView).setDivider(
-                    theme.getDrawable(getContext(), "horizontal_divider_drawable")); //$NON-NLS-1$
-        }
-        refresh();
-    }
-
 }

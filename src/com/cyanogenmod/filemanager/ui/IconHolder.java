@@ -33,6 +33,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.widget.ImageView;
 
+import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
 import com.cyanogenmod.filemanager.util.FileHelper;
@@ -69,12 +70,17 @@ public class IconHolder {
     private HandlerThread mWorkerThread;
     private Handler mWorkerHandler;
 
+    public interface ICallback {
+        public void onLoaded(ImageView imageView, Drawable icon);
+    }
+
     /**
      * This is kind of a hack, we should have a loadable for each MimeType we run into.
      * TODO: Refactor this to have different loadables
      */
     private static class Loadable {
         private Context mContext;
+        private WeakReference<ICallback> mCallback;
         private static boolean sAlbumsDirty = true;
         private static Map<String, Long> sAlbums;
 
@@ -83,10 +89,15 @@ public class IconHolder {
         Drawable result;
 
         public Loadable(Context context, ImageView view, FileSystemObject fso) {
+            this(context, view, fso, null);
+        }
+
+        public Loadable(Context context, ImageView view, FileSystemObject fso, ICallback callback) {
             this.mContext = context.getApplicationContext();
             this.fso = fso;
             this.view = new WeakReference<ImageView>(view);
             this.result = null;
+            this.mCallback = new WeakReference<ICallback>(callback);
         }
 
         private static synchronized Map<String, Long> getAlbums(Context context) {
@@ -155,7 +166,14 @@ public class IconHolder {
         private Drawable getImageDrawable(String file) {
             Bitmap thumb = ThumbnailUtils.createImageThumbnail(
                     MediaHelper.normalizeMediaPath(file),
-                    ThumbnailUtils.TARGET_SIZE_MICRO_THUMBNAIL);
+                    ThumbnailUtils.TARGET_SIZE_MINI_THUMBNAIL);
+            if (thumb == null) {
+                return null;
+            }
+            // This is terrible, but for now we only ever want a single size icon.
+            int size = mContext.getResources().getDimensionPixelSize(R.dimen.circle_icon_wh);
+            thumb = ThumbnailUtils.extractThumbnail(thumb, size, size,
+                    ThumbnailUtils.OPTIONS_RECYCLE_INPUT);
             if (thumb == null) {
                 return null;
             }
@@ -214,17 +232,25 @@ public class IconHolder {
                 return;
             }
 
-            Loadable requestedForImageView = mRequests.get(view);
-            if (requestedForImageView != result) {
-                return;
-            }
-
             // Cache the new drawable
             final String filePath = MediaHelper.normalizeMediaPath(result.fso.getFullPath());
             if (result.result != null) {
                 mAppIcons.put(filePath, result.result);
             }
-            view.setImageDrawable(result.result);
+
+            Loadable requestedForImageView = mRequests.get(view);
+            if (requestedForImageView != result) {
+                return;
+            }
+
+            if (result.mCallback != null) {
+                final ICallback callback = result.mCallback.get();
+                if (callback != null) {
+                    callback.onLoaded(view, result.result);
+                }
+            } else {
+                view.setImageDrawable(result.result);
+            }
         }
     };
 
@@ -298,12 +324,11 @@ public class IconHolder {
      *
      * @param iconView View to load the drawable into
      * @param fso The FileSystemObject reference
-     * @param defaultIcon Drawable to be used in case no specific one could be found
-     * @return Drawable The drawable reference
+     * @param defaultIconId Resource ID to be used in case no specific drawable could be found
      */
-    public void loadDrawable(ImageView iconView, FileSystemObject fso, Drawable defaultIcon) {
+    public void loadDrawable(ImageView iconView, FileSystemObject fso, int defaultIconId) {
         if (!mUseThumbs) {
-            iconView.setImageDrawable(defaultIcon);
+            iconView.setImageResource(defaultIconId);
             return;
         }
 
@@ -326,9 +351,52 @@ public class IconHolder {
 
         Loadable loadable = new Loadable(mContext, iconView, fso);
         mRequests.put(iconView, loadable);
-        iconView.setImageDrawable(defaultIcon);
+        iconView.setImageResource(defaultIconId);
 
          mWorkerHandler.obtainMessage(MSG_LOAD, loadable).sendToTarget();
+    }
+
+    public void cancel(ImageView iconView) {
+        this.mRequests.remove(iconView);
+    }
+
+    /**
+     * Method that returns a drawable reference of a FileSystemObject.
+     *
+     * @param iconView View to load the drawable into
+     * @param fso The FileSystemObject reference
+     * @param defaultIconId Resource ID to be used in case no specific drawable could be found
+     * @param callback ICallback to use when finished loading
+     */
+    public void loadDrawable(ImageView iconView, FileSystemObject fso, int defaultIconId,
+            ICallback callback) {
+        if (!mUseThumbs) {
+            callback.onLoaded(iconView, null);
+            return;
+        }
+
+        // Is cached?
+        final String filePath = MediaHelper.normalizeMediaPath(fso.getFullPath());
+        if (this.mAppIcons.containsKey(filePath)) {
+            callback.onLoaded(iconView, mAppIcons.get(filePath));
+            return;
+        }
+
+        if (mWorkerThread == null) {
+            mWorkerThread = new HandlerThread("IconHolderLoader");
+            mWorkerThread.start();
+            mWorkerHandler = new WorkerHandler(mWorkerThread.getLooper());
+        }
+        Loadable previousForView = mRequests.get(iconView);
+        if (previousForView != null) {
+            mWorkerHandler.removeMessages(MSG_LOAD, previousForView);
+        }
+
+        Loadable loadable = new Loadable(mContext, iconView, fso, callback);
+        mRequests.put(iconView, loadable);
+        callback.onLoaded(iconView, null);
+
+        mWorkerHandler.obtainMessage(MSG_LOAD, loadable).sendToTarget();
     }
 
     private class WorkerHandler extends Handler {

@@ -85,17 +85,6 @@ public class PickerActivity extends Activity
 
     private static boolean DEBUG = false;
 
-    private final BroadcastReceiver mNotificationReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (intent != null) {
-                if (intent.getAction().compareTo(FileManagerSettings.INTENT_THEME_CHANGED) == 0) {
-                    applyTheme();
-                }
-            }
-        }
-    };
-
     // The result code
     private static final int RESULT_CROP_IMAGE = 1;
 
@@ -164,11 +153,6 @@ public class PickerActivity extends Activity
             Log.d(TAG, "PickerActivity.onCreate"); //$NON-NLS-1$
         }
 
-        // Register the broadcast receiver
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(FileManagerSettings.INTENT_THEME_CHANGED);
-        registerReceiver(this.mNotificationReceiver, filter);
-
         // Set the theme before setContentView
         Theme theme = ThemeManager.getCurrentTheme(this);
         theme.setBaseTheme(this, true);
@@ -228,13 +212,6 @@ public class PickerActivity extends Activity
     protected void onDestroy() {
         if (DEBUG) {
             Log.d(TAG, "PickerActivity.onDestroy"); //$NON-NLS-1$
-        }
-
-        // Unregister the receiver
-        try {
-            unregisterReceiver(this.mNotificationReceiver);
-        } catch (Throwable ex) {
-            /**NON BLOCK**/
         }
 
         //All destroy. Continue
@@ -349,9 +326,6 @@ public class PickerActivity extends Activity
         this.mNavigationView.setOnFilePickedListener(this);
         this.mNavigationView.setOnDirectoryChangedListener(this);
         this.mNavigationView.setBreadcrumb(breadcrumb);
-
-        // Apply the current theme
-        applyTheme();
 
         // Get dialog title and positive button, default to picker_title and select respectively
         ACTION_MODE pickerMode = ACTION_MODE.SELECT;
@@ -745,18 +719,5 @@ public class PickerActivity extends Activity
             }
         });
         popup.show();
-    }
-
-    /**
-     * Method that applies the current theme to the activity
-     * @hide
-     */
-    void applyTheme() {
-        Theme theme = ThemeManager.getCurrentTheme(this);
-        theme.setBaseTheme(this, true);
-
-        // View
-        theme.setBackgroundDrawable(this, this.mRootView, "background_drawable"); //$NON-NLS-1$
-        this.mNavigationView.applyTheme();
     }
 }

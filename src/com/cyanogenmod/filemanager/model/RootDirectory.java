@@ -21,6 +21,7 @@ package com.cyanogenmod.filemanager.model;
  */
 public class RootDirectory extends FileSystemObject {
     private String mRootPath;
+    private int mPrimaryColor;
 
     /**
      * Constructor of <code>FileSystemObject</code>.
@@ -37,6 +38,7 @@ public class RootDirectory extends FileSystemObject {
         if (icon != -1) {
             setResourceIconId(icon);
         }
+        mPrimaryColor = primaryColor;
     }
 
     @Override
@@ -46,5 +48,9 @@ public class RootDirectory extends FileSystemObject {
 
     public String getRootPath() {
         return mRootPath;
+    }
+
+    public int getPrimaryColor() {
+        return mPrimaryColor;
     }
 }
