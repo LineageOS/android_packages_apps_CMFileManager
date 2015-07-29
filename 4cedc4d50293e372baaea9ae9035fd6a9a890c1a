@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf091321_526ff4c4",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/LoginFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-29T04:52:04Z",
+      "side": 1,
+      "message": "What if a provider was logged into outside of the CMFM login mechanism? The LoginFragment will be migrated to the Settings app eventually, so how else can we track this?",
+      "range": {
+        "startLine": 165,
+        "startChar": 17,
+        "endLine": 165,
+        "endChar": 28
+      },
+      "revId": "4cedc4d50293e372baaea9ae9035fd6a9a890c1a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
