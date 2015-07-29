@@ -41,6 +41,8 @@ import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -80,33 +82,12 @@ public class FileSystemObjectAdapter
         Boolean mHasSelectedBg;
     }
 
-    /**
-     * A class that holds the full data information.
-     */
-    private static class DataHolder {
-        /**
-         * @hide
-         */
-        public DataHolder() {
-            super();
-        }
-        boolean mSelected;
-        Drawable mDwCheck;
-        Drawable mDwIcon;
-        String mName;
-        String mSummary;
-        String mSize;
-    }
-
-    private DataHolder[] mData;
     private IconHolder mIconHolder;
     private final int mItemViewResourceId;
-    private List<FileSystemObject> mSelectedItems;
+    private HashSet<FileSystemObject> mSelectedItems;
     private final boolean mPickable;
 
     private OnSelectionChangedListener mOnSelectionChangedListener;
-
-    private boolean mDisposed;
 
     //The resource of the item check
     private static final int RESOURCE_ITEM_CHECK = R.id.navigation_view_item_check;
@@ -132,13 +113,10 @@ public class FileSystemObjectAdapter
             Context context, List<FileSystemObject> files,
             int itemViewResourceId, boolean pickable) {
         super(context, RESOURCE_ITEM_NAME, files);
-        this.mDisposed  = false;
         this.mItemViewResourceId = itemViewResourceId;
-        this.mSelectedItems = new ArrayList<FileSystemObject>();
+        this.mSelectedItems = new HashSet<FileSystemObject>();
         this.mPickable = pickable;
         notifyThemeChanged(); // Reload icons
-
-        processData();
     }
 
     /**
@@ -160,24 +138,10 @@ public class FileSystemObjectAdapter
     }
 
     /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void notifyDataSetChanged() {
-        if (this.mDisposed) {
-            return;
-        }
-        processData();
-        super.notifyDataSetChanged();
-    }
-
-    /**
      * Method that dispose the elements of the adapter.
      */
     public void dispose() {
-        this.mDisposed = true;
         clear();
-        this.mData = null;
         if (mIconHolder != null) {
             mIconHolder.cleanup();
             mIconHolder = null;
@@ -201,52 +165,6 @@ public class FileSystemObjectAdapter
             }
         }
         return null;
-    }
-
-    /**
-     * Method that process the data before use {@link #getView} method.
-     */
-    private void processData() {
-        Theme theme = ThemeManager.getCurrentTheme(getContext());
-        Resources res = getContext().getResources();
-        int cc = getCount();
-
-        this.mData = new DataHolder[cc];
-
-        for (int i = 0; i < cc; i++) {
-            //File system object info
-            FileSystemObject fso = getItem(i);
-
-            //Parse the last modification time and permissions
-            StringBuilder sbSummary = new StringBuilder();
-            if (fso instanceof ParentDirectory) {
-                sbSummary.append(res.getString(R.string.parent_dir));
-            } else {
-                sbSummary.append(
-                        FileHelper.formatFileTime(
-                                getContext(), fso.getLastModifiedTime()));
-                sbSummary.append("   "); //$NON-NLS-1$
-                sbSummary.append(fso.toRawPermissionString());
-            }
-
-            //Build the data holder
-            this.mData[i] = new FileSystemObjectAdapter.DataHolder();
-            this.mData[i].mSelected = this.mSelectedItems.contains(fso);
-            if (this.mData[i].mSelected) {
-                this.mData[i].mDwCheck =
-                        theme.getDrawable(
-                                getContext(), "checkbox_selected_drawable"); //$NON-NLS-1$
-            } else {
-                this.mData[i].mDwCheck =
-                        theme.getDrawable(
-                                getContext(), "checkbox_deselected_drawable"); //$NON-NLS-1$
-            }
-            this.mData[i].mDwIcon = this.mIconHolder.getDrawable(
-                    MimeTypeHelper.getIcon(getContext(), fso));
-            this.mData[i].mName = fso.getName();
-            this.mData[i].mSummary = sbSummary.toString();
-            this.mData[i].mSize = FileHelper.getHumanReadableSize(fso);
-        }
     }
 
     /**
@@ -278,47 +196,60 @@ public class FileSystemObjectAdapter
             v.setTag(viewHolder);
         }
 
-        //Retrieve data holder
-        if (mData == null || this.mData[position] == null) {
-            return v;
-        }
-        final DataHolder dataHolder = this.mData[position];
-
         //Retrieve the view holder
         ViewHolder viewHolder = (ViewHolder)v.getTag();
         if (this.mPickable) {
             theme.setBackgroundDrawable(getContext(), v, "background_drawable"); //$NON-NLS-1$
         }
 
-        //Set the data
-        mIconHolder.loadDrawable(viewHolder.mIvIcon, getItem(position), dataHolder.mDwIcon);
+        FileSystemObject fso = getItem(position);
 
-        viewHolder.mTvName.setText(dataHolder.mName);
+        Drawable dwIcon = this.mIconHolder.getDrawable(MimeTypeHelper.getIcon(getContext(), fso));
+        mIconHolder.loadDrawable(viewHolder.mIvIcon, fso, dwIcon);
+
+        viewHolder.mTvName.setText(fso.getName());
         theme.setTextColor(getContext(), viewHolder.mTvName, "text_color"); //$NON-NLS-1$
         if (viewHolder.mTvSummary != null) {
-            viewHolder.mTvSummary.setText(dataHolder.mSummary);
+            StringBuilder sbSummary = new StringBuilder();
+            if (fso instanceof ParentDirectory) {
+                sbSummary.append(getContext().getResources().getString(R.string.parent_dir));
+            } else {
+                sbSummary.append(
+                        FileHelper.formatFileTime(
+                                getContext(), fso.getLastModifiedTime()));
+                sbSummary.append("   "); //$NON-NLS-1$
+                sbSummary.append(fso.toRawPermissionString());
+            }
+            viewHolder.mTvSummary.setText(sbSummary);
             theme.setTextColor(getContext(), viewHolder.mTvSummary, "text_color"); //$NON-NLS-1$
         }
         if (viewHolder.mTvSize != null) {
-            viewHolder.mTvSize.setText(dataHolder.mSize);
+            viewHolder.mTvSize.setText(FileHelper.getHumanReadableSize(fso));
             theme.setTextColor(getContext(), viewHolder.mTvSize, "text_color"); //$NON-NLS-1$
         }
         if (!this.mPickable) {
             viewHolder.mBtCheck.setVisibility(
-                    TextUtils.equals(dataHolder.mName, FileHelper.PARENT_DIRECTORY) ?
+                    TextUtils.equals(fso.getName(), FileHelper.PARENT_DIRECTORY) ?
                             View.INVISIBLE : View.VISIBLE);
 
-            viewHolder.mBtCheck.setImageDrawable(dataHolder.mDwCheck);
-            viewHolder.mBtCheck.setTag(Integer.valueOf(position));
+            boolean selected = mSelectedItems.contains(fso);
+            Drawable dwCheck;
+            if (selected) {
+                dwCheck = theme.getDrawable(getContext(), "checkbox_selected_drawable"); //$NON-NLS-1$
+            } else {
+                dwCheck = theme.getDrawable(getContext(), "checkbox_deselected_drawable"); //$NON-NLS-1$
+            }
+            viewHolder.mBtCheck.setImageDrawable(dwCheck);
+            viewHolder.mBtCheck.setTag(position);
 
             if (viewHolder.mHasSelectedBg == null
-                    || viewHolder.mHasSelectedBg != dataHolder.mSelected) {
-                String drawableId = dataHolder.mSelected
+                    || viewHolder.mHasSelectedBg != selected) {
+                String drawableId = selected
                         ? "selectors_selected_drawable" //$NON-NLS-1$
                         : "selectors_deselected_drawable"; //$NON-NLS-1$
 
                 theme.setBackgroundDrawable(getContext(), v, drawableId);
-                viewHolder.mHasSelectedBg = dataHolder.mSelected;
+                viewHolder.mHasSelectedBg = selected;
             }
         }
 
@@ -333,7 +264,7 @@ public class FileSystemObjectAdapter
      * @return boolean If the item of the passed position is selected
      */
     public boolean isSelected(int position) {
-        return this.mData[position].mSelected;
+        return mSelectedItems.contains(getItem(position));
     }
 
     /**
@@ -352,56 +283,23 @@ public class FileSystemObjectAdapter
      * @param fso The file system object to select
      */
     private void toggleSelection(View v, FileSystemObject fso) {
-        if (this.mData != null) {
-            Theme theme = ThemeManager.getCurrentTheme(getContext());
-            int cc = this.mData.length;
-            for (int i = 0; i < cc; i++) {
-                DataHolder data = this.mData[i];
-                if (data.mName.compareTo(fso.getName()) == 0) {
-                    //Select/Deselect the item
-                    data.mSelected = !data.mSelected;
-                    if (v != null) {
-                        ((View)v.getParent()).setSelected(data.mSelected);
-                    }
-                    if (data.mSelected) {
-                        data.mDwCheck =
-                                theme.getDrawable(
-                                        getContext(), "checkbox_selected_drawable"); //$NON-NLS-1$
-                    } else {
-                        data.mDwCheck =
-                                theme.getDrawable(
-                                        getContext(),
-                                            "checkbox_deselected_drawable"); //$NON-NLS-1$
-                    }
+        Theme theme = ThemeManager.getCurrentTheme(getContext());
 
-                    //Add or remove from the global selected items
-                    final List<FileSystemObject> selectedItems =
-                            FileSystemObjectAdapter.this.mSelectedItems;
-                    if (data.mSelected) {
-                        if (!selectedItems.contains(fso)) {
-                            selectedItems.add(fso);
-                        }
-                    } else {
-                        if (selectedItems.contains(fso)) {
-                            selectedItems.remove(fso);
-                        }
-                    }
-
-                    //Communicate event
-                    if (this.mOnSelectionChangedListener != null) {
-                        List<FileSystemObject> selection =
-                                new ArrayList<FileSystemObject>(selectedItems);
-                        this.mOnSelectionChangedListener.onSelectionChanged(selection);
-                    }
-
-                    // The internal structure was update, only super adapter need to be notified
-                    super.notifyDataSetChanged();
-
-                    //Found
-                    return;
-                }
-            }
+        boolean selected = !mSelectedItems.remove(fso);
+        if (selected) {
+            mSelectedItems.add(fso);
         }
+        if (v != null) {
+            ((View)v.getParent()).setSelected(selected);
+        }
+
+        //Communicate event
+        if (this.mOnSelectionChangedListener != null) {
+            this.mOnSelectionChangedListener.onSelectionChanged(
+                    new ArrayList<FileSystemObject>(mSelectedItems));
+        }
+
+        notifyDataSetChanged();
     }
 
     /**
@@ -432,52 +330,27 @@ public class FileSystemObjectAdapter
      * @param select Indicates if select (true) or deselect (false) all items.
      */
     private void doSelectDeselectAllVisibleItems(boolean select) {
-        if (this.mData != null && this.mData.length > 0) {
-            Theme theme = ThemeManager.getCurrentTheme(getContext());
-            int cc = this.mData.length;
-            for (int i = 0; i < cc; i++) {
-                DataHolder data = this.mData[i];
-                if (data.mName.compareTo(FileHelper.PARENT_DIRECTORY) == 0) {
-                    // No select the parent directory
-                    continue;
-                }
-                data.mSelected = select;
-                if (data.mSelected) {
-                    data.mDwCheck =
-                            theme.getDrawable(
-                                    getContext(), "checkbox_selected_drawable"); //$NON-NLS-1$
-                } else {
-                    data.mDwCheck =
-                            theme.getDrawable(
-                                    getContext(), "checkbox_deselected_drawable"); //$NON-NLS-1$
-                }
-
-                //Add or remove from the global selected items
-                FileSystemObject fso = getItem(i);
-                final List<FileSystemObject> selectedItems =
-                        FileSystemObjectAdapter.this.mSelectedItems;
-                if (data.mSelected) {
-                    if (!selectedItems.contains(fso)) {
-                        selectedItems.add(fso);
-                    }
-                } else {
-                    if (selectedItems.contains(fso)) {
-                        selectedItems.remove(fso);
-                    }
-                }
+        int cc = getCount();
+        for (int i = 0; i < cc; i++) {
+            FileSystemObject fso = getItem(i);
+            if (fso.getName().compareTo(FileHelper.PARENT_DIRECTORY) == 0) {
+                // No select the parent directory
+                continue;
             }
-
-            //Communicate event
-            if (this.mOnSelectionChangedListener != null) {
-                List<FileSystemObject> selection =
-                        new ArrayList<FileSystemObject>(
-                                FileSystemObjectAdapter.this.mSelectedItems);
-                this.mOnSelectionChangedListener.onSelectionChanged(selection);
+            if (select) {
+                mSelectedItems.add(fso);
+            } else {
+                mSelectedItems.remove(fso);
             }
-
-            // The internal structure was update, only super adapter need to be notified
-            super.notifyDataSetChanged();
         }
+
+        //Communicate event
+        if (this.mOnSelectionChangedListener != null) {
+            this.mOnSelectionChangedListener.onSelectionChanged(
+                    new ArrayList<FileSystemObject>(mSelectedItems));
+        }
+
+        notifyDataSetChanged();
     }
 
     /**
@@ -495,7 +368,9 @@ public class FileSystemObjectAdapter
      * @param selectedItems The selected items
      */
     public void setSelectedItems(List<FileSystemObject> selectedItems) {
-        this.mSelectedItems = selectedItems;
+        mSelectedItems.clear();
+        mSelectedItems.addAll(selectedItems);
+        notifyDataSetChanged();
     }
 
     /**
