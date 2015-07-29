@@ -1,0 +1,101 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf091321_5221349f",
+        "filename": "src/com/cyanogenmod/filemanager/activities/NavigationActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 2369,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-29T04:49:00Z",
+      "side": 1,
+      "message": "Can we just add this comment to the comment above? (with \"Notify the user\"? It looks cleaner than by it self above the return; call.",
+      "revId": "618c58bac1b8021c0af5fce3827543c3047a61d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf091321_f23728e3",
+        "filename": "src/com/cyanogenmod/filemanager/model/Directory.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-29T04:49:00Z",
+      "side": 1,
+      "message": "Needs @Override annotation",
+      "revId": "618c58bac1b8021c0af5fce3827543c3047a61d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf091321_b231b0ef",
+        "filename": "src/com/cyanogenmod/filemanager/model/RegularFile.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-29T04:49:00Z",
+      "side": 1,
+      "message": "@Override annotation?",
+      "revId": "618c58bac1b8021c0af5fce3827543c3047a61d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf091321_d249c460",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1121,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-29T04:49:00Z",
+      "side": 1,
+      "message": "define this out side of the switch for readability",
+      "range": {
+        "startLine": 1121,
+        "startChar": 28,
+        "endLine": 1121,
+        "endChar": 59
+      },
+      "revId": "618c58bac1b8021c0af5fce3827543c3047a61d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf091321_b246504f",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1124,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-29T04:49:00Z",
+      "side": 1,
+      "message": "\u003e 100 char",
+      "range": {
+        "startLine": 1124,
+        "startChar": 0,
+        "endLine": 1124,
+        "endChar": 111
+      },
+      "revId": "618c58bac1b8021c0af5fce3827543c3047a61d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
