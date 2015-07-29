@@ -18,6 +18,7 @@ package com.cyanogenmod.filemanager.adapters;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -29,6 +30,7 @@ import android.widget.TextView;
 
 import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
+import com.cyanogenmod.filemanager.activities.SearchActivity;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.model.Query;
 import com.cyanogenmod.filemanager.model.SearchResult;
@@ -49,7 +51,6 @@ import com.cyanogenmod.filemanager.util.SearchHelper;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -58,7 +59,7 @@ import java.util.Map;
 /**
  * An implementation of {@link ArrayAdapter} for display search results.
  */
-public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
+public class SearchResultAdapter extends ArrayAdapter<SearchActivity.DataHolder> {
 
     //The resource of the item icon
     private static final int RESOURCE_ITEM_ICON = R.id.search_item_icon;
@@ -89,49 +90,26 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         TextView mMimeType;
     }
 
-    /**
-     * A class that holds the full data information.
-     */
-    private static class DataHolder {
-        /**
-         * @hide
-         */
-        public DataHolder() {
-            super();
-        }
-        Drawable mDwIcon;
-        CharSequence mName;
-        String mParentDir;
-        Float mRelevance;
-        MimeTypeHelper.MimeTypeCategory mimeTypeCategory;
-    }
-
     // delay for when the new items, if any, will be incorporated
     // used to ensure that UI remains responsive
     private final int STREAMING_MODE_REFRESH_DELAY = 500;   // in ms
 
-    private DataHolder[] mData;
     private IconHolder mIconHolder;
     private final int mItemViewResourceId;
 
-    private final boolean mHighlightTerms;
-    private final boolean mShowRelevanceWidget;
-
     private final List<String> mQueries;
-    private final List<SearchResult> mOriginalList;
 
     private boolean mDisposed;
 
     private Handler mHandler;
     private boolean mInStreamingMode;
-    private List<SearchResult> mNewItems = new ArrayList<SearchResult>();
     private SearchSortResultMode mSearchSortResultMode;
-    private Comparator<SearchResult> mSearchResultComparator;
+    private Comparator<SearchActivity.DataHolder> mSearchResultComparator;
 
     private Runnable mParseNewResults = new Runnable() {
         @Override
         public void run() {
-            addPendingSearchResults();
+            sort(mSearchResultComparator);
             if (mInStreamingMode) {
                 mHandler.postDelayed(mParseNewResults, STREAMING_MODE_REFRESH_DELAY);
             }
@@ -148,35 +126,18 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
      * @param queries The query object used to make the result of this search
      */
     public SearchResultAdapter(
-            Context context, List<SearchResult> files, int itemViewResourceId, Query queries) {
+            Context context, List<SearchActivity.DataHolder> files, int itemViewResourceId,
+            Query queries, IconHolder iconHolder) {
         super(context, RESOURCE_ITEM_NAME, files);
         mHandler = new Handler(context.getMainLooper());
-        mOriginalList = new ArrayList<SearchResult>(files);
 
         this.mDisposed = false;
-        final boolean displayThumbs = Preferences.getSharedPreferences().getBoolean(
-                FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getId(),
-                ((Boolean)FileManagerSettings.SETTINGS_DISPLAY_THUMBS.getDefaultValue()).booleanValue());
-        this.mIconHolder = new IconHolder(context, displayThumbs);
+        this.mIconHolder = iconHolder;
         this.mItemViewResourceId = itemViewResourceId;
         this.mQueries = queries.getQueries();
 
-        // Load settings
-        this.mHighlightTerms = Preferences.getSharedPreferences().getBoolean(
-                FileManagerSettings.SETTINGS_HIGHLIGHT_TERMS.getId(),
-                ((Boolean)FileManagerSettings.SETTINGS_HIGHLIGHT_TERMS.
-                        getDefaultValue()).booleanValue());
-        this.mShowRelevanceWidget = Preferences.getSharedPreferences().getBoolean(
-                FileManagerSettings.SETTINGS_SHOW_RELEVANCE_WIDGET.getId(),
-                ((Boolean)FileManagerSettings.SETTINGS_SHOW_RELEVANCE_WIDGET.
-                        getDefaultValue()).booleanValue());
-
         // determine the sort order of search results
         setSortResultMode();
-
-        //Do cache of the data for better performance
-        loadDefaultIcons();
-        processData();
     }
 
     /**
@@ -198,14 +159,6 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
     }
 
     /**
-     * Method that loads the default icons (known icons and more common icons).
-     */
-    private void loadDefaultIcons() {
-        this.mIconHolder.getDrawable("ic_fso_folder_drawable"); //$NON-NLS-1$
-        this.mIconHolder.getDrawable("ic_fso_default_drawable"); //$NON-NLS-1$
-    }
-
-    /**
      * {@inheritDoc}
      */
     @Override
@@ -213,31 +166,25 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         if (this.mDisposed) {
             return;
         }
-        processData();
         super.notifyDataSetChanged();
     }
+
 
     /**
      * Adds a new Search Result to the buffer
      */
-    public synchronized void addNewItem(SearchResult newResult) {
-        mNewItems.add(newResult);
+    public void addNewItem(SearchActivity.DataHolder data) {
+        if (mDisposed) {
+            return;
+        }
+
+        add(data);
     }
 
     /**
      * Adds search results in the buffer to the adapter list
      */
     public synchronized void addPendingSearchResults() {
-        if (mNewItems.size() < 1) return;
-
-        // TODO: maintain a sorted buffer and implement Merge of two sorted lists
-        addAll(mNewItems);
-        sort(mSearchResultComparator);
-        mOriginalList.addAll(mNewItems);    // cache files so enable mime type filtering later on
-        Collections.sort(mOriginalList, mSearchResultComparator);
-
-        // reset buffer
-        mNewItems.clear();
     }
 
     /**
@@ -252,19 +199,20 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         mSearchSortResultMode = SearchSortResultMode.fromId(currValue);
 
         if (mSearchSortResultMode.compareTo(SearchSortResultMode.NAME) == 0) {
-            mSearchResultComparator = new Comparator<SearchResult>() {
+            mSearchResultComparator = new Comparator<SearchActivity.DataHolder>() {
                 @Override
-                public int compare(SearchResult lhs, SearchResult rhs) {
+                public int compare(SearchActivity.DataHolder lhs, SearchActivity.DataHolder rhs) {
                     return FileHelper.doCompare(
-                            lhs.getFso(), rhs.getFso(), NavigationSortMode.NAME_ASC);
+                            lhs.getSearchResult().getFso(), rhs.getSearchResult().getFso(),
+                            NavigationSortMode.NAME_ASC);
                 }
             };
 
         } else if (mSearchSortResultMode.compareTo(SearchSortResultMode.RELEVANCE) == 0) {
-            mSearchResultComparator = new Comparator<SearchResult>() {
+            mSearchResultComparator = new Comparator<SearchActivity.DataHolder>() {
                 @Override
-                public int compare(SearchResult lhs, SearchResult rhs) {
-                    return lhs.compareTo(rhs);
+                public int compare(SearchActivity.DataHolder lhs, SearchActivity.DataHolder rhs) {
+                    return lhs.getSearchResult().compareTo(rhs.getSearchResult());
                 }
             };
         }
@@ -274,39 +222,7 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
      * Size of the search results list
      */
     public synchronized int resultsSize() {
-        return getCount() + mNewItems.size();
-    }
-
-    /**
-     * Method that allows filtering the results by {@link MimeTypeHelper.MimeTypeCategory}
-     * @param mimeFilter the MimeTypeCategory to filter by
-     */
-    public void setMimeFilter(String mimeFilter) {
-        // Are we in ChRooted environment?
-        boolean chRooted =
-                FileManagerApplication.getAccessMode().compareTo(AccessMode.SAFE) == 0;
-
-        // Create display restrictions
-        Map<DisplayRestrictions, Object> restrictions =
-                new HashMap<DisplayRestrictions, Object>();
-        restrictions.put(
-                DisplayRestrictions.MIME_TYPE_RESTRICTION, MimeTypeHelper.ALL_MIME_TYPES);
-
-        List<SearchResult> newResults = SearchHelper.convertToResults(
-                FileHelper.applyUserPreferences(
-                        getFiles(), restrictions, true, chRooted), new Query().fillSlots(mQueries));
-
-        clear();
-        for (SearchResult result : newResults) {
-            // Only show results that are within our category, or all if no filter is set
-            if (TextUtils.equals(mimeFilter, MimeTypeHelper.MimeTypeCategory.NONE.name()) ||
-                    MimeTypeHelper.getCategory(getContext(), result.getFso()) ==
-                            MimeTypeHelper.MimeTypeCategory.valueOf(mimeFilter)) {
-                add(result);
-            }
-        }
-
-        this.notifyDataSetChanged();
+        return getCount();
     }
 
     /**
@@ -318,46 +234,7 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         }
         this.mDisposed = true;
         clear();
-        this.mOriginalList.clear();
-        this.mData = null;
         this.mIconHolder = null;
-    }
-
-    /**
-     * Method that process the data before use {@link #getView} method.
-     */
-    private void processData() {
-        Theme theme = ThemeManager.getCurrentTheme(getContext());
-        int highlightedColor =
-                theme.getColor(getContext(), "search_highlight_color"); //$NON-NLS-1$
-
-        this.mData = new DataHolder[getCount()];
-        int cc = getCount();
-        for (int i = 0; i < cc; i++) {
-            //File system object info
-            SearchResult result = getItem(i);
-
-            //Build the data holder
-            final FileSystemObject fso = result.getFso();
-            this.mData[i] = new SearchResultAdapter.DataHolder();
-            this.mData[i].mDwIcon = this.mIconHolder.getDrawable(
-                    MimeTypeHelper.getIcon(getContext(), fso));
-            if (this.mHighlightTerms) {
-                this.mData[i].mName =
-                        SearchHelper.getHighlightedName(result, this.mQueries, highlightedColor);
-            } else {
-                this.mData[i].mName = SearchHelper.getNonHighlightedName(result);
-            }
-            this.mData[i].mParentDir = new File(result.getFso().getFullPath()).getParent();
-            if (this.mShowRelevanceWidget) {
-                this.mData[i].mRelevance =
-                        Float.valueOf(
-                                (float)(result.getRelevance() * 100) / SearchResult.MAX_RELEVANCE);
-            } else {
-                this.mData[i].mRelevance = null;
-            }
-            this.mData[i].mimeTypeCategory = MimeTypeHelper.getCategory(getContext(), fso);
-        }
     }
 
     /**
@@ -369,7 +246,7 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         int cc = getCount();
         final List<SearchResult> data = new ArrayList<SearchResult>(cc);
         for (int i = 0; i < cc; i++) {
-            data.add(getItem(i));
+            data.add(getItem(i).getSearchResult());
         }
         return data;
     }
@@ -381,8 +258,9 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
      */
     public List<FileSystemObject> getFiles()  {
         final List<FileSystemObject> data = new ArrayList<FileSystemObject>();
-        for (SearchResult result : mOriginalList) {
-            data.add(result.getFso());
+        int N = getCount();
+        for(int i = 0; i < N; i++) {
+            data.add(getItem(i).getSearchResult().getFso());
         }
         return data;
     }
@@ -396,7 +274,7 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
     public int getPosition(FileSystemObject item) {
         int cc = getCount();
         for (int i = 0; i < cc; i++) {
-            SearchResult sr = getItem(i);
+            SearchResult sr = getItem(i).getSearchResult();
             if (sr.getFso().compareTo(item) == 0) {
                 return i;
             }
@@ -437,25 +315,25 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         }
 
         //Retrieve data holder
-        final DataHolder dataHolder = this.mData[position];
+        final SearchActivity.DataHolder dataHolder = getItem(position);
 
         //Retrieve the view holder
         ViewHolder viewHolder = (ViewHolder) v.getTag();
 
         //Set the data
         mIconHolder.loadDrawable(viewHolder.mIvIcon,
-                getItem(position).getFso(), dataHolder.mDwIcon);
+                dataHolder.getSearchResult().getFso(), dataHolder.getDwIcon());
 
-        viewHolder.mTvName.setText(dataHolder.mName, TextView.BufferType.SPANNABLE);
-        viewHolder.mTvParentDir.setText(dataHolder.mParentDir);
-        if (dataHolder.mRelevance != null) {
-            viewHolder.mWgRelevance.setRelevance(dataHolder.mRelevance.floatValue());
+        viewHolder.mTvName.setText(dataHolder.getName(), TextView.BufferType.SPANNABLE);
+        viewHolder.mTvParentDir.setText(dataHolder.getParentDir());
+        if (dataHolder.getRelevance() != null) {
+            viewHolder.mWgRelevance.setRelevance(dataHolder.getRelevance().floatValue());
         }
         viewHolder.mWgRelevance.setVisibility(
-                dataHolder.mRelevance != null ? View.VISIBLE : View.GONE);
-        if (dataHolder.mimeTypeCategory != MimeTypeHelper.MimeTypeCategory.NONE) {
+                dataHolder.getRelevance() != null ? View.VISIBLE : View.GONE);
+        if (dataHolder.getMimeTypeCategory() != MimeTypeHelper.MimeTypeCategory.NONE) {
             viewHolder.mMimeType.setVisibility(View.VISIBLE);
-            viewHolder.mMimeType.setText(dataHolder.mimeTypeCategory.name());
+            viewHolder.mMimeType.setText(dataHolder.getMimeTypeCategory().name());
         } else {
             viewHolder.mMimeType.setVisibility(View.GONE);
         }
