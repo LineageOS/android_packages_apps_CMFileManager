@@ -478,6 +478,8 @@ public class NavigationActivity extends Activity
 
     private boolean mNeedsEasyMode = false;
 
+    private boolean mDisplayingSearchResults;
+
     /**
      * @hide
      */
@@ -630,10 +632,6 @@ public class NavigationActivity extends Activity
     protected void onStart() {
         super.onStart();
 
-        if (mSearchView.getVisibility() == View.VISIBLE) {
-            closeSearch();
-        }
-
         // Check restrictions
         if (!FileManagerApplication.checkRestrictSecondaryUsersAccess(this, mChRooted)) {
             return;
@@ -649,7 +647,13 @@ public class NavigationActivity extends Activity
                 onRequestBookmarksRefresh();
                 removeUnmountedHistory();
                 removeUnmountedSelection();
+            }
 
+            if (mDisplayingSearchResults) {
+                mDisplayingSearchResults = false;
+                closeSearch();
+            } else {
+                getCurrentNavigationView().refresh(true);
                 Intent intent = new Intent();
                 intent.putExtra(EXTRA_ADD_TO_HISTORY, false);
                 initNavigation(NavigationActivity.this.mCurrentNavigationView, false, intent);
@@ -1577,14 +1581,16 @@ public class NavigationActivity extends Activity
      * @hide
      */
     void initNavigation(final int viewId, final boolean restore, final Intent intent) {
+        if (mDisplayingSearchResults || restore) {
+            return;
+        }
+
         final NavigationView navigationView = getNavigationView(viewId);
         this.mHandler.post(new Runnable() {
             @Override
             public void run() {
                 //Is necessary navigate?
-                if (!restore) {
-                    applyInitialDir(navigationView, intent);
-                }
+                applyInitialDir(navigationView, intent);
             }
         });
     }
@@ -1935,6 +1941,7 @@ public class NavigationActivity extends Activity
                                 //Goto to new directory
                                 getCurrentNavigationView().open(fso, searchInfo);
                                 performHideEasyMode();
+                                mDisplayingSearchResults = true;
                             }
                         }
                     } else if (resultCode == RESULT_CANCELED) {
