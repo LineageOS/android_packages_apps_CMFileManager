@@ -529,7 +529,7 @@ public final class StorageHelper {
 
         if (icon != null) {
             FileSystemObject file = new RootDirectory(providerInfo.getTitle(),
-                    providerInfo.getSummary(), path, -1/*icon*/, color);
+                    providerInfo.getSummary(), path, providerInfo.getIcon(), color);
             storageVolumesList.add(file);
         }
     }
