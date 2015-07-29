@@ -30,6 +30,7 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.preference.PreferenceActivity;
@@ -37,7 +38,6 @@ import android.provider.SearchRecentSuggestions;
 import android.text.Html;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -379,6 +379,10 @@ public class SearchActivity extends Activity
     private SearchResultAdapter mAdapter;
     private ProgressBar mStreamingSearchProgress;
     private boolean mSearchInProgress;
+    private String mSearchFoundString;
+    private boolean mHighlightTerms;
+    private boolean mShowRelevanceWidget;
+    private int mHighlightColor;
 
     /**
      * {@inheritDoc}
@@ -432,6 +436,10 @@ public class SearchActivity extends Activity
                 loadFromCacheData();
             }
         }
+
+        mSearchFoundString = getString(R.string.search_found_items_in_directory);
+        //$NON-NLS-1$
+        mHighlightColor = theme.getColor(this, "search_highlight_color");
 
         //Save state
         super.onCreate(state);
@@ -722,6 +730,7 @@ public class SearchActivity extends Activity
                                 back(true, null, false);
                             }
                        });
+        dialog.setCancelable(false);
         DialogHelper.delegateDialogShow(this, dialog);
     }
 
@@ -735,6 +744,15 @@ public class SearchActivity extends Activity
      */
     void doSearch(
             final boolean voiceQuery, final Query query, final String searchDirectory) {
+        // Load settings
+        this.mHighlightTerms = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.SETTINGS_HIGHLIGHT_TERMS.getId(),
+                ((Boolean)FileManagerSettings.SETTINGS_HIGHLIGHT_TERMS.
+                        getDefaultValue()).booleanValue());
+        this.mShowRelevanceWidget = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.SETTINGS_SHOW_RELEVANCE_WIDGET.getId(),
+                ((Boolean)FileManagerSettings.SETTINGS_SHOW_RELEVANCE_WIDGET.
+                        getDefaultValue()).booleanValue());
 
         // Recovers the user preferences about save suggestions
         boolean saveSuggestions = Preferences.getSharedPreferences().getBoolean(
@@ -813,25 +831,48 @@ public class SearchActivity extends Activity
         });
     }
 
+    private class ProcessSearchResult extends AsyncTask<FileSystemObject, Void, Boolean> {
+
+        SearchResult mResult;
+        SearchResultAdapter.DataHolder mHolder;
+
+        @Override
+        protected Boolean doInBackground(FileSystemObject... params) {
+            FileSystemObject result = params[0];
+            // check against user's display preferences
+            if ( !FileHelper.compliesWithDisplayPreferences(result, null, mChRooted) ) {
+                return false;
+            }
+
+            // resolve sym links
+            FileHelper.resolveSymlink(SearchActivity.this, result);
+
+            // convert to search result
+            mResult = SearchHelper.convertToResult(result, mQuery);
+
+            mHolder = SearchResultAdapter.generateDataHolder(mResult, SearchActivity.this,
+                    mAdapter.getIconHolder(),
+                    mQuery.getQueries(), mHighlightColor,mHighlightTerms, mShowRelevanceWidget);
+
+            return mHolder != null && mResult != null;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean sucess) {
+            if (sucess) {
+                // add to adapter
+                mAdapter.addNewItem(mResult, mHolder);
+            }
+        }
+    }
+
     /**
      * Ensures the search result meets user preferences and passes it to the adapter for display
      *
      * @param result FileSystemObject that matches the search result criteria
      */
     private void showSearchResult(FileSystemObject result) {
-        // check against user's display preferences
-        if ( !FileHelper.compliesWithDisplayPreferences(result, null, mChRooted) ) {
-            return;
-        }
-
-        // resolve sym links
-        FileHelper.resolveSymlink(this, result);
-
-        // convert to search result
-        SearchResult searchResult = SearchHelper.convertToResult(result, mQuery);
-
-        // add to adapter
-        mAdapter.addNewItem(searchResult);
+        new ProcessSearchResult().execute(result);
     }
 
     /**
@@ -962,11 +1003,8 @@ public class SearchActivity extends Activity
                             getResources().
                                 getQuantityString(
                                     R.plurals.search_found_items, items, Integer.valueOf(items));
-                    SearchActivity.this.mSearchFoundItems.setText(
-                                            getString(
-                                                R.string.search_found_items_in_directory,
-                                                foundItems,
-                                                directory));
+                    SearchActivity.this.mSearchFoundItems.setText(String.format(mSearchFoundString,
+                            foundItems, directory));
                 }
             });
         }
