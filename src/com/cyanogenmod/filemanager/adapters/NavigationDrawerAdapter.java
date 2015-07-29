@@ -111,7 +111,7 @@ public class NavigationDrawerAdapter extends BaseAdapter {
             } else {
                 color = mContext.getResources().getColor(R.color.navigation_drawer_icon_default);
             }
-            itemIcon.setColorFilter(color, Mode.MULTIPLY);
+            itemIcon.setColorFilter(color, Mode.SRC_IN);
         }
         if (itemTitle != null) {
             itemTitle.setText(item.getTitle());
