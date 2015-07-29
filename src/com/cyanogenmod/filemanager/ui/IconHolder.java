@@ -287,12 +287,11 @@ public class IconHolder {
      *
      * @param iconView View to load the drawable into
      * @param fso The FileSystemObject reference
-     * @param defaultIcon Drawable to be used in case no specific one could be found
-     * @return Drawable The drawable reference
+     * @param defaultIconId Resource ID to be used in case no specific drawable could be found
      */
-    public void loadDrawable(ImageView iconView, FileSystemObject fso, Drawable defaultIcon) {
+    public void loadDrawable(ImageView iconView, FileSystemObject fso, int defaultIconId) {
         if (!mUseThumbs) {
-            iconView.setImageDrawable(defaultIcon);
+            iconView.setImageResource(defaultIconId);
             return;
         }
 
@@ -315,7 +314,7 @@ public class IconHolder {
 
         Loadable loadable = new Loadable(mContext, iconView, fso);
         mRequests.put(iconView, loadable);
-        iconView.setImageDrawable(defaultIcon);
+        iconView.setImageResource(defaultIconId);
 
          mWorkerHandler.obtainMessage(MSG_LOAD, loadable).sendToTarget();
     }

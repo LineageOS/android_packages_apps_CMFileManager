@@ -290,7 +290,7 @@ public final class FileManagerApplication extends Application {
         VirtualMountPointConsole.registerVirtualConsoles(getApplicationContext());
         allocBackgroundConsole(getApplicationContext());
 
-        //Force the load of mime types
+        //Force the load of mime types and colors
         try {
             MimeTypeHelper.loadMimeTypes(getApplicationContext());
         } catch (Exception e) {
