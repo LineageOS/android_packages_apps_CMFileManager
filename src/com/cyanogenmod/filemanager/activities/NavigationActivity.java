@@ -464,6 +464,8 @@ public class NavigationActivity extends Activity
 
     private boolean mNeedsEasyMode = false;
 
+    private boolean mNoRefreshOnResume;
+
     /**
      * @hide
      */
@@ -635,9 +637,13 @@ public class NavigationActivity extends Activity
                 removeUnmountedHistory();
                 removeUnmountedSelection();
 
-                Intent intent = new Intent();
-                intent.putExtra(EXTRA_ADD_TO_HISTORY, false);
-                initNavigation(NavigationActivity.this.mCurrentNavigationView, false, intent);
+                if (mNoRefreshOnResume) {
+                    mNoRefreshOnResume = false;
+                } else  {
+                    Intent intent = new Intent();
+                    intent.putExtra(EXTRA_ADD_TO_HISTORY, false);
+                    initNavigation(NavigationActivity.this.mCurrentNavigationView, false, intent);
+                }
             }
         }
     }
@@ -1919,6 +1925,7 @@ public class NavigationActivity extends Activity
                                 //Goto to new directory
                                 getCurrentNavigationView().open(fso, searchInfo);
                                 performHideEasyMode();
+                                mNoRefreshOnResume = true;
                             }
                         }
                     } else if (resultCode == RESULT_CANCELED) {
