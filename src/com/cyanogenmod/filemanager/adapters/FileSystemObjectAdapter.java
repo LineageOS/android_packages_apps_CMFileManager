@@ -17,14 +17,17 @@
 package com.cyanogenmod.filemanager.adapters;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.content.res.Resources;
+import android.graphics.Color;
+import android.graphics.Outline;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.StateListDrawable;
+import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.util.Log;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationUtils;
+import android.view.ViewOutlineProvider;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -34,7 +37,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.cyanogen.ambient.storage.provider.StorageProviderInfo;
 import com.cyanogenmod.filemanager.R;
+import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.model.ParentDirectory;
 import com.cyanogenmod.filemanager.model.RootDirectory;
@@ -46,6 +51,7 @@ import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
 import com.cyanogenmod.filemanager.ui.policy.InfoActionPolicy;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper;
+import com.cyanogenmod.filemanager.util.StorageProviderUtils;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -57,6 +63,7 @@ import java.util.List;
 public class FileSystemObjectAdapter
     extends ArrayAdapter<FileSystemObject> implements OnClickListener {
     private static final String TAG = FileSystemObjectAdapter.class.getSimpleName();
+    private static final boolean DEBUG = false;
 
     /**
      * An interface to communicate selection changes events.
@@ -85,9 +92,6 @@ public class FileSystemObjectAdapter
         ImageView mIvIcon;
         TextView mTvName;
         TextView mTvSummary;
-        Boolean mHasSelectedBg;
-        Animation mAnimateOut;
-        Animation mAnimateIn;
     }
 
     private IconHolder mIconHolder;
@@ -96,6 +100,7 @@ public class FileSystemObjectAdapter
     private final boolean mPickable;
     private Resources mRes;
     private OnSelectionChangedListener mOnSelectionChangedListener;
+    private final ViewOutlineProvider mIconViewOutlineProvider;
 
     //The resource of the item icon
     private static final int RESOURCE_ITEM_ICON = R.id.navigation_view_item_icon;
@@ -131,6 +136,16 @@ public class FileSystemObjectAdapter
         this.mSelectedItems = new HashSet<FileSystemObject>();
         this.mPickable = pickable;
         mRes = context.getResources();
+
+        mIconViewOutlineProvider = new ViewOutlineProvider() {
+            @Override
+            public void getOutline(View view, Outline outline) {
+                int size = (int)mRes.getDimension(R.dimen.circle_icon_wh);
+                int radius =
+                        (int)mRes.getDimension(R.dimen.rectangle_icon_radius);
+                outline.setRoundRect(0, 0, size, size, radius);
+            }
+        };
     }
 
     /**
@@ -141,14 +156,6 @@ public class FileSystemObjectAdapter
     public void setOnSelectionChangedListener(
             OnSelectionChangedListener onSelectionChangedListener) {
         this.mOnSelectionChangedListener = onSelectionChangedListener;
-    }
-
-    /**
-     * Method that loads the default icons (known icons and more common icons).
-     */
-    private void loadDefaultIcons() {
-        this.mIconHolder.getDrawable("ic_fso_folder_drawable"); //$NON-NLS-1$
-        this.mIconHolder.getDrawable("ic_fso_default_drawable"); //$NON-NLS-1$
     }
 
     /**
@@ -214,13 +221,10 @@ public class FileSystemObjectAdapter
 
         FileSystemObject fso = getItem(position);
 
-        boolean selected = mSelectedItems.contains(fso);
-        if (selected) {
-            viewHolder.mIvIcon.setImageResource(R.drawable.ic_check_selected);
-        } else {
-            String mimeTypeIcon = MimeTypeHelper.getIcon(getContext(), fso);
-            Drawable dwIcon = this.mIconHolder.getDrawable(mimeTypeIcon);
-            mIconHolder.loadDrawable(viewHolder.mIvIcon, getItem(position), dwIcon);
+        if (viewHolder.mIvIcon != null) {
+            viewHolder.mIvIcon.setOutlineProvider(mIconViewOutlineProvider);
+            viewHolder.mIvIcon.setClipToOutline(true);
+            setIcon(viewHolder.mIvIcon, fso);
         }
 
         viewHolder.mTvName.setText(fso.getName());
@@ -261,15 +265,9 @@ public class FileSystemObjectAdapter
             viewHolder.mBtInfo.setTag(position);
             viewHolder.mIvIcon.setTag(position);
 
-            if (viewHolder.mHasSelectedBg == null
-                    || viewHolder.mHasSelectedBg != selected) {
-                int drawableId = selected
-                        ? R.drawable.selectors_selected_drawable
-                        : R.drawable.selectors_deselected_drawable;
-
-                v.setBackgroundDrawable(mRes.getDrawable(drawableId));
-                viewHolder.mHasSelectedBg = selected;
-            }
+            boolean selected = isSelected(position);
+            v.setActivated(selected);
+            viewHolder.mIvIcon.setSelected(selected);
         }
 
         //Return the view
@@ -302,28 +300,22 @@ public class FileSystemObjectAdapter
      * @param fso The file system object to select
      */
     public void toggleSelection(View v, FileSystemObject fso) {
-        if (true) Log.d(TAG,"toggleSelection("+fso.getName()+")");
+        if (DEBUG) Log.d(TAG,"toggleSelection("+fso.getName()+")");
         boolean selected = !mSelectedItems.remove(fso);
         if (selected) {
             mSelectedItems.add(fso);
         }
         if (v != null) {
-            ((View)v.getParent()).setSelected(selected);
-            ViewHolder viewHolder = (ViewHolder)((View)v.getParent()).getTag();
-            setAnimationListener(v, viewHolder, fso);
-            v.clearAnimation();
-            v.setAnimation(viewHolder.mAnimateOut);
-            v.startAnimation(viewHolder.mAnimateOut);
-            return;
-        } else {
-            //Communicate event
-            if (this.mOnSelectionChangedListener != null) {
-                this.mOnSelectionChangedListener.onSelectionChanged(
-                        new ArrayList<FileSystemObject>(mSelectedItems));
-            }
-
-            notifyDataSetChanged();
+            ((View) v.getParent()).setActivated(selected);
+            v.setSelected(selected);
         }
+        //Communicate event
+        if (this.mOnSelectionChangedListener != null) {
+            this.mOnSelectionChangedListener.onSelectionChanged(
+                    new ArrayList<FileSystemObject>(mSelectedItems));
+        }
+
+        notifyDataSetChanged();
     }
 
     /**
@@ -454,56 +446,127 @@ public class FileSystemObjectAdapter
         }
     }
 
-    private void setAnimationListener(final View view, final ViewHolder viewHolder,
-            final FileSystemObject fso) {
-        if (viewHolder.mAnimateOut == null) {
-            viewHolder.mAnimateOut = AnimationUtils.loadAnimation(getContext(), R.anim.flip_out);
+    private void setIcon(ImageView view, FileSystemObject fso) {
+        int mimeTypeIconId = MimeTypeHelper.getIcon(getContext(), fso);
+        if (fso instanceof RootDirectory) {
+            new GetProviderIconTask(view, mimeTypeIconId, (RootDirectory) fso).execute();
+        } else if (FileHelper.isDirectory(fso)) {
+            setFolderIcon(view, mimeTypeIconId);
+        } else {
+            // Use iconholder to check for thumbnail
+            //mIconHolder.loadDrawable(view, fso, mimeTypeIconId);
+            setFileIcon(view, mimeTypeIconId, fso);
         }
-        if (viewHolder.mAnimateIn == null) {
-            viewHolder.mAnimateIn = AnimationUtils.loadAnimation(getContext(), R.anim.flip_in);
-        }
-
-        AnimationListener animationListener = new AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                boolean selected = mSelectedItems.contains(fso);
-                if (animation == viewHolder.mAnimateOut) {
-                    ImageView iv = (ImageView)view;
-                    if (selected) {
-                        iv.setImageResource(R.drawable.ic_check_selected);
-                    } else {
-                        String mimeTypeIcon = MimeTypeHelper.getIcon(getContext(), fso);
-                        Drawable dwIcon = mIconHolder.getDrawable(mimeTypeIcon);
-                        mIconHolder.loadDrawable(iv, fso, dwIcon);
-                    }
-                    view.clearAnimation();
-                    view.setAnimation(viewHolder.mAnimateIn);
-                    view.startAnimation(viewHolder.mAnimateIn);
-                } else if (animation == viewHolder.mAnimateIn) {
-                    view.clearAnimation();
-
-                    //Communicate event
-                    FileSystemObjectAdapter fsoAdapter = FileSystemObjectAdapter.this;
-                    if (fsoAdapter.mOnSelectionChangedListener != null) {
-                        List<FileSystemObject> selection =
-                                new ArrayList<FileSystemObject>(mSelectedItems);
-                        fsoAdapter.mOnSelectionChangedListener.onSelectionChanged(selection);
-                    }
-
-                    notifyDataSetChanged();
-                }
-            }
-        };
-
-        viewHolder.mAnimateOut.setAnimationListener(animationListener);
-        viewHolder.mAnimateIn.setAnimationListener(animationListener);
     }
+
+    private void setRootsListIcon(ImageView view, int iconId, RootDirectory rootDirectory) {
+        setIcon(view, mRes.getDrawable(iconId), R.color.navigation_view_icon_unselected,
+                R.drawable.ic_icon_background, rootDirectory.getPrimaryColor());
+    }
+
+    // TODO: change folder colors depending on current volume (root, local, sdcard, usb, etc.)
+    private void setFolderIcon(ImageView view, int iconId) {
+        float opacity = mRes.getFloat(R.float_type.navigation_view_icon_circle_opacity);
+        int transparentColor = Color.argb(
+                Math.round(((float) 0xFF) * opacity),
+                Color.red(R.color.default_primary),
+                Color.green(R.color.default_primary),
+                Color.blue(R.color.default_primary));
+        setIcon(view, mRes.getDrawable(iconId), R.color.default_primary,
+                R.drawable.ic_icon_background, transparentColor);
+    }
+
+    private void setFileIcon(ImageView view, int iconId, FileSystemObject fso) {
+        int colorId = MimeTypeHelper.getIconColorFromIconId(getContext(), iconId);
+        setIcon(view, mRes.getDrawable(iconId), R.color.navigation_view_icon_unselected,
+                R.drawable.ic_icon_background, mRes.getColor(colorId));
+    }
+
+    // Set drawable as icon
+    private void setIcon(ImageView view, Drawable iconDrawable, int iconColorId, int backgroundId,
+                         int backgroundColor) {
+        StateListDrawable stateListDrawable = new StateListDrawable();
+        addSelected(mRes, stateListDrawable);
+        addUnselected(mRes, stateListDrawable, iconDrawable, iconColorId);
+
+        ColorStateList colorList = new ColorStateList(
+                new int[][]{new int[]{android.R.attr.state_selected},
+                        new int[]{}},
+                new int[]{mRes.getColor(R.color.navigation_view_icon_selected),
+                        backgroundColor});
+
+        view.setBackgroundResource(backgroundId);
+        view.setBackgroundTintList(colorList);
+        view.setImageDrawable(stateListDrawable);
+    }
+
+    // state_selected
+    private void addSelected(Resources res, StateListDrawable drawable) {
+        int[] selected = {android.R.attr.state_selected};
+        Drawable icon = res.getDrawable(R.drawable.ic_check);
+        icon.setTint(res.getColor(R.color.navigation_view_icon_fill));
+        drawable.addState(selected, icon);
+    }
+
+    // default
+    private void addUnselected(Resources res, StateListDrawable drawable, Drawable iconDrawable,
+                               int colorId) {
+        iconDrawable.setTint(res.getColor(colorId));
+        drawable.addState(new int[0], iconDrawable);
+    }
+
+    private class GetProviderIconTask extends AsyncTask<Void, Void, Integer> {
+        private final ImageView mView;
+        private StorageProviderInfo mProviderInfo;
+        private Drawable mIcon;
+
+        GetProviderIconTask(ImageView view, int mimeTypeIconId, RootDirectory rootDirectory) {
+            mView = view;
+            final StorageApiConsole console = StorageApiConsole.getStorageApiConsoleForPath(
+                    rootDirectory.getRootPath());
+            if (console != null && console.getStorageProviderInfo() != null) {
+                mProviderInfo = console.getStorageProviderInfo();
+            }
+            setRootsListIcon(view, mimeTypeIconId, rootDirectory);
+        }
+
+        @Override
+        protected Integer doInBackground(Void... params) {
+            if (mProviderInfo == null) {
+                return -1;
+            }
+
+            mIcon = StorageProviderUtils.loadPackageIcon(getContext(),
+                    mProviderInfo.getAuthority(), mProviderInfo.getIcon());
+
+            return StorageProviderUtils.loadProviderColor(getContext(),
+                    mProviderInfo.getAuthority(), mProviderInfo.getPrimaryColor());
+        }
+
+        @Override
+        protected void onPostExecute(Integer integer) {
+            int color = integer.intValue();
+            if (mIcon != null) {
+                setIcon(mView, mIcon, R.color.navigation_view_icon_unselected,
+                        R.drawable.ic_icon_background, color);
+            }
+        }
+    }
+
+    /*private Runnable mLoadThumbnail =
+            new Runnable(ImageView view, Drawable icon,boolean isThumbnail) {
+        @Override
+        public void run(ImageView view, Drawable icon, boolean isThumbnail) {
+            int colorId = MimeTypeHelper.getIconColorFromIconId(getContext(), iconId);
+            if (isThumbnail) {
+                setIcon(view, icon, R.color.navigation_view_icon_unselected,
+                        R.drawable.ic_icon_background_rounded_rectagle, mRes.getColor(colorId));
+            } else {
+                setIcon(view, icon, R.color.navigation_view_icon_unselected,
+                        R.drawable.ic_icon_background, mRes.getColor(colorId));
+            }
+        }
+    };*/
+
+
 }
