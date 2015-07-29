@@ -30,6 +30,7 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.preference.PreferenceActivity;
@@ -37,7 +38,6 @@ import android.provider.SearchRecentSuggestions;
 import android.text.Html;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -93,6 +93,7 @@ import com.cyanogenmod.filemanager.util.StorageHelper;
 
 import java.io.FileNotFoundException;
 import java.io.Serializable;
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -379,6 +380,10 @@ public class SearchActivity extends Activity
     private SearchResultAdapter mAdapter;
     private ProgressBar mStreamingSearchProgress;
     private boolean mSearchInProgress;
+    private String mSearchFoundString;
+    private boolean mHighlightTerms;
+    private boolean mShowRelevanceWidget;
+    private int mHighlightColor;
 
     /**
      * {@inheritDoc}
@@ -432,6 +437,10 @@ public class SearchActivity extends Activity
                 loadFromCacheData();
             }
         }
+
+        mSearchFoundString = getString(R.string.search_found_items_in_directory);
+        //$NON-NLS-1$
+        mHighlightColor = theme.getColor(this, "search_highlight_color");
 
         //Save state
         super.onCreate(state);
@@ -722,6 +731,7 @@ public class SearchActivity extends Activity
                                 back(true, null, false);
                             }
                        });
+        dialog.setCancelable(false);
         DialogHelper.delegateDialogShow(this, dialog);
     }
 
@@ -735,6 +745,15 @@ public class SearchActivity extends Activity
      */
     void doSearch(
             final boolean voiceQuery, final Query query, final String searchDirectory) {
+        // Load settings
+        this.mHighlightTerms = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.SETTINGS_HIGHLIGHT_TERMS.getId(),
+                ((Boolean)FileManagerSettings.SETTINGS_HIGHLIGHT_TERMS.
+                        getDefaultValue()).booleanValue());
+        this.mShowRelevanceWidget = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.SETTINGS_SHOW_RELEVANCE_WIDGET.getId(),
+                ((Boolean)FileManagerSettings.SETTINGS_SHOW_RELEVANCE_WIDGET.
+                        getDefaultValue()).booleanValue());
 
         // Recovers the user preferences about save suggestions
         boolean saveSuggestions = Preferences.getSharedPreferences().getBoolean(
@@ -813,25 +832,65 @@ public class SearchActivity extends Activity
         });
     }
 
+    private static class ProcessSearchResult extends AsyncTask<FileSystemObject, Void, Boolean> {
+
+        private WeakReference<SearchActivity> mActivity;
+
+        private SearchResult mResult;
+        private SearchResultAdapter.DataHolder mHolder;
+
+        public ProcessSearchResult(SearchActivity parent) {
+            super();
+            mActivity = new WeakReference<SearchActivity>(parent);
+        }
+
+        @Override
+        protected Boolean doInBackground(FileSystemObject... params) {
+            SearchActivity activity = mActivity.get();
+            if (activity == null) {
+                return false;
+            }
+
+            FileSystemObject result = params[0];
+            // check against user's display preferences
+            if ( !FileHelper.compliesWithDisplayPreferences(result, null, activity.mChRooted) ) {
+                return false;
+            }
+
+            // resolve sym links
+            FileHelper.resolveSymlink(activity, result);
+
+            // convert to search result
+            mResult = SearchHelper.convertToResult(result, activity.mQuery);
+
+            mHolder = SearchResultAdapter.generateDataHolder(mResult, activity,
+                    activity.mAdapter.getIconHolder(), activity.mQuery.getQueries(),
+                    activity.mHighlightColor, activity.mHighlightTerms,
+                    activity.mShowRelevanceWidget);
+
+            return mHolder != null && mResult != null;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean sucess) {
+            SearchActivity activity = mActivity.get();
+            if (activity == null) {
+                return;
+            }
+            if (sucess) {
+                // add to adapter
+                activity.mAdapter.addNewItem(mResult, mHolder);
+            }
+        }
+    }
+
     /**
      * Ensures the search result meets user preferences and passes it to the adapter for display
      *
      * @param result FileSystemObject that matches the search result criteria
      */
     private void showSearchResult(FileSystemObject result) {
-        // check against user's display preferences
-        if ( !FileHelper.compliesWithDisplayPreferences(result, null, mChRooted) ) {
-            return;
-        }
-
-        // resolve sym links
-        FileHelper.resolveSymlink(this, result);
-
-        // convert to search result
-        SearchResult searchResult = SearchHelper.convertToResult(result, mQuery);
-
-        // add to adapter
-        mAdapter.addNewItem(searchResult);
+        new ProcessSearchResult(this).execute(result);
     }
 
     /**
@@ -962,11 +1021,8 @@ public class SearchActivity extends Activity
                             getResources().
                                 getQuantityString(
                                     R.plurals.search_found_items, items, Integer.valueOf(items));
-                    SearchActivity.this.mSearchFoundItems.setText(
-                                            getString(
-                                                R.string.search_found_items_in_directory,
-                                                foundItems,
-                                                directory));
+                    SearchActivity.this.mSearchFoundItems.setText(String.format(mSearchFoundString,
+                            foundItems, directory));
                 }
             });
         }
@@ -1304,7 +1360,6 @@ public class SearchActivity extends Activity
      * Method that navigate to the file system used the intent (NavigationActivity)
      *
      * @param fso The file system object to navigate to
-     * @param intent The intent used to navigate to
      * @return boolean If the action implies finish this activity
      */
     boolean navigateTo(FileSystemObject fso) {
