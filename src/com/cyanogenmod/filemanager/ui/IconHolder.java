@@ -21,8 +21,12 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.ColorStateList;
 import android.database.ContentObserver;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.Outline;
+import android.graphics.PorterDuff.Mode;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.ThumbnailUtils;
@@ -31,13 +35,22 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
+import android.provider.MediaStore.Images;
+import android.text.TextUtils;
+import android.view.View;
+import android.view.ViewOutlineProvider;
 import android.widget.ImageView;
 
+import android.widget.ImageView.ScaleType;
+import com.cyanogen.ambient.storage.provider.StorageProviderInfo;
+import com.cyanogenmod.filemanager.R;
+import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
-import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
+import com.cyanogenmod.filemanager.model.RootDirectory;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MediaHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.KnownMimeTypeResolver;
+import com.cyanogenmod.filemanager.util.StorageProviderUtils;
 
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
@@ -55,7 +68,7 @@ public class IconHolder {
     private static final int MSG_LOAD = 1;
     private static final int MSG_LOADED = 2;
 
-    private final Map<String, Drawable> mIcons;     // Themes based
+    private final Map<Integer, IconData> mIcons;     // Themes based
     private final Map<String, Drawable> mAppIcons;  // App based
 
     private Map<String, Long> mAlbums;      // Media albums
@@ -64,10 +77,23 @@ public class IconHolder {
 
     private final Context mContext;
     private final boolean mUseThumbs;
-    private boolean mNeedAlbumUpdate = true;
+
+    private int mDirectoryColor;
 
     private HandlerThread mWorkerThread;
     private Handler mWorkerHandler;
+
+    private ViewOutlineProvider mIconViewOutlineProvider;
+
+    private static class IconData {
+        ColorStateList iconColor;
+        boolean isDir;
+
+        public IconData(ColorStateList iconColor, boolean isDir) {
+            this.iconColor = iconColor;
+            this.isDir = isDir;
+        }
+    }
 
     /**
      * This is kind of a hack, we should have a loadable for each MimeType we run into.
@@ -108,6 +134,9 @@ public class IconHolder {
         private Drawable loadDrawable(FileSystemObject fso) {
             final String filePath = MediaHelper.normalizeMediaPath(fso.getFullPath());
 
+            if (fso instanceof RootDirectory) {
+                return getRootDrawable(fso);
+            }
             if (KnownMimeTypeResolver.isAndroidApp(mContext, fso)) {
                 return getAppDrawable(fso);
             } else if (KnownMimeTypeResolver.isImage(mContext, fso)) {
@@ -119,6 +148,24 @@ public class IconHolder {
                 if (albums.containsKey(filePath)) {
                     return getAlbumDrawable(albums.get(filePath));
                 }
+            }
+            return null;
+        }
+
+        /**
+         * Method that returns the main icon of the root
+         *
+         * @param fso The FileSystemObject
+         * @return Drawable The drawable or null if cannot be extracted
+         */
+        private Drawable getRootDrawable(FileSystemObject fso) {
+            final StorageApiConsole console = StorageApiConsole.getStorageApiConsoleForPath(
+                    ((RootDirectory) fso).getRootPath());
+            if (console != null && console.getStorageProviderInfo() != null) {
+                final StorageProviderInfo providerInfo = console.getStorageProviderInfo();
+                Drawable icon = StorageProviderUtils.loadPackageIcon(mContext,
+                        providerInfo.getAuthority(), providerInfo.getIcon());
+                return icon;
             }
             return null;
         }
@@ -155,7 +202,7 @@ public class IconHolder {
         private Drawable getImageDrawable(String file) {
             Bitmap thumb = ThumbnailUtils.createImageThumbnail(
                     MediaHelper.normalizeMediaPath(file),
-                    ThumbnailUtils.TARGET_SIZE_MICRO_THUMBNAIL);
+                    Images.Thumbnails.MINI_KIND);
             if (thumb == null) {
                 return null;
             }
@@ -224,6 +271,15 @@ public class IconHolder {
             if (result.result != null) {
                 mAppIcons.put(filePath, result.result);
             }
+            if (!(result.fso instanceof RootDirectory)) {
+                view.setBackground(null);
+                view.setColorFilter(null);
+            } else {
+                view.setColorFilter(
+                        mContext.getResources().getColor(R.color.navigation_view_icon_fill),
+                        Mode.SRC_IN);
+                view.setScaleType(ScaleType.CENTER);
+            }
             view.setImageDrawable(result.result);
         }
     };
@@ -246,7 +302,7 @@ public class IconHolder {
         this.mContext = context;
         this.mUseThumbs = useThumbs;
         this.mRequests = new WeakHashMap<ImageView, Loadable>();
-        this.mIcons = new HashMap<String, Drawable>();
+        this.mIcons = new HashMap<Integer, IconData>();
         this.mAppIcons = new LinkedHashMap<String, Drawable>(MAX_CACHE, .75F, true) {
             private static final long serialVersionUID = 1L;
             @Override
@@ -261,25 +317,18 @@ public class IconHolder {
                 cr.registerContentObserver(uri, true, mMediaObserver);
             }
         }
-    }
 
-    /**
-     * Method that returns a drawable reference of a icon.
-     *
-     * @param resid The resource identifier
-     * @return Drawable The drawable icon reference
-     */
-    public Drawable getDrawable(final String resid) {
-        //Check if the icon exists in the cache
-        if (this.mIcons.containsKey(resid)) {
-            return this.mIcons.get(resid);
-        }
+        mIconViewOutlineProvider = new ViewOutlineProvider() {
+            @Override
+            public void getOutline(View view, Outline outline) {
+                int size = (int)mContext.getResources().getDimension(R.dimen.circle_icon_wh);
+                int radius = (int)mContext.getResources().getDimension(R.dimen.rectangle_icon_radius);
+                outline.setRoundRect(0, 0, size, size, radius);
+            }
+        };
 
-        //Load the drawable, cache and returns reference
-        Theme theme = ThemeManager.getCurrentTheme(mContext);
-        Drawable dw = theme.getDrawable(mContext, resid);
-        this.mIcons.put(resid, dw);
-        return dw;
+        setVolumeColor(mContext.getResources().getColor(R.color.default_primary));
+        loadDefaultIcons();
     }
 
     /**
@@ -290,34 +339,84 @@ public class IconHolder {
      * @param defaultIcon Drawable to be used in case no specific one could be found
      * @return Drawable The drawable reference
      */
-    public void loadDrawable(ImageView iconView, FileSystemObject fso, Drawable defaultIcon) {
-        if (!mUseThumbs) {
-            iconView.setImageDrawable(defaultIcon);
-            return;
+    public void loadDrawable(ImageView iconView, FileSystemObject fso, int defaultIcon) {
+        IconData iconData;
+        iconView.setOutlineProvider(mIconViewOutlineProvider);
+        iconView.setClipToOutline(true);
+        boolean selectedThumbnail = (mUseThumbs && fso != null &&
+                TextUtils.isEmpty(fso.getProviderPrefix()) && defaultIcon == R.drawable.ic_check &&
+                mAppIcons.containsKey(MediaHelper.normalizeMediaPath(fso.getFullPath())));
+        // TODO: implement code to get thumbnail from storage providers, until then force default
+        if ((mUseThumbs && fso != null && TextUtils.isEmpty(fso.getProviderPrefix())
+                && !selectedThumbnail) || ( fso != null && fso instanceof RootDirectory &&
+                !TextUtils.isEmpty(fso.getProviderPrefix()))) {
+            // Is cached?
+            final String filePath = MediaHelper.normalizeMediaPath(fso.getFullPath());
+            if (this.mAppIcons.containsKey(filePath)) {
+                if (fso instanceof RootDirectory) {
+                    iconData = mIcons.get(defaultIcon);
+                    iconView.setBackgroundResource(R.drawable.ic_icon_background);
+                    iconView.setBackgroundTintList(iconData.iconColor);
+                    iconView.setImageDrawable(this.mAppIcons.get(filePath));
+                    iconView.setColorFilter(
+                            mContext.getResources().getColor(R.color.navigation_view_icon_fill),
+                            Mode.SRC_IN);
+                } else {
+                    iconView.setBackground(null);
+                    iconView.setColorFilter(null);
+                    iconView.setImageDrawable(this.mAppIcons.get(filePath));
+                }
+                return;
+            }
+
+            if (mWorkerThread == null) {
+                mWorkerThread = new HandlerThread("IconHolderLoader");
+                mWorkerThread.start();
+                mWorkerHandler = new WorkerHandler(mWorkerThread.getLooper());
+            }
+            Loadable previousForView = mRequests.get(iconView);
+            if (previousForView != null) {
+                mWorkerHandler.removeMessages(MSG_LOAD, previousForView);
+            }
+
+            Loadable loadable = new Loadable(mContext, iconView, fso);
+            mRequests.put(iconView, loadable);
+
+            mWorkerHandler.obtainMessage(MSG_LOAD, loadable).sendToTarget();
         }
 
-        // Is cached?
-        final String filePath = MediaHelper.normalizeMediaPath(fso.getFullPath());
-        if (this.mAppIcons.containsKey(filePath)) {
-            iconView.setImageDrawable(this.mAppIcons.get(filePath));
-            return;
+        if (mIcons.containsKey(defaultIcon)) {
+            iconData = mIcons.get(defaultIcon);
+        } else {
+            int primaryColor;
+            if (fso != null && fso instanceof RootDirectory) {
+                int iconResId = fso.getResourceIconId();
+                primaryColor = ((RootDirectory) fso).getPrimaryColor();
+                if (iconResId > 0) {
+                    defaultIcon = iconResId;
+                }
+            } else {
+                primaryColor = mContext.getResources().getColor(R.color.category_misc);
+            }
+            iconData = loadIcon(defaultIcon, primaryColor, false);
         }
 
-        if (mWorkerThread == null) {
-            mWorkerThread = new HandlerThread("IconHolderLoader");
-            mWorkerThread.start();
-            mWorkerHandler = new WorkerHandler(mWorkerThread.getLooper());
-        }
-        Loadable previousForView = mRequests.get(iconView);
-        if (previousForView != null) {
-            mWorkerHandler.removeMessages(MSG_LOAD, previousForView);
+        int color = iconData.isDir ? mDirectoryColor :
+                mContext.getResources().getColor(R.color.navigation_view_icon_fill);
+
+        if (selectedThumbnail) {
+            // if thumbnail
+            iconView.setBackgroundTintList(null);
+            iconView.setBackgroundColor(
+                    mContext.getResources().getColor(R.color.navigation_view_icon_selected));
+        } else {
+            // if not thumbnail
+            iconView.setBackgroundResource(R.drawable.ic_icon_background);
+            iconView.setBackgroundTintList(iconData.iconColor);
         }
 
-        Loadable loadable = new Loadable(mContext, iconView, fso);
-        mRequests.put(iconView, loadable);
-        iconView.setImageDrawable(defaultIcon);
-
-         mWorkerHandler.obtainMessage(MSG_LOAD, loadable).sendToTarget();
+        iconView.setImageResource(defaultIcon);
+        iconView.setColorFilter(color, Mode.MULTIPLY);
     }
 
     private class WorkerHandler extends Handler {
@@ -358,5 +457,88 @@ public class IconHolder {
         this.mAppIcons.clear();
         mContext.getContentResolver().unregisterContentObserver(mMediaObserver);
         shutdownWorker();
+    }
+
+    /**
+     * Method that sets the colors to use for the current volumes directories
+     */
+    public void setVolumeColor(int color) {
+        mDirectoryColor = color;
+        float opacity =
+                mContext.getResources().getFloat(R.float_type.navigation_view_icon_circle_opacity);
+        int transparentColor = Color.argb(
+                Math.round(((float)0xFF) * opacity),
+                Color.red(color),
+                Color.green(color),
+                Color.blue(color));
+        loadIcon(R.drawable.ic_folder, transparentColor, true);
+    }
+
+    /**
+     * Method that loads the default icons (known icons and more common icons).
+     */
+    private void loadDefaultIcons() {
+        loadIcon(R.drawable.ic_category_apps,
+                mContext.getResources().getColor(R.color.category_apps), false);
+        loadIcon(R.drawable.ic_category_archives,
+                mContext.getResources().getColor( R.color.category_archives), false);
+        loadIcon(R.drawable.ic_category_audio,
+                mContext.getResources().getColor(R.color.category_audio), false);
+        loadIcon(R.drawable.ic_category_docs,
+                mContext.getResources().getColor(R.color.category_docs), false);
+        loadIcon(R.drawable.ic_category_images,
+                mContext.getResources().getColor(R.color.category_images), false);
+        loadIcon(R.drawable.ic_category_misc,
+                mContext.getResources().getColor(R.color.category_misc), false);
+        loadIcon(R.drawable.ic_category_video,
+                mContext.getResources().getColor(R.color.category_video), false);
+        loadIcon(R.drawable.ic_filetype_binary,
+                mContext.getResources().getColor(R.color.category_misc), false);
+        loadIcon(R.drawable.ic_filetype_font,
+                mContext.getResources().getColor(R.color.category_misc), false);
+        loadIcon(R.drawable.ic_filetype_source,
+                mContext.getResources().getColor(R.color.category_misc), false);
+        loadIcon(R.drawable.ic_filetype_calendar,
+                mContext.getResources().getColor(R.color.category_misc), false);
+        loadIcon(R.drawable.ic_filetype_ebook,
+                mContext.getResources().getColor(R.color.category_docs), false);
+        loadIcon(R.drawable.ic_filetype_markup,
+                mContext.getResources().getColor(R.color.category_misc), false);
+        loadIcon(R.drawable.ic_filetype_spreadsheet,
+                mContext.getResources().getColor(R.color.category_docs), false);
+        loadIcon(R.drawable.ic_filetype_cdimage,
+                mContext.getResources().getColor(R.color.category_misc), false);
+        loadIcon(R.drawable.ic_filetype_email,
+                mContext.getResources().getColor(R.color.category_docs), false);
+        loadIcon(R.drawable.ic_filetype_pdf,
+                mContext.getResources().getColor(R.color.category_docs), false);
+        loadIcon(R.drawable.ic_filetype_system_file,
+                mContext.getResources().getColor(R.color.category_misc), false);
+        loadIcon(R.drawable.ic_filetype_contact,
+                mContext.getResources().getColor(R.color.category_misc), false);
+        loadIcon(R.drawable.ic_filetype_executable,
+                mContext.getResources().getColor(R.color.category_misc), false);
+        loadIcon(R.drawable.ic_filetype_preso,
+                mContext.getResources().getColor(R.color.category_docs), false);
+        loadIcon(R.drawable.ic_filetype_text,
+                mContext.getResources().getColor(R.color.category_docs), false);
+
+        // Icon selected state
+        loadIcon(R.drawable.ic_check,
+                mContext.getResources().getColor(R.color.navigation_view_icon_selected), false);
+    }
+
+    private IconData loadIcon(int resId, int color, boolean isDir) {
+        //Check if the icon exists in the cache
+        if (mIcons.containsKey(resId)) {
+            mIcons.remove(resId);
+        }
+
+        //Load the drawable, cache and returns reference
+        ColorStateList colorList = new ColorStateList(new int[][]{new int[]{}},
+                new int[]{color});
+        IconData iconData = new IconData(colorList, isDir);
+        mIcons.put(resId, iconData);
+        return iconData;
     }
 }

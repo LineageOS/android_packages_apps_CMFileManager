@@ -98,7 +98,7 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         public DataHolder() {
             super();
         }
-        Drawable mDwIcon;
+        int mIconResId;
         CharSequence mName;
         String mParentDir;
         Float mRelevance;
@@ -182,7 +182,6 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
         setSortResultMode();
 
         //Do cache of the data for better performance
-        loadDefaultIcons();
         processData();
     }
 
@@ -202,14 +201,6 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
      */
     public void stopStreaming() {
         mInStreamingMode = false;
-    }
-
-    /**
-     * Method that loads the default icons (known icons and more common icons).
-     */
-    private void loadDefaultIcons() {
-        this.mIconHolder.getDrawable("ic_fso_folder_drawable"); //$NON-NLS-1$
-        this.mIconHolder.getDrawable("ic_fso_default_drawable"); //$NON-NLS-1$
     }
 
     /**
@@ -371,8 +362,7 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
             //Build the data holder
             final FileSystemObject fso = result.getFso();
             this.mData[i] = new SearchResultAdapter.DataHolder();
-            this.mData[i].mDwIcon = this.mIconHolder.getDrawable(
-                    MimeTypeHelper.getIcon(getContext(), fso));
+            this.mData[i].mIconResId = MimeTypeHelper.getIcon(getContext(), fso);
             if (this.mHighlightTerms) {
                 this.mData[i].mName =
                         SearchHelper.getHighlightedName(result, this.mQueries, highlightedColor);
@@ -475,7 +465,7 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult> {
 
         //Set the data
         mIconHolder.loadDrawable(viewHolder.mIvIcon,
-                getItem(position).getFso(), dataHolder.mDwIcon);
+                getItem(position).getFso(), dataHolder.mIconResId);
 
         viewHolder.mTvName.setText(dataHolder.mName, TextView.BufferType.SPANNABLE);
         viewHolder.mTvParentDir.setText(dataHolder.mParentDir);
