@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf091321_a2839f56",
+        "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 834,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-07-30T01:18:31Z",
+      "side": 1,
+      "message": "Since this is part of the Activity, it needs to be declared static and keep a WeakReference to the Activity in the AsyncTask.  If you don\u0027t declare it as static, it will hold a reference to the Activity throughout the lifecycle of the AsyncTask which can outlive the Activity.",
+      "revId": "34c3091a1ed2e46443b74c1e05ef8ab76110a170",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf091321_02948b8a",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/SearchResultAdapter.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-07-30T01:18:31Z",
+      "side": 1,
+      "message": "Externally, nothing should know about the DataHolder -- Maybe some of this should actually be SearchResult properties? This would also allow you to process some of this stuff in the async task when getting the items.",
+      "revId": "34c3091a1ed2e46443b74c1e05ef8ab76110a170",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf091321_e2907798",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/SearchResultAdapter.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-07-30T01:18:31Z",
+      "side": 1,
+      "message": "Instead of dividing, maybe multiply by a fraction.  Divisions are take up the length of the pipe to process in the processor. Multiplication is much faster.",
+      "revId": "34c3091a1ed2e46443b74c1e05ef8ab76110a170",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
