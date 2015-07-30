@@ -495,12 +495,13 @@ public final class StorageHelper {
             // TODO: Add to Navigation Drawer alphabetically
             for (StorageProviderInfo providerInfo : providerInfoList) {
                 StorageApi sapi = StorageApi.getInstance();
-
-                if (StorageProviderUtils.isStorageProviderAdded(ctx, providerInfo.getAuthority()) &&
+                final int providerHashCode = StorageApiConsole.getHashCodeFromProvider(providerInfo);
+                if (StorageProviderUtils.isStorageProviderAdded(ctx,
+                        String.valueOf(providerHashCode)) &&
                         !TextUtils.isEmpty(providerInfo.getPackage()) &&
                         !TextUtils.isEmpty(providerInfo.getTitle()) &&
                         !TextUtils.isEmpty(providerInfo.getSummary())) {
-                    int providerHashCode = StorageApiConsole.getHashCodeFromProvider(providerInfo);
+
 
                     // Verify console exists, or create one
                     StorageApiConsole.registerStorageApiConsole(ctx, sapi, providerInfo);

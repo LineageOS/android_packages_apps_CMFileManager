@@ -62,6 +62,8 @@ public final class Preferences {
      */
     public static final String SHARED_PROPERTIES_FILENAME = "shared.properties";
 
+    public static final String ADDED_STORAGE_PROVIDERS = "added_storage_providers";
+
     /**
      * The list of configuration listeners.
      */

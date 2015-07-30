@@ -40,6 +40,7 @@ import com.cyanogenmod.filemanager.util.FileHelper;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -52,7 +53,7 @@ public class StorageApiConsole extends VirtualConsole {
     private static final String TAG = StorageApiConsole.class.getSimpleName();
     private static final String PATH_SEPARATOR = "://";
 
-    private static List<StorageApiConsole> sStorageApiConsoles;
+    private static HashMap<Integer, StorageApiConsole> sStorageApiConsoles;
 
     private final StorageApi mStorageApi;
     private final StorageProviderInfo mProviderInfo;
@@ -198,15 +199,16 @@ public class StorageApiConsole extends VirtualConsole {
             storageApi = StorageApi.getInstance();
         }
         if (sStorageApiConsoles == null) {
-            sStorageApiConsoles = new ArrayList<StorageApiConsole>();
+            sStorageApiConsoles = new HashMap<>();
         }
 
         int bufferSize = context.getResources().getInteger(R.integer.buffer_size);
+        int providerHash = getHashCodeFromProvider(providerInfo);
 
-        // Register new storage api console
+        // Register or replace new storage api console
         StorageApiConsole console =
                 new StorageApiConsole(context, storageApi, providerInfo, bufferSize);
-        sStorageApiConsoles.add(console);
+        sStorageApiConsoles.put(providerHash, console);
         return console;
     }
 
@@ -244,13 +246,7 @@ public class StorageApiConsole extends VirtualConsole {
      * @param hashCode to match against to get the correct StorageApiConsole
      */
     public static StorageApiConsole getConsoleForHashCode (int hashCode) {
-        for (StorageApiConsole console : sStorageApiConsoles) {
-            if (console.getProviderHash() == hashCode) {
-                return console;
-            }
-        }
-
-        return null;
+        return sStorageApiConsoles.get(hashCode);
     }
 
     /**
