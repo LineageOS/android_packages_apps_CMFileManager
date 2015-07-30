@@ -34,6 +34,9 @@ import com.cyanogen.ambient.storage.StorageApi.Document;
 import com.cyanogen.ambient.storage.StorageApi.Document.DocumentResult;
 import com.cyanogen.ambient.storage.StorageApi.DocumentInfo.DocumentInfoResult;
 import com.cyanogen.ambient.storage.StorageApi.StatusResult;
+import com.cyanogen.ambient.storage.provider.ProviderCapabilities;
+import com.cyanogen.ambient.storage.provider.ProviderStatus;
+import com.cyanogen.ambient.storage.provider.ProviderStatusCodes;
 import com.cyanogen.ambient.storage.provider.StorageProviderInfo;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.commands.storageapi.Program;
@@ -50,8 +53,11 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * A helper class with useful methods for dealing with Storage Providers.
@@ -444,10 +450,110 @@ public final class StorageProviderUtils {
         }
     }
 
+    public static void addProvider(Context context, StorageProviderInfo storageProviderInfo) {
+        SharedPreferences sharedPreferences =
+                context.getSharedPreferences(Preferences.SETTINGS_FILENAME,
+                        Context.MODE_PRIVATE);
+        final String authority = storageProviderInfo.getAuthority();
+        final Set<String> installedProviders = sharedPreferences
+                .getStringSet(Preferences.ADDED_STORAGE_PROVIDERS, new LinkedHashSet<String>());
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(authority, true);
+        installedProviders.add(authority);
+        editor.putStringSet(Preferences.ADDED_STORAGE_PROVIDERS, installedProviders);
+        editor.putString(authority + ".rootDocumentId", storageProviderInfo.getRootDocumentId());
+        editor.putString(authority + ".title", storageProviderInfo.getTitle());
+        editor.putString(authority + ".summary", storageProviderInfo.getSummary());
+        editor.putString(authority + ".package", storageProviderInfo.getPackage());
+        editor.putInt(authority + ".icon", storageProviderInfo.getIcon());
+        editor.putInt(authority+".color", storageProviderInfo.getPrimaryColor());
+        ProviderCapabilities capabilities = storageProviderInfo.getCapabilities();
+        editor.putInt(authority+".flags", capabilities != null ? capabilities.getFlags() : 0);
+        editor.putInt(authority+".extFlags", capabilities != null ? capabilities.getExtFlags() : 0);
+        editor.commit();
+    }
+
+    public static void removeProvider(Context context, String authority) {
+        SharedPreferences sharedPreferences =
+                context.getSharedPreferences(Preferences.SETTINGS_FILENAME,
+                        Context.MODE_PRIVATE);
+        final Set<String> addedProviders = sharedPreferences
+                .getStringSet(Preferences.ADDED_STORAGE_PROVIDERS, new LinkedHashSet<String>());
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.remove(authority);
+        addedProviders.remove(authority);
+        editor.putStringSet(Preferences.ADDED_STORAGE_PROVIDERS, addedProviders);
+        editor.remove(authority + ".rootDocumentId");
+        editor.remove(authority + ".title");
+        editor.remove(authority + ".summary");
+        editor.remove(authority + ".package");
+        editor.remove(authority + ".icon");
+        editor.remove(authority + ".color");
+        editor.remove(authority + ".flags");
+        editor.remove(authority + ".extFlags");
+        editor.commit();
+    }
+
     public static boolean isStorageProviderAdded(Context context, String authority) {
         SharedPreferences sharedPreferences =
                 context.getSharedPreferences(Preferences.SETTINGS_FILENAME,
                         Context.MODE_PRIVATE);
         return sharedPreferences.getBoolean(authority, false);
+    }
+
+    public static StorageProviderInfo getCachedStorageProvider(Context context, String authority) {
+        SharedPreferences sharedPreferences =
+                context.getSharedPreferences(Preferences.SETTINGS_FILENAME,
+                        Context.MODE_PRIVATE);
+        final String rootDocumentId = sharedPreferences.getString(authority + ".rootDocumentId",
+                null);
+        final String packageName = sharedPreferences.getString(authority + ".package", null);
+        final String title = sharedPreferences.getString(authority + ".title", null);
+        final String summary = sharedPreferences.getString(authority + ".summary", null);
+        final int iconId = sharedPreferences.getInt(authority + ".icon", -1);
+        final int colorId = sharedPreferences.getInt(authority + ".color",
+                context.getResources().getColor(R.color.misc_primary));
+        final int flags = sharedPreferences.getInt(authority + ".flags", 0);
+        final int extFlags = sharedPreferences.getInt(authority + ".extFlags", 0);
+        if (!TextUtils.isEmpty(rootDocumentId) &&
+                !TextUtils.isEmpty(packageName) &&
+                !TextUtils.isEmpty(title) &&
+                !TextUtils.isEmpty(summary) &&
+                iconId != -1)  {
+            return new CachedStorageProviderInfo(authority, packageName,
+                    rootDocumentId, title, summary, iconId, colorId, flags, extFlags);
+        }
+        return null;
+    }
+
+    public static List<StorageProviderInfo> getAddedProvidersFromCache(Context context) {
+        final ArrayList<StorageProviderInfo> storageProviderInfos = new ArrayList<>();
+        SharedPreferences sharedPreferences =
+                context.getSharedPreferences(Preferences.SETTINGS_FILENAME,
+                        Context.MODE_PRIVATE);
+        final Set<String> addedProviders = sharedPreferences
+                .getStringSet(Preferences.ADDED_STORAGE_PROVIDERS, new LinkedHashSet<String>());
+        for (String authority : addedProviders) {
+            StorageProviderInfo storageProviderInfo = getCachedStorageProvider(context, authority);
+            if (storageProviderInfo != null) {
+                storageProviderInfos.add(storageProviderInfo);
+            }
+        }
+        return storageProviderInfos;
+    }
+
+    public static String getProviderTitleForNav(Context context,
+            StorageProviderInfo storageProviderInfo) {
+        String title = storageProviderInfo.getTitle();
+        if (storageProviderInfo.getProviderStatus() != ProviderStatusCodes.SUCCESS) {
+            ProviderCapabilities capabilities = storageProviderInfo.getCapabilities();
+            boolean requiresSession =  capabilities != null ? capabilities.requiresSession() : false;
+            if (!requiresSession) {
+                title = context.getString(R.string.storage_provider_error_title,
+                        storageProviderInfo.getTitle(),
+                        context.getString(R.string.storage_provider_problem));
+            }
+        }
+        return title;
     }
 }

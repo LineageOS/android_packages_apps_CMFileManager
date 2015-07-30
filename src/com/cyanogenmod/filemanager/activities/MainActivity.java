@@ -42,6 +42,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+
+import com.cyanogen.ambient.storage.provider.ProviderCapabilities;
 import com.cyanogen.ambient.storage.provider.StorageProviderInfo;
 import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
@@ -377,7 +379,10 @@ public class MainActivity extends ActionBarActivity
                             mNavigationDrawerController.getProviderInfoFromMenuItem(itemId);
 
                     if (providerInfo != null) {
-                        if (providerInfo.needAuthentication()) {
+                        ProviderCapabilities providerCapabilities = providerInfo.getCapabilities();
+                        if (providerCapabilities != null &&
+                                providerCapabilities.requiresSession() &&
+                                providerInfo.needAuthentication()) {
                             startActivity(providerInfo.authenticateUser());
                             return;
                         }

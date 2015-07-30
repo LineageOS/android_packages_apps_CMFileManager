@@ -103,23 +103,7 @@ public class NavigationDrawerController implements ResultCallback<ProviderInfoLi
             return;
         }
         if (DEBUG) Log.v(TAG, "got result(s)! " + mProviderInfoList.size());
-        // TODO: Add to Navigation Drawer alphabetically
-        for (StorageProviderInfo providerInfo : mProviderInfoList) {
-            StorageApi sapi = StorageApi.getInstance();
-
-            if (StorageProviderUtils.isStorageProviderAdded(mCtx, providerInfo.getAuthority()) &&
-                    !TextUtils.isEmpty(providerInfo.getPackage()) &&
-                    !TextUtils.isEmpty(providerInfo.getTitle()) &&
-                    !TextUtils.isEmpty(providerInfo.getSummary())) {
-                int providerHashCode = StorageApiConsole.getHashCodeFromProvider(providerInfo);
-
-                // Verify console exists, or create one
-                StorageApiConsole.registerStorageApiConsole(mCtx, sapi, providerInfo);
-
-                // Add to navigation drawer controller
-                addProviderInfoItem(providerHashCode, providerInfo);
-            }
-        }
+        loadStorageProviderItems(mProviderInfoList, true);
         updateDataSet();
     }
 
@@ -203,6 +187,9 @@ public class NavigationDrawerController implements ResultCallback<ProviderInfoLi
         mNavigationDrawerItemList.add(new NavigationDrawerItem(R.id.navigation_item_settings,
                 NavigationDrawerItemType.SINGLE, title, summary, R.drawable.ic_settings, color));
 
+        mProviderInfoList = StorageProviderUtils.getAddedProvidersFromCache(mCtx);
+        loadStorageProviderItems(mProviderInfoList, false);
+
         // Notify dataset changed here because we aren't sure when/if storage providers will return.
         updateDataSet();
 
@@ -210,6 +197,30 @@ public class NavigationDrawerController implements ResultCallback<ProviderInfoLi
         // call to notifiyDataSetChanged.
         StorageApi storageApi = StorageApi.getInstance();
         storageApi.fetchProviders(this);
+    }
+
+    private void loadStorageProviderItems(List<StorageProviderInfo> storageProviderInfos,
+            boolean updateCache) {
+        // TODO: Add to Navigation Drawer alphabetically
+        for (StorageProviderInfo providerInfo : storageProviderInfos) {
+            StorageApi sapi = StorageApi.getInstance();
+
+            if (StorageProviderUtils.isStorageProviderAdded(mCtx, providerInfo.getAuthority()) &&
+                    !TextUtils.isEmpty(providerInfo.getPackage()) &&
+                    !TextUtils.isEmpty(providerInfo.getTitle()) &&
+                    !TextUtils.isEmpty(providerInfo.getSummary())) {
+                int providerHashCode = StorageApiConsole.getHashCodeFromProvider(providerInfo);
+
+                // Verify console exists, or create one
+                StorageApiConsole.registerStorageApiConsole(mCtx, sapi, providerInfo);
+
+                // Add to navigation drawer controller
+                addProviderInfoItem(providerHashCode, providerInfo);
+                if (updateCache) {
+                    StorageProviderUtils.addProvider(mCtx, providerInfo);
+                }
+            }
+        }
     }
 
     /**
@@ -372,13 +383,29 @@ public class NavigationDrawerController implements ResultCallback<ProviderInfoLi
         protected void onPostExecute(Integer integer) {
             int color = integer.intValue();
             if (mIcon != null) {
+                NavigationDrawerItem item = null;
+                boolean updated = false;
                 String summary =  mProviderInfo.getSummary();
-                NavigationDrawerItem item = new NavigationDrawerItem(mProviderHashCode,
-                        NavigationDrawerItemType.DOUBLE, mProviderInfo.getTitle(),
-                        summary == null ? "" : summary,
-                        mIcon, color);
-                mNavigationDrawerItemList.add(mLastRoot++, item);
-                updateItemSelectionAndInvalidate(item);
+                String title = StorageProviderUtils.getProviderTitleForNav(mCtx, mProviderInfo);
+                for (int i = 0; i < mNavigationDrawerItemList.size(); i++) {
+                    item = mNavigationDrawerItemList.get(i);
+                    if (mProviderHashCode == item.getId()) {
+                        item.update(title,
+                                summary == null ? "" : summary,
+                                mIcon, color);
+                        updated = true;
+                    }
+                }
+                if (!updated) {
+                    item = new NavigationDrawerItem(mProviderHashCode,
+                            NavigationDrawerItemType.DOUBLE, title,
+                            summary == null ? "" : summary,
+                            mIcon, color);
+                    mNavigationDrawerItemList.add(mLastRoot++, item);
+                }
+                if (item != null) {
+                    updateItemSelectionAndInvalidate(item);
+                }
             }
 
         }

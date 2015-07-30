@@ -69,6 +69,24 @@ public class NavigationDrawerItem {
         mSelected = false;
     }
 
+    public void update(String title,
+            String summary, Drawable iconDrawable, int selectedColor) {
+        mTitle = title;
+        mSummary = summary;
+        mIconId = -1;
+        mIconDrawable = iconDrawable;
+        mSelectedColor = selectedColor;
+    }
+
+    public void update(String title,
+            String summary, int iconId, int selectedColor) {
+        mTitle = title;
+        mSummary = summary;
+        mIconId = iconId;
+        mIconDrawable = null;
+        mSelectedColor = selectedColor;
+    }
+
     public int getId() {
         return mId;
     }
@@ -103,5 +121,20 @@ public class NavigationDrawerItem {
 
     public void setSelected(boolean selected) {
         mSelected = selected;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof NavigationDrawerItem)) {
+            return false;
+        }
+
+        NavigationDrawerItem that = (NavigationDrawerItem) o;
+
+        return mId == that.mId;
+
     }
 }
