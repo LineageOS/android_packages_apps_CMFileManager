@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "bf091321_62cb47a5",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/SearchResultAdapter.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 9045
+      },
+      "writtenOn": "2015-07-30T01:29:26Z",
+      "side": 1,
+      "message": "I agree that nothing should know about it, but I think this was the best route with how the search results are generated. \n\nI initially thought about not exposing the class and kicking off another AsyncTask to add the item, but I felt it was cleaner to generate both at once and move on. I\u0027m open to suggestions though.",
+      "parentUuid": "bf091321_02948b8a",
+      "revId": "34c3091a1ed2e46443b74c1e05ef8ab76110a170",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bf091321_e2907798",
         "filename": "src/com/cyanogenmod/filemanager/adapters/SearchResultAdapter.java",
         "patchSetId": 2
@@ -47,6 +65,24 @@
       "writtenOn": "2015-07-30T01:18:31Z",
       "side": 1,
       "message": "Instead of dividing, maybe multiply by a fraction.  Divisions are take up the length of the pipe to process in the processor. Multiplication is much faster.",
+      "revId": "34c3091a1ed2e46443b74c1e05ef8ab76110a170",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf091321_02c24b86",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/SearchResultAdapter.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 9045
+      },
+      "writtenOn": "2015-07-30T01:29:26Z",
+      "side": 1,
+      "message": "I\u0027d be curious if this call does division at the lower layers though",
+      "parentUuid": "bf091321_e2907798",
       "revId": "34c3091a1ed2e46443b74c1e05ef8ab76110a170",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
