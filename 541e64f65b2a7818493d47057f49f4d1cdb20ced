@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf091321_f31ba770",
+        "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 1537,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-07-31T02:53:24Z",
+      "side": 1,
+      "message": "(minor) be consistent with naming convention within a class.",
+      "revId": "541e64f65b2a7818493d47057f49f4d1cdb20ced",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
