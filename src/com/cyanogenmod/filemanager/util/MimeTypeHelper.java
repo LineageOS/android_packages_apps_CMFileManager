@@ -115,6 +115,14 @@ public final class MimeTypeHelper {
          */
         SECURITY;
 
+        private static final String CAT_IMAGE = "IMAGE";
+        private static final String CAT_AUDIO = "AUDIO";
+        private static final String CAT_VIDEO = "VIDEO";
+        private static final String CAT_DOCUMENT = "DOCUMENT";
+        private static final String CAT_APP = "APP";
+        private static final String CAT_COMPRESS = "COMPRESS";
+        private static final String CAT_ALL = "-";
+
         public static String[] names() {
             MimeTypeCategory[] categories = values();
             String[] names = new String[categories.length];
@@ -142,6 +150,44 @@ public final class MimeTypeHelper {
 
             return localizedNames;
         }
+
+        public static String[] getDefinedLocalizedNames(Context context) {
+            MimeTypeCategory[] categories = values();
+            String[] localizedNames = new String[categories.length];
+
+            for (int i = 0; i < categories.length; i++) {
+                String description = getCategoryDescription(context, categories[i]);
+                switch (description) {
+                    case CAT_IMAGE:
+                        description = context.getString(R.string.images);
+                        break;
+                    case CAT_AUDIO:
+                        description = context.getString(R.string.audio);
+                        break;
+                    case CAT_VIDEO:
+                        description = context.getString(R.string.videos);
+                        break;
+                    case CAT_DOCUMENT:
+                        description = context.getString(R.string.docs);
+                        break;
+                    case CAT_APP:
+                        description = context.getString(R.string.apps);
+                        break;
+                    case CAT_COMPRESS:
+                        description = context.getString(R.string.archives);
+                        break;
+                    case CAT_ALL:
+                        description = context.getString(R.string.category_all);
+                        break;
+                }
+                description = description.substring(0, 1).toUpperCase()
+                        + description.substring(1).toLowerCase();
+                localizedNames[i] = description;
+            }
+
+            return localizedNames;
+        }
+
     }
 
     /**
