@@ -24,7 +24,10 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.StateListDrawable;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
@@ -66,6 +69,7 @@ import com.cyanogenmod.filemanager.model.Bookmark;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
 import com.cyanogenmod.filemanager.preferences.Preferences;
+import com.cyanogenmod.filemanager.ui.IconHolder;
 import com.cyanogenmod.filemanager.ui.fragments.LoginFragment;
 import com.cyanogenmod.filemanager.ui.fragments.NavigationFragment;
 import com.cyanogenmod.filemanager.ui.fragments.NavigationFragment.OnGoHomeRequestListener;
@@ -78,13 +82,15 @@ import com.cyanogenmod.filemanager.util.StorageHelper;
 import java.io.File;
 import java.io.InvalidClassException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory.APP;
 import static com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory.AUDIO;
 import static com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory.DOCUMENT;
 import static com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory.IMAGE;
-import static com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory.NONE;
+import static com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory.COMPRESS;
 import static com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory.VIDEO;
 
 /**
@@ -141,25 +147,38 @@ public class MainActivity extends ActionBarActivity
     public static final String EXTRA_ADD_TO_HISTORY =
             "extra_add_to_history"; //$NON-NLS-1$
 
-    static java.util.Map<MimeTypeCategory, Drawable> EASY_MODE_ICONS = new
-            java.util.HashMap<MimeTypeCategory, Drawable>();
-
-    private static final List<MimeTypeCategory> EASY_MODE_LIST = new ArrayList<MimeTypeCategory>() {
+    private ArrayAdapter<MimeTypeCategory> mQuickSearchAdapter;
+    private static final List<MimeTypeCategory> QUICK_SEARCH_LIST
+            = new ArrayList<MimeTypeCategory>() {
         {
-            add(NONE);
             add(IMAGE);
-            add(VIDEO);
             add(AUDIO);
+            add(VIDEO);
             add(DOCUMENT);
             add(APP);
+            add(COMPRESS);
         }
     };
+
+    static Map<MimeTypeCategory, Integer> QUICK_SEARCH_ICONS
+            = new HashMap<MimeTypeCategory, Integer>();
+    static {
+        QUICK_SEARCH_ICONS.put(MimeTypeCategory.IMAGE, R.drawable.ic_category_images);
+        QUICK_SEARCH_ICONS.put(MimeTypeCategory.AUDIO, R.drawable.ic_category_audio);
+        QUICK_SEARCH_ICONS.put(MimeTypeCategory.VIDEO, R.drawable.ic_category_video);
+        QUICK_SEARCH_ICONS.put(MimeTypeCategory.DOCUMENT, R.drawable.ic_category_docs);
+        QUICK_SEARCH_ICONS.put(MimeTypeCategory.APP, R.drawable.ic_category_apps);
+        QUICK_SEARCH_ICONS.put(MimeTypeCategory.COMPRESS, R.drawable.ic_category_archives);
+    }
+
 
     private Toolbar mToolBar;
 
     private ArrayAdapter<MimeTypeCategory> mEasyModeAdapter;
 
-    private View.OnClickListener mEasyModeItemClickListener = new View.OnClickListener() {
+    private IconHolder mIconHolder;
+
+    private View.OnClickListener mQuickSearchItemClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             Integer position = (Integer) view.getTag();
@@ -227,6 +246,8 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerController = new NavigationDrawerController(this, navigationDrawer);
 
         MIME_TYPE_LOCALIZED_NAMES = MimeTypeCategory.getFriendlyLocalizedNames(this);
+
+        mIconHolder = new IconHolder(this, false);
 
         showWelcomeMsg();
 
@@ -520,33 +541,20 @@ public class MainActivity extends ActionBarActivity
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
 
-        initEasyModePlus();
+        initQuickSearch();
     }
 
-    private void initEasyModePlus() {
+    private void initQuickSearch() {
+        MIME_TYPE_LOCALIZED_NAMES = MimeTypeCategory.getDefinedLocalizedNames(this);
+        GridView gridview = (GridView) findViewById(R.id.quick_search_view);
 
-        MIME_TYPE_LOCALIZED_NAMES = MimeTypeCategory.getFriendlyLocalizedNames(this);
-        EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.NONE, getResources().getDrawable(
-                R.drawable.ic_em_all));
-        EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.IMAGE, getResources().getDrawable(
-                R.drawable.ic_em_image));
-        EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.VIDEO, getResources().getDrawable(
-                R.drawable.ic_em_video));
-        EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.AUDIO, getResources().getDrawable(
-                R.drawable.ic_em_music));
-        EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.DOCUMENT, getResources().getDrawable(
-                R.drawable.ic_em_document));
-        EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.APP, getResources().getDrawable(
-                R.drawable.ic_em_application));
-
-        GridView gridview = (GridView) findViewById(R.id.easy_modeView);
-
-        mEasyModeAdapter = new android.widget.ArrayAdapter<MimeTypeCategory>(this, R.layout
-                .navigation_view_simple_item) {
+        mQuickSearchAdapter = new ArrayAdapter<MimeTypeCategory>(this, R.layout
+                .quick_search_item) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
-                convertView = (convertView == null) ? getLayoutInflater().inflate(R.layout
-                        .navigation_view_simple_item, parent, false) : convertView;
+                convertView = (convertView == null) ? getLayoutInflater().inflate(
+                        R.layout.quick_search_item, parent, false) : convertView;
+
                 MimeTypeCategory item = getItem(position);
                 String typeTitle = MIME_TYPE_LOCALIZED_NAMES[item.ordinal()];
                 TextView typeTitleTV = (TextView) convertView
@@ -555,20 +563,59 @@ public class MainActivity extends ActionBarActivity
                         .findViewById(R.id.navigation_view_item_icon);
 
                 typeTitleTV.setText(typeTitle);
-                typeIconIV.setImageDrawable(EASY_MODE_ICONS.get(item));
-                convertView.setOnClickListener(mEasyModeItemClickListener);
+                convertView.setOnClickListener(mQuickSearchItemClickListener);
                 convertView.setTag(position);
+
+                setFileIcon(typeIconIV, QUICK_SEARCH_ICONS.get(item), null);
+
                 return convertView;
             }
         };
-        mEasyModeAdapter.addAll(EASY_MODE_LIST);
-        gridview.setAdapter(mEasyModeAdapter);
+        mQuickSearchAdapter.addAll(QUICK_SEARCH_LIST);
+        gridview.setAdapter(mQuickSearchAdapter);
+    }
 
-        gridview.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+    private void setFileIcon(ImageView view, final int iconId, FileSystemObject fso) {
+        // Use iconholder to check for thumbnail
+        final IconHolder.ICallback callback = new IconHolder.ICallback() {
+            @Override
+            public void onLoaded(ImageView imageView, Drawable icon) {
+                if (icon == null) {
+                    // Icon holder didn't have anything at the moment, set default.
+                    int colorId = MimeTypeHelper.getIconColorFromIconId(getApplicationContext(), iconId);
+                    setIcon(imageView, getResources().getDrawable(iconId),
+                            R.color.navigation_view_icon_unselected, R.drawable.ic_icon_background,
+                            getResources().getColor(colorId));
+
+                }
             }
-        });
+        };
+        mIconHolder.loadDrawable(view, fso, iconId, callback);
+    }
+
+    // Set drawable as icon
+    private void setIcon(ImageView view, Drawable iconDrawable, int iconColorId, int backgroundId,
+                         int backgroundColor) {
+
+        StateListDrawable stateListDrawable = new StateListDrawable();
+        addUnselected(getResources(), stateListDrawable, iconDrawable, iconColorId);
+
+        ColorStateList colorList = new ColorStateList(
+                new int[][]{new int[]{android.R.attr.state_selected},
+                        new int[]{}},
+                new int[]{getResources().getColor(R.color.navigation_view_icon_selected),
+                        backgroundColor});
+
+        view.setBackgroundResource(backgroundId);
+        view.setBackgroundTintList(colorList);
+        view.setImageDrawable(stateListDrawable);
+    }
+
+    // default
+    private void addUnselected(Resources res, StateListDrawable drawable, Drawable iconDrawable,
+                               int colorId) {
+        iconDrawable.setTint(res.getColor(colorId));
+        drawable.addState(new int[0], iconDrawable);
     }
 
     private void onClicked(int position) {
@@ -588,7 +635,7 @@ public class MainActivity extends ActionBarActivity
 
         } else {
             ArrayList<MimeTypeCategory> searchCategories = new ArrayList<MimeTypeCategory>();
-            MimeTypeCategory selectedCategory = EASY_MODE_LIST.get(position);
+            MimeTypeCategory selectedCategory = QUICK_SEARCH_LIST.get(position);
             searchCategories.add(selectedCategory);
             // a one off case where we implicitly want to also search for TEXT mimetypes when the
             // DOCUMENTS category is selected
