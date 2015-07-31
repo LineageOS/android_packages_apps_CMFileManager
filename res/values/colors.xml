@@ -145,4 +145,7 @@
     <color name="default_title_indicator_selected_color">#FFFFFFFF</color>
     <color name="default_title_indicator_text_color">#BBFFFFFF</color>
     <color name="default_underline_indicator_selected_color">#FF33B5E5</color>
+
+    <!-- Search bar -->
+    <color name="search_bar_hint_text_color">#df000000</color>
 </resources>

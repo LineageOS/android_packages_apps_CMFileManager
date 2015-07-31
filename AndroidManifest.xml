@@ -54,7 +54,7 @@
 
     <meta-data
       android:name="android.app.default_searchable"
-      android:value=".activities.NavigationActivity" />
+      android:value=".activities.MainActivity" />
 
     <provider
       android:name=".providers.RecentSearchesContentProvider"

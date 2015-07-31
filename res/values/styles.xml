@@ -27,6 +27,8 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:dropDownItemStyle">@style/dropDownItemStyle</item>
+        <item name="android:dropDownListViewStyle">@style/dropDownListViewStyle</item>
     </style>
 
     <style name="Widget.FileManager.ActionBar" parent="Widget.AppCompat.ActionBar">
@@ -246,6 +248,15 @@
         <item name="android:textSize">@dimen/primary_text_size</item>
         <item name="android:textColor">@color/black_transparent</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Search drop down results -->
+    <style name="dropDownItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textColor">@color/search_bar_hint_text_color</item>
+    </style>
+
+    <style name="dropDownListViewStyle" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:background">@android:color/white</item>
     </style>
 
 </resources>
