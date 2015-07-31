@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf091321_7321d79f",
+        "filename": "src/com/cyanogenmod/filemanager/model/NavigationDrawerItem.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-31T03:06:24Z",
+      "side": 1,
+      "message": "should we have an overloaded version of this method capable of taking a resId for the Icon as with the constructor?",
+      "range": {
+        "startLine": 72,
+        "startChar": 16,
+        "endLine": 72,
+        "endChar": 22
+      },
+      "revId": "8757bb3f4bb8d4b122a982d45df42874d0e5a020",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf091321_13385bd1",
+        "filename": "src/com/cyanogenmod/filemanager/util/StorageProviderUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 464,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-07-31T03:06:24Z",
+      "side": 1,
+      "message": "We talked a bit about using the hash instead of the authority here already. Also think these should be constants given they\u0027re used in the methods below as well.",
+      "range": {
+        "startLine": 464,
+        "startChar": 39,
+        "endLine": 464,
+        "endChar": 53
+      },
+      "revId": "8757bb3f4bb8d4b122a982d45df42874d0e5a020",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
