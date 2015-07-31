@@ -48,12 +48,23 @@
 
             </android.support.v7.widget.CardView>
 
+            <TextView
+                android:text="@string/quick_search"
+                android:id="@+id/cardChildText"
+                android:textSize="14sp"
+                android:layout_marginStart="@dimen/quick_search_text_margin_left"
+                android:layout_marginTop="@dimen/quick_search_text_margin_top"
+                android:layout_marginBottom="@dimen/quick_search_text_margin_top"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/quick_search_text_height" />
+
             <com.cyanogenmod.filemanager.ui.widgets.WrappedGridView
-                android:id="@+id/easy_modeView"
+                android:id="@+id/quick_search_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:columnWidth="90dp"
-                android:numColumns="auto_fit"
+                android:numColumns="3"
                 android:verticalSpacing="10dp"
                 android:horizontalSpacing="10dp"
                 android:stretchMode="columnWidth"
