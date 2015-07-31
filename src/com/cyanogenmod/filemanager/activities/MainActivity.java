@@ -19,6 +19,7 @@ package com.cyanogenmod.filemanager.activities;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
+import android.app.SearchManager;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -321,7 +322,41 @@ public class MainActivity extends ActionBarActivity
      */
     @Override
     protected void onNewIntent(Intent intent) {
-        //stub
+        handleSearchIntent(intent);
+    }
+
+    public void handleSearchIntent(Intent intent) {
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            Intent searchIntent = new Intent(this, SearchActivity.class);
+            searchIntent.setAction(Intent.ACTION_SEARCH);
+            //- SearchActivity.EXTRA_SEARCH_DIRECTORY
+            String extraDir = null;
+            if (currentFragment instanceof NavigationFragment) {
+                extraDir = ((NavigationFragment)currentFragment)
+                        .getCurrentNavigationView().getCurrentDir();
+            }
+            extraDir = TextUtils.isEmpty(extraDir) ? FileHelper.ROOT_DIRECTORY : extraDir;
+            searchIntent.putExtra(SearchActivity.EXTRA_SEARCH_DIRECTORY, extraDir);
+            //- SearchManager.APP_DATA
+            if (intent.getBundleExtra(SearchManager.APP_DATA) != null) {
+                Bundle bundle = new Bundle();
+                bundle.putAll(intent.getBundleExtra(SearchManager.APP_DATA));
+                searchIntent.putExtra(SearchManager.APP_DATA, bundle);
+            }
+            //-- SearchManager.QUERY
+            String query = intent.getStringExtra(SearchManager.QUERY);
+            if (query != null) {
+                searchIntent.putExtra(SearchManager.QUERY, query);
+            }
+            //- android.speech.RecognizerIntent.EXTRA_RESULTS
+            ArrayList<String> extraResults =
+                    intent.getStringArrayListExtra(android.speech.RecognizerIntent.EXTRA_RESULTS);
+            if (extraResults != null) {
+                searchIntent.putStringArrayListExtra(
+                        android.speech.RecognizerIntent.EXTRA_RESULTS, extraResults);
+            }
+            startActivityForResult(searchIntent, NavigationFragment.INTENT_REQUEST_SEARCH);
+        }
     }
 
     @Override

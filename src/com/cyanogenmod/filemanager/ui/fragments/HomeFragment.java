@@ -18,7 +18,10 @@ package com.cyanogenmod.filemanager.ui.fragments;
 
 import android.app.FragmentTransaction;
 import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -35,6 +38,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.cyanogenmod.filemanager.R;
@@ -59,6 +64,7 @@ public class HomeFragment extends Fragment {
 
     View mView;
     Toolbar mToolBar;
+    SearchView mSearchView;
     private android.widget.ArrayAdapter<MimeTypeCategory> mEasyModeAdapter;
     private static final List<MimeTypeCategory> EASY_MODE_LIST = new ArrayList<MimeTypeCategory>() {
         {
@@ -123,8 +129,55 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        handleSearchBar();
 
         return mView;
+    }
+
+    private void handleSearchBar() {
+        mSearchView = (SearchView) mView.findViewById(R.id.homepage_search_bar);
+        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context
+                .SEARCH_SERVICE);
+        mSearchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity()
+                .getComponentName()));
+        mSearchView.setIconifiedByDefault(false);
+
+        Resources res = mSearchView.getContext().getResources();
+        int searchPlateId = res.getIdentifier("android:id/search_plate", null, null);
+        View searchPlate = mSearchView.findViewById(searchPlateId);
+        if (searchPlate != null) {
+            int searchTextId = res.getIdentifier("android:id/search_src_text", null, null);
+            TextView searchText = (TextView) searchPlate.findViewById(searchTextId);
+            if (searchText != null) {
+                int searchColor = res.getColor(R.color.search_bar_hint_text_color);
+                searchText.setTextColor(searchColor);
+                searchText.setHintTextColor(searchColor);
+            }
+
+            // Update all the image views to our assets
+            int imageViewId = res.getIdentifier("android:id/search_button", null, null);
+            ImageView imageView = (ImageView) mSearchView.findViewById(imageViewId);
+            if (imageView != null) {
+                imageView.setImageResource(R.drawable.ic_search);
+            }
+            imageViewId = res.getIdentifier("android:id/search_mag_icon", null, null);
+            imageView = (ImageView) mSearchView.findViewById(imageViewId);
+            if (imageView != null) {
+                imageView.setImageResource(R.drawable.ic_search);
+            }
+            imageViewId = res.getIdentifier("android:id/search_voice_btn", null, null);
+            imageView = (ImageView) mSearchView.findViewById(imageViewId);
+            if (imageView != null) {
+                imageView.setImageResource(R.drawable.ic_search_voice);
+            }
+            imageViewId = res.getIdentifier("android:id/search_close_btn", null, null);
+            imageView = (ImageView) mSearchView.findViewById(imageViewId);
+            if (imageView != null) {
+                imageView.setImageResource(R.drawable.ic_cancel_close);
+            }
+        }
+
+        mSearchView.setFocusable(false);
     }
 
     @Override
