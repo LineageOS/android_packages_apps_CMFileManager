@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "bf091321_e49d1f67",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 479,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-01T11:21:39Z",
+      "side": 1,
+      "message": "what happened here?",
+      "revId": "ba0cfeddf867911a952527026f13bc9790a77ae3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bf091321_843b039b",
         "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
         "patchSetId": 6
