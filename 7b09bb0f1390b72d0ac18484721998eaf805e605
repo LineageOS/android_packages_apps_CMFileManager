@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf091321_892f9ef5",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1120,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-01T02:12:02Z",
+      "side": 1,
+      "message": "What currently happens here? Should navigate to the parent or root?",
+      "revId": "7b09bb0f1390b72d0ac18484721998eaf805e605",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
