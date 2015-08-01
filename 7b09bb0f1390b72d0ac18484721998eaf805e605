@@ -16,6 +16,24 @@
       "revId": "7b09bb0f1390b72d0ac18484721998eaf805e605",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf091321_a961423c",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1120,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-01T04:35:02Z",
+      "side": 1,
+      "message": "Without this implemented, it is actually the same as it was before (for the most part).  However, now all items will be removed from the current directory.  If it was your parent that was removed, trying to hit \"..\" will show the \"file or folder not found\" popup, and hitting the back button will take you back to the first history item that exists.  Ideally, I\u0027d just want it to take me back to a parent object that still exists without user action, however, as is, it makes logical sense from a user perspective.",
+      "parentUuid": "bf091321_892f9ef5",
+      "revId": "7b09bb0f1390b72d0ac18484721998eaf805e605",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
