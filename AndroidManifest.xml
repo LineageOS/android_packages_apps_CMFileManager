@@ -16,8 +16,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.cyanogenmod.filemanager"
-  android:versionCode="104"
-  android:versionName="3.0.0">
+  android:versionCode="105"
+  android:versionName="3.0.1">
 
   <original-package android:name="com.cyanogenmod.filemanager" />
 
