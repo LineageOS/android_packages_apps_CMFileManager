@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f0e0f27_d7c1bc82",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/HomeFragment.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-03T21:03:46Z",
+      "side": 1,
+      "message": "Lets change this...",
+      "range": {
+        "startLine": 159,
+        "startChar": 35,
+        "endLine": 159,
+        "endChar": 42
+      },
+      "revId": "8f786a3804376720307d7b78be5a6b2924d1a983",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
