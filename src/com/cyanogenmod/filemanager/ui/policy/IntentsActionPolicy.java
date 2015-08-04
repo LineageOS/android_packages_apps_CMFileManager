@@ -28,7 +28,9 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
+
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.EditorActivity;
 import com.cyanogenmod.filemanager.activities.ShortcutActivity;
@@ -47,6 +49,7 @@ import com.cyanogenmod.filemanager.util.MediaHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
 import com.cyanogenmod.filemanager.util.ResourcesHelper;
+import com.cyanogenmod.filemanager.util.SnackbarHelper;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -54,6 +57,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * A class with the convenience methods for resolve intents related actions
@@ -100,7 +104,8 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      * @param onDismissListener The dismiss listener
      */
     public static void openFileSystemObject(
-            final Context ctx, final FileSystemObject fso, final boolean choose,
+            final Context ctx, final View container,
+            final FileSystemObject fso, final boolean choose,
             final OnDismissListener onDismissListener) {
         try {
             // Create the intent to open the file
@@ -118,7 +123,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                         R.string.cancel,
                         R.string.warning_title,
                         ctx.getResources().getString(R.string.secure_storage_open_file_warning),
-                        new SecureChoiceClickListener(ctx, fso,
+                        new SecureChoiceClickListener(ctx, container, fso,
                                 new ISecureChoiceCompleteListener() {
                                     private boolean isCancelled = false;
                                     @Override
@@ -652,7 +657,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      * Method that returns the best Uri for the file (content uri, file uri, ...)
      *
      * @param ctx The current context
-     * @param file The file to resolve
+     * @param fso The file to resolve
      */
     private static Uri getUriFromFile(Context ctx, FileSystemObject fso) {
         // If the passed object is secure file then we have to provide access with

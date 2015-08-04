@@ -912,4 +912,14 @@
     <!-- Snackbar messages -->
     <!-- Snackbar message - Storage volume unmounted -->
     <string name="snackbar_storage_volume_unmounted"><xliff:g id="characters">%1$s</xliff:g> was removed.</string>
+    <string name="snackbar_over_quota">Not enough space in destination</string>
+    <string name="snackbar_unable_to_open">Unable to open file</string>
+    <string name="snackbar_unable_to_copy">Unable to copy file</string>
+    <string name="snackbar_unable_to_create_copy">Unable to create copy</string>
+    <string name="snackbar_unable_to_move">Unable to move file</string>
+    <string name="snackbar_unable_to_delete">Unable to delete file</string>
+    <string name="snackbar_unable_to_rename">Unable to rename file</string>
+    <string name="snackbar_unable_to_complete">Unable to complete action</string>
+    <string name="snackbar_retry">RETRY</string>
+    <string name="snackbar_upgrade">UPGRADE</string>
 </resources>

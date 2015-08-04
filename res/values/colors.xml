@@ -148,4 +148,7 @@
 
     <!-- Search bar -->
     <color name="search_bar_hint_text_color">#df000000</color>
+
+    <!-- The snackbar upgrade color -->
+    <color name="snackbar_upgrade_color">#def2b807</color>
 </resources>

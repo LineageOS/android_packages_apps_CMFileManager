@@ -61,6 +61,7 @@ import com.cyanogenmod.filemanager.preferences.ObjectIdentifier;
 import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.ui.ThemeManager;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
+import com.cyanogenmod.filemanager.ui.policy.ActionsPolicy;
 import com.cyanogenmod.filemanager.ui.policy.DeleteActionPolicy;
 import com.cyanogenmod.filemanager.ui.policy.IntentsActionPolicy;
 import com.cyanogenmod.filemanager.ui.widgets.FlingerListView.OnItemFlingerListener;
@@ -208,6 +209,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
                 if (fso != null) {
                     DeleteActionPolicy.removeFileSystemObject(
                             getContext(),
+                            NavigationView.this,
                             fso,
                             NavigationView.this,
                             NavigationView.this,
@@ -1306,7 +1308,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             changeCurrentDir(fso.getFullPath(), searchInfo);
         } else {
             // Open the file with the preferred registered app
-            IntentsActionPolicy.openFileSystemObject(getContext(), fso, false, null);
+            IntentsActionPolicy.openFileSystemObject(getContext(), this, fso, false, null);
         }
     }
 
@@ -1342,7 +1344,8 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             // Open the file (edit or pick)
             if (this.mNavigationMode.compareTo(NAVIGATION_MODE.BROWSABLE) == 0) {
                 // Open the file with the preferred registered app
-                IntentsActionPolicy.openFileSystemObject(getContext(), fso, false, null);
+                IntentsActionPolicy.openFileSystemObject(getContext(),
+                        NavigationView.this, fso, false, null);
             } else {
                 // Request a file pick selection
                 if (this.mOnFilePickedListener != null) {

@@ -1741,6 +1741,7 @@ public class NavigationFragment extends Fragment
                         if (!TextUtils.isEmpty(destination)) {
                             CopyMoveActionPolicy.copyFileSystemObjects(
                                     getActivity(),
+                                    mView,
                                     selection,
                                     destination,
                                     getCurrentNavigationView(),
@@ -1759,6 +1760,7 @@ public class NavigationFragment extends Fragment
                         if (!TextUtils.isEmpty(destination)) {
                             CopyMoveActionPolicy.moveFileSystemObjects(
                                     getActivity(),
+                                    mView,
                                     selection,
                                     destination,
                                     getCurrentNavigationView(),
