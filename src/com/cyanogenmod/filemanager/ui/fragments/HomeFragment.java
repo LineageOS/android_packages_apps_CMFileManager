@@ -49,6 +49,7 @@ import com.cyanogenmod.filemanager.activities.SearchActivity;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
+import com.cyanogenmod.filemanager.util.StorageProviderUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -116,7 +117,7 @@ public class HomeFragment extends Fragment {
         cV.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity) getActivity()).setCurrentFragment(FragmentType.LOGIN);
+                StorageProviderUtils.loadProviderLogin(getActivity());
             }
         });
 
