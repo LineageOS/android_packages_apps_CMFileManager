@@ -19,6 +19,7 @@ package com.cyanogenmod.filemanager.ui.policy;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.text.Spanned;
+import android.view.View;
 import android.widget.Toast;
 
 import com.cyanogenmod.filemanager.R;
@@ -77,6 +78,11 @@ public abstract class ActionsPolicy {
          * Method invoked when the operation was successfully
          */
         void onSuccess();
+
+        /**
+         * Method invoked when there is an exception
+         */
+        void onError(Throwable error);
 
         /**
          * Method invoked to handle cancelling
@@ -154,7 +160,7 @@ public abstract class ActionsPolicy {
 
             // Check the result (no relaunch, this is responsibility of callable doInBackground)
             if (result != null) {
-                ExceptionUtil.translateException(this.mCtx, result, false, false);
+                this.mCallable.onError(result);
             } else {
                 //Operation complete.
                 this.mCallable.onSuccess();

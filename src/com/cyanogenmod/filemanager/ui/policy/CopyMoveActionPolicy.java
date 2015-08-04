@@ -19,11 +19,16 @@ package com.cyanogenmod.filemanager.ui.policy;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.os.AsyncTask;
 import android.text.Html;
 import android.text.Spanned;
-
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
+
+import com.cyanogen.ambient.storage.StorageException;
+import com.cyanogen.ambient.storage.provider.ProviderStatusCodes;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.console.Console;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
@@ -38,12 +43,12 @@ import com.cyanogenmod.filemanager.util.DialogHelper;
 import com.cyanogenmod.filemanager.util.ExceptionUtil;
 import com.cyanogenmod.filemanager.util.ExceptionUtil.OnRelaunchCommandResult;
 import com.cyanogenmod.filemanager.util.FileHelper;
-import com.cyanogenmod.filemanager.util.StorageProviderUtils;
+import com.cyanogenmod.filemanager.util.SnackbarHelper;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * A class with the convenience methods for resolve copy/move related actions
@@ -102,6 +107,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
      */
     public static void renameFileSystemObject(
             final Context ctx,
+            final View container,
             final FileSystemObject fso,
             final String newName,
             final OnSelectionListener onSelectionListener,
@@ -112,6 +118,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
         // Internal copy
         copyOrMoveFileSystemObjects(
                 ctx,
+                container,
                 COPY_MOVE_OPERATION.RENAME,
                 files,
                 destination,
@@ -129,6 +136,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
      */
     public static void createCopyFileSystemObject(
             final Context ctx,
+            final View container,
             final FileSystemObject fso,
             final OnSelectionListener onSelectionListener,
             final OnRequestRefreshListener onRequestRefreshListener) {
@@ -153,6 +161,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
         // Internal copy
         copyOrMoveFileSystemObjects(
                 ctx,
+                container,
                 COPY_MOVE_OPERATION.CREATE_COPY,
                 files,
                 destination,
@@ -170,6 +179,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
      */
     public static void copyFileSystemObjects(
             final Context ctx,
+            final View container,
             final List<LinkedResource> files,
             final OnSelectionListener onSelectionListener,
             final OnRequestRefreshListener onRequestRefreshListener) {
@@ -179,6 +189,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
         // Internal copy
         copyOrMoveFileSystemObjects(
                 ctx,
+                container,
                 COPY_MOVE_OPERATION.COPY,
                 files,
                 destination,
@@ -196,6 +207,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
      */
     public static void copyFileSystemObjects(
             final Context ctx,
+            final View container,
             final List<FileSystemObject> files,
             final String destination,
             final OnSelectionListener onSelectionListener,
@@ -203,6 +215,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
         // Internal copy
         copyOrMoveFileSystemObjects(
                 ctx,
+                container,
                 COPY_MOVE_OPERATION.COPY,
                 createLinkedResource(files, destination),
                 destination,
@@ -220,6 +233,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
      */
     public static void moveFileSystemObjects(
             final Context ctx,
+            final View container,
             final List<FileSystemObject> files,
             final String destination,
             final OnSelectionListener onSelectionListener,
@@ -227,6 +241,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
         // Internal move
         copyOrMoveFileSystemObjects(
                 ctx,
+                container,
                 COPY_MOVE_OPERATION.MOVE,
                 createLinkedResource(files, destination),
                 destination,
@@ -245,11 +260,17 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
      */
     private static void copyOrMoveFileSystemObjects(
             final Context ctx,
+            final View container,
             final COPY_MOVE_OPERATION operation,
             final List<LinkedResource> files,
             final String destination,
             final OnSelectionListener onSelectionListener,
             final OnRequestRefreshListener onRequestRefreshListener) {
+
+        final AtomicReference<OnRelaunchCommandResult> atomicRelaunchCommandResult =
+                new AtomicReference<>();
+        final AtomicReference<Runnable> atomicRunnable =
+                new AtomicReference<>();
 
         // Some previous checks prior to execute
         // 1.- Listener couldn't be null
@@ -370,6 +391,11 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             public void onSuccess() {
                 refreshUIAfterCompletion();
                 ActionsPolicy.showOperationSuccessMsg(ctx);
+            }
+
+            @Override
+            public void onError(Throwable error) {
+                handleError(mCtx, container, mOperation, atomicRelaunchCommandResult.get(), error);
             }
 
             @Override
@@ -536,7 +562,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
         };
         final BackgroundAsyncTask task = new BackgroundAsyncTask(ctx, callable);
 
-        BackgroundCallable callableCurFiles = new BackgroundCallable() {
+        final BackgroundCallable callableCurFiles = new BackgroundCallable() {
             // Prior to execute, we need to check if some of the files will be overwritten
             List<FileSystemObject> curFiles = null;
 
@@ -598,16 +624,54 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                     DialogHelper.delegateDialogShow(ctx, dialog);
                     return;
                 } else {
-                    // Execute background task
-                    task.execute(task);
+                    if (task.getStatus() == AsyncTask.Status.FINISHED) {
+                        final BackgroundAsyncTask retryTask =
+                                new BackgroundAsyncTask(ctx, callable);
+                        retryTask.execute(retryTask);
+                    } else {
+                        // Execute background task
+                        task.execute(task);
+                    }
                 }
+            }
+
+            @Override
+            public void onError(Throwable error) {
+                handleError(ctx, container, operation, atomicRelaunchCommandResult.get(), error);
             }
 
             @Override
             public void onCancel() { /*NO-OP*/ }
         };
-        BackgroundAsyncTask curFilesTask = new BackgroundAsyncTask(ctx, callableCurFiles);
-        curFilesTask.execute(curFilesTask);
+        final Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                BackgroundAsyncTask curFilesTask = new BackgroundAsyncTask(ctx,
+                        callableCurFiles);
+                curFilesTask.execute(curFilesTask);
+            }
+        };
+        atomicRunnable.set(runnable);
+        OnRelaunchCommandResult onRelaunchCommandResult = new OnRelaunchCommandResult() {
+            @Override
+            public void onSuccess() {
+                if (atomicRunnable.get() != null) {
+                    atomicRunnable.get().run();
+                }
+            }
+
+            @Override
+            public void onCancelled() {
+
+            }
+
+            @Override
+            public void onFailed(Throwable cause) {
+
+            }
+        };
+        atomicRelaunchCommandResult.set(onRelaunchCommandResult);
+        runnable.run();
     }
 
     /**
@@ -753,5 +817,43 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             }
         }
         return true;
+    }
+
+    private static void handleError(final Context context, View container,
+            COPY_MOVE_OPERATION operation, OnRelaunchCommandResult onRelaunchCommandResult,
+            Throwable error) {
+        if (error instanceof StorageException &&
+                ((StorageException)error).getError() == ProviderStatusCodes.INSUFFICIENT_STORAGE) {
+            SnackbarHelper.showWithUpgrade(context, container,
+                    context.getString(R.string.snackbar_over_quota),
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            //TODO: Launch upgrade intent
+                            Toast.makeText(context, "Upgrade not implemented",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        } else {
+            int msgId;
+            switch (operation) {
+                case COPY:
+                    msgId = R.string.snackbar_unable_to_copy;
+                    break;
+                case MOVE:
+                    msgId = R.string.snackbar_unable_to_move;
+                    break;
+                case CREATE_COPY:
+                    msgId = R.string.snackbar_unable_to_create_copy;
+                    break;
+                case RENAME:
+                    msgId = R.string.snackbar_unable_to_rename;
+                    break;
+                default:
+                    msgId = R.string.snackbar_unable_to_complete;
+            }
+            SnackbarHelper.showWithRetry(context, container, context.getString(msgId),
+                    onRelaunchCommandResult);
+        }
     }
 }

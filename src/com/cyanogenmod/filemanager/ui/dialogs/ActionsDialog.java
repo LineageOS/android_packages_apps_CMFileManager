@@ -264,6 +264,7 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
             case R.id.mnu_actions_delete:
                 DeleteActionPolicy.removeFileSystemObject(
                         this.mContext,
+                        mListView,
                         this.mFso,
                         this.mOnSelectionListener,
                         this.mOnRequestRefreshListener,
@@ -298,12 +299,12 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
             //- Open
             case R.id.mnu_actions_open:
                 IntentsActionPolicy.openFileSystemObject(
-                        this.mContext, this.mFso, false, null, null);
+                        this.mContext, parent, this.mFso, false, null, null);
                 break;
             //- Open with
             case R.id.mnu_actions_open_with:
                 IntentsActionPolicy.openFileSystemObject(
-                        this.mContext, this.mFso, true, null, null);
+                        this.mContext, parent, this.mFso, true, null, null);
                 break;
 
             //- Execute
@@ -355,6 +356,7 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
                             this.mOnSelectionListener.onRequestSelectedFiles();
                     DeleteActionPolicy.removeFileSystemObjects(
                             this.mContext,
+                            mListView,
                             selection,
                             this.mOnSelectionListener,
                             this.mOnRequestRefreshListener,
@@ -401,6 +403,7 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
                     }
                     CopyMoveActionPolicy.createCopyFileSystemObject(
                                 this.mContext,
+                                mListView,
                                 fso,
                                 this.mOnSelectionListener,
                                 this.mOnRequestRefreshListener);
@@ -532,6 +535,7 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
                             if (ActionsDialog.this.mOnSelectionListener != null) {
                                 CopyMoveActionPolicy.renameFileSystemObject(
                                         ActionsDialog.this.mContext,
+                                        mListView,
                                         inputNameDialog.mFso,
                                         name,
                                         ActionsDialog.this.mOnSelectionListener,
