@@ -19,6 +19,8 @@ package com.cyanogenmod.filemanager.providers.secure;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.view.View;
+
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.ui.policy.CopyMoveActionPolicy;
 import com.cyanogenmod.filemanager.ui.policy.CopyMoveActionPolicy.LinkedResource;
@@ -43,6 +45,7 @@ public class SecureChoiceClickListener implements DialogInterface.OnClickListene
 
     // Members
     private Context mContext;
+    private View mView;
     private FileSystemObject mFso;
     private ISecureChoiceCompleteListener mListener;
 
@@ -54,10 +57,13 @@ public class SecureChoiceClickListener implements DialogInterface.OnClickListene
      *
      * @throws IllegalArgumentException {@link java.lang.IllegalArgumentException}
      */
-    public SecureChoiceClickListener(Context context, FileSystemObject fso,
+    public SecureChoiceClickListener(Context context, View container, FileSystemObject fso,
             ISecureChoiceCompleteListener listener) throws IllegalArgumentException {
         if (context == null) {
             throw new IllegalArgumentException("'context' cannot be null!");
+        }
+        if (container == null) {
+            throw new IllegalArgumentException("'container' cannot be null!");
         }
         if (fso == null) {
             throw new IllegalArgumentException("'fso' cannot be null!");
@@ -66,6 +72,7 @@ public class SecureChoiceClickListener implements DialogInterface.OnClickListene
             throw new IllegalArgumentException("'listener' cannot be null!");
         }
         mContext = context;
+        mView = container;
         mFso = fso;
         mListener = listener;
     }
@@ -91,7 +98,7 @@ public class SecureChoiceClickListener implements DialogInterface.OnClickListene
         final File tmpFile = new File(hiddenCacheDirectory, mFso.getName());
         final FileSystemObject tmpFso = FileHelper.createFileSystemObject(tmpFile);
         selection.add(new LinkedResource(mFso, tmpFso));
-        CopyMoveActionPolicy.copyFileSystemObjects(mContext, selection,
+        CopyMoveActionPolicy.copyFileSystemObjects(mContext, mView, selection,
                 new SecureChoiceSelectionListener(tmpFile),
                 new SecureChoiceRefreshListener(tmpFile, mListener));
 
