@@ -2323,27 +2323,14 @@ public class NavigationActivity extends Activity
         return false;
     }
 
-    /**
-     * Method that opens the actions dialog
-     *
-     * @param item The path or the {@link FileSystemObject}
-     * @param global If the menu to display is the one with global actions
-     */
-    private void openActionsDialog(Object item, boolean global) {
-        // Resolve the full path
-        String path = String.valueOf(item);
-        if (item instanceof FileSystemObject) {
-            path = ((FileSystemObject)item).getFullPath();
-        }
-
-        // Prior to show the dialog, refresh the item reference
+    private void openActionsDialog(String path, boolean global) {
         FileSystemObject fso = null;
         try {
             fso = CommandHelper.getFileInfo(this, path, false, null);
             if (fso == null) {
                 throw new NoSuchFileOrDirectory(path);
             }
-
+            openActionsDialog(fso, global);
         } catch (Exception e) {
             // Notify the user
             ExceptionUtil.translateException(this, e);
@@ -2352,17 +2339,25 @@ public class NavigationActivity extends Activity
             if (e instanceof FileNotFoundException || e instanceof NoSuchFileOrDirectory) {
                 // If have a FileSystemObject reference then there is no need to search
                 // the path (less resources used)
-                if (item instanceof FileSystemObject) {
-                    getCurrentNavigationView().removeItem((FileSystemObject)item);
-                } else {
-                    getCurrentNavigationView().removeItem((String)item);
-                }
+                getCurrentNavigationView().removeItem(path);
             }
             return;
         }
+    }
+
+    /**
+     * Method that opens the actions dialog
+     *
+     * @param item The path or the {@link FileSystemObject}
+     * @param global If the menu to display is the one with global actions
+     */
+    private void openActionsDialog(FileSystemObject item, boolean global) {
+        // We used to refresh the item reference here, but the access to the SecureConsole is synchronized,
+        // which can/will cause on ANR in certain scenarios.  We don't care if it doesn't exist anymore really
+        // For this to work, SecureConsole NEEDS to be refactored.
 
         // Show the dialog
-        ActionsDialog dialog = new ActionsDialog(this, this, fso, global, false);
+        ActionsDialog dialog = new ActionsDialog(this, this, item, global, false);
         dialog.setOnRequestRefreshListener(this);
         dialog.setOnSelectionListener(getCurrentNavigationView());
         dialog.show();
