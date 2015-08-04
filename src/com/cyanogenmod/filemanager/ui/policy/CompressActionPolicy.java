@@ -266,6 +266,11 @@ public final class CompressActionPolicy extends ActionsPolicy {
             }
 
             @Override
+            public void onError(Throwable error) {
+                ExceptionUtil.translateException(this.mCtx, error, false, false);
+            }
+
+            @Override
             public void onCancel() {
                 // nop
             }
@@ -570,6 +575,11 @@ public final class CompressActionPolicy extends ActionsPolicy {
                 } else {
                     ActionsPolicy.showOperationSuccessMsg(ctx);
                 }
+            }
+
+            @Override
+            public void onError(Throwable error) {
+                ExceptionUtil.translateException(this.mCtx, error, false, false);
             }
 
             @Override

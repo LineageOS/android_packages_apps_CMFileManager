@@ -206,6 +206,7 @@ public class SearchActivity extends Activity
                 if (result != null && result.getFso() != null) {
                     DeleteActionPolicy.removeFileSystemObject(
                             SearchActivity.this,
+                            mSearchListView,
                             result.getFso(),
                             null,
                             SearchActivity.this,
@@ -1320,7 +1321,7 @@ public class SearchActivity extends Activity
 
             // Open the file here, so when focus back to the app, the search activity
             // its in top of the stack
-            IntentsActionPolicy.openFileSystemObject(this, fso, false, null, null);
+            IntentsActionPolicy.openFileSystemObject(this, mSearchListView, fso, false, null, null);
         } else {
             // The fso not exists, delete the fso from the search
             try {

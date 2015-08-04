@@ -16,10 +16,8 @@
 
 package com.cyanogenmod.filemanager.ui.policy;
 
-import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
@@ -28,16 +26,17 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
+
 import com.cyanogen.ambient.common.api.PendingResult;
-import com.cyanogen.ambient.common.api.ResultCallback;
 import com.cyanogen.ambient.storage.StorageApi;
+import com.cyanogen.ambient.storage.StorageException;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.ShortcutActivity;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
@@ -57,6 +56,7 @@ import com.cyanogenmod.filemanager.util.MediaHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
 import com.cyanogenmod.filemanager.util.ResourcesHelper;
+import com.cyanogenmod.filemanager.util.SnackbarHelper;
 import com.cyanogenmod.filemanager.util.StorageProviderUtils;
 
 import java.io.File;
@@ -66,6 +66,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * A class with the convenience methods for resolve intents related actions
@@ -113,7 +114,8 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      * @param onDismissListener The dismiss listener
      */
     public static void openFileSystemObject(
-            final Context ctx, final FileSystemObject fso, final boolean choose,
+            final Context ctx, final View container,
+            final FileSystemObject fso, final boolean choose,
             final OnCancelListener onCancelListener, final OnDismissListener onDismissListener) {
         try {
             // Create the intent to open the file
@@ -131,7 +133,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                         R.string.cancel,
                         R.string.warning_title,
                         ctx.getResources().getString(R.string.secure_storage_open_file_warning),
-                        new SecureChoiceClickListener(ctx, fso,
+                        new SecureChoiceClickListener(ctx, container, fso,
                                 new ISecureChoiceCompleteListener() {
                                     private boolean isCancelled = false;
                                     @Override
@@ -177,8 +179,8 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                 return;
             } else if (!TextUtils.isEmpty(fso.getProviderPrefix())) {
                 // Special handling for Storage Provider files
-                copyAndOpenStorageProviderFile(ctx, fso, onCancelListener, onDismissListener,
-                        choose);
+                copyAndOpenStorageProviderFile(ctx, container, fso, onCancelListener,
+                        onDismissListener, choose);
                 return;
             }
 
@@ -206,103 +208,144 @@ public final class IntentsActionPolicy extends ActionsPolicy {
         }
     }
 
-    private static void copyAndOpenStorageProviderFile(final Context ctx,
+    private static void copyAndOpenStorageProviderFile(final Context ctx, final View container,
             final FileSystemObject fso, final OnCancelListener onCancelListener,
             final OnDismissListener onDismissListener, final boolean choose) {
-        String prefix = fso.getProviderPrefix();
-        if (TextUtils.isEmpty(prefix)) {
-            return;
-        }
-
-        final String path = StorageApiConsole.getProviderPathFromFullPath(fso.getFullPath());
-        final String name = fso.getName();
-        final StorageApiConsole console = StorageApiConsole.getStorageApiConsoleForPath(prefix);
-
-        BackgroundCallable callable = new BackgroundCallable() {
-            private File file;
-            private StorageApi.DocumentInfo documentInfo;
-
+        final AtomicReference<ExceptionUtil.OnRelaunchCommandResult> atomicRelaunchCommandResult =
+                new AtomicReference<>();
+        final AtomicReference<Runnable> atomicRunnable =
+                new AtomicReference<>();
+        final Runnable runnable = new Runnable() {
             @Override
-            public int getDialogIcon() {
-                return 0;
-            }
-
-            @Override
-            public int getDialogTitle() {
-                return R.string.waiting_dialog_opening_storage_provider_title;
-            }
-
-            @Override
-            public boolean isDialogCancellable() {
-                return false;
-            }
-
-            @Override
-            public Spanned requestProgress() {
-                String progress = ctx.getResources().getString(
-                        R.string.waiting_dialog_opening_storage_provider_message, fso.getName(),
-                        console.getName());
-                return Html.fromHtml(progress);
-            }
-
-            @Override
-            public void doInBackground(Object... params) throws Throwable {
-                OutputStream outputStream = null;
-                try {
-                    File downloadDir = new File(ctx.getExternalCacheDir(),
-                            StorageProviderUtils.CACHE_DIR);
-                    if (downloadDir.exists() || downloadDir.mkdirs()) {
-                        file = new File(downloadDir.getPath() + File.separator + name);
-                        if (file.exists() || file.createNewFile()) {
-                            outputStream = new FileOutputStream(file);
-                        }
-                    } else {
-                        Log.e(TAG, "Cannot create cache directory"); //$NON-NLS-1$
-                    }
-                } catch (Exception e) {
-                    Log.e(TAG, "Cannot create temp file", e); //$NON-NLS-1$
-                }
-                PendingResult<StorageApi.DocumentInfo.DocumentInfoResult> pendingResult =
-                        console.getStorageApi().getFile(console.getStorageProviderInfo(),path,
-                                outputStream, null);
-
-                // Since we're downloading a file, this can take a while, so don't specify a timeout
-                StorageApi.DocumentInfo.DocumentInfoResult result = pendingResult.await();
-                if (result == null
-                        || !result.getStatus().isSuccess()) {
-                    Log.e(TAG, "Cannot download file"); //$NON-NLS-1$
+            public void run() {
+                String prefix = fso.getProviderPrefix();
+                if (TextUtils.isEmpty(prefix)) {
                     return;
                 }
-                documentInfo = result.getDocumentInfo();
-            }
 
-            @Override
-            public void onSuccess() {
-                Intent intent = new Intent();
-                intent.setAction(android.content.Intent.ACTION_VIEW);
-                intent.setDataAndType(Uri.fromFile(file), documentInfo.getMimeType());
-                FileSystemObject cacheFso = FileHelper.createFileSystemObject(file);
-                resolveIntent(
-                        ctx,
-                        intent,
-                        choose,
-                        createInternalIntents(ctx, cacheFso),
-                        0,
-                        R.string.associations_dialog_openwith_title,
-                        R.string.associations_dialog_openwith_action,
-                        true,
-                        onCancelListener,
-                        onDismissListener);
-            }
+                final String path = StorageApiConsole.getProviderPathFromFullPath(fso.getFullPath());
+                final String name = fso.getName();
+                final StorageApiConsole console = StorageApiConsole.getStorageApiConsoleForPath(
+                        prefix);
 
-            @Override
-            public void onCancel() {
-                Toast.makeText(ctx, R.string.cancelled_message, Toast
-                        .LENGTH_SHORT).show();
+                BackgroundCallable callable = new BackgroundCallable() {
+                    private File file;
+                    private StorageApi.DocumentInfo documentInfo;
+
+                    @Override
+                    public int getDialogIcon() {
+                        return 0;
+                    }
+
+                    @Override
+                    public int getDialogTitle() {
+                        return R.string.waiting_dialog_opening_storage_provider_title;
+                    }
+
+                    @Override
+                    public boolean isDialogCancellable() {
+                        return false;
+                    }
+
+                    @Override
+                    public Spanned requestProgress() {
+                        String progress = ctx.getResources().getString(
+                                R.string.waiting_dialog_opening_storage_provider_message, fso.getName(),
+                                console.getName());
+                        return Html.fromHtml(progress);
+                    }
+
+                    @Override
+                    public void doInBackground(Object... params) throws Throwable {
+                        OutputStream outputStream = null;
+                        try {
+                            File downloadDir = new File(ctx.getExternalCacheDir(),
+                                    StorageProviderUtils.CACHE_DIR);
+                            if (downloadDir.exists() || downloadDir.mkdirs()) {
+                                file = new File(downloadDir.getPath() + File.separator + name);
+                                if (file.exists() || file.createNewFile()) {
+                                    outputStream = new FileOutputStream(file);
+                                }
+                            } else {
+                                Log.e(TAG, "Cannot create cache directory"); //$NON-NLS-1$
+                            }
+                        } catch (Exception e) {
+                            Log.e(TAG, "Cannot create temp file", e); //$NON-NLS-1$
+                        }
+                        PendingResult<StorageApi.DocumentInfo.DocumentInfoResult> pendingResult =
+                                console.getStorageApi().getFile(console.getStorageProviderInfo(),path,
+                                        outputStream, null);
+
+                        // Since we're downloading a file, this can take a while, so don't specify a timeout
+                        StorageApi.DocumentInfo.DocumentInfoResult result = pendingResult.await();
+                        if (result == null
+                                || !result.getStatus().isSuccess()) {
+                            Log.e(TAG, "Cannot download file"); //$NON-NLS-1$
+                            throw new StorageException("Cannot open file",
+                                    result.getStatus().getStatusCode());
+                        }
+                        documentInfo = result.getDocumentInfo();
+                    }
+
+                    @Override
+                    public void onSuccess() {
+                        Intent intent = new Intent();
+                        intent.setAction(android.content.Intent.ACTION_VIEW);
+                        intent.setDataAndType(Uri.fromFile(file), documentInfo.getMimeType());
+                        FileSystemObject cacheFso = FileHelper.createFileSystemObject(file);
+                        resolveIntent(
+                                ctx,
+                                intent,
+                                choose,
+                                createInternalIntents(ctx, cacheFso),
+                                0,
+                                R.string.associations_dialog_openwith_title,
+                                R.string.associations_dialog_openwith_action,
+                                true,
+                                onCancelListener,
+                                onDismissListener);
+                    }
+
+                    @Override
+                    public void onError(Throwable error) {
+                        SnackbarHelper.showWithRetry(ctx, container,
+                                ctx.getString(R.string.snackbar_unable_to_open),
+                                atomicRelaunchCommandResult.get());
+                    }
+
+                    @Override
+                    public void onCancel() {
+                        Toast.makeText(ctx, R.string.cancelled_message, Toast
+                                .LENGTH_SHORT).show();
+                    }
+                };
+                ExceptionUtil.OnRelaunchCommandResult onRelaunchCommandResult =
+                        new ExceptionUtil.OnRelaunchCommandResult() {
+                    @Override
+                    public void onSuccess() {
+                        if (atomicRunnable.get() != null) {
+                            atomicRunnable.get().run();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled() {
+
+                    }
+
+                    @Override
+                    public void onFailed(Throwable cause) {
+
+                    }
+                };
+                atomicRelaunchCommandResult.set(onRelaunchCommandResult);
+                BackgroundAsyncTask task =
+                        new BackgroundAsyncTask(ctx, callable);
+                task.execute(task);
             }
         };
-        BackgroundAsyncTask task = new BackgroundAsyncTask(ctx, callable);
-        task.execute(task);
+        atomicRunnable.set(runnable);
+        runnable.run();
     }
 
     /**
@@ -851,7 +894,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      * Method that returns the best Uri for the file (content uri, file uri, ...)
      *
      * @param ctx The current context
-     * @param file The file to resolve
+     * @param fso The file to resolve
      */
     private static Uri getUriFromFile(Context ctx, FileSystemObject fso) {
         // If the passed object is secure file then we have to provide access with
