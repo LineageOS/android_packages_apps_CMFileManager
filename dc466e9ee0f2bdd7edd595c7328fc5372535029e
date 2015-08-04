@@ -22,6 +22,91 @@
       "revId": "dc466e9ee0f2bdd7edd595c7328fc5372535029e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_ba53cde2",
+        "filename": "src/com/cyanogenmod/filemanager/model/RootDirectory.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-04T04:31:34Z",
+      "side": 1,
+      "message": "The primary color shouldn\u0027t be held in the model",
+      "revId": "dc466e9ee0f2bdd7edd595c7328fc5372535029e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_5a7a7188",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-04T04:31:34Z",
+      "side": 1,
+      "message": "Pass in a RootDirectory instead since the check is done outside.",
+      "revId": "dc466e9ee0f2bdd7edd595c7328fc5372535029e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_7ad1b557",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 350,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-04T04:31:34Z",
+      "side": 1,
+      "message": "Is this necessary right now?",
+      "revId": "dc466e9ee0f2bdd7edd595c7328fc5372535029e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_9afec9ac",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 351,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-04T04:31:34Z",
+      "side": 1,
+      "message": "Pretty much anything that is modifying the ImageView that isn\u0027t associated with loading the drawable from somewhere needs to be moved to the Adapter.",
+      "revId": "dc466e9ee0f2bdd7edd595c7328fc5372535029e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_3a27bd67",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 409,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-04T04:31:34Z",
+      "side": 1,
+      "message": "If the cache gets cleared again after something is checked (as we talked about it), it can be in a weird state with a round check and a square thumbnail.",
+      "revId": "dc466e9ee0f2bdd7edd595c7328fc5372535029e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
