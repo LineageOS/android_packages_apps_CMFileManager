@@ -63,12 +63,13 @@ import com.cyanogenmod.filemanager.model.Bookmark;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
 import com.cyanogenmod.filemanager.preferences.Preferences;
-import com.cyanogenmod.filemanager.ui.fragments.LoginFragment;
+import com.cyanogenmod.filemanager.ui.IconHolder;
 import com.cyanogenmod.filemanager.ui.fragments.NavigationFragment;
 import com.cyanogenmod.filemanager.ui.fragments.NavigationFragment.OnGoHomeRequestListener;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationView.OnBackRequestListener;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.StorageHelper;
+import com.cyanogenmod.filemanager.util.StorageProviderUtils;
 
 import java.io.File;
 import java.io.InvalidClassException;
@@ -140,9 +141,6 @@ public class MainActivity extends ActionBarActivity
 
         // Navigation fragment
         NAVIGATION,
-
-        // Login
-        LOGIN,
     }
 
     private Fragment currentFragment;
@@ -201,7 +199,7 @@ public class MainActivity extends ActionBarActivity
         cV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setCurrentFragment(FragmentType.LOGIN);
+                StorageProviderUtils.loadProviderLogin(getApplicationContext());
             }
         });
 
@@ -322,11 +320,6 @@ public class MainActivity extends ActionBarActivity
                 ((NavigationFragment) currentFragment).setOnGoHomeRequestListener(this);
                 ((NavigationFragment)currentFragment)
                         .setOnDirectoryChangedListener(mNavigationDrawerController);
-                fragmentTag = fragmentType.name();
-                break;
-            case LOGIN:
-                mPopBackStack = true;
-                currentFragment = LoginFragment.newInstance();
                 fragmentTag = fragmentType.name();
                 break;
             case HOME:
@@ -521,7 +514,7 @@ public class MainActivity extends ActionBarActivity
                 break;
             case R.id.navigation_item_manage:
                 if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_manage");
-                setCurrentFragment(FragmentType.LOGIN);
+                StorageProviderUtils.loadProviderLogin(this);
                 break;
             case R.id.navigation_item_settings:
                 if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_settings");
