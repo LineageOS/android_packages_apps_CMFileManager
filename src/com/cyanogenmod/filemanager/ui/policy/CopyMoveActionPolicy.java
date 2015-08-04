@@ -282,7 +282,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             }
             @Override
             public boolean isDialogCancellable() {
-                return true;
+                return false;
             }
 
             @Override
