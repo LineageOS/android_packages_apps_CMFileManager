@@ -22,6 +22,7 @@ import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.FindExecutable;
 import com.cyanogenmod.filemanager.commands.SIGNAL;
 import com.cyanogenmod.filemanager.console.CommandNotFoundException;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
@@ -34,7 +35,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 /**
  * A class for search files.
@@ -196,5 +199,10 @@ public class FindCommand extends AsyncResultProgram implements FindExecutable {
             args[i + 1] = SearchHelper.toIgnoreCaseRegExp(query.getSlot(i), false);
         }
         return args;
+    }
+
+    @Override
+    public void notifyChange(HashMap<String, Set<ConsoleFileObserver>> observers) {
+        // do nothing
     }
 }

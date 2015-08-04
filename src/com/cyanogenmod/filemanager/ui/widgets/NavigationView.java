@@ -39,9 +39,8 @@ import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.adapters.FileSystemObjectAdapter;
 import com.cyanogenmod.filemanager.adapters.FileSystemObjectAdapter.OnSelectionChangedListener;
-import com.cyanogenmod.filemanager.console.CancelledOperationException;
-import com.cyanogenmod.filemanager.console.ConsoleAllocException;
-import com.cyanogenmod.filemanager.console.VirtualMountPointConsole;
+import com.cyanogenmod.filemanager.commands.shell.InvalidCommandDefinitionException;
+import com.cyanogenmod.filemanager.console.*;
 import com.cyanogenmod.filemanager.listeners.OnHistoryListener;
 import com.cyanogenmod.filemanager.listeners.OnRequestRefreshListener;
 import com.cyanogenmod.filemanager.listeners.OnSelectionListener;
@@ -71,6 +70,8 @@ import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.StorageHelper;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -439,7 +440,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
     // Restrictions
     private Map<DisplayRestrictions, Object> mRestrictions;
 
-    private FileObserver mCurrentDirObserver;
+    private ConsoleFileObserver mCurrentDirObserver;
 
     /**
      * @hide
@@ -831,7 +832,15 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
     public void recycle() {
         if (this.mAdapter != null) {
             this.mAdapter.dispose();
-            this.mCurrentDirObserver.stopWatching();
+            try {
+                Console c = CommandHelper.ensureConsoleForFile(NavigationView.this.getContext(), null, mCurrentDir);
+                c.unregisterFileObserver(mCurrentDir, mCurrentDirObserver);
+            } catch (ConsoleAllocException e) {
+            } catch (FileNotFoundException e) {
+            } catch (InvalidCommandDefinitionException e) {
+            } catch (InsufficientPermissionsException e) {
+            } catch (IOException e) {
+            }
         }
     }
 
@@ -997,7 +1006,17 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             final boolean reload, final boolean useCurrent,
             final SearchInfoParcelable searchInfo, final FileSystemObject scrollTo) {
         if (mCurrentDirObserver != null) {
-            mCurrentDirObserver.stopWatching();
+            try {
+                Console c = CommandHelper.ensureConsoleForFile(NavigationView.this.getContext(), null, mCurrentDir);
+                if (mCurrentDir != null) {
+                    c.unregisterFileObserver(mCurrentDir, mCurrentDirObserver);
+                }
+            } catch (ConsoleAllocException e) {
+            } catch (FileNotFoundException e) {
+            } catch (InvalidCommandDefinitionException e) {
+            } catch (InsufficientPermissionsException e) {
+            } catch (IOException e) {
+            }
             mCurrentDirObserver = null;
         }
         NavigationTask task = new NavigationTask(useCurrent, addToHistory, reload,
@@ -1081,7 +1100,8 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
 
             //The current directory is now the "newDir"
             this.mCurrentDir = newDir;
-            mCurrentDirObserver = new FileObserver(newDir) {
+
+            mCurrentDirObserver = new ConsoleFileObserver() {
                 @Override
                 public void onEvent(int event, final String path) {
                     Runnable runnable = null;
@@ -1139,7 +1159,14 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
                     }
                 }
             };
-            mCurrentDirObserver.startWatching();
+            try {
+                Console c = CommandHelper.ensureConsoleForFile(NavigationView.this.getContext(), null, mCurrentDir);
+                c.registerFileObserver(mCurrentDir, mCurrentDirObserver);
+            } catch (IOException e) {
+            } catch (ConsoleAllocException e) {
+            } catch (InvalidCommandDefinitionException e) {
+            } catch (InsufficientPermissionsException e) {
+            }
 
             if (this.mOnDirectoryChangedListener != null) {
                 FileSystemObject dir = FileHelper.createFileSystemObject(new File(newDir));

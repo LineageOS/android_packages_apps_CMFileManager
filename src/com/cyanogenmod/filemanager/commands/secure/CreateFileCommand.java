@@ -19,6 +19,8 @@ package com.cyanogenmod.filemanager.commands.secure;
 import android.util.Log;
 
 import com.cyanogenmod.filemanager.commands.CreateFileExecutable;
+import com.cyanogenmod.filemanager.commands.NotifyObserversUtil;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
@@ -27,6 +29,8 @@ import com.cyanogenmod.filemanager.model.MountPoint;
 import de.schlichtherle.truezip.file.TFile;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Set;
 
 
 /**
@@ -70,7 +74,8 @@ public class CreateFileCommand extends Program implements CreateFileExecutable {
      * {@inheritDoc}
      */
     @Override
-    public void execute() throws NoSuchFileOrDirectory, ExecutionException {
+    public void execute(HashMap<String, Set<ConsoleFileObserver>> observers)
+            throws NoSuchFileOrDirectory, ExecutionException {
 
         if (isTrace()) {
             Log.v(TAG,
@@ -97,6 +102,7 @@ public class CreateFileCommand extends Program implements CreateFileExecutable {
                     }
                     throw new ExecutionException("Failed to create file");
                 }
+                NotifyObserversUtil.notifyCreated(mPath, observers);
             } catch (IOException ex) {
                 throw new ExecutionException("Failed to create file", ex);
             }

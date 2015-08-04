@@ -374,6 +374,7 @@ public final class ConsoleBuilder {
             ConsoleAllocException, InsufficientPermissionsException {
         try {
             // Create the privileged console
+            Log.d(TAG, "Creating PrivilegedConsole");
             return createPrivilegedConsole(context);
 
         } catch (ConsoleAllocException caEx) {

@@ -18,6 +18,7 @@ package com.cyanogenmod.filemanager.commands.shell;
 
 import com.cyanogenmod.filemanager.commands.ResolveLinkExecutable;
 import com.cyanogenmod.filemanager.console.CommandNotFoundException;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
@@ -28,6 +29,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.StringReader;
 import java.text.ParseException;
+import java.util.HashMap;
+import java.util.Set;
 
 
 /**
@@ -97,5 +100,10 @@ public class ResolveLinkCommand extends SyncResultProgram implements ResolveLink
     public void checkExitCode(int exitCode)
             throws InsufficientPermissionsException, CommandNotFoundException, ExecutionException {
         /**NON BLOCK**/
+    }
+
+    @Override
+    public void notifyChange(HashMap<String, Set<ConsoleFileObserver>> observers) {
+        // do nothing
     }
 }

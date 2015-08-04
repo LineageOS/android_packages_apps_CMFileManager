@@ -58,7 +58,7 @@ public abstract class Console
     public final void reloadTrace() {
         this.mTrace = Preferences.getSharedPreferences().getBoolean(
                 FileManagerSettings.SETTINGS_SHOW_TRACES.getId(),
-                ((Boolean)FileManagerSettings.SETTINGS_SHOW_TRACES.getDefaultValue()).booleanValue());
+                ((Boolean) FileManagerSettings.SETTINGS_SHOW_TRACES.getDefaultValue()).booleanValue());
     }
 
     /**
@@ -80,55 +80,58 @@ public abstract class Console
      */
     public abstract void dealloc();
 
-   /**
-    * Method that reallocates the console. This method drops the actual console
-    * and create a new one exactly as the current.
-    *
-    * @throws ConsoleAllocException If the console can't be reallocated
-    */
-   public abstract void realloc() throws ConsoleAllocException;
+    /**
+     * Method that reallocates the console. This method drops the actual console
+     * and create a new one exactly as the current.
+     *
+     * @throws ConsoleAllocException If the console can't be reallocated
+     */
+    public abstract void realloc() throws ConsoleAllocException;
 
-   /**
-    * Method that returns if the console has root privileged.
-    *
-    * @return boolean Indicates if the console has root privileged
-    */
-   public abstract boolean isPrivileged();
+    /**
+     * Method that returns if the console has root privileged.
+     *
+     * @return boolean Indicates if the console has root privileged
+     */
+    public abstract boolean isPrivileged();
 
-   /**
-    * Method that returns if the console is active and allocated.
-    *
-    * @return boolean Indicates if the console is active and allocated
-    */
-   public abstract boolean isActive();
+    /**
+     * Method that returns if the console is active and allocated.
+     *
+     * @return boolean Indicates if the console is active and allocated
+     */
+    public abstract boolean isActive();
 
-   /**
-    * Method that retrieves the {@link ExecutableFactory} associated with the {@link Console}.
-    *
-    * @return ExecutableFactory The execution program factory
-    */
-   public abstract ExecutableFactory getExecutableFactory();
+    /**
+     * Method that retrieves the {@link ExecutableFactory} associated with the {@link Console}.
+     *
+     * @return ExecutableFactory The execution program factory
+     */
+    public abstract ExecutableFactory getExecutableFactory();
 
-   /**
-    * Method for execute a command in the operating system layer.
-    *
-    * @param executable The executable command to be executed
-    * @param ctx The current context
-    * @throws ConsoleAllocException If the console is not allocated
-    * @throws InsufficientPermissionsException If an operation requires elevated permissions
-    * @throws NoSuchFileOrDirectory If the file or directory was not found
-    * @throws OperationTimeoutException If the operation exceeded the maximum time of wait
-    * @throws CommandNotFoundException If the executable program was not found
-    * @throws ExecutionException If the operation returns a invalid exit code
-    * @throws ReadOnlyFilesystemException If the operation writes in a read-only filesystem
-    * @throws CancelledOperationException If the operation was cancelled
-    * @throws AuthenticationFailedException If the operation failed because an
-    * authentication failure
- * @throws AuthenticationFailedException
-    */
-   public abstract void execute(final Executable executable, final Context ctx)
-           throws ConsoleAllocException, InsufficientPermissionsException, NoSuchFileOrDirectory,
-           OperationTimeoutException, ExecutionException, CommandNotFoundException,
-           ReadOnlyFilesystemException, CancelledOperationException, AuthenticationFailedException;
+    /**
+     * Method for execute a command in the operating system layer.
+     *
+     * @param executable The executable command to be executed
+     * @param ctx        The current context
+     * @throws ConsoleAllocException            If the console is not allocated
+     * @throws InsufficientPermissionsException If an operation requires elevated permissions
+     * @throws NoSuchFileOrDirectory            If the file or directory was not found
+     * @throws OperationTimeoutException        If the operation exceeded the maximum time of wait
+     * @throws CommandNotFoundException         If the executable program was not found
+     * @throws ExecutionException               If the operation returns a invalid exit code
+     * @throws ReadOnlyFilesystemException      If the operation writes in a read-only filesystem
+     * @throws CancelledOperationException      If the operation was cancelled
+     * @throws AuthenticationFailedException    If the operation failed because an
+     *                                          authentication failure
+     * @throws AuthenticationFailedException
+     */
+    public abstract void execute(final Executable executable, final Context ctx)
+            throws ConsoleAllocException, InsufficientPermissionsException, NoSuchFileOrDirectory,
+            OperationTimeoutException, ExecutionException, CommandNotFoundException,
+            ReadOnlyFilesystemException, CancelledOperationException, AuthenticationFailedException;
 
+    public abstract void registerFileObserver(String path, ConsoleFileObserver observer);
+
+    public abstract void unregisterFileObserver(String path, ConsoleFileObserver observer);
 }

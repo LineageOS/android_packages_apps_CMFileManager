@@ -17,14 +17,18 @@
 package com.cyanogenmod.filemanager.commands.shell;
 
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
+import com.cyanogenmod.filemanager.commands.NotifyObserversUtil;
 import com.cyanogenmod.filemanager.commands.SIGNAL;
 import com.cyanogenmod.filemanager.commands.WriteExecutable;
 import com.cyanogenmod.filemanager.console.CommandNotFoundException;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.HashMap;
+import java.util.Set;
 
 /**
  * A class for write data to disk.<br/>
@@ -158,4 +162,8 @@ public class WriteCommand extends AsyncResultProgram implements WriteExecutable 
         }
     }
 
+    @Override
+    public void notifyChange(HashMap<String, Set<ConsoleFileObserver>> observers) {
+        // TODO: Implement this
+    }
 }

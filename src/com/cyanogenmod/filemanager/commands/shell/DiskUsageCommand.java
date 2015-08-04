@@ -18,6 +18,7 @@ package com.cyanogenmod.filemanager.commands.shell;
 
 import com.cyanogenmod.filemanager.commands.DiskUsageExecutable;
 import com.cyanogenmod.filemanager.console.CommandNotFoundException;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
 import com.cyanogenmod.filemanager.model.DiskUsage;
@@ -28,7 +29,9 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 
 /**
@@ -138,4 +141,8 @@ public class DiskUsageCommand extends SyncResultProgram implements DiskUsageExec
         return true;
     }
 
+    @Override
+    public void notifyChange(HashMap<String, Set<ConsoleFileObserver>> observers) {
+        // do nothing
+    }
 }

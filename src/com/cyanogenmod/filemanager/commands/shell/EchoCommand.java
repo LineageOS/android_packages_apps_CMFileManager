@@ -18,6 +18,7 @@ package com.cyanogenmod.filemanager.commands.shell;
 
 import com.cyanogenmod.filemanager.commands.EchoExecutable;
 import com.cyanogenmod.filemanager.console.CommandNotFoundException;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
 
@@ -25,6 +26,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
 import java.text.ParseException;
+import java.util.HashMap;
+import java.util.Set;
 
 
 /**
@@ -99,5 +102,10 @@ public class EchoCommand extends SyncResultProgram implements EchoExecutable {
         if (exitCode != 0) {
             throw new ExecutionException("exitcode != 0"); //$NON-NLS-1$
         }
+    }
+
+    @Override
+    public void notifyChange(HashMap<String, Set<ConsoleFileObserver>> observers) {
+        // do nothing
     }
 }

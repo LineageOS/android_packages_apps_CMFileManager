@@ -34,14 +34,7 @@ import com.cyanogenmod.filemanager.commands.shell.Program;
 import com.cyanogenmod.filemanager.commands.shell.Shell;
 import com.cyanogenmod.filemanager.commands.shell.ShellExecutableFactory;
 import com.cyanogenmod.filemanager.commands.shell.SyncResultProgram;
-import com.cyanogenmod.filemanager.console.CommandNotFoundException;
-import com.cyanogenmod.filemanager.console.Console;
-import com.cyanogenmod.filemanager.console.ConsoleAllocException;
-import com.cyanogenmod.filemanager.console.ExecutionException;
-import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
-import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
-import com.cyanogenmod.filemanager.console.OperationTimeoutException;
-import com.cyanogenmod.filemanager.console.ReadOnlyFilesystemException;
+import com.cyanogenmod.filemanager.console.*;
 import com.cyanogenmod.filemanager.model.Identity;
 import com.cyanogenmod.filemanager.util.CommandHelper;
 import com.cyanogenmod.filemanager.util.FileHelper;
@@ -54,9 +47,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.security.SecureRandom;
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * An implementation of a {@link Console} based in the execution of shell commands.<br/>
@@ -241,6 +232,8 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
 
     private final ShellExecutableFactory mExecutableFactory;
 
+    private HashMap<String, Set<ConsoleFileObserver>> mObserverSets;
+
     /**
      * Constructor of <code>ShellConsole</code>.
      *
@@ -266,6 +259,8 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
         } catch (Exception ex) {
             throw new IOException(ex);
         }
+
+        mObserverSets = new HashMap<String, Set<ConsoleFileObserver>>();
     }
 
     /**
@@ -734,6 +729,8 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
                             "SyncResultProgram parse failed", pEx); //$NON-NLS-1$
                 }
             }
+
+            program.notifyChange(mObserverSets);
 
             //Invocation finished. Now program.getResult() has the result of
             //the operation, if any exists
@@ -1492,4 +1489,22 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
         return this.mOut;
     }
 
+    @Override
+    public synchronized void registerFileObserver(String path, ConsoleFileObserver observer) {
+        Set<ConsoleFileObserver> observers = mObserverSets.get(path);
+        if (observers == null) {
+            observers = new HashSet<ConsoleFileObserver>();
+            mObserverSets.put(path, observers);
+        }
+        observers.add(observer);
+    }
+
+    @Override
+    public synchronized void unregisterFileObserver(String path, ConsoleFileObserver observer) {
+        Set<ConsoleFileObserver> observers = mObserverSets.get(path);
+        observers.remove(observer);
+        if (observers.isEmpty()) {
+            observers.remove(path);
+        }
+    }
 }

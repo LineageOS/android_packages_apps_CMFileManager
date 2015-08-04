@@ -20,6 +20,7 @@ import android.util.Log;
 
 import com.cyanogenmod.filemanager.commands.ListExecutable;
 import com.cyanogenmod.filemanager.console.CommandNotFoundException;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
 import com.cyanogenmod.filemanager.console.shell.ShellConsole;
@@ -35,7 +36,9 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 
 /**
@@ -211,5 +214,10 @@ public class ListCommand extends SyncResultProgram implements ListExecutable {
     @Override
     public boolean isWaitOnNewDataReceipt() {
         return true;
+    }
+
+    @Override
+    public void notifyChange(HashMap<String, Set<ConsoleFileObserver>> observers) {
+        // do nothing
     }
 }

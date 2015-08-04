@@ -17,21 +17,18 @@
 package com.cyanogenmod.filemanager.console.java;
 
 import android.content.Context;
+import android.os.FileObserver;
 import android.util.Log;
 
 import com.cyanogenmod.filemanager.commands.Executable;
 import com.cyanogenmod.filemanager.commands.ExecutableFactory;
 import com.cyanogenmod.filemanager.commands.java.JavaExecutableFactory;
 import com.cyanogenmod.filemanager.commands.java.Program;
-import com.cyanogenmod.filemanager.console.CancelledOperationException;
-import com.cyanogenmod.filemanager.console.CommandNotFoundException;
-import com.cyanogenmod.filemanager.console.ConsoleAllocException;
-import com.cyanogenmod.filemanager.console.ExecutionException;
-import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
-import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
-import com.cyanogenmod.filemanager.console.OperationTimeoutException;
-import com.cyanogenmod.filemanager.console.ReadOnlyFilesystemException;
-import com.cyanogenmod.filemanager.console.VirtualConsole;
+import com.cyanogenmod.filemanager.console.*;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * An implementation of a {@link VirtualConsole} based on a java implementation.<br/>
@@ -43,8 +40,41 @@ public final class JavaConsole extends VirtualConsole {
 
     private static final String TAG = "JavaConsole"; //$NON-NLS-1$
 
+    /**
+     * INotify works in this case, so we just use INotify to handle it
+     */
+    private static class NativeFileObserver extends FileObserver {
+        private Set<ConsoleFileObserver> mObservers;
+
+        public NativeFileObserver(String path) {
+            super(path);
+            mObservers = new HashSet<ConsoleFileObserver>();
+        }
+
+        public synchronized void registerObserver(ConsoleFileObserver observer) {
+            mObservers.add(observer);
+        }
+
+        public synchronized void unregisterObserver(ConsoleFileObserver observer) {
+            mObservers.remove(observer);
+        }
+
+        @Override
+        public synchronized void onEvent(int event, String path) {
+            for (ConsoleFileObserver observer : mObservers) {
+                observer.onEvent(event, path);
+            }
+        }
+
+        public synchronized int getCount() {
+            return mObservers.size();
+        }
+    }
+
     private final int mBufferSize;
     private Program mActiveProgram;
+
+    private HashMap<String, NativeFileObserver> mObservers;
 
     /**
      * Constructor of <code>JavaConsole</code>
@@ -55,6 +85,7 @@ public final class JavaConsole extends VirtualConsole {
     public JavaConsole(Context ctx, int bufferSize) {
         super(ctx);
         this.mBufferSize = bufferSize;
+        mObservers = new HashMap<String, NativeFileObserver>();
     }
 
 
@@ -133,5 +164,30 @@ public final class JavaConsole extends VirtualConsole {
     public boolean onCancel() {
         mActiveProgram.requestCancel();
         return true;
+    }
+
+    @Override
+    public synchronized void registerFileObserver(String path, ConsoleFileObserver observer) {
+        NativeFileObserver no = mObservers.get(path);
+        if (no == null) {
+            no = new NativeFileObserver(path);
+            mObservers.put(path, no);
+            no.startWatching();
+        }
+        no.registerObserver(observer);
+    }
+
+    @Override
+    public synchronized void unregisterFileObserver(String path, ConsoleFileObserver observer) {
+        NativeFileObserver no = mObservers.get(path);
+        if (no == null) {
+            return;
+        }
+
+        no.unregisterObserver(observer);
+        if (no.getCount() == 0) {
+            no.stopWatching();
+            mObservers.remove(path);
+        }
     }
 }

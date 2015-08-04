@@ -17,7 +17,9 @@
 package com.cyanogenmod.filemanager.commands.shell;
 
 import com.cyanogenmod.filemanager.commands.ChangePermissionsExecutable;
+import com.cyanogenmod.filemanager.commands.NotifyObserversUtil;
 import com.cyanogenmod.filemanager.console.CommandNotFoundException;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
 import com.cyanogenmod.filemanager.model.MountPoint;
@@ -25,6 +27,8 @@ import com.cyanogenmod.filemanager.model.Permissions;
 import com.cyanogenmod.filemanager.util.MountPointHelper;
 
 import java.text.ParseException;
+import java.util.HashMap;
+import java.util.Set;
 
 
 /**
@@ -94,5 +98,10 @@ public class ChangePermissionsCommand
     @Override
     public MountPoint getDstWritableMountPoint() {
         return MountPointHelper.getMountPointFromDirectory(this.mFileName);
+    }
+
+    @Override
+    public void notifyChange(HashMap<String, Set<ConsoleFileObserver>> observers) {
+        NotifyObserversUtil.notifyAttrib(mFileName, observers);
     }
 }

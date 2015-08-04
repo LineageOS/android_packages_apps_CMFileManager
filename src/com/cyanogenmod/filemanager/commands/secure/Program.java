@@ -17,9 +17,13 @@
 package com.cyanogenmod.filemanager.commands.secure;
 
 import com.cyanogenmod.filemanager.commands.Executable;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
+
+import java.util.HashMap;
+import java.util.Set;
 
 
 /**
@@ -116,10 +120,12 @@ public abstract class Program implements Executable {
     /**
      * Method that executes the program
      *
+     * @param observers Observers currently listening on the file system. It's up to the command to determine if any
+     *                  at all should be notified
+     *
      * @throws NoSuchFileOrDirectory If the file or directory was not found
      * @throws ExecutionException If the operation returns a invalid exit code
      */
-    public abstract void execute()
+    public abstract void execute(HashMap<String, Set<ConsoleFileObserver>> observers)
             throws NoSuchFileOrDirectory, ExecutionException;
-
 }

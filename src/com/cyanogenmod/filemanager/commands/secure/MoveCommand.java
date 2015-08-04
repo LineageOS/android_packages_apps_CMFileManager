@@ -19,6 +19,8 @@ package com.cyanogenmod.filemanager.commands.secure;
 import android.util.Log;
 
 import com.cyanogenmod.filemanager.commands.MoveExecutable;
+import com.cyanogenmod.filemanager.commands.NotifyObserversUtil;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
@@ -26,6 +28,8 @@ import com.cyanogenmod.filemanager.model.MountPoint;
 import com.cyanogenmod.filemanager.util.FileHelper;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Set;
 
 import de.schlichtherle.truezip.file.TFile;
 
@@ -74,7 +78,8 @@ public class MoveCommand extends Program implements MoveExecutable {
      * {@inheritDoc}
      */
     @Override
-    public void execute() throws NoSuchFileOrDirectory, ExecutionException {
+    public void execute(HashMap<String, Set<ConsoleFileObserver>> observers)
+            throws NoSuchFileOrDirectory, ExecutionException {
         if (isTrace()) {
             Log.v(TAG,
                     String.format("Creating from %s to %s", this.mSrc, this.mDst)); //$NON-NLS-1$
@@ -101,11 +106,13 @@ public class MoveCommand extends Program implements MoveExecutable {
                     Log.v(TAG, "Result: OK. WARNING. Source not deleted."); //$NON-NLS-1$
                 }
             }
+            NotifyObserversUtil.notifyMoved(this.mSrc, this.mDst, observers);
         } else {
             // Use rename. We are not cross filesystem with this console, so this operation
             // should be safe
             try {
                 TFile.mv(s, d, SecureConsole.DETECTOR);
+                NotifyObserversUtil.notifyMoved(this.mSrc, FileHelper.getParentDir(this.mDst), observers);
             } catch (IOException ex) {
                 // Make sure truecrypt was right
                 // There's a strange bug in it where it thinks that a file did not

@@ -2336,8 +2336,9 @@ public class NavigationActivity extends Activity
             }
 
         } catch (Exception e) {
-            // Do nothing, objects should be removed by the FileObserver in NavigationView
+            // This should only happen if we aren't using the JavaConsole
             ExceptionUtil.translateException(this, e);
+            getCurrentNavigationView().refresh(true);
             return;
         }
 

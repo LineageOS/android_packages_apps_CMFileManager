@@ -19,14 +19,19 @@ package com.cyanogenmod.filemanager.commands.secure;
 import android.util.Log;
 
 import com.cyanogenmod.filemanager.commands.CopyExecutable;
+import com.cyanogenmod.filemanager.commands.NotifyObserversUtil;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
 import com.cyanogenmod.filemanager.model.MountPoint;
 
+import com.cyanogenmod.filemanager.util.FileHelper;
 import de.schlichtherle.truezip.file.TFile;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Set;
 
 
 /**
@@ -72,7 +77,8 @@ public class CopyCommand extends Program implements CopyExecutable {
      * {@inheritDoc}
      */
     @Override
-    public void execute() throws NoSuchFileOrDirectory, ExecutionException {
+    public void execute(HashMap<String, Set<ConsoleFileObserver>> observers)
+            throws NoSuchFileOrDirectory, ExecutionException {
         if (isTrace()) {
             Log.v(TAG,
                     String.format("Moving from %s to %s", //$NON-NLS-1$
@@ -90,6 +96,7 @@ public class CopyCommand extends Program implements CopyExecutable {
 
         try {
             TFile.cp_r(s, d, SecureConsole.DETECTOR, SecureConsole.DETECTOR);
+            NotifyObserversUtil.notifyCreated(mDst, observers);
         } catch (IOException ex) {
             throw new ExecutionException("Failed to copy file or directory", ex);
         }

@@ -20,8 +20,12 @@ import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.ReadExecutable;
 import com.cyanogenmod.filemanager.commands.SIGNAL;
 import com.cyanogenmod.filemanager.console.CommandNotFoundException;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
+
+import java.util.HashMap;
+import java.util.Set;
 
 /**
  * A class for read a file
@@ -117,5 +121,10 @@ public class ReadCommand extends AsyncResultProgram implements ReadExecutable {
             throw new ExecutionException(
                         "exitcode != 0 &&  && exitCode != 1 && != 143 && != 137"); //$NON-NLS-1$
         }
+    }
+
+    @Override
+    public void notifyChange(HashMap<String, Set<ConsoleFileObserver>> observers) {
+        // do nothing
     }
 }

@@ -21,6 +21,7 @@ import android.util.Log;
 import com.android.internal.util.HexDump;
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.ChecksumExecutable;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
@@ -31,7 +32,9 @@ import de.schlichtherle.truezip.file.TFileInputStream;
 import java.io.File;
 import java.io.InputStream;
 import java.security.MessageDigest;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Set;
 
 /**
  * A class for calculate MD5 and SHA-1 checksums of a file system object.<br />
@@ -76,7 +79,7 @@ public class ChecksumCommand extends Program implements ChecksumExecutable {
      * {@inheritDoc}
      */
     @Override
-    public void execute() throws NoSuchFileOrDirectory, ExecutionException {
+    public void execute(HashMap<String, Set<ConsoleFileObserver>> observers) throws NoSuchFileOrDirectory, ExecutionException {
 
         if (isTrace()) {
             Log.v(TAG,

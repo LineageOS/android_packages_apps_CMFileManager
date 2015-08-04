@@ -20,6 +20,7 @@ import android.util.Log;
 
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.ReadExecutable;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
@@ -28,6 +29,8 @@ import de.schlichtherle.truezip.file.TFile;
 import de.schlichtherle.truezip.file.TFileInputStream;
 
 import java.io.BufferedInputStream;
+import java.util.HashMap;
+import java.util.Set;
 
 /**
  * A class for read a file.
@@ -71,7 +74,8 @@ public class ReadCommand extends Program implements ReadExecutable {
      * {@inheritDoc}
      */
     @Override
-    public void execute() throws NoSuchFileOrDirectory, ExecutionException {
+    public void execute(HashMap<String, Set<ConsoleFileObserver>> observers)
+            throws NoSuchFileOrDirectory, ExecutionException {
         if (isTrace()) {
             Log.v(TAG,
                     String.format("Reading file %s", this.mFile)); //$NON-NLS-1$

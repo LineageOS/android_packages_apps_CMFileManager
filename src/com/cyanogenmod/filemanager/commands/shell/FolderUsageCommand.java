@@ -22,6 +22,7 @@ import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.FolderUsageExecutable;
 import com.cyanogenmod.filemanager.commands.SIGNAL;
 import com.cyanogenmod.filemanager.console.CommandNotFoundException;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
 import com.cyanogenmod.filemanager.model.BlockDevice;
@@ -39,7 +40,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 /**
  * A class for retrieve the disk usage of a folder
@@ -266,5 +269,10 @@ public class FolderUsageCommand extends AsyncResultProgram implements FolderUsag
             throw new ExecutionException(
                         "exitcode != 0 && != 1 && != 143 && != 137"); //$NON-NLS-1$
         }
+    }
+
+    @Override
+    public void notifyChange(HashMap<String, Set<ConsoleFileObserver>> observers) {
+        // do nothing
     }
 }

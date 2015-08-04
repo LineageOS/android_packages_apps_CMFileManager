@@ -19,6 +19,8 @@ package com.cyanogenmod.filemanager.commands.secure;
 import android.util.Log;
 
 import com.cyanogenmod.filemanager.commands.DeleteFileExecutable;
+import com.cyanogenmod.filemanager.commands.NotifyObserversUtil;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
@@ -27,6 +29,8 @@ import com.cyanogenmod.filemanager.model.MountPoint;
 import de.schlichtherle.truezip.file.TFile;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Set;
 
 
 /**
@@ -69,7 +73,8 @@ public class DeleteFileCommand extends Program implements DeleteFileExecutable {
      * {@inheritDoc}
      */
     @Override
-    public void execute() throws NoSuchFileOrDirectory, ExecutionException {
+    public void execute(HashMap<String, Set<ConsoleFileObserver>> observers)
+            throws NoSuchFileOrDirectory, ExecutionException {
         if (isTrace()) {
             Log.v(TAG,
                     String.format("Deleting file: %s", this.mPath)); //$NON-NLS-1$
@@ -95,6 +100,7 @@ public class DeleteFileCommand extends Program implements DeleteFileExecutable {
         // Delete the file
         try {
             TFile.rm(f);
+            NotifyObserversUtil.notifyDeleted(mPath, observers);
         } catch (IOException ex) {
             if (isTrace()) {
                 Log.v(TAG, "Result: FAIL. IOException"); //$NON-NLS-1$

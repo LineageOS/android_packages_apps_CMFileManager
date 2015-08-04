@@ -17,13 +17,11 @@
 package com.cyanogenmod.filemanager.commands.shell;
 
 import com.cyanogenmod.filemanager.commands.Executable;
-import com.cyanogenmod.filemanager.console.CommandNotFoundException;
-import com.cyanogenmod.filemanager.console.ExecutionException;
-import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
-import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
-import com.cyanogenmod.filemanager.console.OperationTimeoutException;
+import com.cyanogenmod.filemanager.console.*;
 
 import java.io.OutputStream;
+import java.util.HashMap;
+import java.util.Set;
 
 
 /**
@@ -183,4 +181,5 @@ public abstract class Program extends Command implements Executable {
         /**NON BLOCK**/
     }
 
+    public abstract void notifyChange(HashMap<String, Set<ConsoleFileObserver>> observers);
 }

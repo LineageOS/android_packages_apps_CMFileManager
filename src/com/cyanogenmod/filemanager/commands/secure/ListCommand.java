@@ -19,6 +19,7 @@ package com.cyanogenmod.filemanager.commands.secure;
 import android.util.Log;
 
 import com.cyanogenmod.filemanager.commands.ListExecutable;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
@@ -31,7 +32,9 @@ import de.schlichtherle.truezip.file.TFile;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 
 /**
@@ -92,7 +95,8 @@ public class ListCommand extends Program implements ListExecutable {
      */
     @Override
     @SuppressWarnings("deprecation")
-    public void execute() throws NoSuchFileOrDirectory, ExecutionException {
+    public void execute(HashMap<String, Set<ConsoleFileObserver>> observers)
+            throws NoSuchFileOrDirectory, ExecutionException {
         if (isTrace()) {
             Log.v(TAG,
                     String.format("Listing %s. Mode: %s", //$NON-NLS-1$

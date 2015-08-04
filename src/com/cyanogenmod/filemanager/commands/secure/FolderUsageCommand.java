@@ -20,6 +20,7 @@ import android.util.Log;
 
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.FolderUsageExecutable;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
@@ -31,6 +32,8 @@ import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
 import de.schlichtherle.truezip.file.TFile;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Set;
 
 /**
  * A class for retrieve the disk usage of a folder.
@@ -84,7 +87,8 @@ public class FolderUsageCommand extends Program implements FolderUsageExecutable
      * {@inheritDoc}
      */
     @Override
-    public void execute() throws NoSuchFileOrDirectory, ExecutionException {
+    public void execute(HashMap<String, Set<ConsoleFileObserver>> observers)
+            throws NoSuchFileOrDirectory, ExecutionException {
         if (isTrace()) {
             Log.v(TAG,
                     String.format("Computing folder usage for folder %s", //$NON-NLS-1$

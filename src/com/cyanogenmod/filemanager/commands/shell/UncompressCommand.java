@@ -17,15 +17,19 @@
 package com.cyanogenmod.filemanager.commands.shell;
 
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
+import com.cyanogenmod.filemanager.commands.NotifyObserversUtil;
 import com.cyanogenmod.filemanager.commands.SIGNAL;
 import com.cyanogenmod.filemanager.commands.UncompressExecutable;
 import com.cyanogenmod.filemanager.console.CommandNotFoundException;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
 import com.cyanogenmod.filemanager.preferences.UncompressionMode;
 import com.cyanogenmod.filemanager.util.FileHelper;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Set;
 
 /**
  * A class for uncompress file system objects.
@@ -392,5 +396,10 @@ public class UncompressCommand extends AsyncResultProgram implements UncompressE
             }
         }
         return null;
+    }
+
+    @Override
+    public void notifyChange(HashMap<String, Set<ConsoleFileObserver>> observers) {
+        NotifyObserversUtil.notifyCreated(mOutFile, observers);
     }
 }

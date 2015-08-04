@@ -21,14 +21,7 @@ import android.content.Context;
 
 import com.cyanogenmod.filemanager.commands.Executable;
 import com.cyanogenmod.filemanager.commands.ExecutableFactory;
-import com.cyanogenmod.filemanager.console.CommandNotFoundException;
-import com.cyanogenmod.filemanager.console.ConsoleAllocException;
-import com.cyanogenmod.filemanager.console.ExecutionException;
-import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
-import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
-import com.cyanogenmod.filemanager.console.OperationTimeoutException;
-import com.cyanogenmod.filemanager.console.ReadOnlyFilesystemException;
-import com.cyanogenmod.filemanager.console.VirtualMountPointConsole;
+import com.cyanogenmod.filemanager.console.*;
 import com.cyanogenmod.filemanager.model.DiskUsage;
 import com.cyanogenmod.filemanager.model.MountPoint;
 
@@ -141,5 +134,15 @@ public class RemoteConsole extends VirtualMountPointConsole {
             OperationTimeoutException, ExecutionException, CommandNotFoundException,
             ReadOnlyFilesystemException {
 
+    }
+
+    @Override
+    public void registerFileObserver(String path, ConsoleFileObserver observer) {
+        // TODO: Implement when we finally implement this class
+    }
+
+    @Override
+    public void unregisterFileObserver(String path, ConsoleFileObserver observer) {
+        // TODO: Implement when we finally implement this class
     }
 }

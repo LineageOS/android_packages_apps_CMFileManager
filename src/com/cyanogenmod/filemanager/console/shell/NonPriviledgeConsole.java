@@ -18,6 +18,7 @@ package com.cyanogenmod.filemanager.console.shell;
 
 import com.cyanogenmod.filemanager.commands.shell.BashShell;
 import com.cyanogenmod.filemanager.commands.shell.InvalidCommandDefinitionException;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -49,5 +50,4 @@ public class NonPriviledgeConsole extends ShellConsole {
     public boolean isPrivileged() {
         return false;
     }
-
 }

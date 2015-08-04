@@ -34,17 +34,7 @@ import com.cyanogenmod.filemanager.commands.ExecutableFactory;
 import com.cyanogenmod.filemanager.commands.MountExecutable;
 import com.cyanogenmod.filemanager.commands.secure.Program;
 import com.cyanogenmod.filemanager.commands.secure.SecureExecutableFactory;
-import com.cyanogenmod.filemanager.console.AuthenticationFailedException;
-import com.cyanogenmod.filemanager.console.CancelledOperationException;
-import com.cyanogenmod.filemanager.console.CommandNotFoundException;
-import com.cyanogenmod.filemanager.console.Console;
-import com.cyanogenmod.filemanager.console.ConsoleAllocException;
-import com.cyanogenmod.filemanager.console.ExecutionException;
-import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
-import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
-import com.cyanogenmod.filemanager.console.OperationTimeoutException;
-import com.cyanogenmod.filemanager.console.ReadOnlyFilesystemException;
-import com.cyanogenmod.filemanager.console.VirtualMountPointConsole;
+import com.cyanogenmod.filemanager.console.*;
 import com.cyanogenmod.filemanager.model.DiskUsage;
 import com.cyanogenmod.filemanager.model.MountPoint;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
@@ -69,9 +59,7 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -115,6 +103,8 @@ public class SecureConsole extends VirtualMountPointConsole {
     private static final long SYNC_WAIT = 10000L;
 
     private static final int MSG_SYNC_FS = 0;
+
+    private HashMap<String, Set<ConsoleFileObserver>> mObserverSets;
 
     private final ExecutorService mExecutorService = Executors.newFixedThreadPool(1);
 
@@ -164,6 +154,8 @@ public class SecureConsole extends VirtualMountPointConsole {
         mSyncHandler = new Handler(mSyncCallback);
         mStorageRoot = getSecureStorageRoot();
         mStorageName = getSecureStorageName();
+
+        mObserverSets = new HashMap<String, Set<ConsoleFileObserver>>();
 
         // Save a copy of the console. This has a unique instance for all the app
         if (sConsole != null) {
@@ -546,7 +538,7 @@ public class SecureConsole extends VirtualMountPointConsole {
                 @Override
                 public void run() {
                     try {
-                        program.execute();
+                        program.execute(mObserverSets);
                         requestSync(program);
                     } catch (Exception e) {
                         // Program must use onException to communicate exceptions
@@ -560,7 +552,7 @@ public class SecureConsole extends VirtualMountPointConsole {
 
         } else {
             // Synchronous execution
-            program.execute();
+            program.execute(mObserverSets);
             requestSync(program);
         }
     }
@@ -635,6 +627,25 @@ public class SecureConsole extends VirtualMountPointConsole {
         });
         for (File cacheFile : cacheFiles) {
             cacheFile.delete();
+        }
+    }
+
+    @Override
+    public synchronized void registerFileObserver(String path, ConsoleFileObserver observer) {
+        Set<ConsoleFileObserver> observers = mObserverSets.get(path);
+        if (observers == null) {
+            observers = new HashSet<ConsoleFileObserver>();
+            mObserverSets.put(path, observers);
+        }
+        observers.add(observer);
+    }
+
+    @Override
+    public synchronized void unregisterFileObserver(String path, ConsoleFileObserver observer) {
+        Set<ConsoleFileObserver> observers = mObserverSets.get(path);
+        observers.remove(observer);
+        if (observers.isEmpty()) {
+            observers.remove(path);
         }
     }
 }

@@ -21,6 +21,7 @@ import android.util.Log;
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.ConcurrentAsyncResultListener;
 import com.cyanogenmod.filemanager.commands.FindExecutable;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
@@ -32,6 +33,8 @@ import com.cyanogenmod.filemanager.util.SearchHelper;
 import de.schlichtherle.truezip.file.TFile;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Set;
 
 /**
  * A class for search files.
@@ -86,7 +89,8 @@ public class FindCommand extends Program implements FindExecutable {
      * {@inheritDoc}
      */
     @Override
-    public void execute() throws NoSuchFileOrDirectory, ExecutionException {
+    public void execute(HashMap<String, Set<ConsoleFileObserver>> observers)
+            throws NoSuchFileOrDirectory, ExecutionException {
         if (isTrace()) {
             Log.v(TAG,
                     String.format("Finding in %s the query %s", //$NON-NLS-1$

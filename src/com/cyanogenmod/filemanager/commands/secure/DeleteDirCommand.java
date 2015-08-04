@@ -19,6 +19,8 @@ package com.cyanogenmod.filemanager.commands.secure;
 import android.util.Log;
 
 import com.cyanogenmod.filemanager.commands.DeleteDirExecutable;
+import com.cyanogenmod.filemanager.commands.NotifyObserversUtil;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
@@ -26,6 +28,9 @@ import com.cyanogenmod.filemanager.model.MountPoint;
 import com.cyanogenmod.filemanager.util.FileHelper;
 
 import de.schlichtherle.truezip.file.TFile;
+
+import java.util.HashMap;
+import java.util.Set;
 
 
 /**
@@ -68,7 +73,8 @@ public class DeleteDirCommand extends Program implements DeleteDirExecutable {
      * {@inheritDoc}
      */
     @Override
-    public void execute() throws NoSuchFileOrDirectory, ExecutionException {
+    public void execute(HashMap<String, Set<ConsoleFileObserver>> observers)
+            throws NoSuchFileOrDirectory, ExecutionException {
         if (isTrace()) {
             Log.v(TAG,
                     String.format("Deleting directory: %s", this.mPath)); //$NON-NLS-1$
@@ -98,6 +104,8 @@ public class DeleteDirCommand extends Program implements DeleteDirExecutable {
             }
             throw new ExecutionException("Failed to delete directory");
         }
+
+        NotifyObserversUtil.notifyDeleted(mPath, observers);
 
         if (isTrace()) {
             Log.v(TAG, "Result: OK"); //$NON-NLS-1$

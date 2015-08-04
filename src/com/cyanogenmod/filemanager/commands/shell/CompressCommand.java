@@ -18,14 +18,18 @@ package com.cyanogenmod.filemanager.commands.shell;
 
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.CompressExecutable;
+import com.cyanogenmod.filemanager.commands.NotifyObserversUtil;
 import com.cyanogenmod.filemanager.commands.SIGNAL;
 import com.cyanogenmod.filemanager.console.CommandNotFoundException;
+import com.cyanogenmod.filemanager.console.ConsoleFileObserver;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
 import com.cyanogenmod.filemanager.preferences.CompressionMode;
 import com.cyanogenmod.filemanager.util.FileHelper;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Set;
 
 /**
  * A class for compress file system objects
@@ -370,5 +374,10 @@ public class CompressCommand extends AsyncResultProgram implements CompressExecu
             out[i] = FileHelper.toRelativePath(src[i], p);
         }
         return out;
+    }
+
+    @Override
+    public void notifyChange(HashMap<String, Set<ConsoleFileObserver>> observers) {
+        NotifyObserversUtil.notifyCreated(mOutFile, observers);
     }
 }

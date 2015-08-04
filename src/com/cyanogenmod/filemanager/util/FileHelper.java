@@ -342,7 +342,16 @@ public final class FileHelper {
         if (parent == null && path.getAbsolutePath().compareTo(FileHelper.ROOT_DIRECTORY) != 0) {
             parent = FileHelper.ROOT_DIRECTORY;
         }
+
         return parent;
+    }
+
+    public static String basename(String path) {
+        return basename(new File(path));
+    }
+
+    public static String basename(File path) {
+        return path.getName();
     }
 
     /**
