@@ -654,6 +654,7 @@ public class NavigationActivity extends Activity
                 intent.putExtra(EXTRA_ADD_TO_HISTORY, false);
                 initNavigation(NavigationActivity.this.mCurrentNavigationView, false, intent);
             }
+            getCurrentNavigationView().refresh(true);
         }
     }
 
