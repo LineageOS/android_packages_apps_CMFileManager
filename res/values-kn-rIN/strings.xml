@@ -221,7 +221,7 @@
   <string name="actions_menu_move_selection">ಆಯ್ಕೆಯನ್ನು ಇಲ್ಲಿಗೆ ಸ್ಥಳಾಂತರಿಸಿ</string>
   <string name="actions_menu_delete_selection">ಆಯ್ಕೆಯನ್ನು ಆಳಿಸಿ</string>
   <string name="actions_menu_compress_selection">ಆಯ್ಕೆಯನ್ನು ಕಂಪ್ರೆಸ್ ಮಾಡಿ</string>
-  <string name="actions_menu_create_link">ಲಿಂಕ್ ರಚಿಸು</string>
+  <string name="actions_menu_create_link">ಲಿಂಕ್ ರಚಿಸಿ</string>
   <string name="actions_menu_open">ತೆರೆ</string>
   <string name="actions_menu_open_with">ಇದರಿಂದ ತೆರೆ</string>
   <string name="actions_menu_execute">ಕಾರ್ಯಗತಗೊಳಿಸು</string>
