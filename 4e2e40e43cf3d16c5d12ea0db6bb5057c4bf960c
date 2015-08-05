@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f0e0f27_0b24adc5",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-08-05T21:17:33Z",
+      "side": 1,
+      "message": "space",
+      "range": {
+        "startLine": 339,
+        "startChar": 34,
+        "endLine": 339,
+        "endChar": 35
+      },
+      "revId": "4e2e40e43cf3d16c5d12ea0db6bb5057c4bf960c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_eb2059b3",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/HomeFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-08-05T21:17:33Z",
+      "side": 1,
+      "message": "Might be cleaner to create a Resources object and use that instead of calling getContext().getResources() several times.",
+      "range": {
+        "startLine": 144,
+        "startChar": 53,
+        "endLine": 144,
+        "endChar": 65
+      },
+      "revId": "4e2e40e43cf3d16c5d12ea0db6bb5057c4bf960c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
