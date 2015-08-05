@@ -47,15 +47,15 @@
   <string name="confirm_overwrite">Potrdi prepis</string>
   <string name="confirm_deletion">Potrdi izbris</string>
   <string name="msgs_change_to_prompt_access_mode_title">Potrdi zamenjavo</string>
-  <string name="msgs_change_to_prompt_access_mode_msg">Ni mogoče zagnati v načinu Skrbniškega dostopa. Spreminjanje na Varni način\n\nUveljavi to spremembo?</string>
+  <string name="msgs_change_to_prompt_access_mode_msg">Ni mogoče zagnati v načinu Skrbniškega dostopa. Spreminjanje v Varni način\n\nUveljavi to spremembo?</string>
   <string name="msgs_cant_create_console">Zahtevanih dovoljenj za delovanje ni mogoče pridobiti.</string>
-  <string name="msgs_privileged_console_alloc_failed">Ni mogoče zagnati v načinu Skrbniškega dostopa. Spreminjanje na Varni način.</string>
+  <string name="msgs_privileged_console_alloc_failed">Ni mogoče zagnati v načinu Skrbniškega dostopa. Spreminjanje v Varni način.</string>
   <string name="msgs_settings_save_failure">Nastavitve ni mogoče uveljaviti ali shraniti.</string>
   <string name="msgs_settings_invalid_initial_directory">Začetna mapa \'<xliff:g id="initial_dir">%1$s</xliff:g>\' je neveljavna. Spreminjanje v korensko mapo.</string>
   <string name="root_not_available_msg">Skrbniški dostop ni na voljo na tej napravi. Tega opravila ni mogoče izvesti.</string>
   <string name="msgs_success">Opravilo je bilo uspešno končano.</string>
   <string name="msgs_unknown">Zaznana je bila napaka. Opravilo ni uspelo.</string>
-  <string name="msgs_insufficient_permissions">To opravilo zahteva višja dovoljenja. Poskusite spremeniti v način Skrbniškega dostopa.</string>
+  <string name="msgs_insufficient_permissions">To opravilo zahteva skrbniška dovoljenja. Poskusite spremeniti v način Skrbniškega dostopa.</string>
   <string name="msgs_no_disk_space">To opravilo je spodletelo, ker na napravi ni več prostora.</string>
   <string name="msgs_file_not_found">Datoteke ali mape ni bilo mogoče najti.</string>
   <string name="msgs_command_not_found">Ukaza opravila ni bilo mogoče najti ali pa ima neveljavno določilo.</string>
@@ -72,7 +72,7 @@
   <string name="msgs_not_registered_app">Noben program ni registriran za obravnavo izbrane vrste datoteke.</string>
   <string name="msgs_overwrite_files">Nekatere mape že obstajajo v ciljni mapi.\n\nPrepiši?</string>
   <string name="msgs_action_association_failed">Povezovanje dejanja s programom je spodletelo.</string>
-  <string name="advise_insufficient_permissions">Opravilo zahteva višja dovoljenja.\n\nAli želite spremeniti na način Skrbniškega dostopa?</string>
+  <string name="advise_insufficient_permissions">Opravilo zahteva skrbniška dovoljenja.\n\nAli želite spremeniti v način Skrbniškega dostopa?</string>
   <string name="parent_dir">Nadrejena mapa</string>
   <string name="external_storage">Zunanja pomnilniška naprava</string>
   <string name="usb_storage">Pomnilniška naprava USB</string>
@@ -115,7 +115,7 @@
   <string name="filesystem_info_dialog_device">Naprava:</string>
   <string name="filesystem_info_dialog_type">Vrsta:</string>
   <string name="filesystem_info_dialog_options">Možnosti:</string>
-  <string name="filesystem_info_dialog_dump_pass">Izpiši / Prelet:</string>
+  <string name="filesystem_info_dialog_dump_pass">Izpis / Prelet:</string>
   <string name="filesystem_info_dialog_virtual">Navidezno:</string>
   <string name="filesystem_info_dialog_total_disk_usage">Skupaj:</string>
   <string name="filesystem_info_dialog_used_disk_usage">Uporabljeno:</string>
@@ -139,7 +139,7 @@
   <string name="fso_properties_dialog_last_changed_date">Spremenjeno:</string>
   <string name="fso_properties_dialog_owner">Lastnik:</string>
   <string name="fso_properties_dialog_group">Skupina:</string>
-  <string name="fso_properties_dialog_others">Drugo:</string>
+  <string name="fso_properties_dialog_others">Ostalo:</string>
   <string name="fso_properties_dialog_include_in_media_scan">Preskoči preiskovanje nosilcev:</string>
   <string name="fso_failed_to_allow_media_scan">Omogočanje preiskovanja nosilca je spodletelo</string>
   <string name="fso_failed_to_prevent_media_scan">Onemogočanje preiskovanja nosilca je spodletelo</string>
@@ -157,7 +157,7 @@
   <string name="search_no_results_msg">Ni najdenih rezultatov.</string>
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> v <xliff:g id="path">%2$s</xliff:g></string>
   <string name="search_terms"><![CDATA[<b>Izrazi:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
-  <string name="search_few_characters_title">Potrdi iskanje</string>
+  <string name="search_few_characters_title">Potrdite iskanje</string>
   <string name="search_few_characters_msg">Nekateri iskalni izrazi imajo majhno število znakov. Opravilo je lahko potratno tako časovno kot s sistemskimi sredstvi.\n\nAli želite nadaljevati?</string>
   <string name="searching">Počakajte \u2026</string>
   <string name="searching_action_label">Iskanje je v teku</string>
@@ -271,7 +271,7 @@
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
   <string name="selection_folders_and_files">Izbrano je <xliff:g id="folders">%1$s</xliff:g> in <xliff:g id="files">%2$s</xliff:g>.</string>
   <string name="category_system">SISTEM</string>
-  <string name="category_app">APLIKACIJA</string>
+  <string name="category_app">PROGRAM</string>
   <string name="category_binary">DVOJIŠKO</string>
   <string name="category_text">BESEDILO</string>
   <string name="category_document">DOKUMENT</string>
@@ -296,7 +296,7 @@
   <string name="pref_storage">Možnosti za shranjevanje</string>
   <string name="pref_editor">Možnosti urejevalnika</string>
   <string name="pref_themes">Teme</string>
-  <string name="pref_about">O aplikaciji</string>
+  <string name="pref_about">O programu</string>
   <string name="pref_general_behaviour_category">Splošno</string>
   <string name="pref_case_sensitive_sort">Razlikovanje velikosti črk</string>
   <string name="pref_case_sensitive_sort_summary">Upoštevaj velikost črk med krmarjenjem ali razvrščanjem rezultatov iskanja</string>
@@ -335,7 +335,7 @@
   <string name="pref_remove_saved_search_terms_msg">Vsi shranjeni iskalni izrazi so bili odstranjeni</string>
   <string name="pref_secure_storage_category">Varna pomnilniška naprava</string>
   <string name="pref_secure_storage_delayed_sync_title">Zakasnjena sinhronizacija</string>
-  <string name="pref_secure_storage_delayed_sync_summary">Sinhronizacija varnih datotečnih sistemov je potratno opravilo. Omogočite to možnost, če želite hitrejše odzive po vsakem opravilu, ko izvajate sinhronizacijo, kadar je datotečni sistem v neuporabljenem stanju, ampak na račun izgube podatkov na čakanju, ki niso sinhronizirani, če se program zruši.</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Sinhronizacija varnih datotečnih sistemov je potratno opravilo. Omogočite to možnost, če želite hitrejše odzive po vsakem opravilu, ko izvajate sinhronizacijo, kadar je datotečni sistem v neuporabljenem stanju, ampak na račun izgube podatkov na čakanju, ki niso sinhronizirani, če se program sesuje.</string>
   <string name="pref_secure_storage_reset_password_title">Spremeni geslo</string>
   <string name="pref_secure_storage_delete_storage_title">Izbriši pomnilniško napravo</string>
   <string name="pref_editor_behaviour_category">Vedenje</string>
@@ -402,5 +402,5 @@
   <string name="changelog_title">Dnevnik sprememb</string>
   <string name="welcome_title">Dobrodošli</string>
   <string name="welcome_msg">Dobrodošli v upravljalniku datotek CyanogenMod.\n\nTa program vam omogoča, da raziščete datotečni sistem in izvajate opravila, ki lahko poškoduje vašo napravo. V izogib škodi se bo program začel v varnem načinu z nizkimi dovoljenji.\n\nDo naprednega načina z visokimi dovoljenji lahko dostopate v nastavitvah. Vaša odgovornost je, da zagotovite, da opravilo ne poškoduje vašega sistema.\n\nEkipa CyanogenMod</string>
-  <string name="activity_not_found_exception">Za odpiranje te datoteke ni bilo mogoče najti aplikacije</string>
+  <string name="activity_not_found_exception">Za odpiranje te datoteke ni bilo mogoče najti programa</string>
 </resources>
