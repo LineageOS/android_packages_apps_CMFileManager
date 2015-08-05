@@ -256,6 +256,9 @@ public class FlingerListView extends ListView {
      */
     public void setOnItemFlingerListener(OnItemFlingerListener mOnItemFlingerListener) {
         this.mOnItemFlingerListener = mOnItemFlingerListener;
+        if (mOnItemFlingerListener == null) {
+            setLongClickable(true);
+        }
     }
 
     /**
