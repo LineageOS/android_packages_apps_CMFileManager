@@ -54,12 +54,6 @@ public abstract class FileSystemObject implements Serializable, Comparable<FileS
     private boolean mIsRemote;
 
     /**
-     * Normally, you shouldn't call this, however, this is in to be able
-     * to further abstract some calls in FileHelper.
-     **/
-    public FileSystemObject() {}
-
-    /**
      * Constructor of <code>FileSystemObject</code>.
      *
      * @param name The name of the object

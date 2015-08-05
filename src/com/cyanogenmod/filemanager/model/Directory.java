@@ -37,12 +37,6 @@ public class Directory extends FileSystemObject {
     public static final char UNIX_ID = 'd';
 
     /**
-     * Normally, you shouldn't call this, however, this is in to be able
-     * to further abstract some calls in FileHelper.
-     **/
-    public Directory() {}
-
-    /**
      * Constructor of <code>Directory</code>.
      *
      * @param name The name of the object
