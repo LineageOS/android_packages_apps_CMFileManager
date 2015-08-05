@@ -320,6 +320,8 @@ public class MainActivity extends ActionBarActivity
                 }
             }, this);
         }
+
+        handleNavigateIntent(getIntent());
     }
 
     /**
@@ -364,7 +366,7 @@ public class MainActivity extends ActionBarActivity
                 .replace(R.id.navigation_fragment_container, currentFragment, fragmentTag)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                 .addToBackStack(fragmentTag)
-                .commit();
+                .commitAllowingStateLoss();
     }
 
     private void updateCurrentFragment() {
@@ -404,7 +406,20 @@ public class MainActivity extends ActionBarActivity
      */
     @Override
     protected void onNewIntent(Intent intent) {
-        handleSearchIntent(intent);
+        if (!handleNavigateIntent(intent)) {
+            handleSearchIntent(intent);
+        }
+    }
+
+    private boolean handleNavigateIntent(Intent intent) {
+        if (intent != null) {
+            String path = intent.getStringExtra(EXTRA_NAVIGATE_TO);
+            if (!TextUtils.isEmpty(path)) {
+                navigateToPath(path);
+                return true;
+            }
+        }
+        return false;
     }
 
     public void handleSearchIntent(Intent intent) {
