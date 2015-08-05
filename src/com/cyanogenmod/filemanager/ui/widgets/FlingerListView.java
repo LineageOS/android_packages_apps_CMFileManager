@@ -256,6 +256,14 @@ public class FlingerListView extends ListView {
      */
     public void setOnItemFlingerListener(OnItemFlingerListener mOnItemFlingerListener) {
         this.mOnItemFlingerListener = mOnItemFlingerListener;
+        if (mOnItemFlingerListener == null) {
+            setLongClickable(true);
+            setClickable(true);
+        } else {
+            // This events are trap inside this method
+            setLongClickable(false);
+            setClickable(false);
+        }
     }
 
     /**
@@ -267,10 +275,6 @@ public class FlingerListView extends ListView {
         if (this.mOnItemFlingerListener == null) {
             return super.onTouchEvent(ev);
         }
-
-        // This events are trap inside this method
-        setLongClickable(false);
-        setClickable(false);
 
         // Get information about the x and y
         int x = (int) ev.getX();
