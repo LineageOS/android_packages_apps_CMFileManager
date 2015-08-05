@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_809adcc2",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 912,
+      "author": {
+        "id": 1448
+      },
+      "writtenOn": "2015-08-05T03:50:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_dd9e7b53",
+      "range": {
+        "startLine": 912,
+        "startChar": 59,
+        "endLine": 912,
+        "endChar": 65
+      },
+      "revId": "c8ab5df125a7160e944f785f6049da8c36156ae6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_6051080f",
         "filename": "src/com/cyanogenmod/filemanager/activities/ShortcutActivity.java",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2015-08-05T03:42:34Z",
       "side": 1,
       "message": "hm, this looks shaky.\n\nAlso we need to get around to fixing add shortcut thing so that it works for storage provider directories",
+      "range": {
+        "startLine": 192,
+        "startChar": 63,
+        "endLine": 192,
+        "endChar": 89
+      },
+      "revId": "c8ab5df125a7160e944f785f6049da8c36156ae6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_40a4c408",
+        "filename": "src/com/cyanogenmod/filemanager/activities/ShortcutActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 1448
+      },
+      "writtenOn": "2015-08-05T03:50:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_6051080f",
       "range": {
         "startLine": 192,
         "startChar": 63,
