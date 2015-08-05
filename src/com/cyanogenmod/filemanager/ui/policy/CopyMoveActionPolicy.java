@@ -139,10 +139,10 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             final OnSelectionListener onSelectionListener,
             final OnRequestRefreshListener onRequestRefreshListener) {
         // Create a non-existing name
-        String curDir = onSelectionListener.onRequestCurrentDir();
+        List<FileSystemObject> curFiles = onSelectionListener.onRequestCurrentItems();
         String  newName =
                 FileHelper.createNonExistingName(
-                        ctx, curDir, fso.getName(), R.string.create_copy_regexp);
+                        ctx, curFiles, fso.getName(), R.string.create_copy_regexp);
 
         final String destination = fso.getParent();
         List<LinkedResource> files = createLinkedResource(fso, newName);

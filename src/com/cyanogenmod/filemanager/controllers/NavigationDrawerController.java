@@ -315,6 +315,21 @@ public class NavigationDrawerController implements OnDirectoryChangedListener {
         mAdapter.notifyDataSetChanged();
     }
 
+    public int getColorForPath(String path) {
+        String volumePath = null;
+
+        volumePath = StorageHelper.getStorageVolumeFromPath(path);
+
+        for (NavigationDrawerItem item : mNavigationDrawerItemList) {
+            if (!TextUtils.isEmpty(volumePath) &&
+                    TextUtils.equals(item.getSummary(), volumePath)) {
+                return item.getSelectedColor();
+            }
+        }
+
+        return mCtx.getResources().getColor(R.color.default_primary);
+    }
+
     @Override
     public void onDirectoryChanged(FileSystemObject item) {
         if (DEBUG) Log.d(TAG, "onDirectoryChanged::" + item.getFullPath());

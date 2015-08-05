@@ -27,16 +27,11 @@ import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.commands.SyncResultExecutable;
 import com.cyanogenmod.filemanager.commands.java.Program;
-import com.cyanogenmod.filemanager.commands.shell.InvalidCommandDefinitionException;
 import com.cyanogenmod.filemanager.commands.shell.ResolveLinkCommand;
 import com.cyanogenmod.filemanager.console.CancelledOperationException;
-import com.cyanogenmod.filemanager.console.CommandNotFoundException;
 import com.cyanogenmod.filemanager.console.Console;
-import com.cyanogenmod.filemanager.console.ConsoleAllocException;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
-import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
-import com.cyanogenmod.filemanager.console.OperationTimeoutException;
 import com.cyanogenmod.filemanager.console.java.JavaConsole;
 import com.cyanogenmod.filemanager.model.AID;
 import com.cyanogenmod.filemanager.model.BlockDevice;
@@ -64,7 +59,6 @@ import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.ClosedByInterruptException;
@@ -947,17 +941,17 @@ public final class FileHelper {
      * that is not current used by the filesystem.
      *
      * @param ctx The current context
-     * @param parentDir The directory in which we want to make the file
+     * @param files The list of files of the current directory
      * @param attemptedName The attempted name
      * @param regexp The resource of the regular expression to create the new name
      * @return String The new non-existing name
      */
     public static String createNonExistingName(
-            final Context ctx, final String parentDir,
+            final Context ctx, final List<FileSystemObject> files,
             final String attemptedName, int regexp) {
         // Find a non-exiting name
         String newName = attemptedName;
-        if (!isNameExists(ctx, parentDir, newName)) return newName;
+        if (!isNameExists(files, newName)) return newName;
         do {
             String name  = FileHelper.getName(newName);
             String ext  = FileHelper.getExtension(newName);
@@ -967,30 +961,27 @@ public final class FileHelper {
                 ext = "." + ext; //$NON-NLS-1$
             }
             newName = ctx.getString(regexp, name, ext);
-        } while (isNameExists(ctx, parentDir, newName));
+        } while (isNameExists(files, newName));
         return newName;
     }
 
     /**
      * Method that checks if a name exists in the current directory.
      *
-     * @param context The application context
-     * @param parentDir The full path to the parent directory
+     * @param files The list of files of the current directory
      * @param name The name to check
      * @return boolean Indicate if the name exists in the current directory
      */
-    public static boolean isNameExists(Context context, String parentDir, String name) {
-        if (parentDir == null || parentDir.equals(ROOT_DIRECTORY)) {
-            parentDir = "";
-        }
+    public static boolean isNameExists(List<FileSystemObject> files, String name) {
         //Verify if the name exists in the current file list
-        try {
-            return CommandHelper.getFileInfo(context, parentDir + "/" + name, null) != null;
-        } catch (Exception e) {
-            // This is a slight misreporting, however, I don't want to do a bunch of refactoring
-            Log.i(TAG, "Failed to get file info: " + e.getMessage());
-            return false;
+        int cc = files.size();
+        for (int i = 0; i < cc; i++) {
+            FileSystemObject fso = files.get(i);
+            if (fso.getName().compareTo(name) == 0) {
+                return true;
+            }
         }
+        return false;
     }
 
     /**

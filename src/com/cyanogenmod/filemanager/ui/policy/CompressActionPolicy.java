@@ -307,7 +307,7 @@ public final class CompressActionPolicy extends ActionsPolicy {
                         String newName =
                                 FileHelper.createNonExistingName(
                                         ctx,
-                                        onSelectionListener.onRequestCurrentDir(),
+                                        onSelectionListener.onRequestCurrentItems(),
                                         name,
                                         R.string.create_new_compress_file_regexp);
                         String newNameAbs =
