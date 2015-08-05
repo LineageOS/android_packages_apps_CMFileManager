@@ -438,6 +438,8 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
     // Restrictions
     private Map<DisplayRestrictions, Object> mRestrictions;
 
+    private NavigationTask mNavigationTask;
+
     /**
      * @hide
      */
@@ -814,7 +816,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
      */
     public void refresh(FileSystemObject scrollTo) {
         //Check that current directory was set
-        if (this.mCurrentDir == null || this.mFiles == null) {
+        if (this.mCurrentDir == null || this.mFiles == null || this.mNavigationTask != null) {
             return;
         }
 
@@ -1024,9 +1026,9 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             final String newDir, final boolean addToHistory,
             final boolean reload, final boolean useCurrent,
             final SearchInfoParcelable searchInfo, final FileSystemObject scrollTo) {
-        NavigationTask task = new NavigationTask(useCurrent, addToHistory, reload,
+        mNavigationTask = new NavigationTask(useCurrent, addToHistory, reload,
                 searchInfo, scrollTo, mRestrictions, mChRooted);
-        task.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, newDir);
+        mNavigationTask.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, newDir);
     }
 
     /**
@@ -1109,6 +1111,8 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
                 FileSystemObject dir = FileHelper.createFileSystemObject(new File(newDir));
                 this.mOnDirectoryChangedListener.onDirectoryChanged(dir);
             }
+
+            mNavigationTask = null;
         } finally {
             //If calling activity is search, then save the search history
             if (searchInfo != null) {
