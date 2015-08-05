@@ -644,6 +644,7 @@ public class NavigationFragment extends Fragment
                 intent.putExtra(EXTRA_ADD_TO_HISTORY, false);
                 initNavigation(NavigationFragment.this.mCurrentNavigationView, false, intent);
             }
+            getCurrentNavigationView().refresh(true);
         }
 
         attachNavigationViewListeners();
