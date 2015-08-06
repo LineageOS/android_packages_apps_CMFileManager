@@ -197,6 +197,23 @@
       "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_ccd92b23",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-06T21:47:16Z",
+      "side": 1,
+      "message": "Make this a weak reference please.",
+      "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
