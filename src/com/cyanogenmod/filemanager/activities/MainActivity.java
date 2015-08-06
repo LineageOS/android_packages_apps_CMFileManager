@@ -195,21 +195,27 @@ public class MainActivity extends ActionBarActivity
         });
 
         final CardView cV = (CardView) findViewById(R.id.add_provider);
-        cV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                StorageProviderUtils.loadProviderLogin(getApplicationContext());
-            }
-        });
+        if (isLoginCardNotDisabled(false)) {
+            cV.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    StorageProviderUtils.loadProviderLogin(getApplicationContext());
+                    isLoginCardNotDisabled(true);
+                }
+            });
 
-        Button dismiss =(Button) findViewById(R.id.dismiss_card);
-        dismiss.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                cV.setVisibility(View.GONE);
-                // TODO: Save that the card has been dismissed
-            }
-        });
+            Button dismiss = (Button) findViewById(R.id.dismiss_card);
+            dismiss.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    cV.setVisibility(View.GONE);
+                    isLoginCardNotDisabled(true);
+                }
+            });
+
+        } else {
+            cV.setVisibility(View.GONE);
+        }
 
         handleSearchBar();
         initQuickSearch();
@@ -622,6 +628,25 @@ public class MainActivity extends ActionBarActivity
                 e.printStackTrace();
             }
         }
+    }
+
+    private boolean isLoginCardNotDisabled(boolean disable) {
+        boolean status = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.CLOUD_LOGIN_USED.getId(),
+                ((Boolean) FileManagerSettings.CLOUD_LOGIN_USED
+                        .getDefaultValue()).booleanValue());
+        if (disable) {
+            try {
+                Preferences.savePreference(FileManagerSettings.CLOUD_LOGIN_USED, Boolean.FALSE,
+                        true);
+                status = false;
+            } catch (InvalidClassException e) {
+                // Unable to save preference
+                // continue to return previous preference state
+                e.printStackTrace();
+            }
+        }
+        return status;
     }
 
     @Override
