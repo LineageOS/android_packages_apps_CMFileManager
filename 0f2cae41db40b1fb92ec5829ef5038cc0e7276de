@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f0e0f27_ec5bcf51",
+        "filename": "src/com/cyanogenmod/filemanager/commands/storageapi/ListCommand.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-06T23:20:42Z",
+      "side": 1,
+      "message": "instead of doing this, change from error to a warning.",
+      "revId": "0f2cae41db40b1fb92ec5829ef5038cc0e7276de",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
