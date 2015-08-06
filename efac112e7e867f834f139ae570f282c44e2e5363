@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "9f0e0f27_9178ecf8",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-06T06:16:18Z",
+      "side": 1,
+      "message": "100 chars",
+      "range": {
+        "startLine": 207,
+        "startChar": 88,
+        "endLine": 207,
+        "endChar": 101
+      },
+      "revId": "efac112e7e867f834f139ae570f282c44e2e5363",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_11273c15",
         "filename": "src/com/cyanogenmod/filemanager/util/AmbiguousExtensionHelper.java",
         "patchSetId": 1
@@ -13,6 +36,52 @@
       "writtenOn": "2015-08-06T06:15:48Z",
       "side": 1,
       "message": "Good call. Did not realize I needed to release it.",
+      "revId": "efac112e7e867f834f139ae570f282c44e2e5363",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_f123a804",
+        "filename": "src/com/cyanogenmod/filemanager/util/MimeTypeHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 442,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-06T06:16:18Z",
+      "side": 1,
+      "message": "100 chars",
+      "range": {
+        "startLine": 442,
+        "startChar": 96,
+        "endLine": 442,
+        "endChar": 103
+      },
+      "revId": "efac112e7e867f834f139ae570f282c44e2e5363",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_b11d30bf",
+        "filename": "src/com/cyanogenmod/filemanager/util/MimeTypeHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-06T06:16:18Z",
+      "side": 1,
+      "message": "100 chars",
+      "range": {
+        "startLine": 456,
+        "startChar": 93,
+        "endLine": 456,
+        "endChar": 104
+      },
       "revId": "efac112e7e867f834f139ae570f282c44e2e5363",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
