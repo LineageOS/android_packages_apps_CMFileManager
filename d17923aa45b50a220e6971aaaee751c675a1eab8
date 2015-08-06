@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "9f0e0f27_ccc48b43",
+        "filename": "res/values/floats.xml",
+        "patchSetId": 13
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-08-06T21:33:35Z",
+      "side": 1,
+      "message": "unused namespace",
+      "range": {
+        "startLine": 18,
+        "startChar": 11,
+        "endLine": 18,
+        "endChar": 22
+      },
+      "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_8cfe9303",
         "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
         "patchSetId": 13
@@ -125,6 +148,52 @@
       "side": 1,
       "message": "line 571",
       "parentUuid": "9f0e0f27_d1066421",
+      "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_acc15731",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 489,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-08-06T21:33:35Z",
+      "side": 1,
+      "message": "These lines are not going to do what you think they will do.\nYou\u0027ll want to retrieve the actual color that this resource points to and then use that to get the RGB components.",
+      "range": {
+        "startLine": 487,
+        "startChar": 0,
+        "endLine": 489,
+        "endChar": 53
+      },
+      "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_8cdc5319",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 594,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-08-06T21:33:35Z",
+      "side": 1,
+      "message": "Since the value is going to be used as a color, you may want to return something like 0xffffffff, for clarity.",
+      "range": {
+        "startLine": 594,
+        "startChar": 19,
+        "endLine": 594,
+        "endChar": 21
+      },
       "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
