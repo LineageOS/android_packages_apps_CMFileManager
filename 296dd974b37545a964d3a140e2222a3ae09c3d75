@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f0e0f27_0ca2839b",
+        "filename": "res/values/colors.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-08-06T21:13:42Z",
+      "side": 1,
+      "message": "This name is somewhat misleading, would something like status_bar_foreground_color make more sense?",
+      "range": {
+        "startLine": 155,
+        "startChar": 17,
+        "endLine": 155,
+        "endChar": 38
+      },
+      "revId": "296dd974b37545a964d3a140e2222a3ae09c3d75",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_ec798f2f",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 615,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-08-06T21:13:42Z",
+      "side": 1,
+      "message": "?",
+      "range": {
+        "startLine": 615,
+        "startChar": 8,
+        "endLine": 615,
+        "endChar": 9
+      },
+      "revId": "296dd974b37545a964d3a140e2222a3ae09c3d75",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_cc76cb3f",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 765,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-08-06T21:13:42Z",
+      "side": 1,
+      "message": "Can this block just go?",
+      "range": {
+        "startLine": 726,
+        "startChar": 0,
+        "endLine": 765,
+        "endChar": 7
+      },
+      "revId": "296dd974b37545a964d3a140e2222a3ae09c3d75",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_4c987b69",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationCustomTitleView.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-08-06T21:13:42Z",
+      "side": 1,
+      "message": "is this really always true?",
+      "range": {
+        "startLine": 100,
+        "startChar": 23,
+        "endLine": 100,
+        "endChar": 27
+      },
+      "revId": "296dd974b37545a964d3a140e2222a3ae09c3d75",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
