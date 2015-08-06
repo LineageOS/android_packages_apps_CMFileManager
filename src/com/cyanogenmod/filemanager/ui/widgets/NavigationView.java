@@ -1399,7 +1399,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
     @Override
     public void onRequestRemove(Object o, boolean clearSelection) {
         if (o != null && o instanceof FileSystemObject) {
-            removeItem((FileSystemObject)o);
+            removeItem((FileSystemObject) o);
         } else {
             onRequestRefresh(null, clearSelection);
         }
@@ -1513,6 +1513,17 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
     @Override
     public String onRequestCurrentDir() {
         return this.mCurrentDir;
+    }
+
+    /**
+     * Method that sets the primary color for the current volume
+     *
+     * @param color hex color of to be used as primary color for the current volume
+     */
+    public void setPrimaryColor(int color) {
+        if (this.mAdapter != null) {
+            this.mAdapter.setPrimaryColor(color);
+        }
     }
 
     /**

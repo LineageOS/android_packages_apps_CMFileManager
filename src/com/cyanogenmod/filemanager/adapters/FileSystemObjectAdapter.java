@@ -109,6 +109,8 @@ public class FileSystemObjectAdapter
     private OnSelectionChangedListener mOnSelectionChangedListener;
     private final ViewOutlineProvider mIconViewOutlineProvider;
 
+    private int mPrimaryColor;
+
     //The resource of the item icon
     private static final int RESOURCE_ITEM_ICON = R.id.navigation_view_item_icon;
     //The resource of the item name
@@ -144,6 +146,7 @@ public class FileSystemObjectAdapter
         this.mRequests = new WeakHashMap<ImageView, GetProviderIconTask>();
         this.mPickable = pickable;
         mRes = context.getResources();
+        mPrimaryColor = mRes.getColor(R.color.default_primary);
 
         mIconViewOutlineProvider = new ViewOutlineProvider() {
             @Override
@@ -489,6 +492,15 @@ public class FileSystemObjectAdapter
         }
     }
 
+    /**
+     * Method that sets the primary color for the current volume
+     *
+     * @param color hex color of to be used as primary color for the current volume
+     */
+    public void setPrimaryColor(int color) {
+        mPrimaryColor = color;
+    }
+
     private void setIcon(ImageView view, FileSystemObject fso) {
         // Cancel any previous loads to view
         mIconHolder.cancel(view);
@@ -522,13 +534,12 @@ public class FileSystemObjectAdapter
     // TODO: change folder colors depending on current volume (root, local, sdcard, usb, etc.)
     private void setFolderIcon(ImageView view, int iconId) {
         float opacity = mRes.getFloat(R.float_type.navigation_view_icon_circle_opacity);
-        int folderPrimaryColor = mRes.getColor(R.color.default_primary);
         int transparentColor = Color.argb(
                 Math.round(((float) 0xFF) * opacity),
-                Color.red(folderPrimaryColor),
-                Color.green(folderPrimaryColor),
-                Color.blue(folderPrimaryColor));
-        setIcon(mRes, view, mRes.getDrawable(iconId), folderPrimaryColor,
+                Color.red(mPrimaryColor),
+                Color.green(mPrimaryColor),
+                Color.blue(mPrimaryColor));
+        setIcon(mRes, view, mRes.getDrawable(iconId), mPrimaryColor,
                 R.drawable.ic_icon_background, transparentColor);
     }
 
