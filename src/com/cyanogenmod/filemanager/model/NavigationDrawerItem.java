@@ -97,6 +97,10 @@ public class NavigationDrawerItem {
         return mSelectedColor;
     }
 
+    public void setSelectedColor(int selectedColor) {
+        mSelectedColor = selectedColor;
+    }
+
     public boolean isSelected() {
         return mSelected;
     }

@@ -93,7 +93,7 @@ public class NavigationDrawerController implements OnDirectoryChangedListener {
         mLastRoot = 0;
         String title = null;
         String summary = null;
-        int color;
+        int color = mCtx.getResources().getColor(R.color.default_primary);
 
         // Determine display mode
         boolean showRoot = FileManagerApplication.getAccessMode().compareTo(AccessMode.SAFE) != 0;
@@ -102,12 +102,11 @@ public class NavigationDrawerController implements OnDirectoryChangedListener {
 
         // Load Header
         mNavigationDrawerItemList.add(new NavigationDrawerItem(0, NavigationDrawerItemType.HEADER,
-                null, null, 0, 0));
+                null, null, 0, color));
 
         // Load Home and Favorites
         title = mCtx.getResources().getString(R.string.navigation_item_title_home);
         summary = null;
-        color = mCtx.getResources().getColor(R.color.default_primary);
         mNavigationDrawerItemList.add(new NavigationDrawerItem(R.id.navigation_item_home,
                 NavigationDrawerItemType.SINGLE, title, summary, R.drawable.ic_home, color));
         // TODO: Re-enable Favorites once we have a fragment for it
@@ -303,14 +302,21 @@ public class NavigationDrawerController implements OnDirectoryChangedListener {
         deselectAll();
         String volumePath = StorageHelper.getStorageVolumeFromPath(path);
 
+        NavigationDrawerItem selectedItem = null;
         for (NavigationDrawerItem item : mNavigationDrawerItemList) {
             if (!TextUtils.isEmpty(volumePath) &&
                     TextUtils.equals(item.getSummary(), volumePath)) {
                 mCurrentSelection = item.getId();
                 item.setSelected(true);
+                selectedItem = item;
                 break;
             }
         }
+
+         if (selectedItem != null) {
+             int selectedColor = selectedItem.getSelectedColor();
+             mNavigationDrawerItemList.get(0).setSelectedColor(selectedColor);
+         }
 
         mAdapter.notifyDataSetChanged();
     }

@@ -89,6 +89,8 @@ public class NavigationDrawerAdapter extends BaseAdapter {
                 break;
             case HEADER:
                 convertView = layoutInflater.inflate(RESOURCE_HEADER, parent, false);
+                View headerView = convertView.findViewById(R.id.header);
+                headerView.setBackgroundColor(item.getSelectedColor());
                 break;
             default:
                 break;
