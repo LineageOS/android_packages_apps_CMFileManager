@@ -1869,6 +1869,7 @@ public class NavigationFragment extends Fragment
         mainActivity.getWindow().setStatusBarColor(statusBarColor);
 
         mToolBar.setBackgroundColor(backgroundColor);
+        getCurrentNavigationView().setPrimaryColor(backgroundColor);
 
         if (mOnDirectoryChangedListener != null) {
             mOnDirectoryChangedListener.onDirectoryChanged(item);
