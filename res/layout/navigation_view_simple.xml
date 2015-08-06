@@ -19,4 +19,5 @@
     android:id="@+id/navigation_view_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/navigation_view_item_default_fill"
     android:divider="@null" />
