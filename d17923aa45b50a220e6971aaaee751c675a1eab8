@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_ec3aaf32",
+        "filename": "res/values/floats.xml",
+        "patchSetId": 13
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-06T22:58:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_ccc48b43",
+      "range": {
+        "startLine": 18,
+        "startChar": 11,
+        "endLine": 18,
+        "endChar": 22
+      },
+      "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_8cfe9303",
         "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
         "patchSetId": 13
@@ -177,6 +201,30 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_8c61f33c",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 489,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-06T22:58:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_acc15731",
+      "range": {
+        "startLine": 487,
+        "startChar": 0,
+        "endLine": 489,
+        "endChar": 53
+      },
+      "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_2c04277b",
         "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
         "patchSetId": 13
@@ -188,6 +236,30 @@
       "writtenOn": "2015-08-06T21:54:32Z",
       "side": 1,
       "message": "set as static",
+      "range": {
+        "startLine": 570,
+        "startChar": 12,
+        "endLine": 570,
+        "endChar": 17
+      },
+      "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_4c5bdb86",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 570,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-06T22:58:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_2c04277b",
       "range": {
         "startLine": 570,
         "startChar": 12,
@@ -223,6 +295,30 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_0c55e350",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 594,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-06T22:58:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_8cdc5319",
+      "range": {
+        "startLine": 594,
+        "startChar": 19,
+        "endLine": 594,
+        "endChar": 21
+      },
+      "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_0cf9637f",
         "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
         "patchSetId": 13
@@ -240,6 +336,24 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_6c669f54",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 601,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-06T22:58:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_0cf9637f",
+      "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_ccd92b23",
         "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
         "patchSetId": 13
@@ -251,6 +365,24 @@
       "writtenOn": "2015-08-06T21:47:16Z",
       "side": 1,
       "message": "Make this a weak reference please.",
+      "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_0c272315",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-06T22:58:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_ccd92b23",
       "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
