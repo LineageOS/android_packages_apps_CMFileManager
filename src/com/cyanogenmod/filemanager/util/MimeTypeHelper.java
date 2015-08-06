@@ -265,6 +265,10 @@ public final class MimeTypeHelper {
      * @return String The associated mime/type icon resource identifier
      */
     public static final String getIcon(Context context, FileSystemObject fso) {
+        return getIcon(context, fso, false);
+    }
+
+    public static final String getIcon(Context context, FileSystemObject fso, boolean firstFound) {
         //Ensure that mime types are loaded
         if (sMimeTypes == null) {
             loadMimeTypes(context);
@@ -288,7 +292,7 @@ public final class MimeTypeHelper {
         //Get the extension and delivery
         String ext = FileHelper.getExtension(fso);
         if (ext != null) {
-            MimeTypeInfo mimeTypeInfo = getMimeTypeInternal(fso, ext);
+            MimeTypeInfo mimeTypeInfo = getMimeTypeInternal(fso, ext, firstFound);
 
             if (mimeTypeInfo != null) {
                 // Create a new drawable
@@ -434,6 +438,13 @@ public final class MimeTypeHelper {
     private static final MimeTypeInfo getMimeTypeInternal(FileSystemObject fso, String ext) {
         return getMimeTypeInternal(fso.getFullPath(), ext);
     }
+
+    private static final MimeTypeInfo getMimeTypeInternal(FileSystemObject fso,
+                                                          String ext,
+                                                          boolean firstFound) {
+        return getMimeTypeInternal(fso.getFullPath(), ext, firstFound);
+    }
+
     /**
      * Get the MimeTypeInfo that describes this file.
      * @param absolutePath The absolute path of the file.
@@ -441,10 +452,16 @@ public final class MimeTypeHelper {
      * @return The MimeTypeInfo object that describes this file, or null if it cannot be retrieved.
      */
     private static final MimeTypeInfo getMimeTypeInternal(String absolutePath, String ext) {
+        return getMimeTypeInternal(absolutePath, ext, false);
+    }
+
+    private static final MimeTypeInfo getMimeTypeInternal(String absolutePath,
+                                                          String ext,
+                                                          boolean firstFound) {
         MimeTypeInfo mimeTypeInfo = null;
         ArrayList<MimeTypeInfo> mimeTypeInfoList = sMimeTypes.get(ext.toLowerCase(Locale.ROOT));
         // Multiple mimetypes map to the same extension, try to resolve it.
-        if (mimeTypeInfoList != null && mimeTypeInfoList.size() > 1) {
+        if (mimeTypeInfoList != null && mimeTypeInfoList.size() > 1 && !firstFound) {
             if (absolutePath != null) {
                 String mimeType = getAmbiguousExtensionMimeType(absolutePath, ext);
                 mimeTypeInfo = sExtensionMimeTypes.get(ext + mimeType);
