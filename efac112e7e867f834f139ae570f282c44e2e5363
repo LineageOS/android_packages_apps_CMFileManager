@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f0e0f27_11273c15",
+        "filename": "src/com/cyanogenmod/filemanager/util/AmbiguousExtensionHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-08-06T06:15:48Z",
+      "side": 1,
+      "message": "Good call. Did not realize I needed to release it.",
+      "revId": "efac112e7e867f834f139ae570f282c44e2e5363",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
