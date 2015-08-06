@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_ac9a776b",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-06T20:55:54Z",
+      "side": 1,
+      "message": "line 147",
+      "parentUuid": "9f0e0f27_8cfe9303",
+      "range": {
+        "startLine": 23,
+        "startChar": 24,
+        "endLine": 23,
+        "endChar": 31
+      },
+      "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_b103f00f",
         "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
         "patchSetId": 13
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_6c8e9f2f",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-06T20:55:54Z",
+      "side": 1,
+      "message": "line 496",
+      "parentUuid": "9f0e0f27_b103f00f",
+      "range": {
+        "startLine": 49,
+        "startChar": 49,
+        "endLine": 49,
+        "endChar": 58
+      },
+      "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_d1066421",
         "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
         "patchSetId": 13
@@ -59,6 +107,24 @@
       "writtenOn": "2015-08-06T10:39:49Z",
       "side": 1,
       "message": "unused",
+      "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_8c89f327",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-06T20:55:54Z",
+      "side": 1,
+      "message": "line 571",
+      "parentUuid": "9f0e0f27_d1066421",
       "revId": "d17923aa45b50a220e6971aaaee751c675a1eab8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
