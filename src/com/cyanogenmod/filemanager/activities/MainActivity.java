@@ -736,19 +736,6 @@ public class MainActivity extends ActionBarActivity
 
             switch (view.getId()) {
                 //######################
-                //Breadcrumb Actions
-                //######################
-                case com.cyanogenmod.filemanager.R.id.ab_filesystem_info:
-                    //Show information of the filesystem
-                    com.cyanogenmod.filemanager.model.MountPoint mp =
-                            ((NavigationFragment)currentFragment)
-                                    .getCurrentNavigationView().getBreadcrumb().getMountPointInfo();
-                    com.cyanogenmod.filemanager.model.DiskUsage du =
-                            ((NavigationFragment)currentFragment)
-                                    .getCurrentNavigationView().getBreadcrumb().getDiskUsageInfo();
-                    ((NavigationFragment)currentFragment).showMountPointInfo(mp, du);
-                    break;
-                //######################
                 //Selection Actions
                 //######################
                 case com.cyanogenmod.filemanager.R.id.ab_selection_done:

@@ -922,4 +922,7 @@
     <string name="snackbar_unable_to_complete">Unable to complete action</string>
     <string name="snackbar_retry">RETRY</string>
     <string name="snackbar_upgrade">UPGRADE</string>
+
+    <!-- File System info -->
+    <string name="file_system_info_unavailable">Unable to fetch file system info for this path</string>
 </resources>

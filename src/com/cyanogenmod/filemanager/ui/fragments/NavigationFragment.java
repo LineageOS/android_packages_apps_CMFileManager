@@ -109,6 +109,8 @@ import com.cyanogenmod.filemanager.preferences.NavigationLayoutMode;
 import com.cyanogenmod.filemanager.preferences.ObjectIdentifier;
 import com.cyanogenmod.filemanager.preferences.PreferenceHelper;
 import com.cyanogenmod.filemanager.preferences.Preferences;
+import com.cyanogenmod.filemanager.tasks.FileSystemInfoTask;
+import com.cyanogenmod.filemanager.tasks.FilesystemAsyncTask;
 import com.cyanogenmod.filemanager.ui.IconHolder;
 import com.cyanogenmod.filemanager.ui.ThemeManager;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
@@ -262,12 +264,16 @@ public class NavigationFragment extends Fragment
 
                             // Set the free disk space warning level of the breadcrumb widget
                             Breadcrumb breadcrumb = getCurrentNavigationView().getBreadcrumb();
-                            String fds = Preferences.getSharedPreferences().getString(
-                                    FileManagerSettings.SETTINGS_DISK_USAGE_WARNING_LEVEL.getId(),
-                                    (String)FileManagerSettings.
-                                        SETTINGS_DISK_USAGE_WARNING_LEVEL.getDefaultValue());
-                            breadcrumb.setFreeDiskSpaceWarningLevel(Integer.parseInt(fds));
-                            breadcrumb.updateMountPointInfo();
+                            if (breadcrumb != null) {
+                                String fds = Preferences.getSharedPreferences().getString(
+                                        FileManagerSettings.SETTINGS_DISK_USAGE_WARNING_LEVEL.getId(),
+                                        (String)FileManagerSettings.
+                                                SETTINGS_DISK_USAGE_WARNING_LEVEL.getDefaultValue());
+                                mFreeDiskSpaceWarningLevel = Integer.parseInt(fds);
+                                breadcrumb.setFreeDiskSpaceWarningLevel(mFreeDiskSpaceWarningLevel);
+                                breadcrumb.updateMountPointInfo();
+                            }
+                            updateMountPointInfo();
                             return;
                         }
 
@@ -458,6 +464,10 @@ public class NavigationFragment extends Fragment
 
     private int mOrientation;
 
+    private FileSystemInfoTask mFileSystemInfoTask;
+    private MountPoint mMountPoint;
+    private DiskUsage mDiskUsage;
+    private int mFreeDiskSpaceWarningLevel;
 
     /**
      * @hide
@@ -590,6 +600,14 @@ public class NavigationFragment extends Fragment
                 InfoActionPolicy.showPropertiesDialog(getActivity(),
                         getCurrentNavigationView().getCurrentFso(), this);
                 return true;
+            case R.id.mnu_actions_file_system_info:
+                if (mMountPoint != null && mDiskUsage != null) {
+                    showMountPointInfo(mMountPoint, mDiskUsage);
+                } else {
+                    Toast.makeText(getActivity(), getString(R.string.file_system_info_unavailable),
+                            Toast.LENGTH_SHORT).show();
+                }
+                return true;
             default:
                 return false;
         }
@@ -655,6 +673,11 @@ public class NavigationFragment extends Fragment
 
         if (mActiveDialog != null && mActiveDialog.isShowing()) {
             mActiveDialog.dismiss();
+        }
+
+        if (mFileSystemInfoTask != null) {
+            mFileSystemInfoTask.cancel(true);
+            mFileSystemInfoTask = null;
         }
 
         recycle();
@@ -1727,6 +1750,7 @@ public class NavigationFragment extends Fragment
                 Breadcrumb breadcrumb = getCurrentNavigationView().getBreadcrumb();
                 if (breadcrumb.getMountPointInfo().compareTo(mountPoint) == 0) {
                     breadcrumb.updateMountPointInfo();
+                    updateMountPointInfo();
                 }
                 if (mountPoint.isSecure()) {
                     // Secure mountpoints only can be unmount, so we need to move the navigation
@@ -1738,6 +1762,24 @@ public class NavigationFragment extends Fragment
             }
         });
         dialog.show();
+    }
+
+    private void updateMountPointInfo() {
+        //Cancel the current execution (if any) and launch again
+        if (mFileSystemInfoTask != null) {
+            mFileSystemInfoTask.cancel(true);
+        }
+
+        mFileSystemInfoTask = new FileSystemInfoTask(this, mFreeDiskSpaceWarningLevel);
+        mFileSystemInfoTask.execute(getCurrentNavigationView().getCurrentDir());
+    }
+
+    public void setMountPoint(MountPoint mp) {
+        mMountPoint = mp;
+    }
+
+    public void setDiskUsage(DiskUsage ds) {
+        mDiskUsage = ds;
     }
 
     /**
@@ -2280,6 +2322,8 @@ public class NavigationFragment extends Fragment
 
         mToolBar.setBackgroundColor(backgroundColor);
         getCurrentNavigationView().setPrimaryColor(backgroundColor);
+
+        updateMountPointInfo();
 
         if (mOnDirectoryChangedListener != null) {
             mOnDirectoryChangedListener.onDirectoryChanged(item);

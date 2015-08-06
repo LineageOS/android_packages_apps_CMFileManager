@@ -46,4 +46,8 @@
         android:id="@+id/mnu_actions_properties_current_folder"
         app:showAsAction="never"
         android:title="@string/actions_menu_properties_current_folder"/>
+    <item
+        android:id="@+id/mnu_actions_file_system_info"
+        app:showAsAction="never"
+        android:title="@string/actionbar_button_filesystem_cd"/>
 </menu>
