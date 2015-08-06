@@ -200,21 +200,28 @@ public class MainActivity extends ActionBarActivity
         });
 
         final CardView cV = (CardView) findViewById(R.id.add_provider);
-        cV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setCurrentFragment(FragmentType.LOGIN);
-            }
-        });
+        if (showLoginCard(false)) {
 
-        Button dismiss =(Button) findViewById(R.id.dismiss_card);
-        dismiss.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                cV.setVisibility(View.GONE);
-                // TODO: Save that the card has been dismissed
-            }
-        });
+            cV.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    setCurrentFragment(FragmentType.LOGIN);
+                    showLoginCard(true);
+                }
+            });
+
+            Button dismiss = (Button) findViewById(R.id.dismiss_card);
+            dismiss.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    cV.setVisibility(View.GONE);
+                    showLoginCard(true);
+                }
+            });
+
+        } else {
+            cV.setVisibility(View.GONE);
+        }
 
         handleSearchBar();
 
@@ -645,6 +652,23 @@ public class MainActivity extends ActionBarActivity
                 e.printStackTrace();
             }
         }
+    }
+
+    private boolean showLoginCard(boolean disable) {
+        boolean cardEnabled = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.CLOUD_LOGIN_USED.getId(),
+                ((Boolean) FileManagerSettings.CLOUD_LOGIN_USED
+                        .getDefaultValue()).booleanValue());
+        if (disable) {
+            try {
+                Preferences.savePreference(FileManagerSettings.CLOUD_LOGIN_USED, Boolean.FALSE,
+                        true);
+                cardEnabled = false;
+            } catch (InvalidClassException e) {
+                e.printStackTrace();
+            }
+        }
+        return cardEnabled;
     }
 
     @Override

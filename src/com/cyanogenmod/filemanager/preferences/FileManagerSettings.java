@@ -30,6 +30,12 @@ public enum FileManagerSettings {
     SETTINGS_FIRST_USE("cm_filemanager_first_use", Boolean.TRUE),  //$NON-NLS-1$
 
     /**
+     * Whether the cloud login card has been used
+     * @hide
+     */
+    CLOUD_LOGIN_USED("cm_filemanager_cloud_login_used", Boolean.TRUE),  //$NON-NLS-1$
+
+    /**
      * The access mode to use
      * @hide
      */
