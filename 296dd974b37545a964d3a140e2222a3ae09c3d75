@@ -25,6 +25,46 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_cc9dab67",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-06T21:15:07Z",
+      "side": 1,
+      "message": "Won\u0027t this trash the navigation fragment and its currently selected items?",
+      "revId": "296dd974b37545a964d3a140e2222a3ae09c3d75",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_0c7de31b",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 428,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-06T21:15:07Z",
+      "side": 1,
+      "message": "is this supposed to do something?",
+      "range": {
+        "startLine": 428,
+        "startChar": 12,
+        "endLine": 428,
+        "endChar": 21
+      },
+      "revId": "296dd974b37545a964d3a140e2222a3ae09c3d75",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_ec798f2f",
         "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
         "patchSetId": 9
@@ -42,6 +82,23 @@
         "endLine": 615,
         "endChar": 9
       },
+      "revId": "296dd974b37545a964d3a140e2222a3ae09c3d75",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_2c9d4759",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 727,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-06T21:15:07Z",
+      "side": 1,
+      "message": "Any reason we aren\u0027t removing this completely?\nUnless you\u0027re unsure whether you have action parity.",
       "revId": "296dd974b37545a964d3a140e2222a3ae09c3d75",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
