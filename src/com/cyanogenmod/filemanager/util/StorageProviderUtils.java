@@ -586,6 +586,7 @@ public final class StorageProviderUtils {
      */
     public static void loadProviderLogin(Context ctx) {
         Intent settingsIntent = new Intent(CLOUD_STORAGE_LOGIN);
+        settingsIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         ctx.startActivity(settingsIntent);
     }
 }
