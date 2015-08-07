@@ -91,12 +91,10 @@ public final class MountPointHelper {
     public static boolean refreshMountPoints(Console console) {
         synchronized(sMountPoints) {
             try {
-                if (FileManagerApplication.hasShellCommands()) {
-                    sMountPoints.clear();
-                    sMountPoints.addAll(CommandHelper.getMountPoints(null, null));
-                    sLastCachedTime = System.currentTimeMillis();
-                    return true;
-                }
+                sMountPoints.clear();
+                sMountPoints.addAll(CommandHelper.getMountPoints(null, null));
+                sLastCachedTime = System.currentTimeMillis();
+                return true;
             } catch (Exception e) {
                 Log.e(TAG, "Failed to update the mount point information", e); //$NON-NLS-1$
             }
@@ -119,7 +117,7 @@ public final class MountPointHelper {
             // Refresh mount points after some time (5 minutes should be enough)
             long now = System.currentTimeMillis();
             synchronized(sMountPoints) {
-                if (sMountPoints == null || (now - sLastCachedTime) > MAX_CACHED_TIME) {
+                if (sMountPoints == null || (now - sLastCachedTime) > MAX_CACHED_TIME || FileManagerApplication.hasShellCommands()) {
                     //Retrieve the mount points
                     refreshMountPoints(console);
                 }
