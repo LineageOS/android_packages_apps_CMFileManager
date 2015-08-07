@@ -195,12 +195,12 @@ public class MainActivity extends ActionBarActivity
         });
 
         final CardView cV = (CardView) findViewById(R.id.add_provider);
-        if (isLoginCardDisabled(false)) {
+        if (isLoginCardNotDisabled(false)) {
             cV.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     StorageProviderUtils.loadProviderLogin(getApplicationContext());
-                    isLoginCardDisabled(true);
+                    isLoginCardNotDisabled(true);
                 }
             });
 
@@ -209,7 +209,7 @@ public class MainActivity extends ActionBarActivity
                 @Override
                 public void onClick(View view) {
                     cV.setVisibility(View.GONE);
-                    isLoginCardDisabled(true);
+                    isLoginCardNotDisabled(true);
                 }
             });
 
@@ -519,7 +519,7 @@ public class MainActivity extends ActionBarActivity
                 break;
             case R.id.navigation_item_manage:
                 if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_manage");
-                StorageProviderUtils.loadProviderLogin(this);
+                StorageProviderUtils.manageStorageSources(this);
                 break;
             case R.id.navigation_item_settings:
                 if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_settings");
@@ -630,7 +630,7 @@ public class MainActivity extends ActionBarActivity
         }
     }
 
-    private boolean isLoginCardDisabled(boolean disable) {
+    private boolean isLoginCardNotDisabled(boolean disable) {
         boolean status = Preferences.getSharedPreferences().getBoolean(
                 FileManagerSettings.CLOUD_LOGIN_USED.getId(),
                 ((Boolean) FileManagerSettings.CLOUD_LOGIN_USED
