@@ -16,6 +16,41 @@
       "revId": "945f62936e7d504d945ce2e70aa859fe5026d820",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_63458d70",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 657,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-07T22:38:59Z",
+      "side": 1,
+      "message": "I wouldn\u0027t rename the parameter, I\u0027d invert it to make true show and false disable as you stated. The function name is also weird is it isn\u0027t actually showing anything, just setting a preference.",
+      "parentUuid": "9f0e0f27_403f1fd6",
+      "revId": "945f62936e7d504d945ce2e70aa859fe5026d820",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_037371e9",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 667,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-07T22:38:59Z",
+      "side": 1,
+      "message": "What is throwing this? Is it okay to ignore it? If you are ignoring it, please put a comment stating why it\u0027s ok.",
+      "revId": "945f62936e7d504d945ce2e70aa859fe5026d820",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
