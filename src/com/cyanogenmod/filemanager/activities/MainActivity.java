@@ -526,18 +526,6 @@ public class MainActivity extends ActionBarActivity
     private void initEasyModePlus() {
 
         MIME_TYPE_LOCALIZED_NAMES = MimeTypeCategory.getFriendlyLocalizedNames(this);
-        EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.NONE, getResources().getDrawable(
-                R.drawable.ic_em_all));
-        EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.IMAGE, getResources().getDrawable(
-                R.drawable.ic_em_image));
-        EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.VIDEO, getResources().getDrawable(
-                R.drawable.ic_em_video));
-        EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.AUDIO, getResources().getDrawable(
-                R.drawable.ic_em_music));
-        EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.DOCUMENT, getResources().getDrawable(
-                R.drawable.ic_em_document));
-        EASY_MODE_ICONS.put(MimeTypeHelper.MimeTypeCategory.APP, getResources().getDrawable(
-                R.drawable.ic_em_application));
 
         GridView gridview = (GridView) findViewById(R.id.easy_modeView);
 

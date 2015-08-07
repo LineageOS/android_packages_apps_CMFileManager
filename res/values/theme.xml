@@ -173,39 +173,6 @@
     <color name="console_bg_color">@color/console_bg</color>
     <color name="console_fg_color">@color/console_fg</color>
 
-    <!-- Fso icons -->
-    <drawable name="ic_fso_folder_drawable">@drawable/ic_fso_folder</drawable>
-    <drawable name="ic_fso_default_drawable">@drawable/ic_fso_default</drawable>
-    <drawable name="fso_type_app_drawable">@drawable/fso_type_app</drawable>
-    <drawable name="fso_type_audio_drawable">@drawable/fso_type_audio</drawable>
-    <drawable name="fso_type_binary_drawable">@drawable/fso_type_binary</drawable>
-    <drawable name="fso_type_calendar_drawable">@drawable/fso_type_calendar</drawable>
-    <drawable name="fso_type_cdimage_drawable">@drawable/fso_type_cdimage</drawable>
-    <drawable name="fso_type_compress_drawable">@drawable/fso_type_compress</drawable>
-    <drawable name="fso_type_contact_drawable">@drawable/fso_type_contact</drawable>
-    <drawable name="fso_type_database_drawable">@drawable/fso_type_database</drawable>
-    <drawable name="fso_type_document_drawable">@drawable/fso_type_document</drawable>
-    <drawable name="fso_type_ebook_drawable">@drawable/fso_type_ebook</drawable>
-    <drawable name="fso_type_email_drawable">@drawable/fso_type_email</drawable>
-    <drawable name="fso_type_executable_drawable">@drawable/fso_type_executable</drawable>
-    <drawable name="fso_type_feed_drawable">@drawable/fso_type_feed</drawable>
-    <drawable name="fso_type_font_drawable">@drawable/fso_type_font</drawable>
-    <drawable name="fso_type_image_drawable">@drawable/fso_type_image</drawable>
-    <drawable name="fso_type_markup_document_drawable">@drawable/fso_type_markup_document</drawable>
-    <drawable name="fso_type_pdf_drawable">@drawable/fso_type_pdf</drawable>
-    <drawable name="fso_type_presentation_drawable">@drawable/fso_type_presentation</drawable>
-    <drawable name="fso_type_security_drawable">@drawable/fso_type_security</drawable>
-    <drawable name="fso_type_shell_drawable">@drawable/fso_type_shell</drawable>
-    <drawable name="fso_type_source_drawable">@drawable/fso_type_source</drawable>
-    <drawable name="fso_type_spreadsheet_drawable">@drawable/fso_type_spreadsheet</drawable>
-    <drawable name="fso_type_system_drawable">@drawable/fso_type_system</drawable>
-    <drawable name="fso_type_text_drawable">@drawable/fso_type_text</drawable>
-    <drawable name="fso_type_video_drawable">@drawable/fso_type_video</drawable>
-
-    <!-- Overlay -->
-    <drawable name="ic_overlay_secure_drawable">@drawable/ic_overlay_secure</drawable>
-    <drawable name="ic_overlay_remote_drawable">@drawable/ic_overlay_remote</drawable>
-
     <!-- Syntax Highlight -->
     <color name="ash_text_color">@color/black_transparent</color>
     <color name="ash_assignment_color">@color/black_transparent</color>
