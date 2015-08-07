@@ -528,7 +528,7 @@ public final class StorageProviderUtils {
         final String authority = sharedPreferences.getString(providerHashCode +
                 KEY_AUTHORITY, null);
         final String rootDocumentId = sharedPreferences.getString(providerHashCode
-                        + KEY_ROOT_DOC_ID, null);
+                + KEY_ROOT_DOC_ID, null);
         final String packageName = sharedPreferences.getString(providerHashCode +
                 KEY_PACKAGE, null);
         final String title = sharedPreferences.getString(providerHashCode + KEY_TITLE, null);
@@ -586,6 +586,7 @@ public final class StorageProviderUtils {
      */
     public static void loadProviderLogin(Context ctx) {
         Intent settingsIntent = new Intent(CLOUD_STORAGE_LOGIN);
+        settingsIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         ctx.startActivity(settingsIntent);
     }
 }
