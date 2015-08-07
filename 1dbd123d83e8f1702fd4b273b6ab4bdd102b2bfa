@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f0e0f27_6098e369",
+        "filename": "src/com/cyanogenmod/filemanager/tasks/FileSystemInfoTask.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-07T03:33:16Z",
+      "side": 1,
+      "message": "Never used, I\u0027d remove it or if you want to keep it for future proofing or whatever, either wrap in WeakReference or use the ApplicationContext",
+      "revId": "1dbd123d83e8f1702fd4b273b6ab4bdd102b2bfa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_80bc17bc",
+        "filename": "src/com/cyanogenmod/filemanager/tasks/FileSystemInfoTask.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-07T03:33:16Z",
+      "side": 1,
+      "message": "Is this a retained Fragment?  Regardless, I\u0027d move it\u0027s access off of the background thread and into the UI Thread. If it isn\u0027t a retained fragment, AsyncTask can execute and the Activity/Fragment be finished, we\u0027re still holding onto this (however minute it may be). It\u0027s best to use this as a WeakReference or have a manner of Register/Unregister. Because it\u0027s a separate class file, I wouldn\u0027t tightly couple it with the Fragment and would opt to have a callback interface defined as you can\u0027t really control the context it is used if it isn\u0027t an internal private class to the Fragment.",
+      "revId": "1dbd123d83e8f1702fd4b273b6ab4bdd102b2bfa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_409ddf57",
+        "filename": "src/com/cyanogenmod/filemanager/tasks/FileSystemInfoTask.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-07T03:33:16Z",
+      "side": 1,
+      "message": "What\u0027s the exception? Maybe use 1.7 multi-catch?",
+      "revId": "1dbd123d83e8f1702fd4b273b6ab4bdd102b2bfa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
