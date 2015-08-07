@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f0e0f27_a0139bb8",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 609,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-07T04:26:06Z",
+      "side": 1,
+      "message": "If we receive a broadcast right before this is clicked, these are not null right here, then are null when you call showMountPointInfo() because they failed to get set. This is why I was saying you should move the variable setting onto the UI Thread of the AsyncTask.",
+      "revId": "63157db2c289c6df045ecf69e7434e2287207a77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_801897d3",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 682,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-07T04:26:06Z",
+      "side": 1,
+      "message": "You don\u0027t need to check if it is running before attempting cancellation, only null.\n\nIn terms of protecting against Context leaking, an interrupt may or may not work.  It\u0027s a partial guarantee in a sense that the cancel will mark the task as cancelled and throw an interrupt in certain situations (which getting the info may or may not throw, however, it will swallow it since internal to the API call, it does a catch (Exception e)), your thread may still live longer than the Activity lifecycle. This is generally why I opt for a weak reference or a register/unregister as you are given a full guarantee",
+      "revId": "63157db2c289c6df045ecf69e7434e2287207a77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_608223cb",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 1848,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-07T04:26:06Z",
+      "side": 1,
+      "message": "Again, if it isn\u0027t null, you can just attempt to cancel it.",
+      "revId": "63157db2c289c6df045ecf69e7434e2287207a77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
