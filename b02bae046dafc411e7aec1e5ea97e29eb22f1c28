@@ -22,6 +22,30 @@
       "revId": "b02bae046dafc411e7aec1e5ea97e29eb22f1c28",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_762c2999",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-07T23:20:21Z",
+      "side": 1,
+      "message": "Good point, it is not currently, i need to figure that out.",
+      "parentUuid": "9f0e0f27_6340ed08",
+      "range": {
+        "startLine": 92,
+        "startChar": 51,
+        "endLine": 92,
+        "endChar": 67
+      },
+      "revId": "b02bae046dafc411e7aec1e5ea97e29eb22f1c28",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
