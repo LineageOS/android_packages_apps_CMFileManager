@@ -38,7 +38,7 @@ public abstract class FileSystemObject implements Serializable, Comparable<FileS
     private static final long serialVersionUID = -571144166609728391L;
 
     //Resource identifier for default icon
-    private static final int RESOURCE_ICON_DEFAULT = R.drawable.ic_fso_default;
+    private static final int RESOURCE_ICON_DEFAULT = R.drawable.ic_category_misc;
 
     private int mResourceIconId;
     private String mName;

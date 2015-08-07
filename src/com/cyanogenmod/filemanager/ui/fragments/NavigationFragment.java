@@ -854,7 +854,7 @@ public class NavigationFragment extends Fragment
         TextView directory = (TextView) view
                 .findViewById(R.id.history_item_directory);
 
-        int iconResId = R.drawable.ic_fso_folder_drawable;
+        int iconResId = R.drawable.ic_folder;
         if (navigable instanceof SearchInfoParcelable) {
             iconResId = R.drawable.ic_history_search_drawable;
         }

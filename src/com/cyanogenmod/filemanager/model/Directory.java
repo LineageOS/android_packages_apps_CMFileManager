@@ -28,7 +28,7 @@ public class Directory extends FileSystemObject {
     private static final long serialVersionUID = -3975569940766905884L;
 
     //Resource identifier for default icon
-    private static final int RESOURCE_FOLDER_DEFAULT = R.drawable.ic_fso_folder;
+    private static final int RESOURCE_FOLDER_DEFAULT = R.drawable.ic_folder;
 
     /**
      * The unix identifier of the object.
