@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f0e0f27_403f1fd6",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 657,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-07T05:15:16Z",
+      "side": 1,
+      "message": "rename parameter... true shows card, false hides",
+      "revId": "945f62936e7d504d945ce2e70aa859fe5026d820",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
