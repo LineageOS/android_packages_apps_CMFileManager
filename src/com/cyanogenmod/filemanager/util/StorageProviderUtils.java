@@ -68,6 +68,8 @@ public final class StorageProviderUtils {
     public static final String CACHE_DIR = ".storage-provider-files";
     private static final String DEFAULT_MIMETYPE = "text/plain";
     private static final String CLOUD_STORAGE_LOGIN = "android.settings.CLOUD_STORAGE_LOGIN";
+    private static final String INTERNAL_STORAGE_SETTINGS
+            = "android.settings.INTERNAL_STORAGE_SETTINGS"
 
     private static final String TAG = StorageProviderUtils.class.getSimpleName();
 
@@ -587,5 +589,14 @@ public final class StorageProviderUtils {
     public static void loadProviderLogin(Context ctx) {
         Intent settingsIntent = new Intent(CLOUD_STORAGE_LOGIN);
         ctx.startActivity(settingsIntent);
+    }
+
+    /*
+     * Start Intent for manage storage sources
+     */
+    public static void manageStorageSources(Context context) {
+        Intent intent = new Intent();
+        intent.setAction(INTERNAL_STORAGE_SETTINGS);
+        context.startActivity(intent);
     }
 }

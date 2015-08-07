@@ -743,6 +743,8 @@
     <string name="pref_secure_storage_reset_password_title">Change password</string>
     <!-- Preferences - Storage - Secure Storage - Delete storage title -->
     <string name="pref_secure_storage_delete_storage_title">Delete storage</string>
+    <!-- Preferences - Storage - Manage storage title -->
+    <string name="pref_manage_storage_sources_title">Manage storage sources</string>
     <!-- Preferences - Editor - Behaviour category -->
     <string name="pref_editor_behaviour_category">Behaviour</string>
     <!-- Preferences - Editor - No suggestions -->
