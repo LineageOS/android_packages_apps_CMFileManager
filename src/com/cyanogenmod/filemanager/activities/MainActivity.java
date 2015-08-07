@@ -519,7 +519,7 @@ public class MainActivity extends ActionBarActivity
                 break;
             case R.id.navigation_item_manage:
                 if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_manage");
-                StorageProviderUtils.loadProviderLogin(this);
+                StorageProviderUtils.manageStorageSources(this);
                 break;
             case R.id.navigation_item_settings:
                 if (DEBUG) Log.d(TAG, "onNavigationItemSelected::navigation_item_settings");
