@@ -17,6 +17,7 @@
 package com.cyanogenmod.filemanager.util;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
@@ -576,5 +577,11 @@ public final class StorageProviderUtils {
             }
         }
         return title;
+    }
+
+    public static void manageStorageSources(Context context) {
+        Intent intent = new Intent();
+        intent.setAction("android.settings.INTERNAL_STORAGE_SETTINGS");
+        context.startActivity(intent);
     }
 }

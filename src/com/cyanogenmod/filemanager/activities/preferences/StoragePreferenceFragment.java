@@ -31,6 +31,7 @@ import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
 import com.cyanogenmod.filemanager.preferences.Preferences;
+import com.cyanogenmod.filemanager.util.StorageProviderUtils;
 
 /**
  * A class that manages the storage options
@@ -43,8 +44,10 @@ public class StoragePreferenceFragment extends TitlePreferenceFragment {
 
     private static final String KEY_RESET_PASSWORD = "secure_storage_reset_password";
     private static final String KEY_DELETE_STORAGE = "secure_storage_delete_storage";
+    private static final String KEY_MANAGE_STORAGE = "manage_storage_sources";
 
     private Preference mResetPassword;
+    private Preference mManageStorageSources;
     private Preference mDeleteStorage;
     private SwitchPreference mDelayedSync;
 
@@ -81,6 +84,8 @@ public class StoragePreferenceFragment extends TitlePreferenceFragment {
                 getSecureConsole().requestReset(getActivity());
             } else if (preference.equals(mDeleteStorage)) {
                 getSecureConsole().requestDelete(getActivity());
+            } else if (preference.equals(mManageStorageSources)) {
+                StorageProviderUtils.manageStorageSources(getActivity());
             }
             return false;
         }
@@ -135,6 +140,9 @@ public class StoragePreferenceFragment extends TitlePreferenceFragment {
         // Delete storage
         mDeleteStorage = findPreference(KEY_DELETE_STORAGE);
         mDeleteStorage.setOnPreferenceClickListener(mOnClickListener);
+
+        mManageStorageSources = findPreference(KEY_MANAGE_STORAGE);
+        mManageStorageSources.setOnPreferenceClickListener(mOnClickListener);
 
         // Delayed sync
         this.mDelayedSync =

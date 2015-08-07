@@ -17,6 +17,11 @@
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Reset password -->
+    <Preference
+            android:key="manage_storage_sources"
+            android:title="@string/pref_manage_storage_sources_title"/>
+
     <!-- Secure Storage -->
     <PreferenceCategory
       android:key="secure_storage"
