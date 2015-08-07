@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_40eb9faf",
+        "filename": "src/com/cyanogenmod/filemanager/tasks/FileSystemInfoTask.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-08-07T03:44:28Z",
+      "side": 1,
+      "message": "Context shouldn\u0027t be needed, removed.",
+      "parentUuid": "9f0e0f27_6098e369",
+      "revId": "1dbd123d83e8f1702fd4b273b6ab4bdd102b2bfa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_80bc17bc",
         "filename": "src/com/cyanogenmod/filemanager/tasks/FileSystemInfoTask.java",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_800ad787",
+        "filename": "src/com/cyanogenmod/filemanager/tasks/FileSystemInfoTask.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-08-07T03:44:28Z",
+      "side": 1,
+      "message": "Good call, since the fragment has a reference to this task, going to go with cancelling this task if executing in the Fragment\u0027s onDestory and nulling out the task reference so it can be GC-ed.",
+      "parentUuid": "9f0e0f27_80bc17bc",
+      "revId": "1dbd123d83e8f1702fd4b273b6ab4bdd102b2bfa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_409ddf57",
         "filename": "src/com/cyanogenmod/filemanager/tasks/FileSystemInfoTask.java",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2015-08-07T03:33:16Z",
       "side": 1,
       "message": "What\u0027s the exception? Maybe use 1.7 multi-catch?",
+      "revId": "1dbd123d83e8f1702fd4b273b6ab4bdd102b2bfa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_00cda75c",
+        "filename": "src/com/cyanogenmod/filemanager/tasks/FileSystemInfoTask.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-08-07T03:44:28Z",
+      "side": 1,
+      "message": "No idea, catch block was copied from another task. seems unnecessary as getMountPointDiskUsage is catching exceptions. Removed.",
+      "parentUuid": "9f0e0f27_409ddf57",
       "revId": "1dbd123d83e8f1702fd4b273b6ab4bdd102b2bfa",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
