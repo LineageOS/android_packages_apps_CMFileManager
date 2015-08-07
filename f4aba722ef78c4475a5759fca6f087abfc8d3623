@@ -16,6 +16,24 @@
       "revId": "f4aba722ef78c4475a5759fca6f087abfc8d3623",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_b631a1ef",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-07T23:27:53Z",
+      "side": 1,
+      "message": "Yup, works just the same here. Should prevent any weirdness from it being in onStart().",
+      "parentUuid": "9f0e0f27_9627bdb7",
+      "revId": "f4aba722ef78c4475a5759fca6f087abfc8d3623",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
