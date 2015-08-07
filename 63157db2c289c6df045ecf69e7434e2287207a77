@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_40eeff88",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 609,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-08-07T04:44:47Z",
+      "side": 1,
+      "message": "I\u0027m not sure that moving this to the ui thread in the aynctask actually protects against the case you\u0027re describing, these calls aren\u0027t in an synchronized block, think you can still have a race here and have these values change between this check and showMountPointInfo?\n\nwent ahead and moved it to the ui thread in case i\u0027m missing something here.",
+      "parentUuid": "9f0e0f27_a0139bb8",
+      "revId": "63157db2c289c6df045ecf69e7434e2287207a77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_801897d3",
         "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
         "patchSetId": 4
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_20030b45",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 682,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-08-07T04:44:47Z",
+      "side": 1,
+      "message": "sounds good, going with the weakreference",
+      "parentUuid": "9f0e0f27_801897d3",
+      "revId": "63157db2c289c6df045ecf69e7434e2287207a77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_608223cb",
         "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
         "patchSetId": 4
@@ -47,6 +83,24 @@
       "writtenOn": "2015-08-07T04:26:06Z",
       "side": 1,
       "message": "Again, if it isn\u0027t null, you can just attempt to cancel it.",
+      "revId": "63157db2c289c6df045ecf69e7434e2287207a77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_8099b720",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 1848,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-08-07T04:44:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_608223cb",
       "revId": "63157db2c289c6df045ecf69e7434e2287207a77",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
