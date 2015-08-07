@@ -330,16 +330,14 @@ public final class MimeTypeHelper {
 
         // Check  system file
         if (FileHelper.isSystemFile(fso)) {
-            // TODO: Replace with correct drawable
-            return R.drawable.fso_type_system_drawable;
+            return R.drawable.ic_filetype_system_file;
         }
         // Check if the fso is executable (but not a symlink)
         if (fso.getPermissions() != null && !(fso instanceof Symlink)) {
             if (fso.getPermissions().getUser().isExecute() ||
                 fso.getPermissions().getGroup().isExecute() ||
                 fso.getPermissions().getOthers().isExecute()) {
-                // TODO: Replace with correct drawable
-                return R.drawable.fso_type_executable_drawable;
+                return R.drawable.ic_filetype_executable;
             }
         }
         return R.drawable.ic_category_misc;
