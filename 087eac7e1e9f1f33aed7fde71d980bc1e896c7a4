@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_433f29d6",
+        "filename": "res/layout/home_fragment.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-07T22:59:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_6308ed27",
+      "revId": "087eac7e1e9f1f33aed7fde71d980bc1e896c7a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_c0032f0f",
         "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2015-08-07T05:50:51Z",
       "side": 1,
       "message": "lw",
+      "revId": "087eac7e1e9f1f33aed7fde71d980bc1e896c7a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_232435c6",
+        "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 776,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-07T22:59:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_c0032f0f",
       "revId": "087eac7e1e9f1f33aed7fde71d980bc1e896c7a4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -59,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_e32d1da9",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/QuickSearchAdapter.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-07T22:59:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_002127b5",
+      "range": {
+        "startLine": 44,
+        "startChar": 78,
+        "endLine": 44,
+        "endChar": 81
+      },
+      "revId": "087eac7e1e9f1f33aed7fde71d980bc1e896c7a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_801e576e",
         "filename": "src/com/cyanogenmod/filemanager/adapters/QuickSearchAdapter.java",
         "patchSetId": 9
@@ -70,6 +130,24 @@
       "writtenOn": "2015-08-07T05:50:51Z",
       "side": 1,
       "message": "lw",
+      "revId": "087eac7e1e9f1f33aed7fde71d980bc1e896c7a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_032131b5",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/QuickSearchAdapter.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-07T22:59:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_801e576e",
       "revId": "087eac7e1e9f1f33aed7fde71d980bc1e896c7a4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -93,6 +171,24 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_c32a198f",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/QuickSearchAdapter.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-07T22:59:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_60134368",
+      "revId": "087eac7e1e9f1f33aed7fde71d980bc1e896c7a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_a0195b89",
         "filename": "src/com/cyanogenmod/filemanager/adapters/QuickSearchAdapter.java",
         "patchSetId": 9
@@ -104,6 +200,24 @@
       "writtenOn": "2015-08-07T05:50:51Z",
       "side": 1,
       "message": "mIconHolder isn\u0027t needed for this. You already have the icon you need, use setIcon with specified colors to set the circle background.",
+      "revId": "087eac7e1e9f1f33aed7fde71d980bc1e896c7a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_a3196589",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/QuickSearchAdapter.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-07T22:59:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_a0195b89",
       "revId": "087eac7e1e9f1f33aed7fde71d980bc1e896c7a4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -127,6 +241,24 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_831e616e",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/QuickSearchAdapter.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-07T22:59:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_40183f80",
+      "revId": "087eac7e1e9f1f33aed7fde71d980bc1e896c7a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_200d4b3e",
         "filename": "src/com/cyanogenmod/filemanager/adapters/QuickSearchAdapter.java",
         "patchSetId": 9
@@ -138,6 +270,24 @@
       "writtenOn": "2015-08-07T05:50:51Z",
       "side": 1,
       "message": "lw",
+      "revId": "087eac7e1e9f1f33aed7fde71d980bc1e896c7a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_63134d68",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/QuickSearchAdapter.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-07T22:59:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f0e0f27_200d4b3e",
       "revId": "087eac7e1e9f1f33aed7fde71d980bc1e896c7a4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
