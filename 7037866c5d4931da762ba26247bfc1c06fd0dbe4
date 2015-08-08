@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9f0e0f27_76a549b5",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-08T01:44:55Z",
+      "side": 1,
+      "message": "it\u0027s not. removed.",
+      "parentUuid": "9f0e0f27_d6ef75e7",
+      "range": {
+        "startLine": 66,
+        "startChar": 38,
+        "endLine": 66,
+        "endChar": 48
+      },
+      "revId": "7037866c5d4931da762ba26247bfc1c06fd0dbe4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f0e0f27_76c0a951",
         "filename": "src/com/cyanogenmod/filemanager/util/StorageProviderUtils.java",
         "patchSetId": 9
@@ -36,6 +60,30 @@
       "writtenOn": "2015-08-08T01:37:52Z",
       "side": 1,
       "message": "why is this changed?",
+      "range": {
+        "startLine": 518,
+        "startChar": 24,
+        "endLine": 518,
+        "endChar": 45
+      },
+      "revId": "7037866c5d4931da762ba26247bfc1c06fd0dbe4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f0e0f27_56aa4585",
+        "filename": "src/com/cyanogenmod/filemanager/util/StorageProviderUtils.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 518,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-08T01:44:55Z",
+      "side": 1,
+      "message": "Not sure, reverted.",
+      "parentUuid": "9f0e0f27_76c0a951",
       "range": {
         "startLine": 518,
         "startChar": 24,
