@@ -25,6 +25,13 @@ import android.content.pm.ApplicationInfo;
 import android.os.Environment;
 import android.util.Log;
 
+import android.widget.Toast;
+import com.cyanogen.ambient.analytics.AnalyticsApi;
+import com.cyanogen.ambient.analytics.AnalyticsServices;
+import com.cyanogen.ambient.analytics.Event;
+import com.cyanogen.ambient.common.ConnectionResult;
+import com.cyanogen.ambient.common.api.AmbientApiClient;
+import com.cyanogenmod.filemanager.analytics.Analytics;
 import com.cyanogenmod.filemanager.console.Console;
 import com.cyanogenmod.filemanager.console.ConsoleAllocException;
 import com.cyanogenmod.filemanager.console.ConsoleBuilder;
@@ -73,6 +80,8 @@ public final class FileManagerApplication extends Application {
     //Static resources
     private static FileManagerApplication sApp;
     private static ConsoleHolder sBackgroundConsole;
+
+    private Analytics mAnalytics;
 
     private static boolean sIsDebuggable = false;
     private static boolean sHasShellCommands = false;
@@ -300,6 +309,17 @@ public final class FileManagerApplication extends Application {
         } catch (Exception e) {
             Log.e(TAG, "Mime-types failed.", e); //$NON-NLS-1$
         }
+
+        AmbientApiClient client = new AmbientApiClient.Builder(this)
+                .addApi(AnalyticsServices.API)
+                .build();
+        client.connect();
+
+        mAnalytics = new Analytics(this, client);
+    }
+
+    public Analytics getAnalyticsApi() {
+        return mAnalytics;
     }
 
     /**

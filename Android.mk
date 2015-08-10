@@ -37,6 +37,8 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v7-cardview \
     cmfm-ambientsdk \
 
+LOCAL_STATIC_JAVA_AAR_LIBRARIES := ambientsdk
+
 LOCAL_PACKAGE_NAME := CMFileManager
 LOCAL_CERTIFICATE := platform
 #LOCAL_PROGUARD_FLAG_FILES := proguard.flags
