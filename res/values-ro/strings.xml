@@ -56,7 +56,7 @@
   <string name="msgs_success">Operațiunea a fost finalizată cu succes.</string>
   <string name="msgs_unknown">A fost detectată o eroare. Operațiunea nu a reușit.</string>
   <string name="msgs_insufficient_permissions">Această operațiune necesită permisiuni ridicate. Încercați să schimbați la modul de Acces Root.</string>
-  <string name="msgs_no_disk_space">Operația nu a reușit deoarece nu există spaţiu liber rămas pe dispozitiv.</string>
+  <string name="msgs_no_disk_space">Operația nu a reușit deoarece nu există spațiu liber rămas pe dispozitiv.</string>
   <string name="msgs_file_not_found">Fișierul sau dosarul nu a fost găsit.</string>
   <string name="msgs_command_not_found">Comanda operațiunii nu a fost găsită sau are o definiție incorectă.</string>
   <string name="msgs_io_failed">Eroare citire/scriere.</string>
@@ -337,7 +337,7 @@
   <string name="pref_secure_storage_delayed_sync_title">Sincronizare întârziată</string>
   <string name="pref_secure_storage_delayed_sync_summary">Sincronizarea unor sisteme cu fişiere sigure este o operaţie costisitoare. Activaţi această opţiune pentru a permite răspunsuri în timp mai bune după fiecare operațiune, efectuând sincronizări atunci când sistemul de fişiere este în stare nefolosită, dar în detrimentul pierderii de informaţii în aşteptare de sincronizate în cazul unei erori a aplicației.</string>
   <string name="pref_secure_storage_reset_password_title">Schimbă parola</string>
-  <string name="pref_secure_storage_delete_storage_title">Ştergeţi stocarea</string>
+  <string name="pref_secure_storage_delete_storage_title">Ștergeți stocarea</string>
   <string name="pref_editor_behaviour_category">Comportament</string>
   <string name="pref_no_suggestions">Fără sugestii</string>
   <string name="pref_no_suggestions_desc">Nu afișa sugestiile din dicționar în timp ce editez fișierul</string>
