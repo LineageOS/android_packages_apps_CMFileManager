@@ -225,20 +225,38 @@ public final class IntentsActionPolicy extends ActionsPolicy {
 
                 final String path = StorageApiConsole.getProviderPathFromFullPath(fso.getFullPath());
                 final String name = fso.getName();
-                final StorageApiConsole console = StorageApiConsole.getStorageApiConsoleForPath(
-                        prefix);
+                final int iconId = MimeTypeHelper.getIcon(ctx, fso);
+                final int colorId = MimeTypeHelper.getIconColorFromIconId(ctx, iconId);
+                final int color = ctx.getResources().getColor(colorId);
+                final StorageApiConsole console =
+                        StorageApiConsole.getStorageApiConsoleForPath(prefix);
 
                 BackgroundCallable callable = new BackgroundCallable() {
                     private Uri fileUri;
 
                     @Override
                     public int getDialogIcon() {
-                        return 0;
+                        return iconId;
+                    }
+
+                    @Override
+                    public int getDialogColor() {
+                        return color;
                     }
 
                     @Override
                     public int getDialogTitle() {
-                        return R.string.waiting_dialog_opening_storage_provider_title;
+                        return 0;
+                    }
+
+                    @Override
+                    public String getDialogMessage() {
+                        return name;
+                    }
+
+                    @Override
+                    public DialogType getDialogType() {
+                        return DialogType.OPEN_FILE_PROGRESS_DIALOG;
                     }
 
                     @Override
@@ -248,10 +266,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
 
                     @Override
                     public Spanned requestProgress() {
-                        String progress = ctx.getResources().getString(
-                                R.string.waiting_dialog_opening_storage_provider_message, fso.getName(),
-                                console.getName());
-                        return Html.fromHtml(progress);
+                        return null;
                     }
 
                     @Override
