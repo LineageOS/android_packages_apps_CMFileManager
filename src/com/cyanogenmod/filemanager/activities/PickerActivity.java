@@ -148,10 +148,6 @@ public class PickerActivity extends Activity
             Log.d(TAG, "PickerActivity.onCreate"); //$NON-NLS-1$
         }
 
-        // Set the theme before setContentView
-        Theme theme = ThemeManager.getCurrentTheme(this);
-        theme.setBaseTheme(this, true);
-
         // Initialize the activity
         init();
 
