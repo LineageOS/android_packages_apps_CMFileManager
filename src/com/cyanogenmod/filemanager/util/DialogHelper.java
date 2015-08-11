@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.text.InputFilter;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -392,6 +393,17 @@ public final class DialogHelper {
      * Method that creates a new {@link AlertDialog}.
      *
      * @param context The current context
+     * @param content The content layout
+     * @return AlertDialog The alert dialog reference
+     */
+    public static AlertDialog createDialog(Context context, View content) {
+        return createDialog(context, 0, null, content);
+    }
+
+    /**
+     * Method that creates a new {@link AlertDialog}.
+     *
+     * @param context The current context
      * @param icon The icon resource
      * @param title The resource identifier of the title of the alert dialog
      * @param content The content layout
@@ -413,7 +425,9 @@ public final class DialogHelper {
     public static AlertDialog createDialog(Context context, int icon, String title, View content) {
         //Create the alert dialog
         final AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setCustomTitle(createTitle(context, icon, title, false));
+        if (!TextUtils.isEmpty(title)) {
+            builder.setCustomTitle(createTitle(context, icon, title, false));
+        }
         builder.setView(content);
         return builder.create();
     }

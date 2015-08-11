@@ -329,10 +329,27 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                         R.string.waiting_dialog_moving_title :
                         R.string.waiting_dialog_copying_title;
             }
+
+            @Override
+            public String getDialogMessage() {
+                return null;
+            }
+
+            @Override
+            public DialogType getDialogType() {
+                return DialogType.MESSAGE_PROGRESS_DIALOG;
+            }
+
             @Override
             public int getDialogIcon() {
                 return 0;
             }
+
+            @Override
+            public int getDialogColor() {
+                return 0;
+            }
+
             @Override
             public boolean isDialogCancellable() {
                 return !(mSrcConsole instanceof SecureConsole)
@@ -552,11 +569,26 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             }
 
             @Override
+            public int getDialogColor() {
+                return 0;
+            }
+
+            @Override
             public int getDialogTitle() {
                 return operation.equals(COPY_MOVE_OPERATION.MOVE)
                         || operation.equals(COPY_MOVE_OPERATION.RENAME) ?
                         R.string.waiting_dialog_moving_title :
                         R.string.waiting_dialog_copying_title;
+            }
+
+            @Override
+            public String getDialogMessage() {
+                return null;
+            }
+
+            @Override
+            public DialogType getDialogType() {
+                return DialogType.MESSAGE_PROGRESS_DIALOG;
             }
 
             @Override
