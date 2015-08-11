@@ -182,4 +182,6 @@
 
     <color name="open_file_progress_dialog_file_color">#de000000</color>
     <color name="open_file_progress_dialog_message_color">#8b000000</color>
+
+    <color name="picker_activity_window_bg_color">#99000000</color>
 </resources>
