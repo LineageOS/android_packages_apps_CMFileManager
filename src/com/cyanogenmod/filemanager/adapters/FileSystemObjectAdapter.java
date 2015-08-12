@@ -32,11 +32,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.cyanogen.ambient.storage.provider.StorageProviderInfo;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
@@ -47,8 +47,6 @@ import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
 import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.ui.IconHolder;
 import com.cyanogenmod.filemanager.ui.IconHolder.ICallback;
-import com.cyanogenmod.filemanager.ui.ThemeManager;
-import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
 import com.cyanogenmod.filemanager.ui.policy.InfoActionPolicy;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper;
@@ -203,7 +201,6 @@ public class FileSystemObjectAdapter
     public View getView(int position, View convertView, ViewGroup parent) {
         //Check to reuse view
         View v = convertView;
-        Theme theme = ThemeManager.getCurrentTheme(getContext());
 
         if (v == null) {
             //Create the view holder
@@ -218,8 +215,6 @@ public class FileSystemObjectAdapter
             if (!mPickable) {
                 viewHolder.mIvIcon.setOnClickListener(this);
                 viewHolder.mBtInfo.setOnClickListener(this);
-            } else {
-                viewHolder.mBtInfo.setVisibility(View.GONE);
             }
             v.setTag(viewHolder);
         }
@@ -236,7 +231,6 @@ public class FileSystemObjectAdapter
         }
 
         viewHolder.mTvName.setText(fso.getName());
-        theme.setTextColor(getContext(), viewHolder.mTvName, "text_color"); //$NON-NLS-1$
 
         if (viewHolder.mTvSummary != null) {
             Resources res = getContext().getResources();
@@ -261,7 +255,6 @@ public class FileSystemObjectAdapter
                                         DateUtils.FORMAT_SHOW_YEAR));
             }
             viewHolder.mTvSummary.setText(sbSummary);
-            theme.setTextColor(getContext(), viewHolder.mTvSummary, "text_color"); //$NON-NLS-1$
         }
 
         if (!this.mPickable) {
@@ -269,7 +262,9 @@ public class FileSystemObjectAdapter
                     TextUtils.equals(fso.getName(), FileHelper.PARENT_DIRECTORY) ?
                             View.INVISIBLE : View.VISIBLE);
 
-            viewHolder.mBtInfo.setImageResource(R.drawable.ic_details);
+            if (mSelectedItems.isEmpty()) {
+                viewHolder.mBtInfo.setImageResource(R.drawable.ic_details);
+            }
             viewHolder.mBtInfo.setTag(position);
             viewHolder.mIvIcon.setTag(position);
 
@@ -277,8 +272,11 @@ public class FileSystemObjectAdapter
             v.setActivated(selected);
             viewHolder.mIvIcon.setSelected(selected);
         }
-
-        //Return the view
+        if (!mSelectedItems.isEmpty()) {
+            viewHolder.mBtInfo.setVisibility(View.GONE);
+        } else {
+            viewHolder.mBtInfo.setVisibility(View.VISIBLE);
+        }
         return v;
     }
 
@@ -322,7 +320,6 @@ public class FileSystemObjectAdapter
             this.mOnSelectionChangedListener.onSelectionChanged(
                     new ArrayList<FileSystemObject>(mSelectedItems));
         }
-
         notifyDataSetChanged();
     }
 
