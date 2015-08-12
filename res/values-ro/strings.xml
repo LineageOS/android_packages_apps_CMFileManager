@@ -99,9 +99,9 @@
   <string name="layout_simple">Simplu</string>
   <string name="layout_details">Detaliat</string>
   <string name="cm_filemanager_show_dirs_first">Afișare dosare întâi</string>
-  <string name="cm_filemanager_show_hidden">Afişare fişiere ascunse</string>
-  <string name="cm_filemanager_show_system">Afişare fişiere de sistem</string>
-  <string name="cm_filemanager_show_symlinks">Afişare legături simbolice</string>
+  <string name="cm_filemanager_show_hidden">Afișare fișiere ascunse</string>
+  <string name="cm_filemanager_show_system">Afișare fișiere de sistem</string>
+  <string name="cm_filemanager_show_symlinks">Afișare legături simbolice</string>
   <string name="filesystem_info_warning_title">Nu există informații</string>
   <string name="filesystem_info_warning_msg">Nu există informații disponibile pentru fișierele de sistem.</string>
   <string name="filesystem_info_cant_be_mounted_msg">Fișierele de sistem nu pot fi montate/demontate.</string>
@@ -238,7 +238,7 @@
   <string name="actions_menu_open_parent_folder">Deschidere sursă</string>
   <string name="actions_menu_compute_checksum">Calculează checksum</string>
   <string name="actions_menu_print">Imprimare</string>
-  <string name="actions_menu_set_as_home">Setaţi ca acasă</string>
+  <string name="actions_menu_set_as_home">Setați ca acasă</string>
   <string name="actions_ask_undone_operation_msg">Această acțiune nu poate fi anulată. Doriți să continuați?</string>
   <string name="input_name_dialog_label">Nume:</string>
   <string name="input_name_dialog_message_empty_name">Numele nu poate fi gol.</string>
@@ -293,7 +293,7 @@
   <string name="pref">Setări</string>
   <string name="pref_general">Setări generale</string>
   <string name="pref_search">Opțiuni căutare</string>
-  <string name="pref_storage">Opţiuni de stocare</string>
+  <string name="pref_storage">Opțiuni de stocare</string>
   <string name="pref_editor">Opțiuni editor</string>
   <string name="pref_themes">Teme</string>
   <string name="pref_about">Despre</string>
