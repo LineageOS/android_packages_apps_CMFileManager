@@ -83,7 +83,7 @@ public class CopyCommand extends Program implements CopyExecutable {
         }
 
         //Copy recursively
-        if (!FileHelper.copyRecursive(s, d, getBufferSize(), this)) {
+        if (!FileHelper.copyRecursive(s, d, this)) {
             if (isTrace()) {
                 Log.v(TAG, "Result: FAIL. InsufficientPermissionsException"); //$NON-NLS-1$
             }

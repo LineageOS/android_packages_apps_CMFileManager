@@ -83,7 +83,7 @@ public class MoveCommand extends Program implements MoveExecutable {
 
         //Move or copy recursively
         if (d.exists()) {
-            if (!FileHelper.copyRecursive(s, d, getBufferSize(), this)) {
+            if (!FileHelper.copyRecursive(s, d, this)) {
                 if (isTrace()) {
                     Log.v(TAG, "Result: FAIL. InsufficientPermissionsException"); //$NON-NLS-1$
                 }
@@ -97,7 +97,7 @@ public class MoveCommand extends Program implements MoveExecutable {
         } else {
             // Move between filesystem is not allow. If rename fails then use copy operation
             if (!s.renameTo(d)) {
-                if (!FileHelper.copyRecursive(s, d, getBufferSize(), this)) {
+                if (!FileHelper.copyRecursive(s, d, this)) {
                     if (isTrace()) {
                         Log.v(TAG, "Result: FAIL. InsufficientPermissionsException"); //$NON-NLS-1$
                     }
