@@ -32,6 +32,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -46,9 +47,6 @@ import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
 import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.ui.IconHolder;
 import com.cyanogenmod.filemanager.ui.IconHolder.ICallback;
-import com.cyanogenmod.filemanager.ui.ThemeManager;
-import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
-import com.cyanogenmod.filemanager.ui.dialogs.ActionsDialog;
 import com.cyanogenmod.filemanager.ui.policy.InfoActionPolicy;
 import com.cyanogenmod.filemanager.util.CommandHelper;
 import com.cyanogenmod.filemanager.util.ExceptionUtil;
@@ -231,8 +229,6 @@ public class FileSystemObjectAdapter
             if (!mPickable) {
                 viewHolder.mIvIcon.setOnClickListener(this);
                 viewHolder.mBtInfo.setOnClickListener(this);
-            } else {
-                viewHolder.mBtInfo.setVisibility(View.GONE);
             }
             v.setTag(viewHolder);
         }
@@ -340,7 +336,6 @@ public class FileSystemObjectAdapter
             this.mOnSelectionChangedListener.onSelectionChanged(
                     new ArrayList<FileSystemObject>(mSelectedItems));
         }
-
         notifyDataSetChanged();
     }
 

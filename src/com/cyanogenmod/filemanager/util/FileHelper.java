@@ -23,6 +23,7 @@ import android.system.ErrnoException;
 import android.system.OsConstants;
 import android.text.format.DateUtils;
 import android.util.Log;
+
 import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.commands.SyncResultExecutable;

@@ -29,7 +29,6 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.cyanogenmod.filemanager.model.Bookmark;
-import com.cyanogenmod.filemanager.model.History;
 import com.cyanogenmod.filemanager.preferences.BookmarksDatabaseHelper;
 
 /**
@@ -45,8 +44,6 @@ public class BookmarksContentProvider extends ContentProvider  {
 
     private static final int BOOKMARKS = 1;
     private static final int BOOKMARKS_ID = 2;
-    private static final int HISTORY = 3;
-    private static final int HISTORY_ID = 4;
 
     /**
      * The authority string name.
@@ -63,13 +60,6 @@ public class BookmarksContentProvider extends ContentProvider  {
         sURLMatcher.addURI(
                 AUTHORITY,
                 "bookmarks/#", BOOKMARKS_ID); //$NON-NLS-1$
-
-        sURLMatcher.addURI(
-                AUTHORITY,
-                "history", HISTORY); //$NON-NLS-1$
-        sURLMatcher.addURI(
-                AUTHORITY,
-                "history/#", HISTORY_ID); //$NON-NLS-1$
     }
 
     /**
@@ -107,14 +97,6 @@ public class BookmarksContentProvider extends ContentProvider  {
                 qb.appendWhere("_id="); //$NON-NLS-1$
                 qb.appendWhere(url.getPathSegments().get(1));
                 break;
-            case HISTORY:
-                qb.setTables("history"); //$NON-NLS-1$
-                break;
-            case HISTORY_ID:
-                qb.setTables("history"); //$NON-NLS-1$
-                qb.appendWhere("_id="); //$NON-NLS-1$
-                qb.appendWhere(url.getPathSegments().get(1));
-                break;
             default:
                 throw new IllegalArgumentException("Unknown URL " + url); //$NON-NLS-1$
         }
@@ -145,10 +127,6 @@ public class BookmarksContentProvider extends ContentProvider  {
                 return "vnd.android.cursor.dir/bookmarks"; //$NON-NLS-1$
             case BOOKMARKS_ID:
                 return "vnd.android.cursor.item/bookmarks"; //$NON-NLS-1$
-            case HISTORY:
-                return "vnd.android.cursor.dir/history"; //$NON-NLS-1$
-            case HISTORY_ID:
-                return "vnd.android.cursor.item/history"; //$NON-NLS-1$
             default:
                 throw new IllegalArgumentException("Unknown URL"); //$NON-NLS-1$
         }
@@ -171,13 +149,6 @@ public class BookmarksContentProvider extends ContentProvider  {
                         "bookmarks", values, "_id=" + rowId, null); //$NON-NLS-1$ //$NON-NLS-2$
                 break;
             }
-            case HISTORY_ID: {
-                final String segment = url.getPathSegments().get(1);
-                rowId = Long.parseLong(segment);
-                count = db.update(
-                        "history", values, "_id=" + rowId, null); //$NON-NLS-1$ //$NON-NLS-2$
-                break;
-            }
             default: {
                 throw new UnsupportedOperationException(
                         "Cannot update URL: " + url); //$NON-NLS-1$
@@ -197,31 +168,20 @@ public class BookmarksContentProvider extends ContentProvider  {
      */
     @Override
     public Uri insert(Uri url, ContentValues initialValues) {
-        if (sURLMatcher.match(url) != BOOKMARKS
-                && sURLMatcher.match(url) != HISTORY) {
+        if (sURLMatcher.match(url) != BOOKMARKS) {
             throw new IllegalArgumentException("Cannot insert into URL: " + url); //$NON-NLS-1$
         }
 
         // Add the bookmark
         SQLiteDatabase db = this.mOpenHelper.getWritableDatabase();
-        String tablename = null;
-        Uri uri = null;
-
-        if (sURLMatcher.match(url) == BOOKMARKS) {
-            tablename = "bookmarks";
-            uri = Bookmark.Columns.CONTENT_URI;
-        } else {
-            tablename = "history";
-            uri = History.Columns.CONTENT_URI;
-        }
-        long rowId = db.insert(tablename, null, initialValues); //$NON-NLS-1$
+        long rowId = db.insert("bookmarks", null, initialValues); //$NON-NLS-1$
         if (rowId < 0) {
             throw new SQLException("Failed to insert row"); //$NON-NLS-1$
         }
         if (DEBUG) {
-            Log.v(TAG, "Added" + tablename + "rowId = " + rowId); //$NON-NLS-1$
+            Log.v(TAG, "Added bookmark rowId = " + rowId); //$NON-NLS-1$
         }
-        Uri newUrl = ContentUris.withAppendedId(uri, rowId);
+        Uri newUrl = ContentUris.withAppendedId(Bookmark.Columns.CONTENT_URI, rowId);
 
         // Notify changes
         getContext().getContentResolver().notifyChange(newUrl, null);
@@ -241,7 +201,7 @@ public class BookmarksContentProvider extends ContentProvider  {
                 count = db.delete("bookmarks", whereQuery, whereArgs); //$NON-NLS-1$
                 break;
             case BOOKMARKS_ID:
-                final String segment = url.getPathSegments().get(1);
+                String segment = url.getPathSegments().get(1);
                 if (TextUtils.isEmpty(whereQuery)) {
                     whereQuery = "_id=" + segment; //$NON-NLS-1$
                 } else {
@@ -249,20 +209,6 @@ public class BookmarksContentProvider extends ContentProvider  {
                                  " AND (" + whereQuery + ")"; //$NON-NLS-1$ //$NON-NLS-2$
                 }
                 count = db.delete("bookmarks", whereQuery, whereArgs); //$NON-NLS-1$
-                break;
-            case HISTORY:
-                db.execSQL("delete from history");
-                count = 0;
-                break;
-            case HISTORY_ID:
-                String segment_h = url.getPathSegments().get(1);
-                if (TextUtils.isEmpty(whereQuery)) {
-                    whereQuery = "_id=" + segment_h; //$NON-NLS-1$
-                } else {
-                    whereQuery = "_id=" + segment_h + //$NON-NLS-1$
-                            " AND (" + whereQuery + ")"; //$NON-NLS-1$ //$NON-NLS-2$
-                }
-                count = db.delete("history", whereQuery, whereArgs); //$NON-NLS-1$
                 break;
             default:
                 throw new IllegalArgumentException("Cannot delete from URL: " + url); //$NON-NLS-1$

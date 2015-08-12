@@ -222,6 +222,13 @@ public class InputNameDialog
     }
 
     /**
+     * Method that returns the current file system object that action is being preformed on
+     *
+     * @return FileSystemObject the file that the user is modifying
+     */
+    public FileSystemObject getFso() { return this.mFso; }
+
+    /**
      * {@inheritDoc}
      */
     @Override

@@ -48,6 +48,7 @@
       android:layout_marginTop="@dimen/extra_margin"
       android:ellipsize="middle"
       android:singleLine="true"
+      android:textColor="@color/text_color"
       android:textAppearance="@style/primary_text_appearance" />
 
     <TextView
@@ -59,6 +60,7 @@
       android:layout_marginBottom="@dimen/extra_margin"
       android:layout_marginStart="@dimen/default_margin"
       android:singleLine="true"
+      android:textColor="@color/text_color"
       android:textAppearance="@style/secondary_text_appearance" />
 
   </RelativeLayout>
