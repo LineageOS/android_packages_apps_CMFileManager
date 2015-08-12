@@ -22,7 +22,6 @@ import android.content.res.Resources;
 import android.system.ErrnoException;
 import android.system.OsConstants;
 import android.util.Log;
-
 import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.commands.SyncResultExecutable;
@@ -57,12 +56,12 @@ import com.cyanogenmod.filemanager.preferences.ObjectStringIdentifier;
 import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.channels.ClosedByInterruptException;
+import java.nio.channels.FileChannel;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Collections;
@@ -122,6 +121,13 @@ public final class FileHelper {
      * @hide
      */
     public static final String NEWLINE = System.getProperty("line.separator"); //$NON-NLS-1$
+
+    /**
+     * The size of chunks that we will copy with nio during a copy operation.
+     *
+     * Set to 1MiB.
+     */
+    public final static long NIO_COPY_CHUNK_SIZE = 1024000L;
 
     // The date/time formats objects
     /**
@@ -1106,12 +1112,11 @@ public final class FileHelper {
      *
      * @param src The source file or folder
      * @param dst The destination file or folder
-     * @param bufferSize The buffer size for the operation
      * @return boolean If the operation complete successfully
      * @throws ExecutionException If a problem was detected in the operation
      */
     public static boolean copyRecursive(
-            final File src, final File dst, int bufferSize, Program program)
+            final File src, final File dst, Program program)
                 throws ExecutionException, CancelledOperationException {
         if (src.isDirectory()) {
             // Create the directory
@@ -1134,7 +1139,7 @@ public final class FileHelper {
                         throw new CancelledOperationException();
                     }
 
-                    if (!copyRecursive(files[i], new File(dst, files[i].getName()), bufferSize,
+                    if (!copyRecursive(files[i], new File(dst, files[i].getName()),
                                        program)) {
                         return false;
                     }
@@ -1142,7 +1147,7 @@ public final class FileHelper {
             }
         } else {
             // Copy the directory
-            if (!bufferedCopy(src, dst,bufferSize, program)) {
+            if (!copyFileWithNio(src, dst, program)) {
                 return false;
             }
         }
@@ -1150,40 +1155,46 @@ public final class FileHelper {
     }
 
     /**
-     * Method that copies a file
+     * Method that copies a file, using FileChannel.transferFrom from
+     * the nio package.
+     *
+     * The file is chunked into chunks of size {@link #NIO_COPY_CHUNK_SIZE}
+     * and each chunk is transferred until the file is completely copied. This
+     * allows us to cancel the file transfer at any time.
      *
      * @param src The source file
      * @param dst The destination file
-     * @param bufferSize The buffer size for the operation
-     * @return boolean If the operation complete successfully
+     * @return boolean Whether the operation completed successfully
      */
-    public static boolean bufferedCopy(final File src, final File dst,
-        int bufferSize, Program program)
-            throws ExecutionException, CancelledOperationException {
-        BufferedInputStream bis = null;
-        BufferedOutputStream bos = null;
+    public static boolean copyFileWithNio(final File src, final File dst,
+            Program program) throws CancelledOperationException, ExecutionException {
+        FileChannel inputChannel = null;
+        FileChannel outputChannel = null;
+        long currentPosition = 0;
+        long count = NIO_COPY_CHUNK_SIZE;
         try {
-            bis = new BufferedInputStream(new FileInputStream(src), bufferSize);
-            bos = new BufferedOutputStream(new FileOutputStream(dst), bufferSize);
-            int read = 0;
-            byte[] data = new byte[bufferSize];
-            while ((read = bis.read(data, 0, bufferSize)) != -1) {
+            inputChannel = new FileInputStream(src).getChannel();
+            outputChannel = new FileOutputStream(dst).getChannel();
+            while (currentPosition < inputChannel.size()) {
                 // Short circuit if we've been cancelled. Show's over :(
                 if (program.isCancelled()) {
                     throw new CancelledOperationException();
                 }
-                bos.write(data, 0, read);
-            }
-            return true;
 
+                if ((currentPosition + count) > inputChannel.size()) {
+                    count = (inputChannel.size() - currentPosition);
+                }
+                outputChannel.transferFrom(inputChannel, currentPosition, count);
+                currentPosition = currentPosition + count;
+            }
         } catch (Throwable e) {
             Log.e(TAG,
                     String.format(TAG, "Failed to copy from %s to %d", src, dst), e); //$NON-NLS-1$
 
             try {
-                // delete the destination file if it exists since the operation failed
-                if (dst.exists()) {
-                    dst.delete();
+                // Delete the destination file upon failure
+                if (!dst.delete()) {
+                    Log.e(TAG, "Failed to delete the dest file: " + dst);
                 }
             } catch (Throwable t) {/**NON BLOCK**/}
 
@@ -1192,29 +1203,30 @@ public final class FileHelper {
             if (e.getCause() instanceof ErrnoException
                         && ((ErrnoException)e.getCause()).errno == OsConstants.ENOSPC) {
                 throw new ExecutionException(R.string.msgs_no_disk_space);
-            } if (e instanceof CancelledOperationException) {
+            } else if ((e instanceof CancelledOperationException)
+                    || (e instanceof ClosedByInterruptException)) {
                 // If the user cancelled this operation, let it through.
                 throw (CancelledOperationException)e;
             }
-
             return false;
         } finally {
             try {
-                if (bis != null) {
-                    bis.close();
+                if (inputChannel != null) {
+                    inputChannel.close();
                 }
-            } catch (Throwable e) {/**NON BLOCK**/}
-            try {
-                if (bos != null) {
-                    bos.close();
-                }
-            } catch (Throwable e) {/**NON BLOCK**/}
-            if (program.isCancelled()) {
-                if (!dst.delete()) {
-                    Log.e(TAG, "Failed to delete the dest file: " + dst);
-                }
+            } catch (IOException e) {
+                Log.e(TAG, "Error while closing input channel during copyFileWithNio");
             }
+            try {
+                if (outputChannel != null) {
+                    outputChannel.close();
+                }
+            } catch (IOException e) {
+                Log.e(TAG, "Error while closing output channel during copyFileWithNio");
+            }
+
         }
+        return true;
     }
 
     /**
