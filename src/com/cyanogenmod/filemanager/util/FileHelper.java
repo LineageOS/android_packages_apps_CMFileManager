@@ -24,7 +24,6 @@ import android.system.OsConstants;
 import android.text.format.DateUtils;
 import android.util.Log;
 
-import com.cyanogen.ambient.storage.StorageApi;
 import com.cyanogen.ambient.storage.StorageApi.Document;
 import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
