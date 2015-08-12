@@ -34,7 +34,7 @@
                         android:id="@+id/ab_settings"
                         android:layout_width="@dimen/default_buttom_width"
                         android:layout_height="match_parent"
-                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentStart="true"
                         android:contentDescription="@string/menu_settings"
                         android:onClick="onActionBarItemClick"
                         android:src="@drawable/ic_material_light_settings"/>
