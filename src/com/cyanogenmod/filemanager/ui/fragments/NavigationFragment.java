@@ -425,7 +425,7 @@ public class NavigationFragment extends Fragment
     /**
      * @hide
      */
-    NavigationView[] mNavigationViews;
+    NavigationView mNavigationView;
 
     /**
      * Used to record the operation steps
@@ -436,8 +436,6 @@ public class NavigationFragment extends Fragment
      * Used to record the items saved in database
      */
     private List<History> mHistorySaved;
-
-    private int mCurrentNavigationView;
 
     private ViewGroup mActionBar;
     private SelectionView mSelectionBar;
@@ -529,11 +527,7 @@ public class NavigationFragment extends Fragment
                 // Initialize console
                 initConsole();
 
-                //Initialize navigation
-                int cc = NavigationFragment.this.mNavigationViews.length;
-                for (int i = 0; i < cc; i++) {
-                    initNavigation(i, false, getActivity().getIntent());
-                }
+                initNavigation(false, getActivity().getIntent());
             }
         });
 
@@ -627,17 +621,17 @@ public class NavigationFragment extends Fragment
         }
 
         // Check that the current dir is mounted (for virtual filesystems)
-        String curDir = mNavigationViews[mCurrentNavigationView].getCurrentDir();
+        String curDir = mNavigationView.getCurrentDir();
         if (curDir != null) {
             VirtualMountPointConsole vc = VirtualMountPointConsole.getVirtualConsoleForPath(
-                    mNavigationViews[mCurrentNavigationView].getCurrentDir());
+                    mNavigationView.getCurrentDir());
             if (vc != null && !vc.isMounted()) {
                 removeUnmountedHistory();
                 removeUnmountedSelection();
 
                 Intent intent = new Intent();
                 intent.putExtra(EXTRA_ADD_TO_HISTORY, false);
-                initNavigation(NavigationFragment.this.mCurrentNavigationView, false, intent);
+                initNavigation(false, intent);
             }
 
             getCurrentNavigationView().refresh(true);
@@ -710,18 +704,7 @@ public class NavigationFragment extends Fragment
      * @return NavigationView The current navigation view
      */
     public NavigationView getCurrentNavigationView() {
-        return getNavigationView(this.mCurrentNavigationView);
-    }
-
-    /**
-     * Method that returns the current navigation view.
-     *
-     * @param viewId The view to return
-     * @return NavigationView The current navigation view
-     */
-    public NavigationView getNavigationView(int viewId) {
-        if (this.mNavigationViews == null) return null;
-        return this.mNavigationViews[viewId];
+        return mNavigationView;
     }
 
     /**
@@ -1262,34 +1245,30 @@ public class NavigationFragment extends Fragment
      * Method that initializes the navigation views of the activity
      */
     private void initNavigationViews() {
-        //Get the navigation views (wishlist: multiple view; for now only one view)
-        this.mNavigationViews = new NavigationView[1];
-        this.mCurrentNavigationView = 0;
-        //- 0
-        this.mNavigationViews[0] = (NavigationView) mView.findViewById(R.id.navigation_view);
-        this.mNavigationViews[0].setId(0);
+        this.mNavigationView = (NavigationView) mView.findViewById(R.id.navigation_view);
+        this.mNavigationView.setId(0);
     }
 
     /**
      * Method that adds listeners for the navigation views of the activity
      */
     private void attachNavigationViewListeners() {
-        this.mNavigationViews[0].setOnHistoryListener(this);
-        this.mNavigationViews[0].setOnNavigationSelectionChangedListener(this);
-        this.mNavigationViews[0].setOnNavigationOnRequestMenuListener(this);
-        this.mNavigationViews[0].setOnDirectoryChangedListener(this);
-        this.mNavigationViews[0].setOnBackRequestListener(mOnBackRequestListener);
+        this.mNavigationView.setOnHistoryListener(this);
+        this.mNavigationView.setOnNavigationSelectionChangedListener(this);
+        this.mNavigationView.setOnNavigationOnRequestMenuListener(this);
+        this.mNavigationView.setOnDirectoryChangedListener(this);
+        this.mNavigationView.setOnBackRequestListener(mOnBackRequestListener);
     }
 
     /**
      * Method that removes listeners for the navigation views of the activity
      */
     private void removeNavigationViewListeners() {
-        this.mNavigationViews[0].setOnHistoryListener(null);
-        this.mNavigationViews[0].setOnNavigationSelectionChangedListener(null);
-        this.mNavigationViews[0].setOnNavigationOnRequestMenuListener(null);
-        this.mNavigationViews[0].setOnDirectoryChangedListener(null);
-        this.mNavigationViews[0].setOnBackRequestListener(null);
+        this.mNavigationView.setOnHistoryListener(null);
+        this.mNavigationView.setOnNavigationSelectionChangedListener(null);
+        this.mNavigationView.setOnNavigationOnRequestMenuListener(null);
+        this.mNavigationView.setOnDirectoryChangedListener(null);
+        this.mNavigationView.setOnBackRequestListener(null);
     }
 
     /**
@@ -1332,14 +1311,13 @@ public class NavigationFragment extends Fragment
      * @param intent The current intent
      * @hide
      */
-    void initNavigation(final int viewId, final boolean restore, final Intent intent) {
-        final NavigationView navigationView = getNavigationView(viewId);
+    void initNavigation(final boolean restore, final Intent intent) {
         this.mHandler.post(new Runnable() {
             @Override
             public void run() {
                 //Is necessary navigate?
                 if (!restore) {
-                    applyInitialDir(navigationView, intent);
+                    applyInitialDir(mNavigationView, intent);
                 }
             }
         });
@@ -1757,7 +1735,7 @@ public class NavigationFragment extends Fragment
                     // to a secure storage (do not add to history)
                     Intent intent = new Intent();
                     intent.putExtra(EXTRA_ADD_TO_HISTORY, false);
-                    initNavigation(NavigationFragment.this.mCurrentNavigationView, false, intent);
+                    initNavigation(false, intent);
                 }
             }
         });
@@ -1865,10 +1843,9 @@ public class NavigationFragment extends Fragment
                 NavigationViewInfoParcelable info =
                         (NavigationViewInfoParcelable)history.getItem();
                 int viewId = info.getId();
-                NavigationView view = getNavigationView(viewId);
                 // Selected items must not be restored from on history navigation
-                info.setSelectedFiles(view.getSelectedFiles());
-                if (!view.onRestoreState(info)) {
+                info.setSelectedFiles(mNavigationView.getSelectedFiles());
+                if (!mNavigationView.onRestoreState(info)) {
                     return true;
                 }
 
@@ -2093,16 +2070,8 @@ public class NavigationFragment extends Fragment
         if (this.mChRooted) return;
         this.mChRooted = true;
 
-        int cc = this.mNavigationViews.length;
-        for (int i = 0; i < cc; i++) {
-            this.mNavigationViews[i].createChRooted();
-        }
-
-        // Remove the selection
-        cc = this.mNavigationViews.length;
-        for (int i = 0; i < cc; i++) {
-            getCurrentNavigationView().onDeselectAll();
-        }
+        mNavigationView.createChRooted();
+        mNavigationView.onDeselectAll();
 
         // Remove the history (don't allow to access to previous data)
         clearHistory();
@@ -2116,11 +2085,7 @@ public class NavigationFragment extends Fragment
         // If we aren't in a ChRooted mode, then do nothing
         if (!this.mChRooted) return;
         this.mChRooted = false;
-
-        int cc = this.mNavigationViews.length;
-        for (int i = 0; i < cc; i++) {
-            this.mNavigationViews[i].exitChRooted();
-        }
+        mNavigationView.exitChRooted();
     }
 
     /**
@@ -2132,13 +2097,7 @@ public class NavigationFragment extends Fragment
     }
 
     private void recycle() {
-        // Recycle the navigation views
-        if (mNavigationViews != null) {
-            int cc = this.mNavigationViews.length;
-            for (int i = 0; i < cc; i++) {
-                this.mNavigationViews[i].recycle();
-            }
-        }
+        mNavigationView.recycle();
         try {
             FileManagerApplication.destroyBackgroundConsole();
         } catch (Throwable ex) {
@@ -2185,10 +2144,8 @@ public class NavigationFragment extends Fragment
      * Method that removes all the selection items that refers to virtual unmounted filesystems
      */
     private void removeUnmountedSelection() {
-        for (NavigationView view : mNavigationViews) {
-            view.removeUnmountedSelection();
-        }
-        mSelectionBar.setSelection(getNavigationView(mCurrentNavigationView).getSelectedFiles());
+        mNavigationView.removeUnmountedSelection();
+        mSelectionBar.setSelection(mNavigationView.getSelectedFiles());
     }
 
     /**
