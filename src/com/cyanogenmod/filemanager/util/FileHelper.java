@@ -1203,10 +1203,14 @@ public final class FileHelper {
             if (e.getCause() instanceof ErrnoException
                         && ((ErrnoException)e.getCause()).errno == OsConstants.ENOSPC) {
                 throw new ExecutionException(R.string.msgs_no_disk_space);
-            } else if ((e instanceof CancelledOperationException)
-                    || (e instanceof ClosedByInterruptException)) {
+            } else if (e instanceof CancelledOperationException) {
                 // If the user cancelled this operation, let it through.
                 throw (CancelledOperationException)e;
+            } else if (e instanceof ClosedByInterruptException) {
+                // The thread running this operation was interrupted.
+                // This is likely because the user cancelled the operation,
+                // which cancelled the AsyncTask.
+                throw new CancelledOperationException();
             }
             return false;
         } finally {
