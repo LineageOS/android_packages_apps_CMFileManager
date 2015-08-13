@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f231b9d_0b76edd9",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1120,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-13T05:34:20Z",
+      "side": 1,
+      "message": "bufferSize unneeded",
+      "revId": "adb9fb3ed57dd50cd78353b54912102c7bde4547",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_eb7291e3",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1143,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-13T05:34:20Z",
+      "side": 1,
+      "message": "here too",
+      "revId": "adb9fb3ed57dd50cd78353b54912102c7bde4547",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_cb7fd5a9",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1174,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-13T05:34:20Z",
+      "side": 1,
+      "message": "not needed, skip chunkSize, go straight for count.",
+      "revId": "adb9fb3ed57dd50cd78353b54912102c7bde4547",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
