@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f231b9d_3dafb095",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 1209,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-08-13T18:54:10Z",
+      "side": 1,
+      "message": "This will cause a classcastexception if the error is a ClosedByInterruptException",
+      "range": {
+        "startLine": 1209,
+        "startChar": 23,
+        "endLine": 1209,
+        "endChar": 50
+      },
+      "revId": "bd79d582be84824e3a5cc519ef6d9cc8d4518aa9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
