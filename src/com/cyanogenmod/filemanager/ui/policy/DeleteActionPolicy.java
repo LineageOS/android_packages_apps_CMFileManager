@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import com.cyanogen.ambient.storage.StorageException;
 import com.cyanogen.ambient.storage.provider.ProviderStatusCodes;
+import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.RelaunchableException;
@@ -352,6 +353,9 @@ public final class DeleteActionPolicy extends ActionsPolicy {
                                     String.format(
                                             "Failed to delete file: %s", fso.getFullPath())); //$NON-NLS-1$
                         }
+
+                        ((FileManagerApplication)ctx.getApplicationContext())
+                                .getMStarUManager().notifyDeletedAsync(fso);
                     }
                 };
                 ExceptionUtil.OnRelaunchCommandResult onRelaunchCommandResult =

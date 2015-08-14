@@ -52,6 +52,7 @@ import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.model.ParentDirectory;
 import com.cyanogenmod.filemanager.model.RootDirectory;
 import com.cyanogenmod.filemanager.model.Symlink;
+import com.cyanogenmod.filemanager.mstaru.IMostStarUsedFilesManager;
 import com.cyanogenmod.filemanager.parcelables.NavigationViewInfoParcelable;
 import com.cyanogenmod.filemanager.parcelables.SearchInfoParcelable;
 import com.cyanogenmod.filemanager.preferences.AccessMode;
@@ -489,6 +490,8 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
      * @hide
      */
     AdapterView<?> mAdapterView;
+
+    private IMostStarUsedFilesManager mMStarUManager;
 
     //The layout for icons mode
     private static final int RESOURCE_MODE_ICONS_LAYOUT = R.layout.navigation_view_icons;
@@ -1047,6 +1050,10 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         changeCurrentDir(newDir, true, false, false, null, null);
     }
 
+    public void changeCurrentDir(final Directory newDir) {
+        changeCurrentDir(newDir.getFullPath());
+    }
+
     /**
      * Method that changes the current directory of the view.
      *
@@ -1055,6 +1062,10 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
      */
     public void changeCurrentDir(final String newDir, boolean addToHistory) {
         changeCurrentDir(newDir, addToHistory, false, false, null, null);
+    }
+
+    public void changeCurrentDir(final Directory newDir, boolean addToHistory) {
+        changeCurrentDir(newDir.getFullPath(), addToHistory);
     }
 
     /**
@@ -1067,6 +1078,9 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         changeCurrentDir(newDir, true, false, false, searchInfo, null);
     }
 
+    public void changeCurrentDir(final Directory newDir, SearchInfoParcelable searchInfo) {
+        changeCurrentDir(newDir.getFullPath(), searchInfo);
+    }
     /**
      * Method that changes the current directory of the view.
      *
