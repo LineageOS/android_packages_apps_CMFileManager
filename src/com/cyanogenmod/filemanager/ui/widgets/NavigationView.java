@@ -271,11 +271,6 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             }
 
             //Check that it is really necessary change the directory
-            if (!mReload && NavigationView.this.mCurrentDir != null &&
-                    NavigationView.this.mCurrentDir.compareTo(mNewDirChecked) == 0) {
-                return null;
-            }
-
             mHasChanged = !(NavigationView.this.mCurrentDir != null &&
                     NavigationView.this.mCurrentDir.compareTo(mNewDirChecked) == 0);
             mIsNewHistory = (NavigationView.this.mCurrentDir != null);
@@ -422,28 +417,11 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         @Override
         protected void onPostExecute(List<FileSystemObject> files) {
             // This means an exception. This method will be recalled then
-            if (files != null) {
-                onPostExecuteTask(files, mAddToHistory, mIsNewHistory, mHasChanged,
+            onPostExecuteTask(files, mAddToHistory, mIsNewHistory, mHasChanged,
                         mSearchInfo, mNewDirChecked, mNewDirFSO, mScrollTo);
 
-                // Do animation
-                fadeEfect(false);
-            } else {
-                if (TextUtils.isEmpty(mCurrentDir)) {
-                    if (mOnBackRequestListener != null) {
-                        // Go back to previous view
-                        post(new Runnable() {
-                            @Override
-                            public void run() {
-                                mOnBackRequestListener.onBackRequested();
-                            }
-                        });
-                    }
-                } else {
-                    // Reload current directory
-                    changeCurrentDir(mCurrentDir);
-                }
-            }
+            // Do animation
+            fadeEfect(false);
         }
 
         /**
@@ -471,6 +449,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
     private int mId;
     private String mCurrentDir;
     private FileSystemObject mCurrentFileSystemObject;
+    private String mPreviousDir;
     private NavigationLayoutMode mCurrentMode;
     /**
      * @hide
@@ -566,7 +545,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         //Return the persistent the data
         NavigationViewInfoParcelable parcel = new NavigationViewInfoParcelable();
         parcel.setId(this.mId);
-        parcel.setCurrentDir(this.mCurrentDir);
+        parcel.setCurrentDir(this.mPreviousDir);
         parcel.setCurrentFso(this.mCurrentFileSystemObject);
         parcel.setChRooted(this.mChRooted);
         parcel.setSelectedFiles(this.mAdapter.getSelectedItems());
@@ -878,8 +857,13 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
      */
     public void refresh(FileSystemObject scrollTo) {
         //Check that current directory was set
-        if (this.mCurrentDir == null || this.mFiles == null || this.mNavigationTask != null) {
+        if (this.mCurrentDir == null || this.mFiles == null) {
             return;
+        }
+
+        if (this.mNavigationTask != null) {
+            this.mNavigationTask.cancel(true);
+            this.mNavigationTask = null;
         }
 
         //Reload data
@@ -1098,9 +1082,11 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             final String newDir, final boolean addToHistory,
             final boolean reload, final boolean useCurrent,
             final SearchInfoParcelable searchInfo, final FileSystemObject scrollTo) {
+        this.mPreviousDir = this.mCurrentDir;
+        this.mCurrentDir = newDir;
         mNavigationTask = new NavigationTask(useCurrent, addToHistory, reload,
                 searchInfo, scrollTo, mRestrictions, mChRooted);
-        mNavigationTask.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, newDir);
+        mNavigationTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, newDir);
     }
 
     /**
@@ -1145,6 +1131,18 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         try {
             //Check that there is not errors and have some data
             if (files == null) {
+                this.mCurrentDir = this.mPreviousDir;
+                if (TextUtils.isEmpty(mCurrentDir)) {
+                    if (mOnBackRequestListener != null) {
+                        // Go back to previous view
+                        post(new Runnable() {
+                            @Override
+                            public void run() {
+                                mOnBackRequestListener.onBackRequested();
+                            }
+                        });
+                    }
+                }
                 return;
             }
 
@@ -1188,7 +1186,6 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             scrollTo(scrollTo);
 
             //The current directory is now the "newDir"
-            this.mCurrentDir = newDir;
             this.mCurrentFileSystemObject = newDirFSO;
             if (this.mOnDirectoryChangedListener != null) {
                 FileSystemObject dir = (newDirFSO != null) ?
@@ -1196,12 +1193,14 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
                 this.mOnDirectoryChangedListener.onDirectoryChanged(dir);
             }
 
-            mNavigationTask = null;
         } finally {
             //If calling activity is search, then save the search history
             if (searchInfo != null) {
                 this.mOnHistoryListener.onNewHistory(searchInfo);
             }
+
+            this.mPreviousDir = null;
+            mNavigationTask = null;
 
             //End of loading data
             try {
