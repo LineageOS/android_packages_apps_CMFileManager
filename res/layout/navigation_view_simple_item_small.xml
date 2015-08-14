@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012 The CyanogenMod Project
+<!-- Copyright (C) 2015 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -17,14 +17,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:id="@+id/navigation_view_details_item"
   android:layout_width="match_parent"
-  android:layout_height="@dimen/navigation_view_simple_item_height"
+  android:layout_height="@dimen/navigation_view_simple_item_small_height"
   android:orientation="horizontal"
   android:background="@drawable/navigation_item_background">
 
   <com.cyanogenmod.filemanager.ui.widgets.FixedSizeImageView
     android:id="@+id/navigation_view_item_icon"
-    android:layout_marginStart="@dimen/navigation_view_simple_item_icon_margin"
-    android:layout_marginEnd="@dimen/navigation_view_simple_item_icon_margin"
+    android:layout_marginStart="@dimen/navigation_view_simple_item_small_icon_margin"
+    android:layout_marginEnd="@dimen/navigation_view_simple_item_small_icon_margin"
     android:layout_width="@dimen/circle_icon_wh"
     android:layout_height="@dimen/circle_icon_wh"
     android:layout_gravity="center_vertical"
