@@ -1125,13 +1125,13 @@ public class EditorActivity extends Activity implements TextWatcher {
                             }
 
                             // 100%
-                            publishProgress(new Integer(100));
+                            publishProgress(Integer.valueOf(100));
                             tempText = new String(baos.toByteArray(), "UTF-8");
                             Log.i(TAG, "Bytes read: " + baos.toByteArray().length); //$NON-NLS-1$
 
                             // 100%
                             this.changeToDisplaying = true;
-                            publishProgress(new Integer(0));
+                            publishProgress(Integer.valueOf(0));
 
                         } catch (Exception e) {
                             this.mCause = e;
@@ -1280,7 +1280,7 @@ public class EditorActivity extends Activity implements TextWatcher {
                         }
 
                         // 100%
-                        publishProgress(new Integer(100));
+                        publishProgress(Integer.valueOf(100));
 
                         // Check if the read was successfully
                         if (this.mReader.mCause != null) {
@@ -1320,7 +1320,7 @@ public class EditorActivity extends Activity implements TextWatcher {
 
                     // 100%
                     this.changeToDisplaying = true;
-                    publishProgress(new Integer(0));
+                    publishProgress(Integer.valueOf(0));
 
                 } catch (Exception e) {
                     this.mCause = e;
