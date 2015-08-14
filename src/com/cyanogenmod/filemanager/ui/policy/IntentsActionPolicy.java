@@ -31,6 +31,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.EditorActivity;
 import com.cyanogenmod.filemanager.activities.ShortcutActivity;
@@ -150,6 +151,9 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                                                 intent,
                                                 choose,
                                                 onDismissListener);
+
+                                        ((FileManagerApplication)ctx.getApplicationContext())
+                                                .getMStarUManager().notifyAccessedAsync(fso);
                                     }
 
                                     @Override
@@ -175,6 +179,9 @@ public final class IntentsActionPolicy extends ActionsPolicy {
 
             // Resolve the intent
             resolveIntent(ctx, intent, choose, onDismissListener);
+
+            ((FileManagerApplication)ctx.getApplicationContext())
+                    .getMStarUManager().notifyAccessedAsync(fso);
         } catch (Exception e) {
             ExceptionUtil.translateException(ctx, e);
         }

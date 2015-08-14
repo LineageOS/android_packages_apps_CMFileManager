@@ -32,6 +32,11 @@
     <!-- The default navigation drawer primary color. Used for settings etc. -->
     <color name="misc_primary">#ff000000</color>
 
+    <!-- A Primary color for MStarU -->
+    <color name="mstaru_primary">#de000000</color>
+    <!-- A Secondary color for MStarU -->
+    <color name="mstaru_secondary">#8b000000</color>
+
     <!-- The apps category color -->
     <color name="category_apps">#8bc34a</color>
     <!-- The archives category color -->
@@ -56,8 +61,15 @@
     <!-- The default dissabled background color -->
     <color name="default_background_disabled">#f2f2f2</color>
 
+    <color name="white">#ffffff</color>
+
+    <color name="off_white">#efefef</color>
+
     <!-- A black color with some transparency -->
     <color name="black_transparent">#8a000000</color>
+    <color name="black_46">#75000000</color>
+    <color name="black_26">#42000000</color>
+    <color name="black_11">#1C000000</color>
 
     <!-- Default navigation drawer colors -->
     <color name="navigation_drawer_title_default">#df000000</color>

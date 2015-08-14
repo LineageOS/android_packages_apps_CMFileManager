@@ -32,6 +32,7 @@ import com.cyanogenmod.filemanager.console.ConsoleBuilder;
 import com.cyanogenmod.filemanager.console.ConsoleHolder;
 import com.cyanogenmod.filemanager.console.VirtualMountPointConsole;
 import com.cyanogenmod.filemanager.console.shell.PrivilegedConsole;
+import com.cyanogenmod.filemanager.mstaru.IMostStarUsedFilesManager;
 import com.cyanogenmod.filemanager.preferences.AccessMode;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
 import com.cyanogenmod.filemanager.preferences.ObjectStringIdentifier;
@@ -168,6 +169,8 @@ public final class FileManagerApplication extends Application {
         }
     };
 
+    private IMostStarUsedFilesManager mMStarUManager;
+
 
     /**
      * {@inheritDoc}
@@ -194,6 +197,7 @@ public final class FileManagerApplication extends Application {
         // Schedule in case not scheduled (i.e. never booted with this app on device
         SecureCacheCleanupService.scheduleCleanup(getApplicationContext());
 
+        mMStarUManager = IMostStarUsedFilesManager.Factory.newInstance(this);
     }
 
     /**
@@ -619,5 +623,9 @@ public final class FileManagerApplication extends Application {
             Log.e(TAG,
                     "Failed to read optional shell commands.", e); //$NON-NLS-1$
         }
+    }
+
+    public IMostStarUsedFilesManager getMStarUManager() {
+        return mMStarUManager;
     }
 }

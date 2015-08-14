@@ -168,9 +168,8 @@ public class MoveFileService extends IntentService {
         protected Boolean doInBackground(String... params) {
             mSrcPath = params[0];
             mDstPath = params[1];
-            String fileName = mSrcPath.substring(mSrcPath.lastIndexOf(File.separator) + 1);
             try {
-                CommandHelper.move(MoveFileService.this, mSrcPath, mDstPath, fileName, null, null);
+                CommandHelper.move(MoveFileService.this, mSrcPath, mDstPath, null);
             } catch (Exception e) {
                 return Boolean.FALSE;
             }

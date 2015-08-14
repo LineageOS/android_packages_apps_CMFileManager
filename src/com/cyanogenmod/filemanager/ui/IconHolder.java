@@ -38,6 +38,7 @@ import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.ui.ThemeManager.Theme;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MediaHelper;
+import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.KnownMimeTypeResolver;
 
 import java.lang.ref.WeakReference;
@@ -59,19 +60,21 @@ public class IconHolder {
     private final Map<String, Drawable> mIcons;     // Themes based
     private final Map<String, Drawable> mAppIcons;  // App based
 
-    private Map<String, Long> mAlbums;      // Media albums
-
     private final WeakHashMap<ImageView, Loadable> mRequests;
 
     private final Context mContext;
     private final boolean mUseThumbs;
-    private boolean mNeedAlbumUpdate = true;
 
     private HandlerThread mWorkerThread;
     private Handler mWorkerHandler;
 
     public interface ICallback {
-        public void onLoaded(ImageView imageView, Drawable icon);
+        void onPreExecute(ImageView imageView);
+        void onLoaded(ImageView imageView, Drawable icon);
+    }
+
+    public interface ITransform {
+        Drawable transform(Drawable d);
     }
 
     /**
@@ -79,8 +82,10 @@ public class IconHolder {
      * TODO: Refactor this to have different loadables
      */
     private static class Loadable {
+
         private Context mContext;
         private WeakReference<ICallback> mCallback;
+        private ITransform mTransform;
         private static boolean sAlbumsDirty = true;
         private static Map<String, Long> sAlbums;
 
@@ -88,16 +93,14 @@ public class IconHolder {
         WeakReference<ImageView> view;
         Drawable result;
 
-        public Loadable(Context context, ImageView view, FileSystemObject fso) {
-            this(context, view, fso, null);
-        }
-
-        public Loadable(Context context, ImageView view, FileSystemObject fso, ICallback callback) {
+        public Loadable(Context context, ImageView view, FileSystemObject fso, ICallback callback,
+                        ITransform transform) {
             this.mContext = context.getApplicationContext();
             this.fso = fso;
-            this.view = new WeakReference<ImageView>(view);
+            this.view = new WeakReference<>(view);
             this.result = null;
-            this.mCallback = new WeakReference<ICallback>(callback);
+            this.mCallback = new WeakReference<>(callback);
+            this.mTransform = transform;
         }
 
         private static synchronized Map<String, Long> getAlbums(Context context) {
@@ -113,7 +116,11 @@ public class IconHolder {
         }
 
         public boolean load() {
-            return (result = loadDrawable(fso)) != null;
+            result = loadDrawable(fso);
+            if (mTransform != null) {
+                result = mTransform.transform(result);
+            }
+            return result != null;
         }
 
         private Drawable loadDrawable(FileSystemObject fso) {
@@ -271,8 +278,8 @@ public class IconHolder {
         super();
         this.mContext = context;
         this.mUseThumbs = useThumbs;
-        this.mRequests = new WeakHashMap<ImageView, Loadable>();
-        this.mIcons = new HashMap<String, Drawable>();
+        this.mRequests = new WeakHashMap<>();
+        this.mIcons = new HashMap<>();
         this.mAppIcons = new LinkedHashMap<String, Drawable>(MAX_CACHE, .75F, true) {
             private static final long serialVersionUID = 1L;
             @Override
@@ -280,7 +287,6 @@ public class IconHolder {
                 return size() > MAX_CACHE;
             }
         };
-        this.mAlbums = new HashMap<String, Long>();
         if (useThumbs) {
             final ContentResolver cr = mContext.getContentResolver();
             for (Uri uri : MediaHelper.RELEVANT_URIS) {
@@ -308,6 +314,10 @@ public class IconHolder {
         return dw;
     }
 
+    public void cancel(ImageView iconView) {
+        this.mRequests.remove(iconView);
+    }
+
     /**
      * Clearing the selected Icon Cache
      * @param fso The Selected FileSystemObject reference
@@ -327,37 +337,7 @@ public class IconHolder {
      * @param defaultIconId Resource ID to be used in case no specific drawable could be found
      */
     public void loadDrawable(ImageView iconView, FileSystemObject fso, int defaultIconId) {
-        if (!mUseThumbs) {
-            iconView.setImageResource(defaultIconId);
-            return;
-        }
-
-        // Is cached?
-        final String filePath = MediaHelper.normalizeMediaPath(fso.getFullPath());
-        if (this.mAppIcons.containsKey(filePath)) {
-            iconView.setImageDrawable(this.mAppIcons.get(filePath));
-            return;
-        }
-
-        if (mWorkerThread == null) {
-            mWorkerThread = new HandlerThread("IconHolderLoader");
-            mWorkerThread.start();
-            mWorkerHandler = new WorkerHandler(mWorkerThread.getLooper());
-        }
-        Loadable previousForView = mRequests.get(iconView);
-        if (previousForView != null) {
-            mWorkerHandler.removeMessages(MSG_LOAD, previousForView);
-        }
-
-        Loadable loadable = new Loadable(mContext, iconView, fso);
-        mRequests.put(iconView, loadable);
-        iconView.setImageResource(defaultIconId);
-
-         mWorkerHandler.obtainMessage(MSG_LOAD, loadable).sendToTarget();
-    }
-
-    public void cancel(ImageView iconView) {
-        this.mRequests.remove(iconView);
+        loadDrawable(iconView, fso, defaultIconId, null);
     }
 
     /**
@@ -369,34 +349,54 @@ public class IconHolder {
      * @param callback ICallback to use when finished loading
      */
     public void loadDrawable(ImageView iconView, FileSystemObject fso, int defaultIconId,
-            ICallback callback) {
+                             ICallback callback) {
+        loadDrawable(iconView, fso, defaultIconId, callback, null);
+    }
+
+    /**
+     * Method that returns a drawable reference of a FileSystemObject.
+     *
+     * @param iconView View to load the drawable into
+     * @param fso The FileSystemObject reference
+     * @param defaultIconId Resource ID to be used in case no specific drawable could be found
+     * @param callback ICallback to use when finished loading
+     * @param transform The transfromer to apply to the drawable
+     */
+    public void loadDrawable(ImageView iconView, FileSystemObject fso, int defaultIconId,
+                             ICallback callback,  ITransform transform) {
+        Drawable icon = null;
+        if (callback != null) {
+            callback.onPreExecute(iconView);
+        }
+
         if (!mUseThumbs) {
-            callback.onLoaded(iconView, null);
-            return;
-        }
+            icon = mContext.getResources().getDrawable(defaultIconId, null);
+        } else {
+            // Is cached?
+            final String filePath = MediaHelper.normalizeMediaPath(fso.getFullPath());
+            if (this.mAppIcons.containsKey(filePath)) {
+                icon = mAppIcons.get(filePath);
+            } else {
 
-        // Is cached?
-        final String filePath = MediaHelper.normalizeMediaPath(fso.getFullPath());
-        if (this.mAppIcons.containsKey(filePath)) {
-            callback.onLoaded(iconView, mAppIcons.get(filePath));
-            return;
-        }
+                if (mWorkerThread == null) {
+                    mWorkerThread = new HandlerThread("IconHolderLoader");
+                    mWorkerThread.start();
+                    mWorkerHandler = new WorkerHandler(mWorkerThread.getLooper());
+                }
+                Loadable previousForView = mRequests.get(iconView);
+                if (previousForView != null) {
+                    mWorkerHandler.removeMessages(MSG_LOAD, previousForView);
+                }
 
-        if (mWorkerThread == null) {
-            mWorkerThread = new HandlerThread("IconHolderLoader");
-            mWorkerThread.start();
-            mWorkerHandler = new WorkerHandler(mWorkerThread.getLooper());
-        }
-        Loadable previousForView = mRequests.get(iconView);
-        if (previousForView != null) {
-            mWorkerHandler.removeMessages(MSG_LOAD, previousForView);
-        }
+                Loadable loadable = new Loadable(mContext, iconView, fso, callback, transform);
+                mRequests.put(iconView, loadable);
 
-        Loadable loadable = new Loadable(mContext, iconView, fso, callback);
-        mRequests.put(iconView, loadable);
-        callback.onLoaded(iconView, null);
-
-        mWorkerHandler.obtainMessage(MSG_LOAD, loadable).sendToTarget();
+                mWorkerHandler.obtainMessage(MSG_LOAD, loadable).sendToTarget();
+            }
+        }
+        if ( callback != null) {
+            callback.onLoaded(iconView, icon);
+        }
     }
 
     private class WorkerHandler extends Handler {

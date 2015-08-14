@@ -76,6 +76,10 @@
       android:authorities="com.cyanogenmod.filemanager.providers.index"
       android:name=".providers.MimeTypeIndexProvider"/>
 
+    <provider android:name=".mstaru.MostFrequentlyUsedProvider"
+              android:authorities="com.cyanogenmod.filemanager.mfu"
+              android:exported="false"/>
+
     <provider
       android:name="android.support.v4.content.FileProvider"
       android:authorities="com.cyanogenmod.filemanager.providers.file"

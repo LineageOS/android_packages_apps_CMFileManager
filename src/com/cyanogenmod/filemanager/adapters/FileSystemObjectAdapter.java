@@ -546,12 +546,18 @@ public class FileSystemObjectAdapter
     private void setFileIcon(ImageView view, final int iconId, FileSystemObject fso) {
         // Use iconholder to check for thumbnail
         final ICallback callback = new ICallback() {
+
+            @Override
+            public void onPreExecute(ImageView imageView) {
+
+            }
+
             @Override
             public void onLoaded(ImageView imageView, Drawable icon) {
                 if (icon == null) {
                     // Icon holder didn't have anything at the moment, set default.
                     int colorId = MimeTypeHelper.getIconColorFromIconId(getContext(), iconId);
-                    setIcon(mRes, imageView, mRes.getDrawable(iconId),
+                    setIcon(mRes, imageView, mRes.getDrawable(iconId, null),
                             mRes.getColor(R.color.navigation_view_icon_unselected),
                             R.drawable.ic_icon_background,
                             mRes.getColor(colorId));
