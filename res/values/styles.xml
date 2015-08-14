@@ -165,8 +165,8 @@
     <!-- The text appearance for principal information (text that need to be highlighted) -->
     <style name="primary_text_appearance">
         <item name="android:textSize">@dimen/primary_text_size</item>
-        <item name="android:textColor">@color/black_transparent</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black_87</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
     <!-- The text appearance for principal information (important but not highlight) -->
@@ -177,8 +177,8 @@
     <!-- The text appearance for secondary information (text with a lower importance) -->
     <style name="secondary_text_appearance">
         <item name="android:textSize">@dimen/secondary_text_size</item>
-        <item name="android:textColor">@color/black_transparent</item>
-        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black_54</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
     <!-- The text appearance for hexeditor -->
