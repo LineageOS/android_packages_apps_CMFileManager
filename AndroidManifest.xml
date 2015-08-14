@@ -79,6 +79,9 @@
       android:authorities="com.cyanogenmod.filemanager.providers.index"
       android:name=".providers.MimeTypeIndexProvider"/>
 
+    <provider android:name=".mstaru.MostFrequentlyUsedProvider"
+              android:authorities="com.cyanogenmod.filemanager.mfu"/>
+
     <service
       android:name=".service.MimeTypeIndexService"
       android:label="@string/app_name">
