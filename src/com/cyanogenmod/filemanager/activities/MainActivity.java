@@ -24,6 +24,11 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
+import android.graphics.Outline;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.StateListDrawable;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
@@ -58,15 +63,21 @@ import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.preferences.SettingsPreferences;
 import com.cyanogenmod.filemanager.adapters.QuickSearchAdapter;
 import com.cyanogenmod.filemanager.console.storageapi.StorageApiConsole;
+import com.cyanogenmod.filemanager.controllers.MStarUController;
 import com.cyanogenmod.filemanager.controllers.NavigationDrawerController;
 import com.cyanogenmod.filemanager.model.Bookmark;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
+import com.cyanogenmod.filemanager.mstaru.IMostStarUsedFilesManager;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
 import com.cyanogenmod.filemanager.preferences.Preferences;
+import com.cyanogenmod.filemanager.ui.IconHolder;
 import com.cyanogenmod.filemanager.ui.fragments.NavigationFragment;
 import com.cyanogenmod.filemanager.ui.fragments.NavigationFragment.OnGoHomeRequestListener;
+import com.cyanogenmod.filemanager.ui.policy.InfoActionPolicy;
+import com.cyanogenmod.filemanager.ui.policy.IntentsActionPolicy;
 import com.cyanogenmod.filemanager.ui.widgets.NavigationView.OnBackRequestListener;
 import com.cyanogenmod.filemanager.util.FileHelper;
+import com.cyanogenmod.filemanager.util.MimeTypeHelper;
 import com.cyanogenmod.filemanager.util.StorageHelper;
 import com.cyanogenmod.filemanager.util.StorageProviderUtils;
 
@@ -88,7 +99,7 @@ import java.util.List;
  * the app is killed, is restarted from his initial state.
  */
 public class MainActivity extends ActionBarActivity
-        implements OnItemClickListener, OnBackRequestListener, OnGoHomeRequestListener {
+        implements OnItemClickListener, OnBackRequestListener, OnGoHomeRequestListener, MStarUController.OnClickListener, IMostStarUsedFilesManager.IFileObserver {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -160,6 +171,8 @@ public class MainActivity extends ActionBarActivity
         }
     };
 
+    private MStarUController mMStarUController;
+
     /**
      * {@inheritDoc}
      */
@@ -178,6 +191,14 @@ public class MainActivity extends ActionBarActivity
 
         //Set the main layout of the activity
         setContentView(R.layout.navigation);
+
+        mMStarUController = new MStarUController(this, findViewById(R.id.mstaru), this);
+
+        mToolBar = (Toolbar) findViewById(R.id.material_toolbar);
+        setSupportActionBar(mToolBar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         NavigationView navigationDrawer =
@@ -295,6 +316,25 @@ public class MainActivity extends ActionBarActivity
         }
 
         searchView.setFocusable(false);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        ((FileManagerApplication)getApplicationContext()).getMStarUManager().registerObserver(this);
+    }
+
+    @Override
+    public void onStop() {
+        ((FileManagerApplication)getApplicationContext()).getMStarUManager().unregisterObserver(this);
+
+        super.onStop();
+    }
+
+    @Override
+    public void onFilesChanged(List<FileSystemObject> files) {
+        mMStarUController.replaceData(files);
     }
 
     /**
@@ -465,17 +505,6 @@ public class MainActivity extends ActionBarActivity
             }
             startActivityForResult(searchIntent, NavigationFragment.INTENT_REQUEST_SEARCH);
         }
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        mToolBar = (Toolbar) findViewById(R.id.material_toolbar);
-        setSupportActionBar(mToolBar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
     }
 
     private void initQuickSearch() {
@@ -705,4 +734,19 @@ public class MainActivity extends ActionBarActivity
     public int getColorForPath(String path) {
         return mNavigationDrawerController.getColorForPath(path);
     }
+
+    private void showFrequentFiles(List<FileSystemObject> files) {
+        mMStarUController.replaceData(files);
+    }
+
+    @Override
+    public void onItemClick(FileSystemObject fso) {
+        IntentsActionPolicy.openFileSystemObject(this, null, fso, false, null, null);
+    }
+
+    @Override
+    public void onDetailsClick(FileSystemObject fso) {
+        InfoActionPolicy.showPropertiesDialog(this, fso, null);
+    }
 }
+

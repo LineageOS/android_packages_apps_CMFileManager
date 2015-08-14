@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/material_selector">
+
+    <ImageView android:id="@+id/file_image"
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"
+               android:layout_margin="16dp"
+               android:scaleType="centerCrop"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/file_image"
+            android:layout_toLeftOf="@+id/file_details"
+            android:layout_centerVertical="true">
+
+        <TextView android:id="@+id/file_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="left|center_vertical"
+                  android:textColor="@color/mstaru_primary"
+                  android:textSize="16sp"
+                  android:singleLine="true"
+                  android:ellipsize="end"/>
+
+        <TextView android:id="@+id/file_parent"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="left|center_vertical"
+                  android:textColor="@color/mstaru_secondary"
+                  android:textSize="14sp"
+                  android:singleLine="true"
+                  android:ellipsize="middle"/>
+    </LinearLayout>
+
+    <ImageView android:id="@+id/file_details"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+               android:padding="18dp"
+               android:src="@drawable/ic_details"/>
+
+</RelativeLayout>
