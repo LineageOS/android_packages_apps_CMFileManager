@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f231b9d_b65f5d0d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 1114,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-14T22:59:10Z",
+      "side": 1,
+      "message": "I don\u0027t think you meant to remove the OnDirectoryChangedListener",
+      "revId": "dc059dc342d2c0e4b74e89bd223169f9c42d6c18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
