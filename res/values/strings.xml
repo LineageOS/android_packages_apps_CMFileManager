@@ -933,4 +933,8 @@
     <string name="docs">Docs</string>
     <string name="apps">Apps</string>
     <string name="archives">Archives</string>
+
+    <!-- MStarU Frequent -->
+    <string name="frequent">Frequent</string>
+    <string name="access_the_files_you_use_the_most_here">Access the files you use the most here.</string>
 </resources>

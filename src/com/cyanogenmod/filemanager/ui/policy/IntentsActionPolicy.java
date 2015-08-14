@@ -37,6 +37,7 @@ import android.widget.Toast;
 import com.cyanogen.ambient.common.api.PendingResult;
 import com.cyanogen.ambient.storage.StorageApi;
 import com.cyanogen.ambient.storage.StorageException;
+import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.ShortcutActivity;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
@@ -166,6 +167,9 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                                                 true,
                                                 onCancelListener,
                                                 onDismissListener);
+
+                                        ((FileManagerApplication)ctx.getApplicationContext())
+                                                .getMStarUManager().notifyAccessedAsync(fso);
                                     }
 
                                     @Override
@@ -203,6 +207,8 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                     R.string.associations_dialog_openwith_action,
                     true, onCancelListener, onDismissListener);
 
+            ((FileManagerApplication)ctx.getApplicationContext())
+                    .getMStarUManager().notifyAccessedAsync(fso);
         } catch (Exception e) {
             ExceptionUtil.translateException(ctx, e);
         }
