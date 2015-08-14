@@ -246,11 +246,6 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             mNewDirChecked = checkChRootedNavigation(params[0]);
 
             //Check that it is really necessary change the directory
-            if (!mReload && NavigationView.this.mCurrentDir != null &&
-                    NavigationView.this.mCurrentDir.compareTo(mNewDirChecked) == 0) {
-                return null;
-            }
-
             mHasChanged = !(NavigationView.this.mCurrentDir != null &&
                     NavigationView.this.mCurrentDir.compareTo(mNewDirChecked) == 0);
             mIsNewHistory = (NavigationView.this.mCurrentDir != null);
@@ -385,13 +380,11 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         @Override
         protected void onPostExecute(List<FileSystemObject> files) {
             // This means an exception. This method will be recalled then
-            if (files != null) {
-                onPostExecuteTask(files, mAddToHistory, mIsNewHistory, mHasChanged,
+            onPostExecuteTask(files, mAddToHistory, mIsNewHistory, mHasChanged,
                         mSearchInfo, mNewDirChecked, mScrollTo);
 
-                // Do animation
-                fadeEfect(false);
-            }
+            // Do animation
+            fadeEfect(false);
         }
 
         /**
@@ -418,6 +411,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
 
     private int mId;
     private String mCurrentDir;
+    private String mPreviousDir;
     private NavigationLayoutMode mCurrentMode;
     /**
      * @hide
@@ -512,7 +506,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         //Return the persistent the data
         NavigationViewInfoParcelable parcel = new NavigationViewInfoParcelable();
         parcel.setId(this.mId);
-        parcel.setCurrentDir(this.mCurrentDir);
+        parcel.setCurrentDir(this.mPreviousDir);
         parcel.setChRooted(this.mChRooted);
         parcel.setSelectedFiles(this.mAdapter.getSelectedItems());
         parcel.setFiles(this.mFiles);
@@ -816,8 +810,13 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
      */
     public void refresh(FileSystemObject scrollTo) {
         //Check that current directory was set
-        if (this.mCurrentDir == null || this.mFiles == null || this.mNavigationTask != null) {
+        if (this.mCurrentDir == null || this.mFiles == null) {
             return;
+        }
+
+        if (this.mNavigationTask != null) {
+            this.mNavigationTask.cancel(true);
+            this.mNavigationTask = null;
         }
 
         //Reload data
@@ -1026,9 +1025,11 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             final String newDir, final boolean addToHistory,
             final boolean reload, final boolean useCurrent,
             final SearchInfoParcelable searchInfo, final FileSystemObject scrollTo) {
+        this.mPreviousDir = this.mCurrentDir;
+        this.mCurrentDir = newDir;
         mNavigationTask = new NavigationTask(useCurrent, addToHistory, reload,
                 searchInfo, scrollTo, mRestrictions, mChRooted);
-        mNavigationTask.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, newDir);
+        mNavigationTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, newDir);
     }
 
     /**
@@ -1072,6 +1073,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         try {
             //Check that there is not errors and have some data
             if (files == null) {
+                this.mCurrentDir = this.mPreviousDir;
                 return;
             }
 
@@ -1105,19 +1107,20 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             //If scrollTo is null, the position will be set to 0
             scrollTo(scrollTo);
 
+            //this.mCurrentDir = newDir;
             //The current directory is now the "newDir"
-            this.mCurrentDir = newDir;
             if (this.mOnDirectoryChangedListener != null) {
                 FileSystemObject dir = FileHelper.createFileSystemObject(new File(newDir));
-                this.mOnDirectoryChangedListener.onDirectoryChanged(dir);
             }
 
-            mNavigationTask = null;
         } finally {
             //If calling activity is search, then save the search history
             if (searchInfo != null) {
                 this.mOnHistoryListener.onNewHistory(searchInfo);
             }
+
+            this.mPreviousDir = null;
+            mNavigationTask = null;
 
             //End of loading data
             try {
