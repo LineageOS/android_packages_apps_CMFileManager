@@ -23,4 +23,6 @@
     <item type="id" name="navigation_item_protected" />
     <item type="id" name="navigation_item_manage" />
     <item type="id" name="navigation_item_settings" />
+    <!-- A ViewHolder tag -->
+    <item type="id" name="tag_viewholder" />
 </resources>
