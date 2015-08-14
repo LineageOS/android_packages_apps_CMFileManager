@@ -213,8 +213,12 @@ public class FileSystemObjectAdapter
             viewHolder.mTvSummary = (TextView)v.findViewById(RESOURCE_ITEM_SUMMARY);
             viewHolder.mBtInfo = (ImageButton) v.findViewById(RESOURCE_ITEM_INFO);
             if (!mPickable) {
-                viewHolder.mIvIcon.setOnClickListener(this);
-                viewHolder.mBtInfo.setOnClickListener(this);
+                if (viewHolder.mIvIcon != null) {
+                    viewHolder.mIvIcon.setOnClickListener(this);
+                }
+                if (viewHolder.mBtInfo != null) {
+                    viewHolder.mBtInfo.setOnClickListener(this);
+                }
             }
             v.setTag(viewHolder);
         }
@@ -258,24 +262,31 @@ public class FileSystemObjectAdapter
         }
 
         if (!this.mPickable) {
-            viewHolder.mBtInfo.setVisibility(
-                    TextUtils.equals(fso.getName(), FileHelper.PARENT_DIRECTORY) ?
-                            View.INVISIBLE : View.VISIBLE);
+            if (viewHolder.mBtInfo != null) {
+                viewHolder.mBtInfo.setVisibility(
+                        TextUtils.equals(fso.getName(), FileHelper.PARENT_DIRECTORY) ?
+                                View.INVISIBLE : View.VISIBLE);
 
-            if (mSelectedItems.isEmpty()) {
-                viewHolder.mBtInfo.setImageResource(R.drawable.ic_details);
+                if (mSelectedItems.isEmpty()) {
+                    viewHolder.mBtInfo.setImageResource(R.drawable.ic_details);
+                }
+                viewHolder.mBtInfo.setTag(position);
             }
-            viewHolder.mBtInfo.setTag(position);
-            viewHolder.mIvIcon.setTag(position);
 
             boolean selected = isSelected(position);
             v.setActivated(selected);
-            viewHolder.mIvIcon.setSelected(selected);
+
+            if (viewHolder.mIvIcon != null) {
+                viewHolder.mIvIcon.setTag(position);
+                viewHolder.mIvIcon.setSelected(selected);
+            }
         }
-        if (!mSelectedItems.isEmpty()) {
-            viewHolder.mBtInfo.setVisibility(View.GONE);
-        } else {
-            viewHolder.mBtInfo.setVisibility(View.VISIBLE);
+        if (viewHolder.mBtInfo != null) {
+            if (!mSelectedItems.isEmpty()) {
+                viewHolder.mBtInfo.setVisibility(View.GONE);
+            } else {
+                viewHolder.mBtInfo.setVisibility(View.VISIBLE);
+            }
         }
         return v;
     }
@@ -477,9 +488,9 @@ public class FileSystemObjectAdapter
             mRequests.put(view, task);
             task.execute();
         } else if (FileHelper.isDirectory(fso)) {
-            setFolderIcon(view, mimeTypeIconId);
+            setFolderIcon(view, mimeTypeIconId, !mPickable);
         } else {
-            setFileIcon(view, mimeTypeIconId, fso);
+            setFileIcon(view, mimeTypeIconId, fso, !mPickable);
         }
     }
 
@@ -491,18 +502,22 @@ public class FileSystemObjectAdapter
     }
 
     // TODO: change folder colors depending on current volume (root, local, sdcard, usb, etc.)
-    private void setFolderIcon(ImageView view, int iconId) {
-        float opacity = mRes.getFloat(R.float_type.navigation_view_icon_circle_opacity);
-        int transparentColor = Color.argb(
-                Math.round(((float) 0xFF) * opacity),
-                Color.red(mPrimaryColor),
-                Color.green(mPrimaryColor),
-                Color.blue(mPrimaryColor));
+    private void setFolderIcon(ImageView view, int iconId, boolean colorCircle) {
+        int transparentColor = mRes.getColor(R.color.white);
+        if (colorCircle) {
+            float opacity = mRes.getFloat(R.float_type.navigation_view_icon_circle_opacity);
+            transparentColor = Color.argb(
+                    Math.round(((float) 0xFF) * opacity),
+                    Color.red(mPrimaryColor),
+                    Color.green(mPrimaryColor),
+                    Color.blue(mPrimaryColor));
+        }
         setIcon(mRes, view, mRes.getDrawable(iconId), mPrimaryColor,
                 R.drawable.ic_icon_background, transparentColor);
     }
 
-    private void setFileIcon(ImageView view, final int iconId, FileSystemObject fso) {
+    private void setFileIcon(ImageView view, final int iconId, FileSystemObject fso,
+            final boolean colorCircle) {
         // Use iconholder to check for thumbnail
         final ICallback callback = new ICallback() {
 
@@ -515,11 +530,16 @@ public class FileSystemObjectAdapter
             public void onLoaded(ImageView imageView, Drawable icon) {
                 if (icon == null) {
                     // Icon holder didn't have anything at the moment, set default.
+                    Drawable iconDrawable =  mRes.getDrawable(iconId, null);
+                    int backgroundId = R.drawable.ic_icon_background;
                     int colorId = MimeTypeHelper.getIconColorFromIconId(getContext(), iconId);
-                    setIcon(mRes, imageView, mRes.getDrawable(iconId, null),
-                            mRes.getColor(R.color.navigation_view_icon_unselected),
-                            R.drawable.ic_icon_background,
-                            mRes.getColor(colorId));
+                    int color = mRes.getColor(colorId);
+                    int secondaryColor = mRes.getColor(R.color.navigation_view_icon_unselected);
+                    if (colorCircle) {
+                        setIcon(mRes, imageView, iconDrawable, secondaryColor, backgroundId, color);
+                    } else {
+                        setIcon(mRes, imageView, iconDrawable, color, backgroundId, secondaryColor);
+                    }
                 } else {
                     // Thumbnail present, set the background to rectangle to match better.
                     setIconThumbnail(mRes, imageView, icon);
