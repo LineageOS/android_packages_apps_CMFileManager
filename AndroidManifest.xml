@@ -93,7 +93,7 @@
       android:uiOptions="none"
       android:theme="@style/FileManager.Theme.Material.Light.NoActionBar"
       android:windowSoftInputMode="adjustNothing"
-      android:configChanges="keyboardHidden|screenSize"
+      android:configChanges="orientation|keyboardHidden|screenSize"
       android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
