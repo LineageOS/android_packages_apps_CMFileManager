@@ -1,0 +1,1058 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f231b9d_961341b9",
+        "filename": "res/anim/flying_folder_y.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_7618a5d2",
+        "filename": "res/anim/from_lower_left.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_560da98e",
+        "filename": "res/anim/from_lower_right.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_36122db3",
+        "filename": "res/anim/from_upper_left.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_16273115",
+        "filename": "res/anim/from_upper_right.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_f6239504",
+        "filename": "res/anim/left_wing_rotate.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_d62099fa",
+        "filename": "res/anim/right_wing_rotate.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_b61d1dbf",
+        "filename": "res/drawable/device_outline.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_9678e1f8",
+        "filename": "res/drawable/device_outline.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "extra spaces between elements shouldn\u0027t be necessary",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_f6683522",
+        "filename": "res/drawable/device_screen.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_9661013d",
+        "filename": "res/drawable/flying_folder_avd.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_76666554",
+        "filename": "res/drawable/ic_details.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "iirc this should be a @color so themes can change the design later. cc: davekover\n\nthis might apply to all the colors in all the files",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_3660ed32",
+        "filename": "res/drawable/oobe_background.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright has weird spacings",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_1655f150",
+        "filename": "res/drawable/oobe_background_1.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright has weird spacing",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_f6515564",
+        "filename": "res/drawable/oobe_background_2.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "weird spacing",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_d64e59c0",
+        "filename": "res/drawable/oobe_background_3.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "weird spacing",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_b64bddae",
+        "filename": "res/drawable/oobe_background_4.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "weird spacing",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_96c6a116",
+        "filename": "res/drawable/oobe_background_avd.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_76cb051e",
+        "filename": "res/drawable/oobe_bg_lower_left.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "werdsspacaaaaacees",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_56d009ca",
+        "filename": "res/drawable/oobe_bg_lower_right.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "weird sapcsesfjsadfkljsalkf",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_36d58dba",
+        "filename": "res/drawable/oobe_bg_upper_left.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "weird spaces",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_16da91e8",
+        "filename": "res/drawable/oobe_bg_upper_right.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "weird spaces",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_f6d6f5c3",
+        "filename": "res/drawable/oobe_connect_button.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_d6e3f9a3",
+        "filename": "res/drawable/oobe_highlight_circle.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_b6e07d98",
+        "filename": "res/drawable/oobe_select_circle.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_96efc186",
+        "filename": "res/drawable/page_indicator.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_76f4255c",
+        "filename": "res/layout/cloud_background.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_56e9297e",
+        "filename": "res/layout/device_illustration.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "extra spaces",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_36eead88",
+        "filename": "res/layout/oobe_screen_1.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "extra spaces",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_d6fc1940",
+        "filename": "res/layout/oobe_screen_4.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "extra line",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_b6f99d4e",
+        "filename": "res/layout/oobe_screen_4.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "extra line",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_969461ea",
+        "filename": "res/layout/oobe_screen_4.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "extra line",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_7699c51d",
+        "filename": "res/layout/simple_page_indicator.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_96b7c1d9",
+        "filename": "src/com/cyanogenmod/filemanager/activities/MainActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 623,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "remove this random space",
+      "range": {
+        "startLine": 623,
+        "startChar": 9,
+        "endLine": 623,
+        "endChar": 12
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_76bc25bb",
+        "filename": "src/com/cyanogenmod/filemanager/activities/WelcomeActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "delete this",
+      "range": {
+        "startLine": 87,
+        "startChar": 14,
+        "endLine": 87,
+        "endChar": 23
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_56b129e1",
+        "filename": "src/com/cyanogenmod/filemanager/activities/WelcomeActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "line width should be less than 100 chars",
+      "range": {
+        "startLine": 225,
+        "startChar": 80,
+        "endLine": 225,
+        "endChar": 90
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_16cbb153",
+        "filename": "src/com/cyanogenmod/filemanager/activities/WelcomeActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "haxx0r",
+      "range": {
+        "startLine": 254,
+        "startChar": 15,
+        "endLine": 254,
+        "endChar": 18
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_36b6addb",
+        "filename": "src/com/cyanogenmod/filemanager/activities/WelcomeActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "line width",
+      "range": {
+        "startLine": 254,
+        "startChar": 59,
+        "endLine": 254,
+        "endChar": 64
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_f6c71545",
+        "filename": "src/com/cyanogenmod/filemanager/activities/WelcomeActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 371,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "line widht",
+      "range": {
+        "startLine": 371,
+        "startChar": 94,
+        "endLine": 371,
+        "endChar": 98
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_d6c41943",
+        "filename": "src/com/cyanogenmod/filemanager/activities/WelcomeActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 375,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "line width",
+      "range": {
+        "startLine": 375,
+        "startChar": 83,
+        "endLine": 375,
+        "endChar": 93
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_b6c19d31",
+        "filename": "src/com/cyanogenmod/filemanager/activities/WelcomeActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "line width",
+      "range": {
+        "startLine": 398,
+        "startChar": 88,
+        "endLine": 398,
+        "endChar": 97
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_96dc6119",
+        "filename": "src/com/cyanogenmod/filemanager/activities/WelcomeActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 402,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "line width",
+      "range": {
+        "startLine": 402,
+        "startChar": 87,
+        "endLine": 402,
+        "endChar": 102
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_76e1c5d0",
+        "filename": "src/com/cyanogenmod/filemanager/activities/WelcomeActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 479,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "line width",
+      "range": {
+        "startLine": 479,
+        "startChar": 80,
+        "endLine": 479,
+        "endChar": 94
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_56e6c9ea",
+        "filename": "src/com/cyanogenmod/filemanager/activities/WelcomeActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 752,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "extra spaces",
+      "range": {
+        "startLine": 752,
+        "startChar": 0,
+        "endLine": 752,
+        "endChar": 0
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_36eb4db1",
+        "filename": "src/com/cyanogenmod/filemanager/controllers/ScrollerCustomDuration.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "range": {
+        "startLine": 1,
+        "startChar": 8,
+        "endLine": 1,
+        "endChar": 26
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_16d051f7",
+        "filename": "src/com/cyanogenmod/filemanager/controllers/ScrollerCustomDuration.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "remove this",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 20
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_d6d9b922",
+        "filename": "src/com/cyanogenmod/filemanager/controllers/ViewPagerCustomDuration.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "range": {
+        "startLine": 1,
+        "startChar": 15,
+        "endLine": 1,
+        "endChar": 24
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_b6d63df1",
+        "filename": "src/com/cyanogenmod/filemanager/controllers/ViewPagerCustomDuration.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "remove this",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 13
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_9605817d",
+        "filename": "src/com/cyanogenmod/filemanager/views/FrameLayoutNoMeasure.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "range": {
+        "startLine": 1,
+        "startChar": 19,
+        "endLine": 1,
+        "endChar": 32
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_760ae58a",
+        "filename": "src/com/cyanogenmod/filemanager/views/FrameLayoutNoMeasure.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "remove this",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 8
+      },
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_56ffe966",
+        "filename": "src/com/cyanogenmod/filemanager/views/SimplePageIndicator.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "copyright",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_36046d7b",
+        "filename": "src/com/cyanogenmod/filemanager/views/SimplePageIndicator.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "remove this",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_d6f2d99a",
+        "filename": "src/com/cyanogenmod/filemanager/views/SimplePageIndicator.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "remove this",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_b6ef5daf",
+        "filename": "src/com/cyanogenmod/filemanager/views/SimplePageIndicator.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "line width",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_36390d41",
+        "filename": "src/com/cyanogenmod/filemanager/views/SimplePageIndicator.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "for log things that we might need to see later, it\u0027s good to do this in a if (DEBUG) tag. if we don\u0027t need these logs, then remove them.",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f231b9d_163e1129",
+        "filename": "src/com/cyanogenmod/filemanager/views/SimplePageIndicator.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-15T02:37:49Z",
+      "side": 1,
+      "message": "logs",
+      "revId": "5ae05b27cc57666deddee62c4168e7eb8fa7c365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
