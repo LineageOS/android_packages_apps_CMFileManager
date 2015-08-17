@@ -70,7 +70,6 @@ import com.cyanogenmod.filemanager.model.SearchResult;
 import com.cyanogenmod.filemanager.model.Symlink;
 import com.cyanogenmod.filemanager.parcelables.SearchInfoParcelable;
 import com.cyanogenmod.filemanager.preferences.AccessMode;
-import com.cyanogenmod.filemanager.preferences.DisplayRestrictions;
 import com.cyanogenmod.filemanager.preferences.FileManagerSettings;
 import com.cyanogenmod.filemanager.preferences.Preferences;
 import com.cyanogenmod.filemanager.providers.RecentSearchesContentProvider;
@@ -99,10 +98,8 @@ import java.io.FileNotFoundException;
 import java.io.Serializable;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 
 /**
  * An activity for search files and folders.
@@ -1475,49 +1472,55 @@ public class SearchActivity extends Activity
         this.mSearchListView.invalidate();
     }
 
+    private class SearchResultFilterTask extends AsyncTask<MimeTypeCategory, Void,
+            List<DataHolder>> {
+
+        @Override
+        protected List<DataHolder> doInBackground(MimeTypeCategory... params) {
+            final MimeTypeCategory category = params.length == 0
+                    ? MimeTypeCategory.NONE : params[0];
+
+            List<DataHolder> results = new ArrayList<DataHolder>();
+            // Are we in ChRooted environment?
+            boolean chRooted =
+                    FileManagerApplication.getAccessMode().compareTo(AccessMode.SAFE) == 0;
+
+            List<SearchResult> newResults = SearchHelper.convertToResults(
+                    FileHelper.applyUserPreferences(
+                            mResultList, null, true, chRooted),
+                    new Query().fillSlots(mQuery.getQueries()));
+
+            for (SearchResult result : newResults) {
+                // Only show results that are within our category, or all if no filter is set
+                if (MimeTypeHelper.MimeTypeCategory.NONE.equals(category)
+                        || MimeTypeHelper.getCategory(SearchActivity.this,
+                        result.getFso()).equals(category)) {
+                    results.add(generateDataHolder(result));
+                }
+            }
+            return results;
+        }
+
+        @Override
+        protected void onPostExecute(List<DataHolder> results) {
+            if (!isResumed()) {
+                return;
+            }
+            mAdapterList.clear();
+            mAdapterList.addAll(results);
+            mAdapter.notifyDataSetChanged();
+
+            String foundItems = getResources().getQuantityString(R.plurals.search_found_items,
+                    results.size(), results.size());
+            mSearchFoundItems.setText(String.format(mSearchFoundString,
+                    foundItems, mSearchDirectory));
+
+        }
+    }
+
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        final String category = MimeTypeHelper.MimeTypeCategory.names()[i];
-        SearchResultAdapter adapter = ((SearchResultAdapter) this.mSearchListView.getAdapter());
-        if (adapter != null) {
-            new AsyncTask<String, Void, Void>() {
-                List<DataHolder> mNewList = new ArrayList<>();
-                @Override
-                protected Void doInBackground(String... params) {
-                    // Are we in ChRooted environment?
-                    boolean chRooted =
-                            FileManagerApplication.getAccessMode().compareTo(AccessMode.SAFE) == 0;
-
-                    // Create display restrictions
-                    Map<DisplayRestrictions, Object> restrictions =
-                            new HashMap<DisplayRestrictions, Object>();
-                    restrictions.put(
-                            DisplayRestrictions.MIME_TYPE_RESTRICTION, MimeTypeHelper.ALL_MIME_TYPES);
-
-                    List<SearchResult> newResults = SearchHelper.convertToResults(
-                            FileHelper.applyUserPreferences(
-                                    mAdapter.getFiles(), restrictions, true, chRooted), new Query().fillSlots(mQuery.getQueries()));
-
-                    for (SearchResult result : newResults) {
-                        // Only show results that are within our category, or all if no filter is set
-                        if (TextUtils.equals(category, MimeTypeHelper.MimeTypeCategory.NONE.name()) ||
-                                MimeTypeHelper.getCategory(SearchActivity.this, result.getFso()) ==
-                                        MimeTypeHelper.MimeTypeCategory.valueOf(category)) {
-                            mNewList.add(generateDataHolder(result));
-                        }
-                    }
-                    return null;
-                }
-
-                @Override
-                protected void onPostExecute(Void aVoid) {
-                    super.onPostExecute(aVoid);
-                    mAdapterList.clear();
-                    mAdapterList.addAll(mNewList);
-                    mAdapter.notifyDataSetChanged();
-                }
-            };
-        }
+        new SearchResultFilterTask().execute(MimeTypeHelper.MimeTypeCategory.values()[i]);
     }
 
     @Override
