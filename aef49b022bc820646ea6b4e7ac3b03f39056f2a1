@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_55c24ceb",
+        "filename": "Android.mk",
+        "patchSetId": 5
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_7159cffc",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f231b9d_31735783",
         "filename": "res/drawable/circle_large.xml",
         "patchSetId": 5
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_d59e5c53",
+        "filename": "res/drawable/circle_large.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "It may not be required, but it is more explicit, so someone who doesn\u0027t know what happens when the color is missing will know exactly what color it is. In terms of explicit color, I disagree as generally specifying a name is a lot easier for people to process than a hex value even though in this case, most people recognize white.",
+      "parentUuid": "7f231b9d_5113730e",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f231b9d_b12d2748",
         "filename": "res/layout/home_fragment.xml",
         "patchSetId": 5
@@ -64,6 +100,24 @@
       "writtenOn": "2015-08-15T05:03:39Z",
       "side": 1,
       "message": "dimen.xml",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_b5abe073",
+        "filename": "res/layout/home_fragment.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "dimesions are mainly required when the dimension needs to change on a per-device basis.",
+      "parentUuid": "7f231b9d_b12d2748",
       "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -121,6 +175,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_95a7c450",
+        "filename": "res/values/ids.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_31e6b718",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f231b9d_d1ec23f5",
         "filename": "src/com/cyanogenmod/filemanager/controllers/MStarUController.java",
         "patchSetId": 5
@@ -132,6 +204,24 @@
       "writtenOn": "2015-08-15T05:03:39Z",
       "side": 1,
       "message": "line wrap",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_7562e818",
+        "filename": "src/com/cyanogenmod/filemanager/controllers/MStarUController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_d1ec23f5",
       "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -172,6 +262,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_356c7007",
+        "filename": "src/com/cyanogenmod/filemanager/mstaru/IMostStarUsedFilesManager.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_b1bbe7e3",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f231b9d_91c0eb52",
         "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedContract.java",
         "patchSetId": 5
@@ -183,6 +291,24 @@
       "writtenOn": "2015-08-15T05:03:39Z",
       "side": 1,
       "message": "again",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_157174e1",
+        "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedContract.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_91c0eb52",
       "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -206,6 +332,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_f575d8cd",
+        "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedManager.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_51aff393",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f231b9d_51ba53de",
         "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedManager.java",
         "patchSetId": 5
@@ -217,6 +361,24 @@
       "writtenOn": "2015-08-15T05:03:39Z",
       "side": 1,
       "message": "not all the things",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_d572dce3",
+        "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedManager.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_51ba53de",
       "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -240,6 +402,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_b57f60aa",
+        "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedManager.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_71b54fee",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f231b9d_31cfd780",
         "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedManager.java",
         "patchSetId": 5
@@ -251,6 +431,24 @@
       "writtenOn": "2015-08-15T05:03:39Z",
       "side": 1,
       "message": "line wrap",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_35459071",
+        "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedManager.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_31cfd780",
       "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -274,6 +472,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_b5588056",
+        "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedProvider.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_71aaef85",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f231b9d_f1c83f75",
         "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedProvider.java",
         "patchSetId": 5
@@ -285,6 +501,24 @@
       "writtenOn": "2015-08-15T05:03:39Z",
       "side": 1,
       "message": "all the things",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_95558420",
+        "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedProvider.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_f1c83f75",
       "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -308,6 +542,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_7530a808",
+        "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedProvider.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_d1c5435d",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f231b9d_11ccdb87",
         "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedProvider.java",
         "patchSetId": 5
@@ -319,6 +571,24 @@
       "writtenOn": "2015-08-15T05:03:39Z",
       "side": 1,
       "message": "line wrap",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_5535acf6",
+        "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedProvider.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_11ccdb87",
       "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -342,6 +612,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_353a30e7",
+        "filename": "src/com/cyanogenmod/filemanager/mstaru/MostFrequentlyUsedProvider.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_b1a087a7",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f231b9d_91a58bb8",
         "filename": "src/com/cyanogenmod/filemanager/ui/IconRenderer.java",
         "patchSetId": 5
@@ -359,6 +647,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_153f34d7",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconRenderer.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f231b9d_91a58bb8",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f231b9d_11917b53",
         "filename": "src/com/cyanogenmod/filemanager/ui/IconRenderer.java",
         "patchSetId": 5
@@ -370,6 +676,24 @@
       "writtenOn": "2015-08-15T05:03:39Z",
       "side": 1,
       "message": "whats going on here?",
+      "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_75c66819",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconRenderer.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-17T22:43:07Z",
+      "side": 1,
+      "message": "The UI Doesn\u0027t require a selected state in this situation, so the only thing being applied is the default state.  I left it commented out for when I eventually start using this elsewhere.",
+      "parentUuid": "7f231b9d_11917b53",
       "revId": "aef49b022bc820646ea6b4e7ac3b03f39056f2a1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
