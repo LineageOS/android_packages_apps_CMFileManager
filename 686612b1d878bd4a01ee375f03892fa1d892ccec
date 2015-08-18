@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f201791_fec49594",
+        "filename": "src/com/cyanogenmod/filemanager/util/DialogHelper.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 426,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-18T22:02:47Z",
+      "side": 1,
+      "message": "can your createDialog method just overload this one? with a check to see if title \u003d\u003d null",
+      "range": {
+        "startLine": 426,
+        "startChar": 30,
+        "endLine": 426,
+        "endChar": 42
+      },
+      "revId": "686612b1d878bd4a01ee375f03892fa1d892ccec",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
