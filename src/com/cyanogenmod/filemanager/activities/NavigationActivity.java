@@ -642,7 +642,6 @@ public class NavigationActivity extends Activity
         if (curDir != null) {
             VirtualMountPointConsole vc = VirtualMountPointConsole.getVirtualConsoleForPath(
                     mNavigationViews[mCurrentNavigationView].getCurrentDir());
-            getCurrentNavigationView().refresh(true);
             if (vc != null && !vc.isMounted()) {
                 onRequestBookmarksRefresh();
                 removeUnmountedHistory();
@@ -652,11 +651,6 @@ public class NavigationActivity extends Activity
             if (mDisplayingSearchResults) {
                 mDisplayingSearchResults = false;
                 closeSearch();
-            } else {
-                getCurrentNavigationView().refresh(true);
-                Intent intent = new Intent();
-                intent.putExtra(EXTRA_ADD_TO_HISTORY, false);
-                initNavigation(NavigationActivity.this.mCurrentNavigationView, false, intent);
             }
             getCurrentNavigationView().refresh(true);
         }
