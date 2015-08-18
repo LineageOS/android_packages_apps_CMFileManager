@@ -245,9 +245,8 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             // is created)
             mNewDirChecked = checkChRootedNavigation(params[0]);
 
-            //Check that it is really necessary change the directory
-            mHasChanged = !(NavigationView.this.mCurrentDir != null &&
-                    NavigationView.this.mCurrentDir.compareTo(mNewDirChecked) == 0);
+            mHasChanged = !(NavigationView.this.mPreviousDir != null &&
+                    NavigationView.this.mPreviousDir.compareTo(mNewDirChecked) == 0);
             mIsNewHistory = (NavigationView.this.mCurrentDir != null);
 
             try {
@@ -814,13 +813,25 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             return;
         }
 
+        boolean addToHistory = false;
+        boolean reload = true;
+        boolean useCurrent = false;
+        SearchInfoParcelable searchInfo = null;
+
+        String newDir = this.mCurrentDir;
         if (this.mNavigationTask != null) {
+            addToHistory = this.mNavigationTask.mAddToHistory;
+            reload = this.mNavigationTask.mReload;
+            useCurrent = this.mNavigationTask.mUseCurrent;
+            searchInfo = this.mNavigationTask.mSearchInfo;
             this.mNavigationTask.cancel(true);
             this.mNavigationTask = null;
+            this.mCurrentDir = this.mPreviousDir;
+            this.mPreviousDir = null;
         }
 
         //Reload data
-        changeCurrentDir(this.mCurrentDir, false, true, false, null, scrollTo);
+        changeCurrentDir(newDir, addToHistory, reload, useCurrent, searchInfo, scrollTo);
     }
 
     /**
@@ -1029,7 +1040,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         this.mCurrentDir = newDir;
         mNavigationTask = new NavigationTask(useCurrent, addToHistory, reload,
                 searchInfo, scrollTo, mRestrictions, mChRooted);
-        mNavigationTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, newDir);
+        mNavigationTask.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, newDir);
     }
 
     /**
@@ -1085,7 +1096,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             }
 
             //Add to history?
-            if (addToHistory && hasChanged && isNewHistory) {
+            if (addToHistory && hasChanged && mPreviousDir != null) {
                 if (this.mOnHistoryListener != null) {
                     //Communicate the need of a history change
                     this.mOnHistoryListener.onNewHistory(onSaveState());
