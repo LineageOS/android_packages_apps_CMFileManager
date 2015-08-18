@@ -19,8 +19,7 @@ package com.cyanogenmod.filemanager.util;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaScannerConnection;
-import android.provider.MediaStore;
-import android.provider.MediaStore.Files;
+import android.net.Uri;
 
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.ChangeOwnerExecutable;
@@ -71,12 +70,14 @@ import com.cyanogenmod.filemanager.console.OperationTimeoutException;
 import com.cyanogenmod.filemanager.console.ReadOnlyFilesystemException;
 import com.cyanogenmod.filemanager.console.VirtualMountPointConsole;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
+import com.cyanogenmod.filemanager.model.Directory;
 import com.cyanogenmod.filemanager.model.DiskUsage;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.model.FolderUsage;
 import com.cyanogenmod.filemanager.model.Group;
 import com.cyanogenmod.filemanager.model.Identity;
 import com.cyanogenmod.filemanager.model.MountPoint;
+import com.cyanogenmod.filemanager.model.ParentDirectory;
 import com.cyanogenmod.filemanager.model.Permissions;
 import com.cyanogenmod.filemanager.model.Query;
 import com.cyanogenmod.filemanager.model.SearchResult;
@@ -89,6 +90,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 
 /**
@@ -741,6 +743,46 @@ public final class CommandHelper {
         return result;
     }
 
+    private static String[] collectScanPaths(final Context context, String path) {
+        ArrayList<String> paths = new ArrayList<>();
+        Stack<FileSystemObject> pathsToScan = new Stack<>();
+        try {
+            FileSystemObject fso = getFileInfo(context, path, null);
+            if (fso == null) {
+                return new String[0];
+            }
+            pathsToScan.push(fso);
+            while (!pathsToScan.isEmpty()) {
+                fso = pathsToScan.pop();
+                paths.add(MediaHelper.normalizeMediaPath(fso.getFullPath()));
+                if (fso instanceof Directory) {
+                    List<FileSystemObject> files =
+                            CommandHelper.listFiles(context, fso.getFullPath(), null);
+                    if (files == null) {
+                        continue;
+                    }
+                    for (FileSystemObject file : files) {
+                        if (file instanceof ParentDirectory) {
+                            continue;
+                        }
+                        pathsToScan.push(file);
+                    }
+                }
+            }
+            return paths.toArray(new String[paths.size()]);
+        } catch (IOException
+                | ConsoleAllocException
+                | NoSuchFileOrDirectory
+                | InsufficientPermissionsException
+                | CommandNotFoundException
+                | OperationTimeoutException
+                | ExecutionException
+                | InvalidCommandDefinitionException e) {
+            // Just stop scanning
+            return new String[0];
+        }
+    }
+
     /**
      * Method that moves a file system object.
      *
@@ -773,6 +815,12 @@ public final class CommandHelper {
         Console cSrc = ensureConsoleForFile(context, console, src);
         Console cDst = ensureConsoleForFile(context, console, dst);
         boolean ret = true;
+
+        File parent = new File(dst).getParentFile();
+        String[] pathsToScan = (parent != null
+                && !VirtualMountPointConsole.isVirtualStorageResource(parent.getAbsolutePath()))
+                ? collectScanPaths(context, src) : null;
+
         if (cSrc.equals(cDst) && !FileHelper.isSamePath(src, dst)) {
             // Is safe to use the same console
             MoveExecutable executable =
@@ -814,15 +862,13 @@ public final class CommandHelper {
 
         // Do media scan (don't scan the file if is virtual file)
         if (ret) {
-            File parent = new File(dst).getParentFile();
-            if (parent != null && !VirtualMountPointConsole.isVirtualStorageResource(parent
-                    .getAbsolutePath())) {
+            if (pathsToScan != null && pathsToScan.length > 0) {
+                // Remove the sources
+                MediaScannerConnection.scanFile(context, pathsToScan, null, null);
 
-                // Remove from mediascanner
-                MediaScannerConnection.scanFile(context, new String[]{
-                        MediaHelper.normalizeMediaPath(src),
-                        MediaHelper.normalizeMediaPath(dst)
-                }, null, null);
+                // Add the destinations
+                pathsToScan = collectScanPaths(context, dst);
+                MediaScannerConnection.scanFile(context, pathsToScan, null, null);
             }
         }
 
@@ -902,8 +948,8 @@ public final class CommandHelper {
         // Do media scan (don't scan the file if is virtual file)
         if (ret) {
             if (!VirtualMountPointConsole.isVirtualStorageResource(dst)) {
-                MediaScannerConnection.scanFile(context, new String[]{
-                        MediaHelper.normalizeMediaPath(dst)}, null, null);
+                String[] pathsToScan = collectScanPaths(context, dst);
+                MediaScannerConnection.scanFile(context, pathsToScan, null, null);
             }
         }
 
