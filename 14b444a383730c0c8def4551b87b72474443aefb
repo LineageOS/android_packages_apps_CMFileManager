@@ -22,6 +22,30 @@
       "revId": "14b444a383730c0c8def4551b87b72474443aefb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_7ebbe5e4",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 1088,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-18T23:00:00Z",
+      "side": 0,
+      "message": "I was starting to fix more problems with how this stuff is handled and then decided I needed to stop somewhere and forgot to roll this back. I\u0027ll roll it back.",
+      "parentUuid": "5f201791_7e2d2545",
+      "range": {
+        "startLine": 1088,
+        "startChar": 46,
+        "endLine": 1088,
+        "endChar": 58
+      },
+      "revId": "14b444a383730c0c8def4551b87b72474443aefb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
