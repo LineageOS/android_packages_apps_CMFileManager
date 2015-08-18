@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_7e3645b7",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-18T22:43:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f201791_feadb5ea",
+      "revId": "a6ef2b740a8e75763b5c978af5ae85960a45ec9b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f201791_deaaf9d0",
         "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
         "patchSetId": 11
@@ -30,6 +48,24 @@
       "writtenOn": "2015-08-18T20:43:26Z",
       "side": 1,
       "message": "same here",
+      "revId": "a6ef2b740a8e75763b5c978af5ae85960a45ec9b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_5e3b899b",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-18T22:43:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f201791_deaaf9d0",
       "revId": "a6ef2b740a8e75763b5c978af5ae85960a45ec9b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_3e59edfd",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-18T22:43:01Z",
+      "side": 1,
+      "message": "Yup, works as expected",
+      "parentUuid": "5f201791_beb73d3b",
+      "revId": "a6ef2b740a8e75763b5c978af5ae85960a45ec9b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f201791_9be01399",
         "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
         "patchSetId": 11
@@ -64,6 +118,24 @@
       "writtenOn": "2015-08-18T20:43:26Z",
       "side": 1,
       "message": "you have a setter for this, meaning its optional. If this doesn\u0027t get set, you\u0027re going to have null pointer exceptions in your animation.",
+      "revId": "a6ef2b740a8e75763b5c978af5ae85960a45ec9b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_1e13d10f",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-18T22:43:01Z",
+      "side": 1,
+      "message": "I\u0027ll do a null check on the navigationview part of the animation. I do want it to remain optional for instances where the selectionbar is used without a navigationview (eg: search eventually)",
+      "parentUuid": "5f201791_9be01399",
       "revId": "a6ef2b740a8e75763b5c978af5ae85960a45ec9b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_de6f9990",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-18T22:43:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f201791_1bd523ba",
+      "revId": "a6ef2b740a8e75763b5c978af5ae85960a45ec9b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f201791_fbd947f4",
         "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
         "patchSetId": 11
@@ -98,6 +188,24 @@
       "writtenOn": "2015-08-18T20:43:26Z",
       "side": 1,
       "message": "empty lines",
+      "revId": "a6ef2b740a8e75763b5c978af5ae85960a45ec9b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_9e69218d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-18T22:43:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f201791_fbd947f4",
       "revId": "a6ef2b740a8e75763b5c978af5ae85960a45ec9b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_5e0949db",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-18T22:43:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f201791_dbd68bc4",
+      "revId": "a6ef2b740a8e75763b5c978af5ae85960a45ec9b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f201791_bbe3cfa4",
         "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
         "patchSetId": 11
@@ -138,6 +264,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_3e0e8de5",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 351,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-18T22:43:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f201791_bbe3cfa4",
+      "revId": "a6ef2b740a8e75763b5c978af5ae85960a45ec9b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f201791_3bd0dfc9",
         "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
         "patchSetId": 11
@@ -149,6 +293,24 @@
       "writtenOn": "2015-08-18T20:43:26Z",
       "side": 1,
       "message": "Have you tried this with storage provider? Files on storage provider do not work nicely with the File class.",
+      "revId": "a6ef2b740a8e75763b5c978af5ae85960a45ec9b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_fef7f5d3",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-18T22:43:01Z",
+      "side": 1,
+      "message": "this part actually works great, since we build a path for each item in the filesystemobject. (doing anything more than comparing paths might be an issue)",
+      "parentUuid": "5f201791_3bd0dfc9",
       "revId": "a6ef2b740a8e75763b5c978af5ae85960a45ec9b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
