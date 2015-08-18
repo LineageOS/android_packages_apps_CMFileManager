@@ -647,11 +647,13 @@ public class NavigationActivity extends Activity
                 removeUnmountedHistory();
                 removeUnmountedSelection();
 
-                Intent intent = new Intent();
-                intent.putExtra(EXTRA_ADD_TO_HISTORY, false);
-                initNavigation(NavigationActivity.this.mCurrentNavigationView, false, intent);
+                if (mDisplayingSearchResults) {
+                    mDisplayingSearchResults = false;
+                    closeSearch();
+                }
             }
             getCurrentNavigationView().refresh(true);
+
         }
     }
 
