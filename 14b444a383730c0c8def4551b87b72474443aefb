@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f201791_7e2d2545",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 1088,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-18T22:47:03Z",
+      "side": 0,
+      "message": "why remove the \"isNewHistory\" check?",
+      "range": {
+        "startLine": 1088,
+        "startChar": 46,
+        "endLine": 1088,
+        "endChar": 58
+      },
+      "revId": "14b444a383730c0c8def4551b87b72474443aefb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
