@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f201791_2f39b540",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 867,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-19T23:18:48Z",
+      "side": 1,
+      "message": "does this need to run twice back to back?",
+      "range": {
+        "startLine": 867,
+        "startChar": 26,
+        "endLine": 867,
+        "endChar": 46
+      },
+      "revId": "25f8192d28d19c8dce74d6ebe0eeb8dd21a9ec91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
