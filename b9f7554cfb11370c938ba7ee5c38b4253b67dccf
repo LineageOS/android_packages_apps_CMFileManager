@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "5f201791_89832957",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/InputNameDialog.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-08-19T01:21:23Z",
+      "side": 1,
+      "message": "A bit nitpicky but maybe keep private and add a getter?",
+      "revId": "b9f7554cfb11370c938ba7ee5c38b4253b67dccf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f201791_093b99d1",
         "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
         "patchSetId": 13
@@ -53,6 +70,23 @@
         "endLine": 66,
         "endChar": 46
       },
+      "revId": "b9f7554cfb11370c938ba7ee5c38b4253b67dccf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_69ed6d24",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 524,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-08-19T01:21:23Z",
+      "side": 1,
+      "message": "don\u0027t -\u003e does not",
       "revId": "b9f7554cfb11370c938ba7ee5c38b4253b67dccf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
