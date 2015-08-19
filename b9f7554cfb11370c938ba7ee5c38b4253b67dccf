@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_895fa9e4",
+        "filename": "res/anim/slide_out_navigation.xml",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-19T01:54:46Z",
+      "side": 1,
+      "message": "Yes, this is for the reverse animation on the selectionview.",
+      "parentUuid": "5f201791_09127959",
+      "revId": "b9f7554cfb11370c938ba7ee5c38b4253b67dccf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f201791_89832957",
         "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/InputNameDialog.java",
         "patchSetId": 13
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_c9bec1fe",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/InputNameDialog.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-19T01:54:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f201791_89832957",
+      "revId": "b9f7554cfb11370c938ba7ee5c38b4253b67dccf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f201791_093b99d1",
         "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
         "patchSetId": 13
@@ -47,6 +83,24 @@
       "writtenOn": "2015-08-19T01:08:16Z",
       "side": 1,
       "message": "Don\u0027t think this comment is accurate any more, this information is displayed in a menu not in a dialog right?",
+      "revId": "b9f7554cfb11370c938ba7ee5c38b4253b67dccf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_a9e2652e",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 1750,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-19T01:54:46Z",
+      "side": 1,
+      "message": "the menu opens a dialog, but yes the comment is inaccurate.",
+      "parentUuid": "5f201791_093b99d1",
       "revId": "b9f7554cfb11370c938ba7ee5c38b4253b67dccf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -76,6 +130,30 @@
     },
     {
       "key": {
+        "uuid": "5f201791_49cbd1a4",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/DeleteActionPolicy.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-19T01:54:46Z",
+      "side": 1,
+      "message": "Removed, this shouldn\u0027t have been changed",
+      "parentUuid": "5f201791_894c4977",
+      "range": {
+        "startLine": 66,
+        "startChar": 45,
+        "endLine": 66,
+        "endChar": 46
+      },
+      "revId": "b9f7554cfb11370c938ba7ee5c38b4253b67dccf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f201791_69ed6d24",
         "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
         "patchSetId": 13
@@ -93,6 +171,24 @@
     },
     {
       "key": {
+        "uuid": "5f201791_e9c17d82",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 524,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-19T01:54:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f201791_69ed6d24",
+      "revId": "b9f7554cfb11370c938ba7ee5c38b4253b67dccf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f201791_49563109",
         "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
         "patchSetId": 13
@@ -104,6 +200,30 @@
       "writtenOn": "2015-08-19T01:08:16Z",
       "side": 1,
       "message": "not a great method name, either add comments or change the name to show identify what this is doing.",
+      "range": {
+        "startLine": 347,
+        "startChar": 16,
+        "endLine": 347,
+        "endChar": 23
+      },
+      "revId": "b9f7554cfb11370c938ba7ee5c38b4253b67dccf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_09c5d98e",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-19T01:54:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f201791_49563109",
       "range": {
         "startLine": 347,
         "startChar": 16,
