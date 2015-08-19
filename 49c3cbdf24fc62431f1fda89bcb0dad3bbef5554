@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5f201791_24043c7b",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-19T06:27:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f201791_a4d60cf1",
+      "range": {
+        "startLine": 127,
+        "startChar": 46,
+        "endLine": 127,
+        "endChar": 67
+      },
+      "revId": "49c3cbdf24fc62431f1fda89bcb0dad3bbef5554",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f201791_8405507d",
         "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
         "patchSetId": 15
@@ -36,6 +60,24 @@
       "writtenOn": "2015-08-19T06:18:15Z",
       "side": 1,
       "message": "not very consistent, you use this. here but not in the line above.",
+      "revId": "49c3cbdf24fc62431f1fda89bcb0dad3bbef5554",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_04f9407f",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-19T06:27:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f201791_8405507d",
       "revId": "49c3cbdf24fc62431f1fda89bcb0dad3bbef5554",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
