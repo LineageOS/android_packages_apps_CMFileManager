@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f201791_09127959",
+        "filename": "res/anim/slide_out_navigation.xml",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-08-19T01:08:16Z",
+      "side": 1,
+      "message": "Do we really need this slide_out.xml",
+      "revId": "b9f7554cfb11370c938ba7ee5c38b4253b67dccf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_093b99d1",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/NavigationFragment.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 1750,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-08-19T01:08:16Z",
+      "side": 1,
+      "message": "Don\u0027t think this comment is accurate any more, this information is displayed in a menu not in a dialog right?",
+      "revId": "b9f7554cfb11370c938ba7ee5c38b4253b67dccf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_894c4977",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/DeleteActionPolicy.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-08-19T01:08:16Z",
+      "side": 1,
+      "message": "Since this wasn\u0027t updated to accept a list of FileSystemObjects or anything why was this changed?",
+      "range": {
+        "startLine": 66,
+        "startChar": 45,
+        "endLine": 66,
+        "endChar": 46
+      },
+      "revId": "b9f7554cfb11370c938ba7ee5c38b4253b67dccf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_49563109",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/SelectionView.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-08-19T01:08:16Z",
+      "side": 1,
+      "message": "not a great method name, either add comments or change the name to show identify what this is doing.",
+      "range": {
+        "startLine": 347,
+        "startChar": 16,
+        "endLine": 347,
+        "endChar": 23
+      },
+      "revId": "b9f7554cfb11370c938ba7ee5c38b4253b67dccf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
