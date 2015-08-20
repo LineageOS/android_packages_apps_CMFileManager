@@ -196,11 +196,11 @@
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - nou<xliff:g id="extension">%2$s</xliff:g></string>
   <string name="waiting_dialog_msg">Efectuare operațiune\u2026</string>
   <string name="waiting_dialog_copying_title">Copiere\u2026</string>
-  <string name="waiting_dialog_copying_msg"><![CDATA[<b>De la</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>To</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <string name="waiting_dialog_copying_msg"><![CDATA[<b>De la</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>La</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <string name="waiting_dialog_moving_title">Mutare\u2026</string>
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>De la</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Pentru</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <string name="waiting_dialog_deleting_title">Ștergere\u2026</string>
-  <string name="waiting_dialog_deleting_msg"><![CDATA[<b>File</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Fișier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <string name="waiting_dialog_extracting_title">Extragere\u2026</string>
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Fișier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <string name="waiting_dialog_compressing_title">Comprimare\u2026</string>
@@ -217,7 +217,7 @@
   <string name="actions_menu_deselect_all">Anulare selectare totală</string>
   <string name="actions_menu_select">Selectare</string>
   <string name="actions_menu_deselect">Deselectare</string>
-  <string name="actions_menu_paste_selection">Lipire</string>
+  <string name="actions_menu_paste_selection">Lipește selecția aici</string>
   <string name="actions_menu_move_selection">Mutare</string>
   <string name="actions_menu_delete_selection">Ștergere</string>
   <string name="actions_menu_compress_selection">Comprimare</string>
@@ -332,7 +332,7 @@
   <string name="pref_save_search_terms_off">Termenii de căutare nu vor fi salvați</string>
   <string name="pref_remove_saved_search_terms">Eliminați termenii de căutare salvați</string>
   <string name="pref_remove_saved_search_terms_summary">Apăsați pentru eliminarea tuturor termenilor de căutare salvați</string>
-  <string name="pref_remove_saved_search_terms_msg">Toţi termenii de căutare salvaţi au fost eliminaţi</string>
+  <string name="pref_remove_saved_search_terms_msg">Toți termenii de căutare salvați au fost eliminați</string>
   <string name="pref_secure_storage_category">Stocare securizată</string>
   <string name="pref_secure_storage_delayed_sync_title">Sincronizare întârziată</string>
   <string name="pref_secure_storage_delayed_sync_summary">Sincronizarea unor sisteme cu fişiere sigure este o operaţie costisitoare. Activaţi această opţiune pentru a permite răspunsuri în timp mai bune după fiecare operațiune, efectuând sincronizări atunci când sistemul de fişiere este în stare nefolosită, dar în detrimentul pierderii de informaţii în aşteptare de sincronizate în cazul unei erori a aplicației.</string>
