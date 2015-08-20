@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f201791_be8df87c",
+        "filename": "res/layout/navigation_view_simple_item_small.xml",
+        "patchSetId": 12
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-20T05:51:43Z",
+      "side": 1,
+      "message": "date",
+      "revId": "438d8b75ab3878cc6f60471b5c70a25467e41090",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_9ee8fc16",
+        "filename": "res/menu/picker_menu.xml",
+        "patchSetId": 12
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-20T05:51:43Z",
+      "side": 1,
+      "message": "delete file!",
+      "revId": "438d8b75ab3878cc6f60471b5c70a25467e41090",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_7eed2024",
+        "filename": "src/com/cyanogenmod/filemanager/activities/PickerActivity.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 616,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-20T05:51:43Z",
+      "side": 1,
+      "message": "delete",
+      "revId": "438d8b75ab3878cc6f60471b5c70a25467e41090",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_5ef26408",
+        "filename": "src/com/cyanogenmod/filemanager/activities/PickerActivity.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 619,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-20T05:51:43Z",
+      "side": 1,
+      "message": "delete",
+      "revId": "438d8b75ab3878cc6f60471b5c70a25467e41090",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_1edcec72",
+        "filename": "src/com/cyanogenmod/filemanager/ui/fragments/RootsListFragment.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-08-20T05:51:43Z",
+      "side": 1,
+      "message": "delete file",
+      "revId": "438d8b75ab3878cc6f60471b5c70a25467e41090",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
