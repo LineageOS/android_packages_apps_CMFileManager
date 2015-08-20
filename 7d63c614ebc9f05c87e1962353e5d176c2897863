@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f201791_21278915",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 567,
+      "author": {
+        "id": 1448
+      },
+      "writtenOn": "2015-08-20T22:44:00Z",
+      "side": 1,
+      "message": "All caps. \u003c/OCD\u003e",
+      "range": {
+        "startLine": 567,
+        "startChar": 60,
+        "endLine": 567,
+        "endChar": 61
+      },
+      "revId": "7d63c614ebc9f05c87e1962353e5d176c2897863",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
