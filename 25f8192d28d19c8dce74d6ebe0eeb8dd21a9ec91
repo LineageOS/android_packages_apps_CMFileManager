@@ -22,6 +22,30 @@
       "revId": "25f8192d28d19c8dce74d6ebe0eeb8dd21a9ec91",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_ea0e0b31",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 867,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-20T01:29:54Z",
+      "side": 1,
+      "message": "Yes, one is to delete a set of paths, the other is to add.  I could potentially combine them, but that will increase total memory usage on something I\u0027m already iffy about doing since there is a potential to get an OOM on directories with a very large number of files. Maybe the better implementation would be to do a scanFile on a per-directory basis as we recursively scan through the folder.",
+      "parentUuid": "5f201791_2f39b540",
+      "range": {
+        "startLine": 867,
+        "startChar": 26,
+        "endLine": 867,
+        "endChar": 46
+      },
+      "revId": "25f8192d28d19c8dce74d6ebe0eeb8dd21a9ec91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
