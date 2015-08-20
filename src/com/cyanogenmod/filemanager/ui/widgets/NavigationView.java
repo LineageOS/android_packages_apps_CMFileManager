@@ -1036,6 +1036,13 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             final String newDir, final boolean addToHistory,
             final boolean reload, final boolean useCurrent,
             final SearchInfoParcelable searchInfo, final FileSystemObject scrollTo) {
+        if (mNavigationTask != null) {
+            this.mCurrentDir = this.mPreviousDir;
+            this.mPreviousDir = null;
+            mNavigationTask.cancel(true);
+            mNavigationTask = null;
+        }
+
         this.mPreviousDir = this.mCurrentDir;
         this.mCurrentDir = newDir;
         mNavigationTask = new NavigationTask(useCurrent, addToHistory, reload,
