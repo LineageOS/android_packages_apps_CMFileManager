@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 
+import android.util.Log;
 import com.cyanogenmod.filemanager.commands.AsyncResultListener;
 import com.cyanogenmod.filemanager.commands.ChangeOwnerExecutable;
 import com.cyanogenmod.filemanager.commands.ChangePermissionsExecutable;
@@ -99,6 +100,8 @@ import java.util.Stack;
  * A helper class with useful methods for deal with commands.
  */
 public final class CommandHelper {
+
+    private static final String TAG = "CommandHelper";
 
     /**
      * A wrapper class for asynchronous operations that need restore the filesystem
@@ -358,6 +361,47 @@ public final class CommandHelper {
         return executable.getResult().booleanValue();
     }
 
+    private static String[] collectScanPaths(final Context context, String path) {
+        ArrayList<String> paths = new ArrayList<>();
+        Stack<FileSystemObject> pathsToScan = new Stack<>();
+        try {
+            FileSystemObject fso = getFileInfo(context, path, null);
+            if (fso == null) {
+                return new String[0];
+            }
+            pathsToScan.push(fso);
+            while (!pathsToScan.isEmpty()) {
+                fso = pathsToScan.pop();
+                paths.add(MediaHelper.normalizeMediaPath(fso.getFullPath()));
+                if (fso instanceof Directory) {
+                    List<FileSystemObject> files =
+                            CommandHelper.listFiles(context, fso.getFullPath(), null);
+                    if (files == null) {
+                        continue;
+                    }
+                    for (FileSystemObject file : files) {
+                        if (file instanceof ParentDirectory) {
+                            continue;
+                        }
+                        pathsToScan.push(file);
+                    }
+                }
+            }
+            return paths.toArray(new String[paths.size()]);
+        } catch (IOException
+                | ConsoleAllocException
+                | NoSuchFileOrDirectory
+                | InsufficientPermissionsException
+                | CommandNotFoundException
+                | OperationTimeoutException
+                | ExecutionException
+                | InvalidCommandDefinitionException e) {
+            // Just stop scanning
+            Log.e(TAG, "Recursive Delete Failed with: ", e);
+            return new String[0];
+        }
+    }
+
     /**
      * Method that deletes a directory.
      *
@@ -385,14 +429,16 @@ public final class CommandHelper {
             CommandNotFoundException, OperationTimeoutException,
             ExecutionException, InvalidCommandDefinitionException, ReadOnlyFilesystemException,
             CancelledOperationException {
+
+        String[] pathsToScan = collectScanPaths(context, directory);
+
         Console c = ensureConsoleForFile(context, console, directory);
         DeleteDirExecutable executable =
                 c.getExecutableFactory().newCreator().createDeleteDirExecutable(directory);
         writableExecute(context, executable, c);
 
-        // update media scan
-        MediaScannerConnection.scanFile(context, new String[]{
-                MediaHelper.normalizeMediaPath(directory)}, null, null);
+        // Remove from mediascanner
+        MediaScannerConnection.scanFile(context, pathsToScan, null, null);
 
         return executable.getResult().booleanValue();
     }
@@ -424,15 +470,16 @@ public final class CommandHelper {
             CommandNotFoundException, OperationTimeoutException,
             ExecutionException, InvalidCommandDefinitionException, ReadOnlyFilesystemException,
             CancelledOperationException {
+
+        String[] pathsToScan = collectScanPaths(context, file);
+
         Console c = ensureConsoleForFile(context, console, file);
         DeleteFileExecutable executable =
                 c.getExecutableFactory().newCreator().createDeleteFileExecutable(file);
         writableExecute(context, executable, c);
 
         // Remove from mediascanner
-        MediaScannerConnection.scanFile(context, new String[]{
-                MediaHelper.normalizeMediaPath(file)
-        }, null, null);
+        MediaScannerConnection.scanFile(context, pathsToScan, null, null);
 
         return executable.getResult().booleanValue();
     }
