@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f201791_32da39e9",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/ToggleSwipeViewPager.java",
+        "patchSetId": 14
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-08-21T23:33:14Z",
+      "side": 1,
+      "message": "why do this instead of setSwipeable false?",
+      "range": {
+        "startLine": 48,
+        "startChar": 16,
+        "endLine": 48,
+        "endChar": 31
+      },
+      "revId": "60b5090aa7cf6fe7a640720c5e6a43a563c830e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
