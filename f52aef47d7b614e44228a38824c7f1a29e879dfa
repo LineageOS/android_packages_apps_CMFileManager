@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f201791_f275e1fb",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 396,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-08-21T23:24:32Z",
+      "side": 1,
+      "message": "just stop...\n\nalso, can you add log the exception here? Just to ease debug in the future, it\u0027d be good to know what caused this case to occur.",
+      "revId": "f52aef47d7b614e44228a38824c7f1a29e879dfa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
