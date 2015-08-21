@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "5f201791_f2e3a1a3",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-08-21T23:33:46Z",
+      "side": 1,
+      "message": "such exception, much definition!  I think at this point a generic exception would be less of an eyesore, but I don\u0027t care either way.",
+      "revId": "f52aef47d7b614e44228a38824c7f1a29e879dfa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f201791_f275e1fb",
         "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
         "patchSetId": 3
@@ -13,6 +30,23 @@
       "writtenOn": "2015-08-21T23:24:32Z",
       "side": 1,
       "message": "just stop...\n\nalso, can you add log the exception here? Just to ease debug in the future, it\u0027d be good to know what caused this case to occur.",
+      "revId": "f52aef47d7b614e44228a38824c7f1a29e879dfa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f201791_72b1d1e1",
+        "filename": "src/com/cyanogenmod/filemanager/util/CommandHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 441,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-08-21T23:33:46Z",
+      "side": 1,
+      "message": "delete?",
       "revId": "f52aef47d7b614e44228a38824c7f1a29e879dfa",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
