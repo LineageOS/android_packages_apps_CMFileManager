@@ -19,4 +19,10 @@
   <plurals name="n_folders">
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> پوشه</item>
   </plurals>
+  <plurals name="n_files">
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> فایل</item>
+  </plurals>
+  <plurals name="search_found_items">
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> مورد پیدا شد</item>
+  </plurals>
 </resources>

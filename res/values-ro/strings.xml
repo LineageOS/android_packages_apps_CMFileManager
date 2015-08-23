@@ -92,10 +92,10 @@
   <string name="layout_icons">Pictograme</string>
   <string name="layout_simple">Simplu</string>
   <string name="layout_details">Detaliat</string>
-  <string name="cm_filemanager_show_dirs_first">Afişare dosare întâi</string>
-  <string name="cm_filemanager_show_hidden">Afişare fişiere ascunse</string>
-  <string name="cm_filemanager_show_system">Afişare fişiere de sistem</string>
-  <string name="cm_filemanager_show_symlinks">Afişare legături simbolice</string>
+  <string name="cm_filemanager_show_dirs_first">Afișare dosare întâi</string>
+  <string name="cm_filemanager_show_hidden">Afișare fișiere ascunse</string>
+  <string name="cm_filemanager_show_system">Afișare fișiere de sistem</string>
+  <string name="cm_filemanager_show_symlinks">Afișare legături simbolice</string>
   <string name="filesystem_info_warning_title">Nu există informații</string>
   <string name="filesystem_info_warning_msg">Nu există informații disponibile pentru fișierele de sistem.</string>
   <string name="filesystem_info_cant_be_mounted_msg">Fișierele de sistem nu pot fi montate/demontate.</string>
@@ -147,7 +147,7 @@
   <string name="search">Rezultatele căutării</string>
   <string name="search_hint">Introduceți căutarea</string>
   <string name="search_voice_hint">Rostiți căutarea</string>
-  <string name="search_error_msg">O eroare a avut loc în timpul cautării. Niciun rezultat găsit.</string>
+  <string name="search_error_msg">O eroare a avut loc în timpul căutării. Niciun rezultat găsit.</string>
   <string name="search_no_results_msg">Niciun rezultat găsit.</string>
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> în<xliff:g id="path">%2$s</xliff:g></string>
   <string name="search_terms"><![CDATA[<b>Termeni:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
@@ -190,11 +190,11 @@
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - nou<xliff:g id="extension">%2$s</xliff:g></string>
   <string name="waiting_dialog_msg">Efectuare operațiune\u2026</string>
   <string name="waiting_dialog_copying_title">Copiere\u2026</string>
-  <string name="waiting_dialog_copying_msg"><![CDATA[<b>De la</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>To</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <string name="waiting_dialog_copying_msg"><![CDATA[<b>De la</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>La</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <string name="waiting_dialog_moving_title">Mutare\u2026</string>
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>De la</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Pentru</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <string name="waiting_dialog_deleting_title">Ștergere\u2026</string>
-  <string name="waiting_dialog_deleting_msg"><![CDATA[<b>File</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Fișier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <string name="waiting_dialog_extracting_title">Extragere\u2026</string>
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Fișier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <string name="waiting_dialog_compressing_title">Comprimare\u2026</string>
@@ -211,8 +211,8 @@
   <string name="actions_menu_deselect_all">Anulare selectare totală</string>
   <string name="actions_menu_select">Selectare</string>
   <string name="actions_menu_deselect">Deselectare</string>
-  <string name="actions_menu_paste_selection">Lipire</string>
-  <string name="actions_menu_move_selection">Mutare</string>
+  <string name="actions_menu_paste_selection">Lipește selecția aici</string>
+  <string name="actions_menu_move_selection">Mutare aici</string>
   <string name="actions_menu_delete_selection">Ștergere</string>
   <string name="actions_menu_compress_selection">Comprimare</string>
   <string name="actions_menu_create_link">Creare legătură</string>
@@ -232,14 +232,14 @@
   <string name="actions_menu_open_parent_folder">Deschidere sursă</string>
   <string name="actions_menu_compute_checksum">Calculează checksum</string>
   <string name="actions_menu_print">Imprimare</string>
-  <string name="actions_menu_set_as_home">Setaţi ca acasă</string>
+  <string name="actions_menu_set_as_home">Setați ca acasă</string>
   <string name="actions_ask_undone_operation_msg">Această acțiune nu poate fi anulată. Doriți să continuați?</string>
   <string name="input_name_dialog_label">Nume:</string>
   <string name="input_name_dialog_message_empty_name">Numele nu poate fi gol.</string>
   <string name="input_name_dialog_message_invalid_path_name">Nume incorect. Caracterele \"<xliff:g id="invalid_characters">%1$s</xliff:g>\" nu sunt admise.</string>
   <string name="input_name_dialog_message_invalid_name">Nume incorect. Numele \".\" și \"..\" nu sunt admise.</string>
   <string name="input_name_dialog_message_name_exists">Numele există deja.</string>
-  <string name="associations_dialog_title">Asociații</string>
+  <string name="associations_dialog_title">Asocieri</string>
   <string name="associations_dialog_remember">Rețineți selecția</string>
   <string name="associations_dialog_openwith_title">Deschideți cu</string>
   <string name="associations_dialog_openwith_action">Deschideți</string>
@@ -264,7 +264,7 @@
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">aaaa-ll-zz oo:mm:ss</string>
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> și <xliff:g id="files">%2$s</xliff:g> selectate.</string>
   <string name="category_system">SISTEM</string>
-  <string name="category_app">APLICAŢIE</string>
+  <string name="category_app">APLICAȚIE</string>
   <string name="category_binary">BINAR</string>
   <string name="category_text">TEXT</string>
   <string name="category_document">DOCUMENT</string>
@@ -278,14 +278,14 @@
   <string name="category_audio">AUDIO</string>
   <string name="category_video">VIDEO</string>
   <string name="category_security">SECURITATE</string>
-  <string name="compression_mode_title">Mod comrimare</string>
+  <string name="compression_mode_title">Mod comprimare</string>
   <string name="shortcut_failed_msg">Eșuat.</string>
   <string name="shortcut_creation_success_msg">Comandă rapidă creată cu succes.</string>
   <string name="shortcut_creation_failed_msg">Crearea comandă rapidă eșuată.</string>
   <string name="pref">Setări</string>
   <string name="pref_general">Setări generale</string>
   <string name="pref_search">Opțiuni căutare</string>
-  <string name="pref_storage">Opţiuni de stocare</string>
+  <string name="pref_storage">Opțiuni de stocare</string>
   <string name="pref_editor">Opțiuni editor</string>
   <string name="pref_themes">Teme</string>
   <string name="pref_about">Despre</string>
@@ -319,18 +319,18 @@
   <string name="pref_sort_search_results_mode_none">Fără sortare</string>
   <string name="pref_sort_search_results_mode_name">După nume</string>
   <string name="pref_sort_search_results_mode_relevance">După relevanță</string>
-  <string name="pref_search_privacity_category">Privat</string>
+  <string name="pref_search_privacity_category">Confidențialitate</string>
   <string name="pref_save_search_terms">Salvați termenii de căutare</string>
   <string name="pref_save_search_terms_on">Termenii de căutare vor fi salvați și folosiți ca sugestii pentru căutări în viitor</string>
   <string name="pref_save_search_terms_off">Termenii de căutare nu vor fi salvați</string>
   <string name="pref_remove_saved_search_terms">Eliminați termenii de căutare salvați</string>
   <string name="pref_remove_saved_search_terms_summary">Apăsați pentru eliminarea tuturor termenilor de căutare salvați</string>
-  <string name="pref_remove_saved_search_terms_msg">Toţi termenii de căutare salvaţi au fost eliminaţi</string>
+  <string name="pref_remove_saved_search_terms_msg">Toți termenii de căutare salvați au fost eliminați</string>
   <string name="pref_secure_storage_category">Stocare securizată</string>
   <string name="pref_secure_storage_delayed_sync_title">Sincronizare întârziată</string>
-  <string name="pref_secure_storage_delayed_sync_summary">Sincronizarea unor sisteme cu fişiere sigure este o operaţie costisitoare. Activaţi această opţiune pentru a permite răspunsuri în timp mai bune după fiecare operațiune, efectuând sincronizări atunci când sistemul de fişiere este în stare nefolosită, dar în detrimentul pierderii de informaţii în aşteptare de sincronizate în cazul unei erori a aplicației.</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Sincronizarea unor sisteme cu fișiere sigure este o operație costisitoare. Activați această opțiune pentru a permite răspunsuri în timp mai bune după fiecare operațiune, efectuând sincronizări atunci când sistemul de fișiere este în stare nefolosită, dar în detrimentul pierderii de informații în așteptare de sincronizate în cazul unei erori a aplicației.</string>
   <string name="pref_secure_storage_reset_password_title">Resetare parolă</string>
-  <string name="pref_secure_storage_delete_storage_title">Ştergeţi stocarea</string>
+  <string name="pref_secure_storage_delete_storage_title">Ștergeți stocarea</string>
   <string name="pref_editor_behaviour_category">Comportament</string>
   <string name="pref_no_suggestions">Fără sugestii</string>
   <string name="pref_no_suggestions_desc">Nu afișa sugestiile din dicționar în timp ce editez fișierul</string>
@@ -370,11 +370,11 @@
   <string name="secure_storage_unlock_title">Deblochează stocarea</string>
   <string name="secure_storage_create_title">Crearea de stocare</string>
   <string name="secure_storage_reset_title">Resetare parolă</string>
-  <string name="secure_storage_delete_title">Ştergeţi stocarea</string>
-  <string name="secure_storage_unlock_key_prompt_msg">Introduceţi parola pentru a debloca sistemul de fişiere sigure de stocare.</string>
-  <string name="secure_storage_unlock_key_new_msg">Tastaţi o parolă pentru a proteja sistemul de fişiere sigure de stocare.</string>
-  <string name="secure_storage_unlock_key_reset_msg">Tastați parola curentă şi ceea nouă pentru a reseta sistemul de fişiere sigure de stocare.</string>
-  <string name="secure_storage_unlock_key_delete_msg">Tastaţi parola curentă pentru a şterge sistemul de fişiere securizate de stocare.</string>
+  <string name="secure_storage_delete_title">Ștergeți stocarea</string>
+  <string name="secure_storage_unlock_key_prompt_msg">Introduceți parola pentru a debloca sistemul de fișiere sigure de stocare.</string>
+  <string name="secure_storage_unlock_key_new_msg">Tastați o parolă pentru a proteja sistemul de fișiere sigure de stocare.</string>
+  <string name="secure_storage_unlock_key_reset_msg">Tastați parola curentă și ceea nouă pentru a reseta sistemul de fișiere sigure de stocare.</string>
+  <string name="secure_storage_unlock_key_delete_msg">Tastați parola curentă pentru a șterge sistemul de fișiere securizate de stocare.</string>
   <string name="secure_storage_unlock_old_key_title">Parola veche:</string>
   <string name="secure_storage_unlock_new_key_title">Parolă nouă:</string>
   <string name="secure_storage_unlock_key_title">Parola:</string>

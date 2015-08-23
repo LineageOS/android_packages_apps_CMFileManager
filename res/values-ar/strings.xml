@@ -62,7 +62,7 @@
   <string name="msgs_operation_failure">فشلت العملية.</string>
   <string name="msgs_console_alloc_failure">حدث خطأ داخلي.</string>
   <string name="msgs_operation_can_not_be_cancelled">لا يمكن إلغاء العملية.</string>
-  <string name="msgs_read_only_filesystem">ملفات النظام للقراءة فقط. محاولة تحويل نظام الملفات الى القراءة والكتابة قبل محاولة تنفيذ العملية.</string>
+  <string name="msgs_read_only_filesystem">ملفات النظام للقراءة فقط. حاول تحميل نظام الملفات الى القراءة والكتابة قبل محاولة تنفيذ العملية.</string>
   <string name="msgs_illegal_argument">البرهان غير المشروعة. فشل استدعاء.</string>
   <string name="msgs_unresolved_inconsistencies">غير مسموح العملية نظراً لأن من شأنه أن يسبب تناقضات.</string>
   <string name="msgs_operation_not_allowed_in_current_directory">غير مسموح للعملية في المجلد. \n\n مكان المجلد الحالي يتعذر متابعة مصدر أو شبيه المصدر.</string>
