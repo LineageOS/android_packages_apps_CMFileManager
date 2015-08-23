@@ -17,9 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> folder</item>
-    <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> foldere</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> de foldere</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> dosar</item>
+    <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> dosare</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> dosare</item>
   </plurals>
   <plurals name="n_files">
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fișier</item>

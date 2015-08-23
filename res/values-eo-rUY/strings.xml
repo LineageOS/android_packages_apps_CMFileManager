@@ -16,6 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="dark_theme_name">تم تیره</string>
-  <string name="dark_theme_desc">تم تیره برای مدیر فایل سایانوژن‌مود.</string>
+  <string name="actionbar_button_save_cd">Konservi</string>
 </resources>
