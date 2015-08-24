@@ -378,6 +378,8 @@
     <string name="bookmarks_button_remove_bookmark_cd">Remove the bookmark.</string>
     <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
     <string name="bookmarks_msgs_add_success">The bookmark was added successfully.</string>
+    <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
+    <string name="bookmarks_msgs_add_exists">The bookmark was already exists.</string>
 
     <!-- Initial directory dialog title -->
     <string name="initial_directory_dialog_title">Initial folder</string>
