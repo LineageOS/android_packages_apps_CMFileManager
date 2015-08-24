@@ -22,6 +22,7 @@ import android.text.SpannableString;
 import android.text.style.BackgroundColorSpan;
 import android.text.style.StyleSpan;
 
+import android.util.Log;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
 import com.cyanogenmod.filemanager.model.Query;
 import com.cyanogenmod.filemanager.model.SearchResult;
@@ -31,13 +32,14 @@ import java.util.List;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 
 /**
  * A helper class with useful methods for deal with search results.
  */
 public final class SearchHelper {
-
+    private static final String TAG = SearchHelper.class.getSimpleName();
     private static final String REGEXP_WILCARD = "*";  //$NON-NLS-1$
     private static final String REGEXP_WILCARD_JAVA = ".*";  //$NON-NLS-1$
 
@@ -131,7 +133,13 @@ public final class SearchHelper {
                     queries.get(i)
                         .replace(".", "[.]") //$NON-NLS-1$//$NON-NLS-2$
                         .replace("*", ".*"); //$NON-NLS-1$//$NON-NLS-2$
-            Pattern pattern = Pattern.compile(query, Pattern.CASE_INSENSITIVE);
+            Pattern pattern;
+            try {
+                pattern = Pattern.compile(query, Pattern.CASE_INSENSITIVE);
+            } catch (PatternSyntaxException e) {
+                Log.w(TAG, "Invalid regex syntax. Using literal query. Error=" + e);
+                pattern = Pattern.compile(query, Pattern.CASE_INSENSITIVE | Pattern.LITERAL);
+            }
             Matcher matcher = pattern.matcher(name);
             Spannable span =  new SpannableString(name);
             if (matcher.find()) {
@@ -230,7 +238,13 @@ public final class SearchHelper {
                     terms.get(i)
                         .replace(".", "[.]") //$NON-NLS-1$//$NON-NLS-2$
                         .replace("*", ".*"); //$NON-NLS-1$//$NON-NLS-2$
-            Pattern pattern = Pattern.compile(query, Pattern.CASE_INSENSITIVE);
+            Pattern pattern;
+            try {
+                pattern = Pattern.compile(query, Pattern.CASE_INSENSITIVE);
+            } catch (PatternSyntaxException e) {
+                Log.w(TAG, "Invalid regex syntax. Using literal query. Error=" + e);
+                pattern = Pattern.compile(query, Pattern.CASE_INSENSITIVE | Pattern.LITERAL);
+            }
             Matcher matcher = pattern.matcher(name);
             if (matcher.find()) {
                 //By name
