@@ -400,7 +400,7 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
             case R.id.mnu_actions_add_to_bookmarks_current_folder:
                 Bookmark bookmark = BookmarksActionPolicy.addToBookmarks(
                         this.mContext, this.mFso);
-                if (mBackRef != null) {
+                if (mBackRef != null && bookmark != null) {
                     // tell NavigationActivity's drawer to add the bookmark
                     mBackRef.addBookmark(bookmark);
                 }

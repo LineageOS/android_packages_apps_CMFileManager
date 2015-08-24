@@ -40,6 +40,15 @@ public final class BookmarksActionPolicy extends ActionsPolicy {
      */
     public static Bookmark addToBookmarks(final Context ctx, final FileSystemObject fso) {
         try {
+            // Check if the bookmark exists already
+            if (Bookmarks.getBookmark(ctx.getContentResolver(), fso.getFullPath()) != null) {
+                DialogHelper.showToast(
+                        ctx,
+                        R.string.bookmarks_msgs_add_exists,
+                        Toast.LENGTH_SHORT);
+                return null;
+            }
+
             // Create the bookmark
             Bookmark bookmark =
                     new Bookmark(BOOKMARK_TYPE.USER_DEFINED, fso.getName(), fso.getFullPath());
