@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f1d235d_29609532",
+        "filename": "src/com/cyanogenmod/filemanager/activities/SearchActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 863,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-25T04:31:33Z",
+      "side": 1,
+      "message": "why did i make this final?",
+      "range": {
+        "startLine": 863,
+        "startChar": 12,
+        "endLine": 863,
+        "endChar": 18
+      },
+      "revId": "8140c79cceae6cfa5e8fc1e5e391a88e879f10ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
