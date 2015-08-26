@@ -477,7 +477,7 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
         final InputNameDialog inputNameDialog =
                 new InputNameDialog(
                         this.mContext,
-                        this.mOnSelectionListener.onRequestCurrentItems(),
+                        this.mOnSelectionListener.onRequestCurrentDir(),
                         menuItem.getTitle().toString());
         inputNameDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
             @Override
@@ -519,7 +519,7 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
         final InputNameDialog inputNameDialog =
                 new InputNameDialog(
                         this.mContext,
-                        this.mOnSelectionListener.onRequestCurrentItems(),
+                        this.mOnSelectionListener.onRequestCurrentDir(),
                         fso,
                         allowFsoName,
                         menuItem.getTitle().toString());
