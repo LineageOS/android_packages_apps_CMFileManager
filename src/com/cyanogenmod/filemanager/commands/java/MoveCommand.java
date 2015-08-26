@@ -61,6 +61,23 @@ public class MoveCommand extends Program implements MoveExecutable {
     }
 
     /**
+     * This is to get around VFat stupidity
+     * @param file
+     * @return
+     */
+    public boolean exists(File file) {
+        File[] files = file.getParentFile().listFiles();
+
+        for (File f : files) {
+            if (f.equals(file)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * {@inheritDoc}
      */
     @Override
@@ -74,7 +91,7 @@ public class MoveCommand extends Program implements MoveExecutable {
 
         File s = new File(this.mSrc);
         File d = new File(this.mDst);
-        if (!s.exists()) {
+        if (!exists(s)) {
             if (isTrace()) {
                 Log.v(TAG, "Result: FAIL. NoSuchFileOrDirectory"); //$NON-NLS-1$
             }
@@ -82,7 +99,8 @@ public class MoveCommand extends Program implements MoveExecutable {
         }
 
         //Move or copy recursively
-        if (d.exists()) {
+
+        if (exists(d)) {
             if (!FileHelper.copyRecursive(s, d, this)) {
                 if (isTrace()) {
                     Log.v(TAG, "Result: FAIL. InsufficientPermissionsException"); //$NON-NLS-1$
