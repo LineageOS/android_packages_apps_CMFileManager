@@ -59,7 +59,7 @@ public class InputNameDialog
     /**
      * @hide
      */
-    final List<FileSystemObject> mFiles;
+    final String mParent;
     /**
      * @hide
      */
@@ -81,8 +81,8 @@ public class InputNameDialog
      * @param dialogTitle The dialog title
      */
     public InputNameDialog(
-            final Context context, List<FileSystemObject> files, String dialogTitle) {
-        this(context, files, null, false, dialogTitle);
+            final Context context, String parent, String dialogTitle) {
+        this(context, parent, null, false, dialogTitle);
     }
 
     /**
@@ -95,15 +95,18 @@ public class InputNameDialog
      * @param dialogTitle The dialog title
      */
     public InputNameDialog(
-            final Context context, final List<FileSystemObject> files,
-            final FileSystemObject fso, boolean allowFsoName, final String dialogTitle) {
+            final Context context,
+            final String parent,
+            final FileSystemObject fso,
+            boolean allowFsoName,
+            final String dialogTitle) {
         super();
 
         //Save the context
         this.mContext = context;
 
         //Save the files
-        this.mFiles = files;
+        this.mParent = parent;
         this.mFso = fso;
         this.mAllowFsoName = allowFsoName;
         this.mCancelled = true;
@@ -293,7 +296,7 @@ public class InputNameDialog
         }
 
         // Name exists
-        if (FileHelper.isNameExists(this.mFiles, name)) {
+        if (FileHelper.isNameExists(this.mContext, this.mParent, name)) {
             setMsg(
                 InputNameDialog.this.mContext.getString(
                         R.string.input_name_dialog_message_name_exists), false);
