@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f1d235d_54ffe166",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 382,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2015-08-27T19:32:46Z",
+      "side": 1,
+      "message": "This is really bad English, please fix",
+      "revId": "85032a699b4f9d6101599be230257eab7a8cd76a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
