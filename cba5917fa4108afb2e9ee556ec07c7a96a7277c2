@@ -22,6 +22,30 @@
       "revId": "cba5917fa4108afb2e9ee556ec07c7a96a7277c2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f1d235d_147609da",
+        "filename": "src/com/cyanogenmod/filemanager/commands/java/MoveCommand.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-08-27T23:34:13Z",
+      "side": 1,
+      "message": "It could potentially be pretty shitty.  See the ticket: QRDL-983\n\nWhen you pass a FileNameFilter, it just passes over the data set in the same manner this does.  The difference is I use less space.\n\n    public String[] list(FilenameFilter filter) {\n        String[] filenames \u003d list();\n        if (filter \u003d\u003d null || filenames \u003d\u003d null) {\n            return filenames;\n        }\n        List\u003cString\u003e result \u003d new ArrayList\u003cString\u003e(filenames.length);\n        for (String filename : filenames) {\n            if (filter.accept(this, filename)) {\n                result.add(filename);\n            }\n        }\n        return result.toArray(new String[result.size()]);\n    }",
+      "parentUuid": "3f1d235d_14b16990",
+      "range": {
+        "startLine": 71,
+        "startChar": 8,
+        "endLine": 71,
+        "endChar": 13
+      },
+      "revId": "cba5917fa4108afb2e9ee556ec07c7a96a7277c2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
