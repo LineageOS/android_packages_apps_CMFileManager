@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f1d235d_14b16990",
+        "filename": "src/com/cyanogenmod/filemanager/commands/java/MoveCommand.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-27T23:02:03Z",
+      "side": 1,
+      "message": "What does the performance look like on a huge directory here? Could we pass a FilenameFilter to listFiles to narrow down our search?",
+      "range": {
+        "startLine": 71,
+        "startChar": 8,
+        "endLine": 71,
+        "endChar": 13
+      },
+      "revId": "cba5917fa4108afb2e9ee556ec07c7a96a7277c2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
