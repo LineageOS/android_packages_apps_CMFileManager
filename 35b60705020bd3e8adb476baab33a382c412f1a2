@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f1d235d_cf691e8c",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 951,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-28T05:02:31Z",
+      "side": 1,
+      "message": "missing the context param",
+      "range": {
+        "startLine": 949,
+        "startChar": 13,
+        "endLine": 951,
+        "endChar": 13
+      },
+      "revId": "35b60705020bd3e8adb476baab33a382c412f1a2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f1d235d_ef6cda9d",
+        "filename": "src/com/cyanogenmod/filemanager/util/FileHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 964,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-08-28T05:02:31Z",
+      "side": 1,
+      "message": "Lets log this for future debugging.",
+      "range": {
+        "startLine": 964,
+        "startChar": 12,
+        "endLine": 964,
+        "endChar": 25
+      },
+      "revId": "35b60705020bd3e8adb476baab33a382c412f1a2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
