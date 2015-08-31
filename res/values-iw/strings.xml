@@ -183,6 +183,7 @@
   <string name="bookmarks_button_config_cd">הגדר את התיקייה ההתחלתית.</string>
   <string name="bookmarks_button_remove_bookmark_cd">הסר את הסימנייה.</string>
   <string name="bookmarks_msgs_add_success">הסימנייה הוספה בהצלחה.</string>
+  <string name="bookmarks_msgs_add_exists">הסימנייה כבר קיימת.</string>
   <string name="initial_directory_dialog_title">תיקייה התחלתית</string>
   <string name="initial_directory_label">בחר את התיקייה ההתחלתית:</string>
   <string name="initial_directory_relative_msg">נתיבים יחסיים אסורים.</string>

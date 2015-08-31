@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Den initialen Dossier setzen.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Lieszeeche läschen.</string>
   <string name="bookmarks_msgs_add_success">D\'Lieszeeche gouf erfollegräich dobäigesat.</string>
+  <string name="bookmarks_msgs_add_exists">D\'Lieszeechen existéiert schonn.</string>
   <string name="initial_directory_dialog_title">Initialen Dossier</string>
   <string name="initial_directory_label">Wiel den initialen Dossier aus:</string>
   <string name="initial_directory_relative_msg">Relativ Pade sinn net erlaabt.</string>

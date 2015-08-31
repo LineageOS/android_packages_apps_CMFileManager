@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Açılış klasörünü seçin.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Yer imini sil.</string>
   <string name="bookmarks_msgs_add_success">Yer imi başarıyla eklendi.</string>
+  <string name="bookmarks_msgs_add_exists">Yer imi zaten var.</string>
   <string name="initial_directory_dialog_title">Açılış dizini</string>
   <string name="initial_directory_label">Açılış dizinini seçin:</string>
   <string name="initial_directory_relative_msg">Göreceli yollara izin verilmiyor.</string>

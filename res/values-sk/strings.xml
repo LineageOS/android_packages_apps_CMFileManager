@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Nastavte počiatočný priečinok.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Odstrániť zo záložiek.</string>
   <string name="bookmarks_msgs_add_success">Záložka bola úspešne pridaná.</string>
+  <string name="bookmarks_msgs_add_exists">Záložka už existuje.</string>
   <string name="initial_directory_dialog_title">Počiatočný priečinok</string>
   <string name="initial_directory_label">Vyberte počiatočný priečinok:</string>
   <string name="initial_directory_relative_msg">Relatívna cesty nie sú povolené.</string>

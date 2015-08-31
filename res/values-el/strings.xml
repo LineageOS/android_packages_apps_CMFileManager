@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Ρυθμίστε το αρχικό φάκελο.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Αφαίρεση σελιδοδείκτη.</string>
   <string name="bookmarks_msgs_add_success">Ο σελιδοδείκτης προστέθηκε με επιτυχία.</string>
+  <string name="bookmarks_msgs_add_exists">Ο σελιδοδείκτης υπάρχει ήδη.</string>
   <string name="initial_directory_dialog_title">Αρχικός φάκελος</string>
   <string name="initial_directory_label">Επιλέξτε τον αρχικό φάκελο:</string>
   <string name="initial_directory_relative_msg">Δεν επιτρέπονται σχετικές διαδρομές.</string>

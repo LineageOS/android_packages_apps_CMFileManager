@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Установить начальной папкой</string>
   <string name="bookmarks_button_remove_bookmark_cd">Удалить из закладок</string>
   <string name="bookmarks_msgs_add_success">Закладка успешно создана</string>
+  <string name="bookmarks_msgs_add_exists">Закладка уже существует.</string>
   <string name="initial_directory_dialog_title">Начальная папка</string>
   <string name="initial_directory_label">Выбор начальной папки:</string>
   <string name="initial_directory_relative_msg">Относительные пути не допускаются</string>

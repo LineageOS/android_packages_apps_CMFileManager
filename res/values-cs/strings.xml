@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Nastavte výchozí složku.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Odebrat ze záložek</string>
   <string name="bookmarks_msgs_add_success">Záložka byla úspěšně přidána.</string>
+  <string name="bookmarks_msgs_add_exists">Záložka již existuje.</string>
   <string name="initial_directory_dialog_title">Výchozí složka</string>
   <string name="initial_directory_label">Vyberte výchozí složku:</string>
   <string name="initial_directory_relative_msg">Relativní cesty nejsou povoleny.</string>

@@ -189,6 +189,7 @@
   <string name="bookmarks_button_config_cd">设置初始文件夹.</string>
   <string name="bookmarks_button_remove_bookmark_cd">移除书签.</string>
   <string name="bookmarks_msgs_add_success">书签已成功加入.</string>
+  <string name="bookmarks_msgs_add_exists">此书签已存在。</string>
   <string name="initial_directory_dialog_title">初始文件夹</string>
   <string name="initial_directory_label">选择初始文件夹:</string>
   <string name="initial_directory_relative_msg">不允许相对性路径.</string>

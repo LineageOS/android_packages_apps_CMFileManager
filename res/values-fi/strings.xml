@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Valitse aloituskansio.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Poista kirjanmerkki.</string>
   <string name="bookmarks_msgs_add_success">Kirjanmerkki luotiin onnistuneesti.</string>
+  <string name="bookmarks_msgs_add_exists">Kirjanmerkki on jo olemassa.</string>
   <string name="initial_directory_dialog_title">Aloituskansio</string>
   <string name="initial_directory_label">Valitse aloituskansio:</string>
   <string name="initial_directory_relative_msg">Suhteelliset polut ei ole sallittuja.</string>

@@ -335,7 +335,7 @@
   <string name="pref_remove_saved_search_terms_msg">Toți termenii de căutare salvați au fost eliminați</string>
   <string name="pref_secure_storage_category">Stocare securizată</string>
   <string name="pref_secure_storage_delayed_sync_title">Sincronizare întârziată</string>
-  <string name="pref_secure_storage_delayed_sync_summary">Sincronizarea unor sisteme cu fişiere sigure este o operaţie costisitoare. Activaţi această opţiune pentru a permite răspunsuri în timp mai bune după fiecare operațiune, efectuând sincronizări atunci când sistemul de fişiere este în stare nefolosită, dar în detrimentul pierderii de informaţii în aşteptare de sincronizate în cazul unei erori a aplicației.</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Sincronizarea unor sisteme cu fișiere sigure este o operație costisitoare. Activați această opțiune pentru a permite răspunsuri în timp mai bune după fiecare operațiune, efectuând sincronizări atunci când sistemul de fișiere este în stare nefolosită, dar în detrimentul pierderii de informații în așteptare nesincronizate în cazul unei erori a aplicației.</string>
   <string name="pref_secure_storage_reset_password_title">Schimbă parola</string>
   <string name="pref_secure_storage_delete_storage_title">Ștergeți stocarea</string>
   <string name="pref_editor_behaviour_category">Comportament</string>
@@ -346,7 +346,7 @@
   <string name="pref_hexdump_desc">Când deschid un fișier binar, generează un hexdump pentru fișier și deschide-l în vizualizatorul hex</string>
   <string name="pref_editor_syntax_highlight_category">Evidențiere sintaxă</string>
   <string name="pref_syntax_highlight">Evidențiere sintaxă</string>
-  <string name="pref_syntax_highlight_desc">Evidenţiază sintaxa fişierului afişate în editor (numai atunci când un procesor de sintaxă evidenţierea pentru tipul de fişier este disponibil)</string>
+  <string name="pref_syntax_highlight_desc">Evidențiază sintaxa fișierului afișat în editor (numai atunci când un procesor de sintaxă pentru tipul de fișier este disponibil)</string>
   <string name="pref_syntax_highlight_color_scheme">Schema de culoare</string>
   <string name="pref_syntax_highlight_color_scheme_desc">Selectează schema de culoare a evidențierii sintaxei</string>
   <string name="pref_syntax_sh_use_theme_default">Utilizează temă implicită</string>

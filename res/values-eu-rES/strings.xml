@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Hasierako karpeta ezarri.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Laster marka ezabatu.</string>
   <string name="bookmarks_msgs_add_success">Laster marka ondo gehitu da.</string>
+  <string name="bookmarks_msgs_add_exists">Laster-marka badago aurretik.</string>
   <string name="initial_directory_dialog_title">Hasierako karpeta</string>
   <string name="initial_directory_label">Hasierako karpeta hautatu:</string>
   <string name="initial_directory_relative_msg">Ibilbide erlatiboak ez dira onartzen.</string>

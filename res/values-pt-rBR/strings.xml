@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Definir a pasta inicial.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Remover o favorito.</string>
   <string name="bookmarks_msgs_add_success">O favorito foi adicionado com sucesso.</string>
+  <string name="bookmarks_msgs_add_exists">O favorito já existe.</string>
   <string name="initial_directory_dialog_title">Pasta inicial</string>
   <string name="initial_directory_label">Escolha a pasta inicial:</string>
   <string name="initial_directory_relative_msg">Caminhos relativo não são permtidos</string>

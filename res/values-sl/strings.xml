@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Nastavi začetno mapo.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Odstrani zaznamek.</string>
   <string name="bookmarks_msgs_add_success">Zaznamek je bil uspešno dodan.</string>
+  <string name="bookmarks_msgs_add_exists">Zaznamek že obstaja.</string>
   <string name="initial_directory_dialog_title">Začetna mapa</string>
   <string name="initial_directory_label">Izberite začetno mapo:</string>
   <string name="initial_directory_relative_msg">Relativne poti niso dovoljene.</string>

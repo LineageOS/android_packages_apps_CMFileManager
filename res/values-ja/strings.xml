@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">初期フォルダを設定</string>
   <string name="bookmarks_button_remove_bookmark_cd">ブックマークを削除</string>
   <string name="bookmarks_msgs_add_success">ブックマークへの追加が完了しました。</string>
+  <string name="bookmarks_msgs_add_exists">そのブックマークは既に存在します。</string>
   <string name="initial_directory_dialog_title">初期フォルダ</string>
   <string name="initial_directory_label">初期フォルダを選択してください:</string>
   <string name="initial_directory_relative_msg">相対パスは使用できません。</string>

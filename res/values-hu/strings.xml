@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Kezdőkönyvtár beállítsa.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Könyvjelző eltávolítása.</string>
   <string name="bookmarks_msgs_add_success">A könyvjelző sikeresen hozzáadva.</string>
+  <string name="bookmarks_msgs_add_exists">A könyvjelző már létezik.</string>
   <string name="initial_directory_dialog_title">Kezdőkönyvtár</string>
   <string name="initial_directory_label">Válasszon kezdőkönyvtárat:</string>
   <string name="initial_directory_relative_msg">Relatív útvonalak nem használhatóak.</string>
