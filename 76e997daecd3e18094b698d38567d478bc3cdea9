@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f1d235d_72badbde",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 583,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-09-07T16:15:43Z",
+      "side": 1,
+      "message": "Probably is a better aproach to add to the compare the data with a end slash\n\nxe: if (dst.startsWith(srcWithSlash)) {\n\nThis should fix the comparation in a cleaner way, IMHO.",
+      "range": {
+        "startLine": 583,
+        "startChar": 20,
+        "endLine": 583,
+        "endChar": 30
+      },
+      "revId": "76e997daecd3e18094b698d38567d478bc3cdea9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
