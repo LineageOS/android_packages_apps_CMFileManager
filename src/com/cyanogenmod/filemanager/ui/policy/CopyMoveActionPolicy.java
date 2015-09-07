@@ -558,7 +558,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
         int cc = files.size();
         for (int i = 0; i < cc; i++) {
             LinkedResource linkRes = files.get(i);
-            String src = linkRes.mSrc.getAbsolutePath();
+            String src = FileHelper.addTrailingSlash(linkRes.mSrc.getAbsolutePath());
             String dst = linkRes.mDst.getAbsolutePath();
 
             // 1.- Current directory can't be moved
