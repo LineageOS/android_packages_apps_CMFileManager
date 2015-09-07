@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f1d235d_129e0763",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 567,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-09-07T18:08:40Z",
+      "side": 1,
+      "message": "this checks is done in the if above (thats was my initial though only touch the if without adding any more). And we need to check of src have a backslash before add a new one.",
+      "range": {
+        "startLine": 567,
+        "startChar": 55,
+        "endLine": 567,
+        "endChar": 59
+      },
+      "revId": "70490e9e7f055a5b04422c367922cdf12a3d9379",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f1d235d_f29a6b6c",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 582,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-09-07T18:08:40Z",
+      "side": 1,
+      "message": "same here",
+      "range": {
+        "startLine": 582,
+        "startChar": 25,
+        "endLine": 582,
+        "endChar": 35
+      },
+      "revId": "70490e9e7f055a5b04422c367922cdf12a3d9379",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
