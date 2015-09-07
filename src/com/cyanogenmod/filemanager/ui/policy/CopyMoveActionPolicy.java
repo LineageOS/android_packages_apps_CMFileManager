@@ -564,6 +564,11 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
             // 1.- Current directory can't be moved
             if (operation.equals(COPY_MOVE_OPERATION.MOVE) &&
                     currentDirectory != null && currentDirectory.startsWith(src)) {
+                int srcLength = src.length();
+                int curLength = currentDirectory.length();
+                if (curLength >= (srcLength +1) && !File.separator.equals(currentDirectory.substring(srcLength, srcLength+1))) {
+                    continue;
+                }
                 // Operation not allowed
                 AlertDialog dialog =
                         DialogHelper.createErrorDialog(
@@ -576,6 +581,11 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
 
             // 2.- Destination can't be a child of source
             if (dst.startsWith(src)) {
+                int srcLength = src.length();
+                int dstLength = dst.length();
+                if (dstLength >= (srcLength +1) && !File.separator.equals(dst.substring(srcLength, srcLength+1))) {
+                    continue;
+                }
                 // Operation not allowed
                 AlertDialog dialog =
                         DialogHelper.createErrorDialog(
