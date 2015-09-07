@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f1d235d_52211f4d",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 570,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-09-07T12:39:09Z",
+      "side": 1,
+      "message": "this will return true before all the selected files being processed in the above loop have been checked.",
+      "revId": "15b4aee019df8feaffe7eb0bfba68ddb441cb5b6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f1d235d_722c1b47",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 585,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-09-07T12:39:09Z",
+      "side": 1,
+      "message": "currentDirectory isn\u0027t the correct value to be checking here. in this if block dst is being compared to src.",
+      "revId": "15b4aee019df8feaffe7eb0bfba68ddb441cb5b6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f1d235d_321ea30c",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 587,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-09-07T12:39:09Z",
+      "side": 1,
+      "message": "this will return true before all the selected files being processed in the above loop have been checked.",
+      "revId": "15b4aee019df8feaffe7eb0bfba68ddb441cb5b6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
