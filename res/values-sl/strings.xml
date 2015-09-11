@@ -402,6 +402,6 @@
   <string name="security_warning_extract">Opozorilo! \n\nRazširjanje arhivske datoteke z relativno ali absolutno potjo lahko poškoduje napravo s prepisom sistemskih datotek.\n\nAli želite nadaljevati?</string>
   <string name="changelog_title">Dnevnik sprememb</string>
   <string name="welcome_title">Dobrodošli</string>
-  <string name="welcome_msg">Dobrodošli v upravljalniku datotek CyanogenMod.\n\nTa program vam omogoča, da raziščete datotečni sistem in izvajate opravila, ki lahko poškoduje vašo napravo. V izogib škodi se bo program začel v varnem načinu z nizkimi dovoljenji.\n\nDo naprednega načina z visokimi dovoljenji lahko dostopate v nastavitvah. Vaša odgovornost je, da zagotovite, da opravilo ne poškoduje vašega sistema.\n\nEkipa CyanogenMod</string>
+  <string name="welcome_msg">Dobrodošli v upravljalniku datotek CyanogenMod.\n\nTa program vam omogoča, da raziščete datotečni sistem in izvajate opravila, ki lahko poškoduje vašo napravo. V izogib škodi se bo program začel v varnem načinu z nizkimi dovoljenji.\n\nDo naprednega načina z visokimi dovoljenji lahko dostopate v nastavitvah. Vaša odgovornost je zagotoviti, da opravilo ne poškoduje vašega sistema.\n\nEkipa CyanogenMod</string>
   <string name="activity_not_found_exception">Za odpiranje te datoteke ni bilo mogoče najti programa</string>
 </resources>
