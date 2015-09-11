@@ -14,7 +14,8 @@
      limitations under the License.
  -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.cyanogenmod.filemanager.ui.widgets.CheckableRelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="@dimen/grid_width"
   android:layout_height="wrap_content"
   android:background="@drawable/material_selection"
@@ -43,4 +44,4 @@
       android:singleLine="true"
       android:ellipsize="end" />
 
-</RelativeLayout>
+</com.cyanogenmod.filemanager.ui.widgets.CheckableRelativeLayout>
