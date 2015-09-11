@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">ಆರಂಭಿಕ ಫೋಲ್ಡರನ್ನು ಹೊಂದಿಸಿ.</string>
   <string name="bookmarks_button_remove_bookmark_cd">ಬುಕ್‍ಮಾರ್ಕ್‍ನ್ನು ತೆಗೆ.</string>
   <string name="bookmarks_msgs_add_success">ಬುಕ್‍ಮಾರ್ಕನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಸೇರಿಸಲಾಗಿದೆ.</string>
+  <string name="bookmarks_msgs_add_exists">ಬುಕ್‍ಮಾರ್ಕ್ ಈಗಾಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ.</string>
   <string name="initial_directory_dialog_title">ಆರಂಭಿಕ ಫೋಲ್ಡರ್</string>
   <string name="initial_directory_label">ಆರಂಭಿಕ ಫೋಲ್ಡರ್‍ನ್ನು ಆರಿಸಿ:</string>
   <string name="initial_directory_relative_msg">ಸಾಪೇಕ್ಷಿತ ಮಾರ್ಗಗಳನ್ನು ಅನುಮತಿಸುವುದಿಲ್ಲ.</string>

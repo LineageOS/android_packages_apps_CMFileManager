@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Impostare la cartella iniziale.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Eliminare il segnalibro.</string>
   <string name="bookmarks_msgs_add_success">Segnalibro aggiunto.</string>
+  <string name="bookmarks_msgs_add_exists">Il segnalibro esiste già.</string>
   <string name="initial_directory_dialog_title">Cartella iniziale</string>
   <string name="initial_directory_label">Scegliere la cartella iniziale:</string>
   <string name="initial_directory_relative_msg">I percorsi relativi non sono ammessi.</string>
@@ -217,8 +218,8 @@
   <string name="actions_menu_deselect_all">Deseleziona tutti</string>
   <string name="actions_menu_select">Seleziona</string>
   <string name="actions_menu_deselect">Deseleziona</string>
-  <string name="actions_menu_paste_selection">Incolla</string>
-  <string name="actions_menu_move_selection">Sposta</string>
+  <string name="actions_menu_paste_selection">Copia selezionati qui</string>
+  <string name="actions_menu_move_selection">Sposta selezionati qui</string>
   <string name="actions_menu_delete_selection">Elimina</string>
   <string name="actions_menu_compress_selection">Comprimi</string>
   <string name="actions_menu_create_link">Crea collegamento</string>

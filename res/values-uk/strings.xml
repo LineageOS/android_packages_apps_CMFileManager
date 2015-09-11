@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Встановити початковою папкою.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Видалити з закладок.</string>
   <string name="bookmarks_msgs_add_success">Закладка успішно створена.</string>
+  <string name="bookmarks_msgs_add_exists">Закладка вже існує.</string>
   <string name="initial_directory_dialog_title">Початкова папка</string>
   <string name="initial_directory_label">Вибір початкової папки:</string>
   <string name="initial_directory_relative_msg">Відносні шляхи не допускаються</string>

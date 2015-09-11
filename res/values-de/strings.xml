@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Standardordner.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Lesezeichen löschen.</string>
   <string name="bookmarks_msgs_add_success">Das Lesezeichen wurde erfolgreich hinzugefügt.</string>
+  <string name="bookmarks_msgs_add_exists">Das Lesezeichen existiert bereits.</string>
   <string name="initial_directory_dialog_title">Standardverzeichnis</string>
   <string name="initial_directory_label">Standardverzeichnis wählen:</string>
   <string name="initial_directory_relative_msg">Relative Pfade sind nicht erlaubt.</string>

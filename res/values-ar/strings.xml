@@ -356,7 +356,7 @@
   <string name="pref_themes_set_theme">تعيين الموضوع</string>
   <string name="pref_themes_confirmation">وكان تطبيق السمة بنجاح.</string>
   <string name="pref_themes_not_found">لم يتم العثور على الموضوع.</string>
-  <string name="pref_debug_traces">قم بتسجيل معلومات تصحيح الأخطاء</string>
+  <string name="pref_debug_traces">تسجيل معلومات تنقيح الأخطاء</string>
   <string name="theme_default_name">قالب ألوان خفيفة</string>
   <string name="theme_default_description">سمة خفيفة لإدارة الملفات CyanogenMod.</string>
   <string name="themes_author">CyanogenMod</string>

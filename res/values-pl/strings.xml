@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Ustaw folder początkowy.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Usuń zakładkę.</string>
   <string name="bookmarks_msgs_add_success">Zakładka została dodana pomyślnie.</string>
+  <string name="bookmarks_msgs_add_exists">Zakładka już istnieje.</string>
   <string name="initial_directory_dialog_title">Folder początkowy</string>
   <string name="initial_directory_label">Wybierz folder początkowy:</string>
   <string name="initial_directory_relative_msg">Ścieżki względne nie są dozwolone.</string>

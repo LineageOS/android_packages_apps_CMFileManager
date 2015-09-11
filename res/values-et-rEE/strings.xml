@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Määra algkaust.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Eemalda järjehoidja.</string>
   <string name="bookmarks_msgs_add_success">Järjehoidja lisati edukalt.</string>
+  <string name="bookmarks_msgs_add_exists">Järjehoidja on juba olemas.</string>
   <string name="initial_directory_dialog_title">Algkaust</string>
   <string name="initial_directory_label">Valige algkaust:</string>
   <string name="initial_directory_relative_msg">Suhtelised süsteemiteed ei ole lubatud.</string>
