@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f1a1f67_c2757cfc",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/CheckableRelativeLayout.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-09-12T04:59:34Z",
+      "side": 1,
+      "message": "is this ours?",
+      "range": {
+        "startLine": 2,
+        "startChar": 18,
+        "endLine": 2,
+        "endChar": 51
+      },
+      "revId": "527a0536911db7584f6bd4d8e18b9fe10cdbe566",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f1a1f67_e2687822",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/CheckableRelativeLayout.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 13408
+      },
+      "writtenOn": "2015-09-12T04:59:34Z",
+      "side": 1,
+      "message": "RelativeLayout extends LinearLayout\n\n...",
+      "range": {
+        "startLine": 24,
+        "startChar": 22,
+        "endLine": 24,
+        "endChar": 56
+      },
+      "revId": "527a0536911db7584f6bd4d8e18b9fe10cdbe566",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
