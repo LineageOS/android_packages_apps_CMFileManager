@@ -31,4 +31,7 @@
   <plurals name="selection_files">
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g>個のファイルを選択しています。</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g>個のアイテムが削除されます。</item>
+  </plurals>
 </resources>

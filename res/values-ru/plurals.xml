@@ -41,4 +41,9 @@
     <item quantity="few">Выделено <xliff:g id="files">%1$d</xliff:g> файла</item>
     <item quantity="other">Выделено <xliff:g id="files">%1$d</xliff:g> файлов</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> элемент будет удалён безвозвратно.</item>
+    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> элемента будут удалены безвозвратно.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> элементов будут удалены безвозвратно.</item>
+  </plurals>
 </resources>

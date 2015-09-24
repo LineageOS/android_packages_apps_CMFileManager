@@ -197,9 +197,9 @@
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - novo<xliff:g id="extension">%2$s </xliff:g></string>
   <string name="waiting_dialog_msg">Izvajanje opravila \u2026</string>
   <string name="waiting_dialog_copying_title">Kopiranje \u2026</string>
-  <string name="waiting_dialog_copying_msg"><![CDATA[<b>Iz</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>V</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <string name="waiting_dialog_copying_msg"><![CDATA[<b>Iz</b>]]> <xliff:g id="from">%1$s</xliff:g> <![CDATA[<br/><b>v</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <string name="waiting_dialog_moving_title">Premikanje \u2026</string>
-  <string name="waiting_dialog_moving_msg"><![CDATA[<b>Iz</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>V</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <string name="waiting_dialog_moving_msg"><![CDATA[<b>Iz</b>]]> <xliff:g id="from">%1$s</xliff:g> <![CDATA[<br/><b>v</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <string name="waiting_dialog_deleting_title">Brisanje \u2026</string>
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Datoteka</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <string name="waiting_dialog_extracting_title">Razširjanje \u2026</string>
@@ -215,11 +215,11 @@
   <string name="actions_menu_new_directory">Nova mapa</string>
   <string name="actions_menu_new_file">Nova datoteka</string>
   <string name="actions_menu_select_all">Označi vse</string>
-  <string name="actions_menu_deselect_all">Odstrani vse izbire</string>
+  <string name="actions_menu_deselect_all">Odznači vse</string>
   <string name="actions_menu_select">Izberi</string>
   <string name="actions_menu_deselect">Odstrani izbiro</string>
   <string name="actions_menu_paste_selection">Kopiraj izbiro sem</string>
-  <string name="actions_menu_move_selection">Premakni izbiro sem</string>
+  <string name="actions_menu_move_selection">Prem. izbiro sem</string>
   <string name="actions_menu_delete_selection">Izbriši izbiro</string>
   <string name="actions_menu_compress_selection">Stisni izbiro</string>
   <string name="actions_menu_create_link">Ustvari povezavo</string>
@@ -234,12 +234,12 @@
   <string name="actions_menu_rename">Preimenuj</string>
   <string name="actions_menu_create_copy">Ustvari kopijo</string>
   <string name="actions_menu_properties">Lastnosti</string>
-  <string name="actions_menu_add_to_bookmarks">Dodaj med zaznamke</string>
+  <string name="actions_menu_add_to_bookmarks">Dodaj med zazn.</string>
   <string name="actions_menu_add_shortcut">Dodaj bližnjico</string>
   <string name="actions_menu_open_parent_folder">Odpri nadrejeno</string>
   <string name="actions_menu_compute_checksum">Izračun nadzorne vsote</string>
   <string name="actions_menu_print">Natisni</string>
-  <string name="actions_menu_set_as_home">Nastavi kot domačo</string>
+  <string name="actions_menu_set_as_home">Nast. kot domačo</string>
   <string name="actions_ask_undone_operation_msg">Tega dejanja ni mogoče razveljaviti. Ali želite nadaljevati?</string>
   <string name="input_name_dialog_label">Ime:</string>
   <string name="input_name_dialog_message_empty_name">Ime ne sme biti prazno.</string>
@@ -267,7 +267,7 @@
   <string name="mime_unknown">Neznano</string>
   <string name="filetime_format_mode_system">Sistemsko določeno</string>
   <string name="filetime_format_mode_locale">Določeno z jezikovno oznako</string>
-  <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/yyyy hh:mm:ss</string>
+  <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd.mm.yyyy hh:mm:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
   <string name="selection_folders_and_files">Izbrano je <xliff:g id="folders">%1$s</xliff:g> in <xliff:g id="files">%2$s</xliff:g>.</string>
@@ -303,13 +303,13 @@
   <string name="pref_case_sensitive_sort_summary">Upoštevaj velikost črk med krmarjenjem ali razvrščanjem rezultatov iskanja</string>
   <string name="pref_filetime_format_mode">Oblika zapisa datuma/časa</string>
   <string name="pref_disk_usage_warning_level">Opozorilo o uporabi diska</string>
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">Prikaži različno barvo v gradnikih uporabe diska, ko dosežejo <xliff:g id="level">%1$s</xliff:g> odstotkov prostega prostora</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">Prikaži različno barvo v gradnikih uporabe diska, ko dosežejo <xliff:g id="level">%1$s</xliff:g> odstotkov nezasedenega prostora</string>
   <string name="pref_compute_folder_statistics">Izračun statistike map</string>
   <string name="pref_compute_folder_statistics_on">Opozorilo! Izračun statistike map je potratno časovno in s sistemskimi sredstvi</string>
   <string name="pref_display_thumbs">Predogled</string>
   <string name="pref_display_thumbs_summary">Prikaži sliko predogleda za programe, glasbene datoteke, slike in video posnetke</string>
   <string name="pref_use_flinger">Uporabi poteze s potegi</string>
-  <string name="pref_use_flinger_summary">Uporabite zaznavo potez s potegom z leve proti desni za izbris datotek ali map</string>
+  <string name="pref_use_flinger_summary">Uporabi zaznavo poteze s potegom od leve proti desni za izbris datotek ali map</string>
   <string name="pref_general_advanced_settings_category">Napredno</string>
   <string name="pref_access_mode">Način dostopa</string>
   <string name="pref_access_mode_safe">Varni način</string>
@@ -321,7 +321,7 @@
   <string name="pref_restrict_secondary_users_access_title">Omeji dostop uporabnikom</string>
   <string name="pref_restrict_secondary_users_access_summary">Omeji dostop do celotnega sistema vsem drugim uporabnikom</string>
   <string name="pref_search_results_category">Rezultati</string>
-  <string name="pref_show_relevance_widget">Prikaži gradnik pomembnosti</string>
+  <string name="pref_show_relevance_widget">Prikaži pripomoček pomembnosti</string>
   <string name="pref_highlight_terms">Poudari iskalne izraze</string>
   <string name="pref_sort_search_results_mode">Način razvrščanja rezultatov</string>
   <string name="pref_sort_search_results_mode_none">Brez razvrščanja</string>
@@ -336,14 +336,14 @@
   <string name="pref_remove_saved_search_terms_msg">Vsi shranjeni iskalni izrazi so bili odstranjeni</string>
   <string name="pref_secure_storage_category">Varna pomnilniška naprava</string>
   <string name="pref_secure_storage_delayed_sync_title">Zakasnjena sinhronizacija</string>
-  <string name="pref_secure_storage_delayed_sync_summary">Sinhronizacija varnih datotečnih sistemov je potratno opravilo. Omogočite to možnost, če želite hitrejše odzive po vsakem opravilu, ko izvajate sinhronizacijo, kadar je datotečni sistem v neuporabljenem stanju, ampak na račun izgube podatkov na čakanju, ki niso sinhronizirani, če se program sesuje.</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Sinhronizacija varnih datotečnih sistemov je potratno opravilo. Omogočite to možnost, če želite hitrejše odzive po vsakem opravilu z izvajanjem sinhronizacije, kadar je datotečni sistem ni v uporabi, ampak na račun izgube nesinhroniziranih podatkov na čakanju, če se program sesuje.</string>
   <string name="pref_secure_storage_reset_password_title">Spremeni geslo</string>
   <string name="pref_secure_storage_delete_storage_title">Izbriši pomnilniško napravo</string>
   <string name="pref_editor_behaviour_category">Vedenje</string>
   <string name="pref_no_suggestions">Brez predlogov</string>
   <string name="pref_no_suggestions_desc">Med urejanjem datoteke ne prikaži predlogov iz slovarja</string>
   <string name="pref_word_wrap">Prelom besed</string>
-  <string name="pref_hexdump">Šestnajstiški izpis dvojiških datotek</string>
+  <string name="pref_hexdump">Šestn. izpis dvo. datotek</string>
   <string name="pref_hexdump_desc">Med odpiranjem dvojiške datoteke ustvari šestnajstiški izpis datoteke ter jo odpri v šestnajstiškem pregledovalniku</string>
   <string name="pref_editor_syntax_highlight_category">Poudarjanje skladnosti</string>
   <string name="pref_syntax_highlight">Poudari skladnost</string>
@@ -357,7 +357,7 @@
   <string name="pref_themes_set_theme">Nastavi temo</string>
   <string name="pref_themes_confirmation">Tema je bila uspešno uveljavljena.</string>
   <string name="pref_themes_not_found">Teme ni mogoče najti.</string>
-  <string name="pref_debug_traces">Beleži podatke razhroščevanja</string>
+  <string name="pref_debug_traces">Beleži podatke o razhrošč.</string>
   <string name="theme_default_name">Svetla tema</string>
   <string name="theme_default_description">Lahka tema za Upravljalnika datotek CyanogenMod.</string>
   <string name="themes_author">CyanogenMod</string>

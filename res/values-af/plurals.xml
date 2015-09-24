@@ -36,4 +36,8 @@
     <item quantity="one">1 lêer geselekteer.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> lêers geselekteer.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item gaan verwyder word.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> items gaan verwyder word.</item>
+  </plurals>
 </resources>

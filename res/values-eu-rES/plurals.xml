@@ -36,4 +36,8 @@
     <item quantity="one">Fitxategi <xliff:g id="files">%1$d</xliff:g> hautatuta.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> fitxategi hautatuta.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one">Elementu <xliff:g id="count">%1$d</xliff:g> ezabatuko da.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> elementu ezabatuko dira.</item>
+  </plurals>
 </resources>

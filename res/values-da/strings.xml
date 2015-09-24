@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Sæt opstartsmappen.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Fjern bogmærket.</string>
   <string name="bookmarks_msgs_add_success">Bogmærket blev tilføjet med succes.</string>
+  <string name="bookmarks_msgs_add_exists">Bogmærket findes allerede.</string>
   <string name="initial_directory_dialog_title">Opstartsmappe</string>
   <string name="initial_directory_label">Vælg opstartsmappen:</string>
   <string name="initial_directory_relative_msg">Relative stier er ikke tilladt.</string>

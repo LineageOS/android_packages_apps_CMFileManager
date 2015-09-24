@@ -42,6 +42,7 @@
   <string name="copy_text_cd">輕觸即可複製文字至剪貼簿</string>
   <string name="copy_text_msg">文字已複製至剪貼簿</string>
   <string name="warning_title">警告</string>
+  <string name="error_title">錯誤</string>
   <string name="confirm_operation">確認操作</string>
   <string name="confirm_overwrite">確認覆寫</string>
   <string name="confirm_deletion">確認刪除</string>
@@ -51,6 +52,7 @@
   <string name="msgs_privileged_console_alloc_failed">無法在 Root 存取模式下執行，正在切換至安全模式。</string>
   <string name="msgs_settings_save_failure">無法套用或儲存設定。</string>
   <string name="msgs_settings_invalid_initial_directory">初始資料夾「<xliff:g id="initial_dir">%1$s</xliff:g>」無效。切換至根資料夾。</string>
+  <string name="root_not_available_msg">此裝置沒有Root，無法執行此操作。</string>
   <string name="msgs_success">操作已成功完成。</string>
   <string name="msgs_unknown">檢測到錯誤，此操作未能成功完成。</string>
   <string name="msgs_insufficient_permissions">此操作需要更高的權限。請嘗試切換到 Root 存取模式。</string>
@@ -65,6 +67,7 @@
   <string name="msgs_read_only_filesystem">只讀檔案系統。請在使用讀寫模式掛載檔案系統後再試。</string>
   <string name="msgs_illegal_argument">無效參數。調用失敗。</string>
   <string name="msgs_unresolved_inconsistencies">此操作被拒絕，因爲它會產生不一致。</string>
+  <string name="msgs_operation_not_allowed_in_current_directory">目的地資料夾不能是來源資料夾的子資料夾或與來源資料夾相同。</string>
   <string name="msgs_push_again_to_exit">再按一次即可退出。</string>
   <string name="msgs_not_registered_app">沒有任何應用程式與此類檔案關聯。</string>
   <string name="msgs_overwrite_files">有些檔案已存在於目標資料夾內。\n\n是否覆寫？</string>
@@ -102,10 +105,12 @@
   <string name="filesystem_info_warning_title">無資訊</string>
   <string name="filesystem_info_warning_msg">沒有關於此檔案系統可用的資訊。</string>
   <string name="filesystem_info_cant_be_mounted_msg">無法掛載或卸載檔案系統。</string>
+  <string name="filesystem_info_mount_not_allowed_msg">在安全模式下不允許掛載檔案系統的動作。輕按以切換至超級使用者存取模式。</string>
   <string name="filesystem_info_mount_failed_msg">檔案系統掛載失敗。有些檔案系統 (例如 SD 卡) 是被設計爲唯讀檔案系統的。所以不能被掛載或卸載。</string>
   <string name="filesystem_info_dialog_title">檔案系統資訊</string>
   <string name="filesystem_info_dialog_tab_info">資訊</string>
   <string name="filesystem_info_dialog_tab_disk_usage">磁碟使用情況</string>
+  <string name="filesystem_info_dialog_status">已掛載:</string>
   <string name="filesystem_info_dialog_mount_point">掛載點：</string>
   <string name="filesystem_info_dialog_device">裝置：</string>
   <string name="filesystem_info_dialog_type">類型：</string>
@@ -238,6 +243,7 @@
   <string name="input_name_dialog_label">名稱：</string>
   <string name="input_name_dialog_message_empty_name">該名稱不能為空白。</string>
   <string name="input_name_dialog_message_invalid_path_name">無效的名稱。名稱中不能包含以下字元：「<xliff:g id="invalid_characters">%1$s</xliff:g>」。</string>
+  <string name="input_name_dialog_message_invalid_name_length">已達到最大字元限制</string>
   <string name="input_name_dialog_message_invalid_name">無效的名稱。名稱中不能包含「.」與「..」。</string>
   <string name="input_name_dialog_message_name_exists">此名稱已存在。</string>
   <string name="associations_dialog_title">關聯</string>
@@ -330,6 +336,7 @@
   <string name="pref_secure_storage_category">安全儲存</string>
   <string name="pref_secure_storage_delayed_sync_title">延遲同步</string>
   <string name="pref_secure_storage_delayed_sync_summary">安全檔案系統同步是一個費時的操作。啟用此選項可以在每次操作後有更好的反應，在檔案系統處於閒置狀態時執行同步，但如果當有應用程序故障，會有機會失去未同步的信息。</string>
+  <string name="pref_secure_storage_reset_password_title">變更密碼</string>
   <string name="pref_secure_storage_delete_storage_title">刪除儲存</string>
   <string name="pref_editor_behaviour_category">行爲</string>
   <string name="pref_no_suggestions">不顯示建議</string>
@@ -337,7 +344,9 @@
   <string name="pref_word_wrap">自動換行</string>
   <string name="pref_hexdump">Hexdump 二進位檔</string>
   <string name="pref_hexdump_desc">開啟二進位檔時，產生此檔案的 hexdump 並在十六進制檢視器內開啟。</string>
+  <string name="pref_editor_syntax_highlight_category">語法標記</string>
   <string name="pref_syntax_highlight">醒目提示語法</string>
+  <string name="pref_syntax_highlight_desc">在編輯器中顯示語法標記（僅在為當前文件類型的語法標記處理有效時）</string>
   <string name="pref_syntax_highlight_color_scheme">色彩配置</string>
   <string name="pref_syntax_highlight_color_scheme_desc">選擇語法醒目提示的色彩配置</string>
   <string name="pref_syntax_sh_use_theme_default">使用預設值</string>
@@ -365,7 +374,10 @@
   <string name="ash_keyword">關鍵字</string>
   <string name="ash_quoted_string">帶引號的字串</string>
   <string name="ash_variable">變數</string>
+  <string name="secure_storage_unlock_title">解鎖安全存儲</string>
+  <string name="secure_storage_create_title">建立安全存儲</string>
   <string name="secure_storage_reset_title">重設密碼</string>
+  <string name="secure_storage_delete_title">刪除安全存儲</string>
   <string name="secure_storage_unlock_key_prompt_msg">輸入密碼以解開安全儲存檔案系統。</string>
   <string name="secure_storage_unlock_key_new_msg">輸入密碼以保護安全儲存檔案系統。</string>
   <string name="secure_storage_unlock_key_reset_msg">輸入當前密碼和新密碼來重新設定安全儲存檔案系統。</string>
@@ -381,6 +393,7 @@
   <string name="secure_storage_unlock_failed">無法解鎖儲存</string>
   <string name="secure_storage_unlock_validation_length">密碼至少要有 <xliff:g id="characters">%1$d</xliff:g> 個字元。</string>
   <string name="secure_storage_unlock_validation_equals">密碼不相符</string>
+  <string name="secure_storage_open_file_warning">這將複製文件到臨時的未加密路徑。且將會在一小時後被清除。</string>
   <string name="print_unsupported_document">不支援的檔案格式</string>
   <string name="print_unsupported_image">不支援的圖像格式</string>
   <string name="print_document_header">文件：<xliff:g id="document_name">%1$s</xliff:g></string>

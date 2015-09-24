@@ -183,6 +183,7 @@
   <string name="bookmarks_button_config_cd">Establecer carpeta inicial.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Eliminar marcador.</string>
   <string name="bookmarks_msgs_add_success">El marcador fue añadido.</string>
+  <string name="bookmarks_msgs_add_exists">El marcador ya existe.</string>
   <string name="initial_directory_dialog_title">Carpeta inicial</string>
   <string name="initial_directory_label">Elegir la carpeta inicial:</string>
   <string name="initial_directory_relative_msg">Las rutas relativas no están permitidas.</string>

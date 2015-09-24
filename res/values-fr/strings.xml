@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Choisir le dossier d\'accueil.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Supprimer le favori</string>
   <string name="bookmarks_msgs_add_success">Favori ajouté</string>
+  <string name="bookmarks_msgs_add_exists">Le signet existe déjà.</string>
   <string name="initial_directory_dialog_title">Dossier d\'accueil</string>
   <string name="initial_directory_label">Choisir le dossier d\'accueil</string>
   <string name="initial_directory_relative_msg">Chemins relatifs non autorisés</string>

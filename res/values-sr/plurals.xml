@@ -46,4 +46,10 @@
     <item quantity="many"><xliff:g id="files">%1$d</xliff:g> фајла изабрана.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> фајла изабрана.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g>ставка ће бити обрисана.</item>
+    <item quantity="few"><xliff:g id="count">%1$d</xliff:g>ставке ће бити обрисане.</item>
+    <item quantity="many"><xliff:g id="count">%1$d</xliff:g>ставке ће бити обрисане.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g>ставке ће бити обрисане.</item>
+  </plurals>
 </resources>

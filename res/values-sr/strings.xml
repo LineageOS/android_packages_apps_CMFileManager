@@ -183,6 +183,7 @@
   <string name="bookmarks_button_config_cd">Подеси почетни фолдер.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Избриши обележивач.</string>
   <string name="bookmarks_msgs_add_success">Обележивач је успешно додат.</string>
+  <string name="bookmarks_msgs_add_exists">Маркер већ постоји.</string>
   <string name="initial_directory_dialog_title">Почетни фолдер</string>
   <string name="initial_directory_label">Изабери почетни фолдер:</string>
   <string name="initial_directory_relative_msg">Релативне путање нису дозвољене.</string>

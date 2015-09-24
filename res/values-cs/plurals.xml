@@ -41,4 +41,9 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> soubory vybrány.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> souborů vybráno.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> položka bude vymazána.</item>
+    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> položky budou vymazány.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> položek bude vymazáno.</item>
+  </plurals>
 </resources>
