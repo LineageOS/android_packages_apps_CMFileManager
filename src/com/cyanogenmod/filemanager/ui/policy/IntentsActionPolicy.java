@@ -16,6 +16,7 @@
 
 package com.cyanogenmod.filemanager.ui.policy;
 
+import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface.OnCancelListener;
@@ -336,6 +337,22 @@ public final class IntentsActionPolicy extends ActionsPolicy {
             }
         });
 
+        if (info.size() == 0) {
+            // This basically checks the system to see if it possibly wants to handle it
+            ResolveInfo ri = packageManager.resolveActivity(intent, 0);
+            if (ri != null) {
+                try {
+                    ctx.startActivity(getIntentFromResolveInfo(ri, intent));
+                    if (onDismissListener != null) {
+                        onDismissListener.onDismiss(null);
+                    }
+                    return;
+                } catch (ActivityNotFoundException e) {
+                    // fall through, we may still want to handle it with an internal activity
+                }
+            }
+        }
+
         // Add the internal editors
         int count = 0;
         if (internals != null) {
@@ -406,16 +423,24 @@ public final class IntentsActionPolicy extends ActionsPolicy {
         //---
         // If we have a preferred application, then use it
         if (!choose && (mPreferredInfo  != null && mPreferredInfo.match != 0)) {
-            ctx.startActivity(getIntentFromResolveInfo(mPreferredInfo, intent));
-            if (onDismissListener != null) {
-                onDismissListener.onDismiss(null);
+            try {
+                ctx.startActivity(getIntentFromResolveInfo(mPreferredInfo, intent));
+                if (onDismissListener != null) {
+                    onDismissListener.onDismiss(null);
+                }
+                return;
+            } catch (ActivityNotFoundException e) {
+                // fall through, the preferred may have been uninstalled.
             }
-            return;
         }
         // If there are only one activity (app or internal editor), then use it
         if (!choose && info.size() == 1) {
             ResolveInfo ri = info.get(0);
-            ctx.startActivity(getIntentFromResolveInfo(ri, intent));
+            try {
+                ctx.startActivity(getIntentFromResolveInfo(ri, intent));
+            } catch (ActivityNotFoundException e) {
+                DialogHelper.showToast(ctx, R.string.msgs_not_registered_app, Toast.LENGTH_SHORT);
+            }
             if (onDismissListener != null) {
                 onDismissListener.onDismiss(null);
             }
