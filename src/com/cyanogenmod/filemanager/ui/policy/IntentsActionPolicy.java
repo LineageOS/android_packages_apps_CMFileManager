@@ -336,6 +336,16 @@ public final class IntentsActionPolicy extends ActionsPolicy {
             }
         });
 
+        // If there are only one activity, then use it
+        if (!choose && info.size() == 1) {
+            ResolveInfo ri = info.get(0);
+            ctx.startActivity(getIntentFromResolveInfo(ri, intent));
+            if (onDismissListener != null) {
+                onDismissListener.onDismiss(null);
+            }
+            return;
+        }
+
         // Add the internal editors
         int count = 0;
         if (internals != null) {
