@@ -144,7 +144,6 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                                                 ctx,
                                                 intent,
                                                 choose,
-                                                createInternalIntents(ctx, cacheFso),
                                                 0,
                                                 R.string.associations_dialog_openwith_title,
                                                 R.string.associations_dialog_openwith_action,
@@ -177,7 +176,6 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                     ctx,
                     intent,
                     choose,
-                    createInternalIntents(ctx, fso),
                     0,
                     R.string.associations_dialog_openwith_title,
                     R.string.associations_dialog_openwith_action,
@@ -214,7 +212,6 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                     ctx,
                     intent,
                     true,
-                    null,
                     0,
                     R.string.associations_dialog_sendwith_title,
                     R.string.associations_dialog_sendwith_action,
@@ -281,7 +278,6 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                     ctx,
                     intent,
                     true,
-                    null,
                     0,
                     R.string.associations_dialog_sendwith_title,
                     R.string.associations_dialog_sendwith_action,
@@ -299,7 +295,6 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      * @param intent The intent to resolve
      * @param choose If allow the user to select the application to select the registered
      * application. If no preferred app or more than one exists the dialog is shown.
-     * @param internals The list of internals intents that can handle the action
      * @param icon The icon of the dialog
      * @param title The title of the dialog
      * @param action The button title of the dialog
@@ -308,7 +303,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      * @param onDismissListener The dismiss listener
      */
     private static void resolveIntent(
-            Context ctx, Intent intent, boolean choose, List<Intent> internals,
+            Context ctx, Intent intent, boolean choose,
             int icon, int title, int action, boolean allowPreferred,
             OnCancelListener onCancelListener, OnDismissListener onDismissListener) {
         //Retrieve the activities that can handle the file
@@ -335,58 +330,6 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                 return lhs.activityInfo.name.compareTo(rhs.activityInfo.name);
             }
         });
-
-        // Add the internal editors
-        int count = 0;
-        if (internals != null) {
-            int cc = internals.size();
-            for (int i = 0; i < cc; i++) {
-                Intent ii = internals.get(i);
-                List<ResolveInfo> ie =
-                        packageManager.
-                            queryIntentActivities(ii, 0);
-                if (ie.size() > 0) {
-                    ResolveInfo rie = ie.get(0);
-
-                    // Only if the internal is not in the query list
-                    boolean exists = false;
-                    int ccc = info.size();
-                    for (int j = 0; j < ccc; j++) {
-                        ResolveInfo ri = info.get(j);
-                        if (ri.activityInfo.packageName.compareTo(
-                                rie.activityInfo.packageName) == 0 &&
-                            ri.activityInfo.name.compareTo(
-                                    rie.activityInfo.name) == 0) {
-
-                            // Mark as internal
-                            if (ri.activityInfo.metaData == null) {
-                                ri.activityInfo.metaData = new Bundle();
-                                ri.activityInfo.metaData.putString(
-                                        EXTRA_INTERNAL_ACTION, ii.getAction());
-                                ri.activityInfo.metaData.putBoolean(
-                                        CATEGORY_INTERNAL_VIEWER, true);
-                            }
-                            exists = true;
-                            break;
-                        }
-                    }
-                    if (exists) {
-                        continue;
-                    }
-
-                    // Mark as internal
-                    if (rie.activityInfo.metaData == null) {
-                        rie.activityInfo.metaData = new Bundle();
-                        rie.activityInfo.metaData.putString(EXTRA_INTERNAL_ACTION, ii.getAction());
-                        rie.activityInfo.metaData.putBoolean(CATEGORY_INTERNAL_VIEWER, true);
-                    }
-
-                    // Only one result must be matched
-                    info.add(count, rie);
-                    count++;
-                }
-            }
-        }
 
         // No registered application
         if (info.size() == 0) {
@@ -494,7 +437,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      */
     private static List<Intent> createInternalIntents(Context ctx, FileSystemObject fso) {
         List<Intent> intents = new ArrayList<Intent>();
-        intents.addAll(createEditorIntent(ctx, fso));
+//        intents.addAll(createEditorIntent(ctx, fso));
         return intents;
     }
 
