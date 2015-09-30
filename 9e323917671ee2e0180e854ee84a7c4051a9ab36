@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f436f4f_f23de62c",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 426,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-09-30T04:45:29Z",
+      "side": 1,
+      "message": "Delete this then, since we already covered this case earlier in the method?",
+      "revId": "9e323917671ee2e0180e854ee84a7c4051a9ab36",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
