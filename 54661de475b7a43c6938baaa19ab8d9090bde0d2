@@ -16,6 +16,24 @@
       "revId": "54661de475b7a43c6938baaa19ab8d9090bde0d2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f436f4f_15d5f4b9",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-09-30T23:44:18Z",
+      "side": 1,
+      "message": "1) Yeah, that\u0027s fair\n\n2) in terms of the try/catch that\u0027s true but then I should fix it for all cases in this method, which I guess I can do.",
+      "parentUuid": "9f436f4f_75c68019",
+      "revId": "54661de475b7a43c6938baaa19ab8d9090bde0d2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
