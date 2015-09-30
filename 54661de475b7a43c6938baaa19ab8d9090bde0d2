@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f436f4f_75c68019",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 10394
+      },
+      "writtenOn": "2015-09-30T23:40:20Z",
+      "side": 1,
+      "message": "we can combine the logic of starting activity, dismissing and returning into one block\nalso you mentioned we should do try/catch block around the start activity since it could be gone by the time we call it",
+      "revId": "54661de475b7a43c6938baaa19ab8d9090bde0d2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
