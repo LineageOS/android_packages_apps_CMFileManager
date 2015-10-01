@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f436f4f_b57f48aa",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 10394
+      },
+      "writtenOn": "2015-10-01T01:07:25Z",
+      "side": 1,
+      "message": "oh sorry i meant you both the cases where it is 0 or 1 after figuring out the resolve info then we can re-use the logic after that\n\nwith this new change you don\u0027t handle the case where the info.size \u003d\u003d 1 until after the internal editors are added - is that expected behavior?",
+      "revId": "d28d1480987de805421689831593619e653e659e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
