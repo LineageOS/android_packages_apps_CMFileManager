@@ -16,6 +16,24 @@
       "revId": "d28d1480987de805421689831593619e653e659e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f436f4f_754b2087",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-10-01T01:13:44Z",
+      "side": 1,
+      "message": "the original check I had put in there when I was still planning on queryIntentActivities() returning the ResolverActivity for suggestions, but since I\u0027m no longer doing that, it isn\u0027t necessary and can follow the old code path.",
+      "parentUuid": "9f436f4f_b57f48aa",
+      "revId": "d28d1480987de805421689831593619e653e659e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
