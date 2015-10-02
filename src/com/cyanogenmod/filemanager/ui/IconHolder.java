@@ -282,6 +282,9 @@ public class IconHolder {
         return dw;
     }
 
+    public void clearCache(FileSystemObject fso) {
+        this.mAppIcons.remove(fso.getFullPath());
+    }
     /**
      * Method that returns a drawable reference of a FileSystemObject.
      *

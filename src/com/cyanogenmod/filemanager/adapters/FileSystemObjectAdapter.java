@@ -206,6 +206,7 @@ public class FileSystemObjectAdapter
 
         Drawable dwIcon = this.mIconHolder.getDrawable(
                 MimeTypeHelper.getIcon(getContext(), fso, true));
+        mIconHolder.clearCache(fso);
         mIconHolder.loadDrawable(viewHolder.mIvIcon, fso, dwIcon);
 
         viewHolder.mTvName.setText(fso.getName());
