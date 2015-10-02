@@ -381,7 +381,7 @@
   <string name="secure_storage_delete_title">Elimina memoria sicura</string>
   <string name="secure_storage_unlock_key_prompt_msg">Inserisci la password per sbloccare il filesystem dell\'archivio protetto.</string>
   <string name="secure_storage_unlock_key_new_msg">Inserisci una password per bloccare il filesystem dell\'archivio protetto.</string>
-  <string name="secure_storage_unlock_key_reset_msg">Inserisci la password attuale e quella nuova per resettare l\'archivio protetto.</string>
+  <string name="secure_storage_unlock_key_reset_msg">Inserisci la password attuale e quella nuova per reimpostare l\'archivio protetto.</string>
   <string name="secure_storage_unlock_key_delete_msg">Inserisci la password per cancellare l\'archivio protetto.</string>
   <string name="secure_storage_unlock_old_key_title">Vecchia password:</string>
   <string name="secure_storage_unlock_new_key_title">Nuova password:</string>

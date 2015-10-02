@@ -36,4 +36,8 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fayl seçildi.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> fayl seçildi.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element silinəcək.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> element silinəcək.</item>
+  </plurals>
 </resources>

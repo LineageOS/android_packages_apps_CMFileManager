@@ -19,37 +19,31 @@
   <plurals name="n_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> фолдер</item>
     <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> фолдера</item>
-    <item quantity="many"><xliff:g id="folders">%1$d</xliff:g> фолдера</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> фолдера</item>
   </plurals>
   <plurals name="n_files">
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> фајл</item>
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> фајла</item>
-    <item quantity="many"><xliff:g id="files">%1$d</xliff:g> фајла</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> фајла</item>
   </plurals>
   <plurals name="search_found_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> ставка пронађена</item>
     <item quantity="few"><xliff:g id="count">%d</xliff:g> ставке пронађене</item>
-    <item quantity="many"><xliff:g id="count">%d</xliff:g> ставке пронађене</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> ставке пронађене</item>
   </plurals>
   <plurals name="selection_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> фолдер изабран.</item>
     <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> фолдера изабрана.</item>
-    <item quantity="many"><xliff:g id="folders">%1$d</xliff:g> фолдера изабрана.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> фолдера изабрана.</item>
   </plurals>
   <plurals name="selection_files">
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> фајл изабран.</item>
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> фајла изабрана.</item>
-    <item quantity="many"><xliff:g id="files">%1$d</xliff:g> фајла изабрана.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> фајла изабрана.</item>
   </plurals>
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g>ставка ће бити обрисана.</item>
     <item quantity="few"><xliff:g id="count">%1$d</xliff:g>ставке ће бити обрисане.</item>
-    <item quantity="many"><xliff:g id="count">%1$d</xliff:g>ставке ће бити обрисане.</item>
     <item quantity="other"><xliff:g id="count">%1$d</xliff:g>ставке ће бити обрисане.</item>
   </plurals>
 </resources>

@@ -36,4 +36,8 @@
     <item quantity="one">1 bestand geselecteerd.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> bestanden geselecteerd.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item wordt verwijderd</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> items worden verwijderd</item>
+  </plurals>
 </resources>
