@@ -50,6 +50,24 @@
       "revId": "59e2237c77a7cebb03bc2776339a1fff3f6f9f14",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_6e2d8f45",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 786,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-10-05T21:17:46Z",
+      "side": 1,
+      "message": "did you intend this to have package scope?",
+      "parentUuid": "7f287b81_ae0137b2",
+      "revId": "59e2237c77a7cebb03bc2776339a1fff3f6f9f14",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
