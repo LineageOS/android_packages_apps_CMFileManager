@@ -29,6 +29,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.ChangeLogActivity;
@@ -93,17 +94,25 @@ public class SettingsPreferences extends PreferenceActivity {
      */
     @Override
     protected void onDestroy() {
+    	
         if (DEBUG) {
             Log.d(TAG, "SettingsPreferences.onDestroy"); //$NON-NLS-1$
         }
-
+        
         // Unregister the receiver
         try {
             unregisterReceiver(this.mNotificationReceiver);
         } catch (Throwable ex) {
             /**NON BLOCK**/
         }
-
+        
+        // Get the progress dialog object from editor activity & dismiss.
+        if(AndroidHelper.getInstance().getEditorActivityContext() != null) {
+    		if(AndroidHelper.getInstance().getEditorActivityContext().progress_dialog != null) {
+    			  AndroidHelper.getInstance().getEditorActivityContext().progress_dialog.dismiss();
+    		}
+    	}
+        
         //All destroy. Continue
         super.onDestroy();
     }
@@ -190,5 +199,5 @@ public class SettingsPreferences extends PreferenceActivity {
     protected boolean isValidFragment(String fragmentName) {
         return true;
     }
-
+    
 }

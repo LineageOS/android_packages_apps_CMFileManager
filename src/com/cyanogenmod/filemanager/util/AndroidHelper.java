@@ -32,6 +32,7 @@ import android.util.DisplayMetrics;
 import android.view.ViewConfiguration;
 
 import com.android.internal.util.HexDump;
+import com.cyanogenmod.filemanager.activities.EditorActivity;
 
 import java.io.ByteArrayInputStream;
 import java.security.GeneralSecurityException;
@@ -45,8 +46,26 @@ import java.security.cert.X509Certificate;
 public final class AndroidHelper {
 
     private static Boolean sIsAppPlatformSigned;
+    private EditorActivity editorActivityContext = null;
 
-    /**
+    static AndroidHelper androidHeperInstance = null;
+	public static AndroidHelper getInstance() {
+		
+		if(androidHeperInstance == null) {
+			androidHeperInstance = new AndroidHelper();
+		} 
+		return androidHeperInstance;
+	}
+	
+	public EditorActivity getEditorActivityContext() {
+		return editorActivityContext;
+	}
+
+	public void setEditorActivityContext(EditorActivity editorActivityContext) {
+		this.editorActivityContext = editorActivityContext;
+	}
+	
+	/**
      * Method that returns if the device is a tablet
      *
      * @param ctx The current context
@@ -54,8 +73,7 @@ public final class AndroidHelper {
      */
     public static boolean isTablet(Context ctx) {
         Configuration configuration = ctx.getResources().getConfiguration();
-        return (configuration.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK)
-                >= Configuration.SCREENLAYOUT_SIZE_LARGE;
+        return (configuration.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
     }
 
     /**

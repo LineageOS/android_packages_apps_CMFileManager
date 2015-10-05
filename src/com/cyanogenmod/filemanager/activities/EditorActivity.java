@@ -19,6 +19,7 @@ package com.cyanogenmod.filemanager.activities;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -115,6 +116,8 @@ public class EditorActivity extends Activity implements TextWatcher {
     private static boolean DEBUG = false;
 
     private static final int WRITE_RETRIES = 3;
+
+    private static final int RESTART_DELAY = 50; //ms delay if file is large
 
     private final BroadcastReceiver mNotificationReceiver = new BroadcastReceiver() {
         @Override
@@ -301,7 +304,8 @@ public class EditorActivity extends Activity implements TextWatcher {
          */
         @Override
         public void onAsyncStart() {
-            this.mByteBuffer = new ByteArrayOutputStream((int)this.mReadFso.getSize());
+           // this.mByteBuffer = new ByteArrayOutputStream((int)this.mReadFso.getSize());
+        	this.mByteBuffer = new ByteArrayOutputStream((int)this.mReadFso.getSize());
             this.mSize = 0;
         }
 
@@ -576,6 +580,8 @@ public class EditorActivity extends Activity implements TextWatcher {
      * Intent extra parameter for the path of the file to open.
      */
     public static final String EXTRA_OPEN_FILE = "extra_open_file";  //$NON-NLS-1$
+    
+    public ProgressDialog progress_dialog = null;
 
     /**
      * {@inheritDoc}
@@ -587,7 +593,6 @@ public class EditorActivity extends Activity implements TextWatcher {
         }
 
         this.mHandler = new Handler();
-
         // Load typeface for hex editor
         mHexTypeface = Typeface.createFromAsset(getAssets(), "fonts/Courier-Prime.ttf");
 
@@ -596,12 +601,6 @@ public class EditorActivity extends Activity implements TextWatcher {
                 FileManagerSettings.SETTINGS_EDITOR_HEXDUMP.getId(),
                 ((Boolean)FileManagerSettings.SETTINGS_EDITOR_HEXDUMP.
                         getDefaultValue()).booleanValue());
-
-        // Register the broadcast receiver
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(FileManagerSettings.INTENT_THEME_CHANGED);
-        filter.addAction(FileManagerSettings.INTENT_SETTING_CHANGED);
-        registerReceiver(this.mNotificationReceiver, filter);
 
         // Generate a random separator
         this.mHexLineSeparator = UUID.randomUUID().toString() + UUID.randomUUID().toString();
@@ -768,13 +767,63 @@ public class EditorActivity extends Activity implements TextWatcher {
             this.mNoSuggestions = !this.mNoSuggestions;
         }
     }
+    
+    @Override
+    protected void onRestart() {
+      super.onRestart();
+       
+       // To access the progressDialog Object in SettingsPreferences we need to maintain the context of the editorActivity
+       AndroidHelper.getInstance().setEditorActivityContext(this); 
+       
+       boolean wordWrapSetting = Preferences.getSharedPreferences().getBoolean(FileManagerSettings.SETTINGS_EDITOR_WORD_WRAP.getId(),
+                ((Boolean)FileManagerSettings.SETTINGS_EDITOR_WORD_WRAP.getDefaultValue()).booleanValue());
+       
+       if (wordWrapSetting != this.mWordWrap) {
+    	   
+        	// To display the progress dialog while content is getting loaded.
+            progress_dialog = new ProgressDialog(this);
+            progress_dialog.setMessage("Loading...Please wait");
+            progress_dialog.setCancelable(false);
+            progress_dialog.show();
+            
+        	mHandler.postDelayed(new Runnable() {
+        		@Override
+        		public void run() {
+        			toggleWordWrap();
+        		}
+        	}, RESTART_DELAY);
+        	
+        }
+       
+    }
 
+    @Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+    	super.onResume();
+    	
+		 IntentFilter filter = new IntentFilter();
+	     filter.addAction(FileManagerSettings.INTENT_THEME_CHANGED);
+	     filter.addAction(FileManagerSettings.INTENT_SETTING_CHANGED);
+	     registerReceiver(this.mNotificationReceiver, filter);
+	   
+	}
+
+    @Override
+	protected void onPause() {
+        super.onPause();
+        if (mNotificationReceiver != null)
+            unregisterReceiver(mNotificationReceiver);
+    }
+
+    
     /**
      * Method that toggle the word wrap property of the editor
      * @hide
      */
     /**package**/ void toggleWordWrap() {
         synchronized (this.mExecSync) {
+        	
             ViewGroup vSrc = this.mWordWrap ? this.mWordWrapView : this.mNoWordWrapView;
             ViewGroup vDst = this.mWordWrap ? this.mNoWordWrapView : this.mWordWrapView;
             ViewGroup vSrcParent = this.mWordWrap
@@ -789,6 +838,7 @@ public class EditorActivity extends Activity implements TextWatcher {
             vDst.setVisibility(View.VISIBLE);
             vDst.scrollTo(0, 0);
             this.mWordWrap = !this.mWordWrap;
+            
         }
     }
 
@@ -1266,13 +1316,13 @@ public class EditorActivity extends Activity implements TextWatcher {
                             @Override
                             @SuppressWarnings("synthetic-access")
                             public void onProgress(int progress) {
+                            	
                                 publishProgress(Integer.valueOf(progress));
                             }
                         };
 
                         // Execute the command (read the file)
-                        CommandHelper.read(activity, fso.getFullPath(), this.mReader,
-                                           null);
+                        CommandHelper.read(activity, fso.getFullPath(), this.mReader,null);
 
                         // Wait for
                         synchronized (this.mReader.mSync) {
