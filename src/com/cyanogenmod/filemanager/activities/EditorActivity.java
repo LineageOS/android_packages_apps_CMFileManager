@@ -116,6 +116,8 @@ public class EditorActivity extends Activity implements TextWatcher {
 
     private static final int WRITE_RETRIES = 3;
 
+    private static final int RESTART_DELAY = 50;//ms delay if file is large
+
     private final BroadcastReceiver mNotificationReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -598,10 +600,10 @@ public class EditorActivity extends Activity implements TextWatcher {
                         getDefaultValue()).booleanValue());
 
         // Register the broadcast receiver
-        IntentFilter filter = new IntentFilter();
+        /*IntentFilter filter = new IntentFilter();
         filter.addAction(FileManagerSettings.INTENT_THEME_CHANGED);
         filter.addAction(FileManagerSettings.INTENT_SETTING_CHANGED);
-        registerReceiver(this.mNotificationReceiver, filter);
+        registerReceiver(this.mNotificationReceiver, filter);*/
 
         // Generate a random separator
         this.mHexLineSeparator = UUID.randomUUID().toString() + UUID.randomUUID().toString();
@@ -767,6 +769,38 @@ public class EditorActivity extends Activity implements TextWatcher {
             this.mEditor.setInputType(type);
             this.mNoSuggestions = !this.mNoSuggestions;
         }
+    }
+
+    protected void onRestart() {
+        super.onRestart();
+        boolean wordWrapSetting = Preferences.getSharedPreferences().getBoolean(
+                FileManagerSettings.SETTINGS_EDITOR_WORD_WRAP.getId(),
+                ((Boolean)FileManagerSettings.SETTINGS_EDITOR_WORD_WRAP.
+                        getDefaultValue()).booleanValue());
+        if (wordWrapSetting != this.mWordWrap) {
+            mHandler.postDelayed(runnable, RESTART_DELAY);
+        }
+
+    }
+
+    Runnable runnable = new Runnable() {
+        public void run() {
+            toggleWordWrap();
+        }
+    };
+
+    protected void onResume() {
+        super.onResume();
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(FileManagerSettings.INTENT_THEME_CHANGED);
+        filter.addAction(FileManagerSettings.INTENT_SETTING_CHANGED);
+        registerReceiver(this.mNotificationReceiver, filter);
+    }
+
+    protected void onPause() {
+        super.onPause();
+        if (mNotificationReceiver != null)
+            unregisterReceiver(mNotificationReceiver);
     }
 
     /**
