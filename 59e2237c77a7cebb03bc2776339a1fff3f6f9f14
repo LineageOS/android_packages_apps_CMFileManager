@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f287b81_6e5fcfe5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 9528
+      },
+      "writtenOn": "2015-10-05T20:24:09Z",
+      "side": 1,
+      "message": "Can you add some more description to this commit message. Perhaps, how to reproduce the problem and how you\u0027re fixing it.\n\nAlso if you have a Jira bug number, add it to the bottom commit message.",
+      "revId": "59e2237c77a7cebb03bc2776339a1fff3f6f9f14",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
