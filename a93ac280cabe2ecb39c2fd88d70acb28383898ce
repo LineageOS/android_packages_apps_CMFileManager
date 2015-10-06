@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f287b81_57882670",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-10-06T20:58:17Z",
+      "side": 1,
+      "message": "Please delete commented out code, and please use proper indentation. https://source.android.com/source/code-style.html#use-spaces-for-indentation",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_377d9a6e",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 583,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-10-06T20:58:17Z",
+      "side": 1,
+      "message": "remove this whitespace",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_f796f294",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 785,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-10-06T20:58:17Z",
+      "side": 1,
+      "message": "please do not hardcode strings\nhttp://developer.android.com/guide/topics/resources/string-resource.html",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_17829e50",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 802,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-10-06T20:58:17Z",
+      "side": 1,
+      "message": "this is no longer a stub method",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_77e8c215",
+        "filename": "src/com/cyanogenmod/filemanager/activities/preferences/SettingsPreferences.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-10-06T20:58:17Z",
+      "side": 1,
+      "message": "this isn\u0027t being used, please remove it.",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_f7db927a",
+        "filename": "src/com/cyanogenmod/filemanager/util/AndroidHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-10-06T20:58:17Z",
+      "side": 1,
+      "message": "I don\u0027t think this should be done here. This is better fit for a class more directly related to Editor Activity.",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_57edc623",
+        "filename": "src/com/cyanogenmod/filemanager/util/AndroidHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-10-06T20:58:17Z",
+      "side": 1,
+      "message": "why was this changed?",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
