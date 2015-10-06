@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_3727da67",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-10-06T21:40:20Z",
+      "side": 1,
+      "message": "also, underscores are not typically used in class fields. Use Camel Case instead: https://en.wikipedia.org/wiki/CamelCase",
+      "parentUuid": "7f287b81_9769ee8c",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f287b81_f772727c",
         "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
         "patchSetId": 2
