@@ -36,6 +36,108 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_9769ee8c",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "class members should be prefixed with \u0027m\u0027",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_f772727c",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 775,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "over length",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_37591afe",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 778,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "over length",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_175e1ee6",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 779,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "over length",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_573b869b",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 782,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "too many tabs!",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_b76cea9c",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 784,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "camelcase variables, not underlines",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f287b81_f796f294",
         "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
         "patchSetId": 2
@@ -47,6 +149,58 @@
       "writtenOn": "2015-10-06T20:58:17Z",
       "side": 1,
       "message": "please do not hardcode strings\nhttp://developer.android.com/guide/topics/resources/string-resource.html",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_3740fa07",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 785,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "Can\u0027t translate this if you don\u0027t use strings.xml!",
+      "parentUuid": "7f287b81_f796f294",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_d76f7690",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 787,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "So this is showing indefinitely until toggleWordWrap() is called? Where does this get dismissed?  Its also not cancelable.",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_1745fe17",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 789,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "We can\u0027t think of another way to tell if views are already inflated before using them?",
       "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -70,6 +224,74 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_f7495232",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 815,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "braces!!!",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_b753cae2",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 826,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "whitespace derp",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_9750ced6",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 841,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "whitespace derp",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_775fa2e5",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1319,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "whitespace derp",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f287b81_77e8c215",
         "filename": "src/com/cyanogenmod/filemanager/activities/preferences/SettingsPreferences.java",
         "patchSetId": 2
@@ -81,6 +303,91 @@
       "writtenOn": "2015-10-06T20:58:17Z",
       "side": 1,
       "message": "this isn\u0027t being used, please remove it.",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_570946db",
+        "filename": "src/com/cyanogenmod/filemanager/activities/preferences/SettingsPreferences.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "fix this",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_370ebae5",
+        "filename": "src/com/cyanogenmod/filemanager/activities/preferences/SettingsPreferences.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "not sure what happened here",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_d7f416d2",
+        "filename": "src/com/cyanogenmod/filemanager/activities/preferences/SettingsPreferences.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "I\u0027m thinking there has to be a better way.  Maybe some event or callback and let the activity control its own views.",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_1713be0f",
+        "filename": "src/com/cyanogenmod/filemanager/activities/preferences/SettingsPreferences.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "tabs tabs tabs",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_b7018ab2",
+        "filename": "src/com/cyanogenmod/filemanager/activities/preferences/SettingsPreferences.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "you may need to revisit your formatter settings.",
       "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -104,6 +411,57 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_97fe8eac",
+        "filename": "src/com/cyanogenmod/filemanager/util/AndroidHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "androidHeperInstance should be sAndroidHelperInstance",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_97bb2e0d",
+        "filename": "src/com/cyanogenmod/filemanager/util/AndroidHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "Such tabs, much replace with 4 spaces",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_772d6245",
+        "filename": "src/com/cyanogenmod/filemanager/util/AndroidHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "Did you add all of this _JUST_ to access the popup dialog?",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f287b81_57edc623",
         "filename": "src/com/cyanogenmod/filemanager/util/AndroidHelper.java",
         "patchSetId": 2
@@ -115,6 +473,24 @@
       "writtenOn": "2015-10-06T20:58:17Z",
       "side": 1,
       "message": "why was this changed?",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_773682b7",
+        "filename": "src/com/cyanogenmod/filemanager/util/AndroidHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-06T21:31:41Z",
+      "side": 1,
+      "message": "Line is over length",
+      "parentUuid": "7f287b81_57edc623",
       "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
