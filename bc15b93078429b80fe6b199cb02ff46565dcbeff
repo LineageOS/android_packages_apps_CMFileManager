@@ -19,6 +19,29 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_425982fc",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-10-07T03:43:05Z",
+      "side": 1,
+      "message": "mIconHolder.loadDrawable() will load the icon in background. There is not reason to clear the cache every time the listview is scrolled.",
+      "range": {
+        "startLine": 209,
+        "startChar": 8,
+        "endLine": 209,
+        "endChar": 19
+      },
+      "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f436f4f_640930dc",
         "filename": "src/com/cyanogenmod/filemanager/commands/secure/MoveCommand.java",
         "patchSetId": 1
@@ -30,6 +53,47 @@
       "writtenOn": "2015-10-03T00:52:01Z",
       "side": 1,
       "message": "I am not sure why you are replacing move command with copy recursive one here. Is this relevant for this icon related issue?",
+      "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_c2be92fe",
+        "filename": "src/com/cyanogenmod/filemanager/commands/secure/MoveCommand.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-10-07T03:43:05Z",
+      "side": 1,
+      "message": "This has no sense. FileHelper.deleteFolder(s) is not going to delete secure files. And there isn\u0027t any reason to change this.",
+      "parentUuid": "9f436f4f_640930dc",
+      "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_e26f4e90",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-10-07T03:43:05Z",
+      "side": 1,
+      "message": "Unnecessary and, in any case, the path should normally to match the data in the appicons map.",
+      "range": {
+        "startLine": 286,
+        "startChar": 34,
+        "endLine": 286,
+        "endChar": 45
+      },
       "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
