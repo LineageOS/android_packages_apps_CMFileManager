@@ -131,6 +131,24 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_889aebc2",
+        "filename": "src/com/cyanogenmod/filemanager/commands/secure/MoveCommand.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-10-07T23:39:05Z",
+      "side": 1,
+      "message": "Srinivas, can you please remove the changes for this patch if they are not relevant. We should not fix two issues in one patch, it will get too confusing. When both are separately ready, we will submit them one by one.\n\nRegardless, all that you\u0027ve done here is copy the above lines into this block. This is very repetitive. If this is really the correct solution, there is no reason to have the if (d.exists()) check above and do the same thing in both conditions.",
+      "parentUuid": "7f287b81_143f3cd7",
+      "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f287b81_e26f4e90",
         "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
         "patchSetId": 1
