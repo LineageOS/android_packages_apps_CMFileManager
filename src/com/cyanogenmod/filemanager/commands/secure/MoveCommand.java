@@ -105,7 +105,12 @@ public class MoveCommand extends Program implements MoveExecutable {
             // Use rename. We are not cross filesystem with this console, so this operation
             // should be safe
             try {
-                TFile.mv(s, d, SecureConsole.DETECTOR);
+                TFile.cp_r(s,d,SecureConsole.DETECTOR, SecureConsole.DETECTOR);
+                if (!FileHelper.deleteFolder(s)) {
+                    if (isTrace()) {
+                        Log.v(TAG, "File copied successfully but not deleted"); //$NON-NLS-1$
+                    }
+                }
             } catch (IOException ex) {
                 // Make sure truecrypt was right
                 // There's a strange bug in it where it thinks that a file did not
