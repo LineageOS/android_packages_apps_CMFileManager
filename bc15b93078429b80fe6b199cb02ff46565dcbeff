@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_f42390bd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-07T18:22:36Z",
+      "side": 1,
+      "message": "Pl find the ticket id and bug id\n\nTicket id : 890661\nBug id: QRDL-1077",
+      "parentUuid": "9f436f4f_a4bb980c",
+      "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f287b81_425982fc",
         "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
         "patchSetId": 1
@@ -71,6 +89,42 @@
       "side": 1,
       "message": "This has no sense. FileHelper.deleteFolder(s) is not going to delete secure files. And there isn\u0027t any reason to change this.",
       "parentUuid": "9f436f4f_640930dc",
+      "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_143f3cd7",
+        "filename": "src/com/cyanogenmod/filemanager/commands/secure/MoveCommand.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-07T18:22:36Z",
+      "side": 1,
+      "message": "Unfortunately we have added two issues at once. This is not relevant to the thumbnail issue.\nThis code fix for the issue [QRDL-1053] and ticket id is\n888354.\n\nThe changes are in this file only.Please do review and close this issue.  \n\n1.src/com/cyanogenmod/filemanager/commands/secure/MoveCommand.java",
+      "parentUuid": "9f436f4f_640930dc",
+      "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_3daa1b85",
+        "filename": "src/com/cyanogenmod/filemanager/commands/secure/MoveCommand.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-07T18:22:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f287b81_c2be92fe",
       "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
