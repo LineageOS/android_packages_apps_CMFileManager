@@ -60,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_2813f70f",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-10-07T23:40:22Z",
+      "side": 1,
+      "message": "This makes the cache essentially useless because you are erasing it every time that you scroll.",
+      "parentUuid": "7f287b81_425982fc",
+      "range": {
+        "startLine": 209,
+        "startChar": 8,
+        "endLine": 209,
+        "endChar": 19
+      },
+      "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f436f4f_640930dc",
         "filename": "src/com/cyanogenmod/filemanager/commands/secure/MoveCommand.java",
         "patchSetId": 1
