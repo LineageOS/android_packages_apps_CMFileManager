@@ -113,6 +113,13 @@ public class MoveCommand extends Program implements MoveExecutable {
                 if (!d.exists()) {
                     throw new ExecutionException("Failed to rename file or directory", ex);
                 }
+                if (s.exists() && d.exists()) {
+                    if (!FileHelper.deleteFileOrFolder(s)) {
+                        if (isTrace()) {
+                            Log.v(TAG, "File copied successfully but not deleted"); //$NON-NLS-1$
+                        }
+                    }
+                }
             }
         }
 
