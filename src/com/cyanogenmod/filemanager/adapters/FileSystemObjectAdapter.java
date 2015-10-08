@@ -138,6 +138,15 @@ public class FileSystemObjectAdapter
     }
 
     /**
+     * Clearing the Cache
+     */
+    public void clearCache() {
+        if (mIconHolder != null) {
+            mIconHolder.clearCacheImages();
+        }
+    }
+
+    /**
      * Method that dispose the elements of the adapter.
      */
     public void dispose() {

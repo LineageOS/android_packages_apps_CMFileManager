@@ -283,6 +283,15 @@ public class IconHolder {
     }
 
     /**
+     * Clearing the Image Cache
+     */
+    public void clearCacheImages() {
+        if (mAppIcons != null) {
+            mAppIcons.clear();
+        }
+    }
+
+    /**
      * Method that returns a drawable reference of a FileSystemObject.
      *
      * @param iconView View to load the drawable into
