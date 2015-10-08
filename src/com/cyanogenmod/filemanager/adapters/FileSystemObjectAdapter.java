@@ -137,6 +137,15 @@ public class FileSystemObjectAdapter
         this.mIconHolder.getDrawable("ic_fso_default_drawable"); //$NON-NLS-1$
     }
 
+	/**
+	 * Clearing the Cache
+	 */
+	public void clearCache() {
+		if (mIconHolder != null) {
+			mIconHolder.clearCacheImages();
+		}
+	}
+
     /**
      * Method that dispose the elements of the adapter.
      */

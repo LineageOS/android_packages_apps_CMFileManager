@@ -1163,6 +1163,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         FileSystemObjectAdapter adapter = (FileSystemObjectAdapter)view.getAdapter();
         adapter.setNotifyOnChange(false);
         adapter.clear();
+        adapter.clearCache();
         adapter.addAll(files);
         adapter.notifyDataSetChanged();
     }
