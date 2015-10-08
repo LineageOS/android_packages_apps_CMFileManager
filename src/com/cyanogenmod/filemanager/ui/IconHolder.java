@@ -285,6 +285,15 @@ public class IconHolder {
     public void clearCache(FileSystemObject fso) {
         this.mAppIcons.remove(fso.getFullPath());
     }
+
+	/**
+	 * Clearing the Image Cache
+	 */
+	public void clearCacheImages() {
+		if (mAppIcons != null) {
+			mAppIcons.clear();
+		}
+	}
     /**
      * Method that returns a drawable reference of a FileSystemObject.
      *
