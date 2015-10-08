@@ -310,13 +310,17 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                 if (files != null) {
                     for (LinkedResource linkedFiles : files) {
                         Bookmarks.deleteOrphanBookmarks(ctx, linkedFiles.mSrc.getAbsolutePath());
+                        //Operation complete. Show refresh
+                        if (mOnRequestRefreshListener != null) {
+                            FileSystemObject fso = null;
+                            try {
+                                fso = CommandHelper.getFileInfo(ctx, linkedFiles.mDst.getAbsolutePath(), false, null);
+                            } catch (Throwable ex2) {
+                                /**NON BLOCK**/
+                            }
+                            mOnRequestRefreshListener.onRequestRefresh(fso, true);
+                        }
                     }
-                }
-
-                //Operation complete. Refresh
-                if (this.mOnRequestRefreshListener != null) {
-                  // The reference is not the same, so refresh the complete navigation view
-                  this.mOnRequestRefreshListener.onRequestRefresh(null, true);
                 }
             }
 
