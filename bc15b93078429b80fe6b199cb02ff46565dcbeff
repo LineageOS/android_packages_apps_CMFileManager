@@ -84,6 +84,30 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_b5ef3faf",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-09T18:57:50Z",
+      "side": 1,
+      "message": "We have separated the gerrits for both the issues.And also we made some changes that you have suggested.\n\nPlease review the below new gerrit link for changes.\n\nhttp://review.cyanogenmod.org/#/c/111443/\n\nInstead of calling the clear cache from getview we have implemented clearing cache when adapter gets updated after coping the thumbnail.",
+      "parentUuid": "7f287b81_2813f70f",
+      "range": {
+        "startLine": 209,
+        "startChar": 8,
+        "endLine": 209,
+        "endChar": 19
+      },
+      "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f436f4f_640930dc",
         "filename": "src/com/cyanogenmod/filemanager/commands/secure/MoveCommand.java",
         "patchSetId": 1
@@ -167,6 +191,42 @@
       "side": 1,
       "message": "Srinivas, can you please remove the changes for this patch if they are not relevant. We should not fix two issues in one patch, it will get too confusing. When both are separately ready, we will submit them one by one.\n\nRegardless, all that you\u0027ve done here is copy the above lines into this block. This is very repetitive. If this is really the correct solution, there is no reason to have the if (d.exists()) check above and do the same thing in both conditions.",
       "parentUuid": "7f287b81_143f3cd7",
+      "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_75ed5724",
+        "filename": "src/com/cyanogenmod/filemanager/commands/secure/MoveCommand.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-09T18:57:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f287b81_143f3cd7",
+      "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_952a03e5",
+        "filename": "src/com/cyanogenmod/filemanager/commands/secure/MoveCommand.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-09T18:57:50Z",
+      "side": 1,
+      "message": "We have submitted the separate gerrit link for this.\n\nPlease review the code in this link.\n\nhttp://review.cyanogenmod.org/#/c/111265/\n\nAnd we need to know that whether the secure file moving is proper mechanism or not. Please give some clarity on this so that we can go forward based on your inputs.What ever the changes we made in the previous gerrit it is working fine. Yes,There is no purpose to catch the exception here if we use copy.We will check it once and we give an update.",
+      "parentUuid": "7f287b81_889aebc2",
       "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
