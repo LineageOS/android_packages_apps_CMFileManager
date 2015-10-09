@@ -108,6 +108,30 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_ae7c8cb5",
+        "filename": "src/com/cyanogenmod/filemanager/adapters/FileSystemObjectAdapter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-09T19:07:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f287b81_b5ef3faf",
+      "range": {
+        "startLine": 209,
+        "startChar": 8,
+        "endLine": 209,
+        "endChar": 19
+      },
+      "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f436f4f_640930dc",
         "filename": "src/com/cyanogenmod/filemanager/commands/secure/MoveCommand.java",
         "patchSetId": 1
@@ -244,6 +268,30 @@
       "writtenOn": "2015-10-07T03:43:05Z",
       "side": 1,
       "message": "Unnecessary and, in any case, the path should normally to match the data in the appicons map.",
+      "range": {
+        "startLine": 286,
+        "startChar": 34,
+        "endLine": 286,
+        "endChar": 45
+      },
+      "revId": "bc15b93078429b80fe6b199cb02ff46565dcbeff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_ae55ac1f",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-09T19:07:50Z",
+      "side": 1,
+      "message": "Instead of clearing the cache for particular file system object we are clearing the whole cache when adapter gets updated.So we have removed this method and added new method clearCacheImages().\n\nWe have created gerrit link as we have some issues with old gerrit and going forward please follow the below link.\n\nPlease review the below new gerrit link for changes.\n\nhttp://review.cyanogenmod.org/#/c/111443/",
+      "parentUuid": "7f287b81_e26f4e90",
       "range": {
         "startLine": 286,
         "startChar": 34,
