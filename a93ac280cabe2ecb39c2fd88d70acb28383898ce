@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_a927e6b6",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 583,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-09T21:12:17Z",
+      "side": 1,
+      "message": "Many of these cosmetic issues are due to editor we have used.We forgot to cross verify the code changes before upload.We are working on the new solution to avoid all of these cosmetic as well as logic changes.\n\nMostly we will upload the gerrit on Monday.",
+      "parentUuid": "7f287b81_377d9a6e",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f287b81_9769ee8c",
         "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
         "patchSetId": 2
@@ -71,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_a975a69a",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-09T21:12:17Z",
+      "side": 1,
+      "message": "Ok.We will follow all these suggestions and we will upload new gerrit.",
+      "parentUuid": "7f287b81_3727da67",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f287b81_f772727c",
         "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
         "patchSetId": 2
@@ -82,6 +118,24 @@
       "writtenOn": "2015-10-06T21:31:41Z",
       "side": 1,
       "message": "over length",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_892c2a9a",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 775,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-09T21:12:17Z",
+      "side": 1,
+      "message": "Many of these cosmetic issues are due to editor we have used.We forgot to cross verify the code changes before upload.We are working on the new solution to avoid all of these cosmetic as well as logic changes.\n\nMostly we will upload the gerrit on Monday.",
+      "parentUuid": "7f287b81_f772727c",
       "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -133,6 +187,24 @@
       "writtenOn": "2015-10-06T21:31:41Z",
       "side": 1,
       "message": "too many tabs!",
+      "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_6921fe9f",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 782,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-09T21:12:17Z",
+      "side": 1,
+      "message": "Many of these cosmetic issues are due to editor we have used.We forgot to cross verify the code changes before upload.We are working on the new solution to avoid all of these cosmetic as well as logic changes.\n\nMostly we will upload the gerrit on Monday.",
+      "parentUuid": "7f287b81_573b869b",
       "revId": "a93ac280cabe2ecb39c2fd88d70acb28383898ce",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
