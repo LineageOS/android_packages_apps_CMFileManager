@@ -53,8 +53,6 @@ import com.cyanogenmod.filemanager.util.DialogHelper;
 import com.cyanogenmod.filemanager.util.ExceptionUtil;
 import com.cyanogenmod.filemanager.util.FileHelper;
 
-import org.apache.http.auth.AuthenticationException;
-
 import de.schlichtherle.truezip.crypto.raes.RaesAuthenticationException;
 import de.schlichtherle.truezip.file.TArchiveDetector;
 import de.schlichtherle.truezip.file.TFile;
