@@ -42,6 +42,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnLayoutChangeListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -116,6 +117,10 @@ public class EditorActivity extends Activity implements TextWatcher {
 
     private static final int WRITE_RETRIES = 3;
 
+    private static final int RESTART_DELAY = 50; //ms delay if file is large
+
+    private static final int DIALOG_DELAY = 30; //ms delay dismiss dialog
+
     private final BroadcastReceiver mNotificationReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -154,20 +159,6 @@ public class EditorActivity extends Activity implements TextWatcher {
                         } else if (key.compareTo(FileManagerSettings.SETTINGS_EDITOR_WORD_WRAP.getId()) == 0) {
                             // Ignore in binary files
                             if (activity.mBinary) return;
-
-                            // Do we have a different setting?
-                            boolean wordWrapSetting = Preferences.getSharedPreferences().getBoolean(
-                                    FileManagerSettings.SETTINGS_EDITOR_WORD_WRAP.getId(),
-                                    ((Boolean)FileManagerSettings.SETTINGS_EDITOR_WORD_WRAP.
-                                            getDefaultValue()).booleanValue());
-                            if (wordWrapSetting != activity.mWordWrap) {
-                                activity.mHandler.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        toggleWordWrap();
-                                    }
-                                });
-                            }
 
                         // Syntax highlight
                         // Default theme color scheme
@@ -577,6 +568,8 @@ public class EditorActivity extends Activity implements TextWatcher {
      */
     public static final String EXTRA_OPEN_FILE = "extra_open_file";  //$NON-NLS-1$
 
+    public AlertDialog mDialog = null;
+
     /**
      * {@inheritDoc}
      */
@@ -634,6 +627,31 @@ public class EditorActivity extends Activity implements TextWatcher {
 
         //Save state
         super.onCreate(state);
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        boolean wordWrapSetting = Preferences
+                .getSharedPreferences()
+                .getBoolean(
+                        FileManagerSettings.SETTINGS_EDITOR_WORD_WRAP.getId(),
+                        ((Boolean) FileManagerSettings.SETTINGS_EDITOR_WORD_WRAP
+                                .getDefaultValue()).booleanValue());
+        if (wordWrapSetting != this.mWordWrap) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(
+                    EditorActivity.this);
+            builder.setMessage(R.string.dialog_message);
+            builder.setCancelable(false);
+            mDialog = builder.create();
+            mDialog.show();
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    toggleWordWrap();
+                }
+            }, RESTART_DELAY);
+        }
     }
 
     /**
@@ -786,6 +804,20 @@ public class EditorActivity extends Activity implements TextWatcher {
             vSrc.setVisibility(View.GONE);
             vSrcParent.removeView(this.mEditor);
             vDstParent.addView(this.mEditor);
+            vDstParent.addOnLayoutChangeListener(new OnLayoutChangeListener() {
+                @Override
+                public void onLayoutChange(View v, int left, int top, int right,
+                    int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+                    if (mDialog != null) {
+                        mHandler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                mDialog.dismiss();
+                            }
+                        },DIALOG_DELAY);
+                    }
+                }
+            });
             vDst.setVisibility(View.VISIBLE);
             vDst.scrollTo(0, 0);
             this.mWordWrap = !this.mWordWrap;
