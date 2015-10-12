@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f287b81_f0626ad8",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-12T23:30:45Z",
+      "side": 1,
+      "message": "maybe a more descriptive name",
+      "revId": "c7ad58d0cc746df17bdb6c97270efa356580f52f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_30dc7273",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 648,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-12T23:30:45Z",
+      "side": 1,
+      "message": "Why are we making our handler posts delayed?",
+      "revId": "c7ad58d0cc746df17bdb6c97270efa356580f52f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_306912be",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 809,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-12T23:30:45Z",
+      "side": 1,
+      "message": "maybe need to remove the listener once it is fired, otherwise you have the potential of adding multiple listeners doing the same thing.  Also if something calls this multiple times you can queue up multiple listeners before they get fired which could lead to the same thing possibly.",
+      "revId": "c7ad58d0cc746df17bdb6c97270efa356580f52f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_106616ef",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 811,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-12T23:30:45Z",
+      "side": 1,
+      "message": "This is in a callback scope, so it is good you are checking for null.  However, you are posting another callback from this callback.  The null check should happen in that callback since it will happen later and mDialog could no longer exist.",
+      "revId": "c7ad58d0cc746df17bdb6c97270efa356580f52f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_909fa6b3",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 815,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-12T23:30:45Z",
+      "side": 1,
+      "message": "May also need to check in onPause() and dismiss there to prevent a possible window leak exception",
+      "revId": "c7ad58d0cc746df17bdb6c97270efa356580f52f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
