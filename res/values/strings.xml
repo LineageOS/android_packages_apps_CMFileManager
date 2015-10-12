@@ -359,6 +359,8 @@
     <string name="dumping_message">Generating hex dump\u2026</string>
     <!-- Editor - Displaying -->
     <string name="displaying_message">Displaying\u2026</string>
+    <!-- Editor - Loading please wait -->
+    <string name="dialog_message">Loading\u2026Please wait</string>
 
     <!-- Bookmarks - Bookmarks activity title -->
     <string name="bookmarks">Bookmarks</string>
