@@ -26,7 +26,7 @@
   <string name="device_blockdevice">Bloke gailua</string>
   <string name="device_characterdevice">Karaktere gailua</string>
   <string name="device_namedpipe">Hodi izendatua</string>
-  <string name="device_domainsocket">Domeinuaren socket-a</string>
+  <string name="device_domainsocket">Domeinuaren socketa</string>
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
   <string name="yes">Bai</string>
@@ -269,7 +269,7 @@
   <string name="filetime_format_mode_locale">Lurralde ezarpena</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">ee/hh/uuuu hh:mm:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">hh/ee/uuuu hh:mm:ss</string>
-  <string name="filetime_format_mode_yyyyMMdd_HHmmss">uuuu-hh-ee hh:mm:ss</string>
+  <string name="filetime_format_mode_yyyyMMdd_HHmmss">uuuu-hh-ee oo:mm:ss</string>
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> eta <xliff:g id="files">%2$s</xliff:g> hautatuta.</string>
   <string name="category_system">SISTEMA</string>
   <string name="category_app">APLIKAZIOA</string>
