@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Açılış qovluğunu tənzimlə.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Əlfəcini sil.</string>
   <string name="bookmarks_msgs_add_success">Əlfəcin uğurla əlavə olundu.</string>
+  <string name="bookmarks_msgs_add_exists">Əlfəcin artıq mövcuddur.</string>
   <string name="initial_directory_dialog_title">Açılış qovluğu</string>
   <string name="initial_directory_label">Açılış qovluğunu seçin:</string>
   <string name="initial_directory_relative_msg">Şərti yollara icazə verilmir.</string>
@@ -243,6 +244,7 @@
   <string name="input_name_dialog_label">Ad:</string>
   <string name="input_name_dialog_message_empty_name">Ad boş buraxıla bilməz.</string>
   <string name="input_name_dialog_message_invalid_path_name">Etibarsız ad. \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' simvollarına icazə verilmir.</string>
+  <string name="input_name_dialog_message_invalid_name_length">Maksimum simvol həddinə çatdı.</string>
   <string name="input_name_dialog_message_invalid_name">Etibarsız ad. \'.\' və \'..\' yə icazə verilmir.</string>
   <string name="input_name_dialog_message_name_exists">Ad artıq mövcuddur.</string>
   <string name="associations_dialog_title">Əlaqələndirmələr</string>
@@ -373,7 +375,10 @@
   <string name="ash_keyword">Açar söz</string>
   <string name="ash_quoted_string">Sitat sətir</string>
   <string name="ash_variable">Dəyişkən</string>
+  <string name="secure_storage_unlock_title">Təhlükəsiz yaddaşın kilidini açın</string>
+  <string name="secure_storage_create_title">Təhlükəsiz yaddaş yarat</string>
   <string name="secure_storage_reset_title">Şifrəni sıfırla</string>
+  <string name="secure_storage_delete_title">Təhlükəsiz yaddaşı sil</string>
   <string name="secure_storage_unlock_key_prompt_msg">Təhlükəsiz saxlama fayl sistemini açmaq üçün şifrəni daxil edin.</string>
   <string name="secure_storage_unlock_key_new_msg">Təhlükəsiz saxlama fayl sistemini kilidləmək üçün şifrəni daxil edin.</string>
   <string name="secure_storage_unlock_key_reset_msg">Təhlükəsiz saxlama fayl sistemini sıfırlamaq üçün mövcud və yeni şifrələri daxil edin.</string>
@@ -389,6 +394,7 @@
   <string name="secure_storage_unlock_failed">Saxlama kilidi açıla bilmir</string>
   <string name="secure_storage_unlock_validation_length">Şifrədə ən az <xliff:g id="characters">%1$d</xliff:g> simvol olmalıdır.</string>
   <string name="secure_storage_unlock_validation_equals">Şifrələr uyğunlaşmır.</string>
+  <string name="secure_storage_open_file_warning">Bu, faylı müvəqqəti şifrəsiz yerə kopyalayacaq. 1 saat sonra təmizlənəcək.</string>
   <string name="print_unsupported_document">Dəstəklənməyən sənəd formatı</string>
   <string name="print_unsupported_image">Dəstəklənməyən şəkil formatı</string>
   <string name="print_document_header">Sənəd: <xliff:g id="document_name">%1$s</xliff:g></string>

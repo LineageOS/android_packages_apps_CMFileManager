@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Kies de beginmap.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Favoriet verwijderen.</string>
   <string name="bookmarks_msgs_add_success">Favoriet succesvol aangemaakt.</string>
+  <string name="bookmarks_msgs_add_exists">Favoriet bestaat al.</string>
   <string name="initial_directory_dialog_title">Beginmap</string>
   <string name="initial_directory_label">Kies de beginmap:</string>
   <string name="initial_directory_relative_msg">Paden moeten beginnen met een slash.</string>

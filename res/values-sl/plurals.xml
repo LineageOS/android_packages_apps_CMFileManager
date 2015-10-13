@@ -46,4 +46,10 @@
     <item quantity="few">Izbrane so bile <xliff:g id="folders">%1$d</xliff:g> datoteke.</item>
     <item quantity="other">Izbranih je bilo <xliff:g id="folders">%1$d</xliff:g> datotek.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> predmet bo izbrisan.</item>
+    <item quantity="two"><xliff:g id="count">%1$d</xliff:g> predmeta bosta izbrisana.</item>
+    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> predmeti bodo izbrisani.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> predmetov bo izbrisanih.</item>
+  </plurals>
 </resources>

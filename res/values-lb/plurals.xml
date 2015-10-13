@@ -36,4 +36,8 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> Fichier ausgewielt.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> Fichieren ausgewielt.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> Element gëtt geläscht.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> Elementer gi geläscht.</item>
+  </plurals>
 </resources>

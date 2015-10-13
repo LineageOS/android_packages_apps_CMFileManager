@@ -39,7 +39,7 @@
   <string name="loading_message">Lade\u2026</string>
   <string name="cancelled_message">Abgebrochen</string>
   <string name="error_message">Fehler</string>
-  <string name="copy_text_cd">Berühren, um Text in die Zwischenablage zu kopieren</string>
+  <string name="copy_text_cd">Tippen, um Text in die Zwischenablage zu kopieren</string>
   <string name="copy_text_msg">Text wurde in die Zwischenablage kopiert</string>
   <string name="warning_title">Warnung</string>
   <string name="error_title">Fehler</string>

@@ -271,11 +271,17 @@ public final class PrintActionPolicy extends ActionsPolicy {
             int rowsPerPage = rowsPerPage(pageContentRect);
             adjustLines(pageContentRect, charsPerRow);
 
-            PrintDocumentInfo info = new PrintDocumentInfo.Builder(mDocument.getName())
+            String name = String.valueOf(System.currentTimeMillis());
+            long size = 0;
+            if (mDocument != null) {
+                name = mDocument.getName();
+                size = mDocument.getSize();
+            }
+            PrintDocumentInfo info = new PrintDocumentInfo.Builder(name)
                 .setContentType(PrintDocumentInfo.CONTENT_TYPE_DOCUMENT)
                 .setPageCount(calculatePageCount(rowsPerPage))
                 .build();
-            info.setDataSize(mDocument.getSize());
+            info.setDataSize(size);
             boolean changed = !newAttributes.equals(oldAttributes);
             callback.onLayoutFinished(info, changed);
         }
@@ -308,7 +314,11 @@ public final class PrintActionPolicy extends ActionsPolicy {
 
         private void printHeader(Context ctx, Page page, Rect pageContentRect,
                 int charsPerRow) {
-            String header = ctx.getString(R.string.print_document_header, mDocument.getName());
+            String name = String.valueOf(System.currentTimeMillis());
+            if (mDocument != null) {
+                name = mDocument.getName();
+            }
+            String header = ctx.getString(R.string.print_document_header, name);
             if (header.length() >= charsPerRow) {
                 header = header.substring(header.length() - 3) + "...";
             }
@@ -408,7 +418,11 @@ public final class PrintActionPolicy extends ActionsPolicy {
                 return 1;
             }
         };
-        printManager.print(document.getName(), new DocumentAdapter(ctx, document, reader), attr);
+        String name = String.valueOf(System.currentTimeMillis());
+        if (document != null) {
+            name = document.getName();
+        }
+        printManager.print(name, new DocumentAdapter(ctx, document, reader), attr);
     }
 
     /**
@@ -451,7 +465,11 @@ public final class PrintActionPolicy extends ActionsPolicy {
                 return mDocumentMode;
             }
         };
-        printManager.print(document.getName(), new DocumentAdapter(ctx, document, reader), attr);
+        String name = String.valueOf(System.currentTimeMillis());
+        if (document != null) {
+            name = document.getName();
+        }
+        printManager.print(name, new DocumentAdapter(ctx, document, reader), attr);
     }
 
     /**
@@ -467,7 +485,12 @@ public final class PrintActionPolicy extends ActionsPolicy {
                 .setMediaSize(mediaSize)
                 .setColorMode(PrintAttributes.COLOR_MODE_COLOR)
                 .build();
-        printManager.print(document.getName(), new PrintDocumentAdapter() {
+
+        String name = String.valueOf(System.currentTimeMillis());
+        if (document != null) {
+            name = document.getName();
+        }
+        printManager.print(name, new PrintDocumentAdapter() {
             @Override
             public void onWrite(PageRange[] pages, ParcelFileDescriptor destination,
                     CancellationSignal cancellationSignal, WriteResultCallback callback) {
@@ -539,7 +562,11 @@ public final class PrintActionPolicy extends ActionsPolicy {
                     return;
                 }
 
-                PrintDocumentInfo info = new PrintDocumentInfo.Builder(document.getName())
+                String name = String.valueOf(System.currentTimeMillis());
+                if (document != null) {
+                    name = document.getName();
+                }
+                PrintDocumentInfo info = new PrintDocumentInfo.Builder(name)
                     .setContentType(PrintDocumentInfo.CONTENT_TYPE_DOCUMENT)
                     .build();
                 boolean changed = !newAttributes.equals(oldAttributes);
@@ -613,7 +640,12 @@ public final class PrintActionPolicy extends ActionsPolicy {
                 .setMediaSize(mediaSize)
                 .setColorMode(PrintAttributes.COLOR_MODE_COLOR)
                 .build();
-        printManager.print(image.getName(), new PrintDocumentAdapter() {
+
+        String name = String.valueOf(System.currentTimeMillis());
+        if (image != null) {
+            name = image.getName();
+        }
+        printManager.print(name, new PrintDocumentAdapter() {
             private PrintAttributes mAttributes;
 
             @Override
@@ -667,8 +699,11 @@ public final class PrintActionPolicy extends ActionsPolicy {
                     return;
                 }
                 mAttributes = newAttributes;
-
-                PrintDocumentInfo info = new PrintDocumentInfo.Builder(image.getName())
+                String name = String.valueOf(System.currentTimeMillis());
+                if (image != null) {
+                    name = image.getName();
+                }
+                PrintDocumentInfo info = new PrintDocumentInfo.Builder(name)
                     .setContentType(PrintDocumentInfo.CONTENT_TYPE_PHOTO)
                     .setPageCount(1)
                     .build();

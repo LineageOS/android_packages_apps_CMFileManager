@@ -184,6 +184,7 @@
   <string name="bookmarks_button_config_cd">Stoor die aanvanklike vouergids.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Verwyder boekmerk</string>
   <string name="bookmarks_msgs_add_success">Die boekmerk was bygevoeg.</string>
+  <string name="bookmarks_msgs_add_exists">Die boekmerk bestaan alreeds.</string>
   <string name="initial_directory_dialog_title">Aanvanklike vouergids</string>
   <string name="initial_directory_label">Kies die aanvanklike vouergids:</string>
   <string name="initial_directory_relative_msg">Relatiewe paaie word nie toegelaat nie.</string>

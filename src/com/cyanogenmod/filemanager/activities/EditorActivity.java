@@ -1004,6 +1004,7 @@ public class EditorActivity extends Activity implements TextWatcher {
         Intent fileIntent = getIntent();
         if (fileIntent.getData().getScheme().equals("content")) {
             asyncReadContentURI(fileIntent.getData());
+            this.mTitle.setText(fileIntent.getDataString());
         } else {
             // File Scheme URI's
             String path = uriToPath(this, getIntent().getData());

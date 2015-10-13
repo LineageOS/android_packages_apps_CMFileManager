@@ -36,4 +36,8 @@
     <item quantity="one">1 ficheru esbilláu.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ficheros esbillaos.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one">Va desaniciase <xliff:g id="count">%1$d</xliff:g> elementu.</item>
+    <item quantity="other">Van desaniciase <xliff:g id="count">%1$d</xliff:g> elementos.</item>
+  </plurals>
 </resources>
