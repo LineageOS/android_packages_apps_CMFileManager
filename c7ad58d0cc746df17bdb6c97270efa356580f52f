@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_567136e0",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-13T11:36:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f287b81_f0626ad8",
+      "revId": "c7ad58d0cc746df17bdb6c97270efa356580f52f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f287b81_30dc7273",
         "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-10-12T23:30:45Z",
       "side": 1,
       "message": "Why are we making our handler posts delayed?",
+      "revId": "c7ad58d0cc746df17bdb6c97270efa356580f52f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_9650be34",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 648,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-13T11:36:57Z",
+      "side": 1,
+      "message": "Actually what happens is when we tap on back key from SettingPreferences after word wrap enable/disable it took some time to show the window at this point we are getting black screen what we have did is instead of calling toggle wordwrap immediately we should need to put some delay to avoid this black screen.",
+      "parentUuid": "7f287b81_30dc7273",
       "revId": "c7ad58d0cc746df17bdb6c97270efa356580f52f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_165cce49",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 809,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-13T11:36:57Z",
+      "side": 1,
+      "message": "Ok.We will check and do it.",
+      "parentUuid": "7f287b81_306912be",
+      "revId": "c7ad58d0cc746df17bdb6c97270efa356580f52f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f287b81_106616ef",
         "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
         "patchSetId": 1
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "7f287b81_76455270",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 811,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-13T11:36:57Z",
+      "side": 1,
+      "message": "We will check mDialog null inside run.Will update this in next gerrit.",
+      "parentUuid": "7f287b81_106616ef",
+      "revId": "c7ad58d0cc746df17bdb6c97270efa356580f52f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f287b81_909fa6b3",
         "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
         "patchSetId": 1
@@ -81,6 +153,24 @@
       "writtenOn": "2015-10-12T23:30:45Z",
       "side": 1,
       "message": "May also need to check in onPause() and dismiss there to prevent a possible window leak exception",
+      "revId": "c7ad58d0cc746df17bdb6c97270efa356580f52f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_3676aada",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 815,
+      "author": {
+        "id": 14133
+      },
+      "writtenOn": "2015-10-13T11:36:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f287b81_909fa6b3",
       "revId": "c7ad58d0cc746df17bdb6c97270efa356580f52f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
