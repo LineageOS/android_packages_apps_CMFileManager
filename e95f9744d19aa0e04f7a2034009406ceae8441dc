@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f287b81_03324bf2",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 1166,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-10-13T22:03:05Z",
+      "side": 1,
+      "message": "In onPostExecuteTask, we received the scrollTo arg. In move and new operations (if scrollTo !\u003d null) i think we can do a selective clear cache, rather than clear all the cache.\n\nI probably prefer just to clear the scrollTo if is !\u003d null. In other operations we can clear all the cache (although i think should be a way to improve it).",
+      "range": {
+        "startLine": 1166,
+        "startChar": 16,
+        "endLine": 1166,
+        "endChar": 26
+      },
+      "revId": "e95f9744d19aa0e04f7a2034009406ceae8441dc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
