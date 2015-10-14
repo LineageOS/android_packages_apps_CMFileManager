@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f287b81_b9edea26",
+        "filename": "src/com/cyanogenmod/filemanager/commands/secure/MoveCommand.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 12937
+      },
+      "writtenOn": "2015-10-14T04:14:31Z",
+      "side": 1,
+      "message": "Did you test this with secure storage?\nFileHelper shouldn\u0027t work with secure files/folders.",
+      "revId": "ad761a22dbe6df26d046f8feb62af80be9e0f22c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
