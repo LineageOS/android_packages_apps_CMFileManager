@@ -16,6 +16,24 @@
       "revId": "ad761a22dbe6df26d046f8feb62af80be9e0f22c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_5b6393dd",
+        "filename": "src/com/cyanogenmod/filemanager/commands/secure/MoveCommand.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 14183
+      },
+      "writtenOn": "2015-10-15T17:41:28Z",
+      "side": 1,
+      "message": "Yes, we have tested this scenario and secure file/folder getting deleted.",
+      "parentUuid": "7f287b81_b9edea26",
+      "revId": "ad761a22dbe6df26d046f8feb62af80be9e0f22c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
