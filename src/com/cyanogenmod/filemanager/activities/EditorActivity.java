@@ -570,6 +570,8 @@ public class EditorActivity extends Activity implements TextWatcher {
 
     public AlertDialog mDialog = null;
 
+    public View.OnLayoutChangeListener mChangeListener = null;
+
     /**
      * {@inheritDoc}
      */
@@ -630,6 +632,14 @@ public class EditorActivity extends Activity implements TextWatcher {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        if (mDialog != null) {
+            mDialog.dismiss();
+        }
+    }
+
+    @Override
     protected void onRestart() {
         super.onRestart();
         boolean wordWrapSetting = Preferences
@@ -641,7 +651,7 @@ public class EditorActivity extends Activity implements TextWatcher {
         if (wordWrapSetting != this.mWordWrap) {
             AlertDialog.Builder builder = new AlertDialog.Builder(
                     EditorActivity.this);
-            builder.setMessage(R.string.dialog_message);
+            builder.setMessage(R.string.loading_please_wait_msg);
             builder.setCancelable(false);
             mDialog = builder.create();
             mDialog.show();
@@ -804,20 +814,24 @@ public class EditorActivity extends Activity implements TextWatcher {
             vSrc.setVisibility(View.GONE);
             vSrcParent.removeView(this.mEditor);
             vDstParent.addView(this.mEditor);
-            vDstParent.addOnLayoutChangeListener(new OnLayoutChangeListener() {
+            mChangeListener = new View.OnLayoutChangeListener() {
                 @Override
-                public void onLayoutChange(View v, int left, int top, int right,
+                public void onLayoutChange(final View v, int left, int top, int right,
                     int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+                    v.removeOnLayoutChangeListener(mChangeListener);
                     if (mDialog != null) {
                         mHandler.postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                mDialog.dismiss();
+                                if (mDialog != null) {
+                                    mDialog.dismiss();
+                                }
                             }
                         },DIALOG_DELAY);
                     }
                 }
-            });
+            };
+            vDstParent.addOnLayoutChangeListener(mChangeListener);
             vDst.setVisibility(View.VISIBLE);
             vDst.scrollTo(0, 0);
             this.mWordWrap = !this.mWordWrap;
@@ -1036,7 +1050,6 @@ public class EditorActivity extends Activity implements TextWatcher {
         Intent fileIntent = getIntent();
         if (fileIntent.getData().getScheme().equals("content")) {
             asyncReadContentURI(fileIntent.getData());
-            this.mTitle.setText(fileIntent.getDataString());
         } else {
             // File Scheme URI's
             String path = uriToPath(this, getIntent().getData());
