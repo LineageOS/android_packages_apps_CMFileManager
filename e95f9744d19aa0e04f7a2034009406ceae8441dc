@@ -94,6 +94,30 @@
       "revId": "e95f9744d19aa0e04f7a2034009406ceae8441dc",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_db6f83c3",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 1166,
+      "author": {
+        "id": 14183
+      },
+      "writtenOn": "2015-10-15T17:33:00Z",
+      "side": 1,
+      "message": "The scrollTo arg passed to onPostExecuteTask() is always \"null\", \nscrollTo arg is set to \"null\" from the file \"CopyMoveActionPolicy.java\" after Copy Operation done in doOperation() method, the \tonSuccess() method will be called and from there refreshUIAfterCompletion() method is calling and in this method \n\n    private void refreshUIAfterCompletion() {\n                // Remove orphan bookmark paths\n                if (files !\u003d null) {\n                    for (LinkedResource linkedFiles : files) {\n                        Bookmarks.deleteOrphanBookmarks(ctx, linkedFiles.mSrc.getAbsolutePath());\n                    }\n                }\n\n\t                //Operation complete. Refresh\n\t                if (this.mOnRequestRefreshListener !\u003d null) {\n\t                  // The reference is not the same, so refresh the complete navigation view\n\t                  this.mOnRequestRefreshListener.onRequestRefresh(null, true);\n\t                }\n            }\n  \n   calling the --\u003e NavigationActivity.java, onRequestRefresh(Object o, boolean clearSelection) ---\u003e refresh(FileSystemObject scrollTo)\n   ---\u003e changeCurrentDir(newDir, addToHistory, reload, useCurrent, searchInfo, scrollTo) ----\u003e NavigationTask(passing scrollTO as arg)\t\n\n  From this code flow my understanding is every time scrollTo arg is \"null\" and we even tested for this initially to clear the cache for     the scrollTo Object, but it is always null we are getting, for this reason only we are clearing the total cache.",
+      "parentUuid": "7f287b81_03324bf2",
+      "range": {
+        "startLine": 1166,
+        "startChar": 16,
+        "endLine": 1166,
+        "endChar": 26
+      },
+      "revId": "e95f9744d19aa0e04f7a2034009406ceae8441dc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
