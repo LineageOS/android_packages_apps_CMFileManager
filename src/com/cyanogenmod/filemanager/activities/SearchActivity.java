@@ -1397,7 +1397,7 @@ public class SearchActivity extends Activity
 
             // Open the file here, so when focus back to the app, the search activity
             // its in top of the stack
-            IntentsActionPolicy.openFileSystemObject(this, fso, false, null, null);
+            IntentsActionPolicy.openFileSystemObject(this, fso, false, null);
         } else {
             // The fso not exists, delete the fso from the search
             try {

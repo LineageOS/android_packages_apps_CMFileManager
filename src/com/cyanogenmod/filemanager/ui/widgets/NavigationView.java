@@ -1216,7 +1216,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             changeCurrentDir(fso.getFullPath(), searchInfo);
         } else {
             // Open the file with the preferred registered app
-            IntentsActionPolicy.openFileSystemObject(getContext(), fso, false, null, null);
+            IntentsActionPolicy.openFileSystemObject(getContext(), fso, false, null);
         }
     }
 
@@ -1248,7 +1248,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             // Open the file (edit or pick)
             if (this.mNavigationMode.compareTo(NAVIGATION_MODE.BROWSABLE) == 0) {
                 // Open the file with the preferred registered app
-                IntentsActionPolicy.openFileSystemObject(getContext(), fso, false, null, null);
+                IntentsActionPolicy.openFileSystemObject(getContext(), fso, false, null);
             } else {
                 // Request a file pick selection
                 if (this.mOnFilePickedListener != null) {

@@ -19,18 +19,17 @@ package com.cyanogenmod.filemanager.ui.policy;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
-import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.Toast;
 import com.cyanogenmod.filemanager.R;
+import com.cyanogenmod.filemanager.activities.EditorActivity;
 import com.cyanogenmod.filemanager.activities.ShortcutActivity;
 import com.cyanogenmod.filemanager.console.secure.SecureConsole;
 import com.cyanogenmod.filemanager.model.FileSystemObject;
@@ -40,7 +39,6 @@ import com.cyanogenmod.filemanager.providers.SecureResourceProvider.Authorizatio
 import com.cyanogenmod.filemanager.providers.secure.ISecureChoiceCompleteListener;
 import com.cyanogenmod.filemanager.providers.secure.SecureCacheCleanupService;
 import com.cyanogenmod.filemanager.providers.secure.SecureChoiceClickListener;
-import com.cyanogenmod.filemanager.ui.dialogs.AssociationsDialog;
 import com.cyanogenmod.filemanager.util.DialogHelper;
 import com.cyanogenmod.filemanager.util.ExceptionUtil;
 import com.cyanogenmod.filemanager.util.FileHelper;
@@ -97,12 +95,11 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      * @param ctx The current context
      * @param fso The file system object
      * @param choose If allow the user to select the application to open with
-     * @param onCancelListener The cancel listener
      * @param onDismissListener The dismiss listener
      */
     public static void openFileSystemObject(
             final Context ctx, final FileSystemObject fso, final boolean choose,
-            final OnCancelListener onCancelListener, final OnDismissListener onDismissListener) {
+            final OnDismissListener onDismissListener) {
         try {
             // Create the intent to open the file
             final Intent intent = new Intent();
@@ -145,12 +142,6 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                                                 ctx,
                                                 intent,
                                                 choose,
-                                                createInternalIntents(ctx, cacheFso),
-                                                0,
-                                                R.string.associations_dialog_openwith_title,
-                                                R.string.associations_dialog_openwith_action,
-                                                true,
-                                                onCancelListener,
                                                 onDismissListener);
                                     }
 
@@ -174,19 +165,16 @@ public final class IntentsActionPolicy extends ActionsPolicy {
             }
 
             // Resolve the intent
-            resolveIntent(
-                    ctx,
-                    intent,
-                    choose,
-                    createInternalIntents(ctx, fso),
-                    0,
-                    R.string.associations_dialog_openwith_title,
-                    R.string.associations_dialog_openwith_action,
-                    true, onCancelListener, onDismissListener);
-
+            resolveIntent(ctx, intent, choose, onDismissListener);
         } catch (Exception e) {
             ExceptionUtil.translateException(ctx, e);
         }
+    }
+
+    private static boolean handledByEditorInManifest(Context context, Intent intent) {
+        Intent i = new Intent(intent);
+        i.setPackage(context.getPackageName());
+        return context.getPackageManager().queryIntentActivities(i, 0).size() > 0;
     }
 
     /**
@@ -195,12 +183,10 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      *
      * @param ctx The current context
      * @param fso The file system object
-     * @param onCancelListener The cancel listener
      * @param onDismissListener The dismiss listener
      */
     public static void sendFileSystemObject(
-            final Context ctx, final FileSystemObject fso,
-            OnCancelListener onCancelListener, OnDismissListener onDismissListener) {
+            final Context ctx, final FileSystemObject fso, OnDismissListener onDismissListener) {
         try {
             // Create the intent to
             Intent intent = new Intent();
@@ -214,12 +200,8 @@ public final class IntentsActionPolicy extends ActionsPolicy {
             resolveIntent(
                     ctx,
                     intent,
-                    true,
-                    null,
-                    0,
-                    R.string.associations_dialog_sendwith_title,
-                    R.string.associations_dialog_sendwith_action,
-                    false, onCancelListener, onDismissListener);
+                    false,
+                    onDismissListener);
 
         } catch (Exception e) {
             ExceptionUtil.translateException(ctx, e);
@@ -232,12 +214,11 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      *
      * @param ctx The current context
      * @param fsos The file system objects
-     * @param onCancelListener The cancel listener
      * @param onDismissListener The dismiss listener
      */
     public static void sendMultipleFileSystemObject(
             final Context ctx, final List<FileSystemObject> fsos,
-            OnCancelListener onCancelListener, OnDismissListener onDismissListener) {
+            OnDismissListener onDismissListener) {
         try {
             // Create the intent to
             Intent intent = new Intent();
@@ -281,12 +262,8 @@ public final class IntentsActionPolicy extends ActionsPolicy {
             resolveIntent(
                     ctx,
                     intent,
-                    true,
-                    null,
-                    0,
-                    R.string.associations_dialog_sendwith_title,
-                    R.string.associations_dialog_sendwith_action,
-                    false, onCancelListener, onDismissListener);
+                    false,
+                    onDismissListener);
 
         } catch (Exception e) {
             ExceptionUtil.translateException(ctx, e);
@@ -298,170 +275,58 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      *
      * @param ctx The current context
      * @param intent The intent to resolve
-     * @param choose If allow the user to select the application to select the registered
      * application. If no preferred app or more than one exists the dialog is shown.
-     * @param internals The list of internals intents that can handle the action
-     * @param icon The icon of the dialog
-     * @param title The title of the dialog
-     * @param action The button title of the dialog
-     * @param allowPreferred If allow the user to mark the selected app as preferred
-     * @param onCancelListener The cancel listener
      * @param onDismissListener The dismiss listener
      */
     private static void resolveIntent(
-            Context ctx, Intent intent, boolean choose, List<Intent> internals,
-            int icon, int title, int action, boolean allowPreferred,
-            OnCancelListener onCancelListener, OnDismissListener onDismissListener) {
-        //Retrieve the activities that can handle the file
-        final PackageManager packageManager = ctx.getPackageManager();
-        if (DEBUG) {
-            intent.addFlags(Intent.FLAG_DEBUG_LOG_RESOLUTION);
-        }
-        List<ResolveInfo> info =
-                packageManager.
-                    queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
-        Collections.sort(info, new Comparator<ResolveInfo>() {
-            @Override
-            public int compare(ResolveInfo lhs, ResolveInfo rhs) {
-                boolean isLshCMFM =
-                        lhs.activityInfo.packageName.compareTo(PREFERRED_PACKAGE) == 0;
-                boolean isRshCMFM =
-                        rhs.activityInfo.packageName.compareTo(PREFERRED_PACKAGE) == 0;
-                if (isLshCMFM && !isRshCMFM) {
-                    return -1;
-                }
-                if (!isLshCMFM && isRshCMFM) {
-                    return 1;
-                }
-                return lhs.activityInfo.name.compareTo(rhs.activityInfo.name);
-            }
-        });
+            Context ctx, Intent intent, boolean choose, OnDismissListener onDismissListener) {
+        if (choose) {
+            PackageManager pm = ctx.getPackageManager();
+            List<ResolveInfo> infos = pm.queryIntentActivities(intent, 0);
 
-        if (info.size() == 0) {
-            // This basically checks the system to see if it possibly wants to handle it
-            ResolveInfo ri = packageManager.resolveActivity(intent, 0);
-            if (ri != null) {
+            Intent editor = new Intent(intent);
+            editor.setClass(ctx, EditorActivity.class);
+
+            if (infos.size() > 0) {
+                // Try to only show the chooser when we have multiple items
+                Intent i = Intent.createChooser(intent,
+                        ctx.getString(R.string.associations_dialog_openwith_title));
+                if (!handledByEditorInManifest(ctx, intent)) {
+                    i.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[]{
+                            editor,
+                    });
+                }
                 try {
-                    ctx.startActivity(getIntentFromResolveInfo(ri, intent));
-                    if (onDismissListener != null) {
-                        onDismissListener.onDismiss(null);
-                    }
-                    return;
+                    ctx.startActivity(i);
                 } catch (ActivityNotFoundException e) {
-                    // fall through, we may still want to handle it with an internal activity
+                    try {
+                        ctx.startActivity(editor);
+                    } catch (ActivityNotFoundException e1) {
+                        // Do nothing, this should never happen
+                    }
+                }
+            } else {
+                try {
+                    ctx.startActivity(editor);
+                } catch (ActivityNotFoundException e) {
+                    // Do nothing, this should never happen
                 }
             }
-        }
-
-        // Add the internal editors
-        int count = 0;
-        if (internals != null) {
-            int cc = internals.size();
-            for (int i = 0; i < cc; i++) {
-                Intent ii = internals.get(i);
-                List<ResolveInfo> ie =
-                        packageManager.
-                            queryIntentActivities(ii, 0);
-                if (ie.size() > 0) {
-                    ResolveInfo rie = ie.get(0);
-
-                    // Only if the internal is not in the query list
-                    boolean exists = false;
-                    int ccc = info.size();
-                    for (int j = 0; j < ccc; j++) {
-                        ResolveInfo ri = info.get(j);
-                        if (ri.activityInfo.packageName.compareTo(
-                                rie.activityInfo.packageName) == 0 &&
-                            ri.activityInfo.name.compareTo(
-                                    rie.activityInfo.name) == 0) {
-
-                            // Mark as internal
-                            if (ri.activityInfo.metaData == null) {
-                                ri.activityInfo.metaData = new Bundle();
-                                ri.activityInfo.metaData.putString(
-                                        EXTRA_INTERNAL_ACTION, ii.getAction());
-                                ri.activityInfo.metaData.putBoolean(
-                                        CATEGORY_INTERNAL_VIEWER, true);
-                            }
-                            exists = true;
-                            break;
-                        }
-                    }
-                    if (exists) {
-                        continue;
-                    }
-
-                    // Mark as internal
-                    if (rie.activityInfo.metaData == null) {
-                        rie.activityInfo.metaData = new Bundle();
-                        rie.activityInfo.metaData.putString(EXTRA_INTERNAL_ACTION, ii.getAction());
-                        rie.activityInfo.metaData.putBoolean(CATEGORY_INTERNAL_VIEWER, true);
-                    }
-
-                    // Only one result must be matched
-                    info.add(count, rie);
-                    count++;
-                }
-            }
-        }
-
-        // No registered application
-        if (info.size() == 0) {
-            DialogHelper.showToast(ctx, R.string.msgs_not_registered_app, Toast.LENGTH_SHORT);
-            if (onDismissListener != null) {
-                onDismissListener.onDismiss(null);
-            }
-            return;
-        }
-
-        // Retrieve the preferred activity that can handle the file. We only want the
-        // resolved activity if the activity is a preferred activity. Other case, the
-        // resolved activity was never added by addPreferredActivity
-        ResolveInfo mPreferredInfo = findPreferredActivity(ctx, intent, info);
-
-        // Is a simple open and we have an application that can handle the file?
-        //---
-        // If we have a preferred application, then use it
-        if (!choose && (mPreferredInfo  != null && mPreferredInfo.match != 0)) {
+        } else {
             try {
-                ctx.startActivity(getIntentFromResolveInfo(mPreferredInfo, intent));
-                if (onDismissListener != null) {
-                    onDismissListener.onDismiss(null);
+                ctx.startActivity(intent);
+            } catch (ActivityNotFoundException e) {
+                intent.setClass(ctx, EditorActivity.class);
+                try {
+                    ctx.startActivity(intent);
+                } catch (ActivityNotFoundException e2) {
+                    // This should never happen unless the editor is removed.
                 }
-                return;
-            } catch (ActivityNotFoundException e) {
-                // fall through, the preferred may have been uninstalled.
             }
         }
-        // If there are only one activity (app or internal editor), then use it
-        if (!choose && info.size() == 1) {
-            ResolveInfo ri = info.get(0);
-            try {
-                ctx.startActivity(getIntentFromResolveInfo(ri, intent));
-            } catch (ActivityNotFoundException e) {
-                DialogHelper.showToast(ctx, R.string.msgs_not_registered_app, Toast.LENGTH_SHORT);
-            }
-            if (onDismissListener != null) {
-                onDismissListener.onDismiss(null);
-            }
-            return;
+        if (onDismissListener != null) {
+            onDismissListener.onDismiss(null);
         }
-
-        // If we have multiples apps and there is not a preferred application then show
-        // open with dialog
-        AssociationsDialog dialog =
-                new AssociationsDialog(
-                        ctx,
-                        icon,
-                        ctx.getString(title),
-                        ctx.getString(action),
-                        intent,
-                        info,
-                        mPreferredInfo,
-                        allowPreferred,
-                        onCancelListener,
-                        onDismissListener);
-        dialog.show();
     }
 
     /**
@@ -519,7 +384,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      */
     private static List<Intent> createInternalIntents(Context ctx, FileSystemObject fso) {
         List<Intent> intents = new ArrayList<Intent>();
-        intents.addAll(createEditorIntent(ctx, fso));
+        intents.addAll(createEditorIntents(ctx, fso));
         return intents;
     }
 
@@ -529,7 +394,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      * @param ctx The current context
      * @param fso FileSystemObject
      */
-    private static List<Intent> createEditorIntent(Context ctx, FileSystemObject fso) {
+    private static List<Intent> createEditorIntents(Context ctx, FileSystemObject fso) {
         List<Intent> intents = new ArrayList<Intent>();
         MimeTypeCategory category = MimeTypeHelper.getCategory(ctx, fso);
 
@@ -547,6 +412,17 @@ public final class IntentsActionPolicy extends ActionsPolicy {
         }
 
         return intents;
+    }
+
+    private static Intent createEditorIntent(Context ctx, FileSystemObject fso) {
+        Intent editorIntent = null;
+        MimeTypeCategory category = MimeTypeHelper.getCategory(ctx, fso);
+
+        editorIntent = new Intent();
+        editorIntent.setAction(Intent.ACTION_VIEW);
+        editorIntent.addCategory(CATEGORY_INTERNAL_VIEWER);
+        editorIntent.addCategory(CATEGORY_EDITOR);
+        return editorIntent;
     }
 
     /**

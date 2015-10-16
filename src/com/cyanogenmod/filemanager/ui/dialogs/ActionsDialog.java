@@ -287,12 +287,12 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
             //- Open
             case R.id.mnu_actions_open:
                 IntentsActionPolicy.openFileSystemObject(
-                        this.mContext, this.mFso, false, null, null);
+                        this.mContext, this.mFso, false, null);
                 break;
             //- Open with
             case R.id.mnu_actions_open_with:
                 IntentsActionPolicy.openFileSystemObject(
-                        this.mContext, this.mFso, true, null, null);
+                        this.mContext, this.mFso, true, null);
                 break;
 
             //- Execute
@@ -303,7 +303,7 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
             //- Send
             case R.id.mnu_actions_send:
                 IntentsActionPolicy.sendFileSystemObject(
-                        this.mContext, this.mFso, null, null);
+                        this.mContext, this.mFso, null);
                 break;
             case R.id.mnu_actions_send_selection:
                 if (this.mOnSelectionListener != null) {
@@ -311,10 +311,10 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
                             this.mOnSelectionListener.onRequestSelectedFiles();
                     if (selection.size() == 1) {
                         IntentsActionPolicy.sendFileSystemObject(
-                                this.mContext, selection.get(0), null, null);
+                                this.mContext, selection.get(0), null);
                     } else {
                         IntentsActionPolicy.sendMultipleFileSystemObject(
-                                this.mContext, selection, null, null);
+                                this.mContext, selection, null);
                     }
                 }
                 break;

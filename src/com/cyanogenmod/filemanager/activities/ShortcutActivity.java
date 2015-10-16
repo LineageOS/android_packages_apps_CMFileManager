@@ -189,7 +189,7 @@ public class ShortcutActivity extends Activity implements OnCancelListener, OnDi
 
             } else {
                 // Open the file. Delegate in action policy
-                IntentsActionPolicy.openFileSystemObject(this, fso, false, this, this);
+                IntentsActionPolicy.openFileSystemObject(this, fso, false, this);
             }
 
         } catch (Exception e) {
