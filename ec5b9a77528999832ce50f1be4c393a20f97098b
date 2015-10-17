@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f287b81_07892874",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-10-17T03:30:37Z",
+      "side": 1,
+      "message": "We should probably just query package manager with our explicit package name instead.",
+      "revId": "ec5b9a77528999832ce50f1be4c393a20f97098b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_e77dfc6e",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-10-17T03:30:37Z",
+      "side": 1,
+      "message": "This needs to be moved after the else.",
+      "revId": "ec5b9a77528999832ce50f1be4c393a20f97098b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
