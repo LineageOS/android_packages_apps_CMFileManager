@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f287b81_d951c810",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-10-17T04:55:23Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we need to set the component name? The cmfm has other activities handling VIEW actions.",
+      "range": {
+        "startLine": 176,
+        "startChar": 10,
+        "endLine": 176,
+        "endChar": 20
+      },
+      "revId": "3a4d70fe0513bf1faf817e8d0d90b73f1e32707a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
