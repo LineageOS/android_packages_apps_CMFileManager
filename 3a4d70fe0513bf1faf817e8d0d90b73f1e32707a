@@ -22,6 +22,30 @@
       "revId": "3a4d70fe0513bf1faf817e8d0d90b73f1e32707a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f2577a7_50edd223",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-10-19T22:22:04Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "7f287b81_d951c810",
+      "range": {
+        "startLine": 176,
+        "startChar": 10,
+        "endLine": 176,
+        "endChar": 20
+      },
+      "revId": "3a4d70fe0513bf1faf817e8d0d90b73f1e32707a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
