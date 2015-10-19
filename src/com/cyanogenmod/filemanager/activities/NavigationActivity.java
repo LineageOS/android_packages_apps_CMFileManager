@@ -2000,6 +2000,11 @@ public class NavigationActivity extends Activity
         }
     }
 
+    @Override
+    public void onClearCache(Object o) {
+        // ignore
+    }
+
     /**
      * {@inheritDoc}
      */

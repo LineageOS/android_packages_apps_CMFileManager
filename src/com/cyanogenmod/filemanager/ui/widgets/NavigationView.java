@@ -829,7 +829,6 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             this.mCurrentDir = this.mPreviousDir;
             this.mPreviousDir = null;
         }
-
         //Reload data
         changeCurrentDir(newDir, addToHistory, reload, useCurrent, searchInfo, scrollTo);
     }
@@ -1272,6 +1271,13 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         }
         if (clearSelection) {
             onDeselectAll();
+        }
+    }
+
+    @Override
+    public void onClearCache(Object o) {
+        if (o instanceof FileSystemObject && mAdapter != null) {
+            mAdapter.clearCache((FileSystemObject)o);
         }
     }
 
