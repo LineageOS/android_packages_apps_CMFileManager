@@ -138,11 +138,13 @@ public class FileSystemObjectAdapter
     }
 
     /**
-     * Clearing the Cache
+     * Method that Clears Cache of the adapter
+     * @param fso The Selected FileSystemObject reference
      */
-    public void clearCache() {
+    public void clearCache(FileSystemObject fso) {
         if (mIconHolder != null) {
-            mIconHolder.clearCacheImages();
+            mIconHolder.clearCacheImages(fso);
+            notifyDataSetChanged();
         }
     }
 

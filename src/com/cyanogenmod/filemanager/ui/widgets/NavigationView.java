@@ -829,7 +829,9 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             this.mCurrentDir = this.mPreviousDir;
             this.mPreviousDir = null;
         }
-
+        if (this.mAdapter != null) {
+            mAdapter.clearCache(scrollTo);
+        }
         //Reload data
         changeCurrentDir(newDir, addToHistory, reload, useCurrent, searchInfo, scrollTo);
     }
@@ -1163,7 +1165,6 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         FileSystemObjectAdapter adapter = (FileSystemObjectAdapter)view.getAdapter();
         adapter.setNotifyOnChange(false);
         adapter.clear();
-        adapter.clearCache();
         adapter.addAll(files);
         adapter.notifyDataSetChanged();
     }
