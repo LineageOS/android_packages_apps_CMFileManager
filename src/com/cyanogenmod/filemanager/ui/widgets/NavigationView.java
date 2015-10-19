@@ -829,7 +829,9 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             this.mCurrentDir = this.mPreviousDir;
             this.mPreviousDir = null;
         }
-
+        if (this.mAdapter != null) {
+            mAdapter.clearCache(scrollTo);
+        }
         //Reload data
         changeCurrentDir(newDir, addToHistory, reload, useCurrent, searchInfo, scrollTo);
     }
