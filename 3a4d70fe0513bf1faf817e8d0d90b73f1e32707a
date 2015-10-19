@@ -46,6 +46,30 @@
       "revId": "3a4d70fe0513bf1faf817e8d0d90b73f1e32707a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f2577a7_30dc8645",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-10-19T23:18:06Z",
+      "side": 1,
+      "message": "No because we just want to see if the intent itself will be handled.  Basically, this allows us to know when we need to inject a Row into the Resolver Activity and when we shouldn\u0027t.\n\nThe intents are resolved based on ACTION + CATEGORIES + URI + MimeType\n\nThere is one Activity that handles the resource/folder mimetype, two that only handle android.intent.action.VIEW (no other attributes), and then the EditorActivity, which handles two cases, one of which won\u0027t be called unless we set a category of INTERNAL_VIEWER and EDITOR.\n\nSo, realistically, we only ever actually show the EditorActivity as an option in the chooser (at least from all the tests, I\u0027ve run, this is the case).\n\nBecause ChangeLogActivity seems to only ever be called explicitly, it can technically have the action removed from its intent-filter. The ShortcutActivity is the same.\n\nIf after all that you still think it will be an issue, if you have a particular use case you think this would fail, it would help me understand where you think this will cause problems, so I can test that scenario.",
+      "parentUuid": "5f2577a7_50edd223",
+      "range": {
+        "startLine": 176,
+        "startChar": 10,
+        "endLine": 176,
+        "endChar": 20
+      },
+      "revId": "3a4d70fe0513bf1faf817e8d0d90b73f1e32707a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
