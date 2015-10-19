@@ -50,6 +50,13 @@ public interface OnRequestRefreshListener {
     void onNavigateTo(Object o);
 
     /**
+     * Invoke to clear cache for object
+     *
+     * @param o object to clear cache for
+     */
+    void onClearCache(Object o);
+
+    /**
      * Invoked on action cancel
      */
     void onCancel();

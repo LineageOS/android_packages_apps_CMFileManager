@@ -283,6 +283,17 @@ public class IconHolder {
     }
 
     /**
+     * Clearing the selected Icon Cache
+     * @param fso The Selected FileSystemObject reference
+     */
+    public void clearCacheImages(FileSystemObject fso) {
+        final String filePath = MediaHelper.normalizeMediaPath(fso.getFullPath());
+        if (filePath != null) {
+            mAppIcons.remove(filePath);
+        }
+    }
+
+    /**
      * Method that returns a drawable reference of a FileSystemObject.
      *
      * @param iconView View to load the drawable into

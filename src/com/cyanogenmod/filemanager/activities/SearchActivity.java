@@ -1264,6 +1264,11 @@ public class SearchActivity extends Activity
         }
     }
 
+    @Override
+    public void onClearCache(Object o) {
+        // ignore
+    }
+
     /**
      * {@inheritDoc}
      */

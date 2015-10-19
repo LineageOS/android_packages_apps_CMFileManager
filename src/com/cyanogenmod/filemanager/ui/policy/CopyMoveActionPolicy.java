@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.text.Html;
 import android.text.Spanned;
+import android.util.Log;
 
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.console.Console;
@@ -45,6 +46,8 @@ import java.util.List;
  * A class with the convenience methods for resolve copy/move related actions
  */
 public final class CopyMoveActionPolicy extends ActionsPolicy {
+
+    private static final String TAG = CopyMoveActionPolicy.class.getSimpleName();
 
     /**
      * @hide
@@ -310,13 +313,23 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                 if (files != null) {
                     for (LinkedResource linkedFiles : files) {
                         Bookmarks.deleteOrphanBookmarks(ctx, linkedFiles.mSrc.getAbsolutePath());
+                        //Operation complete. Show refresh
+                        if (mOnRequestRefreshListener != null) {
+                            FileSystemObject fso = null;
+                            try {
+                                fso = CommandHelper.getFileInfo(ctx,
+                                        linkedFiles.mDst.getAbsolutePath(), false, null);
+                                mOnRequestRefreshListener.onClearCache(fso);
+                            } catch (Exception e) {
+                                Log.w(TAG, "Exception getting file info for " +
+                                        linkedFiles.mDst.getAbsolutePath(), e);
+                            }
+                        }
                     }
                 }
 
-                //Operation complete. Refresh
-                if (this.mOnRequestRefreshListener != null) {
-                  // The reference is not the same, so refresh the complete navigation view
-                  this.mOnRequestRefreshListener.onRequestRefresh(null, true);
+                if (mOnRequestRefreshListener != null) {
+                    mOnRequestRefreshListener.onRequestRefresh(null, true);
                 }
             }
 
