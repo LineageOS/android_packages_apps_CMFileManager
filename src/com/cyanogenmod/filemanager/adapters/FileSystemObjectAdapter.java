@@ -146,7 +146,7 @@ public class FileSystemObjectAdapter
             mIconHolder.clearCacheImages(fso);
             notifyDataSetChanged();
         }
-   }
+    }
 
     /**
      * Method that dispose the elements of the adapter.
