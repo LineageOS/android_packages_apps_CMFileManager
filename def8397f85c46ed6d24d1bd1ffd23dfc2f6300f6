@@ -42,6 +42,24 @@
     },
     {
       "key": {
+        "uuid": "5f2577a7_c1fc5240",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 318,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-20T21:19:38Z",
+      "side": 1,
+      "message": "And always at least log an error/warning as opposed to empty catch",
+      "parentUuid": "5f2577a7_10f74af8",
+      "revId": "def8397f85c46ed6d24d1bd1ffd23dfc2f6300f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f2577a7_41b182e1",
         "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
         "patchSetId": 1
@@ -53,6 +71,30 @@
       "writtenOn": "2015-10-20T15:14:09Z",
       "side": 1,
       "message": "Doesn\u0027t this will create many ui refreshes if we have various files? What about to create a new method in the interface just to invalidate the file icon cache. This way the ui is untoched and only refreshed once.",
+      "range": {
+        "startLine": 321,
+        "startChar": 28,
+        "endLine": 321,
+        "endChar": 53
+      },
+      "revId": "def8397f85c46ed6d24d1bd1ffd23dfc2f6300f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f2577a7_a1f9464e",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-20T21:19:38Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "5f2577a7_41b182e1",
       "range": {
         "startLine": 321,
         "startChar": 28,
