@@ -70,6 +70,30 @@
       "revId": "3a4d70fe0513bf1faf817e8d0d90b73f1e32707a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f2577a7_d0230205",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-10-20T00:07:20Z",
+      "side": 1,
+      "message": "Alright, works for me.",
+      "parentUuid": "5f2577a7_30dc8645",
+      "range": {
+        "startLine": 176,
+        "startChar": 10,
+        "endLine": 176,
+        "endChar": 20
+      },
+      "revId": "3a4d70fe0513bf1faf817e8d0d90b73f1e32707a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
