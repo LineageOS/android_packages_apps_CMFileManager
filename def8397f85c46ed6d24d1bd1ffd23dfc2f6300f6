@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "5f2577a7_61bc7ebb",
+        "filename": "src/com/cyanogenmod/filemanager/ui/IconHolder.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-10-20T15:14:09Z",
+      "side": 1,
+      "message": "None of filePath or mAppIcons can\u0027t be null here. The mAppIcons reference is created in the constructor and if fso isn\u0027t null then filePath can be null (and if fso is null then we will have a NPE)",
+      "range": {
+        "startLine": 291,
+        "startChar": 32,
+        "endLine": 291,
+        "endChar": 41
+      },
+      "revId": "def8397f85c46ed6d24d1bd1ffd23dfc2f6300f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f2577a7_10f74af8",
         "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
         "patchSetId": 1
@@ -13,6 +36,52 @@
       "writtenOn": "2015-10-19T22:24:12Z",
       "side": 1,
       "message": "Is there something more specific you can catch here instead of Throwable?",
+      "revId": "def8397f85c46ed6d24d1bd1ffd23dfc2f6300f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f2577a7_41b182e1",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-10-20T15:14:09Z",
+      "side": 1,
+      "message": "Doesn\u0027t this will create many ui refreshes if we have various files? What about to create a new method in the interface just to invalidate the file icon cache. This way the ui is untoched and only refreshed once.",
+      "range": {
+        "startLine": 321,
+        "startChar": 28,
+        "endLine": 321,
+        "endChar": 53
+      },
+      "revId": "def8397f85c46ed6d24d1bd1ffd23dfc2f6300f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f2577a7_81b76ad9",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/NavigationView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 833,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-10-20T15:14:09Z",
+      "side": 1,
+      "message": "scrollTo could be null here, though.",
+      "range": {
+        "startLine": 833,
+        "startChar": 32,
+        "endLine": 833,
+        "endChar": 40
+      },
       "revId": "def8397f85c46ed6d24d1bd1ffd23dfc2f6300f6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
