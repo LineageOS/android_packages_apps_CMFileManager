@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">시작 폴더를 설정합니다.</string>
   <string name="bookmarks_button_remove_bookmark_cd">북마크를 제거합니다.</string>
   <string name="bookmarks_msgs_add_success">즐겨찾기에 성공적으로 추가했습니다.</string>
+  <string name="bookmarks_msgs_add_exists">이미 존재하는 북마크입니다.</string>
   <string name="initial_directory_dialog_title">시작 폴더</string>
   <string name="initial_directory_label">시작 폴더 선택:</string>
   <string name="initial_directory_relative_msg">상대 경로는 허용되지 않습니다.</string>
