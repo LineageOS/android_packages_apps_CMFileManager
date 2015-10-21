@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f2577a7_a2726410",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/CopyMoveActionPolicy.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 323,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2015-10-21T22:34:00Z",
+      "side": 1,
+      "message": "Do we want a specific exception or do we need generic?",
+      "revId": "06b63a742e3dfad20265ccce9afa952d81984118",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
