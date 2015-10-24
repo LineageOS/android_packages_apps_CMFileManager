@@ -913,7 +913,14 @@ public class EditorActivity extends Activity implements TextWatcher {
                         toggleNoSuggestions();
                         break;
                     case R.id.mnu_word_wrap:
-                        toggleWordWrap();
+                        DialogHelper.showToast(EditorActivity.this,
+                                R.string.toggle_word_wrap_msg, Toast.LENGTH_SHORT);
+                        mHandler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                toggleWordWrap();
+                            }
+                        }, 50);
                         break;
                     case R.id.mnu_syntax_highlight:
                         toggleSyntaxHighlight();
