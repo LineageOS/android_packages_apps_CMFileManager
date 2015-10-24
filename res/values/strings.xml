@@ -847,4 +847,6 @@
     <string name="storage_permissions_explanation">Go to Settings, and tap Permissions to grant permission.</string>
     <string name="snackbar_settings">Settings</string>
 
+    <!-- Wrap mode - toast -->
+    <string name="toggle_word_wrap_msg">Toggling word wrap mode</string>
 </resources>
