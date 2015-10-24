@@ -792,6 +792,12 @@ public final class CommandHelper {
         return result;
     }
 
+    private static void recursiveScan(@NonNull final Context context,
+                                      @Nullable String srcPath,
+                                      @NonNull String destPath) {
+        recursiveScan(context, srcPath, destPath, -1);
+    }
+
     /**
      *
      * @param context
@@ -800,7 +806,9 @@ public final class CommandHelper {
      */
     private static void recursiveScan(@NonNull final Context context,
                                       @Nullable String srcPath,
-                                      @NonNull String destPath) {
+                                      @NonNull String destPath,
+                                      int maxDepth) {
+        int depth = 0;
         ArrayList<String> paths = new ArrayList<>();
         Stack<FileSystemObject> pathsToScan = new Stack<>();
         try {
@@ -818,7 +826,7 @@ public final class CommandHelper {
                 }
                 // Add the path to be added
                 paths.add(MediaHelper.normalizeMediaPath(fso.getFullPath()));
-                if (fso instanceof Directory) {
+                if (fso instanceof Directory && (maxDepth == -1 || depth++ < maxDepth)) {
                     try {
                         List<FileSystemObject> files =
                                 CommandHelper.listFiles(context, fso.getFullPath(), null);
@@ -939,7 +947,15 @@ public final class CommandHelper {
             File parent = new File(dst).getParentFile();
             if ((parent != null && !VirtualMountPointConsole.isVirtualStorageResource(parent
                     .getAbsolutePath()))) {
-                recursiveScan(context, src, dst);
+                // scan source
+                MediaScannerConnection.scanFile(context, new String[]{
+                        MediaHelper.normalizeMediaPath(src)}, null, null);
+
+                // Recursive scan of the parent dir of the dest.  this mitigates a vfat
+                // issue where a file named "foo." will silently be renamed as "foo".
+                // This ensures that we report the correct filename to media scanner by
+                // re-reading the filename from the file system.
+                recursiveScan(context, null, parent.getAbsolutePath(), 1);
             }
         }
 
