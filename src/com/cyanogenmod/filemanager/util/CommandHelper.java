@@ -792,6 +792,22 @@ public final class CommandHelper {
         return result;
     }
 
+    private static void recursiveScan(@NonNull final Context context,
+                                      @Nullable String srcPath,
+                                      @NonNull String destPath) {
+        recursiveScan(context, srcPath, destPath, -1);
+    }
+
+    private static class FileSystemObjectWithDepth {
+        public FileSystemObject fso;
+        public int depth;
+
+        public FileSystemObjectWithDepth(FileSystemObject fso, int depth) {
+            this.fso = fso;
+            this.depth = depth;
+        }
+    }
+
     /**
      *
      * @param context
@@ -800,17 +816,19 @@ public final class CommandHelper {
      */
     private static void recursiveScan(@NonNull final Context context,
                                       @Nullable String srcPath,
-                                      @NonNull String destPath) {
+                                      @NonNull String destPath,
+                                      int maxDepth) {
         ArrayList<String> paths = new ArrayList<>();
-        Stack<FileSystemObject> pathsToScan = new Stack<>();
+        Stack<FileSystemObjectWithDepth> pathsToScan = new Stack<>();
         try {
             FileSystemObject fso = getFileInfo(context, destPath, null);
             if (fso == null) {
                 return;
             }
-            pathsToScan.push(fso);
+            pathsToScan.push(new FileSystemObjectWithDepth(fso, 0));
             while (!pathsToScan.isEmpty()) {
-                fso = pathsToScan.pop();
+                FileSystemObjectWithDepth fsowd = pathsToScan.pop();
+                fso = fsowd.fso;
                 if (srcPath != null) {
                     String src = fso.getFullPath().replace(destPath, srcPath);
                     // Add the path to be deleted
@@ -818,7 +836,7 @@ public final class CommandHelper {
                 }
                 // Add the path to be added
                 paths.add(MediaHelper.normalizeMediaPath(fso.getFullPath()));
-                if (fso instanceof Directory) {
+                if (fso instanceof Directory && (maxDepth == -1 || fsowd.depth < maxDepth)) {
                     try {
                         List<FileSystemObject> files =
                                 CommandHelper.listFiles(context, fso.getFullPath(), null);
@@ -830,7 +848,7 @@ public final class CommandHelper {
                             if (file instanceof ParentDirectory) {
                                 continue;
                             }
-                            pathsToScan.push(file);
+                            pathsToScan.push(new FileSystemObjectWithDepth(file, fsowd.depth + 1));
                         }
                     } catch (IOException
                             | ConsoleAllocException
@@ -939,7 +957,15 @@ public final class CommandHelper {
             File parent = new File(dst).getParentFile();
             if ((parent != null && !VirtualMountPointConsole.isVirtualStorageResource(parent
                     .getAbsolutePath()))) {
-                recursiveScan(context, src, dst);
+                // Scan source
+                MediaScannerConnection.scanFile(context, new String[] {
+                        MediaHelper.normalizeMediaPath(src) }, null, null);
+
+                // Recursive scan of the parent dir of the dest. This mitigates a VFAT
+                // issue where a file named "foo." will silently be renamed as "foo".
+                // This ensures that we report the correct filename to the media scanner
+                // by re-reading the filename from the file system.
+                recursiveScan(context, null, parent.getAbsolutePath(), 1);
             }
         }
 
