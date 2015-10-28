@@ -60,7 +60,7 @@
   <string name="msgs_file_not_found">Fitxategi edo karpeta ez da existitzen.</string>
   <string name="msgs_command_not_found">Eragiketa burutzeko komandoa ez da aurkitu edo definizio okerra du.</string>
   <string name="msgs_io_failed">Irakurtze/idazte akatsa.</string>
-  <string name="msgs_operation_timeout">Eragiketaren denbora muga gainditu da.</string>
+  <string name="msgs_operation_timeout">Eragiketaren denbora-muga gainditu da.</string>
   <string name="msgs_operation_failure">Eragiketak huts egin du.</string>
   <string name="msgs_console_alloc_failure">Barne akats bat egon da.</string>
   <string name="msgs_operation_can_not_be_cancelled">Eragiketa ezin da eten.</string>
@@ -231,7 +231,7 @@
   <string name="actions_menu_compress">Konprimitu</string>
   <string name="actions_menu_extract">Erauzi</string>
   <string name="actions_menu_delete">Ezabatu</string>
-  <string name="actions_menu_rename">Berrizendatu</string>
+  <string name="actions_menu_rename">Aldatu izena</string>
   <string name="actions_menu_create_copy">Kopia sortu</string>
   <string name="actions_menu_properties">Xehetasunak</string>
   <string name="actions_menu_add_to_bookmarks">Gehitu laster-marketara</string>
