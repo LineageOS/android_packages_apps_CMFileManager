@@ -41,4 +41,9 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> файли вибрано.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> файлів вибрано.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g>об\'єкт буде видалено.</item>
+    <item quantity="few"><xliff:g id="count">%1$d</xliff:g>об\'єкти буде видалено.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g>об\'єктів буде видалено.</item>
+  </plurals>
 </resources>
