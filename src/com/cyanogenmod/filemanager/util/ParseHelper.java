@@ -254,13 +254,14 @@ public final class ParseHelper {
      */
     public static DiskUsage toDiskUsage(final String src) throws ParseException {
 
-        // Filesystem             Size   Used   Free   Blksize
-        // /dev                   414M    48K   414M   4096
-        // /mnt/asec              414M     0K   414M   4096
-        // /mnt/secure/asec: Permission denied
+        // Filesystem            Size  Used Avail Use% Mounted on
+        // tmpfs                 1.3G   88K  1.3G   1% /dev
+        // tmpfs                 1.3G     0  1.3G   0% /mnt
+        // /dev/block/mmcblk0p14 1.2G  966M  337M  75% /system
+        // /dev/fuse              55G   18G   37G  34% /storage/emulated
 
         try {
-            final int fields = 5;
+            final int fields = 6;
 
             //Permission denied or invalid statistics
             if (src.indexOf(":") != -1) { //$NON-NLS-1$
@@ -279,7 +280,7 @@ public final class ParseHelper {
             }
 
             //Return the disk usage
-            return new DiskUsage(data[0], toBytes(data[1]), toBytes(data[2]), toBytes(data[3]));
+            return new DiskUsage(data[5], toBytes(data[1]), toBytes(data[2]), toBytes(data[3]));
 
         } catch (Exception e) {
             throw new ParseException(e.getMessage(), 0);
@@ -295,34 +296,38 @@ public final class ParseHelper {
      */
     public static MountPoint toMountPoint(final String src) throws ParseException {
 
-        // rootfs / rootfs ro,relatime 0 0
-        // tmpfs /dev tmpfs rw,nosuid,relatime,mode=755 0 0
-        // devpts /dev/pts devpts rw,relatime,mode=600 0 0
-        // /dev/block/vold/179:25 /mnt/emmc vfat rw,dirsync,nosuid,nodev,noexec,relatime,uid=1000, gid=1015,fmask=0702,dmask=0702,allow_utime=0020,codepage=cp437,iocharset=iso8859-1, shortname=mixed,utf8,errors=remount-ro 0 0
+        // rootfs on / type rootfs (ro,seclabel,relatime)
+        // tmpfs on /dev type tmpfs (rw,seclabel,nosuid,relatime,size=1460476k,nr_inodes=142719,mode=755)
+        // devpts on /dev/pts type devpts (rw,seclabel,relatime,mode=600)
+        // /dev/block/mmcblk0p14 on /system type ext4 (rw,seclabel,relatime,data=ordered)
 
         try {
 
             //Extract all the info
             String line = src;
-            int pos = line.lastIndexOf(" "); //$NON-NLS-1$
-            int pass = Integer.parseInt(line.substring(pos + 1));
-            line = line.substring(0, pos).trim();
-            pos = line.lastIndexOf(" "); //$NON-NLS-1$
-            int dump = Integer.parseInt(line.substring(pos + 1));
-            line = line.substring(0, pos).trim();
-            pos = line.indexOf(" "); //$NON-NLS-1$
+            // Device
+            int pos = line.indexOf(" "); //$NON-NLS-1$
             String device = line.substring(0, pos).trim();
             line = line.substring(pos).trim();
-            pos = line.lastIndexOf(" "); //$NON-NLS-1$
-            String options = line.substring(pos + 1).trim();
-            line = line.substring(0, pos).trim();
-            pos = line.lastIndexOf(" "); //$NON-NLS-1$
-            String type = line.substring(pos + 1).trim();
+            // Skip "on"
+            pos = line.indexOf(" "); //$NON-NLS-1$
+            line = line.substring(pos).trim();
+            // Mount point
+            pos = line.indexOf(" "); //$NON-NLS-1$
             String mountPoint = line.substring(0, pos).trim();
-
+            line = line.substring(pos).trim();
+            // Skip "type"
+            pos = line.indexOf(" "); //$NON-NLS-1$
+            line = line.substring(pos).trim();
+            // Type
+            pos = line.indexOf(" "); //$NON-NLS-1$
+            String type = line.substring(0, pos).trim();
+            line = line.substring(pos).trim();
+            // Options
+            String options = line.substring(1, line.length() - 1).trim();
 
             //Return the mount point
-            return new MountPoint(mountPoint, device, type, options, dump, pass, false, false);
+            return new MountPoint(mountPoint, device, type, options, /*dump*/0, /*pass*/0, false, false);
 
         } catch (Exception e) {
             throw new ParseException(e.getMessage(), 0);
