@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff5d4b2f_b91aab14",
+        "filename": "res/xml/command_list.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2015-11-18T02:49:46Z",
+      "side": 1,
+      "message": "busybox ps and /system/bin/ps have different output format the pipe command need to be changed accordingly.\n\nOther commands need to be verified too",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 159
+      },
+      "revId": "a7dcd04d1c406f774c87efd096e7cfaf9c19990e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
