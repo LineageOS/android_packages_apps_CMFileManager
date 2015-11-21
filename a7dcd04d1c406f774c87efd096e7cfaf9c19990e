@@ -22,6 +22,30 @@
       "revId": "a7dcd04d1c406f774c87efd096e7cfaf9c19990e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f4e5783_6bdc5518",
+        "filename": "res/xml/command_list.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 11114
+      },
+      "writtenOn": "2015-11-21T08:03:53Z",
+      "side": 1,
+      "message": "I didn\u0027t change that, just the path of grep. At the moment the problem is that awk is missing.",
+      "parentUuid": "ff5d4b2f_b91aab14",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 159
+      },
+      "revId": "a7dcd04d1c406f774c87efd096e7cfaf9c19990e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
