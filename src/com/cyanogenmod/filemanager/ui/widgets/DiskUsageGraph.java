@@ -77,6 +77,8 @@ public class DiskUsageGraph extends View {
         }
     };
 
+    private DiskUsage mLastDiskUsage;
+
     /**
      * Initialize the color assets into memory for direct access
      */
@@ -156,6 +158,13 @@ public class DiskUsageGraph extends View {
         this.setMeasuredDimension(size, size);
     }
 
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        // Redraw the disk usage graph when layout size changes
+        if (oldw != 0 && oldh != 0 && mLastDiskUsage != null) {
+            drawDiskUsage(mLastDiskUsage);
+        }
+    }
     /**
      * Method that sets the free disk space percentage after the widget change his color to advise
      * the user
@@ -191,6 +200,7 @@ public class DiskUsageGraph extends View {
         // Start drawing thread
         AnimationDrawingRunnable animationDrawingRunnable = new AnimationDrawingRunnable(diskUsage);
         mAnimationFuture = sThreadPool.submit(animationDrawingRunnable);
+        mLastDiskUsage = diskUsage;
 
     }
 
