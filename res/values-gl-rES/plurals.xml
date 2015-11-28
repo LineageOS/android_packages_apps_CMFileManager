@@ -17,27 +17,27 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> könyvtár</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> könyvtár</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> cartafol</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> cartafoles</item>
   </plurals>
   <plurals name="n_files">
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fájl</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> fájl</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ficheiro</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ficheiros</item>
   </plurals>
   <plurals name="search_found_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> találat</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> találat</item>
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> elemento atopado</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> elementos atopados</item>
   </plurals>
   <plurals name="selection_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> könyvtár kiválasztva.</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> könyvtár kiválasztva.</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> cartafol seleccionado.</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> cartafoles seleccionados.</item>
   </plurals>
   <plurals name="selection_files">
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fájl kiválasztva.</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> fájl kiválasztva.</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ficheiro seleccionado.</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ficheiros seleccionados.</item>
   </plurals>
   <plurals name="deleting_n_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> elem kerül törlésre.</item>
-    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> elem kerül törlésre.</item>
+    <item quantity="one">Eliminarase <xliff:g id="count">%1$d</xliff:g> elemento.</item>
+    <item quantity="other">Eliminaranse <xliff:g id="count">%1$d</xliff:g> elementos.</item>
   </plurals>
 </resources>
