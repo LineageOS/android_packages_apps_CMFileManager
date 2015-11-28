@@ -310,7 +310,7 @@
   <string name="pref_display_thumbs">プレビュー</string>
   <string name="pref_display_thumbs_summary">アプリ、音楽ファイル、写真、動画のプレビュー画像を表示する</string>
   <string name="pref_use_flinger">スワイプジェスチャーを使用</string>
-  <string name="pref_use_flinger_summary">ファイルまたはフォルダの削除に、左から右へのジェスチャーの検出を使用する</string>
+  <string name="pref_use_flinger_summary">ファイルまたはフォルダの削除に左から右へのジェスチャーの検出を使用する</string>
   <string name="pref_general_advanced_settings_category">詳細設定</string>
   <string name="pref_access_mode">アクセスモード</string>
   <string name="pref_access_mode_safe">セーフモード</string>
