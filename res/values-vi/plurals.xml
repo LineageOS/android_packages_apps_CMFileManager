@@ -19,4 +19,19 @@
   <plurals name="n_folders">
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> thư mục</item>
   </plurals>
+  <plurals name="n_files">
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> tập tin</item>
+  </plurals>
+  <plurals name="search_found_items">
+    <item quantity="other">Đã tìm thấy <xliff:g id="count">%d</xliff:g> mục</item>
+  </plurals>
+  <plurals name="selection_folders">
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> thư mục đã được chọn.</item>
+  </plurals>
+  <plurals name="selection_files">
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> tập tin đã được chọn.</item>
+  </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> mục sắp bị xoá.</item>
+  </plurals>
 </resources>
