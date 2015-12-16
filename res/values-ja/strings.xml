@@ -38,7 +38,7 @@
   <string name="search_result_name">検索: <xliff:g id="terms">%1$s</xliff:g></string>
   <string name="loading_message">読み込み中\u2026</string>
   <string name="cancelled_message">キャンセルしました。</string>
-  <string name="error_message">エラー。</string>
+  <string name="error_message">エラーが発生しました。</string>
   <string name="copy_text_cd">タップしてテキストをクリップボードにコピー</string>
   <string name="copy_text_msg">テキストをクリップボードにコピーしました</string>
   <string name="warning_title">警告</string>

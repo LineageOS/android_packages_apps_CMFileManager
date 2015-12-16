@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Nustatykite pradinį aplanką.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Pašalinti žymę.</string>
   <string name="bookmarks_msgs_add_success">Žymė sėkmingai pridėta.</string>
+  <string name="bookmarks_msgs_add_exists">Žymė jau egzistuoja.</string>
   <string name="initial_directory_dialog_title">Pagrindinis aplankas</string>
   <string name="initial_directory_label">Pasirinkite pradinį aplanką:</string>
   <string name="initial_directory_relative_msg">Susiję keliai neleidžiami.</string>
