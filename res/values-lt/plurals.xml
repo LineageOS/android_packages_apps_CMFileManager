@@ -41,4 +41,9 @@
     <item quantity="few">Pasirinkti <xliff:g id="files">%1$d</xliff:g> failai.</item>
     <item quantity="other">Pasirinkta <xliff:g id="files">%1$d</xliff:g> failų.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> elementas bus pašalintas.</item>
+    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> elementai bus pašalinti.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> elementų bus pašalinta.</item>
+  </plurals>
 </resources>
