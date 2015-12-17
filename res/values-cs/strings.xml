@@ -42,7 +42,7 @@
   <string name="copy_text_cd">Dotykem zkopírujete text do schránky</string>
   <string name="copy_text_msg">Text zkopírován do schránky</string>
   <string name="warning_title">Varování</string>
-  <string name="error_title">Zjištěna chyba</string>
+  <string name="error_title">Chyba</string>
   <string name="confirm_operation">Potvrdit operaci</string>
   <string name="confirm_overwrite">Potvrdit přepsání</string>
   <string name="confirm_deletion">Potvrdit smazání</string>
@@ -67,7 +67,7 @@
   <string name="msgs_read_only_filesystem">Souborový systém je v režimu pouze ke čtení. Před provedením příkazu připojte souborový systém pro zápis.</string>
   <string name="msgs_illegal_argument">Neplatný argument. Provádění operace zrušeno.</string>
   <string name="msgs_unresolved_inconsistencies">Operace není povolena, protože by mohla způsobit poškození systému.</string>
-  <string name="msgs_operation_not_allowed_in_current_directory">Tato operace není pro tuto složku povolena.</string>
+  <string name="msgs_operation_not_allowed_in_current_directory">Cílová složka nemůže být podsložkou zdrojové nebo být stejná jako zdroj.</string>
   <string name="msgs_push_again_to_exit">Pro ukončení stiskněte znovu.</string>
   <string name="msgs_not_registered_app">K tomuto typu souborů není přiřazena žádná aplikace.</string>
   <string name="msgs_overwrite_files">Některý ze souborů již ve složce existuje.\n\nChcete tyto soubory přepsat?</string>
@@ -105,12 +105,12 @@
   <string name="filesystem_info_warning_title">Žádné informace</string>
   <string name="filesystem_info_warning_msg">Nejsou dostupné žádné informace o systému souborů</string>
   <string name="filesystem_info_cant_be_mounted_msg">Souborový systém nemohl být připojen/odpojen.</string>
-  <string name="filesystem_info_mount_not_allowed_msg">Připojování souborových systému není povoleno v bezpečném režimu. Klepnutím se přepnete do Režimu bez omezení.</string>
+  <string name="filesystem_info_mount_not_allowed_msg">Připojování systémových složek není povoleno v Bezpečném režimu. Klepnutím se přepnete do Režimu bez omezení.</string>
   <string name="filesystem_info_mount_failed_msg">Připojení souborového systému se nezdařilo. Některé souborové systémy (např. SD karty), nemohou být připojeny/odpojeny, protože mohou být přepnuty do režimu pouze ke čtení.</string>
   <string name="filesystem_info_dialog_title">Informace o souborovém systému</string>
   <string name="filesystem_info_dialog_tab_info">Informace</string>
   <string name="filesystem_info_dialog_tab_disk_usage">Využití disku</string>
-  <string name="filesystem_info_dialog_status">Stav:</string>
+  <string name="filesystem_info_dialog_status">Připojeno:</string>
   <string name="filesystem_info_dialog_mount_point">Přípojný bod:</string>
   <string name="filesystem_info_dialog_device">Zařízení:</string>
   <string name="filesystem_info_dialog_type">Typ:</string>
@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Nastavte výchozí složku.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Odebrat ze záložek</string>
   <string name="bookmarks_msgs_add_success">Záložka byla úspěšně přidána.</string>
+  <string name="bookmarks_msgs_add_exists">Záložka již existuje.</string>
   <string name="initial_directory_dialog_title">Výchozí složka</string>
   <string name="initial_directory_label">Vyberte výchozí složku:</string>
   <string name="initial_directory_relative_msg">Relativní cesty nejsou povoleny.</string>
@@ -243,6 +244,7 @@
   <string name="input_name_dialog_label">Název:</string>
   <string name="input_name_dialog_message_empty_name">Název nemůže být prázdný.</string>
   <string name="input_name_dialog_message_invalid_path_name">Chybné jméno. Znaky \u201a<xliff:g id="invalid_characters">%1$s</xliff:g>\u2018 nejsou povoleny.</string>
+  <string name="input_name_dialog_message_invalid_name_length">Dosažen maximální limit počtu znaků.</string>
   <string name="input_name_dialog_message_invalid_name">Chybné jméno. Jména \u201a.\u2018 a \u201a..\u2018 nejsou povolena.</string>
   <string name="input_name_dialog_message_name_exists">Tento název už existuje.</string>
   <string name="associations_dialog_title">Asociace</string>
@@ -296,7 +298,6 @@
   <string name="pref_editor">Nastavení editoru</string>
   <string name="pref_themes">Motivy</string>
   <string name="pref_about">O programu\u2026</string>
-  <string name="pref_about_summary">Správce souborů v<xliff:g id="version">%1$s</xliff:g>\nCopyright \u00A9 2012–2014 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">Obecné</string>
   <string name="pref_case_sensitive_sort">Rozlišit velká a malá písmena při hledání.</string>
   <string name="pref_case_sensitive_sort_summary">Brát v potaz velikost písmen při prohlížení nebo třídění vyhledaných položek</string>
@@ -336,7 +337,7 @@
   <string name="pref_secure_storage_category">Bezpečné úložiště</string>
   <string name="pref_secure_storage_delayed_sync_title">Zpožděná synchronizace</string>
   <string name="pref_secure_storage_delayed_sync_summary">Synchronizace zabezpečeného souborového systému je náročná operace. Povolením této možnosti docílíte lepší odezvu po každé operaci, po které se provede synchronizace pokud se souborový systém právě nepoužívá (žádná aktivita). Na druhou stranu, pokud není systém po každé operaci synchronizován, může dojít ke ztrátě dat, která ještě nejsou zapsána při pádu aplikace.</string>
-  <string name="pref_secure_storage_reset_password_title">Obnovit heslo</string>
+  <string name="pref_secure_storage_reset_password_title">Změnit heslo</string>
   <string name="pref_secure_storage_delete_storage_title">Smazat úložiště</string>
   <string name="pref_editor_behaviour_category">Chování</string>
   <string name="pref_no_suggestions">Žádné návrhy</string>
@@ -346,7 +347,7 @@
   <string name="pref_hexdump_desc">Při otevření binárního souboru vytvořit jeho šestnáctkovou podobu a tu otevřít v prohlížečí</string>
   <string name="pref_editor_syntax_highlight_category">Zvýraznění syntaxe</string>
   <string name="pref_syntax_highlight">Zvýraznění syntaxe</string>
-  <string name="pref_syntax_highlight_desc">Zvýraznit syntaxi souboru v editoru (pouze v případě, pokud je pro tento typ souboru dostupný zvýrazňovací filtr)</string>
+  <string name="pref_syntax_highlight_desc">Zvýrazňovat syntaxi souboru zobrazeného v editoru (jen tehdy, když je zvýraznění syntaxe pro tento formát souboru k dispozici)</string>
   <string name="pref_syntax_highlight_color_scheme">Barevné schéma</string>
   <string name="pref_syntax_highlight_color_scheme_desc">Zvolte barevné schéma zvýraznění syntaxe</string>
   <string name="pref_syntax_sh_use_theme_default">Použít výchozí motiv</string>
@@ -374,10 +375,10 @@
   <string name="ash_keyword">Klíčové slovo</string>
   <string name="ash_quoted_string">Řetězec v uvozovkách</string>
   <string name="ash_variable">Proměnná</string>
-  <string name="secure_storage_unlock_title">Odemknout úložiště</string>
-  <string name="secure_storage_create_title">Vytvořit úložiště</string>
+  <string name="secure_storage_unlock_title">Odemknout zabezpečené úložiště</string>
+  <string name="secure_storage_create_title">Vytvořit zabezpečené úložiště</string>
   <string name="secure_storage_reset_title">Obnovit heslo</string>
-  <string name="secure_storage_delete_title">Smazat úložiště</string>
+  <string name="secure_storage_delete_title">Odstranit zabezpečené úložiště</string>
   <string name="secure_storage_unlock_key_prompt_msg">Zdaejte heslo pro odemčení zabezpečeného úložiště souborového systému.</string>
   <string name="secure_storage_unlock_key_new_msg">Zdaejte heslo pro ochranu zabezpečeného úložiště souborového systému.</string>
   <string name="secure_storage_unlock_key_reset_msg">Pro obnovení zabezpečeného souborového úložiště zadejte stávající a nové heslo.</string>
@@ -393,6 +394,7 @@
   <string name="secure_storage_unlock_failed">Nelze odemknout úložiště</string>
   <string name="secure_storage_unlock_validation_length">Heslo musí obsahovat alespoň <xliff:g id="characters">%1$d</xliff:g> znaků.</string>
   <string name="secure_storage_unlock_validation_equals">Hesla se neshodují.</string>
+  <string name="secure_storage_open_file_warning">Daný soubor bude zkopírován na dočasné místo mimo šifrované úložiště. Po 1 hodině bude z toho umístění odstraněn.</string>
   <string name="print_unsupported_document">Nepodporovaný formát dokumentu</string>
   <string name="print_unsupported_image">Nepodporovaný formát obrázku</string>
   <string name="print_document_header">Dokument: <xliff:g id="document_name">%1$s</xliff:g></string>
@@ -401,4 +403,5 @@
   <string name="changelog_title">Seznam změn</string>
   <string name="welcome_title">Vítejte</string>
   <string name="welcome_msg">Vítejte ve správci souborů CyanogenMod.\n\nTato aplikace umožňuje procházet souborový systém a dělat operace, které mohou poškodit vaše zařízení. K zabránění škod bude aplikace spuštěna v Bezpečném režimu.\n\nMůžete zapnout pokročilý režim s plným oprávněním v Nastavení. Tím přeberete zodpovědnost za operace, které budete s aplikací provádět.\n\nTým CyanogenMod.</string>
+  <string name="activity_not_found_exception">Pro tento soubor nelze najít aplikaci</string>
 </resources>

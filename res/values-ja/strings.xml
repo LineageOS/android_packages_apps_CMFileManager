@@ -42,7 +42,7 @@
   <string name="copy_text_cd">タップしてテキストをクリップボードにコピー</string>
   <string name="copy_text_msg">テキストをクリップボードにコピーしました</string>
   <string name="warning_title">警告</string>
-  <string name="error_title">エラーを検出しました</string>
+  <string name="error_title">エラー</string>
   <string name="confirm_operation">操作の確認</string>
   <string name="confirm_overwrite">上書きの確認</string>
   <string name="confirm_deletion">削除の確認</string>
@@ -67,7 +67,7 @@
   <string name="msgs_read_only_filesystem">ファイルシステムは読み取り専用です。この操作を試みる前にファイルシステムを読み書き可能な状態でマウントしてください。</string>
   <string name="msgs_illegal_argument">不正な引数です。呼び出しを完了できませんでした。</string>
   <string name="msgs_unresolved_inconsistencies">矛盾が生じるため、その操作は許可されません。</string>
-  <string name="msgs_operation_not_allowed_in_current_directory">現在のフォルダではその操作は許可されていません。\n\n宛先のフォルダはソースのサブフォルダまたはソースと同じにはできません。</string>
+  <string name="msgs_operation_not_allowed_in_current_directory">宛先のフォルダは元のフォルダのサブフォルダまたは元のフォルダと同じフォルダにはできません。</string>
   <string name="msgs_push_again_to_exit">もう一度押すと終了します。</string>
   <string name="msgs_not_registered_app">選択されたファイル形式を扱うためのアプリが登録されていません。</string>
   <string name="msgs_overwrite_files">一部のファイルは既に宛先のフォルダに存在しています。\n\n上書きしますか？</string>
@@ -105,12 +105,12 @@
   <string name="filesystem_info_warning_title">情報がありません</string>
   <string name="filesystem_info_warning_msg">このファイルシステムには利用可能な情報がありません。</string>
   <string name="filesystem_info_cant_be_mounted_msg">このファイルシステムはマウント/マウント解除できません。</string>
-  <string name="filesystem_info_mount_not_allowed_msg">ファイルシステムのマウント操作はセーフモードでは許可されていません。タップするとルートアクセスモードに変更します。</string>
+  <string name="filesystem_info_mount_not_allowed_msg">セーフモードではファイルシステムのマウント操作は許可されません。タップしてルートアクセスモードに変更します。</string>
   <string name="filesystem_info_mount_failed_msg">ファイルシステムのマウント操作ができませんでした。SDカードのような一部のファイルシステムは読み取り専用のファイルシステムとして内蔵されているため、マウント/マウント解除することはできません。</string>
   <string name="filesystem_info_dialog_title">ファイルシステム情報</string>
   <string name="filesystem_info_dialog_tab_info">情報</string>
   <string name="filesystem_info_dialog_tab_disk_usage">ディスク使用量</string>
-  <string name="filesystem_info_dialog_status">状態:</string>
+  <string name="filesystem_info_dialog_status">マウント済み:</string>
   <string name="filesystem_info_dialog_mount_point">マウントポイント:</string>
   <string name="filesystem_info_dialog_device">端末:</string>
   <string name="filesystem_info_dialog_type">形式:</string>
@@ -149,7 +149,7 @@
   <string name="fso_delete_nomedia_non_empty_body">このディレクトリは空でない.nomediaファイルを含んでいます。\n\n削除しますか？</string>
   <string name="history">履歴</string>
   <string name="msgs_history_empty">履歴はありません。</string>
-  <string name="msgs_history_unknown">不明な履歴項目です。</string>
+  <string name="msgs_history_unknown">不明な履歴アイテムです。</string>
   <string name="search">検索結果</string>
   <string name="search_hint">検索を入力</string>
   <string name="search_voice_hint">お話しください</string>
@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">初期フォルダを設定</string>
   <string name="bookmarks_button_remove_bookmark_cd">ブックマークを削除</string>
   <string name="bookmarks_msgs_add_success">ブックマークへの追加が完了しました。</string>
+  <string name="bookmarks_msgs_add_exists">そのブックマークは既に存在します。</string>
   <string name="initial_directory_dialog_title">初期フォルダ</string>
   <string name="initial_directory_label">初期フォルダを選択してください:</string>
   <string name="initial_directory_relative_msg">相対パスは使用できません。</string>
@@ -244,6 +245,7 @@
   <string name="input_name_dialog_label">名前:</string>
   <string name="input_name_dialog_message_empty_name">名前は空にできません。</string>
   <string name="input_name_dialog_message_invalid_path_name">無効な名前です。｢<xliff:g id="invalid_characters">%1$s</xliff:g>｣の文字は使用できません。</string>
+  <string name="input_name_dialog_message_invalid_name_length">文字数の上限に達しました。</string>
   <string name="input_name_dialog_message_invalid_name">無効な名前です。｢.｣と｢..｣の名前は使用できません。</string>
   <string name="input_name_dialog_message_name_exists">この名前は既に存在しています。</string>
   <string name="associations_dialog_title">連携</string>
@@ -297,7 +299,6 @@
   <string name="pref_editor">エディタオプション</string>
   <string name="pref_themes">テーマ</string>
   <string name="pref_about">情報</string>
-  <string name="pref_about_summary">ファイルマネージャー v<xliff:g id="version">%1$s</xliff:g>\nCopyright \u00A9 2012–2014 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">全般</string>
   <string name="pref_case_sensitive_sort">大文字と小文字を区別</string>
   <string name="pref_case_sensitive_sort_summary">検索結果の並べ替えや移動で大文字と小文字を区別する</string>
@@ -309,7 +310,7 @@
   <string name="pref_display_thumbs">プレビュー</string>
   <string name="pref_display_thumbs_summary">アプリ、音楽ファイル、写真、動画のプレビュー画像を表示する</string>
   <string name="pref_use_flinger">スワイプジェスチャーを使用</string>
-  <string name="pref_use_flinger_summary">ファイルまたはフォルダの削除に、左から右へのジェスチャーの検出を使用する</string>
+  <string name="pref_use_flinger_summary">ファイルまたはフォルダの削除に左から右へのジェスチャーの検出を使用する</string>
   <string name="pref_general_advanced_settings_category">詳細設定</string>
   <string name="pref_access_mode">アクセスモード</string>
   <string name="pref_access_mode_safe">セーフモード</string>
@@ -337,7 +338,7 @@
   <string name="pref_secure_storage_category">セキュアストレージ</string>
   <string name="pref_secure_storage_delayed_sync_title">遅延同期</string>
   <string name="pref_secure_storage_delayed_sync_summary">セキュアファイルシステムの同期は負荷の高い動作です。このオプションを有効にすると、ファイルシステムが未使用の状態のときに同期を実行することによってあらゆる操作の後の反応を高速化できますが、アプリがクラッシュした場合に同期されていない保留中の情報が失われることを犠牲にします。</string>
-  <string name="pref_secure_storage_reset_password_title">パスワードをリセット</string>
+  <string name="pref_secure_storage_reset_password_title">パスワードを変更</string>
   <string name="pref_secure_storage_delete_storage_title">ストレージを削除</string>
   <string name="pref_editor_behaviour_category">動作</string>
   <string name="pref_no_suggestions">変換候補を表示しない</string>
@@ -347,12 +348,12 @@
   <string name="pref_hexdump_desc">バイナリファイルは16進ダンプを生成して16進ビューアで開く</string>
   <string name="pref_editor_syntax_highlight_category">シンタックスハイライト</string>
   <string name="pref_syntax_highlight">シンタックスハイライト</string>
-  <string name="pref_syntax_highlight_desc">エディタに表示されているファイルの構文をハイライト表示する（シンタックスハイライトプロセッサが利用可能なファイルタイプのみ）</string>
+  <string name="pref_syntax_highlight_desc">エディタに表示するファイルの構文をハイライト表示する（そのファイル形式に対応しているシンタックスハイライトプロセッサが利用可能な場合のみ）</string>
   <string name="pref_syntax_highlight_color_scheme">配色</string>
   <string name="pref_syntax_highlight_color_scheme_desc">シンタックスハイライトの配色を選択する</string>
   <string name="pref_syntax_sh_use_theme_default">テーマのデフォルトを使用</string>
   <string name="pref_syntax_sh_use_theme_default_desc">現在のテーマのデフォルトのシンタックスハイライトを使用する</string>
-  <string name="pref_editor_sh_item_category">項目</string>
+  <string name="pref_editor_sh_item_category">アイテム</string>
   <string name="pref_themes_selection_category">テーマ</string>
   <string name="pref_themes_set_theme">テーマを設定</string>
   <string name="pref_themes_confirmation">テーマの適用が完了しました。</string>
@@ -375,10 +376,10 @@
   <string name="ash_keyword">キーワード</string>
   <string name="ash_quoted_string">引用文字列</string>
   <string name="ash_variable">変数</string>
-  <string name="secure_storage_unlock_title">ストレージをロック解除</string>
-  <string name="secure_storage_create_title">ストレージを作成</string>
+  <string name="secure_storage_unlock_title">セキュアストレージをロック解除</string>
+  <string name="secure_storage_create_title">セキュアストレージを作成</string>
   <string name="secure_storage_reset_title">パスワードをリセット</string>
-  <string name="secure_storage_delete_title">ストレージを削除</string>
+  <string name="secure_storage_delete_title">セキュアストレージを削除</string>
   <string name="secure_storage_unlock_key_prompt_msg">セキュアストレージファイルシステムのロックを解除するには、パスワードを入力してください。</string>
   <string name="secure_storage_unlock_key_new_msg">セキュアストレージファイルシステムを保護するには、パスワードを入力してください。</string>
   <string name="secure_storage_unlock_key_reset_msg">セキュアストレージファイルシステムをリセットするには、現在のパスワードと新しいパスワードを入力してください。</string>
@@ -394,6 +395,7 @@
   <string name="secure_storage_unlock_failed">ストレージのロックを解除できません</string>
   <string name="secure_storage_unlock_validation_length">パスワードは最低<xliff:g id="characters">%1$d</xliff:g>文字以上である必要があります。</string>
   <string name="secure_storage_unlock_validation_equals">パスワードが一致しません。</string>
+  <string name="secure_storage_open_file_warning">ファイルを一時的に暗号化されていない場所にコピーします。1時間後に消去されます。</string>
   <string name="print_unsupported_document">サポートされていないドキュメント形式</string>
   <string name="print_unsupported_image">サポートされていない画像形式</string>
   <string name="print_document_header">ドキュメント: <xliff:g id="document_name">%1$s</xliff:g></string>
@@ -402,4 +404,5 @@
   <string name="changelog_title">更新履歴</string>
   <string name="welcome_title">ようこそ</string>
   <string name="welcome_msg">CyanogenModファイルマネージャーへようこそ。\n\nこのアプリはシステムファイルの操作や端末を破壊する可能性のある操作を許可します。損害を防ぐために、アプリは安全で低い権限を持つモードで開始します。\n\nすべての権限を持つ上級者向けのモードは設定からアクセスできます。操作がシステムを破壊しないことを確認するのは個人の責任です。\n\nCyanogenModチーム</string>
+  <string name="activity_not_found_exception">このファイルを開くためのアプリが見つかりませんでした</string>
 </resources>

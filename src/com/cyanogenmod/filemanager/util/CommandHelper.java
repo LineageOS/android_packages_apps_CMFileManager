@@ -895,7 +895,7 @@ public final class CommandHelper {
         Console cDst = ensureConsoleForFile(context, console, dst);
         boolean ret = true;
 
-        if (cSrc.equals(cDst)) {
+        if (cSrc.equals(cDst) && !FileHelper.isSamePath(src, dst)) {
             // Is safe to use the same console
             MoveExecutable executable =
                     cSrc.getExecutableFactory().newCreator().createMoveExecutable(src, dst);
@@ -978,7 +978,7 @@ public final class CommandHelper {
         Console cSrc = ensureConsoleForFile(context, console, src);
         Console cDst = ensureConsoleForFile(context, console, dst);
         boolean ret = true;
-        if (cSrc.equals(cDst)) {
+        if (cSrc.equals(cDst) && !FileHelper.isSamePath(src, dst)) {
             // Is safe to use the same console
             CopyExecutable executable =
                     cSrc.getExecutableFactory().newCreator().createCopyExecutable(src, dst);

@@ -327,6 +327,8 @@ public class NavigationActivity extends Activity
                         FileManagerSettings.INTENT_MOUNT_STATUS_CHANGED) == 0 ||
                             intent.getAction().equals(Intent.ACTION_MEDIA_MOUNTED) ||
                             intent.getAction().equals(Intent.ACTION_MEDIA_UNMOUNTED)) {
+                    MountPointHelper.refreshMountPoints(
+                            FileManagerApplication.getBackgroundConsole());
                     onRequestBookmarksRefresh();
                     removeUnmountedHistory();
                     removeUnmountedSelection();
@@ -476,6 +478,8 @@ public class NavigationActivity extends Activity
 
     private boolean mNeedsEasyMode = false;
 
+    private boolean mDisplayingSearchResults;
+
     /**
      * @hide
      */
@@ -506,6 +510,7 @@ public class NavigationActivity extends Activity
         filter.addAction(Intent.ACTION_DATE_CHANGED);
         filter.addAction(Intent.ACTION_TIME_CHANGED);
         filter.addAction(Intent.ACTION_TIMEZONE_CHANGED);
+        filter.addAction(Intent.ACTION_LOCALE_CHANGED);
         filter.addAction(FileManagerSettings.INTENT_MOUNT_STATUS_CHANGED);
         registerReceiver(this.mNotificationReceiver, filter);
 
@@ -627,10 +632,6 @@ public class NavigationActivity extends Activity
     protected void onStart() {
         super.onStart();
 
-        if (mSearchView.getVisibility() == View.VISIBLE) {
-            closeSearch();
-        }
-
         // Check restrictions
         if (!FileManagerApplication.checkRestrictSecondaryUsersAccess(this, mChRooted)) {
             return;
@@ -641,15 +642,15 @@ public class NavigationActivity extends Activity
         if (curDir != null) {
             VirtualMountPointConsole vc = VirtualMountPointConsole.getVirtualConsoleForPath(
                     mNavigationViews[mCurrentNavigationView].getCurrentDir());
-            getCurrentNavigationView().refresh(true);
             if (vc != null && !vc.isMounted()) {
                 onRequestBookmarksRefresh();
                 removeUnmountedHistory();
                 removeUnmountedSelection();
+            }
 
-                Intent intent = new Intent();
-                intent.putExtra(EXTRA_ADD_TO_HISTORY, false);
-                initNavigation(NavigationActivity.this.mCurrentNavigationView, false, intent);
+            if (mDisplayingSearchResults) {
+                mDisplayingSearchResults = false;
+                closeSearch();
             }
             getCurrentNavigationView().refresh(true);
         }
@@ -777,7 +778,7 @@ public class NavigationActivity extends Activity
             mDrawerLayout.openDrawer(Gravity.START);
 
             AlertDialog dialog = DialogHelper.createAlertDialog(this,
-                    R.drawable.ic_launcher, R.string.welcome_title,
+                    R.mipmap.ic_launcher_filemanager, R.string.welcome_title,
                     getString(R.string.welcome_msg), false);
             DialogHelper.delegateDialogShow(this, dialog);
 
@@ -1066,7 +1067,7 @@ public class NavigationActivity extends Activity
         Drawable action = null;
         String actionCd = null;
         if (bookmark.mType.compareTo(BOOKMARK_TYPE.HOME) == 0) {
-            action = iconholder.getDrawable("ic_config_drawable"); //$NON-NLS-1$
+            action = iconholder.getDrawable("ic_edit_home_bookmark_drawable"); //$NON-NLS-1$
             actionCd = getApplicationContext().getString(
                     R.string.bookmarks_button_config_cd);
         }
@@ -1578,14 +1579,16 @@ public class NavigationActivity extends Activity
      * @hide
      */
     void initNavigation(final int viewId, final boolean restore, final Intent intent) {
+        if (mDisplayingSearchResults || restore) {
+            return;
+        }
+
         final NavigationView navigationView = getNavigationView(viewId);
         this.mHandler.post(new Runnable() {
             @Override
             public void run() {
                 //Is necessary navigate?
-                if (!restore) {
-                    applyInitialDir(navigationView, intent);
-                }
+                applyInitialDir(navigationView, intent);
             }
         });
     }
@@ -1608,14 +1611,25 @@ public class NavigationActivity extends Activity
         // Check if request navigation to directory (use as default), and
         // ensure chrooted and absolute path
         String navigateTo = intent.getStringExtra(EXTRA_NAVIGATE_TO);
+        String intentAction = intent.getAction();
         if (navigateTo != null && navigateTo.length() > 0) {
             initialDir = navigateTo;
+        } else if (intentAction != null && intentAction.equals(Intent.ACTION_VIEW)) {
+            Uri data = intent.getData();
+            if (data != null && (FileHelper.FILE_URI_SCHEME.equals(data.getScheme())
+                    || FileHelper.FOLDER_URI_SCHEME.equals(data.getScheme())
+                    || FileHelper.DIRECTORY_URI_SCHEME.equals(data.getScheme()))) {
+                File path = new File(data.getPath());
+                if (path.isDirectory()) {
+                    initialDir = path.getAbsolutePath();
+                }
+            }
         }
 
         // Add to history
         final boolean addToHistory = intent.getBooleanExtra(EXTRA_ADD_TO_HISTORY, true);
 
-        // We cannot navigate to a secure console if is unmount, go to root in that case
+        // We cannot navigate to a secure console if it is unmounted. So go to root in that case
         VirtualConsole vc = VirtualMountPointConsole.getVirtualConsoleForPath(initialDir);
         if (vc != null && vc instanceof SecureConsole && !((SecureConsole) vc).isMounted()) {
             initialDir = FileHelper.ROOT_DIRECTORY;
@@ -1628,6 +1642,14 @@ public class NavigationActivity extends Activity
                         StorageHelper.getStorageVolumes(this, false);
                 if (volumes != null && volumes.length > 0) {
                     initialDir = volumes[0].getPath();
+                    int count = volumes.length;
+                    for (int i = 0; i < count; i++) {
+                        StorageVolume volume = volumes[i];
+                        if (Environment.MEDIA_MOUNTED.equalsIgnoreCase(volume.getState())) {
+                            initialDir = volume.getPath();
+                            break;
+                        }
+                    }
                     //Ensure that initial directory is an absolute directory
                     initialDir = FileHelper.getAbsPath(initialDir);
                 } else {
@@ -1917,6 +1939,7 @@ public class NavigationActivity extends Activity
                                 //Goto to new directory
                                 getCurrentNavigationView().open(fso, searchInfo);
                                 performHideEasyMode();
+                                mDisplayingSearchResults = true;
                             }
                         }
                     } else if (resultCode == RESULT_CANCELED) {
@@ -1975,6 +1998,11 @@ public class NavigationActivity extends Activity
         if (clearSelection) {
             this.getCurrentNavigationView().onDeselectAll();
         }
+    }
+
+    @Override
+    public void onClearCache(Object o) {
+        getCurrentNavigationView().onClearCache(o);
     }
 
     /**

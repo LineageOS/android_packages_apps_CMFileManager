@@ -42,7 +42,7 @@
   <string name="copy_text_cd">Додирни да копираш текст у привремену меморију</string>
   <string name="copy_text_msg">Текст је копиран у привремену меморију</string>
   <string name="warning_title">Упозорење</string>
-  <string name="error_title">Пронађена грешка</string>
+  <string name="error_title">Грешка</string>
   <string name="confirm_operation">Потврди операцију</string>
   <string name="confirm_overwrite">Потврди преписивање</string>
   <string name="confirm_deletion">Потврди брисање</string>
@@ -67,7 +67,7 @@
   <string name="msgs_read_only_filesystem">Систем фајлова је само за читање. Покушај да га монтираш за читање и писање пре него што покушаш ову операцију.</string>
   <string name="msgs_illegal_argument">Нелегалан аргумент. Позив није успео.</string>
   <string name="msgs_unresolved_inconsistencies">Операција није дозвољена јер би довела до неконзистенција.</string>
-  <string name="msgs_operation_not_allowed_in_current_directory">Операција није дозвољена у текућем фолдеру.\n\nЦиљни фолдер не може бити подфолдер изворног или исти као изворни.</string>
+  <string name="msgs_operation_not_allowed_in_current_directory">Одредишни фолдер неможе бити подфолдер извора или бити исти као и извор.</string>
   <string name="msgs_push_again_to_exit">Притисни опет за излаз.</string>
   <string name="msgs_not_registered_app">Нема регистроване апликације за обраду типа изабраног фајла.</string>
   <string name="msgs_overwrite_files">Неки фајлови већ постоје у циљном фолдеру.\n\nПрепиши их?</string>
@@ -105,12 +105,13 @@
   <string name="filesystem_info_warning_title">Нема информација</string>
   <string name="filesystem_info_warning_msg">Нема доступних информација за овај систем фајлова.</string>
   <string name="filesystem_info_cant_be_mounted_msg">Систем фајлова се не може монтирати/демонтирати.</string>
-  <string name="filesystem_info_mount_not_allowed_msg">Операције монтирања система фајлова нису дозвољене у сигурном режиму. Додирни да пређеш у режим Root-а.</string>
+  <string name="filesystem_info_mount_not_allowed_msg">Операције монтирања система фајлова нису дозвољене
+    у сигурном режиму. Тапните да пређете у режим Root-а.</string>
   <string name="filesystem_info_mount_failed_msg">Операција монтирања система фајлова није успела. Неки системи фајлова, као SD картице, не могу да се монтирају/демонтирају јер су уграђени као системи фајлова само за читање.</string>
   <string name="filesystem_info_dialog_title">Информације о систему фајлова</string>
   <string name="filesystem_info_dialog_tab_info">Инфо</string>
   <string name="filesystem_info_dialog_tab_disk_usage">Коришћење диска</string>
-  <string name="filesystem_info_dialog_status">Статус:</string>
+  <string name="filesystem_info_dialog_status">Подигнут:</string>
   <string name="filesystem_info_dialog_mount_point">Тачка монтирања:</string>
   <string name="filesystem_info_dialog_device">Уређај:</string>
   <string name="filesystem_info_dialog_type">Тип:</string>
@@ -182,6 +183,7 @@
   <string name="bookmarks_button_config_cd">Подеси почетни фолдер.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Избриши обележивач.</string>
   <string name="bookmarks_msgs_add_success">Обележивач је успешно додат.</string>
+  <string name="bookmarks_msgs_add_exists">Маркер већ постоји.</string>
   <string name="initial_directory_dialog_title">Почетни фолдер</string>
   <string name="initial_directory_label">Изабери почетни фолдер:</string>
   <string name="initial_directory_relative_msg">Релативне путање нису дозвољене.</string>
@@ -245,6 +247,7 @@
   <string name="input_name_dialog_label">Име:</string>
   <string name="input_name_dialog_message_empty_name">Име не може да буде празно.</string>
   <string name="input_name_dialog_message_invalid_path_name">Лоше име. Карактери \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' нису дозвољени.</string>
+  <string name="input_name_dialog_message_invalid_name_length">Максималан број карактера је достигнут.</string>
   <string name="input_name_dialog_message_invalid_name">Лоше име. Имена \'.\' и \'..\' нису дозвољена.</string>
   <string name="input_name_dialog_message_name_exists">Име већ постоји.</string>
   <string name="associations_dialog_title">Придруживања</string>
@@ -298,7 +301,6 @@
   <string name="pref_editor">Опције уређивача</string>
   <string name="pref_themes">Теме</string>
   <string name="pref_about">О програму</string>
-  <string name="pref_about_summary">Менаџер фајлова v<xliff:g id="version">%1$s</xliff:g>\nАуторско право \u00A9 2012-2014 CyanogenMod Пројекат</string>
   <string name="pref_general_behaviour_category">Опште</string>
   <string name="pref_case_sensitive_sort">Разликуј мала и велика слова код сортирања</string>
   <string name="pref_case_sensitive_sort_summary">Размислите о случају приликом навигације или сортирања резултата претраге</string>
@@ -343,7 +345,7 @@
   <string name="pref_secure_storage_category">Безбедно складиште</string>
   <string name="pref_secure_storage_delayed_sync_title">Одложена синхронизација</string>
   <string name="pref_secure_storage_delayed_sync_summary">Синхронизација безбедног фајл система је скуп операција. Омогућите ову опцију да дозволите бржи одзив после сваке операције, обављање синхронизације када је фајл систем у стању неискоришћеног, али на уштрб губитка несинхронизоване информације на чекању ако апликација пукне.</string>
-  <string name="pref_secure_storage_reset_password_title">Ресетујте лозинку</string>
+  <string name="pref_secure_storage_reset_password_title">Промени лозинку</string>
   <string name="pref_secure_storage_delete_storage_title">Обриши складиште</string>
   <string name="pref_editor_behaviour_category">Понашање</string>
   <string name="pref_no_suggestions">Нема предлога</string>
@@ -351,9 +353,9 @@
   <string name="pref_word_wrap">Увијена реч</string>
   <string name="pref_hexdump">Хексадекадне бинарне датотеке</string>
   <string name="pref_hexdump_desc">Приликом отварања бинарног фајла, генериши хексадекадне датотеке и отвори их у хек прегледник</string>
-  <string name="pref_editor_syntax_highlight_category">Врхунац синтаксе</string>
+  <string name="pref_editor_syntax_highlight_category">Наглашавање синтаксе</string>
   <string name="pref_syntax_highlight">Врхунац синтаксе</string>
-  <string name="pref_syntax_highlight_desc">Истакни синтаксу датотеке приказану у едитору (само када је процесор врхунца синтаксе доступан за тип датотеке)</string>
+  <string name="pref_syntax_highlight_desc">Нагласи синтаксу фајла приказаног у едитору (једино ако је наглашавање синтаксе процесора за ту врсту фајла доступно)</string>
   <string name="pref_syntax_highlight_color_scheme">Шема боје</string>
   <string name="pref_syntax_highlight_color_scheme_desc">Изабери шему боја синтаксе</string>
   <string name="pref_syntax_sh_use_theme_default">Користи подразумевану тему</string>
@@ -381,10 +383,10 @@
   <string name="ash_keyword">Кључна реч</string>
   <string name="ash_quoted_string">Цитирани стринг</string>
   <string name="ash_variable">Варијабла</string>
-  <string name="secure_storage_unlock_title">Откључај складиште</string>
-  <string name="secure_storage_create_title">Направи складиште</string>
+  <string name="secure_storage_unlock_title">Откључај сигурно складиште</string>
+  <string name="secure_storage_create_title">Направи сигурно складиште</string>
   <string name="secure_storage_reset_title">Ресетујте лозинку</string>
-  <string name="secure_storage_delete_title">Обриши складиште</string>
+  <string name="secure_storage_delete_title">Обриши сигурно складиште</string>
   <string name="secure_storage_unlock_key_prompt_msg">Укуцајте лозинку за откључавање безбедног складишта фајл система.</string>
   <string name="secure_storage_unlock_key_new_msg">Укуцајте лозинку за заштиту фајл система безбедног складишта.</string>
   <string name="secure_storage_unlock_key_reset_msg">Укуцајте тренутну и нову лозинку за ресетовање фајл система безбедног складишта.</string>
@@ -400,6 +402,7 @@
   <string name="secure_storage_unlock_failed">Не могу откључати складиште</string>
   <string name="secure_storage_unlock_validation_length">Лозинка мора имати најмање <xliff:g id="characters">%1$d</xliff:g> карактера.</string>
   <string name="secure_storage_unlock_validation_equals">Лозинке се не поклапају.</string>
+  <string name="secure_storage_open_file_warning">Ово ће копирати фајл у привремену некодирану локацију. Биће обрисано после сат времена.</string>
   <string name="print_unsupported_document">Неподржан формат документа</string>
   <string name="print_unsupported_image">Неподржан формат слике</string>
   <string name="print_document_header">Документ: <xliff:g id="document_name">%1$s</xliff:g></string>
@@ -417,4 +420,5 @@
     \n\nМожете доступити напредном режиму са свим привилегијама путем
     подешавања. Тада је ваша одговорност да не покварите свој систем.
     \n\nCyanogenMod тим.\n</string>
+  <string name="activity_not_found_exception">Не могу наћи апликацију за отварање овог фајла</string>
 </resources>

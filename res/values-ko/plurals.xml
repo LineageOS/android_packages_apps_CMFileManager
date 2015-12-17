@@ -31,4 +31,7 @@
   <plurals name="selection_files">
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g>개의 파일이 선택되었습니다.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g>개의 항목이 삭제됩니다.</item>
+  </plurals>
 </resources>

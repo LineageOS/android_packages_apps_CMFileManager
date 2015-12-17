@@ -41,4 +41,9 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> vybrané súbory.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> vybraných súborov.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> položka sa vymaže.</item>
+    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> položky sa vymažú.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> položiek sa vymaže.</item>
+  </plurals>
 </resources>

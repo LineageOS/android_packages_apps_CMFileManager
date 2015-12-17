@@ -42,7 +42,6 @@
   <string name="copy_text_cd">Piesitiet, lai kopētu tekstu starpliktuvē</string>
   <string name="copy_text_msg">Teksts iekopēts starpliktuvē</string>
   <string name="warning_title">Brīdinājums</string>
-  <string name="error_title">Radās kļūda</string>
   <string name="confirm_operation">Apstipriniet darbību</string>
   <string name="confirm_overwrite">Apstipriniet pārrakstīšanu</string>
   <string name="confirm_deletion">Apstipriniet dzēšanu</string>
@@ -52,7 +51,6 @@
   <string name="msgs_privileged_console_alloc_failed">Neizdevās palaist Root pieejas režīmā. Mainu uz Drošo režīmu.</string>
   <string name="msgs_settings_save_failure">Iestatījumu neizdevās pielietot vai saglabāt.</string>
   <string name="msgs_settings_invalid_initial_directory">Sākotnējā mape \'<xliff:g id="initial_dir"> %1$s</xliff:g>\' ir nepareiza. Mainu uz saknes mapi.</string>
-  <string name="root_not_available_msg">Šajā iekārtā Root nav pieejams. Šo darību nevar veikt.</string>
   <string name="msgs_success">Darbība tika veiksmīgi pabeigta.</string>
   <string name="msgs_unknown">Tika atrasta kļūda. Darbība bija neveiksmīga.</string>
   <string name="msgs_insufficient_permissions">Šai darbībai ir nepieciešamas paaugstinātas tiesības. Mēģiniet nomainīt uz Root pieejas režīmu.</string>
@@ -67,7 +65,6 @@
   <string name="msgs_read_only_filesystem">Failu sistēma ir tikai lasāma. Pirms mēģināt veikt šo darbību, mēģiniet uzmontēt failu sistēmu kā rakstāmu.</string>
   <string name="msgs_illegal_argument">Nepareizs arguments. Izsaukums neizdevās.</string>
   <string name="msgs_unresolved_inconsistencies">Darbība nav atļauta, jo tā varētu radīt nesaskaņas.</string>
-  <string name="msgs_operation_not_allowed_in_current_directory">Darbība pašreizējā mapē nav atļauta.\n\nMērķa mape nevar būt avota mape, vai avota mapes apakšmape.</string>
   <string name="msgs_push_again_to_exit">Lai izietu, nospiediet vēlreiz.</string>
   <string name="msgs_not_registered_app">Nav reģistrēta lietotne, kura varētu apstrādāt izvēlēto faila veidu.</string>
   <string name="msgs_overwrite_files">Daži faili mērķa mapē jau pastāv.\n\nPārrakstīt?</string>
@@ -105,12 +102,10 @@
   <string name="filesystem_info_warning_title">Nav informācijas</string>
   <string name="filesystem_info_warning_msg">Par failu sistēmu nav pieejama nekāda informācija.</string>
   <string name="filesystem_info_cant_be_mounted_msg">Failu sistēmu nevar uzmontēt/nomontēt.</string>
-  <string name="filesystem_info_mount_not_allowed_msg">Failu sistēmas montēšana drošajā režīmā nav atļauta. Piesitiet lai pārietu uz Root pieejas režīmu.</string>
   <string name="filesystem_info_mount_failed_msg">Failu sistēmas montēšana neizdevās. Dažas failu sistēmas, piemēram, SD kartes, nevar montēt/nomontēt, jo tās ir izveidotas kā tikai lasāmas failu sistēmas.</string>
   <string name="filesystem_info_dialog_title">Informācija par failu sistēmu</string>
   <string name="filesystem_info_dialog_tab_info">Informācija</string>
   <string name="filesystem_info_dialog_tab_disk_usage">Diska lietojums</string>
-  <string name="filesystem_info_dialog_status">Statuss:</string>
   <string name="filesystem_info_dialog_mount_point">Montēšanas punkts:</string>
   <string name="filesystem_info_dialog_device">Iekārta:</string>
   <string name="filesystem_info_dialog_type">Veids:</string>
@@ -296,7 +291,6 @@
   <string name="pref_editor">Redaktora opcijas</string>
   <string name="pref_themes">Tēmas</string>
   <string name="pref_about">Par</string>
-  <string name="pref_about_summary">Failu pārvaldnieks v<xliff:g id="version">%1$s</xliff:g>\nAutortiesības \u00A9 2012-2014 CyanogenMod projekts</string>
   <string name="pref_general_behaviour_category">Vispārīgi</string>
   <string name="pref_case_sensitive_sort">Reģistrjutīgs</string>
   <string name="pref_case_sensitive_sort_summary">Navigējot un kārtojot meklēšanas rezultātus ņem vērā reģistru</string>
@@ -336,7 +330,6 @@
   <string name="pref_secure_storage_category">Drošā krātuve</string>
   <string name="pref_secure_storage_delayed_sync_title">Aizkavēta sinhronizācija</string>
   <string name="pref_secure_storage_delayed_sync_summary">Droša failu sistēmas sinhronizācija ir \"dārga\" darbība. Ieslēdzot šo opciju, katras darbības pabeigšana notiek ātrāk, jo darbības ar failu sistēmu veic laikā, kad sistēmu izmanto mazāk. Tomēr jārēķinās, ka šādi var pazaudēt datus, ja lietotne salūzt laikā, kad visas failu darbības nav pabeigtas.</string>
-  <string name="pref_secure_storage_reset_password_title">Atstatīt paroli</string>
   <string name="pref_secure_storage_delete_storage_title">Dzēst krātuvi</string>
   <string name="pref_editor_behaviour_category">Uzvedība</string>
   <string name="pref_no_suggestions">Nav ieteikumu</string>
@@ -344,9 +337,7 @@
   <string name="pref_word_wrap">Teksta aplaušana</string>
   <string name="pref_hexdump">Bināros failus kā heksadecimālo izmeti</string>
   <string name="pref_hexdump_desc">Atverot bināru failu, izveidot heksadecimālo izmeti failu un rādīt to hex skatītājā</string>
-  <string name="pref_editor_syntax_highlight_category">Sintakses izcelšana</string>
   <string name="pref_syntax_highlight">Sintakses izcelšana</string>
-  <string name="pref_syntax_highlight_desc">Redaktorā attēlotajā failā izgaismot sintaksi (tikai tad, ja attiecīgajam faila veidam ir zināmi sintakses izcēluma likumi)</string>
   <string name="pref_syntax_highlight_color_scheme">Krāsu shēma</string>
   <string name="pref_syntax_highlight_color_scheme_desc">Izvēlieties sintakses izcēlumu krāsu shēmu</string>
   <string name="pref_syntax_sh_use_theme_default">Izmantot noklusēto tēmu</string>
@@ -374,10 +365,7 @@
   <string name="ash_keyword">Atslēgvārds</string>
   <string name="ash_quoted_string">Pēdiņās iekļauta virkne</string>
   <string name="ash_variable">Mainīgais</string>
-  <string name="secure_storage_unlock_title">Atbloķēt krātuvi</string>
-  <string name="secure_storage_create_title">Izveidot krātuvi</string>
   <string name="secure_storage_reset_title">Pārstatīt paroli</string>
-  <string name="secure_storage_delete_title">Dzēst krātuvi</string>
   <string name="secure_storage_unlock_key_prompt_msg">Ievadiet paroli, lai atbloķētu drošās krātuves failu sistēmu.</string>
   <string name="secure_storage_unlock_key_new_msg">Ievadiet paroli, lai aizsargātu drošās krātuves failu sistēmu.</string>
   <string name="secure_storage_unlock_key_reset_msg">Ierakstiet tekošo un jauno paroli lai pārstatītu drošās krātuves failu sistēmu.</string>

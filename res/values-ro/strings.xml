@@ -42,7 +42,7 @@
   <string name="copy_text_cd">Atingeți pentru a copia textul în clipboard</string>
   <string name="copy_text_msg">Textul s-a copiat în clipboard</string>
   <string name="warning_title">Avertizare</string>
-  <string name="error_title">Eroare detectată</string>
+  <string name="error_title">Eroare</string>
   <string name="confirm_operation">Confirmați operațiunea</string>
   <string name="confirm_overwrite">Confirmați suprascrierea</string>
   <string name="confirm_deletion">Confirmați ștergerea</string>
@@ -52,9 +52,11 @@
   <string name="msgs_privileged_console_alloc_failed">Imposibil de executat în modul Acces Root. Schimbare la modul Sigur.</string>
   <string name="msgs_settings_save_failure">Setarea nu poate fi aplicată sau stocată.</string>
   <string name="msgs_settings_invalid_initial_directory">Dosarul inițial \"<xliff:g id="initial_dir">%1$s</xliff:g>\" nu este corect. Schimbare la dosarul rădăcină.</string>
+  <string name="root_not_available_msg">Accesul Root nu este disponibil pentru acest dispozitiv. Imposibil de efectuat această operațiune.</string>
   <string name="msgs_success">Operațiunea a fost finalizată cu succes.</string>
   <string name="msgs_unknown">A fost detectată o eroare. Operațiunea nu a reușit.</string>
   <string name="msgs_insufficient_permissions">Această operațiune necesită permisiuni ridicate. Încercați să schimbați la modul de Acces Root.</string>
+  <string name="msgs_no_disk_space">Operația nu a reușit deoarece nu există spațiu liber rămas pe dispozitiv.</string>
   <string name="msgs_file_not_found">Fișierul sau dosarul nu a fost găsit.</string>
   <string name="msgs_command_not_found">Comanda operațiunii nu a fost găsită sau are o definiție incorectă.</string>
   <string name="msgs_io_failed">Eroare citire/scriere.</string>
@@ -65,7 +67,7 @@
   <string name="msgs_read_only_filesystem">Sistemul de fișiere este doar în citire. Încercați montarea sistemului de fișiere ca citire-scriere înainte de a încerca operațiunea.</string>
   <string name="msgs_illegal_argument">Argument ilegal. Invocarea nu a reușit.</string>
   <string name="msgs_unresolved_inconsistencies">Operațiunea nu este permisă pentru că ar crea incoerențe.</string>
-  <string name="msgs_operation_not_allowed_in_current_directory">Operațiunea nu este permisă în dosarul curent.</string>
+  <string name="msgs_operation_not_allowed_in_current_directory">Dosarul destinație nu poate fi un subdosar al sursei sau să fie la fel ca sursa.</string>
   <string name="msgs_push_again_to_exit">Apăsați din nou pentru a ieși.</string>
   <string name="msgs_not_registered_app">Nu există nicio aplicație înregistrată care ar deschide tipul de fișier selectat.</string>
   <string name="msgs_overwrite_files">Unele dintre fișiere există deja în dosarul destinație.\n\nSuprascrieți?</string>
@@ -89,22 +91,26 @@
   <string name="sort_by_name_desc">După nume ▼</string>
   <string name="sort_by_date_asc">După dată ▲</string>
   <string name="sort_by_date_desc">După dată ▼</string>
+  <string name="sort_by_size_asc">După dimensiune \u25B2</string>
+  <string name="sort_by_size_desc">După dimensiune \u25BC</string>
+  <string name="sort_by_type_asc">După tip \u25B2</string>
+  <string name="sort_by_type_desc">După tip \u25BC</string>
   <string name="layout_icons">Pictograme</string>
   <string name="layout_simple">Simplu</string>
   <string name="layout_details">Detaliat</string>
-  <string name="cm_filemanager_show_dirs_first">Afişare dosare întâi</string>
-  <string name="cm_filemanager_show_hidden">Afişare fişiere ascunse</string>
-  <string name="cm_filemanager_show_system">Afişare fişiere de sistem</string>
-  <string name="cm_filemanager_show_symlinks">Afişare legături simbolice</string>
+  <string name="cm_filemanager_show_dirs_first">Afișare dosare întâi</string>
+  <string name="cm_filemanager_show_hidden">Afișare fișiere ascunse</string>
+  <string name="cm_filemanager_show_system">Afișare fișiere de sistem</string>
+  <string name="cm_filemanager_show_symlinks">Afișare legături simbolice</string>
   <string name="filesystem_info_warning_title">Nu există informații</string>
   <string name="filesystem_info_warning_msg">Nu există informații disponibile pentru fișierele de sistem.</string>
   <string name="filesystem_info_cant_be_mounted_msg">Fișierele de sistem nu pot fi montate/demontate.</string>
-  <string name="filesystem_info_mount_not_allowed_msg">Operațiunile de montare a fișierelor de sistem nu sunt permise modul Sigur. Atingeți pentru a schimba modul de acces Root.</string>
+  <string name="filesystem_info_mount_not_allowed_msg">Operațiunile de montare a fișierelor de sistem nu sunt permise în modul Sigur. Atingeți pentru a schimba modul de acces Root.</string>
   <string name="filesystem_info_mount_failed_msg">Operațiunea de montare a fișierelor de sistemul nu a reușit. Unele sisteme de fișier, ca de ex. cardurile SD, nu pot fi montate/demontate deoarece ele sunt încorporate ca sisteme de fișiere doar în citire.</string>
   <string name="filesystem_info_dialog_title">Informație despre sistemul de fișiere</string>
   <string name="filesystem_info_dialog_tab_info">Info</string>
   <string name="filesystem_info_dialog_tab_disk_usage">Utilizare disc</string>
-  <string name="filesystem_info_dialog_status">Stare:</string>
+  <string name="filesystem_info_dialog_status">Montat:</string>
   <string name="filesystem_info_dialog_mount_point">Punct de montare:</string>
   <string name="filesystem_info_dialog_device">Dispozitiv:</string>
   <string name="filesystem_info_dialog_type">Tip:</string>
@@ -147,7 +153,7 @@
   <string name="search">Rezultatele căutării</string>
   <string name="search_hint">Introduceți căutarea</string>
   <string name="search_voice_hint">Rostiți căutarea</string>
-  <string name="search_error_msg">O eroare a avut loc în timpul cautării. Niciun rezultat găsit.</string>
+  <string name="search_error_msg">O eroare a avut loc în timpul căutării. Niciun rezultat găsit.</string>
   <string name="search_no_results_msg">Niciun rezultat găsit.</string>
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> în<xliff:g id="path">%2$s</xliff:g></string>
   <string name="search_terms"><![CDATA[<b>Termeni:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
@@ -190,11 +196,11 @@
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - nou<xliff:g id="extension">%2$s</xliff:g></string>
   <string name="waiting_dialog_msg">Efectuare operațiune\u2026</string>
   <string name="waiting_dialog_copying_title">Copiere\u2026</string>
-  <string name="waiting_dialog_copying_msg"><![CDATA[<b>De la</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>To</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <string name="waiting_dialog_copying_msg"><![CDATA[<b>De la</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>La</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <string name="waiting_dialog_moving_title">Mutare\u2026</string>
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>De la</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Pentru</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <string name="waiting_dialog_deleting_title">Ștergere\u2026</string>
-  <string name="waiting_dialog_deleting_msg"><![CDATA[<b>File</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Fișier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <string name="waiting_dialog_extracting_title">Extragere\u2026</string>
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Fișier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <string name="waiting_dialog_compressing_title">Comprimare\u2026</string>
@@ -211,7 +217,7 @@
   <string name="actions_menu_deselect_all">Anulare selectare totală</string>
   <string name="actions_menu_select">Selectare</string>
   <string name="actions_menu_deselect">Deselectare</string>
-  <string name="actions_menu_paste_selection">Lipire</string>
+  <string name="actions_menu_paste_selection">Lipește selecția aici</string>
   <string name="actions_menu_move_selection">Mutare</string>
   <string name="actions_menu_delete_selection">Ștergere</string>
   <string name="actions_menu_compress_selection">Comprimare</string>
@@ -232,11 +238,12 @@
   <string name="actions_menu_open_parent_folder">Deschidere sursă</string>
   <string name="actions_menu_compute_checksum">Calculează checksum</string>
   <string name="actions_menu_print">Imprimare</string>
-  <string name="actions_menu_set_as_home">Setaţi ca acasă</string>
+  <string name="actions_menu_set_as_home">Setați ca acasă</string>
   <string name="actions_ask_undone_operation_msg">Această acțiune nu poate fi anulată. Doriți să continuați?</string>
   <string name="input_name_dialog_label">Nume:</string>
   <string name="input_name_dialog_message_empty_name">Numele nu poate fi gol.</string>
   <string name="input_name_dialog_message_invalid_path_name">Nume incorect. Caracterele \"<xliff:g id="invalid_characters">%1$s</xliff:g>\" nu sunt admise.</string>
+  <string name="input_name_dialog_message_invalid_name_length">Limita maximă de caractere atinsă.</string>
   <string name="input_name_dialog_message_invalid_name">Nume incorect. Numele \".\" și \"..\" nu sunt admise.</string>
   <string name="input_name_dialog_message_name_exists">Numele există deja.</string>
   <string name="associations_dialog_title">Asociații</string>
@@ -278,6 +285,7 @@
   <string name="category_audio">AUDIO</string>
   <string name="category_video">VIDEO</string>
   <string name="category_security">SECURITATE</string>
+  <string name="category_all">TOATE</string>
   <string name="compression_mode_title">Mod comrimare</string>
   <string name="shortcut_failed_msg">Eșuat.</string>
   <string name="shortcut_creation_success_msg">Comandă rapidă creată cu succes.</string>
@@ -285,11 +293,10 @@
   <string name="pref">Setări</string>
   <string name="pref_general">Setări generale</string>
   <string name="pref_search">Opțiuni căutare</string>
-  <string name="pref_storage">Opţiuni de stocare</string>
+  <string name="pref_storage">Opțiuni de stocare</string>
   <string name="pref_editor">Opțiuni editor</string>
   <string name="pref_themes">Teme</string>
   <string name="pref_about">Despre</string>
-  <string name="pref_about_summary">Manager de Fișiere v<xliff:g id="version">%1$s</xliff:g>\nCopyright \u00A9 2012-2014 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">Generale</string>
   <string name="pref_case_sensitive_sort">Utilizare sortare litere mari apoi mici</string>
   <string name="pref_case_sensitive_sort_summary">Luați în considerare cazul când navigați sau sortați rezultatele de căutare</string>
@@ -325,12 +332,12 @@
   <string name="pref_save_search_terms_off">Termenii de căutare nu vor fi salvați</string>
   <string name="pref_remove_saved_search_terms">Eliminați termenii de căutare salvați</string>
   <string name="pref_remove_saved_search_terms_summary">Apăsați pentru eliminarea tuturor termenilor de căutare salvați</string>
-  <string name="pref_remove_saved_search_terms_msg">Toţi termenii de căutare salvaţi au fost eliminaţi</string>
+  <string name="pref_remove_saved_search_terms_msg">Toți termenii de căutare salvați au fost eliminați</string>
   <string name="pref_secure_storage_category">Stocare securizată</string>
   <string name="pref_secure_storage_delayed_sync_title">Sincronizare întârziată</string>
-  <string name="pref_secure_storage_delayed_sync_summary">Sincronizarea unor sisteme cu fişiere sigure este o operaţie costisitoare. Activaţi această opţiune pentru a permite răspunsuri în timp mai bune după fiecare operațiune, efectuând sincronizări atunci când sistemul de fişiere este în stare nefolosită, dar în detrimentul pierderii de informaţii în aşteptare de sincronizate în cazul unei erori a aplicației.</string>
-  <string name="pref_secure_storage_reset_password_title">Resetare parolă</string>
-  <string name="pref_secure_storage_delete_storage_title">Ştergeţi stocarea</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Sincronizarea unor sisteme cu fișiere sigure este o operație costisitoare. Activați această opțiune pentru a permite răspunsuri în timp mai bune după fiecare operațiune, efectuând sincronizări atunci când sistemul de fișiere este în stare nefolosită, dar în detrimentul pierderii de informații în așteptare nesincronizate în cazul unei erori a aplicației.</string>
+  <string name="pref_secure_storage_reset_password_title">Schimbă parola</string>
+  <string name="pref_secure_storage_delete_storage_title">Ștergeți stocarea</string>
   <string name="pref_editor_behaviour_category">Comportament</string>
   <string name="pref_no_suggestions">Fără sugestii</string>
   <string name="pref_no_suggestions_desc">Nu afișa sugestiile din dicționar în timp ce editez fișierul</string>
@@ -339,7 +346,7 @@
   <string name="pref_hexdump_desc">Când deschid un fișier binar, generează un hexdump pentru fișier și deschide-l în vizualizatorul hex</string>
   <string name="pref_editor_syntax_highlight_category">Evidențiere sintaxă</string>
   <string name="pref_syntax_highlight">Evidențiere sintaxă</string>
-  <string name="pref_syntax_highlight_desc">Evidențiază sintaxa fișierului afiașat în editor (doar când un procesor de evidențiere a sintaxei este disponibil pentru tipul de fișier)</string>
+  <string name="pref_syntax_highlight_desc">Evidențiază sintaxa fișierului afișat în editor (numai atunci când un procesor de sintaxă pentru tipul de fișier este disponibil)</string>
   <string name="pref_syntax_highlight_color_scheme">Schema de culoare</string>
   <string name="pref_syntax_highlight_color_scheme_desc">Selectează schema de culoare a evidențierii sintaxei</string>
   <string name="pref_syntax_sh_use_theme_default">Utilizează temă implicită</string>
@@ -367,14 +374,11 @@
   <string name="ash_keyword">Cuvânt cheie</string>
   <string name="ash_quoted_string">Șir de citate</string>
   <string name="ash_variable">Variabila</string>
-  <string name="secure_storage_unlock_title">Deblochează stocarea</string>
-  <string name="secure_storage_create_title">Crearea de stocare</string>
   <string name="secure_storage_reset_title">Resetare parolă</string>
-  <string name="secure_storage_delete_title">Ştergeţi stocarea</string>
-  <string name="secure_storage_unlock_key_prompt_msg">Introduceţi parola pentru a debloca sistemul de fişiere sigure de stocare.</string>
-  <string name="secure_storage_unlock_key_new_msg">Tastaţi o parolă pentru a proteja sistemul de fişiere sigure de stocare.</string>
-  <string name="secure_storage_unlock_key_reset_msg">Tastați parola curentă şi ceea nouă pentru a reseta sistemul de fişiere sigure de stocare.</string>
-  <string name="secure_storage_unlock_key_delete_msg">Tastaţi parola curentă pentru a şterge sistemul de fişiere securizate de stocare.</string>
+  <string name="secure_storage_unlock_key_prompt_msg">Introduceți parola pentru a debloca sistemul de fișiere sigure de stocare.</string>
+  <string name="secure_storage_unlock_key_new_msg">Tastați o parolă pentru a proteja sistemul de fișiere sigure de stocare.</string>
+  <string name="secure_storage_unlock_key_reset_msg">Tastați parola curentă și ceea nouă pentru a reseta sistemul de fișiere sigure de stocare.</string>
+  <string name="secure_storage_unlock_key_delete_msg">Tastați parola curentă pentru a șterge sistemul de fișiere securizate de stocare.</string>
   <string name="secure_storage_unlock_old_key_title">Parola veche:</string>
   <string name="secure_storage_unlock_new_key_title">Parolă nouă:</string>
   <string name="secure_storage_unlock_key_title">Parola:</string>
@@ -386,6 +390,7 @@
   <string name="secure_storage_unlock_failed">Nu s-a pot debloca stocarea</string>
   <string name="secure_storage_unlock_validation_length">Parola trebuie să aibă cel puțin <xliff:g id="characters">%1$d</xliff:g> caractere.</string>
   <string name="secure_storage_unlock_validation_equals">Parolele nu se potrivesc.</string>
+  <string name="secure_storage_open_file_warning">Aceasta va copia fișierul într-un loc temporar necriptat. Acesta va fi șters după 1 oră.</string>
   <string name="print_unsupported_document">Formatul documentului neacceptat</string>
   <string name="print_unsupported_image">Format de imagine neacceptat</string>
   <string name="print_document_header">Document: <xliff:g id="document_name">%1$s</xliff:g></string>
@@ -394,4 +399,5 @@
   <string name="changelog_title">Istoria schimbărilor</string>
   <string name="welcome_title">Bun venit</string>
   <string name="welcome_msg">Bine ați venit la managerul de fișiere CyanogenMod.\n\nAceastă aplicație vă permite să explorați sistemul de fișiere și să efectuați operații care ar putea deteriora dispozitivul dvs. Pentru a preveni stricăciunile, aplicația pornește în modul sigur, un mod cu privilegii reduse.\n\nPuteți accesa modul avansat, cu privilegii complete via Setări. Este responsabilitatea dvs să vă asigurați că operațile făcute de dvs nu distrug dispozitivul.\n\nEchipa CyanogenMod</string>
+  <string name="activity_not_found_exception">Nu s-a găsit o aplicație pentru a deschide acest fișier</string>
 </resources>

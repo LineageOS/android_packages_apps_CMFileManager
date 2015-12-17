@@ -42,7 +42,7 @@
   <string name="copy_text_cd">Kliknutím skopírujete text do schránky</string>
   <string name="copy_text_msg">Text bol skopírovaný do schránky</string>
   <string name="warning_title">Upozornenie</string>
-  <string name="error_title">Bola zistená chyba</string>
+  <string name="error_title">Chyba</string>
   <string name="confirm_operation">Potvrdenie operácie</string>
   <string name="confirm_overwrite">Potvrdenie prepísania</string>
   <string name="confirm_deletion">Potvrdenie odstránenia</string>
@@ -52,7 +52,7 @@
   <string name="msgs_privileged_console_alloc_failed">Nemožno spustiť v režime bez obmedzenia.Prebieha zmena na bezpečný režim.</string>
   <string name="msgs_settings_save_failure">Nastavenie nemohlo byť použité alebo uložené.</string>
   <string name="msgs_settings_invalid_initial_directory">Počiatočný priečinok \"<xliff:g Id="initial_dir">%1$s</xliff:g>\" je neplatný. Prebieha zmena na koreňový priečinok.</string>
-  <string name="root_not_available_msg">Root nie je k dispozícii v tomto zariadení. Táto operácia sa nedá vykonať.</string>
+  <string name="root_not_available_msg">Root nie je na tomto zariadení k dispozícii. Táto operácia sa nedá vykonať.</string>
   <string name="msgs_success">Operácia bola úspešne dokončená.</string>
   <string name="msgs_unknown">Vyskytla sa chyba. Operácia nebola úspešne dokončená.</string>
   <string name="msgs_insufficient_permissions">Táto operácia vyžaduje väčšie oprávnenie. Skúste zmeniť na režim bez obmedzenia.</string>
@@ -67,7 +67,7 @@
   <string name="msgs_read_only_filesystem">Súborový systém je v režime iba na čítanie. Pred potvrdením operácie skúste pripojiť súborový systém v režime pre zápis.</string>
   <string name="msgs_illegal_argument">Neplatný argument. Vykonanie operácie zlyhalo.</string>
   <string name="msgs_unresolved_inconsistencies">Operácia nie je povolená, pretože by mohla spôsobiť nezrovnalosti.</string>
-  <string name="msgs_operation_not_allowed_in_current_directory">Operácia nie je v aktuálnom priečinku povolená.</string>
+  <string name="msgs_operation_not_allowed_in_current_directory">Cieľový priečinok nemôže byť podpriečinkom zdrojového priečinka alebo byť rovnaký ako zdroj.</string>
   <string name="msgs_push_again_to_exit">Stlačte znova pre ukončenie.</string>
   <string name="msgs_not_registered_app">Pre tento typ súboru nie je priradená žiadna apllikácia.</string>
   <string name="msgs_overwrite_files">V cieľovom priečinku už existujú niektoré súbory.\n\nPrepísať?</string>
@@ -110,7 +110,7 @@
   <string name="filesystem_info_dialog_title">Informácie o súborovom systéme</string>
   <string name="filesystem_info_dialog_tab_info">Informácie</string>
   <string name="filesystem_info_dialog_tab_disk_usage">Využitie disku</string>
-  <string name="filesystem_info_dialog_status">Stav:</string>
+  <string name="filesystem_info_dialog_status">Pripojené:</string>
   <string name="filesystem_info_dialog_mount_point">Bod pripojenia:</string>
   <string name="filesystem_info_dialog_device">Zariadenie:</string>
   <string name="filesystem_info_dialog_type">Typ:</string>
@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Nastavte počiatočný priečinok.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Odstrániť zo záložiek.</string>
   <string name="bookmarks_msgs_add_success">Záložka bola úspešne pridaná.</string>
+  <string name="bookmarks_msgs_add_exists">Záložka už existuje.</string>
   <string name="initial_directory_dialog_title">Počiatočný priečinok</string>
   <string name="initial_directory_label">Vyberte počiatočný priečinok:</string>
   <string name="initial_directory_relative_msg">Relatívna cesty nie sú povolené.</string>
@@ -228,7 +229,7 @@
   <string name="actions_menu_move_selection">Presunúť vybrané</string>
   <string name="actions_menu_delete_selection">Odstrániť vybrané</string>
   <string name="actions_menu_compress_selection">Komprimovať vybrané</string>
-  <string name="actions_menu_create_link">Vytvor odkaz</string>
+  <string name="actions_menu_create_link">Vytvoriť odkaz</string>
   <string name="actions_menu_open">Otvoriť</string>
   <string name="actions_menu_open_with">Otvoriť s</string>
   <string name="actions_menu_execute">Spustiť</string>
@@ -250,6 +251,7 @@
   <string name="input_name_dialog_label">Názov:</string>
   <string name="input_name_dialog_message_empty_name">Názov nesmie byť prázdny.</string>
   <string name="input_name_dialog_message_invalid_path_name">Neplatný názov. Znaky \'&lt;xliff:g id=\"invalid_characters\"&gt;%1$s&lt;/xliff:g&gt;\' nie sú povolené.</string>
+  <string name="input_name_dialog_message_invalid_name_length">Maximálny limit počtu znakov bol dosiahnutý.</string>
   <string name="input_name_dialog_message_invalid_name">Neplatný názovo. Názvy \'.\' a \'..\' nie sú povolené.</string>
   <string name="input_name_dialog_message_name_exists">Názov už existuje.</string>
   <string name="associations_dialog_title">Priradenia</string>
@@ -303,7 +305,6 @@
   <string name="pref_editor">Voľby editora</string>
   <string name="pref_themes">Témy</string>
   <string name="pref_about">O aplikácii</string>
-  <string name="pref_about_summary">Správca súborov v<xliff:g id="version">%1$s</xliff:g>\nAutorské práva © 2012-2014 Projekt CyanogenMod</string>
   <string name="pref_general_behaviour_category">Všeobecné</string>
   <string name="pref_case_sensitive_sort">Rozlišovať veľké a malé písmená pri triedení</string>
   <string name="pref_case_sensitive_sort_summary">Zvážiť veľké a malé písmená pri prechádzaní alebo usporiadaní výsledkov hľadania</string>
@@ -343,7 +344,7 @@
   <string name="pref_secure_storage_category">Zabezpečené úložisko</string>
   <string name="pref_secure_storage_delayed_sync_title">Oneskorená synchronizácia</string>
   <string name="pref_secure_storage_delayed_sync_summary">Synchronizácia zabezpečených súborových systémov je náročná operácia. Povoľte túto možnosť pre rýchlejšiu odozvu po každej operácii, vykonaním synchronizácie v čase, keď je súborový systém v nepoužívanom stave, ale na úkor straty čakajúcich informácií, ktoré nebudú synchronizované, ak aplikácia zlyhá.</string>
-  <string name="pref_secure_storage_reset_password_title">Obnoviť heslo</string>
+  <string name="pref_secure_storage_reset_password_title">Zmeniť heslo</string>
   <string name="pref_secure_storage_delete_storage_title">Odstrániť úložisko</string>
   <string name="pref_editor_behaviour_category">Správanie</string>
   <string name="pref_no_suggestions">Žiadne návrhy</string>
@@ -351,9 +352,9 @@
   <string name="pref_word_wrap">Zalamovať slová</string>
   <string name="pref_hexdump">Binárne súbory hexadecimálneho výpisu</string>
   <string name="pref_hexdump_desc">Pri otvorení binárneho súboru sa vygeneruje hexadecimálny výpis súboru a otvorí sa v hexadecimálnom prehliadači</string>
-  <string name="pref_editor_syntax_highlight_category">Zvýrazniť syntax</string>
+  <string name="pref_editor_syntax_highlight_category">Zvýrazňovanie syntaxe</string>
   <string name="pref_syntax_highlight">Zvýrazniť syntax</string>
-  <string name="pref_syntax_highlight_desc"> Bude zvýraznená syntax súboru zobrazeného v editore (iba keď je dostupný procesor zvýraznenia syntaxe pre daný typ súboru)</string>
+  <string name="pref_syntax_highlight_desc">Zvýrazniť syntax súboru zobrazeného v editore (iba ak je dostupný procesor na zvýrazňovanie syntaxe pre daný typ súboru)</string>
   <string name="pref_syntax_highlight_color_scheme">Farebná schéma</string>
   <string name="pref_syntax_highlight_color_scheme_desc">Vybrať farebnej schémy zvýraznenia syntaxe</string>
   <string name="pref_syntax_sh_use_theme_default">Použiť predvolenú tému</string>
@@ -381,10 +382,10 @@
   <string name="ash_keyword">Kľúčové slovo</string>
   <string name="ash_quoted_string">Reťazec v úvodzovkách</string>
   <string name="ash_variable">Premenná</string>
-  <string name="secure_storage_unlock_title">Odomknúť úložisko</string>
-  <string name="secure_storage_create_title">Vytvoriť úložisko</string>
+  <string name="secure_storage_unlock_title">Odomknúť zabezpečené úložisko</string>
+  <string name="secure_storage_create_title">Vytvoriť zabezpečené úložisko</string>
   <string name="secure_storage_reset_title">Obnoviť heslo</string>
-  <string name="secure_storage_delete_title">Odstrániť úložisko</string>
+  <string name="secure_storage_delete_title">Vymazať zabezpečené úložisko</string>
   <string name="secure_storage_unlock_key_prompt_msg">Zadajte heslo na odomknutie zabezpečeného úložiska súborového systému.</string>
   <string name="secure_storage_unlock_key_new_msg">Zadajte heslo na ochránenie zabezpečeného úložiska súborového systému.</string>
   <string name="secure_storage_unlock_key_reset_msg">Zadajte aktuálne a nové heslo pre obnovenie zabezpečeného úložiska súborového systému.</string>
@@ -400,6 +401,7 @@
   <string name="secure_storage_unlock_failed">Nie je možné odomknúť úložisko</string>
   <string name="secure_storage_unlock_validation_length">Heslo musí obsahovať minimálne <xliff:g id="characters">%1$d</xliff:g> znakov.</string>
   <string name="secure_storage_unlock_validation_equals">Heslá se nezhodujú.</string>
+  <string name="secure_storage_open_file_warning">Súbor bude skopírovaný na dočasné a nezašifrované umiestnenie. Súbor sa vymaže po 1 hodine.</string>
   <string name="print_unsupported_document">Nepodporované formát dokumentu</string>
   <string name="print_unsupported_image">Nepodporovaný formát obrázku</string>
   <string name="print_document_header">Dokument: <xliff:g id="document_name">%1$s</xliff:g></string>
@@ -408,4 +410,5 @@
   <string name="changelog_title">Zoznam zmien</string>
   <string name="welcome_title">Vitajte</string>
   <string name="welcome_msg">Vitajte v správcovi súborov CyanogenMod.\n\nTáto aplikácia umožňuje prehliadať súborový systém a robiť operácie, ktoré môžu poškodiť vaše zariadenie. Na zabránenie škôd bude aplikácia spustená v Bezpečnom režime.\n\nV nastaveniach môžete zapnúť pokročilý režim s plnými oprávneniami. Tým preberiete zodpovednosť za operácie, ktoré budete s aplikáciou vykonávať.\n\nTím CyanogenMod.\n</string>
+  <string name="activity_not_found_exception">Nepodarilo sa nájsť aplikáciu na otvorenie tohto súboru</string>
 </resources>

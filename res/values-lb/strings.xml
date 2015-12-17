@@ -42,7 +42,7 @@
   <string name="copy_text_cd">Dréck fir den Text an d\'Tëschenoflag ze kopéieren</string>
   <string name="copy_text_msg">Text an d\'Tëschenoflag kopéiert</string>
   <string name="warning_title">Warnung</string>
-  <string name="error_title">Feeler detektéiert</string>
+  <string name="error_title">Feeler</string>
   <string name="confirm_operation">Operatioun bestätegen</string>
   <string name="confirm_overwrite">Iwwerschreiwe bestätegen</string>
   <string name="confirm_deletion">Läsche bestätegen</string>
@@ -66,8 +66,8 @@
   <string name="msgs_operation_can_not_be_cancelled">Dës Operatioun kann net ofgebrach ginn.</string>
   <string name="msgs_read_only_filesystem">De Fichierssystem ass schreifgeschützt. Probéier de Fichiersystem mat Schreifrechter anzebannen ier s de dës Operatioun probéiers.</string>
   <string name="msgs_illegal_argument">Ongëltegt Argument. Opruff feelgeschloen.</string>
-  <string name="msgs_unresolved_inconsistencies">Dës Operatioun ass net erlaabert well se Inkonsistenze géif verursaachen.</string>
-  <string name="msgs_operation_not_allowed_in_current_directory">Dës Operatioun ass am aktuellen Dossier net erlaabt.\n\nDen Zildossier kann net de selweschte si wéi den Ausganksdossier, an och keen Ënnerdossier dovun.</string>
+  <string name="msgs_unresolved_inconsistencies">Dës Operatioun ass net erlaabt well s\'Inkonsistenze géif verursaachen.</string>
+  <string name="msgs_operation_not_allowed_in_current_directory">Den Destinatiounsdossier ka keen Ënnerdossier vun der Source oder identesch mat der Source sinn.</string>
   <string name="msgs_push_again_to_exit">Nach eemol drécke fir zouzemaachen.</string>
   <string name="msgs_not_registered_app">Fir den ausgewielte Fichierstyp ass keng App registréiert.</string>
   <string name="msgs_overwrite_files">Verschidde Fichieren existéiere schonn am Zildossier.\n\nIwwerschreiwen?</string>
@@ -103,14 +103,14 @@
   <string name="cm_filemanager_show_system">Systemfichieren uweisen</string>
   <string name="cm_filemanager_show_symlinks">Symbolech Ofkierzungen uweisen</string>
   <string name="filesystem_info_warning_title">Keng Informatiounen</string>
-  <string name="filesystem_info_warning_msg">Et si keng Informatiounen iwwer den Fichierssystem disponibel.</string>
+  <string name="filesystem_info_warning_msg">Et si keng Informatiounen iwwer de Fichierssystem disponibel.</string>
   <string name="filesystem_info_cant_be_mounted_msg">De Fichiersystem kann net agebonnen/getrennt ginn.</string>
   <string name="filesystem_info_mount_not_allowed_msg">Abannen/Trenne vu Fichierssystemen ass am séchere Modus net erlaabt. Dréck fir op de Root-Zougrëffsmodus ze wiesselen.</string>
   <string name="filesystem_info_mount_failed_msg">Abannen/Trenne vum Fichierssystem ass feelgeschloen. Op verschidde Fichierssystemer, wéi SD-Kaarten, kënnen dës Operatiounen net ausgefouert gi well se schreifgeschützt an de System agebaut sinn.</string>
   <string name="filesystem_info_dialog_title">Informatiounen zum Fichierssystem</string>
   <string name="filesystem_info_dialog_tab_info">Informatiounen</string>
-  <string name="filesystem_info_dialog_tab_disk_usage">Späichernotzung</string>
-  <string name="filesystem_info_dialog_status">Status:</string>
+  <string name="filesystem_info_dialog_tab_disk_usage">Späicherbenotzung</string>
+  <string name="filesystem_info_dialog_status">Agebonnen:</string>
   <string name="filesystem_info_dialog_mount_point">Abannungspunkt:</string>
   <string name="filesystem_info_dialog_device">Apparat:</string>
   <string name="filesystem_info_dialog_type">Typ:</string>
@@ -163,7 +163,7 @@
   <string name="searching_action_label">Sich leeft</string>
   <string name="picker_title">E Fichier wielen</string>
   <string name="directory_picker_title">En Dossier wielen</string>
-  <string name="editor">Editeur</string>
+  <string name="editor">Editor</string>
   <string name="editor_invalid_file_msg">Ongëltege Fichier.</string>
   <string name="editor_file_not_found_msg">Fichier net fonnt.</string>
   <string name="editor_file_exceed_size_msg">De Fichier ass ze grouss, fir op dengem Apparat opgemaach ze ginn.</string>
@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Den initialen Dossier setzen.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Lieszeeche läschen.</string>
   <string name="bookmarks_msgs_add_success">D\'Lieszeeche gouf erfollegräich dobäigesat.</string>
+  <string name="bookmarks_msgs_add_exists">D\'Lieszeechen existéiert schonn.</string>
   <string name="initial_directory_dialog_title">Initialen Dossier</string>
   <string name="initial_directory_label">Wiel den initialen Dossier aus:</string>
   <string name="initial_directory_relative_msg">Relativ Pade sinn net erlaabt.</string>
@@ -243,6 +244,7 @@
   <string name="input_name_dialog_label">Numm:</string>
   <string name="input_name_dialog_message_empty_name">Den Numm kann net eidel sinn.</string>
   <string name="input_name_dialog_message_invalid_path_name">Ongëltegen Numm. D\'Zeechen \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' sinn net erlaabt.</string>
+  <string name="input_name_dialog_message_invalid_name_length">Maximal Zeechelimitt erreecht.</string>
   <string name="input_name_dialog_message_invalid_name">Ongëltegen Numm. D\'Nimm \".\" an \"..\" sinn net erlaabt.</string>
   <string name="input_name_dialog_message_name_exists">Den Numm existéiert schonn.</string>
   <string name="associations_dialog_title">Associatiounen</string>
@@ -296,17 +298,16 @@
   <string name="pref_editor">Editorastellungen</string>
   <string name="pref_themes">Designen</string>
   <string name="pref_about">Iwwer</string>
-  <string name="pref_about_summary">Fichiersmanager v<xliff:g id="version">%1$s</xliff:g>\nCopyright \u00A9 2012–2014 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">Allgemeng</string>
   <string name="pref_case_sensitive_sort">Grouss-/Klengschreiwung respektéieren</string>
-  <string name="pref_case_sensitive_sort_summary">D\'Grouss-/Klengschreiwung respektéiere beim Navigéieren oder Sortéiere vu Sichresultater</string>
+  <string name="pref_case_sensitive_sort_summary">Grouss-/Klengschreiwung respektéiere beim Navigéieren oder Zortéiere vu Sichresultater</string>
   <string name="pref_filetime_format_mode">Datums- an Zäitformat</string>
-  <string name="pref_disk_usage_warning_level">Späichernotzungswarnung</string>
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">Eng aner Faarf uweise, wa méi wéI <xliff:g id="level">%1$s</xliff:g> Prozent vun der Späicherplaz beluecht sinn</string>
+  <string name="pref_disk_usage_warning_level">Späicherbenotzungswarnung</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">Aner Faarf uweise, wa méi wéI <xliff:g id="level">%1$s</xliff:g> Prozent vun der Späicherplaz beluecht sinn</string>
   <string name="pref_compute_folder_statistics">Dossiersstatistike berechnen</string>
   <string name="pref_compute_folder_statistics_on">Warnung! D\'Berechnung vun den Dossiersstatistiken ass Zäit- a Ressourcen-opwänneg</string>
   <string name="pref_display_thumbs">Virschau</string>
-  <string name="pref_display_thumbs_summary">Eng Virschau fir Appen, Museksfichieren, Biller a Videoen uweisen</string>
+  <string name="pref_display_thumbs_summary">Virschau fir Appen, Museksfichieren, Biller a Videoen uweisen</string>
   <string name="pref_use_flinger">Wëschgeste benotzen</string>
   <string name="pref_use_flinger_summary">Vu lénks no riets wëschen, fir e Fichier oder en Dossier ze läschen</string>
   <string name="pref_general_advanced_settings_category">Erweidert</string>
@@ -323,7 +324,7 @@
   <string name="pref_show_relevance_widget">Relevanzindikator uweisen</string>
   <string name="pref_highlight_terms">Sichresultater ervirhiewen</string>
   <string name="pref_sort_search_results_mode">Zortéiermodus</string>
-  <string name="pref_sort_search_results_mode_none">Keng Sortéierung</string>
+  <string name="pref_sort_search_results_mode_none">Keng Zortéierung</string>
   <string name="pref_sort_search_results_mode_name">No Numm</string>
   <string name="pref_sort_search_results_mode_relevance">No Relevanz</string>
   <string name="pref_search_privacity_category">Privatsphär</string>
@@ -336,7 +337,7 @@
   <string name="pref_secure_storage_category">Séchere Späicher</string>
   <string name="pref_secure_storage_delayed_sync_title">Verzögert Synchroniséierung</string>
   <string name="pref_secure_storage_delayed_sync_summary">D\'Synchroniséierung vun engem séchere Fichierssystem ass en opwännege Virgank. Aktivéier dës Optioun, fir d\'Reaktiounszäit no all Operatioun ze verbesseren, andeem d\'Synchronisatioun vum Fichierssystem eréischt da gemaach gëtt, wann de System net méi benotzt gëtt. Doduerch besteet awer de Risiko, datt Informatiounen déi nach net synchroniséiert sinn, bei engem Ofstuerz vun der App verluer ginn.</string>
-  <string name="pref_secure_storage_reset_password_title">Passwuert zrécksetzen</string>
+  <string name="pref_secure_storage_reset_password_title">Passwuert änneren</string>
   <string name="pref_secure_storage_delete_storage_title">Späicher läschen</string>
   <string name="pref_editor_behaviour_category">Behuelen</string>
   <string name="pref_no_suggestions">Keng Virschléi</string>
@@ -344,11 +345,11 @@
   <string name="pref_word_wrap">Zeilenëmbroch</string>
   <string name="pref_hexdump">Hexdump-Binärfichieren</string>
   <string name="pref_hexdump_desc">Beim Opmaache vun engem Binärfichier en Hexdump vum Fichier generéieren an am Hex-Editor uweisen</string>
-  <string name="pref_editor_syntax_highlight_category">Syntaxervirhiewung</string>
+  <string name="pref_editor_syntax_highlight_category">Afierwung vun der Syntax</string>
   <string name="pref_syntax_highlight">Syntaxervirhiewung</string>
-  <string name="pref_syntax_highlight_desc">D\'Syntax vun engem Fichier beim Uweisen ervirhiewen (net fir all Fichierstypen disponibel)</string>
+  <string name="pref_syntax_highlight_desc">Hieft d\'Syntax vum Fichier ervir, deen am Editor ugewise gëtt (just wann e Syntaxervirhiewungsveraarbechter fir dëse Fichierstyp disponibel ass)</string>
   <string name="pref_syntax_highlight_color_scheme">Faarfschema</string>
-  <string name="pref_syntax_highlight_color_scheme_desc">D\'Faarfschema fir d\'Syntaxervirhiewung wielen</string>
+  <string name="pref_syntax_highlight_color_scheme_desc">Faarfschema fir d\'Syntaxervirhiewung auswielen</string>
   <string name="pref_syntax_sh_use_theme_default">Standard-Design benotzen</string>
   <string name="pref_syntax_sh_use_theme_default_desc">Dat standardméissegt Faarfschema vum aktuellen Design benotzen</string>
   <string name="pref_editor_sh_item_category">Elementer</string>
@@ -374,10 +375,10 @@
   <string name="ash_keyword">Schlësselwuert</string>
   <string name="ash_quoted_string">Text tëscht Gänseféisercher</string>
   <string name="ash_variable">Variabel</string>
-  <string name="secure_storage_unlock_title">Späicher entspären</string>
-  <string name="secure_storage_create_title">Späicher erstellen</string>
+  <string name="secure_storage_unlock_title">Séchere Späicher entspären</string>
+  <string name="secure_storage_create_title">Séchere Späicher erstellen</string>
   <string name="secure_storage_reset_title">Passwuert zrécksetzen</string>
-  <string name="secure_storage_delete_title">Späicher läschen</string>
+  <string name="secure_storage_delete_title">Séchere Späicher läschen</string>
   <string name="secure_storage_unlock_key_prompt_msg">Passwuert agi fir de séchere Fichierssystem z\'entspären.</string>
   <string name="secure_storage_unlock_key_new_msg">Gëff e Passwuert a fir de séchere Fichierssystem ze schützen.</string>
   <string name="secure_storage_unlock_key_reset_msg">Gëff dat aktuellt an dat neit Passwuert an, fir de séchere Fichierssystem zréckzesetzen.</string>
@@ -393,6 +394,7 @@
   <string name="secure_storage_unlock_failed">Kann de Späicher net entspären</string>
   <string name="secure_storage_unlock_validation_length">D\'Passwuert muss mindestens <xliff:g id="characters">%1$d</xliff:g> Zeechen hunn.</string>
   <string name="secure_storage_unlock_validation_equals">D\'Passwierder stëmmen net iwwereneen.</string>
+  <string name="secure_storage_open_file_warning">Doduerch gëtt de Fichier temporär op eng onverschlësselt Plaz kopéiert. E gëtt no enger Stonn geläscht.</string>
   <string name="print_unsupported_document">Dokumenteformat net ënnerstëtzt</string>
   <string name="print_unsupported_image">Bildformat net ënnerstëtzt</string>
   <string name="print_document_header">Dokument: <xliff:g id="document_name">%1$s</xliff:g></string>
@@ -401,4 +403,5 @@
   <string name="changelog_title">Ännerungshiwäiser</string>
   <string name="welcome_title">Wëllkomm</string>
   <string name="welcome_msg">Wëllkomm am Fichiersmanager vu CyanogenMod.\n\nDës App erméiglecht der de Fichierssystem ze duerchsichen an Operatiounen drop auszeféieren déi den Apparat kéinte stéieren. Fir Schied ze vermeide start d\'App am séchere Modus mat manner Privilegien.\n\nIwwer d\'Astellunge kanns du den erweiderten, voll-privilegéierten, Modus aktivéieren. Et ass deng eege Responsabilitéit, sécherzestellen datt keng vun den Operatiounen däi System zerstéiert.\n\nD\'Equipe vu CyanogenMod</string>
+  <string name="activity_not_found_exception">Konnt keng App fanne fir dëse Fichier opzemaachen</string>
 </resources>

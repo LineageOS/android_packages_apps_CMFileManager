@@ -31,4 +31,7 @@
   <plurals name="selection_files">
     <item quantity="other">已选择 <xliff:g id="files">%1$d</xliff:g> 个文件。</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> 个项目将会被删除。</item>
+  </plurals>
 </resources>

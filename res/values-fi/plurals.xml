@@ -36,4 +36,8 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> tiedosto valittu.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> tiedostoa valittu.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> kohde poistetaan.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> kohdetta poistetaan.</item>
+  </plurals>
 </resources>

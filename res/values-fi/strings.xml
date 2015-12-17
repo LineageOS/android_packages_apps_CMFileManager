@@ -42,7 +42,7 @@
   <string name="copy_text_cd">Napauta kopioidaksesi tekstin leikepöydälle</string>
   <string name="copy_text_msg">Teksti kopioitu leikepöydälle</string>
   <string name="warning_title">Varoitus</string>
-  <string name="error_title">Virhe löydetty</string>
+  <string name="error_title">Virhe</string>
   <string name="confirm_operation">Varmista tehtävä</string>
   <string name="confirm_overwrite">Varmista ylikirjoitus</string>
   <string name="confirm_deletion">Varmista poistaminen</string>
@@ -67,7 +67,7 @@
   <string name="msgs_read_only_filesystem">Tiedostojärjestelmä on \"vain luku\"-tilassa. Kokeile vaihtaa tiedostojärjestelmä luku/kirjoitustilaan ennen toimintoa.</string>
   <string name="msgs_illegal_argument">Väite virheellinen. Komento epäonnistui.</string>
   <string name="msgs_unresolved_inconsistencies">Komentoa ei suoritettu koska se loisi ristiriitoja.</string>
-  <string name="msgs_operation_not_allowed_in_current_directory">Komentoa ei voi suorittaa nykyisessä kansiossa.\n\nKohdekansio ei voi olla lähdekansion alikansio.</string>
+  <string name="msgs_operation_not_allowed_in_current_directory">Kohdekansio ei voi olla lähteen alikansio tai sama kuin lähde.</string>
   <string name="msgs_push_again_to_exit">Paina uudestaan poistuaksesi.</string>
   <string name="msgs_not_registered_app">Mitään sovellusta ei ole rekisteröity avaamaan tätä tiedostotyyppiä.</string>
   <string name="msgs_overwrite_files">Osa tiedostoista on jo kohdekansiossa.\n\nKorvataanko?</string>
@@ -105,12 +105,12 @@
   <string name="filesystem_info_warning_title">Ei tietoja</string>
   <string name="filesystem_info_warning_msg">Tietoja tiedostojärjestelmästä ei ole saatavilla.</string>
   <string name="filesystem_info_cant_be_mounted_msg">Tiedostojärjestelmää ei voida kiinnittää/poistaa kiinnitystä.</string>
-  <string name="filesystem_info_mount_not_allowed_msg">Tiedostojärjestelmän kiinnitystoiminnot ei ole sallittuja turvallisessa tilassa. Vaihta tästä Root-tilaan.</string>
+  <string name="filesystem_info_mount_not_allowed_msg">Tiedostojärjestelmän kiinnitystoiminnot ei ole sallittuja turvallisessa tilassa. Vaihda tästä Root-tilaan.</string>
   <string name="filesystem_info_mount_failed_msg">Tiedostojärjestelmän kiinnitystoiminto epäonnistui. Joitakin tiedostojärjestelmiä, kuten SD-kortteja, ei voi kiinnittää/poistaa kiinnitystä koska ne on suunniteltu vain-luku tiedostojärjestelmiksi.</string>
   <string name="filesystem_info_dialog_title">Tiedostojärjestelmän tiedost</string>
   <string name="filesystem_info_dialog_tab_info">Tiedot</string>
   <string name="filesystem_info_dialog_tab_disk_usage">Levyn käyttö</string>
-  <string name="filesystem_info_dialog_status">Tila:</string>
+  <string name="filesystem_info_dialog_status">Kiinnitetty:</string>
   <string name="filesystem_info_dialog_mount_point">Kiinnityspaikka:</string>
   <string name="filesystem_info_dialog_device">Laite:</string>
   <string name="filesystem_info_dialog_type">Tyyppi:</string>
@@ -140,7 +140,7 @@
   <string name="fso_properties_dialog_owner">Omistaja:</string>
   <string name="fso_properties_dialog_group">Ryhmä:</string>
   <string name="fso_properties_dialog_others">Muut:</string>
-  <string name="fso_properties_dialog_include_in_media_scan">Ohita mediaskannausSkip media scan:</string>
+  <string name="fso_properties_dialog_include_in_media_scan">Ohita mediaskannaus:</string>
   <string name="fso_failed_to_allow_media_scan">Mediaskannauksen suorittaminen epäonnistui</string>
   <string name="fso_failed_to_prevent_media_scan">Mediaskannauksen estäminen epäonnistui</string>
   <string name="fso_delete_nomedia_dir_title">Poista .nomedia kansio</string>
@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Valitse aloituskansio.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Poista kirjanmerkki.</string>
   <string name="bookmarks_msgs_add_success">Kirjanmerkki luotiin onnistuneesti.</string>
+  <string name="bookmarks_msgs_add_exists">Kirjanmerkki on jo olemassa.</string>
   <string name="initial_directory_dialog_title">Aloituskansio</string>
   <string name="initial_directory_label">Valitse aloituskansio:</string>
   <string name="initial_directory_relative_msg">Suhteelliset polut ei ole sallittuja.</string>
@@ -243,6 +244,7 @@
   <string name="input_name_dialog_label">Nimi:</string>
   <string name="input_name_dialog_message_empty_name">Nimi ei voi olla tyhjä.</string>
   <string name="input_name_dialog_message_invalid_path_name">Virheellinen nimi. Seuraavat merkit ei ole sallittuja: \'<xliff:g id="invalid_characters">%1$s</xliff:g>\'</string>
+  <string name="input_name_dialog_message_invalid_name_length">Merkkien enimmäismäärä saavutettu.</string>
   <string name="input_name_dialog_message_invalid_name">Virheellinen nimi. Nimet \'.\' ja \'..\' ei ole sallittuja.</string>
   <string name="input_name_dialog_message_name_exists">Nimi on jo käytössä.</string>
   <string name="associations_dialog_title">Yhdistykset</string>
@@ -296,7 +298,6 @@
   <string name="pref_editor">Editorin asetukset</string>
   <string name="pref_themes">Teemat</string>
   <string name="pref_about">Tietoja</string>
-  <string name="pref_about_summary">Tiedostonhallinta v<xliff:g id="version">%1$s</xliff:g>\nCopyright \u00A9 2012-2014 The CyanogenMod Project</string>
   <string name="pref_general_behaviour_category">Yleiset</string>
   <string name="pref_case_sensitive_sort">Lajittelu kirjainkoon mukaan</string>
   <string name="pref_case_sensitive_sort_summary">Huomioi kirjainkoko selatessa tai lajitellessa hakutuloksia</string>
@@ -336,7 +337,7 @@
   <string name="pref_secure_storage_category">Turvallinen tallennustila</string>
   <string name="pref_secure_storage_delayed_sync_title">Viivästetty synkronointi</string>
   <string name="pref_secure_storage_delayed_sync_summary">Turvallisten tiedostojärjestelmien synkronointi vaatii paljon resursseja. Ottamalla tämän käyttöön, toiminnot vastaavat nopeammin, ja synkronointi suoritetaan kun tiedostojärjestelmää ei käytetä, mutta sovelluksen kaatuessa menetät odottavat tiedot.</string>
-  <string name="pref_secure_storage_reset_password_title">Nollaa salasana</string>
+  <string name="pref_secure_storage_reset_password_title">Vaihda salasana</string>
   <string name="pref_secure_storage_delete_storage_title">Poista tallennustila</string>
   <string name="pref_editor_behaviour_category">Käyttäytyminen</string>
   <string name="pref_no_suggestions">Ei ehdotuksia</string>
@@ -344,9 +345,9 @@
   <string name="pref_word_wrap">Rivitys</string>
   <string name="pref_hexdump">Hex dump-binääritiedostot</string>
   <string name="pref_hexdump_desc">Avattaessa binääritiedostoa, luo hex dump tiedostosta ja avaa se heksadesimaalieditorissa</string>
-  <string name="pref_editor_syntax_highlight_category">Syntaksinkorostus</string>
+  <string name="pref_editor_syntax_highlight_category">Syntaksin korostus</string>
   <string name="pref_syntax_highlight">Syntaksinkorostus</string>
-  <string name="pref_syntax_highlight_desc">Korota syntaksit kun tiedosto näytetään editorissa (vain kun tiedostotyyppi tukee sitä)</string>
+  <string name="pref_syntax_highlight_desc">Korosta tiedoston syntaksi editorissa (vain jos syntaksin korostus tukee tiedostomuotoa)</string>
   <string name="pref_syntax_highlight_color_scheme">Väriteema</string>
   <string name="pref_syntax_highlight_color_scheme_desc">Valitse syntaksin korostuksen värisävy</string>
   <string name="pref_syntax_sh_use_theme_default">Käytä teeman oletusta</string>
@@ -374,10 +375,10 @@
   <string name="ash_keyword">Hakusana</string>
   <string name="ash_quoted_string">Merkkijono</string>
   <string name="ash_variable">Muuttuja</string>
-  <string name="secure_storage_unlock_title">Avaa tallennustila</string>
-  <string name="secure_storage_create_title">Luo tallennustila</string>
+  <string name="secure_storage_unlock_title">Avaa turvallinen tallennustila</string>
+  <string name="secure_storage_create_title">Luo turvallinen tallennustila</string>
   <string name="secure_storage_reset_title">Nollaa salasana</string>
-  <string name="secure_storage_delete_title">Poista tallennustila</string>
+  <string name="secure_storage_delete_title">Poista turvallinen tallennustila</string>
   <string name="secure_storage_unlock_key_prompt_msg">Kirjoita salasana avataksesi turvallisen tallennustilan.</string>
   <string name="secure_storage_unlock_key_new_msg">Kirjoita salasana suojataksesi turvallisen tallennustilan.</string>
   <string name="secure_storage_unlock_key_reset_msg">Kirjoita nykyinen ja uusi salasana palauttaaksesi turvallisen tallennustilan.</string>
@@ -393,6 +394,7 @@
   <string name="secure_storage_unlock_failed">Ei voida avata tallennustilaa</string>
   <string name="secure_storage_unlock_validation_length">Salasanassa on oltava vähintään <xliff:g id="characters">%1$d</xliff:g> merkkiä.</string>
   <string name="secure_storage_unlock_validation_equals">Salasanat eivät täsmää.</string>
+  <string name="secure_storage_open_file_warning">Tämä kopioi tiedostot väliaikaisesti salaamattomaan kansioon. Väliaikaiset tiedostot poistetaan tunnin kuluttua.</string>
   <string name="print_unsupported_document">Asiakirjamuotoa ei tueta</string>
   <string name="print_unsupported_image">Kuvamuotoa ei tueta</string>
   <string name="print_document_header">Asiakirja: <xliff:g id="document_name">%1$s</xliff:g></string>
@@ -401,4 +403,5 @@
   <string name="changelog_title">Muutosloki</string>
   <string name="welcome_title">Tervetuloa</string>
   <string name="welcome_msg">Tervetuloa CyanogenModin tiedostonhallintaan.\n\nTällä sovelluksella voit selata tiedostojärjestelmää ja tehdä muutoksia jotka voivat rikkoa laitteesi. Ehkäistäksemme rikkoutumisia, sovellus käynnistyy turvallisessa tilassa jossa ei ole kaikkia oikeuksia.\n\nSaat täydet oikeudet käyttöön asetuksista. Teet kaikki muutokset omalla vastuullasi.\n\nCyanogenMod-tiimi.\n</string>
+  <string name="activity_not_found_exception">Tiedoston avaamiseen sopivaa sovellusta ei löydy</string>
 </resources>

@@ -829,7 +829,6 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             this.mCurrentDir = this.mPreviousDir;
             this.mPreviousDir = null;
         }
-
         //Reload data
         changeCurrentDir(newDir, addToHistory, reload, useCurrent, searchInfo, scrollTo);
     }
@@ -1176,6 +1175,9 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
 
         // Get the adapter and the fso
         FileSystemObjectAdapter adapter = ((FileSystemObjectAdapter)parent.getAdapter());
+        if (adapter == null || position < 0 || (position >= adapter.getCount())) {
+            return false;
+        }
         FileSystemObject fso = adapter.getItem(position);
 
         // Parent directory hasn't actions
@@ -1213,7 +1215,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             changeCurrentDir(fso.getFullPath(), searchInfo);
         } else {
             // Open the file with the preferred registered app
-            IntentsActionPolicy.openFileSystemObject(getContext(), fso, false, null, null);
+            IntentsActionPolicy.openFileSystemObject(getContext(), fso, false, null);
         }
     }
 
@@ -1245,7 +1247,7 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
             // Open the file (edit or pick)
             if (this.mNavigationMode.compareTo(NAVIGATION_MODE.BROWSABLE) == 0) {
                 // Open the file with the preferred registered app
-                IntentsActionPolicy.openFileSystemObject(getContext(), fso, false, null, null);
+                IntentsActionPolicy.openFileSystemObject(getContext(), fso, false, null);
             } else {
                 // Request a file pick selection
                 if (this.mOnFilePickedListener != null) {
@@ -1269,6 +1271,13 @@ BreadcrumbListener, OnSelectionChangedListener, OnSelectionListener, OnRequestRe
         }
         if (clearSelection) {
             onDeselectAll();
+        }
+    }
+
+    @Override
+    public void onClearCache(Object o) {
+        if (o instanceof FileSystemObject && mAdapter != null) {
+            mAdapter.clearCache((FileSystemObject)o);
         }
     }
 

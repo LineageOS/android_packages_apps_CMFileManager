@@ -86,11 +86,23 @@ public final class DeleteActionPolicy extends ActionsPolicy {
             final OnRequestRefreshListener onRequestRefreshListener,
             final OnItemFlingerResponder onItemFlingerResponder) {
 
+        // inform of the number of FSOs that will be deleted
+        int numberOfItemsSelected = files.size();
+        StringBuilder messageBuilder = new StringBuilder(
+            ctx.getResources().getQuantityString(
+                R.plurals.deleting_n_items,
+                numberOfItemsSelected,
+                numberOfItemsSelected
+            )
+        )
+        .append('\n')
+        .append(ctx.getString(R.string.actions_ask_undone_operation_msg));
+
         // Ask the user before remove
         AlertDialog dialog = DialogHelper.createYesNoDialog(
             ctx,
             R.string.confirm_deletion,
-            R.string.actions_ask_undone_operation_msg,
+            messageBuilder.toString(),
             new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface alertDialog, int which) {

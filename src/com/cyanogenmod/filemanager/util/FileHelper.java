@@ -26,16 +26,11 @@ import com.cyanogenmod.filemanager.FileManagerApplication;
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.commands.SyncResultExecutable;
 import com.cyanogenmod.filemanager.commands.java.Program;
-import com.cyanogenmod.filemanager.commands.shell.InvalidCommandDefinitionException;
 import com.cyanogenmod.filemanager.commands.shell.ResolveLinkCommand;
 import com.cyanogenmod.filemanager.console.CancelledOperationException;
-import com.cyanogenmod.filemanager.console.CommandNotFoundException;
 import com.cyanogenmod.filemanager.console.Console;
-import com.cyanogenmod.filemanager.console.ConsoleAllocException;
 import com.cyanogenmod.filemanager.console.ExecutionException;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
-import com.cyanogenmod.filemanager.console.NoSuchFileOrDirectory;
-import com.cyanogenmod.filemanager.console.OperationTimeoutException;
 import com.cyanogenmod.filemanager.console.java.JavaConsole;
 import com.cyanogenmod.filemanager.model.AID;
 import com.cyanogenmod.filemanager.model.BlockDevice;
@@ -63,7 +58,6 @@ import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.ClosedByInterruptException;
@@ -84,6 +78,11 @@ import java.util.UUID;
 public final class FileHelper {
 
     private static final String TAG = "FileHelper"; //$NON-NLS-1$
+
+    // Scheme for file and directory picking
+    public static final String FILE_URI_SCHEME = "file"; //$NON-NLS-1$
+    public static final String FOLDER_URI_SCHEME = "folder"; //$NON-NLS-1$
+    public static final String DIRECTORY_URI_SCHEME = "directory"; //$NON-NLS-1$
 
     /**
      * Special extension for compressed tar files
@@ -739,14 +738,28 @@ public final class FileHelper {
                     break;
 
                 case MIME_TYPE_RESTRICTION:
+                    String[] mimeTypes = null;
                     if (value instanceof String) {
-                        String mimeType = (String)value;
-                        if (mimeType.compareTo(MimeTypeHelper.ALL_MIME_TYPES) != 0) {
+                        mimeTypes = new String[] {(String) value};
+                    } else if (value instanceof String[]) {
+                        mimeTypes = (String[]) value;
+                    }
+                    if (mimeTypes != null) {
+                        boolean matches = false;
+                        for (String mimeType : mimeTypes) {
+                            if (mimeType.compareTo(MimeTypeHelper.ALL_MIME_TYPES) == 0) {
+                                matches = true;
+                                break;
+                            }
                             // NOTE: We don't need the context here, because mime-type
                             // database should be loaded prior to this call
-                            if (!MimeTypeHelper.matchesMimeType(null, fso, mimeType)) {
-                                return false;
+                            if (MimeTypeHelper.matchesMimeType(null, fso, mimeType)) {
+                                matches = true;
+                                break;
                             }
+                        }
+                        if (!matches) {
+                            return false;
                         }
                     }
                     break;
@@ -921,17 +934,17 @@ public final class FileHelper {
      * that is not current used by the filesystem.
      *
      * @param ctx The current context
-     * @param parentDir The directory in which we want to make the file
+     * @param files The list of files of the current directory
      * @param attemptedName The attempted name
      * @param regexp The resource of the regular expression to create the new name
      * @return String The new non-existing name
      */
     public static String createNonExistingName(
-            final Context ctx, final String parentDir,
+            final Context ctx, final List<FileSystemObject> files,
             final String attemptedName, int regexp) {
         // Find a non-exiting name
         String newName = attemptedName;
-        if (!isNameExists(ctx, parentDir, newName)) return newName;
+        if (!isNameExists(files, newName)) return newName;
         do {
             String name  = FileHelper.getName(newName);
             String ext  = FileHelper.getExtension(newName);
@@ -941,30 +954,27 @@ public final class FileHelper {
                 ext = "." + ext; //$NON-NLS-1$
             }
             newName = ctx.getString(regexp, name, ext);
-        } while (isNameExists(ctx, parentDir, newName));
+        } while (isNameExists(files, newName));
         return newName;
     }
 
     /**
      * Method that checks if a name exists in the current directory.
      *
-     * @param context The application context
-     * @param parentDir The full path to the parent directory
+     * @param files The list of files of the current directory
      * @param name The name to check
      * @return boolean Indicate if the name exists in the current directory
      */
-    public static boolean isNameExists(Context context, String parentDir, String name) {
-        if (parentDir == null || parentDir.equals(ROOT_DIRECTORY)) {
-            parentDir = "";
-        }
+    public static boolean isNameExists(List<FileSystemObject> files, String name) {
         //Verify if the name exists in the current file list
-        try {
-            return CommandHelper.getFileInfo(context, parentDir + "/" + name, null) != null;
-        } catch (Exception e) {
-            // This is a slight misreporting, however, I don't want to do a bunch of refactoring
-            Log.i(TAG, "Failed to get file info: " + e.getMessage());
-            return false;
+        int cc = files.size();
+        for (int i = 0; i < cc; i++) {
+            FileSystemObject fso = files.get(i);
+            if (fso.getName().compareTo(name) == 0) {
+                return true;
+            }
         }
+        return false;
     }
 
     /**
@@ -1218,6 +1228,7 @@ public final class FileHelper {
             } catch (IOException e) {
                 Log.e(TAG, "Error while closing output channel during copyFileWithNio");
             }
+
         }
         return true;
     }
@@ -1538,5 +1549,20 @@ public final class FileHelper {
             return false;
         }
         return src.getAbsolutePath().startsWith(dir.getAbsolutePath());
+    }
+
+    /**
+     * Method that checks if both path are the same (by checking sensitive cases).
+     *
+     * @param src The source path
+     * @param dst The destination path
+     * @return boolean If both are the same path
+     */
+    public static boolean isSamePath(String src, String dst) {
+        // This is only true if both are exactly the same path or the same file in insensitive
+        // file systems
+        File o1 = new File(src);
+        File o2 = new File(dst);
+        return o1.equals(o2);
     }
 }

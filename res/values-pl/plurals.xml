@@ -41,4 +41,9 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> zaznaczone pliki.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> zaznaczonych plików.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> plik zostanie usunięty.</item>
+    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> pliki zostaną usunięte.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> plików zostanie usuniętych.</item>
+  </plurals>
 </resources>

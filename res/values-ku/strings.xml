@@ -42,7 +42,6 @@
   <string name="copy_text_cd">پەنجەی پێدا بنێ بۆ لەبەرگرتنەوەی دەق بۆ فۆڵدەری کاتی</string>
   <string name="copy_text_msg">دەق لەبەریگیرایەوە بۆ فۆڵدەری کاتی</string>
   <string name="warning_title">ئاگادارکردنەوە</string>
-  <string name="error_title">هەڵە ڕوویدا</string>
   <string name="confirm_operation">دڵنیاکردنەوەی فرمان</string>
   <string name="confirm_overwrite">دڵنیاکردنەوە لە گۆڕین</string>
   <string name="confirm_deletion">دڵنیاکردنەوی سڕینەوە</string>
@@ -65,7 +64,6 @@
   <string name="msgs_read_only_filesystem">پەڕگەی سیستەم تەنها-خوێندەوەیە. پێش لە هەوڵدانەوە بۆ کردارەکە پەڕگەی سیستەم وەکوو خوێندنەوە-نووسین جێگیر بکە.</string>
   <string name="msgs_illegal_argument">گفت و گۆی نایاسایی.داواکردن سه‌رکه‌وتوونه‌بوو.</string>
   <string name="msgs_unresolved_inconsistencies">کارپێکردن ڕێپێنادرێت له‌به‌ر دروستکردنی جیاوازی.</string>
-  <string name="msgs_operation_not_allowed_in_current_directory">کارپێکردن ڕێپێنادرێت له‌م بوخچه‌یه‌دا.\n\nبوخچه‌ی لادان ناتوانرێت ببێ به‌ نیمچه‌-بوخچه‌ له‌ سه‌رچاوه‌ یان هه‌مان سه‌رچاوه‌.</string>
   <string name="msgs_push_again_to_exit">دووبارە پەنجەی پێدا بنێ بۆ دەرچوون.</string>
   <string name="msgs_not_registered_app">هیچ به‌رنامه‌یه‌ک نییه‌ تۆمارکرابیت بۆ سه‌رپه‌رشتی کردنی جۆری ئه‌م په‌ڕگه‌یه‌.</string>
   <string name="msgs_overwrite_files">هه‌ندێک له‌ فایله‌کان پێشتر هه‌ن له‌ بوخچه‌ی مه‌به‌ست.\n\nجێگه‌بگرنه‌وه‌؟</string>
@@ -99,12 +97,10 @@
   <string name="filesystem_info_warning_title">زانیاری نیە</string>
   <string name="filesystem_info_warning_msg">هیچ زانیارییەک لەبەردەستدا نیە بۆ فایلی سیستەم.</string>
   <string name="filesystem_info_cant_be_mounted_msg">په‌ڕگه‌ی سیسته‌م ناتوانرێ ده‌ربکرێ/پێوه‌بکرێ.</string>
-  <string name="filesystem_info_mount_not_allowed_msg">لێکردنه‌وه‌ی په‌ڕگه‌ی سیسته‌م ڕێگه‌پێنه‌دراوه‌ له‌ باری سه‌لامه‌تیدا. ته‌پ بکه‌ بۆ گۆڕینی ده‌سته‌ڵاتی ڕووت.</string>
   <string name="filesystem_info_mount_failed_msg">لێکردنه‌وه‌ی په‌ڕگه‌ی سیسته‌م سه‌رکه‌وتوونه‌بوو.هه‌ندێ په‌ڕگه‌ی سیسته‌م، وه‌ک بیرگه‌ی ناوه‌کی. ناتوانرێ لێبکرێته‌وه‌/]ێوه‌بکرێ له‌به‌ر ئه‌وه‌ی ئه‌وان ته‌نیا له‌ باری خوێندنه‌وه‌دان.</string>
   <string name="filesystem_info_dialog_title">زانیاری په‌ڕگه‌ی سیسته‌م</string>
   <string name="filesystem_info_dialog_tab_info">زانیاری</string>
   <string name="filesystem_info_dialog_tab_disk_usage">یادگەی بەکارهاتوو</string>
-  <string name="filesystem_info_dialog_status">دۆخ:</string>
   <string name="filesystem_info_dialog_mount_point">خاڵی به‌ستن:</string>
   <string name="filesystem_info_dialog_device">ئامێر:</string>
   <string name="filesystem_info_dialog_type">جۆر:</string>
@@ -116,7 +112,7 @@
   <string name="filesystem_info_dialog_free_disk_usage">بەتاڵ:</string>
   <string name="fso_properties_permissions_not_allowed_msg">ده‌سته‌ڵاتی کارکردنه‌کان ڕێگه‌پێنه‌دراون له‌ باری سه‌لامه‌تدا. تاپ بکه‌ بۆ گۆڕینی ده‌سته‌ڵاتی ڕووت.</string>
   <string name="fso_properties_failed_to_change_owner_msg">گۆڕینی خاوه‌نی سه‌رکه‌وتوونه‌بوو.\n\nبۆ هۆکاری سه‌لامه‌تی، هه‌ندێ فایل، وه‌ک بیرگه‌ی ناوه‌کی ، ڕێگه‌ نادات به‌ گۆڕینی خاوه‌ن.</string>
-  <string name="fso_properties_failed_to_change_group_msg">گۆڕینی گروپ سه‌رکه‌وتوونه‌بوو.\n\nبۆ هۆکاری سه‌لامه‌تی، هه‌ندێ فایل، وه‌ک بیرگه‌ی ناوه‌کی ، ڕێگه‌ نادات به‌ گۆڕینی گروپ.</string>
+  <string name="fso_properties_failed_to_change_group_msg">گۆڕینی کۆمەڵ سه‌رکه‌وتوونه‌بوو.\n\nبۆ هۆکاری سه‌لامه‌تی، هه‌ندێ فایل، وه‌ک بیرگه‌ی ناوه‌کی ، ڕێگه‌ نادات به‌ گۆڕینی کۆمەڵ.</string>
   <string name="fso_properties_failed_to_change_permission_msg">گۆڕینی ده‌سته‌ڵات سه‌رکه‌وتوونه‌بوو.\n\nبۆ هۆکاری سه‌لامه‌تی، هه‌ندێ فایل، وه‌ک بیرگه‌ی ناوه‌کی ، ڕێگه‌ نادات به‌ گۆڕینی ده‌سته‌لات.</string>
   <string name="fso_properties_dialog_title">تایبەتمەندییەکان</string>
   <string name="fso_properties_dialog_tab_info">زانیاری</string>
@@ -132,7 +128,7 @@
   <string name="fso_properties_dialog_last_modified_date">دەستکاریکراو:</string>
   <string name="fso_properties_dialog_last_changed_date">گۆڕانکاریکراو:</string>
   <string name="fso_properties_dialog_owner">خاوەن:</string>
-  <string name="fso_properties_dialog_group">گرووپ:</string>
+  <string name="fso_properties_dialog_group">کۆمەڵ:</string>
   <string name="fso_properties_dialog_others">جۆری تر:</string>
   <string name="fso_properties_dialog_include_in_media_scan">فەرامۆشکردنی پشکنینی میدیا:</string>
   <string name="fso_failed_to_allow_media_scan">سه‌رکه‌وتوونه‌بوو له‌ پشکنینی ڕه‌نگاڵه‌</string>
@@ -289,7 +285,6 @@
   <string name="pref_editor">هەڵبژاردنەکانی دەستکاریکەر</string>
   <string name="pref_themes">ڕووکارەکان</string>
   <string name="pref_about">دەربارەی</string>
-  <string name="pref_about_summary">بەڕێوەبەری فایل وەشانی<xliff:g id="version">%1$s</xliff:g>\nمافی لەبەرگرتنەوەی پارێزراوە بۆ \u00A9 2012-2014 پڕۆژەی سیانۆجین مۆد</string>
   <string name="pref_general_behaviour_category">گشتی</string>
   <string name="pref_case_sensitive_sort">شێوازی هەستیاری</string>
   <string name="pref_case_sensitive_sort_summary">ڕه‌چاوکردنی به‌رگ کاتێک ئاڕاسته‌ده‌کات یان ئه‌نجامی گه‌ڕان ڕیز ده‌کات</string>
@@ -329,7 +324,6 @@
   <string name="pref_secure_storage_category">پارێزگاری بیرگە</string>
   <string name="pref_secure_storage_delayed_sync_title">دواین هاوکاتکراو</string>
   <string name="pref_secure_storage_delayed_sync_summary">هاوکاتسازیی پەڕگە پارێزراوەکانی سیستەم کردارێکی بەنرخە. ئەم بژاردەیە چالاک بکە بۆ خێراترکردنی کاردانەوەی هەر یەک لە کردارەکان و هەروەها جێبەجێکردنی هاوکاتگەری کاتێک پەڕگەی سیستەم لە دۆخێکی ناکارادایە بەڵام ئەگەر بەرنامەکە کەوتە تێکشکانەوە، ئەو زانیارییانەی کە ماونەتەوە بە بەهای لەدەستدانیان هاوکاتگەری ناکرێن.</string>
-  <string name="pref_secure_storage_reset_password_title">ڕێکخستنەوەی تێپەڕە ووشە</string>
   <string name="pref_secure_storage_delete_storage_title">سڕینەوەی بیرگە</string>
   <string name="pref_editor_behaviour_category">ڕه‌وشت</string>
   <string name="pref_no_suggestions">پێشنیار نەکراوە</string>
@@ -337,9 +331,7 @@
   <string name="pref_word_wrap">پێچانی ده‌ق</string>
   <string name="pref_hexdump">ده‌مپی هێکس و په‌ڕگه‌ی باینه‌ری</string>
   <string name="pref_hexdump_desc">کاتێک کار له‌سه‌ر په‌ڕگه‌یه‌کی باینه‌ری ده‌که‌یت، ده‌مپی هێکس بکه‌ بۆ په‌ڕگه‌که‌ و به‌ بینه‌ری هێکس بیکه‌ره‌وه‌</string>
-  <string name="pref_editor_syntax_highlight_category">ڕێزمانی به‌رچاو</string>
   <string name="pref_syntax_highlight">ڕێزمانی به‌رچاو</string>
-  <string name="pref_syntax_highlight_desc">به‌رچاوکردنی ڕێزمانی په‌ڕگه‌ی نیشانراو له‌ ده‌ستکاریکه‌ر (ته‌نیا کاتێک که‌ ڕێزمان به‌رچاوبێت له‌ پرۆسه‌ی ئاماده‌ی جۆری په‌ڕگه‌)</string>
   <string name="pref_syntax_highlight_color_scheme">ڕەنگی ڕووکار</string>
   <string name="pref_syntax_highlight_color_scheme_desc">ڕێزمانی به‌رچاوی پلانی ڕه‌نگ هه‌ڵبژێره‌</string>
   <string name="pref_syntax_sh_use_theme_default">بەکارهێنانی ڕووکاری سەرەکی</string>

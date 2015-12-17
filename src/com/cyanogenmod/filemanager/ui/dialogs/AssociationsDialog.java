@@ -136,6 +136,7 @@ public class AssociationsDialog implements OnItemClickListener {
         this.mRemember.setVisibility(
                 isPlatformSigned && this.mAllowPreferred ? View.VISIBLE : View.GONE);
         this.mGrid = (GridView)v.findViewById(R.id.associations_gridview);
+        mGrid.setChoiceMode(GridView.CHOICE_MODE_SINGLE);
         AssociationsAdapter adapter =
                 new AssociationsAdapter(this.mContext, this.mGrid, this.mIntents, this);
         this.mGrid.setAdapter(adapter);
@@ -209,12 +210,11 @@ public class AssociationsDialog implements OnItemClickListener {
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         // If the item is selected, then just open it like ActivityChooserView
         // If there is no parent, that means an internal call. In this case ignore it.
-        if (parent != null && ((ViewGroup)view).isSelected()) {
+        if (parent != null && mGrid.isItemChecked(position)) {
             this.mDialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
 
         } else {
-            deselectAll();
-            ((ViewGroup)view).setSelected(true);
+            mGrid.setItemChecked(position, true);
 
             // Internal editors can be associated
             boolean isPlatformSigned = AndroidHelper.isAppPlatformSignature(this.mContext);
@@ -252,7 +252,7 @@ public class AssociationsDialog implements OnItemClickListener {
                         // Select the item
                         ViewGroup item = (ViewGroup)this.mGrid.getChildAt(i);
                         if (item != null) {
-                            if (!item.isSelected()) {
+                            if (!mGrid.isItemChecked(i)) {
                                 onItemClick(null, item, i, item.getId());
                                 this.mRemember.setChecked(true);
                                 ret = false;
@@ -292,26 +292,13 @@ public class AssociationsDialog implements OnItemClickListener {
                 ResolveInfo info = this.mIntents.get(i);
                 if (info.activityInfo.name.equals(this.mPreferred.activityInfo.name)) {
                     ViewGroup item = (ViewGroup)this.mGrid.getChildAt(i);
-                    if (item != null && item.isSelected()) {
+                    if (item != null && mGrid.isItemChecked(i)) {
                         return true;
                     }
                 }
             }
         }
         return false;
-    }
-
-    /**
-     * Method that deselect all the items of the grid view
-     */
-    private void deselectAll() {
-        int cc = this.mGrid.getChildCount();
-        for (int i = 0; i < cc; i++) {
-            ViewGroup item = (ViewGroup)this.mGrid.getChildAt(i);
-            if (item != null) {
-                item.setSelected(false);
-            }
-        }
     }
 
     /**
@@ -322,15 +309,7 @@ public class AssociationsDialog implements OnItemClickListener {
      */
     ResolveInfo getSelected() {
         AssociationsAdapter adapter = (AssociationsAdapter)this.mGrid.getAdapter();
-        int cc = this.mGrid.getChildCount();
-        int firstVisible = this.mGrid.getFirstVisiblePosition();
-        for (int i = 0; i < cc; i++) {
-            ViewGroup item = (ViewGroup)this.mGrid.getChildAt(i);
-            if (item != null && item.isSelected()) {
-                return adapter.getItem(i + firstVisible);
-            }
-        }
-        return null;
+        return adapter.getItem(mGrid.getCheckedItemPosition());
     }
 
     /**
