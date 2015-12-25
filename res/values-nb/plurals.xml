@@ -36,4 +36,8 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fil valgt.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> fil valgt.</item>
   </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element vil bli slettet.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> elementer vil bli slettet.</item>
+  </plurals>
 </resources>
