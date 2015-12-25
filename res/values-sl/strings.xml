@@ -121,9 +121,9 @@
   <string name="filesystem_info_dialog_used_disk_usage">Uporabljeno:</string>
   <string name="filesystem_info_dialog_free_disk_usage">Prosto:</string>
   <string name="fso_properties_permissions_not_allowed_msg">Opravila dovoljenj niso dovoljena v Varnem načinu. Tapnite, da spremenite v način Skrbniškega dostopa.</string>
-  <string name="fso_properties_failed_to_change_owner_msg">Opravilo spremembe lastnika ni uspelo.\n\nNekateri datotečni sistemi, kot so kartice SD, ne omogočajo spreminjanje lastnikov iz varnostnih razlogov.</string>
-  <string name="fso_properties_failed_to_change_group_msg">Opravilo spremembe skupine ni uspelo.\n\nNekateri datotečni sistemi, kot so kartice SD, ne omogočajo spreminjanje skupin iz varnostnih razlogov.</string>
-  <string name="fso_properties_failed_to_change_permission_msg">Opravilo spremembe dovoljenj ni uspelo.\n\nNekateri datotečni sistemi, kot so kartice SD, ne omogočajo spreminjanje dovoljenj iz varnostnih razlogov.</string>
+  <string name="fso_properties_failed_to_change_owner_msg">Opravilo spremembe lastnika ni uspelo.\n\nNekateri datotečni sistemi, kot so kartice SD, ne dovolijo spreminjanja lastnikov iz varnostnih razlogov.</string>
+  <string name="fso_properties_failed_to_change_group_msg">Opravilo spremembe skupine ni uspelo.\n\nNekateri datotečni sistemi, kot so kartice SD, ne dovolijo spreminjanja skupin iz varnostnih razlogov.</string>
+  <string name="fso_properties_failed_to_change_permission_msg">Opravilo spremembe dovoljenj ni uspelo.\n\nNekateri datotečni sistemi, kot so kartice SD, ne dovolijo spreminjanja dovoljenj iz varnostnih razlogov.</string>
   <string name="fso_properties_dialog_title">Lastnosti</string>
   <string name="fso_properties_dialog_tab_info">Podatki</string>
   <string name="fso_properties_dialog_tab_permissions">Dovoljenja</string>
@@ -141,7 +141,7 @@
   <string name="fso_properties_dialog_group">Skupina:</string>
   <string name="fso_properties_dialog_others">Ostalo:</string>
   <string name="fso_properties_dialog_include_in_media_scan">Preskoči preiskovanje nosilcev:</string>
-  <string name="fso_failed_to_allow_media_scan">Omogočanje preiskovanja nosilca je spodletelo</string>
+  <string name="fso_failed_to_allow_media_scan">Dovolitev preiskovanja nosilca je spodletela</string>
   <string name="fso_failed_to_prevent_media_scan">Onemogočanje preiskovanja nosilca je spodletelo</string>
   <string name="fso_delete_nomedia_dir_title">Izbriši mapo .nomedia</string>
   <string name="fso_delete_nomedia_dir_body">Ta mapa vsebuje mapo .nomedia.\n\nAli jo želite izbrisati z vso njeno vsebino?</string>
@@ -402,6 +402,6 @@
   <string name="security_warning_extract">Opozorilo! \n\nRazširjanje arhivske datoteke z relativno ali absolutno potjo lahko poškoduje napravo s prepisom sistemskih datotek.\n\nAli želite nadaljevati?</string>
   <string name="changelog_title">Dnevnik sprememb</string>
   <string name="welcome_title">Dobrodošli</string>
-  <string name="welcome_msg">Dobrodošli v upravljalniku datotek CyanogenMod.\n\nTa program vam omogoča, da raziščete datotečni sistem in izvajate opravila, ki lahko poškoduje vašo napravo. V izogib škodi se bo program začel v varnem načinu z nizkimi dovoljenji.\n\nDo naprednega načina z visokimi dovoljenji lahko dostopate v nastavitvah. Vaša odgovornost je zagotoviti, da opravilo ne poškoduje vašega sistema.\n\nEkipa CyanogenMod</string>
+  <string name="welcome_msg">Dobrodošli v upravljalniku datotek CyanogenMod.\n\nTa program vam dovoli, da raziščete datotečni sistem in izvajate opravila, ki lahko poškodujejo vašo napravo. V izogib škodi se bo program začel v varnem načinu z nizkimi dovoljenji.\n\nDo naprednega načina z visokimi dovoljenji lahko dostopate v nastavitvah. Vaša odgovornost je zagotoviti, da opravilo ne poškoduje vašega sistema.\n\nEkipa CyanogenMod</string>
   <string name="activity_not_found_exception">Za odpiranje te datoteke ni bilo mogoče najti programa</string>
 </resources>
