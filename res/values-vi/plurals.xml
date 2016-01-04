@@ -17,27 +17,21 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> folder</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> folders</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> thư mục</item>
   </plurals>
   <plurals name="n_files">
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> file</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> files</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> tập tin</item>
   </plurals>
   <plurals name="search_found_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item found</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> items found</item>
+    <item quantity="other">Đã tìm thấy <xliff:g id="count">%d</xliff:g> mục</item>
   </plurals>
   <plurals name="selection_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> folder selected.</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> folders selected.</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> thư mục đã được chọn.</item>
   </plurals>
   <plurals name="selection_files">
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> file selected.</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> files selected.</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> tập tin đã được chọn.</item>
   </plurals>
   <plurals name="deleting_n_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item is going to be deleted.</item>
-    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> items are going to be deleted.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> mục sắp bị xoá.</item>
   </plurals>
 </resources>

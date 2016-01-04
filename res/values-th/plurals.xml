@@ -22,4 +22,16 @@
   <plurals name="n_files">
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ไฟล์</item>
   </plurals>
+  <plurals name="search_found_items">
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> รายการที่พบ</item>
+  </plurals>
+  <plurals name="selection_folders">
+    <item quantity="other">มี <xliff:g id="folders">%1$d</xliff:g> โฟลเดอร์ถูกเลือก</item>
+  </plurals>
+  <plurals name="selection_files">
+    <item quantity="other">มี <xliff:g id="files">%1$d</xliff:g> ไฟล์ถูกเลือก</item>
+  </plurals>
+  <plurals name="deleting_n_items">
+    <item quantity="other">มี <xliff:g id="count">%1$d</xliff:g> รายการที่จะถูกลบ</item>
+  </plurals>
 </resources>

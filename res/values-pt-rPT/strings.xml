@@ -51,7 +51,7 @@
   <string name="msgs_cant_create_console">Não é possível obter os previlégios necessários para funcionar.</string>
   <string name="msgs_privileged_console_alloc_failed">Não é possível correr no modo de Acesso Root. A alterar para o modo Seguro.</string>
   <string name="msgs_settings_save_failure">A definição não pode ser aplicada ou gravada.</string>
-  <string name="msgs_settings_invalid_initial_directory">A pasta inicial \"<xliff:g id="initial_dir">%1$s</xliff:g>\" é inválida. Mudando para a pasta root.</string>
+  <string name="msgs_settings_invalid_initial_directory">A pasta inicial \"<xliff:g id="initial_dir">%1$s</xliff:g>\" é inválida. Mudando para a pasta raíz.</string>
   <string name="root_not_available_msg">O acesso Root não está disponível neste dispositivo. Não é possível executar esta operação.</string>
   <string name="msgs_success">A operação foi concluída com sucesso.</string>
   <string name="msgs_unknown">Foi encontrado um erro. A operação falhou.</string>
@@ -313,10 +313,9 @@
   <string name="pref_general_advanced_settings_category">Avançadas</string>
   <string name="pref_access_mode">Modo de acesso</string>
   <string name="pref_access_mode_safe">Modo seguro</string>
-  <string name="pref_access_mode_safe_summary">Modo seguro\n\nA aplicação é executada sem privilégios e apenas terá acesso a sistemas de ficheiros como volumes de armazenamento (cartões SD e USB)</string>
+  <string name="pref_access_mode_safe_summary">Modo seguro\n\nA aplicação é executada sem privilégios e apenas terá acesso a sistemas de ficheiros, como volumes de armazenamento (cartões SD e USB)</string>
   <string name="pref_access_mode_prompt">Modo de questão</string>
-  <string name="pref_access_mode_prompt_summary">Modo de Questão\n\nA aplicação é executada com acesso total
- ao sistema de ficheiros mas pedirá permissões antes de executar ações privilegiadas</string>
+  <string name="pref_access_mode_prompt_summary">Modo de Pedido ao Utilizador\n\nA aplicação é executada com acesso total ao sistema de ficheiros mas pedirá permissões antes de executar ações privilegiadas</string>
   <string name="pref_access_mode_root">Modo de acesso Root</string>
   <string name="pref_access_mode_root_summary">Modo de acesso Root\n\nAviso! Este modo permite operações que podem
       danificar o seu dispositivo. É da sua responsabilidade garantir que as operações são seguras</string>
@@ -404,6 +403,6 @@
   <string name="security_warning_extract">Aviso!\n\nExtrair um ficheiro de sistema com pastas absolutas ou relativas pode causar problemas no seu dispositivo ao substituir ficheiros de sistema.\n\nDeseja continuar?</string>
   <string name="changelog_title">Lista de alterações</string>
   <string name="welcome_title">Bem-vindo</string>
-  <string name="welcome_msg">Bem-vindo ao Gestor de ficheiros Cyanogenmod.\n\nEsta aplicação permite-lhe explorar o sistema de ficheiros e realizar operações que podem alterar a estabilidade do seu dispositivo. Para previnir falhas, a aplicação irá iniciar num modo de segurança, com poucos privilégios.\n\nPode aceder às definições mais avançadas via Definições. É sua a responsabilidade de garantir que uma operação não afete a estabilidade do seu sistema.\n\nA Equipa CyanogenMod.\n</string>
+  <string name="welcome_msg">Bem-vindo ao Gestor de Ficheiros CyanogenMod.\n\nEsta aplicação permite-lhe explorar o sistema de ficheiros e realizar operações que podem alterar a estabilidade do seu dispositivo. Para prevenir falhas, a aplicação irá iniciar em modo de segurança, com poucos privilégios.\n\nPode aceder às definições avançadas através das Definições. É sua a responsabilidade de garantir que uma operação não afeta a estabilidade do seu sistema.\n\nA Equipa CyanogenMod.\n</string>
   <string name="activity_not_found_exception">Não foi encontrada nenhuma aplicação para abrir este ficheiro</string>
 </resources>
