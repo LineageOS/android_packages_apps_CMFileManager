@@ -16,9 +16,49 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">إدارة الملفات</string>
+  <string name="app_description">إدارة ملفات CyanogenMod</string>
+  <string name="size_bytes">B</string>
+  <string name="size_kilobytes">كيلوبايت</string>
+  <string name="size_megabytes">ميغا بايت</string>
+  <string name="size_gigabytes">جيجابايت</string>
+  <string name="datetime_format_order">%1$s %2$s</string>
+  <string name="device_blockdevice">حظر جهاز</string>
+  <string name="device_characterdevice">جهاز أحرف</string>
+  <string name="device_namedpipe">أنبوبة الاتصال المسماة</string>
+  <string name="device_domainsocket">مأخذ المجال</string>
+  <string name="mount_point_readonly">RO</string>
+  <string name="mount_point_readwrite">RW</string>
+  <string name="yes">نعم</string>
+  <string name="no">لا</string>
+  <string name="all">الكل</string>
+  <string name="overwrite">الكتابة فوق</string>
+  <string name="select">حدد</string>
+  <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
+  <string name="search_result_name">بحث: <xliff:g id="terms">%1$s</xliff:g></string>
+  <string name="loading_message">تحميل\u2026</string>
+  <string name="cancelled_message">تم الإلغاء.</string>
+  <string name="error_message">خطأ.</string>
+  <string name="copy_text_cd">اضغط لنسخ النص إلى الحافظة</string>
+  <string name="copy_text_msg">نسخ النص إلى الحافظة</string>
+  <string name="warning_title">تحذير</string>
   <string name="error_title">خطأ</string>
+  <string name="confirm_operation">تأكيد عملية</string>
+  <string name="confirm_overwrite">تأكيد الكتابة فوق</string>
+  <string name="confirm_deletion">تأكيد الحذف</string>
+  <string name="msgs_change_to_prompt_access_mode_title">تأكيد التبديل</string>
+  <string name="msgs_change_to_prompt_access_mode_msg">يتعذر تشغيل وضع الوصول الجذري. تغيير إلى الوضع الإمن.\n\n تطبيق هذا التغيير؟</string>
+  <string name="msgs_settings_save_failure">يتعذر تطبيق الإعداد أو تخزينه.</string>
+  <string name="msgs_settings_invalid_initial_directory">المجلد الأولي \'<xliff:g id="initial_dir">%1$s</xliff:g>\'غير صالح. تغيير إلى المجلد الجذر.</string>
   <string name="root_not_available_msg">Root غير متوفر على هذا الجهاز. لا يمكن تنفيذ هذه العملية.</string>
+  <string name="msgs_unknown">تم الكشف عن خطأ. العملية غير ناجحة.</string>
+  <string name="msgs_insufficient_permissions">هذه العملية تتطلب أذونات نشطة. حاول الانتقال إلى وضع الوصول الجذري.</string>
   <string name="msgs_no_disk_space">فشلت هذه العملية لأنه لا توجد مساحة على الجهاز.</string>
+  <string name="msgs_file_not_found">تعذر العثور على الملف أو المجلد.</string>
+  <string name="msgs_operation_timeout">انتهت مهلة العملية.</string>
+  <string name="msgs_operation_failure">فشلت العملية.</string>
+  <string name="msgs_console_alloc_failure">حدث خطأ داخلي.</string>
+  <string name="msgs_operation_can_not_be_cancelled">يتعذر إلغاء العملية.</string>
   <string name="msgs_operation_not_allowed_in_current_directory">المجلد الوجهة لا يمكن أن يكون مجلداً فرعياً ولا  نفس مجلد المصدر.</string>
   <string name="actionbar_button_print_cd">طباعة</string>
   <string name="sort_by_size_asc">بالحجم \u25B2</string>
