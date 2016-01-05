@@ -80,6 +80,11 @@ public class DiskUsageGraph extends View {
     private DiskUsage mLastDiskUsage = null;
 
     /**
+     * These are the width and height of the widget
+     */
+    private int mWidth = 0, mHeight = 0;
+
+    /**
      * Initialize the color assets into memory for direct access
      */
     private void initializeColors() {
@@ -152,14 +157,22 @@ public class DiskUsageGraph extends View {
      */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int parentWidth = MeasureSpec.getSize(widthMeasureSpec);
+        // if this widget is contained in ScrollView, the size will be 0.
+        // So we calculate the widget size using the "onSizeChanged" params instead.
+
+        /*int parentWidth = MeasureSpec.getSize(widthMeasureSpec);
         int parentHeight = MeasureSpec.getSize(heightMeasureSpec);
         int size = Math.min(parentWidth, parentHeight);
-        this.setMeasuredDimension(size, size);
+        this.setMeasuredDimension(size, size);*/
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
     @Override
     protected void onSizeChanged(int w, int h, int olw, int olh) {
+        // the params are used to calculate the widget size
+        mWidth = w;
+        mHeight = h;
+
         // Redraw the disk usage graph when layout size changed.
         if (olw != 0 && olh != 0 && mLastDiskUsage != null) {
             drawDiskUsage(mLastDiskUsage);
@@ -330,9 +343,25 @@ public class DiskUsageGraph extends View {
          */
         @Override
         public void run() {
+            if (mWidth == 0 || mHeight == 0) {
+                return;
+            }
+
             //Get information about the drawing zone, and adjust the size
             Rect rect = new Rect();
-            getDrawingRect(rect);
+            /*getDrawingRect(rect);
+            int stroke = (rect.width() / 2) / 2;
+            rect.left += stroke / 2;
+            rect.right -= stroke / 2;
+            rect.top += stroke / 2;
+            rect.bottom -= stroke / 2;*/
+
+            // calculate the widget size using mWidth and mHeight params instead
+            int diameter = Math.min(mWidth, mHeight);
+            rect.left = (mWidth - diameter) / 2;
+            rect.right = rect.left + diameter;
+            rect.top = (mHeight - diameter) / 2;
+            rect.bottom = rect.top + diameter;
             int stroke = (rect.width() / 2) / 2;
             rect.left += stroke / 2;
             rect.right -= stroke / 2;
