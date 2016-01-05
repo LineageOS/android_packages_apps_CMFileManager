@@ -147,17 +147,6 @@ public class DiskUsageGraph extends View {
         }
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int parentWidth = MeasureSpec.getSize(widthMeasureSpec);
-        int parentHeight = MeasureSpec.getSize(heightMeasureSpec);
-        int size = Math.min(parentWidth, parentHeight);
-        this.setMeasuredDimension(size, size);
-    }
-
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         // Redraw the disk usage graph when layout size changes
@@ -330,9 +319,19 @@ public class DiskUsageGraph extends View {
          */
         @Override
         public void run() {
-            //Get information about the drawing zone, and adjust the size
+            final int width = getWidth();
+            final int height = getHeight();
+            if (width == 0 || height == 0) {
+                return;
+            }
+
+            // Calculate the widget size using the width and height params
             Rect rect = new Rect();
-            getDrawingRect(rect);
+            final int diameter = Math.min(width, height);
+            rect.left = (width - diameter) / 2;
+            rect.right = rect.left + diameter;
+            rect.top = (height - diameter) / 2;
+            rect.bottom = rect.top + diameter;
             int stroke = (rect.width() / 2) / 2;
             rect.left += stroke / 2;
             rect.right -= stroke / 2;
