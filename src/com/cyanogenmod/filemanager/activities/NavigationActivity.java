@@ -26,6 +26,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.XmlResourceParser;
 import android.database.Cursor;
@@ -492,15 +493,47 @@ public class NavigationActivity extends Activity
 
     private AsyncTask<Void, Void, Boolean> mBookmarksTask;
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    protected void onCreate(Bundle state) {
+    private static final int REQUEST_CODE_STORAGE_PERMS = 321;
+    private boolean hasPermissions() {
+        String permission = "android.permission.WRITE_EXTERNAL_STORAGE";
+        int res = checkCallingOrSelfPermission(permission);
+        return (res == PackageManager.PERMISSION_GRANTED);
+    }
 
-        if (DEBUG) {
-            Log.d(TAG, "NavigationActivity.onCreate"); //$NON-NLS-1$
+    private void requestNecessaryPermissions() {
+        String[] permissions = new String[] {
+                "android.permission.WRITE_EXTERNAL_STORAGE"
+        };
+        requestPermissions(permissions, REQUEST_CODE_STORAGE_PERMS);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            int[] grandResults) {
+        boolean allowed = true;
+        switch (requestCode) {
+            case REQUEST_CODE_STORAGE_PERMS:
+                for (int res : grandResults) {
+                    allowed = allowed && (res == PackageManager.PERMISSION_GRANTED);
+                }
+                break;
+            default:
+                allowed = false;
+                break;
         }
+        if (allowed) {
+            finishOnCreate();
+            if (mDrawerToggle != null) {
+                mDrawerToggle.syncState();
+            }
+        } else {
+            String text = getResources().getString(R.string.storage_permissions_denied);
+            Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+            finish();
+        }
+    }
+
+    private void finishOnCreate() {
 
         // Register the broadcast receiver
         IntentFilter filter = new IntentFilter();
@@ -624,8 +657,27 @@ public class NavigationActivity extends Activity
         EASY_MODE_ICONS.put(MimeTypeCategory.APP, getResources().getDrawable(R.drawable
                 .ic_em_application));
 
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected void onCreate(Bundle state) {
+
+        if (DEBUG) {
+            Log.d(TAG, "NavigationActivity.onCreate"); //$NON-NLS-1$
+        }
+
+        if (!hasPermissions()) {
+            requestNecessaryPermissions();
+        } else {
+            finishOnCreate();
+        }
+
         //Save state
         super.onCreate(state);
+
     }
 
     @Override
@@ -633,7 +685,8 @@ public class NavigationActivity extends Activity
         super.onStart();
 
         // Check restrictions
-        if (!FileManagerApplication.checkRestrictSecondaryUsersAccess(this, mChRooted)) {
+        if (!hasPermissions() ||
+                !FileManagerApplication.checkRestrictSecondaryUsersAccess(this, mChRooted)) {
             return;
         }
 
@@ -660,7 +713,9 @@ public class NavigationActivity extends Activity
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred.
-        mDrawerToggle.syncState();
+        if (mDrawerToggle != null) {
+            mDrawerToggle.syncState();
+        }
     }
 
     /**
@@ -673,7 +728,9 @@ public class NavigationActivity extends Activity
         final boolean restore = TextUtils.isEmpty(navigateTo);
 
         //Initialize navigation
-        initNavigation(this.mCurrentNavigationView, restore, intent);
+        if (!hasPermissions()) {
+            initNavigation(this.mCurrentNavigationView, restore, intent);
+        }
 
         //Check the intent action
         checkIntent(intent);
@@ -686,7 +743,9 @@ public class NavigationActivity extends Activity
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         onLayoutChanged();
-        mDrawerToggle.onConfigurationChanged(newConfig);
+        if (mDrawerToggle != null ) {
+            mDrawerToggle.onConfigurationChanged(newConfig);
+        }
     }
 
     /**
@@ -1805,12 +1864,12 @@ public class NavigationActivity extends Activity
 
     @Override
     public void onBackPressed() {
-        if (mDrawerLayout.isDrawerOpen(Gravity.START)) {
+        if (mDrawerLayout != null && mDrawerLayout.isDrawerOpen(Gravity.START)) {
             mDrawerLayout.closeDrawer(Gravity.START);
             return;
         }
 
-        boolean upToParent = mHistory.size() > 0;
+        boolean upToParent = mHistory != null && mHistory.size() > 0;
 
         if (mNeedsEasyMode && !isEasyModeVisible() && !upToParent) {
             performShowEasyMode();
@@ -2556,9 +2615,11 @@ public class NavigationActivity extends Activity
 
     private void recycle() {
         // Recycle the navigation views
-        int cc = this.mNavigationViews.length;
-        for (int i = 0; i < cc; i++) {
-            this.mNavigationViews[i].recycle();
+        if (mNavigationViews != null) {
+            int cc = this.mNavigationViews.length;
+            for (int i = 0; i < cc; i++) {
+                this.mNavigationViews[i].recycle();
+            }
         }
         try {
             FileManagerApplication.destroyBackgroundConsole();
