@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">Set the initial folder.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Remove the bookmark.</string>
   <string name="bookmarks_msgs_add_success">The bookmark was added successfully.</string>
+  <string name="bookmarks_msgs_add_exists">The bookmark already exists.</string>
   <string name="initial_directory_dialog_title">Initial folder</string>
   <string name="initial_directory_label">Choose the initial folder:</string>
   <string name="initial_directory_relative_msg">Relative paths are not allowed.</string>
@@ -243,6 +244,7 @@
   <string name="input_name_dialog_label">Name:</string>
   <string name="input_name_dialog_message_empty_name">The name cannot be empty.</string>
   <string name="input_name_dialog_message_invalid_path_name">Invalid name. The characters \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' are not allowed.</string>
+  <string name="input_name_dialog_message_invalid_name_length">Maximum character limit reached.</string>
   <string name="input_name_dialog_message_invalid_name">Invalid name. The names \'.\' and \'..\' are not allowed.</string>
   <string name="input_name_dialog_message_name_exists">The name already exists.</string>
   <string name="associations_dialog_title">Associations</string>
@@ -373,7 +375,10 @@
   <string name="ash_keyword">Keyword</string>
   <string name="ash_quoted_string">Quoted string</string>
   <string name="ash_variable">Variable</string>
+  <string name="secure_storage_unlock_title">Unlock secure storage</string>
+  <string name="secure_storage_create_title">Create secure storage</string>
   <string name="secure_storage_reset_title">Reset password</string>
+  <string name="secure_storage_delete_title">Delete secure storage</string>
   <string name="secure_storage_unlock_key_prompt_msg">Type the password to unlock the secure storage filesystem.</string>
   <string name="secure_storage_unlock_key_new_msg">Type a password to protect the secure storage filesystem.</string>
   <string name="secure_storage_unlock_key_reset_msg">Type the current and new passwords to reset the secure storage filesystem.</string>
@@ -389,6 +394,7 @@
   <string name="secure_storage_unlock_failed">Cannot unlock the storage</string>
   <string name="secure_storage_unlock_validation_length">Password must have at least <xliff:g id="characters">%1$d</xliff:g> characters.</string>
   <string name="secure_storage_unlock_validation_equals">Passwords do not match.</string>
+  <string name="secure_storage_open_file_warning">This will copy the file out to a temporary unencrypted location. This will be cleared after 1 hour.</string>
   <string name="print_unsupported_document">Unsupported document format</string>
   <string name="print_unsupported_image">Unsupported image format</string>
   <string name="print_document_header">Document: <xliff:g id="document_name">%1$s</xliff:g></string>

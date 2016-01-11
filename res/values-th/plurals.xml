@@ -17,27 +17,21 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> Ordner</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> Ordner</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> โฟลเดอร์</item>
   </plurals>
   <plurals name="n_files">
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> Datei</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> Dateien</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ไฟล์</item>
   </plurals>
   <plurals name="search_found_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> Eintrag gefunden</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> Einträge gefunden</item>
+    <item quantity="other">พบ <xliff:g id="count">%d</xliff:g> รายการ</item>
   </plurals>
   <plurals name="selection_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> Ordner ausgewählt.</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> Ordner ausgewählt.</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> โฟลเดอร์ถูกเลือก</item>
   </plurals>
   <plurals name="selection_files">
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> Datei ausgewählt.</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> Dateien ausgewählt.</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ไฟล์ถูกเลือก</item>
   </plurals>
   <plurals name="deleting_n_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> Element wird gelöscht.</item>
-    <item quantity="other"><xliff:g id="count">%1$d </xliff:g> Elemente werden gelöscht.</item>
+    <item quantity="other">มี <xliff:g id="count">%1$d</xliff:g> รายการจะถูกลบ</item>
   </plurals>
 </resources>
