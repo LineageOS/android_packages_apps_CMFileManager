@@ -127,7 +127,9 @@ public abstract class AsyncResultProgram
      */
     public final void onRequestEndParsePartialResult(boolean cancelled) {
         synchronized (this.mSync) {
-            this.mWorkerThread.mAlive = false;
+            if (this.mWorkerThread != null) {
+                this.mWorkerThread.mAlive = false;
+            }
             this.mSync.notify();
         }
 
@@ -258,7 +260,9 @@ public abstract class AsyncResultProgram
 
         //Stop the thread
         synchronized (this.mSync) {
-            this.mWorkerThread.mAlive = false;
+            if (this.mWorkerThread != null) {
+                this.mWorkerThread.mAlive = false;
+            }
             this.mSync.notify();
         }
 
@@ -285,7 +289,9 @@ public abstract class AsyncResultProgram
 
         //Stop the thread
         synchronized (this.mSync) {
-            this.mWorkerThread.mAlive = false;
+            if (this.mWorkerThread != null) {
+                this.mWorkerThread.mAlive = false;
+            }
             this.mSync.notify();
         }
 
