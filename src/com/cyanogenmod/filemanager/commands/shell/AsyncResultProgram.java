@@ -129,8 +129,8 @@ public abstract class AsyncResultProgram
         synchronized (this.mSync) {
             if (this.mWorkerThread != null) {
                 this.mWorkerThread.mAlive = false;
+                this.mSync.notify();
             }
-            this.mSync.notify();
         }
 
         try {
@@ -262,8 +262,8 @@ public abstract class AsyncResultProgram
         synchronized (this.mSync) {
             if (this.mWorkerThread != null) {
                 this.mWorkerThread.mAlive = false;
+                this.mSync.notify();
             }
-            this.mSync.notify();
         }
 
         //Notify cancellation
@@ -291,8 +291,8 @@ public abstract class AsyncResultProgram
         synchronized (this.mSync) {
             if (this.mWorkerThread != null) {
                 this.mWorkerThread.mAlive = false;
+                this.mSync.notify();
             }
-            this.mSync.notify();
         }
 
         //Notify ending
