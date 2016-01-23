@@ -16,6 +16,24 @@
       "revId": "8ef36bd4eff372e098c3ec25107e98e7222fa17b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1fcbff3d_23519e37",
+        "filename": "src/com/cyanogenmod/filemanager/commands/shell/AsyncResultProgram.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 14311
+      },
+      "writtenOn": "2016-01-23T03:08:53Z",
+      "side": 1,
+      "message": "we could get a NULL here also if this is called post cancel or end. So the NULL check basically acts as checking whether or not the mWorkerThread was canceled previously. I guess we could check the canceled parameter to ascertain this information also.",
+      "parentUuid": "1fcbff3d_638fa6cc",
+      "revId": "8ef36bd4eff372e098c3ec25107e98e7222fa17b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
