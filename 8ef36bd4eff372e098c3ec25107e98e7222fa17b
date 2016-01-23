@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fcbff3d_638fa6cc",
+        "filename": "src/com/cyanogenmod/filemanager/commands/shell/AsyncResultProgram.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 14096
+      },
+      "writtenOn": "2016-01-23T02:40:26Z",
+      "side": 1,
+      "message": "i think we might be masking the problem by adding a null check. I see that the mWorkerThread stops if cancel or end is called on the thread. If we got a null here, then did the worker thread die prematurely? Also check the cancelled boolean, i think if it was cancelled earlier, then you dont have to do anything here.",
+      "revId": "8ef36bd4eff372e098c3ec25107e98e7222fa17b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
