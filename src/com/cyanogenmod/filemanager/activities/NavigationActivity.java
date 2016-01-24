@@ -32,6 +32,7 @@ import android.content.res.XmlResourceParser;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.Manifest;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.nfc.NfcEvent;
@@ -495,14 +496,13 @@ public class NavigationActivity extends Activity
 
     private static final int REQUEST_CODE_STORAGE_PERMS = 321;
     private boolean hasPermissions() {
-        String permission = "android.permission.WRITE_EXTERNAL_STORAGE";
-        int res = checkCallingOrSelfPermission(permission);
+        int res = checkCallingOrSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE);
         return (res == PackageManager.PERMISSION_GRANTED);
     }
 
     private void requestNecessaryPermissions() {
         String[] permissions = new String[] {
-                "android.permission.WRITE_EXTERNAL_STORAGE"
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
         };
         requestPermissions(permissions, REQUEST_CODE_STORAGE_PERMS);
     }
