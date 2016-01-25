@@ -331,6 +331,7 @@
   <string name="pref_save_search_terms">Arama terimlerini kaydet</string>
   <string name="pref_save_search_terms_on">Arama terimleri kaydedilecek ve gelecek aramalarda öneri olarak kullanılacak</string>
   <string name="pref_save_search_terms_off">Arama terimleri kaydedilmeyecek</string>
+  <string name="pref_remove_saved_search_terms">Kaydedilen arama terimlerini temizle</string>
   <string name="pref_remove_saved_search_terms_summary">Kaydedilmiş tüm arama terimlerini silmek için dokunun</string>
   <string name="pref_remove_saved_search_terms_msg">Tüm kaydedilen arama terimleri silindi</string>
   <string name="pref_secure_storage_category">Güvenli depolama</string>
