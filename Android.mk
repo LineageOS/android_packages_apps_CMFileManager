@@ -21,9 +21,19 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src)
 LOCAL_SRC_FILES += $(call all-java-files-under, libs/android-syntax-highlight/src)
 LOCAL_SRC_FILES += $(call all-java-files-under, libs/color-picker-view/src)
 
+uicommon_dir := ../../../external/uicommon
+
+LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
+        $(LOCAL_PATH)/$(uicommon_dir)/res
+
+LOCAL_AAPT_FLAGS := \
+        --auto-add-overlay \
+        --extra-packages com.cyngn.uicommon
+
 LOCAL_STATIC_JAVA_LIBRARIES += libtruezip
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-v4
 LOCAL_STATIC_JAVA_LIBRARIES += juniversalchardet
+LOCAL_STATIC_JAVA_LIBRARIES += uicommon
 
 LOCAL_PACKAGE_NAME := CMFileManager
 LOCAL_CERTIFICATE := platform
