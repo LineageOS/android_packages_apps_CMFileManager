@@ -844,5 +844,6 @@
     <string name="activity_not_found_exception">Couldn\'t find an app to open this file</string>
 
     <string name="storage_permissions_denied">The app cannot run without permission to write to external storage.</string>
+    <string name="snackbar_settings">Settings</string>
 
 </resources>
