@@ -42,6 +42,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Parcelable;
 import android.os.storage.StorageVolume;
+import android.provider.Settings;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.text.TextUtils;
@@ -121,6 +122,7 @@ import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MimeTypeHelper.MimeTypeCategory;
 import com.cyanogenmod.filemanager.util.MountPointHelper;
 import com.cyanogenmod.filemanager.util.StorageHelper;
+import com.cyngn.uicommon.view.Snackbar;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -527,10 +529,58 @@ public class NavigationActivity extends Activity
                 mDrawerToggle.syncState();
             }
         } else {
-            String text = getResources().getString(R.string.storage_permissions_denied);
-            Toast.makeText(this, text, Toast.LENGTH_LONG).show();
-            finish();
+            if (shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                String text = getResources().getString(R.string.storage_permissions_denied);
+                final ViewGroup viewGroup = (ViewGroup) ((ViewGroup) this
+                        .findViewById(android.R.id.content)).getChildAt(0);
+                if (viewGroup != null) {
+                    Snackbar snackbar = Snackbar.make(viewGroup, text,
+                            Snackbar.LENGTH_INDEFINITE, 3);
+                    snackbar.setAction(R.string.snackbar_ok, new OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            requestNecessaryPermissions();
+                        }
+                    });
+                    snackbar.show();
+                }
+            } else {
+                StringBuilder builder = new StringBuilder(getString(R.string
+                        .storage_permissions_denied));
+                builder.append("\n\n");
+                builder.append(getString(R.string.storage_permissions_explanation));
+                final ViewGroup viewGroup = (ViewGroup) ((ViewGroup) this
+                        .findViewById(android.R.id.content)).getChildAt(0);
+                if (viewGroup != null) {
+                    Snackbar snackbar = Snackbar.make(viewGroup, builder.toString(),
+                            Snackbar.LENGTH_INDEFINITE, 7);
+                    snackbar.setAction(R.string.snackbar_settings, new OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            startInstalledAppDetailsActivity(NavigationActivity.this);
+                            finish();
+                        }
+                    });
+                    snackbar.show();
+                }
+            }
+
         }
+
+    }
+
+    public static void startInstalledAppDetailsActivity(final Activity context) {
+        if (context == null) {
+            return;
+        }
+        final Intent i = new Intent();
+        i.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+        i.addCategory(Intent.CATEGORY_DEFAULT);
+        i.setData(Uri.parse("package:" + context.getPackageName()));
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        i.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+        context.startActivity(i);
     }
 
     private void finishOnCreate() {
@@ -557,13 +607,6 @@ public class NavigationActivity extends Activity
         //the input manager service
         mImm = (InputMethodManager) this.getSystemService(
                 Context.INPUT_METHOD_SERVICE);
-
-        // Set the theme before setContentView
-        Theme theme = ThemeManager.getCurrentTheme(this);
-        theme.setBaseThemeNoActionBar(this);
-
-        //Set the main layout of the activity
-        setContentView(R.layout.navigation);
 
         //Initialize nfc adapter
         NfcAdapter mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
@@ -669,14 +712,21 @@ public class NavigationActivity extends Activity
             Log.d(TAG, "NavigationActivity.onCreate"); //$NON-NLS-1$
         }
 
+         // Set the theme before setContentView
+        Theme theme = ThemeManager.getCurrentTheme(this);
+        theme.setBaseThemeNoActionBar(this);
+
+        //Set the main layout of the activity
+        setContentView(R.layout.navigation);
+
+        //Save state
+        super.onCreate(state);
+
         if (!hasPermissions()) {
             requestNecessaryPermissions();
         } else {
             finishOnCreate();
         }
-
-        //Save state
-        super.onCreate(state);
 
     }
 
