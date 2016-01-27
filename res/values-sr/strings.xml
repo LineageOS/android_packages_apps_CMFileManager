@@ -421,4 +421,5 @@
     подешавања. Тада је ваша одговорност да не покварите свој систем.
     \n\nCyanogenMod тим.\n</string>
   <string name="activity_not_found_exception">Не могу наћи апликацију за отварање овог фајла</string>
+  <string name="storage_permissions_denied">Апликацију није могуће покренути без дозволе да пише у спољно складиште.</string>
 </resources>
