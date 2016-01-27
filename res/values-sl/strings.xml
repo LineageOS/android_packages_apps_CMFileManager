@@ -69,9 +69,8 @@
   <string name="msgs_unresolved_inconsistencies">Opravilo ni dovoljeno, ker bi to ustvarilo neskladja.</string>
   <string name="msgs_operation_not_allowed_in_current_directory">Ciljna mapa ne more biti podmapa izvorne mape ali ista kot izvorna.</string>
   <string name="msgs_push_again_to_exit">Pritisnite znova za izhod.</string>
-  <string name="msgs_not_registered_app">Noben program ni registriran za obravnavo izbrane vrste datoteke.</string>
+  <string name="msgs_not_registered_app">Nobena aplikacija ni registrirana za obravnavo izbrane vrste datoteke.</string>
   <string name="msgs_overwrite_files">Nekatere mape že obstajajo v ciljni mapi.\n\nPrepiši?</string>
-  <string name="msgs_action_association_failed">Povezovanje dejanja s programom je spodletelo.</string>
   <string name="advise_insufficient_permissions">Opravilo zahteva skrbniška dovoljenja.\n\nAli želite spremeniti v način Skrbniškega dostopa?</string>
   <string name="parent_dir">Nadrejena mapa</string>
   <string name="external_storage">Zunanja pomnilniška naprava</string>
@@ -272,7 +271,7 @@
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
   <string name="selection_folders_and_files">Izbrano je <xliff:g id="folders">%1$s</xliff:g> in <xliff:g id="files">%2$s</xliff:g>.</string>
   <string name="category_system">SISTEM</string>
-  <string name="category_app">PROGRAM</string>
+  <string name="category_app">APLIKACIJA</string>
   <string name="category_binary">DVOJIŠKO</string>
   <string name="category_text">BESEDILO</string>
   <string name="category_document">DOKUMENT</string>
@@ -284,7 +283,7 @@
   <string name="category_font">PISAVA</string>
   <string name="category_image">SLIKA</string>
   <string name="category_audio">ZVOK</string>
-  <string name="category_video">VIDEO POSNETEK</string>
+  <string name="category_video">VIDEOPOS.</string>
   <string name="category_security">VARNOST</string>
   <string name="category_all">VSE</string>
   <string name="compression_mode_title">Način stiskanja</string>
@@ -307,15 +306,15 @@
   <string name="pref_compute_folder_statistics">Izračun statistike map</string>
   <string name="pref_compute_folder_statistics_on">Opozorilo! Izračun statistike map je potratno časovno in s sistemskimi sredstvi</string>
   <string name="pref_display_thumbs">Predogled</string>
-  <string name="pref_display_thumbs_summary">Prikaži sliko predogleda za programe, glasbene datoteke, slike in video posnetke</string>
+  <string name="pref_display_thumbs_summary">Prikaži sliko predogleda za aplikacije, glasbene datoteke, slike in videoposnetke</string>
   <string name="pref_use_flinger">Uporabi poteze s potegi</string>
   <string name="pref_use_flinger_summary">Uporabi zaznavo poteze s potegom od leve proti desni za izbris datotek ali map</string>
   <string name="pref_general_advanced_settings_category">Napredno</string>
   <string name="pref_access_mode">Način dostopa</string>
   <string name="pref_access_mode_safe">Varni način</string>
-  <string name="pref_access_mode_safe_summary">Varni način\n\nProgram se izvaja brez dovoljenj ter edini dostopni datotečni sistemi so nosilci pomnilniških naprav (kartice SD in USB)</string>
+  <string name="pref_access_mode_safe_summary">Varni način\n\nAplikacija se izvaja brez dovoljenj ter edini dostopni datotečni sistemi so nosilci pomnilniških naprav (kartice SD in USB)</string>
   <string name="pref_access_mode_prompt">Način Poziva uporabnika</string>
-  <string name="pref_access_mode_prompt_summary">Način Poziva uporabnika\n\nProgram se izvaja s polnim dostopom do datotečnega sistema in bo pozval za dovoljenja pred izvedbo katerihkoli dejanj z dovoljenji</string>
+  <string name="pref_access_mode_prompt_summary">Način Poziva uporabnika\n\nAplikacija se izvaja s polnim dostopom do datotečnega sistema in bo pozval za dovoljenja pred izvedbo katerihkoli dejanj z dovoljenji</string>
   <string name="pref_access_mode_root">Način skrbniškega dostopa</string>
   <string name="pref_access_mode_root_summary">Način skrbniškega dostopa\n\nOpozorilo! Ta način dovoli opravila, ki lahko škodijo napravi. Zagotovitev, da je opravilo varno, je vaša odgovornost</string>
   <string name="pref_restrict_secondary_users_access_title">Omeji dostop uporabnikom</string>
@@ -336,7 +335,7 @@
   <string name="pref_remove_saved_search_terms_msg">Vsi shranjeni iskalni izrazi so bili odstranjeni</string>
   <string name="pref_secure_storage_category">Varna pomnilniška naprava</string>
   <string name="pref_secure_storage_delayed_sync_title">Zakasnjena sinhronizacija</string>
-  <string name="pref_secure_storage_delayed_sync_summary">Sinhronizacija varnih datotečnih sistemov je potratno opravilo. Omogočite to možnost, če želite hitrejše odzive po vsakem opravilu z izvajanjem sinhronizacije, kadar je datotečni sistem ni v uporabi, ampak na račun izgube nesinhroniziranih podatkov na čakanju, če se program sesuje.</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Sinhronizacija varnih datotečnih sistemov je potratno opravilo. Omogočite to možnost, če želite hitrejše odzive po vsakem opravilu z izvajanjem sinhronizacije, kadar je datotečni sistem ni v uporabi, ampak na račun izgube nesinhroniziranih podatkov na čakanju, če se aplikacija sesuje.</string>
   <string name="pref_secure_storage_reset_password_title">Spremeni geslo</string>
   <string name="pref_secure_storage_delete_storage_title">Izbriši pomnilniško napravo</string>
   <string name="pref_editor_behaviour_category">Vedenje</string>
@@ -402,6 +401,6 @@
   <string name="security_warning_extract">Opozorilo! \n\nRazširjanje arhivske datoteke z relativno ali absolutno potjo lahko poškoduje napravo s prepisom sistemskih datotek.\n\nAli želite nadaljevati?</string>
   <string name="changelog_title">Dnevnik sprememb</string>
   <string name="welcome_title">Dobrodošli</string>
-  <string name="welcome_msg">Dobrodošli v upravljalniku datotek CyanogenMod.\n\nTa program vam dovoli, da raziščete datotečni sistem in izvajate opravila, ki lahko poškodujejo vašo napravo. V izogib škodi se bo program začel v varnem načinu z nizkimi dovoljenji.\n\nDo naprednega načina z visokimi dovoljenji lahko dostopate v nastavitvah. Vaša odgovornost je zagotoviti, da opravilo ne poškoduje vašega sistema.\n\nEkipa CyanogenMod</string>
-  <string name="activity_not_found_exception">Za odpiranje te datoteke ni bilo mogoče najti programa</string>
+  <string name="welcome_msg">Dobrodošli v upravljalniku datotek CyanogenMod.\n\nTa aplikacija vam dovoli, da raziščete datotečni sistem in izvajate opravila, ki lahko poškodujejo vašo napravo. V izogib škodi se bo aplikacija začela v varnem načinu z nizkimi dovoljenji.\n\nDo naprednega načina z visokimi dovoljenji lahko dostopate v nastavitvah. Vaša odgovornost je zagotoviti, da opravilo ne poškoduje vašega sistema.\n\nEkipa CyanogenMod</string>
+  <string name="storage_permissions_denied">Ta aplikacija ne deluje brez dovoljenja za pisanje na zunanjo pomnilniško napravo.</string>
 </resources>

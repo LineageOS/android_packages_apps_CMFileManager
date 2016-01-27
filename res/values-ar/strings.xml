@@ -182,6 +182,7 @@
   <string name="bookmarks_button_config_cd">تعيين المجلد الأولي.</string>
   <string name="bookmarks_button_remove_bookmark_cd">إزالة من الإشارة المرجعية.</string>
   <string name="bookmarks_msgs_add_success">تمت إضافة إشارة مرجعية بنجاح.</string>
+  <string name="bookmarks_msgs_add_exists">الإشارة المرجعية موجودة بالفعل.</string>
   <string name="initial_directory_dialog_title">المجلد الأولى</string>
   <string name="initial_directory_label">اختيار المجلد الأولي:</string>
   <string name="initial_directory_relative_msg">عدم السماح بالمسارات النسبية.</string>
@@ -364,6 +365,7 @@
   <string name="themes_author">CyanogenMod</string>
   <string name="drawer_open">فتح ساحب التنقل</string>
   <string name="drawer_close">إغلاق ساحب التنقل</string>
+  <string name="color_picker_alpha_slider_text">Alpha</string>
   <string name="color_picker_current_text">الحالي:</string>
   <string name="color_picker_new_text">الجديد:</string>
   <string name="color_picker_color">لون:</string>
