@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1fcbff3d_e47392e6",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2016-01-27T05:38:49Z",
+      "side": 1,
+      "message": "I hate them too, was under the impression all makefiles required tabs in this situation; apparently not Android.mk in this case. (just tested)",
+      "parentUuid": "1fcbff3d_4463861b",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 1
+      },
+      "revId": "e15e0ce4eff574878b1f2aafc9999a9bf32308fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1fcbff3d_646802f5",
         "filename": "Android.mk",
         "patchSetId": 2
