@@ -843,9 +843,8 @@
 
     <string name="activity_not_found_exception">Couldn\'t find an app to open this file</string>
 
-    <string name="storage_permissions_denied">Filemanager requires permission to storage in order to view your files.</string>
+    <string name="storage_permissions_denied">File manager requires permission to storage in order to view your files.</string>
     <string name="storage_permissions_explanation">Go to Settings, and tap Permissions to grant permission.</string>
-    <string name="snackbar_ok">Ok</string>
     <string name="snackbar_settings">Settings</string>
 
 </resources>

@@ -536,7 +536,7 @@ public class NavigationActivity extends Activity
                 if (viewGroup != null) {
                     Snackbar snackbar = Snackbar.make(viewGroup, text,
                             Snackbar.LENGTH_INDEFINITE, 3);
-                    snackbar.setAction(R.string.snackbar_ok, new OnClickListener() {
+                    snackbar.setAction(android.R.string.ok, new OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             requestNecessaryPermissions();
