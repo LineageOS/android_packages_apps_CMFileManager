@@ -64,3 +64,6 @@
 -keep public class libtruezip.** {
   public protected *;
 }
+
+-dontwarn  android.support.v7.widget.**
+
