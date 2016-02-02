@@ -405,4 +405,7 @@
   <string name="welcome_title">Bem-vindo</string>
   <string name="welcome_msg">Bem-vindo ao Gestor de Ficheiros CyanogenMod.\n\nEsta aplicação permite-lhe explorar o sistema de ficheiros e realizar operações que podem alterar a estabilidade do seu dispositivo. Para prevenir falhas, a aplicação irá iniciar em modo de segurança, com poucos privilégios.\n\nPode aceder às definições avançadas através das Definições. É sua a responsabilidade de garantir que uma operação não afeta a estabilidade do seu sistema.\n\nA Equipa CyanogenMod.\n</string>
   <string name="activity_not_found_exception">Não foi encontrada nenhuma aplicação para abrir este ficheiro</string>
+  <string name="storage_permissions_denied">O Gestor de Ficheiros necessita de permissões para aceder ao armazenamento, de forma a poder ver os seus ficheiros.</string>
+  <string name="storage_permissions_explanation">Vá a Definições e toque em Permissões para conceder permissão.</string>
+  <string name="snackbar_settings">Definições</string>
 </resources>

@@ -405,4 +405,5 @@
   <string name="welcome_title">Bienllegáu</string>
   <string name="welcome_msg">Bienllegáu al esplorador de ficheros de CyanogenMod.\n\nEsta aplicación dexa esplorar el sistema de ficheros y con ello, facer aiciones que puen llegar a bloquiar el preséu. Pa evitalo, l\'aplicación va aniciase en mou seguru.\n\nVas poder acceder al mou avanzáu de superusuariu per aciu del menú Axustes, pero va ser baxo la to responsabilidá l\'evitar qu\'una operación frañe\'l preséu.\n\nL\'equipu de CyanogenMod.\n</string>
   <string name="activity_not_found_exception">Nun pudo atopase una app p\'abrir esti ficheru</string>
+  <string name="snackbar_settings">Axustes</string>
 </resources>

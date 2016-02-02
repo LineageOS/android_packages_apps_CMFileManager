@@ -430,4 +430,5 @@
     \n\nU kan toegang tot \'n gevorderde, volbevoorregte modus verkry deur instellings. Dit is jou verantwoordelikheid om te verseker dat enige aksie wat gedoen word nie die stelsel beskadig nie.
     \n\nDie CyanogenMod span.</string>
   <string name="activity_not_found_exception">Kon nie \'n program vind om hierdie lêer oop te maak</string>
+  <string name="snackbar_settings">Instellings</string>
 </resources>
