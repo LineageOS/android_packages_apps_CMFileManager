@@ -417,4 +417,5 @@
       \n\nVous pouvez avoir un accés complet, en mode Root via les paramètres de l\'application. Il est de votre responsabilité de veiller à ce que les opérations effectuées n\'endommagent pas votre système.
       \n\nL\'Équipe CyanogenMod\n</string>
   <string name="activity_not_found_exception">Impossible de trouver une application pour ouvrir ce fichier</string>
+  <string name="snackbar_settings">Paramètres</string>
 </resources>
