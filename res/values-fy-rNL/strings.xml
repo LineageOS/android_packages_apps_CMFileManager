@@ -33,4 +33,5 @@
   <string name="actions_menu_properties_current_folder">Eigenskippen</string>
   <string name="actions_menu_properties">Eigenskippen</string>
   <string name="pref">Ynstellingen</string>
+  <string name="snackbar_settings">Ynstellingen</string>
 </resources>

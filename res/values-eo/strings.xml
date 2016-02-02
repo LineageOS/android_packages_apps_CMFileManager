@@ -403,4 +403,5 @@
   <string name="welcome_title">Bonvenon</string>
   <string name="welcome_msg">Bonvenon en la CyanogenMod dosiermastrumilo.\n\nTiu aplikaĵo permesas foliumi tra la dosieroj kaj fari operaciojn kiuj povus damaĝi vian aparaton. Pro tio, la aplikaĵo lanĉiĝos en sekura reĝimo.\n\nVi povas akiri tutan aliron kaj plenajn rajtojn per la agorda sistemo. Vi respondecu ke la operacioj ne damaĝu vian sistemon.\n\nLa CyanogenMod teamo\n</string>
   <string name="activity_not_found_exception">Ne eblas trovi aplikaĵon por malfermi tiun dosieron</string>
+  <string name="snackbar_settings">Agordoj</string>
 </resources>

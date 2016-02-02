@@ -402,5 +402,7 @@
   <string name="changelog_title">Dnevnik sprememb</string>
   <string name="welcome_title">Dobrodošli</string>
   <string name="welcome_msg">Dobrodošli v upravljalniku datotek CyanogenMod.\n\nTa aplikacija vam dovoli, da raziščete datotečni sistem in izvajate opravila, ki lahko poškodujejo vašo napravo. V izogib škodi se bo aplikacija začela v varnem načinu z nizkimi dovoljenji.\n\nDo naprednega načina z visokimi dovoljenji lahko dostopate v nastavitvah. Vaša odgovornost je zagotoviti, da opravilo ne poškoduje vašega sistema.\n\nEkipa CyanogenMod</string>
-  <string name="storage_permissions_denied">Ta aplikacija ne deluje brez dovoljenja za pisanje na zunanjo pomnilniško napravo.</string>
+  <string name="storage_permissions_denied">Upravljalnik datotek potrebuje dovoljenje za pomnilniško napravo za prikaz vaših datotek.</string>
+  <string name="storage_permissions_explanation">Pojdite v Nastavitve in tapnite Dovoljenja za odobritev dovoljenja.</string>
+  <string name="snackbar_settings">Nastavitve</string>
 </resources>
