@@ -415,7 +415,6 @@ public final class DialogHelper {
         final AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setCustomTitle(createTitle(context, icon, title, false));
         builder.setView(content);
-        builder.setCancelable(false);
         return builder.create();
     }
 
