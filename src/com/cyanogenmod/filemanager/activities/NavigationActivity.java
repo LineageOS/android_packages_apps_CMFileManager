@@ -792,9 +792,11 @@ public class NavigationActivity extends Activity
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        onLayoutChanged();
-        if (mDrawerToggle != null ) {
-            mDrawerToggle.onConfigurationChanged(newConfig);
+        if (hasPermissions()) {
+            onLayoutChanged();
+            if (mDrawerToggle != null ) {
+                mDrawerToggle.onConfigurationChanged(newConfig);
+            }
         }
     }
 
