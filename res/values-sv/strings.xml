@@ -186,6 +186,7 @@
   <string name="bookmarks_button_config_cd">Välj hemmapp.</string>
   <string name="bookmarks_button_remove_bookmark_cd">Ta bort bokmärket.</string>
   <string name="bookmarks_msgs_add_success">Bokmärket tillagt.</string>
+  <string name="bookmarks_msgs_add_exists">Bokmärket finns redan.</string>
   <string name="initial_directory_dialog_title">Hemmapp</string>
   <string name="initial_directory_label">Välj Hemmapp:</string>
   <string name="initial_directory_relative_msg">Relativa sökvägar är inte tillåtna.</string>
