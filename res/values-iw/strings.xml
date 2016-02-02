@@ -407,5 +407,7 @@
   <string name="welcome_title">ברוכים הבאים</string>
   <string name="welcome_msg">ברוכים הבאים למנהל הקבצים של CyanogenMod.\n\nיישום זה מאפשר לך לסייר במערכת הקבצים ולבצע פעולות שעלולות להרוס את המכשיר. כדי למנוע נזק, היישום יתחיל במצב בטוח, עם הרשאות נמוכות.\n\nבאפשרותך לגשת למצב המתקדם, בעל הרשאות מלאות דרך ההגדרות. זוהי אחריותך לוודא שפעולה שתבוצע לא תהרוס את מערכת ההפעלה.\n\nקבוצת CyanogenMod</string>
   <string name="activity_not_found_exception">לא ניתן למצוא יישום לפתיחת הקובץ</string>
-  <string name="storage_permissions_denied">היישום אינו יכול לרוץ ללא הרשאה לכתיבה לאחסון חיצוני.</string>
+  <string name="storage_permissions_denied">מנהל הקבצים דורש הרשאה לאחסון בשביל להציג את הקבצים שלך.</string>
+  <string name="storage_permissions_explanation">יש להיכנס להגדרות, ואז ללחוץ על הרשאות כדי להעניק הרשאה.</string>
+  <string name="snackbar_settings">הגדרות</string>
 </resources>
