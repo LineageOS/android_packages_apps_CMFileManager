@@ -1904,10 +1904,12 @@ public class NavigationActivity extends Activity
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_MENU) {
-            if (mDrawerLayout.isDrawerOpen(mDrawer)) {
-                mDrawerLayout.closeDrawer(Gravity.START);
-            } else {
-                mDrawerLayout.openDrawer(Gravity.START);
+            if (mDrawerLayout != null) {
+                if (mDrawerLayout.isDrawerOpen(mDrawer)) {
+                    mDrawerLayout.closeDrawer(Gravity.START);
+                } else {
+                    mDrawerLayout.openDrawer(Gravity.START);
+                }
             }
             return true;
         }
