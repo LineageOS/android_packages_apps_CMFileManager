@@ -64,3 +64,11 @@
 -keep public class libtruezip.** {
   public protected *;
 }
+
+# No android.support.v7 related build errors
+-keep public class android.support.v7.widget.RecyclerView
+-keep public class android.support.v7.widget.LinearLayoutManager
+-keep public class android.support.v7.widget.RecyclerView$Adapter
+-keep public class android.support.v7.widget.RecyclerView$LayoutManager
+
+-dontwarn android.support.v7.**
