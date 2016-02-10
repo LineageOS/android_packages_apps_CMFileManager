@@ -17,15 +17,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="one">1 Ordner</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> Ordner</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> Ordner</item>
   </plurals>
   <plurals name="n_files">
-    <item quantity="one">1 Datei</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> Datei</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> Dateien</item>
   </plurals>
   <plurals name="search_found_items">
-    <item quantity="one">1 Eintrag gefunden</item>
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> Eintrag gefunden</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> Einträge gefunden</item>
   </plurals>
   <plurals name="selection_folders">
@@ -33,7 +33,7 @@
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> Ordner ausgewählt.</item>
   </plurals>
   <plurals name="selection_files">
-    <item quantity="one">1 Datei ausgewählt.</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> Datei ausgewählt.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> Dateien ausgewählt.</item>
   </plurals>
   <plurals name="deleting_n_items">

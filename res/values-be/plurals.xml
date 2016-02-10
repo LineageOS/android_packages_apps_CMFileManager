@@ -26,6 +26,11 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> файла</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> файлаў</item>
   </plurals>
+  <plurals name="search_found_items">
+    <item quantity="one">Знойдзены <xliff:g id="count">%1$d</xliff:g> аб\'ект</item>
+    <item quantity="few">Знойдзена <xliff:g id="count">%d</xliff:g> аб\'екта</item>
+    <item quantity="other">Знойдзена <xliff:g id="count">%d</xliff:g> аб\'ектаў</item>
+  </plurals>
   <plurals name="selection_folders">
     <item quantity="one">Вылучана <xliff:g id="folders">%1$d</xliff:g> тэчка.</item>
     <item quantity="few">Вылучана <xliff:g id="folders">%1$d</xliff:g> тэчкі.</item>

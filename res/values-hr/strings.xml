@@ -133,7 +133,7 @@
   <string name="fso_properties_dialog_category">Kategorija:</string>
   <string name="fso_properties_dialog_link">Poveznica:</string>
   <string name="fso_properties_dialog_size">Veličina:</string>
-  <string name="fso_properties_dialog_contains">Sadržava:</string>
+  <string name="fso_properties_dialog_contains">Sadrži:</string>
   <string name="fso_properties_dialog_last_accessed_date">Pristupano:</string>
   <string name="fso_properties_dialog_last_modified_date">Izmijenjeno:</string>
   <string name="fso_properties_dialog_last_changed_date">Promijenjeno:</string>

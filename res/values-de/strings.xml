@@ -34,9 +34,9 @@
   <string name="all">Alle</string>
   <string name="overwrite">Überschreiben</string>
   <string name="select">Auswählen</string>
-  <string name="root_directory_name"><![CDATA[<Wurzelverzeichnis>]]></string>
+  <string name="root_directory_name"><![CDATA[<Stammverzeichnis>]]></string>
   <string name="search_result_name">Suche: <xliff:g id="terms">%1$s</xliff:g></string>
-  <string name="loading_message">Lade\u2026</string>
+  <string name="loading_message">Wird geladen\u2026</string>
   <string name="cancelled_message">Abgebrochen</string>
   <string name="error_message">Fehler</string>
   <string name="copy_text_cd">Tippen, um Text in die Zwischenablage zu kopieren</string>
@@ -51,7 +51,7 @@
   <string name="msgs_cant_create_console">Die für diesen Vorgang nötigen Rechte konnten nicht erlangt werden.</string>
   <string name="msgs_privileged_console_alloc_failed">Root-Zugriff konnte nicht erlangt werden. Es wird in den sicheren Modus gewechselt.</string>
   <string name="msgs_settings_save_failure">Diese Einstellung konnte nicht angewendet werden.</string>
-  <string name="msgs_settings_invalid_initial_directory">Das Standardverzeichnis \"<xliff:g id="initial_dir">%1$s</xliff:g>\" ist ungültig. Wechsle zum Wurzelverzeichnis.</string>
+  <string name="msgs_settings_invalid_initial_directory">Das Standardverzeichnis \"<xliff:g id="initial_dir">%1$s</xliff:g>\" ist ungültig. Wechsel zum Stammverzeichnis.</string>
   <string name="root_not_available_msg">Auf diesem Gerät ist kein Root verfügbar. Dieser Vorgang kann nicht ausgeführt werden.</string>
   <string name="msgs_success">Die Aktion wurde erfolgreich ausgeführt.</string>
   <string name="msgs_unknown">Ein Fehler ist aufgetreten. Der Vorgang konnte nicht ausgeführt werden.</string>
@@ -175,7 +175,7 @@
   <string name="displaying_message">Anzeige wird vorbereitet\u2026</string>
   <string name="bookmarks">Lesezeichen</string>
   <string name="bookmarks_home">Home</string>
-  <string name="bookmarks_root_folder">Wurzelverzeichnis</string>
+  <string name="bookmarks_root_folder">Stammverzeichnis</string>
   <string name="bookmarks_system_folder">Systemordner</string>
   <string name="bookmarks_secure">Sicherer Speicher</string>
   <string name="bookmarks_remote">Remote Speicher</string>
@@ -195,18 +195,18 @@
   <string name="menu_syntax_highlight">Syntaxhervorhebung</string>
   <string name="create_copy_regexp">Kopie von <xliff:g id="name">%1$s</xliff:g><xliff:g id="extension">%2$s</xliff:g></string>
   <string name="create_new_compress_file_regexp">Neues Archiv <xliff:g id="name">%1$s</xliff:g><xliff:g id="extension">%2$s</xliff:g></string>
-  <string name="waiting_dialog_msg">Führe Aktion aus\u2026</string>
-  <string name="waiting_dialog_copying_title">Kopiere\u2026</string>
+  <string name="waiting_dialog_msg">Vorgang wird ausgeführt\u2026</string>
+  <string name="waiting_dialog_copying_title">Kopieren\u2026</string>
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>Von</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Nach</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
-  <string name="waiting_dialog_moving_title">Verschiebe\u2026</string>
+  <string name="waiting_dialog_moving_title">Verschieben\u2026</string>
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>Von</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Nach</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
-  <string name="waiting_dialog_deleting_title">Lösche\u2026</string>
+  <string name="waiting_dialog_deleting_title">Löschen\u2026</string>
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>File</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
-  <string name="waiting_dialog_extracting_title">Entpacke\u2026</string>
+  <string name="waiting_dialog_extracting_title">Entpacken\u2026</string>
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>File</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
-  <string name="waiting_dialog_compressing_title">Komprimiere\u2026</string>
+  <string name="waiting_dialog_compressing_title">Komprimieren\u2026</string>
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>File</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
-  <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Analysiere\u2026</b>]]></string>
+  <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Analysieren\u2026</b>]]></string>
   <string name="msgs_extracting_success">Das Entpacken war erfolgreich. Die Daten wurden in das Verzeichnis <xliff:g id="destination">%1$s</xliff:g> entpackt.</string>
   <string name="msgs_compressing_success">Das Komprimieren war erfolgreich. Die Daten wurden im Verzeichnis <xliff:g id="destination">%1$s</xliff:g>komprimiert.</string>
   <string name="actions_dialog_title">Aktionen</string>
