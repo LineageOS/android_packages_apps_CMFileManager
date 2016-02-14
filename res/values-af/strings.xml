@@ -430,5 +430,7 @@
     \n\nU kan toegang tot \'n gevorderde, volbevoorregte modus verkry deur instellings. Dit is jou verantwoordelikheid om te verseker dat enige aksie wat gedoen word nie die stelsel beskadig nie.
     \n\nDie CyanogenMod span.</string>
   <string name="activity_not_found_exception">Kon nie \'n program vind om hierdie lêer oop te maak</string>
+  <string name="storage_permissions_denied">Lêer verkenner vereis toestemming na jou stoor spasie om jou lêers te besigtig.</string>
+  <string name="storage_permissions_explanation">Gaan na Instellings en raak Programtoestemmings om toestemming te verleen.</string>
   <string name="snackbar_settings">Instellings</string>
 </resources>
