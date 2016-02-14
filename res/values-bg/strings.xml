@@ -68,7 +68,7 @@
   <string name="msgs_illegal_argument">Незаконен аргумент. Позоваването е неуспешно.</string>
   <string name="msgs_unresolved_inconsistencies">Операция не е разрешена, защото ще се създаде несъответствия.</string>
   <string name="msgs_operation_not_allowed_in_current_directory">Целевата папката не може да бъде подпапка на източника или в директорията на източника.</string>
-  <string name="msgs_push_again_to_exit">Натиснете отново, за да излезете.</string>
+  <string name="msgs_push_again_to_exit">Натиснете отново за да изход.</string>
   <string name="msgs_not_registered_app">Няма приложение, регистрирано да обработва типа на избрания файл.</string>
   <string name="msgs_overwrite_files">Някои от файловете вече съществуват в местоназначената папка.\n\nДа ги презапиша ли?</string>
   <string name="msgs_action_association_failed">Асоциирането на действието на приложението е неуспешно.</string>
@@ -156,7 +156,7 @@
   <string name="search_error_msg">Възникна грешка при търсене. Няма намерени резултати.</string>
   <string name="search_no_results_msg">Няма намерени резултати.</string>
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s </xliff:g> в <xliff:g id="path">%2$s </xliff:g></string>
-  <string name="search_terms"><![CDATA[<b>условия:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <string name="search_terms"><![CDATA[<b>Условия:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
   <string name="search_few_characters_title">Потвърдете търсенето</string>
   <string name="search_few_characters_msg">Някои от термините за търсене имат малък брой знаци. Операцията може да отнеме много време и системи ресурси.\n\nИскате ли да продължите?</string>
   <string name="searching">Моля, изчакайте\u2026</string>
@@ -191,7 +191,7 @@
   <string name="menu_settings">Настройки</string>
   <string name="menu_clear_history">Изчисти хронологията</string>
   <string name="menu_no_suggestions">Няма предложения</string>
-  <string name="menu_word_wrap">Пренос на текста</string>
+  <string name="menu_word_wrap">Пренос на текст</string>
   <string name="menu_syntax_highlight">Изключи подсветката за синтаксиса</string>
   <string name="create_copy_regexp"><xliff:g id="name">%1$s </xliff:g> - копирай <xliff:g id="extension">%2$s </xliff:g></string>
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s </xliff:g> - ново <xliff:g id="extension">%2$s </xliff:g></string>
@@ -201,11 +201,11 @@
   <string name="waiting_dialog_moving_title">Преместване\u2026</string>
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>от</b>]]> <xliff:g id="from">%1$s</xliff:g> <![CDATA[<br/><b>към</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <string name="waiting_dialog_deleting_title">Изтриване\u2026</string>
-  <string name="waiting_dialog_deleting_msg"><![CDATA[<b>файл</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Файл</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <string name="waiting_dialog_extracting_title">Екстрактиране\u2026</string>
-  <string name="waiting_dialog_extracting_msg"><![CDATA[<b>файл</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Файл</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <string name="waiting_dialog_compressing_title">Компресиране\u2026</string>
-  <string name="waiting_dialog_compressing_msg"><![CDATA[<b>файл</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Файл</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Анализиране\u2026</b>]]></string>
   <string name="msgs_extracting_success">Операцията по извличането е успешно завършена. Към <xliff:g id="destination">%1$s </xliff:g> се извличат тези данни.</string>
   <string name="msgs_compressing_success">Операцията по компресирането е успешно завършена. Данните са компресирани до <xliff:g id="destination">%1$s </xliff:g>.</string>
@@ -299,25 +299,25 @@
   <string name="pref_themes">Теми</string>
   <string name="pref_about">Информация</string>
   <string name="pref_general_behaviour_category">Общи</string>
-  <string name="pref_case_sensitive_sort">Главни и малки букви сортиране</string>
-  <string name="pref_case_sensitive_sort_summary">Помислете за случаи, когато навигирате или сортирате резултатите от търсенето</string>
-  <string name="pref_filetime_format_mode">Дата/час формат</string>
-  <string name="pref_disk_usage_warning_level">Използване на диска предупреждение</string>
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">Покажи в различен цвят използваното дисково пространство за widgets, когато те ги превишат <xliff:g id="level">%1$s </xliff:g> процента от свободно дисково пространство</string>
+  <string name="pref_case_sensitive_sort">Сортиране по малки и главни букви</string>
+  <string name="pref_case_sensitive_sort_summary">Подрежда резултатите при търсене или навигация</string>
+  <string name="pref_filetime_format_mode">Формат на дата и час</string>
+  <string name="pref_disk_usage_warning_level">Предупреждение за нивото на използваното пространство</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">Покажи в различен цвят използваното дисково пространство, ако дискът е пълен при<xliff:g id="level">%1$s</xliff:g> процента</string>
   <string name="pref_compute_folder_statistics">Изчисли статистика за папките</string>
-  <string name="pref_compute_folder_statistics_on">Предупреждение! Изчисляването на статистиката за папките ще отнеме много времето и системи ресурси</string>
+  <string name="pref_compute_folder_statistics_on">Предупреждение! Изчисляването на статистиката за папките ще отнеме много времето и системни ресурси</string>
   <string name="pref_display_thumbs">Предварителен преглед</string>
-  <string name="pref_display_thumbs_summary">Показване на предварителен преглед на изображения за приложения, музикални файлове, снимки и видеоклипове</string>
+  <string name="pref_display_thumbs_summary">Показва предварително изображение на приложения, музикални файлове, снимки и видеоклипове</string>
   <string name="pref_use_flinger">Използвай жестове</string>
   <string name="pref_use_flinger_summary">Използвайте плъзгане от наляво на десно за да изтривате файлове или папки</string>
   <string name="pref_general_advanced_settings_category">За напреднали</string>
   <string name="pref_access_mode">Режим на достъп</string>
   <string name="pref_access_mode_safe">Сигурен режим</string>
-  <string name="pref_access_mode_safe_summary">Сигурен режим\n\nПриложението работи без привилегии и има достъп само до обемите за съхранение (SD карти и USB)</string>
+  <string name="pref_access_mode_safe_summary">Сигурен режим\n\nПриложението има достъп само до файловата система (SD-карти и USB)</string>
   <string name="pref_access_mode_prompt">Бърз потребителски режим</string>
   <string name="pref_access_mode_prompt_summary">Бърз потребител режим\n\nПриложението работи с пълен достъп до файловата система, но ще пита за разрешение преди да изпълни действия като администратор</string>
   <string name="pref_access_mode_root">Root режим</string>
-  <string name="pref_access_mode_root_summary">Root режим\n\nВнимание! Този режим разрешава операции, които могат да повредят вашето устройство. Ваша отговорност е да се гарантира, че дадена операция е безопасна</string>
+  <string name="pref_access_mode_root_summary">Root режим\n\nВнимание! Този режим разрешава операции, които могат да повредят вашето устройство. Ваша е отговорността, че дадена операция е безопасна</string>
   <string name="pref_restrict_secondary_users_access_title">Ограничен достъп</string>
   <string name="pref_restrict_secondary_users_access_summary">Ограничен на достъп до цялата система на вторичните потребители</string>
   <string name="pref_search_results_category">Резултати</string>
@@ -336,22 +336,22 @@
   <string name="pref_remove_saved_search_terms_msg">Всички записани термини за търсене са премахнати</string>
   <string name="pref_secure_storage_category">Защитено хранилище</string>
   <string name="pref_secure_storage_delayed_sync_title">Отложена синхронизация</string>
-  <string name="pref_secure_storage_delayed_sync_summary">Синхронизирането на защитена файлова система ще отнеме много ресурси. Разреши тази опция за разрешаване на по-бързи отговори след всяка операция, извършване на синхронизация, когато файловата система е в неизползвано състояние, но за сметка на това ще изгубите не синхронизирана информация ако приложението се срине.</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Синхронизирането на защитена файлова система ще отнеме много ресурси. Активирането на тази опция ще увеличи производителността при извършване на синхронизация, когато файловата система е в неизползвано състояние, но в този случай, данните могат да бъдат загубени ако приложението се срине.</string>
   <string name="pref_secure_storage_reset_password_title">Смяна на паролата</string>
   <string name="pref_secure_storage_delete_storage_title">Изтриване на съхранението</string>
   <string name="pref_editor_behaviour_category">Поведение</string>
   <string name="pref_no_suggestions">Няма предложения</string>
   <string name="pref_no_suggestions_desc">Не показвай речникови предложения при редактиране на файл</string>
-  <string name="pref_word_wrap">Пренос на текста</string>
+  <string name="pref_word_wrap">Пренос на текст</string>
   <string name="pref_hexdump">Шестнадесетични файлове</string>
-  <string name="pref_hexdump_desc">Когато отворите двоичен файл, генерирай шестнадесетичен дъмп файл и го покажи на екрана</string>
+  <string name="pref_hexdump_desc">Показва съдържанието на бинарни файлове в шестнадесетичен формат</string>
   <string name="pref_editor_syntax_highlight_category">Включи подсветка за синтаксиса</string>
   <string name="pref_syntax_highlight">Изключи подсветката за синтаксиса</string>
-  <string name="pref_syntax_highlight_desc">Подсветка за синтаксиса на файла показва в редактора (само за поддържаните от редактора типове файлове)</string>
+  <string name="pref_syntax_highlight_desc">Подсветка на синтаксиса, само за поддържаните от редактора типове файлове</string>
   <string name="pref_syntax_highlight_color_scheme">Цветова схема</string>
-  <string name="pref_syntax_highlight_color_scheme_desc">Изберете цветовата схема на синтаксис оцветяването</string>
+  <string name="pref_syntax_highlight_color_scheme_desc">Изберете цветова схема за оцветяване на синтаксиса</string>
   <string name="pref_syntax_sh_use_theme_default">Тема по подразбиране</string>
-  <string name="pref_syntax_sh_use_theme_default_desc">Използвайте по подразбиране синтаксис подсветката на текущата тема</string>
+  <string name="pref_syntax_sh_use_theme_default_desc">Използвайте оцветяване на синтаксиса на текущата тема</string>
   <string name="pref_editor_sh_item_category">Елементи</string>
   <string name="pref_themes_selection_category">Теми</string>
   <string name="pref_themes_set_theme">Постави тема</string>
@@ -399,7 +399,7 @@
   <string name="print_unsupported_image">Формата на изображението е неподдържан</string>
   <string name="print_document_header">Документ: <xliff:g id="document_name">%1$s </xliff:g></string>
   <string name="print_document_footer">Страница <xliff:g id="page_number">%1$s </xliff:g></string>
-  <string name="security_warning_extract">Предупреждение! \n\nЕкстрактирането на архивен файл с относителени или абсолютни пътища може да причини увреждане на вашето устройство от презаписване на системани архиви.\n\nИскате ли да продължите?</string>
+  <string name="security_warning_extract">Предупреждение! \n\nРазархивирането на архив с относителени или абсолютни пътища може да причини повреда на устройството чрез презаписване на системани файлове.\n\nНаистина ли искате да продължите?</string>
   <string name="changelog_title">Регистър на промените</string>
   <string name="welcome_title">Добре дошли</string>
   <string name="welcome_msg">Добре дошли в CyanogenMod файловия мениджър.\n\nТова приложение ви позволява да проучите файловата система и операции, които могат да блокират вашето устройство. За да предотвратите повреда, приложението ще започне в сигурен ниско правен режим.\n\nВие може да влезете в администраторски режим чрез настройките, но на своя отговорност.\n\nThe CyanogenMod екип</string>

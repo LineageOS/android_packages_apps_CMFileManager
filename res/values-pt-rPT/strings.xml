@@ -301,7 +301,7 @@
   <string name="pref_general_behaviour_category">Geral</string>
   <string name="pref_case_sensitive_sort">Diferenciar maiúsculas de minúsculas</string>
   <string name="pref_case_sensitive_sort_summary">Ter em conta maiúsculas/minúsculas ao navegar ou ordenar resultados da pesquisa</string>
-  <string name="pref_filetime_format_mode">Formato data/hora</string>
+  <string name="pref_filetime_format_mode">Formato de data/hora</string>
   <string name="pref_disk_usage_warning_level">Alerta de utilização de disco</string>
   <string name="pref_disk_usage_warning_level_summary" formatted="false">Mostrar uma cor diferente nos widgets da utilização de disco quando atingem <xliff:g id="level">%1$s</xliff:g> por cento de espaço usado</string>
   <string name="pref_compute_folder_statistics">Estatísticas da pasta</string>
@@ -337,7 +337,7 @@
   <string name="pref_remove_saved_search_terms_msg">Todos os termos de procura guardados foram removidos</string>
   <string name="pref_secure_storage_category">Armazenamento seguro</string>
   <string name="pref_secure_storage_delayed_sync_title">Sincronização atrasada</string>
-  <string name="pref_secure_storage_delayed_sync_summary">A sincronização de sistemas de ficheiros seguros é uma operação demorada. Ative esta opção para permitir uma melhor resposta de tempo após cada operação, executar a sincronização quando o sistema de ficheiros não está a ser utilizado, mas à custa de perder as informações pendentes não sincronizadas, se a aplicação falhar.</string>
+  <string name="pref_secure_storage_delayed_sync_summary">A sincronização de sistemas de ficheiros seguros é uma operação demorada. Ative esta opção para permitir respostas mais rápidas após cada operação, executando a sincronização quando o sistema de ficheiros não está a ser utilizado, mas à custa de perda de informações pendentes não sincronizadas, se a aplicação falhar.</string>
   <string name="pref_secure_storage_reset_password_title">Alterar palavra-passe</string>
   <string name="pref_secure_storage_delete_storage_title">Eliminar o armazenamento</string>
   <string name="pref_editor_behaviour_category">Comportamento</string>

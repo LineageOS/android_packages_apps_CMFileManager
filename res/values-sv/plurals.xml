@@ -17,23 +17,23 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="one">1 mapp</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> mapp</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mappar</item>
   </plurals>
   <plurals name="n_files">
-    <item quantity="one">1 fil</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fil</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> filer</item>
   </plurals>
   <plurals name="search_found_items">
-    <item quantity="one">1 föremål funnet</item>
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> föremål funnet</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> föremål funna</item>
   </plurals>
   <plurals name="selection_folders">
-    <item quantity="one">1 mapp vald.</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> mapp vald.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mappar valda.</item>
   </plurals>
   <plurals name="selection_files">
-    <item quantity="one">1 fil vald.</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fil vald.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> filer valda.</item>
   </plurals>
   <plurals name="deleting_n_items">
