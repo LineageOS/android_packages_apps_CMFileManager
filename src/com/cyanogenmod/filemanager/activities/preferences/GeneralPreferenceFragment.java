@@ -267,7 +267,8 @@ public class GeneralPreferenceFragment extends TitlePreferenceFragment {
         boolean restrictedAccess = AndroidHelper.isSecondaryUser(context) &&
                 FileManagerApplication.isRestrictSecondaryUsersAccess(context);
         this.mAccessMode.setEnabled(FileManagerApplication.hasShellCommands() && !restrictedAccess);
-        if (!FileManagerApplication.hasShellCommands()) {
+        if (!FileManagerApplication.hasShellCommands() ||
+                !FileManagerApplication.isDeviceRooted()) {
             PreferenceCategory category = (PreferenceCategory) findPreference(
                     "general_advanced_settings");
             category.removePreference(mAccessMode);
