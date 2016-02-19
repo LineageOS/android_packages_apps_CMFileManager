@@ -314,9 +314,9 @@
   <string name="pref_general_advanced_settings_category">Avançat</string>
   <string name="pref_access_mode">Mode d\'accés</string>
   <string name="pref_access_mode_safe">Mode segur</string>
-  <string name="pref_access_mode_safe_summary">Mode segur\n\nAquesta app s\'està executant sense privilegis i només té accés als sistemes d\'arxius d\'emmagatzematge (targetes SD i USB)</string>
+  <string name="pref_access_mode_safe_summary">Mode segur\n\nAquesta aplicació s\'està executant sense privilegis i només té accés als sistemes d\'arxius d\'emmagatzematge (targetes SD i USB)</string>
   <string name="pref_access_mode_prompt">Petició mode Usuari</string>
-  <string name="pref_access_mode_prompt_summary">Petició mode Usuari\n\nAquesta app s\'està executant amb accés complet al sistema d\'arxius però demanarà permís abans d\'executar qualsevol acció que demani més privilegis</string>
+  <string name="pref_access_mode_prompt_summary">Petició mode Usuari\n\nAquesta aplicació s\'està executant amb accés complet al sistema d\'arxius però demanarà permís abans d\'executar qualsevol acció que demani més privilegis</string>
   <string name="pref_access_mode_root">Mode d\'accés de superusuari</string>
   <string name="pref_access_mode_root_summary">Mode d\'accés de superusuari\n\nAlerta! Aquest mode permet operacions que podrien espatllar el teu dispositiu. És la teva responsabilitat assegurar que les operacions són segures</string>
   <string name="pref_restrict_secondary_users_access_title">Restringir l\'accés dels usuaris</string>
@@ -337,7 +337,7 @@
   <string name="pref_remove_saved_search_terms_msg">Tots els termes de cerca desats s\'han esborrat</string>
   <string name="pref_secure_storage_category">Emmagatzematge segur</string>
   <string name="pref_secure_storage_delayed_sync_title">Retard de sincronització</string>
-  <string name="pref_secure_storage_delayed_sync_summary">La sincronització de sistemes de fitxers segurs és una operació costosa. Habilita aquesta opció per aconseguir millors temps de resposta després de cada operació, realitzant la sincronització quan el sistema de fitxers està en un estat sense ús, però a costa de perdre informació pendent de ser sincronitzada si l\'app es penja.</string>
+  <string name="pref_secure_storage_delayed_sync_summary">La sincronització de sistemes de fitxers segurs és una operació costosa. Habilita aquesta opció per aconseguir millors temps de resposta després de cada operació, realitzant la sincronització quan el sistema de fitxers està en un estat sense ús, però a costa de perdre informació pendent de ser sincronitzada si l\'aplicació es penja.</string>
   <string name="pref_secure_storage_reset_password_title">Canvia la contrasenya</string>
   <string name="pref_secure_storage_delete_storage_title">Esborra emmagatzematge</string>
   <string name="pref_editor_behaviour_category">Comportament</string>
@@ -406,6 +406,6 @@
       Segur que vols continuar?</string>
   <string name="changelog_title">Registre de canvis</string>
   <string name="welcome_title">Benvingut</string>
-  <string name="welcome_msg">Benvingut al gestor d\'arxius de CyanogenMod.\n\nAquesta app et permet explorar el sistema d\'arxius i fer operacions que podrien espatllar el teur dispositiu. Per evitar danys, aquesta app s\'executarà en mode segur, en mode de pocs privilegis.\n\nPots accedir al mode avançat, amb privilegis complets mitjançant la Configuració. Està sota la teva responsabilitat assegurar que les operacions no espatllin el teu sistema.\n\nL\'equip de CyanogenMod.\n</string>
-  <string name="activity_not_found_exception">No s\'ha pogut trobar una app per obrir aquest arxiu</string>
+  <string name="welcome_msg">Benvingut al gestor d\'arxius de CyanogenMod.\n\nAquesta aplicació et permet explorar el sistema d\'arxius i fer operacions que podrien espatllar el teu dispositiu. Per evitar danys, aquesta aplicació s\'executarà en mode segur, en mode de pocs privilegis.\n\nPots accedir al mode avançat, amb privilegis complets mitjançant la Configuració. Està sota la teva responsabilitat assegurar que les operacions no espatllin el teu sistema.\n\nL\'equip de CyanogenMod.\n</string>
+  <string name="activity_not_found_exception">No s\'ha pogut trobar una aplicació per obrir aquest arxiu</string>
 </resources>

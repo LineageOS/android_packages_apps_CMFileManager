@@ -68,7 +68,7 @@
   <string name="msgs_illegal_argument">Незаконен аргумент. Позоваването е неуспешно.</string>
   <string name="msgs_unresolved_inconsistencies">Операция не е разрешена, защото ще се създаде несъответствия.</string>
   <string name="msgs_operation_not_allowed_in_current_directory">Целевата папката не може да бъде подпапка на източника или в директорията на източника.</string>
-  <string name="msgs_push_again_to_exit">Натиснете отново, за да излезете.</string>
+  <string name="msgs_push_again_to_exit">Натиснете отново за да изход.</string>
   <string name="msgs_not_registered_app">Няма приложение, регистрирано да обработва типа на избрания файл.</string>
   <string name="msgs_overwrite_files">Някои от файловете вече съществуват в местоназначената папка.\n\nДа ги презапиша ли?</string>
   <string name="msgs_action_association_failed">Асоциирането на действието на приложението е неуспешно.</string>
@@ -128,15 +128,15 @@
   <string name="fso_properties_dialog_tab_info">Информация</string>
   <string name="fso_properties_dialog_tab_permissions">Права</string>
   <string name="fso_properties_dialog_name">Име:</string>
-  <string name="fso_properties_dialog_parent">Папка:</string>
+  <string name="fso_properties_dialog_parent">Метоположение:</string>
   <string name="fso_properties_dialog_type">Тип:</string>
   <string name="fso_properties_dialog_category">Категория:</string>
   <string name="fso_properties_dialog_link">Връзка:</string>
   <string name="fso_properties_dialog_size">Размер:</string>
   <string name="fso_properties_dialog_contains">Съдържание:</string>
   <string name="fso_properties_dialog_last_accessed_date">Достъп:</string>
-  <string name="fso_properties_dialog_last_modified_date">Модифицирани:</string>
-  <string name="fso_properties_dialog_last_changed_date">Променени:</string>
+  <string name="fso_properties_dialog_last_modified_date">Модифициран:</string>
+  <string name="fso_properties_dialog_last_changed_date">Променен:</string>
   <string name="fso_properties_dialog_owner">Собственик:</string>
   <string name="fso_properties_dialog_group">Група:</string>
   <string name="fso_properties_dialog_others">Други:</string>
@@ -299,25 +299,25 @@
   <string name="pref_themes">Теми</string>
   <string name="pref_about">Информация</string>
   <string name="pref_general_behaviour_category">Общи</string>
-  <string name="pref_case_sensitive_sort">Сортиране по малки и главни букви</string>
+  <string name="pref_case_sensitive_sort">Сортиране по малки и големи букви</string>
   <string name="pref_case_sensitive_sort_summary">Подрежда резултатите при търсене или навигация</string>
   <string name="pref_filetime_format_mode">Формат на дата и час</string>
   <string name="pref_disk_usage_warning_level">Предупреждение за нивото на използваното пространство</string>
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">Покажи в различен цвят използваното дисково пространство, ако дискът е пълен при<xliff:g id="level">%1$s</xliff:g> процента</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">Покажи в различен цвят използваното дисково пространство, ако дискът е пълен при <xliff:g id="level">%1$s</xliff:g>%</string>
   <string name="pref_compute_folder_statistics">Изчисли статистика за папките</string>
   <string name="pref_compute_folder_statistics_on">Предупреждение! Изчисляването на статистиката за папките ще отнеме много времето и системни ресурси</string>
   <string name="pref_display_thumbs">Предварителен преглед</string>
   <string name="pref_display_thumbs_summary">Показва предварително изображение на приложения, музикални файлове, снимки и видеоклипове</string>
   <string name="pref_use_flinger">Използвай жестове</string>
   <string name="pref_use_flinger_summary">Използвайте плъзгане от наляво на десно за да изтривате файлове или папки</string>
-  <string name="pref_general_advanced_settings_category">За напреднали</string>
+  <string name="pref_general_advanced_settings_category">Разширени</string>
   <string name="pref_access_mode">Режим на достъп</string>
   <string name="pref_access_mode_safe">Сигурен режим</string>
   <string name="pref_access_mode_safe_summary">Сигурен режим\n\nПриложението има достъп само до файловата система (SD-карти и USB)</string>
   <string name="pref_access_mode_prompt">Бърз потребителски режим</string>
   <string name="pref_access_mode_prompt_summary">Бърз потребител режим\n\nПриложението работи с пълен достъп до файловата система, но ще пита за разрешение преди да изпълни действия като администратор</string>
   <string name="pref_access_mode_root">Root режим</string>
-  <string name="pref_access_mode_root_summary">Root режим\n\nВнимание! Този режим разрешава операции, които могат да повредят вашето устройство. Ваша е отговорността, че дадена операция е безопасна</string>
+  <string name="pref_access_mode_root_summary">Root режим\n\nВнимание! Този режим разрешава операции, които могат да повредят вашето устройство. Ваша е отговорността за всяка направена операция</string>
   <string name="pref_restrict_secondary_users_access_title">Ограничен достъп</string>
   <string name="pref_restrict_secondary_users_access_summary">Ограничен на достъп до цялата система на вторичните потребители</string>
   <string name="pref_search_results_category">Резултати</string>

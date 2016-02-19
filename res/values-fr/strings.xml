@@ -23,8 +23,8 @@
   <string name="size_megabytes">Mo</string>
   <string name="size_gigabytes">Go</string>
   <string name="datetime_format_order">%1$s %2$s</string>
-  <string name="device_blockdevice">Bloquer l\'appareil</string>
-  <string name="device_characterdevice">Caractère de l\'appareil</string>
+  <string name="device_blockdevice">Dispositif de blocage</string>
+  <string name="device_characterdevice">Dispositif de caractères</string>
   <string name="device_namedpipe">Canal nommé</string>
   <string name="device_domainsocket">Socket du domaine</string>
   <string name="mount_point_readonly">RO</string>
@@ -34,11 +34,11 @@
   <string name="all">Tous</string>
   <string name="overwrite">Écraser</string>
   <string name="select">Sélectionner</string>
-  <string name="root_directory_name"><![CDATA[<Dossier racine>]]></string>
-  <string name="search_result_name">Rechercher\u00A0: <xliff:g id="terms">%1$s</xliff:g></string>
+  <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
+  <string name="search_result_name">Rechercher : <xliff:g id="terms">%1$s</xliff:g></string>
   <string name="loading_message">Chargement\u2026</string>
   <string name="cancelled_message">Annulé</string>
-  <string name="error_message">Erreur</string>
+  <string name="error_message">Erreur.</string>
   <string name="copy_text_cd">Appuyer pour copier le texte dans le presse-papier</string>
   <string name="copy_text_msg">Texte copié dans le presse-papier</string>
   <string name="warning_title">Attention</string>
@@ -98,10 +98,10 @@
   <string name="layout_icons">Icônes</string>
   <string name="layout_simple">Simple</string>
   <string name="layout_details">Détails</string>
-  <string name="cm_filemanager_show_dirs_first">Afficher les dossiers en première</string>
+  <string name="cm_filemanager_show_dirs_first">Afficher les dossiers en premier</string>
   <string name="cm_filemanager_show_hidden">Afficher les fichiers cachés</string>
   <string name="cm_filemanager_show_system">Afficher les fichiers système</string>
-  <string name="cm_filemanager_show_symlinks">Afficher les raccourcis</string>
+  <string name="cm_filemanager_show_symlinks">Afficher les liens symboliques</string>
   <string name="filesystem_info_warning_title">Aucune information</string>
   <string name="filesystem_info_warning_msg">Aucune information disponible pour le système de fichiers</string>
   <string name="filesystem_info_cant_be_mounted_msg">Impossible de monter/démonter le système de fichiers</string>
