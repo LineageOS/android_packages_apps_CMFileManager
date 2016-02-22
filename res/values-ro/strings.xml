@@ -400,5 +400,7 @@
   <string name="welcome_title">Bun venit</string>
   <string name="welcome_msg">Bine ați venit la managerul de fișiere CyanogenMod.\n\nAceastă aplicație vă permite să explorați sistemul de fișiere și să efectuați operații care ar putea deteriora dispozitivul dvs. Pentru a preveni stricăciunile, aplicația pornește în modul sigur, un mod cu privilegii reduse.\n\nPuteți accesa modul avansat, cu privilegii complete via Setări. Este responsabilitatea dvs să vă asigurați că operațile făcute de dvs nu distrug dispozitivul.\n\nEchipa CyanogenMod</string>
   <string name="activity_not_found_exception">Nu s-a găsit o aplicație pentru a deschide acest fișier</string>
+  <string name="storage_permissions_denied">Managerul de fișiere necesită permisiune de stocare pentru a putea vizualiza fișierele tale.</string>
+  <string name="storage_permissions_explanation">Mergi la Setări și apasă Permisiuni pentru acordarea de permisiuni.</string>
   <string name="snackbar_settings">Setări</string>
 </resources>

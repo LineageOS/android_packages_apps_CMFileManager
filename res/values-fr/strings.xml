@@ -23,8 +23,8 @@
   <string name="size_megabytes">Mo</string>
   <string name="size_gigabytes">Go</string>
   <string name="datetime_format_order">%1$s %2$s</string>
-  <string name="device_blockdevice">Bloquer l\'appareil</string>
-  <string name="device_characterdevice">Caractère de l\'appareil</string>
+  <string name="device_blockdevice">Dispositif de blocage</string>
+  <string name="device_characterdevice">Dispositif de caractères</string>
   <string name="device_namedpipe">Canal nommé</string>
   <string name="device_domainsocket">Socket du domaine</string>
   <string name="mount_point_readonly">RO</string>
@@ -34,11 +34,11 @@
   <string name="all">Tous</string>
   <string name="overwrite">Écraser</string>
   <string name="select">Sélectionner</string>
-  <string name="root_directory_name"><![CDATA[<Dossier racine>]]></string>
-  <string name="search_result_name">Rechercher\u00A0: <xliff:g id="terms">%1$s</xliff:g></string>
+  <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
+  <string name="search_result_name">Rechercher : <xliff:g id="terms">%1$s</xliff:g></string>
   <string name="loading_message">Chargement\u2026</string>
   <string name="cancelled_message">Annulé</string>
-  <string name="error_message">Erreur</string>
+  <string name="error_message">Erreur.</string>
   <string name="copy_text_cd">Appuyer pour copier le texte dans le presse-papier</string>
   <string name="copy_text_msg">Texte copié dans le presse-papier</string>
   <string name="warning_title">Attention</string>
@@ -47,28 +47,28 @@
   <string name="confirm_overwrite">Confirmer l\'écrasement</string>
   <string name="confirm_deletion">Confirmer la suppression</string>
   <string name="msgs_change_to_prompt_access_mode_title">Confirmer le changement</string>
-  <string name="msgs_change_to_prompt_access_mode_msg">Impossible de passer en mode Root. Retour au mode normal.\n\nEffectuer le changement\u00A0?</string>
+  <string name="msgs_change_to_prompt_access_mode_msg">Impossible de passer en mode Root. Retour au mode normal.\n\nEffectuer le changement ?</string>
   <string name="msgs_cant_create_console">Impossible d\'obtenir les privilèges requis pour fonctionner</string>
   <string name="msgs_privileged_console_alloc_failed">Impossible de passer en mode Root. Retour au mode normal.</string>
-  <string name="msgs_settings_save_failure">Impossible d\'appliquer ou d\'enregistrer le réglage</string>
+  <string name="msgs_settings_save_failure">Impossible d\'appliquer ou d\'enregistrer le paramètre.</string>
   <string name="msgs_settings_invalid_initial_directory">Le dossier d\'accueil « <xliff:g id="initial_dir">%1$s</xliff:g> » est incorrect. Changement vers le dossier racine.</string>
   <string name="root_not_available_msg">Le root n\'est pas disponible sur cet appareil. Impossible d\'effectuer cette opération.</string>
   <string name="msgs_success">Opération réussie</string>
   <string name="msgs_unknown">Une erreur a été détectée. L\'opération a échoué</string>
-  <string name="msgs_insufficient_permissions">Cette opération nécessite une élévation des droits. Tentative d\'accès Root.</string>
+  <string name="msgs_insufficient_permissions">Cette opération nécessite une élévation des droits. Essayez de passer en mode accès Root.</string>
   <string name="msgs_no_disk_space">Cette opération a échoué car il n\'y a plus d\'espace disponible sur l\'appareil.</string>
   <string name="msgs_file_not_found">Fichier ou dossier introuvable</string>
   <string name="msgs_command_not_found">Commande introuvable ou définition invalide</string>
-  <string name="msgs_io_failed">Lecture/Ecriture échouée</string>
+  <string name="msgs_io_failed">Erreur de lecture/écriture.</string>
   <string name="msgs_operation_timeout">Opération expirée</string>
-  <string name="msgs_operation_failure">Opération échouée</string>
+  <string name="msgs_operation_failure">L\'opération a échoué.</string>
   <string name="msgs_console_alloc_failure">Erreur interne</string>
   <string name="msgs_operation_can_not_be_cancelled">Impossible d\'annuler l\'opération</string>
-  <string name="msgs_read_only_filesystem">Le système de fichiers est en lecture seul. Essayez de monter le système de fichiers en lecture-écriture avant de retenter l\'opération.</string>
-  <string name="msgs_illegal_argument">Argument illégal. Invocation échouée.</string>
+  <string name="msgs_read_only_filesystem">Le système de fichiers est en lecture seule. Essayez de monter le système de fichiers en lecture-écriture avant de retenter l\'opération.</string>
+  <string name="msgs_illegal_argument">Argument illégal. Invocation impossible.</string>
   <string name="msgs_unresolved_inconsistencies">Opération non autorisée pour cause d\'incohérences</string>
   <string name="msgs_operation_not_allowed_in_current_directory">Le dossier de destination ne peut pas être un sous-dossier de la source ou la source elle-même.</string>
-  <string name="msgs_push_again_to_exit">Appuyer encore pour sortir</string>
+  <string name="msgs_push_again_to_exit">Appuyer de nouveau pour sortir.</string>
   <string name="msgs_not_registered_app">Aucune application disponible pour ouvrir le fichier sélectionné</string>
   <string name="msgs_overwrite_files">Certains fichiers existent déjà dans le dossier de destination.\n\nEcraser\u00A0?</string>
   <string name="msgs_action_association_failed">Impossible d\'associer l\'action à l\'application</string>
@@ -98,10 +98,10 @@
   <string name="layout_icons">Icônes</string>
   <string name="layout_simple">Simple</string>
   <string name="layout_details">Détails</string>
-  <string name="cm_filemanager_show_dirs_first">Afficher les dossiers en première</string>
+  <string name="cm_filemanager_show_dirs_first">Afficher les dossiers en premier</string>
   <string name="cm_filemanager_show_hidden">Afficher les fichiers cachés</string>
   <string name="cm_filemanager_show_system">Afficher les fichiers système</string>
-  <string name="cm_filemanager_show_symlinks">Afficher les raccourcis</string>
+  <string name="cm_filemanager_show_symlinks">Afficher les liens symboliques</string>
   <string name="filesystem_info_warning_title">Aucune information</string>
   <string name="filesystem_info_warning_msg">Aucune information disponible pour le système de fichiers</string>
   <string name="filesystem_info_cant_be_mounted_msg">Impossible de monter/démonter le système de fichiers</string>

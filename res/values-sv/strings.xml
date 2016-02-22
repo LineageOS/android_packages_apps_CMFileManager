@@ -25,7 +25,7 @@
   <string name="datetime_format_order">%1$s %2$s</string>
   <string name="device_blockdevice">Blockenhet</string>
   <string name="device_characterdevice">Teckenenhet</string>
-  <string name="device_namedpipe">FIFO</string>
+  <string name="device_namedpipe">Namngiven pipe</string>
   <string name="device_domainsocket">Sockel</string>
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
