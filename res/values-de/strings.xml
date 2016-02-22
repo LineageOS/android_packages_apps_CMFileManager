@@ -36,7 +36,7 @@
   <string name="select">Auswählen</string>
   <string name="root_directory_name"><![CDATA[<Stammverzeichnis>]]></string>
   <string name="search_result_name">Suche: <xliff:g id="terms">%1$s</xliff:g></string>
-  <string name="loading_message">Wird geladen\u2026</string>
+  <string name="loading_message">Laden\u2026</string>
   <string name="cancelled_message">Abgebrochen</string>
   <string name="error_message">Fehler</string>
   <string name="copy_text_cd">Tippen, um Text in die Zwischenablage zu kopieren</string>
@@ -71,7 +71,7 @@
   <string name="msgs_push_again_to_exit">Zum Beenden erneut drücken.</string>
   <string name="msgs_not_registered_app">Für diesen Dateityp ist keine Standardanwendung definiert.</string>
   <string name="msgs_overwrite_files">Einige der Dateien existieren bereits im Zielverzeichnis.\n\nDateien überschreiben?</string>
-  <string name="msgs_action_association_failed">Verknüpfung der Aktion mit der App ist fehlgeschlagen.</string>
+  <string name="msgs_action_association_failed">Zuordnung der Aktion zur App ist fehlgeschlagen.</string>
   <string name="advise_insufficient_permissions">Dieser Vorgang erfordert erhöhte Rechte.\n\nMöchten Sie in den Root-Zugriffsmodus wechseln?</string>
   <string name="parent_dir">Übergeordnetes Verzeichnis</string>
   <string name="external_storage">Externer Speicher</string>
@@ -80,7 +80,7 @@
   <string name="actionbar_button_sort_mode_cd">Sortiermodus</string>
   <string name="actionbar_button_layout_mode_cd">Layout-Modus</string>
   <string name="actionbar_button_other_view_options_cd">Andere Ansichtsoptionen</string>
-  <string name="actionbar_button_selection_done_cd">Erledigt</string>
+  <string name="actionbar_button_selection_done_cd">Fertig</string>
   <string name="actionbar_button_actions_cd">Aktionen</string>
   <string name="actionbar_button_search_cd">Suche</string>
   <string name="actionbar_button_overflow_cd">Weitere Optionen</string>
@@ -100,7 +100,7 @@
   <string name="layout_details">Details</string>
   <string name="cm_filemanager_show_dirs_first">Ordner zuerst anzeigen</string>
   <string name="cm_filemanager_show_hidden">Versteckte Dateien anzeigen</string>
-  <string name="cm_filemanager_show_system">Systemdateien</string>
+  <string name="cm_filemanager_show_system">Systemdateien anzeigen</string>
   <string name="cm_filemanager_show_symlinks">Symbolische Links anzeigen</string>
   <string name="filesystem_info_warning_title">Keine Informationen</string>
   <string name="filesystem_info_warning_msg">Es sind keine Informationen zum Dateisystem verfügbar.</string>
@@ -118,7 +118,7 @@
   <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
   <string name="filesystem_info_dialog_virtual">Virtuell:</string>
   <string name="filesystem_info_dialog_total_disk_usage">Gesamt:</string>
-  <string name="filesystem_info_dialog_used_disk_usage">Benutzt:</string>
+  <string name="filesystem_info_dialog_used_disk_usage">Belegt:</string>
   <string name="filesystem_info_dialog_free_disk_usage">Frei:</string>
   <string name="fso_properties_permissions_not_allowed_msg">Änderungen an den Zugriffsrechten sind im sicheren Modus nicht erlaubt. Tippen, um in den Root-Zugriffsmodus zu wechseln.</string>
   <string name="fso_properties_failed_to_change_owner_msg">Die Änderung des Besitzers ist fehlgeschlagen.\n\nAus Sicherheitsgründen lassen manche Dateisysteme, z. B. auf SD-Karten, keine Änderung des Besitzers zu.</string>
@@ -141,12 +141,12 @@
   <string name="fso_properties_dialog_group">Gruppe:</string>
   <string name="fso_properties_dialog_others">Andere:</string>
   <string name="fso_properties_dialog_include_in_media_scan">Medienscan überspringen:</string>
-  <string name="fso_failed_to_allow_media_scan">Medienscan konnte nicht aktiviert werden</string>
+  <string name="fso_failed_to_allow_media_scan">Der Medienscan konnte nicht aktiviert werden.</string>
   <string name="fso_failed_to_prevent_media_scan">Medienscan konnte nicht verhindert werden</string>
   <string name="fso_delete_nomedia_dir_title">Verzeichnis \".nomedia\" löschen</string>
   <string name="fso_delete_nomedia_dir_body">Dieses Verzeichnis enthält ein Verzeichnis namens \".nomedia\".\n\nSoll das Verzeichnis und dessen Inhalt gelöscht werden?</string>
   <string name="fso_delete_nomedia_non_empty_title">Datei \".nomedia\" löschen</string>
-  <string name="fso_delete_nomedia_non_empty_body">Dieses Verzeichnis enthält bereits eine Datei namens \".nomedia\", die nicht leer ist.\n\nSoll diese Datei gelöscht werden?</string>
+  <string name="fso_delete_nomedia_non_empty_body">Dieses Verzeichnis enthält eine Datei namens \".nomedia\", die nicht leer ist.\n\nSoll diese Datei gelöscht werden?</string>
   <string name="history">Verlauf</string>
   <string name="msgs_history_empty">Der Verlauf ist leer.</string>
   <string name="msgs_history_unknown">Unbekanntes Verlaufselement.</string>
@@ -161,21 +161,21 @@
   <string name="search_few_characters_msg">Da der Suchbegriff sehr kurz ist, kann die Suche sehr viel Zeit und Systemressourcen beanspruchen.\n\nTrotzdem fortfahren?</string>
   <string name="searching">Bitte warten\u2026</string>
   <string name="searching_action_label">Suche läuft</string>
-  <string name="picker_title">Datei wählen</string>
-  <string name="directory_picker_title">Verzeichnis wählen</string>
+  <string name="picker_title">Datei auswählen</string>
+  <string name="directory_picker_title">Verzeichnis auswählen</string>
   <string name="editor">Editor</string>
   <string name="editor_invalid_file_msg">Ungültige Datei.</string>
   <string name="editor_file_not_found_msg">Datei nicht gefunden.</string>
   <string name="editor_file_exceed_size_msg">Die Datei ist zu groß, um sie auf dem Gerät zu öffnen.</string>
   <string name="editor_dirty_ask_title">Beenden bestätigen</string>
-  <string name="editor_dirty_ask_msg">Es gibt ungespeicherte Änderungen.\n\nBeenden ohne zu speichern?</string>
+  <string name="editor_dirty_ask_msg">Es gibt ungespeicherte Änderungen.\n\nBeenden ohne Speichern?</string>
   <string name="editor_successfully_saved">Die Datei wurde erfolgreich gespeichert.</string>
   <string name="editor_read_only_mode">Die Datei ist nur lesbar geöffnet.</string>
   <string name="dumping_message">Hexdump wird generiert\u2026</string>
   <string name="displaying_message">Anzeige wird vorbereitet\u2026</string>
   <string name="bookmarks">Lesezeichen</string>
-  <string name="bookmarks_home">Home</string>
-  <string name="bookmarks_root_folder">Stammverzeichnis</string>
+  <string name="bookmarks_home">Startseite</string>
+  <string name="bookmarks_root_folder">Stammordner</string>
   <string name="bookmarks_system_folder">Systemordner</string>
   <string name="bookmarks_secure">Sicherer Speicher</string>
   <string name="bookmarks_remote">Remotespeicher</string>
@@ -184,7 +184,7 @@
   <string name="bookmarks_msgs_add_success">Das Lesezeichen wurde erfolgreich hinzugefügt.</string>
   <string name="bookmarks_msgs_add_exists">Das Lesezeichen existiert bereits.</string>
   <string name="initial_directory_dialog_title">Standardverzeichnis</string>
-  <string name="initial_directory_label">Standardverzeichnis wählen:</string>
+  <string name="initial_directory_label">Standardverzeichnis auswählen:</string>
   <string name="initial_directory_relative_msg">Relative Pfade sind nicht erlaubt.</string>
   <string name="initial_directory_error_msg">Beim Speichern des Standardverzeichnisses ist ein Fehler aufgetreten.</string>
   <string name="menu_search">Suche</string>
@@ -194,7 +194,7 @@
   <string name="menu_word_wrap">Zeilenumbruch</string>
   <string name="menu_syntax_highlight">Syntaxhervorhebung</string>
   <string name="create_copy_regexp">Kopie von <xliff:g id="name">%1$s</xliff:g><xliff:g id="extension">%2$s</xliff:g></string>
-  <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> – neu<xliff:g id="extension">%2$s</xliff:g></string>
+  <string name="create_new_compress_file_regexp">Neues Archiv <xliff:g id="name">%1$s</xliff:g><xliff:g id="extension">%2$s</xliff:g></string>
   <string name="waiting_dialog_msg">Vorgang wird ausgeführt\u2026</string>
   <string name="waiting_dialog_copying_title">Kopieren\u2026</string>
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>Von</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Nach</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
@@ -215,16 +215,16 @@
   <string name="actions_menu_new_directory">Neuer Ordner</string>
   <string name="actions_menu_new_file">Neue Datei</string>
   <string name="actions_menu_select_all">Alle auswählen</string>
-  <string name="actions_menu_deselect_all">Alle abwählen</string>
+  <string name="actions_menu_deselect_all">Auswahl aufheben</string>
   <string name="actions_menu_select">Auswählen</string>
-  <string name="actions_menu_deselect">Abwählen</string>
-  <string name="actions_menu_paste_selection">Hierher kopieren</string>
+  <string name="actions_menu_deselect">Auswahl aufheben</string>
+  <string name="actions_menu_paste_selection">Auswahl hierher kopieren</string>
   <string name="actions_menu_move_selection">Hierher verschieben</string>
   <string name="actions_menu_delete_selection">Auswahl löschen</string>
   <string name="actions_menu_compress_selection">Auswahl komprimieren</string>
   <string name="actions_menu_create_link">Verknüpfung anlegen</string>
   <string name="actions_menu_open">Öffnen</string>
-  <string name="actions_menu_open_with">Öffne mit</string>
+  <string name="actions_menu_open_with">Öffnen mit</string>
   <string name="actions_menu_execute">Ausführen</string>
   <string name="actions_menu_send">Senden</string>
   <string name="actions_menu_send_selection">Auswahl senden</string>
@@ -234,42 +234,42 @@
   <string name="actions_menu_rename">Umbenennen</string>
   <string name="actions_menu_create_copy">Kopie erstellen</string>
   <string name="actions_menu_properties">Eigenschaften</string>
-  <string name="actions_menu_add_to_bookmarks">Neues Lesezeichen</string>
+  <string name="actions_menu_add_to_bookmarks">Als Lesezeichen hinzufügen</string>
   <string name="actions_menu_add_shortcut">Neue Verknüpfung</string>
   <string name="actions_menu_open_parent_folder">Übergeordnetes Verzeichnis öffnen</string>
-  <string name="actions_menu_compute_checksum">Prüfsumme generieren</string>
+  <string name="actions_menu_compute_checksum">Prüfsumme berechnen</string>
   <string name="actions_menu_print">Drucken</string>
-  <string name="actions_menu_set_as_home">Als Startposition festlegen</string>
+  <string name="actions_menu_set_as_home">Als Startseite festlegen</string>
   <string name="actions_ask_undone_operation_msg">Diese Aktion kann nicht rückgängig gemacht werden.\n\nTrotzdem fortfahren?</string>
   <string name="input_name_dialog_label">Name:</string>
   <string name="input_name_dialog_message_empty_name">Der Name darf nicht leer sein.</string>
-  <string name="input_name_dialog_message_invalid_path_name">Ungültiger Name. Die Zeichen \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' sind nicht erlaubt.</string>
+  <string name="input_name_dialog_message_invalid_path_name">Ungültiger Name. Die Zeichen \"<xliff:g id="invalid_characters">%1$s</xliff:g>\" sind nicht erlaubt.</string>
   <string name="input_name_dialog_message_invalid_name_length">Maximale Zeichenanzahl erreicht.</string>
-  <string name="input_name_dialog_message_invalid_name">Ungültiger Name. Die Namen \'.\' und \'..\' sind nicht erlaubt.</string>
+  <string name="input_name_dialog_message_invalid_name">Ungültiger Name. Die Namen \".\" und \"..\" sind nicht erlaubt.</string>
   <string name="input_name_dialog_message_name_exists">Dieser Name existiert bereits.</string>
-  <string name="associations_dialog_title">Verbindungen</string>
+  <string name="associations_dialog_title">Zuordnungen</string>
   <string name="associations_dialog_remember">Auswahl merken</string>
-  <string name="associations_dialog_openwith_title">Öffne mit</string>
+  <string name="associations_dialog_openwith_title">Öffnen mit</string>
   <string name="associations_dialog_openwith_action">Öffnen</string>
-  <string name="associations_dialog_sendwith_title">Sende mit</string>
+  <string name="associations_dialog_sendwith_title">Senden mit</string>
   <string name="associations_dialog_sendwith_action">Senden</string>
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">Nichts zu tun.</string>
   <string name="execution_console_title">Konsole</string>
-  <string name="execution_console_script_name_label">Script:</string>
+  <string name="execution_console_script_name_label">Skript:</string>
   <string name="execution_console_script_execution_time_label">Zeit:</string>
-  <string name="execution_console_script_exitcode_label">Skript-Ergebnis:</string>
-  <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> Sekunden.</string>
-  <string name="compute_checksum_title">Prüfsumme generieren</string>
+  <string name="execution_console_script_exitcode_label">Exit-Code:</string>
+  <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> Sek.</string>
+  <string name="compute_checksum_title">Prüfsumme berechnen</string>
   <string name="compute_checksum_filename_label">Datei:</string>
-  <string name="compute_checksum_computing_checksum_msg">Prüfsumme wird generiert\u2026</string>
+  <string name="compute_checksum_computing_checksum_msg">Prüfsumme wird berechnet\u2026</string>
   <string name="mime_folder">Ordner</string>
   <string name="mime_symlink">Symbolischer Link</string>
   <string name="mime_unknown">Unbekannt</string>
   <string name="filetime_format_mode_system">System-Format</string>
   <string name="filetime_format_mode_locale">Gebietsschema-Format</string>
-  <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/yyyy hh:mm:ss</string>
-  <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
-  <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
+  <string name="filetime_format_mode_ddMMyyyy_HHmmss">tt/mm/jjjj hh:mm:ss</string>
+  <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/tt/jjjj hh:mm:ss</string>
+  <string name="filetime_format_mode_yyyyMMdd_HHmmss">jjjj-mm-tt hh:mm:ss</string>
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> und <xliff:g id="files">%2$s</xliff:g> ausgewählt.</string>
   <string name="category_system">SYSTEM</string>
   <string name="category_app">APP</string>
@@ -287,10 +287,10 @@
   <string name="category_video">VIDEO</string>
   <string name="category_security">SICHERHEIT</string>
   <string name="category_all">ALLE</string>
-  <string name="compression_mode_title">Archivformat</string>
+  <string name="compression_mode_title">Komprimierungsformat</string>
   <string name="shortcut_failed_msg">Fehler beim Zugriff auf die Verknüpfung.</string>
-  <string name="shortcut_creation_success_msg">Verknüpfung erfolgreich angelegt.</string>
-  <string name="shortcut_creation_failed_msg">Verknüpfung konnte nicht angelegt werden.</string>
+  <string name="shortcut_creation_success_msg">Die Verknüpfung wurde erfolgreich erstellt.</string>
+  <string name="shortcut_creation_failed_msg">Die Verknüpfung konnte nicht erstellt werden.</string>
   <string name="pref">Einstellungen</string>
   <string name="pref_general">Allgemeine Einstellungen</string>
   <string name="pref_search">Sucheinstellungen</string>
@@ -303,9 +303,9 @@
   <string name="pref_case_sensitive_sort_summary">Beim Navigieren und Sortieren Groß- und Kleinschreibung berücksichtigen</string>
   <string name="pref_filetime_format_mode">Datums- und Zeitformat</string>
   <string name="pref_disk_usage_warning_level">Speichernutzungswarnung</string>
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">Eine andere Farbe verwenden, wenn mehr als <xliff:g id="level">%1$s</xliff:g> Prozent des Speichers belegt sind</string>
-  <string name="pref_compute_folder_statistics">Verzeichnisstatistiken</string>
-  <string name="pref_compute_folder_statistics_on">Die Berechnung der Verzeichnisstatistiken kann die Systemleistung beeinträchtigen</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">Eine andere Farbe in Speichernutzungs-Widgets verwenden, wenn mehr als <xliff:g id="level">%1$s</xliff:g> Prozent des Speichers belegt sind</string>
+  <string name="pref_compute_folder_statistics">Verzeichnisstatistiken berechnen</string>
+  <string name="pref_compute_folder_statistics_on">Warnung! Die Berechnung der Verzeichnisstatistiken kann sehr viel Zeit und Systemressourcen beanspruchen.</string>
   <string name="pref_display_thumbs">Vorschau</string>
   <string name="pref_display_thumbs_summary">Vorschaubilder für Apps, Musik-, Bild- und Videodateien anzeigen</string>
   <string name="pref_use_flinger">Wischgesten verwenden</string>
@@ -319,21 +319,21 @@
   <string name="pref_access_mode_root">Root-Zugriffsmodus</string>
   <string name="pref_access_mode_root_summary">Root-Zugriffsmodus\n\nDieser Modus erlaubt Aktionen, die das Gerät beschädigen können. Sie sind für jede ausgeführte Aktion selbst verantwortlich.</string>
   <string name="pref_restrict_secondary_users_access_title">Benutzerzugriff beschränken</string>
-  <string name="pref_restrict_secondary_users_access_summary">Zugriff auf Systemdateien auf sekundäre Benutzer beschränken</string>
-  <string name="pref_search_results_category">Suchergebnisse</string>
-  <string name="pref_show_relevance_widget">Relevanzindikator anzeigen</string>
-  <string name="pref_highlight_terms">Suchergebnisse hervorheben</string>
+  <string name="pref_restrict_secondary_users_access_summary">Systemdateizugriff für sekundäre Benutzer beschränken</string>
+  <string name="pref_search_results_category">Ergebnisse</string>
+  <string name="pref_show_relevance_widget">Relevanz-Widget anzeigen</string>
+  <string name="pref_highlight_terms">Suchbegriffe hervorheben</string>
   <string name="pref_sort_search_results_mode">Sortiermodus</string>
   <string name="pref_sort_search_results_mode_none">Keine Sortierung</string>
   <string name="pref_sort_search_results_mode_name">Nach Name</string>
   <string name="pref_sort_search_results_mode_relevance">Nach Relevanz</string>
   <string name="pref_search_privacity_category">Privatsphäre</string>
-  <string name="pref_save_search_terms">Suchergebnisse speichern</string>
-  <string name="pref_save_search_terms_on">Suchergebnisse werden gespeichert und als Vorschläge in zukünftigen Suchen verwendet</string>
-  <string name="pref_save_search_terms_off">Suchergebnisse werden nicht gespeichert</string>
-  <string name="pref_remove_saved_search_terms">Gespeicherte Suchergebnisse löschen</string>
-  <string name="pref_remove_saved_search_terms_summary">Tippen, um alle gespeicherten Suchergebnisse zu löschen</string>
-  <string name="pref_remove_saved_search_terms_msg">Alle gespeicherten Sucheanfragen wurden gelöscht</string>
+  <string name="pref_save_search_terms">Suchbegriffe speichern</string>
+  <string name="pref_save_search_terms_on">Suchbegriffe werden gespeichert und als Vorschläge in zukünftigen Suchen verwendet.</string>
+  <string name="pref_save_search_terms_off">Suchbegriffe werden nicht gespeichert.</string>
+  <string name="pref_remove_saved_search_terms">Gespeicherte Suchbegriffe löschen</string>
+  <string name="pref_remove_saved_search_terms_summary">Tippen, um alle gespeicherten Suchbegriffe zu löschen</string>
+  <string name="pref_remove_saved_search_terms_msg">Alle gespeicherten Suchbegriffe wurden gelöscht.</string>
   <string name="pref_secure_storage_category">Sicherer Speicher</string>
   <string name="pref_secure_storage_delayed_sync_title">Verzögerte Synchronisierung</string>
   <string name="pref_secure_storage_delayed_sync_summary">Die Synchronisierung eines sicheren Dateisystems ist ein aufwendiger Vorgang. Aktivieren Sie diese Option, um die Reaktionszeit nach jeder Operation zu verbessern, indem die Synchronisierung des Dateisystems erst erfolgt, wenn es gerade nicht verwendet wird. Dabei besteht jedoch das Risiko, dass Informationen, die noch nicht synchronisiert wurden, bei einem Absturz der App verloren gehen.</string>
@@ -345,11 +345,11 @@
   <string name="pref_word_wrap">Zeilenumbruch</string>
   <string name="pref_hexdump">Hexdump von Binärdateien generieren</string>
   <string name="pref_hexdump_desc">Beim Öffnen einer Binärdatei den Hexdump der Datei generieren und im Hex-Editor anzeigen</string>
-  <string name="pref_editor_syntax_highlight_category">Syntax-Hervorhebung</string>
+  <string name="pref_editor_syntax_highlight_category">Syntaxhervorhebung</string>
   <string name="pref_syntax_highlight">Syntaxhervorhebung</string>
-  <string name="pref_syntax_highlight_desc">Syntax-Hervorhebung für die im Editor dargestellte Datei (Nur wenn für den Dateityp ein Syntaxprozessor vorhanden ist)</string>
+  <string name="pref_syntax_highlight_desc">Syntaxhervorhebung für die im Editor dargestellte Datei (nur wenn ein Syntaxprozessor für den Dateityp vorhanden ist)</string>
   <string name="pref_syntax_highlight_color_scheme">Farbschema</string>
-  <string name="pref_syntax_highlight_color_scheme_desc">Wählen Sie das Farbschema der Syntaxhervorhebung</string>
+  <string name="pref_syntax_highlight_color_scheme_desc">Wählen Sie das Farbschema der Syntaxhervorhebung.</string>
   <string name="pref_syntax_sh_use_theme_default">Designvorgaben verwenden</string>
   <string name="pref_syntax_sh_use_theme_default_desc">Das standardmäßige Farbschema des aktuellen Designs verwenden</string>
   <string name="pref_editor_sh_item_category">Objekte</string>
@@ -357,9 +357,9 @@
   <string name="pref_themes_set_theme">Design auswählen</string>
   <string name="pref_themes_confirmation">Design erfolgreich angewendet</string>
   <string name="pref_themes_not_found">Design nicht gefunden</string>
-  <string name="pref_debug_traces">Fehlerprotokollierung</string>
+  <string name="pref_debug_traces">Debuginformationen protokollieren</string>
   <string name="theme_default_name">Hell (Standard)</string>
-  <string name="theme_default_description">Helles Design für den CM-Dateimanager.</string>
+  <string name="theme_default_description">Helles Design für den CM-Dateimanager</string>
   <string name="themes_author">CyanogenMod</string>
   <string name="drawer_open">Navigationsleiste öffnen</string>
   <string name="drawer_close">Navigationsleiste schließen</string>
@@ -379,10 +379,10 @@
   <string name="secure_storage_create_title">Sicheren Speicher erstellen</string>
   <string name="secure_storage_reset_title">Passwort zurücksetzen</string>
   <string name="secure_storage_delete_title">Sicheren Speicher löschen</string>
-  <string name="secure_storage_unlock_key_prompt_msg">Geben Sie das Passwort zum Entsperren des sicheren Dateisystems ein.</string>
-  <string name="secure_storage_unlock_key_new_msg">Geben Sie ein Passwort zum Schutz des sicheren Dateisystems ein.</string>
-  <string name="secure_storage_unlock_key_reset_msg">Geben Sie das aktuelle und das neue Passwort ein, um das sichere Dateisystem zurückzuesetzen.</string>
-  <string name="secure_storage_unlock_key_delete_msg">Geben Sie das aktuelle Passwort ein, um das sichere Dateisystem zu löschen.</string>
+  <string name="secure_storage_unlock_key_prompt_msg">Geben Sie das Passwort zum Entsperren des sicheren Speicherdateisystems ein.</string>
+  <string name="secure_storage_unlock_key_new_msg">Geben Sie ein Passwort zum Schutz des sicheren Speicherdateisystems ein.</string>
+  <string name="secure_storage_unlock_key_reset_msg">Geben Sie das aktuelle und das neue Passwort ein, um das sichere Speicherdateisystem zurückzusetzen.</string>
+  <string name="secure_storage_unlock_key_delete_msg">Geben Sie das aktuelle Passwort ein, um das sichere Speicherdateisystem zu löschen.</string>
   <string name="secure_storage_unlock_old_key_title">Altes Passwort:</string>
   <string name="secure_storage_unlock_new_key_title">Neues Passwort:</string>
   <string name="secure_storage_unlock_key_title">Passwort:</string>
@@ -391,19 +391,19 @@
   <string name="secure_storage_unlock_button">Entsperren</string>
   <string name="secure_storage_reset_button">Zurücksetzen</string>
   <string name="secure_storage_delete_button">Löschen</string>
-  <string name="secure_storage_unlock_failed">Speicher kann nicht entsperrt werden</string>
-  <string name="secure_storage_unlock_validation_length">Das Passwort muss mindestens <xliff:g id="characters">%1$d</xliff:g> Zeichen lang sein.</string>
+  <string name="secure_storage_unlock_failed">Speicher kann nicht entsperrt werden.</string>
+  <string name="secure_storage_unlock_validation_length">Das Passwort muss eine Länge von mindestens <xliff:g id="characters">%1$d</xliff:g> aufweisen.</string>
   <string name="secure_storage_unlock_validation_equals">Passwörter stimmen nicht überein.</string>
-  <string name="secure_storage_open_file_warning">Dies wird die Datei temporär an einen unverschlüsselten Speicherort kopieren. Dieser wird nach einer Stunde gelöscht.</string>
+  <string name="secure_storage_open_file_warning">Damit wird die Datei temporär an einen unverschlüsselten Speicherort kopiert. Diese Kopie wird nach einer Stunde gelöscht.</string>
   <string name="print_unsupported_document">Nicht unterstütztes Dokumentformat</string>
   <string name="print_unsupported_image">Nicht unterstütztes Bildformat</string>
   <string name="print_document_header">Dokument: <xliff:g id="document_name">%1$s</xliff:g></string>
   <string name="print_document_footer">Seite <xliff:g id="page_number">%1$s</xliff:g></string>
-  <string name="security_warning_extract">Warnung!\n\n Ein Archiv mit relativen oder absoluten Pfaden zu entpacken, kann das Gerät beschädigen, indem Systemdateien überschrieben werden.\n\nTrotzdem fortfahren?</string>
-  <string name="changelog_title">Changelog</string>
+  <string name="security_warning_extract">Warnung!\n\nEin Archiv mit relativen oder absoluten Pfaden zu entpacken, kann das Gerät beschädigen, indem Systemdateien überschrieben werden.\n\nTrotzdem fortfahren?</string>
+  <string name="changelog_title">Änderungsprotokoll</string>
   <string name="welcome_title">Willkommen</string>
-  <string name="welcome_msg">Willkommen im CyanogenMod-Dateimanager.\n\nMit dieser App können Sie im Dateisystem navigieren und dabei Vorgänge ausführen, die das Gerät beschädigen könnten. Zu Schutz des Geräts startet die App im sicheren Modus mit eingeschränkten Berechtigungen.\n\nErweiterte Modi mit vollen Berechtigungen können in den Einstellungen aktiviert werden.\n\nDas CyanogenMod-Team</string>
-  <string name="activity_not_found_exception">Es konnte keine App gefunden werden, um diese Datei zu öffnen</string>
+  <string name="welcome_msg">Willkommen beim CyanogenMod-Dateimanager.\n\nMit dieser App können Sie im Dateisystem navigieren und dabei Vorgänge ausführen, die das Gerät beschädigen könnten. Zum Schutz des Geräts startet die App im sicheren Modus mit eingeschränkten Berechtigungen.\n\nErweiterte Modi mit vollen Berechtigungen können in den Einstellungen aktiviert werden.\n\nDas CyanogenMod-Team</string>
+  <string name="activity_not_found_exception">Es konnte keine App zum Öffnen dieser Datei gefunden werden.</string>
   <string name="storage_permissions_denied">Dateimanager benötigt Zugriff auf den Speicher, um Ihre Dateien anzuzeigen.</string>
   <string name="storage_permissions_explanation">Rufen Sie die Einstellungen auf und tippen Sie auf Berechtigungen, um die Berechtigung zu gewähren.</string>
   <string name="snackbar_settings">Einstellungen</string>
