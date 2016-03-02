@@ -27,6 +27,7 @@ import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
@@ -97,6 +98,9 @@ public class PickerActivity extends Activity
     // The result code
     private static final int RESULT_CROP_IMAGE = 1;
 
+    // Permissions result code
+    private static final int REQUEST_CODE_STORAGE_PERMS = 2;
+
     // The component that holds the crop operation. We use Gallery3d because we are confidence
     // of his input parameters
     private static final ComponentName CROP_COMPONENT =
@@ -143,11 +147,52 @@ public class PickerActivity extends Activity
         Theme theme = ThemeManager.getCurrentTheme(this);
         theme.setBaseTheme(this, true);
 
-        // Initialize the activity
-        init();
-
         //Save state
         super.onCreate(state);
+
+        if (!hasPermissions()) {
+            requestNecessaryPermissions();
+        } else {
+            finishOnCreate();
+        }
+    }
+
+    private void finishOnCreate() {
+        // Initialize the activity
+        init();
+    }
+
+    private boolean hasPermissions() {
+        int res = checkCallingOrSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        return (res == PackageManager.PERMISSION_GRANTED);
+    }
+
+    private void requestNecessaryPermissions() {
+        String[] permissions = new String[] {
+            android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+        };
+        requestPermissions(permissions, REQUEST_CODE_STORAGE_PERMS);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            int[] grandResults) {
+        boolean allowed = true;
+        switch (requestCode) {
+            case REQUEST_CODE_STORAGE_PERMS:
+                for (int res : grandResults) {
+                    allowed = allowed && (res == PackageManager.PERMISSION_GRANTED);
+                }
+                break;
+            default:
+                allowed = false;
+                break;
+        }
+        if (allowed) {
+            finishOnCreate();
+        } else {
+            finish();
+        }
     }
 
     /**
