@@ -24,10 +24,12 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> файл</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> файла</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one">Намерен е <xliff:g id="count">%1$d</xliff:g> елемент</item>
     <item quantity="other">Намерени са <xliff:g id="count">%d</xliff:g> елемента</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one">Избрана е <xliff:g id="folders">%1$d</xliff:g> папка.</item>
     <item quantity="other">Избрани са <xliff:g id="folders">%1$d</xliff:g> папки.</item>
@@ -36,6 +38,7 @@
     <item quantity="one">Избран е <xliff:g id="files">%1$d</xliff:g> файл.</item>
     <item quantity="other">Избрани са <xliff:g id="files">%1$d</xliff:g> файла.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d </xliff:g> елемент ще бъде изтрит.</item>
     <item quantity="other"><xliff:g id="count">%1$d </xliff:g> елемента ще бъдат изтрити.</item>

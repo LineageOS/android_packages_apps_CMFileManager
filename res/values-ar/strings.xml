@@ -16,130 +16,254 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- The name of the app -->
   <string name="app_name">إدارة الملفات</string>
+  <!-- The description of the app -->
   <string name="app_description">إدارة ملفات CyanogenMod</string>
+  <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">كيلوبايت</string>
   <string name="size_megabytes">ميغا بايت</string>
   <string name="size_gigabytes">جيجابايت</string>
+  <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
+  <!-- Devices types -->
   <string name="device_blockdevice">حظر جهاز</string>
   <string name="device_characterdevice">جهاز أحرف</string>
   <string name="device_namedpipe">أنبوبة الاتصال المسماة</string>
   <string name="device_domainsocket">مأخذ المجال</string>
+  <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
+  <!-- Default buttons -->
   <string name="yes">نعم</string>
   <string name="no">لا</string>
   <string name="all">الكل</string>
   <string name="overwrite">الكتابة فوق</string>
   <string name="select">حدد</string>
+  <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
+  <!-- The search result name -->
   <string name="search_result_name">بحث: <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Loading waiting message -->
   <string name="loading_message">تحميل\u2026</string>
+  <!-- Computing message -->
+  <!-- Computing new line message -->
+  <!-- Cancelled message -->
   <string name="cancelled_message">تم الإلغاء.</string>
+  <!-- Error message -->
   <string name="error_message">خطأ.</string>
+  <!-- Copy text content description -->
   <string name="copy_text_cd">اضغط لنسخ النص إلى الحافظة</string>
+  <!-- Copy text content message -->
   <string name="copy_text_msg">نسخ النص إلى الحافظة</string>
+  <!-- Warning dialog title -->
   <string name="warning_title">تحذير</string>
+  <!-- Error dialog title -->
   <string name="error_title">خطأ</string>
+  <!-- Confirm operation dialog title -->
   <string name="confirm_operation">تأكيد عملية</string>
+  <!-- Confirm overwrite dialog title -->
   <string name="confirm_overwrite">تأكيد الكتابة فوق</string>
+  <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">تأكيد الحذف</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">تأكيد التبديل</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
   <string name="msgs_change_to_prompt_access_mode_msg">يتعذر تشغيل وضع الوصول الجذري. تغيير إلى الوضع الإمن.\n\n تطبيق هذا التغيير؟</string>
+  <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">يتعذر الحصول على الامتيازات المطلوبة للوظيفة.</string>
+  <!-- The message shown when an allocation of a privileged console fails, and a non
+         privileged is allocated -->
   <string name="msgs_privileged_console_alloc_failed">يتعذر التشغيل في وضع الوصول الجذري. التغيير إلى الوضع الأمن.</string>
+  <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">يتعذر تطبيق الإعداد أو تخزينه.</string>
+  <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">المجلد الأولي \'<xliff:g id="initial_dir">%1$s</xliff:g>\'غير صالح. تغيير إلى المجلد الجذر.</string>
+  <!-- Root is not available message -->
   <string name="root_not_available_msg">Root غير متوفر على هذا الجهاز. لا يمكن تنفيذ هذه العملية.</string>
+  <!-- Success -->
   <string name="msgs_success">تم إكمال العملية بنجاح.</string>
+  <!-- Unknown error -->
   <string name="msgs_unknown">تم الكشف عن خطأ. العملية غير ناجحة.</string>
+  <!-- When an operation requires elevated privileged (normally caused for the use of a
+         non-privileged console) -->
   <string name="msgs_insufficient_permissions">هذه العملية تتطلب أذونات نشطة. حاول الانتقال إلى وضع الوصول الجذري.</string>
+  <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">فشلت هذه العملية لأنه لا توجد مساحة على الجهاز.</string>
+  <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">تعذر العثور على الملف أو المجلد.</string>
+  <!-- The command reference couldn't be created (not found or invalid definition)
+         (normally caused by a development error) -->
   <string name="msgs_command_not_found">لم يتم العثور على أمر هذه العملية أو لديها تعريف غير صالح.</string>
+  <!-- I/O exception -->
   <string name="msgs_io_failed">فشل في القراءة/الكتابة.</string>
+  <!-- Operation timeout detected -->
   <string name="msgs_operation_timeout">انتهت مهلة العملية.</string>
+  <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">فشلت العملية.</string>
+  <!-- A console couldn't be allocated -->
   <string name="msgs_console_alloc_failure">حدث خطأ داخلي.</string>
+  <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">يتعذر إلغاء العملية.</string>
+  <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">نظام الملفات للقراءة فقط. جرب تثبيت نظام الملف كقراءة - كتابة قبل محاولة تنفيذ العملية.</string>
+  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">حجة غير قانونية. فشل استدعاء.</string>
+  <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">عدم السماح للعملية نظراً لأن من شأن ذلك أن يسبب تناقضات.</string>
+  <!-- Operation not permitted in the current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">المجلد الوجهة لا يمكن أن يكون مجلداً فرعياً ولا  نفس مجلد المصدر.</string>
+  <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">اضغط الزر مرة أخرى للخروج.</string>
+  <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">لا يوجد تطبيق مسجل للتعامل مع نوع الملف المحدد.</string>
+  <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">بعض الملفات موجودة بالفعل في مجلد الوجهة \n\n الكتابة فوق؟</string>
+  <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">فشل في ربط الإجراء بالتطبيق.</string>
+  <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">تتطلب العملية امتيازات مرتفعة.\n\nهل تريد تغييره إلى وضع الوصول الجذري؟</string>
+  <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">المجلد الأصل</string>
+  <!-- External storage descripton -->
   <string name="external_storage">التخزين الخارجي</string>
+  <!-- Usb storage descripton -->
   <string name="usb_storage">تخزين USB</string>
+  <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">معلومات ملف النظام</string>
+  <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">وضع الفرز</string>
+  <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">وضع التخطيط</string>
+  <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">خيارات عرض أخرى</string>
+  <!-- ActionBar Buttons - Done -->
   <string name="actionbar_button_selection_done_cd">تم</string>
+  <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">الاجراءات</string>
+  <!-- ActionBar Buttons - Search -->
   <string name="actionbar_button_search_cd">بحث</string>
+  <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">المزيد من الخيارات</string>
+  <!-- ActionBar Buttons - Storage volumes -->
   <string name="actionbar_button_storage_cd">وحدات التخزين</string>
+  <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">حفظ</string>
+  <!-- ActionBar Buttons - Print -->
   <string name="actionbar_button_print_cd">طباعة</string>
+  <!-- Navigation View - Sort - Sort by name (ascending) -->
   <string name="sort_by_name_asc">بحسب الاسم \u25B2</string>
+  <!-- Navigation View - Sort - Sort by name (descending) -->
   <string name="sort_by_name_desc">بحسب الأسم\u25BC</string>
+  <!-- Navigation View - Sort - Sort by date (ascending) -->
   <string name="sort_by_date_asc">بحسب التاريخ \u25B2</string>
+  <!-- Navigation View - Sort - Sort by date (descending) -->
   <string name="sort_by_date_desc">بحسب التاريخ \u25BC</string>
+  <!-- Navigation View - Sort - Sort by size (ascending) -->
   <string name="sort_by_size_asc">بالحجم \u25B2</string>
+  <!-- Navigation View - Sort - Sort by size (descending) -->
   <string name="sort_by_size_desc">بالحجم \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (ascending) -->
   <string name="sort_by_type_asc">بالنوع \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (descending) -->
   <string name="sort_by_type_desc">بالنوع \u25BC</string>
+  <!-- Navigation View - Layout - Icons -->
   <string name="layout_icons">أيقونات</string>
+  <!-- Navigation View - Layout - Simple -->
   <string name="layout_simple">بسيط</string>
+  <!-- Navigation View - Layout - Details -->
   <string name="layout_details">التفاصيل</string>
+  <!-- Navigation View - View - Show folders first -->
   <string name="cm_filemanager_show_dirs_first">إظهار المجلدات أولاً</string>
+  <!-- Navigation View - View - Show hidden files option -->
   <string name="cm_filemanager_show_hidden">أظهار المجلدات المخفية</string>
+  <!-- Navigation View - View - Show system files option -->
   <string name="cm_filemanager_show_system">إظهار ملفات النظام</string>
+  <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">إظهار روابط الرمزية</string>
+  <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">لا توجد معلومات</string>
+  <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">لا تتوفر أي معلومات عن نظام الملفات.</string>
+  <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">نظام الملفات لا يمكن تثبيته/ إلغاء تثبيته.</string>
+  <!-- Filesystem Info - Not allowed message -->
   <string name="filesystem_info_mount_not_allowed_msg">غير مسموح بعمليات تحميل نظام الملفات في الوضع الآمن. انقر للتحول إلى وضع \"الوصول إلى root\".</string>
+  <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">فشل عملية تنصيب نظام الملفات. بعض أنظمة الملفات كبطاقات SD، يتعذر تثبيتها/ إلغاء تثبيتها لكونها مدمجة باعتبارها أنظمة ملفات للقراءة فقط.</string>
+  <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">معلومات ملف النظام</string>
+  <!-- Filesystem Info Dialog - Tab - Info -->
   <string name="filesystem_info_dialog_tab_info">معلومات</string>
+  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">استخدام القرص</string>
+  <!-- Filesystem Info Dialog - Status Label -->
   <string name="filesystem_info_dialog_status">محمل:</string>
+  <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">نقطة تحميل:</string>
+  <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">الجهاز:</string>
+  <!-- Filesystem Info Dialog - Type Label -->
   <string name="filesystem_info_dialog_type">النوع:</string>
+  <!-- Filesystem Info Dialog - Options Label -->
   <string name="filesystem_info_dialog_options">الخيارات:</string>
+  <!-- Filesystem Info Dialog - Dump/Pass Label -->
   <string name="filesystem_info_dialog_dump_pass">تفريغ/تمرير:</string>
+  <!-- Filesystem Info Dialog - Virtual Label -->
   <string name="filesystem_info_dialog_virtual">افتراضي:</string>
+  <!-- Filesystem Info Dialog - Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">الإجمالي:</string>
+  <!-- Filesystem Info Dialog - Used Disk Usage -->
   <string name="filesystem_info_dialog_used_disk_usage">المستخدمة:</string>
+  <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">حر:</string>
+  <!-- Fso Properties - Not allowed message -->
   <string name="fso_properties_permissions_not_allowed_msg">لا يسمح لعمليات الأذونات في الوضع الأمن. اضغط للانتقال إلى وضع الوصول الجذري.</string>
+  <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">فشل عملية المالك.\n\nلأسباب تتعلق بالأمان، بعض أنظمة الملفات كبطاقات SD لا تسمح بتغيير الملكية.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">فشل عملية المجموعة.\\n\nلأسباب تتعلق بالأمان، بعض أنظمة الملفات كبطاقات SD لا تسمح بتغيير المجموعات.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_permission_msg">فشل عملية الأذونات.\n\n لأسباب تتعلق بالأمان، بعض أنظمة الملفات كبطاقات SD، لا تتيح تغيير الأذونات.</string>
+  <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">خصائص</string>
+  <!-- Fso Properties Dialog - Tab - Info -->
   <string name="fso_properties_dialog_tab_info">معلومات</string>
+  <!-- Fso Properties Dialog - Tab - Permissions -->
   <string name="fso_properties_dialog_tab_permissions">أذونات</string>
+  <!-- Fso Properties Dialog - Name Label -->
   <string name="fso_properties_dialog_name">الاسم:</string>
+  <!-- Fso Properties Dialog - Parent Folder Label -->
   <string name="fso_properties_dialog_parent">الأصل:</string>
+  <!-- Fso Properties Dialog - Type Label -->
   <string name="fso_properties_dialog_type">النوع:</string>
+  <!-- Fso Properties Dialog - Category Label -->
   <string name="fso_properties_dialog_category">الفئة:</string>
+  <!-- Fso Properties Dialog - Link Label -->
   <string name="fso_properties_dialog_link">الارتباط:</string>
+  <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">الحجم:</string>
+  <!-- Fso Properties Dialog - Contains Label -->
   <string name="fso_properties_dialog_contains">يحتوي على:</string>
+  <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <string name="fso_properties_dialog_last_accessed_date">تم الوصول إليه:</string>
+  <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">تم التعديل:</string>
+  <!-- Fso Properties Dialog - Last Changed Time -->
   <string name="fso_properties_dialog_last_changed_date">تم التغيير:</string>
+  <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">المالك:</string>
+  <!-- Fso Properties Dialog - Group Label -->
   <string name="fso_properties_dialog_group">المجموعة:</string>
+  <!-- Fso Properties Dialog - Others Label -->
   <string name="fso_properties_dialog_others">أخرى:</string>
+  <!-- Fso Properties Dialog - Special Label -->
+  <!-- Fso Properties Dialog - Read Label -->
+  <!-- Fso Properties Dialog - Write Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Skip media scan -->
   <string name="fso_properties_dialog_include_in_media_scan">تخطي فحص الوسائط:</string>
   <string name="fso_failed_to_allow_media_scan">فشل السماح بمسح الوسائط</string>
   <string name="fso_failed_to_prevent_media_scan">فشل في منع مسح الوسائط</string>
@@ -147,132 +271,256 @@
   <string name="fso_delete_nomedia_dir_body">يحتوي هذا على مسار على دليل بدون وسائط.\n\n هل تريد حذفه وكافة محتوياته؟</string>
   <string name="fso_delete_nomedia_non_empty_title">حذف الملف.nomedia</string>
   <string name="fso_delete_nomedia_non_empty_body">يحتوي هذا الدليل \n\n. ملف .nomedia غير فارغ\n\n هل تريد حذفه؟</string>
+  <!-- History - History activity title -->
   <string name="history">المحفوظات</string>
+  <!-- History - The history is empty -->
   <string name="msgs_history_empty">المحفوظات فارغة.</string>
+  <!-- History - The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">عنصر محفوظات غير معروف.</string>
+  <!-- Search - Search activity title -->
   <string name="search">نتائج البحث</string>
+  <!-- Search - Search hint message -->
   <string name="search_hint">اكتب الذي تبحث عنه</string>
+  <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">انطق البحث الذي تريده</string>
+  <!-- Search - Search error message -->
   <string name="search_error_msg">حدث خطأ أثناء البحث. لم يتم العثور على لا نتائج.</string>
+  <!-- Search - Search no results message -->
   <string name="search_no_results_msg">عدم العثور على نتائج.</string>
+  <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> في <xliff:g id="path">%2$s</xliff:g></string>
+  <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>الشروط:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Search - Confirm search -->
   <string name="search_few_characters_title">تأكيد البحث</string>
+  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">بعض مصطلحات البحث لديها عدد قليل من الأحرف.\n\n. هذه العملية قد تكون مكلفة للغاية من حيث الوقت وموارد النظام.\n\nهل ترغب في الاستمرار؟</string>
+  <!-- Search - Searching dialog title -->
   <string name="searching">الرجاء الإنتظار\u2026</string>
+  <!-- Search - Searching label -->
   <string name="searching_action_label">البحث قيد التقدم</string>
+  <!-- Picker Activity -->
+  <!-- Picker Activity - Dialog title -->
   <string name="picker_title">اختيار ملف</string>
   <string name="directory_picker_title">اختيار دليل</string>
+  <!-- Editor - Editor activity title -->
   <string name="editor">محرر</string>
+  <!-- Editor - Invalid file message -->
   <string name="editor_invalid_file_msg">الملف غير صالح.</string>
+  <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">عدم العثور على الملف.</string>
+  <!-- Editor - File size exceed the limit -->
   <string name="editor_file_exceed_size_msg">الملف كبير للغاية لدرجة يتعذر فتحه بداخل هذا الجهاز.</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">تأكيد الخروج</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <string name="editor_dirty_ask_msg">هناك تغييرات لم يتم حفظها.\n\nالخروج دون الحفظ؟</string>
+  <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">تم حفظ الملف بنجاح.</string>
+  <!-- Editor - Read-only file mode -->
   <string name="editor_read_only_mode">يتم فتح الملف في وضع للقراءة فقط.</string>
+  <!-- Editor - Dumping message -->
   <string name="dumping_message">جاري إنشاء الإفراغ\u2026</string>
+  <!-- Editor - Displaying -->
   <string name="displaying_message">جار عرض\u2026</string>
+  <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">الإشارات المرجعيّة</string>
+  <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">الرئيسية</string>
+  <!-- Bookmarks - Bookmark name - Root folder -->
   <string name="bookmarks_root_folder">مجلد الجذر</string>
+  <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">مجلد النظام</string>
+  <!-- Bookmarks - Bookmark name - Secure storage -->
   <string name="bookmarks_secure">تخزين آمن</string>
+  <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">تخزين عن بعد</string>
+  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">تعيين المجلد الأولي.</string>
+  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">إزالة من الإشارة المرجعية.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">تمت إضافة إشارة مرجعية بنجاح.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">الإشارة المرجعية موجودة بالفعل.</string>
+  <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">المجلد الأولى</string>
+  <!-- Initial directory label -->
   <string name="initial_directory_label">اختيار المجلد الأولي:</string>
+  <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">عدم السماح بالمسارات النسبية.</string>
+  <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">حدث خطأ أثناء حفظ المجلد الأولي.</string>
+  <!-- Menu - Navigation - Search -->
   <string name="menu_search">بحث</string>
+  <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">إعدادات</string>
+  <!-- Menu - History - Clear history -->
   <string name="menu_clear_history">مسح المحفوظات</string>
+  <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">لا اقتراحات</string>
+  <!-- Menu - Editor - Word wrap -->
   <string name="menu_word_wrap">التفاف النص</string>
+  <!-- Menu - Editor - Sintax highlight -->
   <string name="menu_syntax_highlight">إبراز التركيبة</string>
+  <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - نسخ<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Regular expression for new compressed file -->
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - جديد<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">تنفيذ العملية\u2026</string>
+  <!-- Waiting dialog - Copying title -->
   <string name="waiting_dialog_copying_title">نسخ\u2026</string>
+  <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>من</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>To</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">تحريك\u2026</string>
+  <!-- Waiting dialog - Moving message -->
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>From</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>إلى</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Deleting title -->
   <string name="waiting_dialog_deleting_title">حذف\u2026</string>
+  <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>ملف</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_extracting_title">إستخراج\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>ملف</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_compressing_title">انضغاط\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>ملف</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>تحليل\u2026</b>]]></string>
+  <!-- Extracting - Success message -->
   <string name="msgs_extracting_success">اكتملت عملية الاستخراج بنجاح. تم استخراج
  البيانات إلى <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Compressing - Success message -->
   <string name="msgs_compressing_success">اكتملت عملية الانضغاط بنجاح. وتم انضغاط ضغط 
 إلى <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">الاجراءات</string>
+  <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">خصائص</string>
+  <!-- Actions Dialog - Menu - Refresh -->
   <string name="actions_menu_refresh">تحديث</string>
+  <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">مجلد جديد</string>
+  <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">ملف جديد</string>
+  <!-- Actions Dialog - Menu - Select all -->
   <string name="actions_menu_select_all">تحديد الكل</string>
+  <!-- Actions Dialog - Menu - Deselect all -->
   <string name="actions_menu_deselect_all">إلغاء تحديد الكل</string>
+  <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">حدد</string>
+  <!-- Actions Dialog - Menu - Deselect -->
   <string name="actions_menu_deselect">إلغاء تحديد</string>
+  <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <string name="actions_menu_paste_selection">نسخ التحديد هنا</string>
+  <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">تحريك التحديد هنا</string>
+  <!-- Actions Dialog - Menu - Delete selection -->
   <string name="actions_menu_delete_selection">حذف التحديد</string>
+  <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">انضغاط التحديد</string>
+  <!-- Actions Dialog - Menu - Create link -->
   <string name="actions_menu_create_link">إنشاء رابط</string>
+  <!-- Actions Dialog - Menu - Open -->
   <string name="actions_menu_open">فتح</string>
+  <!-- Actions Dialog - Menu - Open with -->
   <string name="actions_menu_open_with">فتح بواسطة</string>
+  <!-- Actions Dialog - Menu - Execute -->
   <string name="actions_menu_execute">تنفيذ</string>
+  <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">إرسال</string>
+  <!-- Actions Dialog - Menu - Send selection -->
   <string name="actions_menu_send_selection">إرسال التحديد</string>
+  <!-- Actions Dialog - Menu - Compress -->
   <string name="actions_menu_compress">انضغاط</string>
+  <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">استخراج</string>
+  <!-- Actions Dialog - Menu - Delete -->
   <string name="actions_menu_delete">حذف</string>
+  <!-- Actions Dialog - Menu - Rename -->
   <string name="actions_menu_rename">إعادة تسمية</string>
+  <!-- Actions Dialog - Menu - Create copy -->
   <string name="actions_menu_create_copy">إنشاء نسخة</string>
+  <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">الخصائص</string>
+  <!-- Actions Dialog - Menu - Add to bookmarks -->
   <string name="actions_menu_add_to_bookmarks">إضافة إلى الإشارات المرجعية</string>
+  <!-- Actions Dialog - Menu - Add shortcut -->
   <string name="actions_menu_add_shortcut">إضافة اختصار</string>
+  <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">فتح الأصل</string>
+  <!-- Actions Dialog - Menu - Compute checksum -->
   <string name="actions_menu_compute_checksum">حساب المجموع الاختباري</string>
+  <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">طباعة</string>
+  <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">تعيين كصفحة رئيسية</string>
+  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">لا يمكن التراجع عن هذا الإجراء. هل تريد الاستمرار؟</string>
+  <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">الاسم:</string>
+  <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">الاسم لا يمكن أن يكون فارغاً.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_path_name">اسم غير صالح. غير مسموح بالرموز \'<xliff:g id="invalid_characters">%1$s</xliff:g>\'.</string>
+  <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">وصلت إلى الحد الأقصى لعدد الأحرف.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_name">اسم غير صالح. الأسماء \'.\' و \'..\' غير مسموح بها.</string>
+  <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">هذا الاسم موجود بالفعل.</string>
+  <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">الجمعيات</string>
+  <!-- Associations Dialog - Remember the user action -->
   <string name="associations_dialog_remember">تذكر التحديد</string>
+  <!-- Associations Dialog - Open with Title -->
   <string name="associations_dialog_openwith_title">فتح بواسطة</string>
+  <!-- Associations Dialog - Open action (button title) -->
   <string name="associations_dialog_openwith_action">فتح</string>
+  <!-- Associations Dialog - Send with Title -->
   <string name="associations_dialog_sendwith_title">إرسال بواسطة</string>
+  <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">إرسال</string>
+  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">لا شيء إكتمل.</string>
+  <!-- Execution console - Title -->
   <string name="execution_console_title">وحدة التحكم</string>
+  <!-- Execution console - The script name label -->
   <string name="execution_console_script_name_label">البرنامج النصي:</string>
+  <!-- Execution console - The script execution time label -->
   <string name="execution_console_script_execution_time_label">الوقت:</string>
+  <!-- Execution console - The script exit code label -->
   <string name="execution_console_script_exitcode_label">قم بإنهاء التعليمات البرمجية:</string>
+  <!-- Execution console - The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> ثانية.</string>
+  <!-- Compute checksum - Title -->
   <string name="compute_checksum_title">حساب المجموع الاختباري</string>
+  <!-- Compute checksum - The file name label -->
   <string name="compute_checksum_filename_label">الملف:</string>
+  <!-- Compute checksum - The MD5 label -->
+  <!-- Compute checksum - The SHA1 label -->
+  <!-- Compute checksum - The computing checksum message-->
   <string name="compute_checksum_computing_checksum_msg">حوسبة المجموع الاختبارية\u2026</string>
+  <!-- Mime/Types - Folder -->
   <string name="mime_folder">مجلد</string>
+  <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">الارتباط الرمزي</string>
+  <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">غير معروف</string>
+  <!--  Filetime formats -->
   <string name="filetime_format_mode_system">المعرفة من قبل النظام</string>
   <string name="filetime_format_mode_locale">معرف بواسطة الإعدادات المحلية</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">ي ي/ش ش/ ع ع ع ع س س: د د: ث ث</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">ش ش/ ي ي/ ع ع ع ع س س: دد: ث ث</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">ع ع ع ع-د د س س: دد: ث ث</string>
+  <!-- Selection -->
+  <!-- For example "2 folders and 1 file selected." -->
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> و<xliff:g id="files">%2$s</xliff:g> محدد.</string>
+  <!-- Category descriptions -->
   <string name="category_system">نظام</string>
   <string name="category_app">التطبيق</string>
   <string name="category_binary">ثنائي</string>
@@ -289,86 +537,170 @@
   <string name="category_video">فيديو</string>
   <string name="category_security">أمن</string>
   <string name="category_all">الكل</string>
+  <!-- Compression - Compression modes dialog title -->
   <string name="compression_mode_title">وضع الانضغاط</string>
+  <!-- Compression - Supported archive and compression modes -->
+  <!-- Shortcut. Failed to handle the shortcut -->
   <string name="shortcut_failed_msg">فشل في التعامل مع الاختصار.</string>
+  <!-- Shortcut. The shortcut was created -->
   <string name="shortcut_creation_success_msg">تم بنجاح إنشاء الاختصار.</string>
+  <!-- Shortcut. The shortcut wasn't created -->
   <string name="shortcut_creation_failed_msg">فشل إنشاء الاختصار.</string>
+  <!-- Preferences title -->
   <string name="pref">إعدادات</string>
+  <!-- Preferences - General title -->
   <string name="pref_general">الإعدادات العامة</string>
+  <!-- Preferences - Search title -->
   <string name="pref_search">خيارات البحث</string>
+  <!-- Preferences - Storage title -->
   <string name="pref_storage">خيارات التخزين</string>
+  <!-- Preferences - Editor title -->
   <string name="pref_editor">خيارات المحرر</string>
+  <!-- Preferences - Themes title -->
   <string name="pref_themes">السمات</string>
+  <!-- Preferences - About title -->
   <string name="pref_about">حول</string>
+  <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">عامة</string>
+  <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">حساسية حالة الأحرف</string>
+  <!-- Preferences - General - Case sensitive sort and navigating summary -->
   <string name="pref_case_sensitive_sort_summary">النظر في القضية عند التنقل أو فرز نتائج البحث</string>
+  <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">تنسيق التاريخ/الوقت</string>
+  <!-- Preferences - General -Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">تحذير استخدام القرص</string>
+  <!-- Preferences - General - Disk usage warning level summary -->
+  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
+         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
   <string name="pref_disk_usage_warning_level_summary" formatted="false">عرض لون مختلف في عناصر واجهة استخدام القرص عند وصولها إلى <xliff:g id="level">%1$s</xliff:g> نسبة مئوية من مساحة القرص الحرة</string>
+  <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">حساب إحصائيات المجلد</string>
+  <!-- Preferences - General - Compute folder statistics summary on -->
   <string name="pref_compute_folder_statistics_on">تحذير! حساب إحصائيات المجلد مكلف في الوقت وموارد النظام</string>
+  <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">معاينة</string>
+  <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">إظهار صورة لمعاينة التطبيقات وملفات الموسيقى، والصور والفيديو</string>
+  <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">استخدام إيماءات السحب</string>
+  <!-- Preferences - General - Use flinger detection summary -->
   <string name="pref_use_flinger_summary">استخدم إيماءة السحب من اليسار إلى اليمين للكشف عن حذف ملفات أو مجلدات</string>
+  <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">متقدم</string>
+  <!-- Preferences - General - Access mode -->
   <string name="pref_access_mode">وضع الوصول</string>
+  <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">الوضع الأمن</string>
+  <!-- Preferences - General - Safe mode summary -->
   <string name="pref_access_mode_safe_summary">الوضع الآمن\n\n التطبيق يعمل بدون امتيازات، وأنظمة الملفات القابلة للوصول فقط هي وحدات التخزين (بطاقات SD، وUSB)</string>
+  <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">وضع المستخدم السريع</string>
+  <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">وضع المستخدم السريع\n\n يعمل التطبيق مع إمكانية الوصول الكاملة إلى نظام الملفات لكن طلب للحصول على الإذن قبل تنفيذ أي إجراءات مزودة بامتيازات</string>
+  <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">وضع الوصول الجذري</string>
+  <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">وضع الوصول إلى root\n\nتحذير! هذا الوضع يسمح للعمليات التي يمكن أن تكسر الجهاز الخاص بك. هو مسؤوليتك التأكد من أن عملية آمنة</string>
+  <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">تقييد الوصول إلى المستخدمين</string>
+  <!-- Preferences - General - Restrict secondary users access summary -->
   <string name="pref_restrict_secondary_users_access_summary">تقييد الوصول إلى النظام برمته للمستخدمين الثانويين</string>
+  <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">النتائج</string>
+  <!-- Preferences - Search - Show relevance widget -->
   <string name="pref_show_relevance_widget">إظهار عنصر واجهة المستخدم ذو الصلة</string>
+  <!-- Preferences - Search - Highlight search terms -->
   <string name="pref_highlight_terms">تسليط الضوء على مصطلحات البحث</string>
+  <!-- Preferences - Search - Sort results mode -->
   <string name="pref_sort_search_results_mode">وضع نتائج الفرز</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">لا فرز</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_name">بحسب الأسم</string>
+  <!-- Preferences - Search - Sort results mode. Relevance -->
   <string name="pref_sort_search_results_mode_relevance">بحسب الصلة</string>
+  <!-- Preferences - Search - Privacity category -->
   <string name="pref_search_privacity_category">الخصوصية</string>
+  <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">حفظ مصطلحات البحث</string>
+  <!-- Preferences - Search - Save search terms summary on -->
   <string name="pref_save_search_terms_on">مصطلحات البحث سيتم حفظها واستخدامها كاقتراحات في عمليات البحث في المستقبل</string>
+  <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">لن يتم حفظ مصطلحات البحث</string>
+  <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">إزالة مصطلحات البحث المحفوظة</string>
+  <!-- Preferences - Search - Remove saved search terms summary -->
   <string name="pref_remove_saved_search_terms_summary">انقر لإزالة كافة مصطلحات البحث المحفوظة</string>
+  <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">تمت إزالة كافة مصطلحات البحث المحفوظة</string>
+  <!-- Preferences - Storage - Secure Storage category -->
   <string name="pref_secure_storage_category">تخزين آمن</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">مزامنه متأخرة</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <string name="pref_secure_storage_delayed_sync_summary">مزامنة نظام الملفات الآمن عمليه مكلفة.  تمكين هذا الخيار يسرع الاستجابة بعد كل عملية، حيث تتم المزامنة متى كان نظام الملفات غير مستعمل، لكن على حساب فقدان المعلومات المعلقة الغير مزامنة في حالة تعطل التطبيق.</string>
+  <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">تغيير كلمة المرور</string>
+  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">حذف التخزين</string>
+  <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">سلوك</string>
+  <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">لا اقتراحات</string>
+  <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">عدم عرض اقتراحات القاموس أثناء تحرير الملف</string>
+  <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">اللتفاف النص</string>
+  <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">الملفات الثنائية للإفراغ</string>
+  <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">عند فتح ملف ثنائي، قم بإنشاء الإفراغ الخاص بالملف وفتحه في عارض سداسي عشري</string>
+  <!-- Preferences - Editor - Syntax highlight category -->
   <string name="pref_editor_syntax_highlight_category">تسليط الضوء على بناء الجملة</string>
+  <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">تسليط الضوء على بناء الجملة</string>
+  <!-- Preferences - Editor - Syntax highlight summary -->
   <string name="pref_syntax_highlight_desc">تسليط الضوء على بناء الجمل للملف المعروض في المحرر (فقط عندما يتوفر معالج تسليط الضوء على بناء الجمل لنوع الملف)</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">نظام الألوان</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
   <string name="pref_syntax_highlight_color_scheme_desc">حدد نظام الألوان لتسليط الضوء على بناء الجملة</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">استخدام السمة الافتراضية</string>
+  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <string name="pref_syntax_sh_use_theme_default_desc">استخدم تسليط الضوء على بناء الجملة الافتراضي من السمة الحالية</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">العناصر</string>
+  <!-- Preferences - Themes - Themes selection category -->
   <string name="pref_themes_selection_category">السمات</string>
+  <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">تعيين السمة</string>
+  <!-- Preferences - Themes - Confirmation message -->
   <string name="pref_themes_confirmation">تم تطبيق السمة بنجاح.</string>
+  <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">عدم العثور على السمة.</string>
+  <!-- Preferences - Debug - Capture debug traces -->
   <string name="pref_debug_traces">سجل تصحيح أخطاء المعلومات</string>
+  <!-- Themes - Default theme name -->
   <string name="theme_default_name">سمة خفيفة</string>
+  <!-- Themes - Default theme description -->
   <string name="theme_default_description">سمة خفيفة لإدارة الملفات CyanogenMod.</string>
+  <!-- Themes - Default theme author -->
   <string name="themes_author">CyanogenMod</string>
+  <!-- Navigation drawer -->
   <string name="drawer_open">فتح ساحب التنقل</string>
   <string name="drawer_close">إغلاق ساحب التنقل</string>
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">Alpha</string>
+  <!-- The label of the current color panel -->
   <string name="color_picker_current_text">الحالي:</string>
+  <!-- The label of the new color panel -->
   <string name="color_picker_new_text">الجديد:</string>
+  <!-- The label of the color input -->
   <string name="color_picker_color">لون:</string>
+  <!-- Android Syntax Highlight -->
   <string name="ash_reset_color_scheme">استعادة نظام ألوان السمة الافتراضية</string>
   <string name="ash_text">نص</string>
   <string name="ash_assignment">التعيين</string>
@@ -377,33 +709,63 @@
   <string name="ash_keyword">كلمة أساسية</string>
   <string name="ash_quoted_string">سلسلة بين علامات اقتباس</string>
   <string name="ash_variable">متغير</string>
+  <!-- Secure Storage -->
+  <!-- Secure Storage dialog title - Unlock -->
   <string name="secure_storage_unlock_title">إلغاء قفل التخزين الآمن</string>
+  <!-- Secure Storage dialog title - Create -->
   <string name="secure_storage_create_title">إنشاء تخزين آمنة</string>
+  <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">إعادة تعيين كلمة المرور</string>
+  <!-- Secure Storage dialog title - Delete -->
   <string name="secure_storage_delete_title">حذف التخزين الآمن</string>
+  <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">اكتب كلمة المرور الحالية لإلغاء قفل نظام تخزين الملفات الآمن.</string>
+  <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">اكتب كلمة مرور لحماية نظام تخزين الملفات الآمن.</string>
+  <!-- Secure Storage unlock dialog message (reset the current password) -->
   <string name="secure_storage_unlock_key_reset_msg">اكتب كلمات المرور الحالية و الجديدة لإعادة تعيين نظام تخزين الملفات الآمن.</string>
+  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">اكتب كلمة المرور الحالية لحذف نظام تخزين الملفات الآمن.</string>
+  <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">كلمة المرور القديمة:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_new_key_title">كلمة المرور الجديدة:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">كلمة المرور</string>
+  <!-- Secure Storage unlock dialog repeat key title-->
   <string name="secure_storage_unlock_repeat_title">تكرار كلمة المرور:</string>
+  <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">إنشاء</string>
+  <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">فتح القفل</string>
+  <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">إعادة تعيين</string>
+  <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">حذف</string>
+  <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">لا يمكن إلغاء قفل وحدة التخزين</string>
+  <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length"> يجب أن تتألف كلمة المرور من  <xliff:g id="characters">%1$d</xliff:g> أحرف على الأقل. </string>
+  <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">كلمتا السر لا تتطابقان.</string>
+  <!-- Secure storage open file warning -->
   <string name="secure_storage_open_file_warning"> سيتم نسخ الملف إلى موقع مؤقت غير مشفر. وسيتم مسحه بعد ساعة واحدة.</string>
+  <!-- Print messages -->
+  <!-- Unsupported document format -->
   <string name="print_unsupported_document">تنسيق الوثيقة غير معتمد</string>
+  <!-- Unsupported image format -->
   <string name="print_unsupported_image">تنسيق الصورة غير مدعوم</string>
+  <!-- Print header -->
   <string name="print_document_header">الوثيقة: <xliff:g id="document_name">%1$s </xliff:g></string>
+  <!-- Print footer -->
   <string name="print_document_footer">الصفحة <xliff:g id="page_number">%1$s </xliff:g></string>
+  <!-- Security - Extract relative or absolute files -->
   <string name="security_warning_extract">تحذير!\n\n استخراج ملف أرشيف مع مسارات نسبية أو مطلقة قد يؤدي إلى إلحاق الضرر بالجهاز عن طريق الكتابة فوق ملفات النظام \n\n هل تريد المواصلة؟</string>
+  <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">سِجل التغييرات</string>
+  <!-- Welcome Dialog - Title -->
   <string name="welcome_title">مرحبا</string>
+  <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">مرحباً بكم في إدرة ملفات CyanogenMod.\n\n هذا التطبيق يتيح لك استكشاف نظام الملفات والقيام بعمليات قد تؤدي إلى خرق الجهاز الخاص بك. لمنع التلف، سيبدأ التطبيق في الوضع الآمن، الوضع ذو الامتيازات المنخفضة.\n\nيمكنك الموصل إلى الوضع المتقدم ذو الامتيازات الكاملة عبر الإعدادات. تقع عليك المسؤولية في ضمان عدم قيام العملية بخرق نظامك. \n\n فريق CyanogenMod</string>
   <string name="activity_not_found_exception">تعذر العثور على تطبيق لفتح هذا الملف</string>
   <string name="snackbar_settings">إعدادات</string>

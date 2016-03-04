@@ -16,130 +16,254 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- The name of the app -->
   <string name="app_name">Fichiersmanager</string>
+  <!-- The description of the app -->
   <string name="app_description">CyanogenMod-Fichiersmanager</string>
+  <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">kB</string>
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">GB</string>
+  <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
+  <!-- Devices types -->
   <string name="device_blockdevice">Blockorientéierten Apparat</string>
   <string name="device_characterdevice">Zeechenorientéierten Apparat</string>
   <string name="device_namedpipe">Benannte Kanal</string>
   <string name="device_domainsocket">Domäne-Sockel</string>
+  <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
+  <!-- Default buttons -->
   <string name="yes">Jo</string>
   <string name="no">Nee</string>
   <string name="all">All</string>
   <string name="overwrite">Iwwerschreiwen</string>
   <string name="select">Auswielen</string>
+  <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<Wuerzeldossier>]]></string>
+  <!-- The search result name -->
   <string name="search_result_name">Sichen: <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Loading waiting message -->
   <string name="loading_message">Lueden\u2026</string>
+  <!-- Computing message -->
+  <!-- Computing new line message -->
+  <!-- Cancelled message -->
   <string name="cancelled_message">Ofgebrach.</string>
+  <!-- Error message -->
   <string name="error_message">Feeler.</string>
+  <!-- Copy text content description -->
   <string name="copy_text_cd">Dréck fir den Text an d\'Tëschenoflag ze kopéieren</string>
+  <!-- Copy text content message -->
   <string name="copy_text_msg">Text an d\'Tëschenoflag kopéiert</string>
+  <!-- Warning dialog title -->
   <string name="warning_title">Warnung</string>
+  <!-- Error dialog title -->
   <string name="error_title">Feeler</string>
+  <!-- Confirm operation dialog title -->
   <string name="confirm_operation">Operatioun bestätegen</string>
+  <!-- Confirm overwrite dialog title -->
   <string name="confirm_overwrite">Iwwerschreiwe bestätegen</string>
+  <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">Läsche bestätegen</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Wiessel bestätegen</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
   <string name="msgs_change_to_prompt_access_mode_msg">Konnt kee Root-Zougrëff kréien. Et gëtt zréck an de séchere Modus gewiesselt.\n\nÄnnerung bäibehalen?</string>
+  <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">Et war net méiglech, déi néideg Rechter fir dëse Virgank z\'erlaangen.</string>
+  <!-- The message shown when an allocation of a privileged console fails, and a non
+         privileged is allocated -->
   <string name="msgs_privileged_console_alloc_failed">Konnt kee Root-Zougrëff kréien. Et gëtt zréck an de séchere Modus gewiesselt.</string>
+  <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">D\'Astellung konnt net applizéiert oder gespäichert ginn.</string>
+  <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">De Standarddossier \"<xliff:g id="initial_dir">%1$s</xliff:g>\" ass ongëlteg. Wiesselen zréck op de Wuerzeldossier.</string>
+  <!-- Root is not available message -->
   <string name="root_not_available_msg">Root ass op dësem Apparat net disponibel. Kann d\'Operatioun net duerchféieren.</string>
+  <!-- Success -->
   <string name="msgs_success">D\'Operatioun gouf erfollegräich ausgefouert.</string>
+  <!-- Unknown error -->
   <string name="msgs_unknown">Et ass e Feeler opgetrueden. D\'Operatioun war net erfollegräich.</string>
+  <!-- When an operation requires elevated privileged (normally caused for the use of a
+         non-privileged console) -->
   <string name="msgs_insufficient_permissions">Dës Operatioun brauch méi héich Berechtegungen. Versichen an de Root-Zougrëffsmodus ze wiesselen.</string>
+  <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">Dës Operatioun ass feelgeschloen, well keng Späicherplaz méi um Apparat fräi ass.</string>
+  <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">De Fichier oder Dossier gouf net fonnt.</string>
+  <!-- The command reference couldn't be created (not found or invalid definition)
+         (normally caused by a development error) -->
   <string name="msgs_command_not_found">De Befeel vun dëser Operatioun gouf net fonnt oder huet eng ongëlteg Definitioun.</string>
+  <!-- I/O exception -->
   <string name="msgs_io_failed">Feeler beim Liese/Schreiwen.</string>
+  <!-- Operation timeout detected -->
   <string name="msgs_operation_timeout">Zäitiwwerschreidung vun der Operatioun.</string>
+  <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">D\'Operatioun ass feelgeschloen.</string>
+  <!-- A console couldn't be allocated -->
   <string name="msgs_console_alloc_failure">Et ass en interne Feeler opgetrueden.</string>
+  <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">Dës Operatioun kann net ofgebrach ginn.</string>
+  <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">De Fichierssystem ass schreifgeschützt. Probéier de Fichiersystem mat Schreifrechter anzebannen ier s de dës Operatioun probéiers.</string>
+  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">Ongëltegt Argument. Opruff feelgeschloen.</string>
+  <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">Dës Operatioun ass net erlaabt well s\'Inkonsistenze géif verursaachen.</string>
+  <!-- Operation not permitted in the current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">Den Destinatiounsdossier ka keen Ënnerdossier vun der Source oder identesch mat der Source sinn.</string>
+  <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">Nach eemol drécke fir zouzemaachen.</string>
+  <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">Fir den ausgewielte Fichierstyp ass keng App registréiert.</string>
+  <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">Verschidde Fichieren existéiere schonn am Zildossier.\n\nIwwerschreiwen?</string>
+  <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">D\'Verknäppung vun der Aktioun mat der App ass feelgeschloen.</string>
+  <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">D\'Operatioun verlaangt erhéijte Privilegien.\n\nWëlls du op de Root-Zougrëffsmodus wiesselen?</string>
+  <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Iwwergeuerdneten Dossier</string>
+  <!-- External storage descripton -->
   <string name="external_storage">Externe Späicher</string>
+  <!-- Usb storage descripton -->
   <string name="usb_storage">USB-Späicher</string>
+  <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">Informatioun vum Fichierssystem</string>
+  <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">Zortéiermodus</string>
+  <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">Layoutmodus</string>
+  <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">Aner Uweis-Optiounen</string>
+  <!-- ActionBar Buttons - Done -->
   <string name="actionbar_button_selection_done_cd">Fäerdeg</string>
+  <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">Aktiounen</string>
+  <!-- ActionBar Buttons - Search -->
   <string name="actionbar_button_search_cd">Sichen</string>
+  <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">Méi Optiounen</string>
+  <!-- ActionBar Buttons - Storage volumes -->
   <string name="actionbar_button_storage_cd">Späicherlafwierker</string>
+  <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">Späicheren</string>
+  <!-- ActionBar Buttons - Print -->
   <string name="actionbar_button_print_cd">Drécken</string>
+  <!-- Navigation View - Sort - Sort by name (ascending) -->
   <string name="sort_by_name_asc">No Numm \u25B2</string>
+  <!-- Navigation View - Sort - Sort by name (descending) -->
   <string name="sort_by_name_desc">No Numm \u25B2</string>
+  <!-- Navigation View - Sort - Sort by date (ascending) -->
   <string name="sort_by_date_asc">No Datum \u25B2</string>
+  <!-- Navigation View - Sort - Sort by date (descending) -->
   <string name="sort_by_date_desc">No Datum \u25B2</string>
+  <!-- Navigation View - Sort - Sort by size (ascending) -->
   <string name="sort_by_size_asc">No Gréisst \u25B2</string>
+  <!-- Navigation View - Sort - Sort by size (descending) -->
   <string name="sort_by_size_desc">No Gréisst \u25BC</string>
+  <!-- Navigation View - Sort - Sort by type (ascending) -->
   <string name="sort_by_type_asc">No Typ \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (descending) -->
   <string name="sort_by_type_desc">No Typ \u25BC</string>
+  <!-- Navigation View - Layout - Icons -->
   <string name="layout_icons">Symboler</string>
+  <!-- Navigation View - Layout - Simple -->
   <string name="layout_simple">Einfach</string>
+  <!-- Navigation View - Layout - Details -->
   <string name="layout_details">Detailer</string>
+  <!-- Navigation View - View - Show folders first -->
   <string name="cm_filemanager_show_dirs_first">Dossiere fir d\'éischt uweisen</string>
+  <!-- Navigation View - View - Show hidden files option -->
   <string name="cm_filemanager_show_hidden">Verstoppt Fichieren uweisen</string>
+  <!-- Navigation View - View - Show system files option -->
   <string name="cm_filemanager_show_system">Systemfichieren uweisen</string>
+  <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">Symbolech Ofkierzungen uweisen</string>
+  <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">Keng Informatiounen</string>
+  <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">Et si keng Informatiounen iwwer de Fichierssystem disponibel.</string>
+  <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">De Fichiersystem kann net agebonnen/getrennt ginn.</string>
+  <!-- Filesystem Info - Not allowed message -->
   <string name="filesystem_info_mount_not_allowed_msg">Abannen/Trenne vu Fichierssystemen ass am séchere Modus net erlaabt. Dréck fir op de Root-Zougrëffsmodus ze wiesselen.</string>
+  <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">Abannen/Trenne vum Fichierssystem ass feelgeschloen. Op verschidde Fichierssystemer, wéi SD-Kaarten, kënnen dës Operatiounen net ausgefouert gi well se schreifgeschützt an de System agebaut sinn.</string>
+  <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">Informatiounen zum Fichierssystem</string>
+  <!-- Filesystem Info Dialog - Tab - Info -->
   <string name="filesystem_info_dialog_tab_info">Informatiounen</string>
+  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">Späicherbenotzung</string>
+  <!-- Filesystem Info Dialog - Status Label -->
   <string name="filesystem_info_dialog_status">Agebonnen:</string>
+  <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">Abannungspunkt:</string>
+  <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">Apparat:</string>
+  <!-- Filesystem Info Dialog - Type Label -->
   <string name="filesystem_info_dialog_type">Typ:</string>
+  <!-- Filesystem Info Dialog - Options Label -->
   <string name="filesystem_info_dialog_options">Optiounen:</string>
+  <!-- Filesystem Info Dialog - Dump/Pass Label -->
   <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
+  <!-- Filesystem Info Dialog - Virtual Label -->
   <string name="filesystem_info_dialog_virtual">Virtuell:</string>
+  <!-- Filesystem Info Dialog - Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">Total:</string>
+  <!-- Filesystem Info Dialog - Used Disk Usage -->
   <string name="filesystem_info_dialog_used_disk_usage">Benotzt:</string>
+  <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Fräi:</string>
+  <!-- Fso Properties - Not allowed message -->
   <string name="fso_properties_permissions_not_allowed_msg">Ännerungen un den Zougrëffsrechter sinn am séchere Modus net erlaabt. Dréck fir op de Root-Zougrëffsmodus ze wiesselen.</string>
+  <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">D\'Ännere vum Besëtzer ass feelgeschloen.\n\nAus Sécherheetsgrënn erlabe verschidde Fichierssystemer, z. B. SD-Kaarten, d\'Ännere vum Besëtzer net.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">D\'Ännere vun der Grupp ass feelgeschloen.\n\nAus Sécherheetsgrënn erlabe verschidde Fichierssystemer, z. B. SD-Kaarten, d\'Ännere vun der Grupp net.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_permission_msg">D\'Ännere vun den Zougrëffsrechter ass feelgeschloen.\n\nAus Sécherheetsgrënn erlabe verschidde Fichierssystemer, z. B. SD-Kaarten, d\'Ännere vun den Zougrëffsrechter net.</string>
+  <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">Eegeschaften</string>
+  <!-- Fso Properties Dialog - Tab - Info -->
   <string name="fso_properties_dialog_tab_info">Informatiounen</string>
+  <!-- Fso Properties Dialog - Tab - Permissions -->
   <string name="fso_properties_dialog_tab_permissions">Berechtegungen</string>
+  <!-- Fso Properties Dialog - Name Label -->
   <string name="fso_properties_dialog_name">Numm:</string>
+  <!-- Fso Properties Dialog - Parent Folder Label -->
   <string name="fso_properties_dialog_parent">Plaz:</string>
+  <!-- Fso Properties Dialog - Type Label -->
   <string name="fso_properties_dialog_type">Typ:</string>
+  <!-- Fso Properties Dialog - Category Label -->
   <string name="fso_properties_dialog_category">Rubrik:</string>
+  <!-- Fso Properties Dialog - Link Label -->
   <string name="fso_properties_dialog_link">Link:</string>
+  <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">Gréisst:</string>
+  <!-- Fso Properties Dialog - Contains Label -->
   <string name="fso_properties_dialog_contains">Huet:</string>
+  <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <string name="fso_properties_dialog_last_accessed_date">Zougegraff:</string>
+  <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">Modifizéiert:</string>
+  <!-- Fso Properties Dialog - Last Changed Time -->
   <string name="fso_properties_dialog_last_changed_date">Geännert:</string>
+  <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">Besëtzer:</string>
+  <!-- Fso Properties Dialog - Group Label -->
   <string name="fso_properties_dialog_group">Grupp:</string>
+  <!-- Fso Properties Dialog - Others Label -->
   <string name="fso_properties_dialog_others">Anerer:</string>
+  <!-- Fso Properties Dialog - Special Label -->
+  <!-- Fso Properties Dialog - Read Label -->
+  <!-- Fso Properties Dialog - Write Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Skip media scan -->
   <string name="fso_properties_dialog_include_in_media_scan">D\'Sich no Medien iwwersprangen:</string>
   <string name="fso_failed_to_allow_media_scan">Mediescan konnt net aktivéiert ginn</string>
   <string name="fso_failed_to_prevent_media_scan">Mediescan konnt net iwwerspronge ginn</string>
@@ -147,130 +271,254 @@
   <string name="fso_delete_nomedia_dir_body">Dësen Dossier huet en Dossier mam Numm \".nomedia\".\n\nWëlls du en zesumme mat sengem Inhalt läschen?</string>
   <string name="fso_delete_nomedia_non_empty_title">Fichier \".nomedia\" läschen</string>
   <string name="fso_delete_nomedia_non_empty_body">Dësen Dossier huet en \".nomedia\"-Fichier deen net eidel ass.\n\nWëlls du e läschen?</string>
+  <!-- History - History activity title -->
   <string name="history">Historique</string>
+  <!-- History - The history is empty -->
   <string name="msgs_history_empty">Den Historique ass eidel.</string>
+  <!-- History - The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">Onbekanntent Element am Historique.</string>
+  <!-- Search - Search activity title -->
   <string name="search">Sichresultater</string>
+  <!-- Search - Search hint message -->
   <string name="search_hint">Sichbegrëff aginn</string>
+  <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">Sichbegrëff schwätzen</string>
+  <!-- Search - Search error message -->
   <string name="search_error_msg">Beim Sichen ass e Feeler opgetrueden. Keng Resultater fonnt.</string>
+  <!-- Search - Search no results message -->
   <string name="search_no_results_msg">Keng Resultater fonnt.</string>
+  <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> an <xliff:g id="path">%2$s</xliff:g></string>
+  <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>Begrëffer:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Search - Confirm search -->
   <string name="search_few_characters_title">Sich bestätegen</string>
+  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">E puer vun de Sichbegrëffer sinn ze kuerz. D\'Operatioun kéint vill Zäit a Systemressource kaschten.\n\nWëlls du weidermaachen?</string>
+  <!-- Search - Searching dialog title -->
   <string name="searching">Waart w.e.g.\u2026</string>
+  <!-- Search - Searching label -->
   <string name="searching_action_label">Sich leeft</string>
+  <!-- Picker Activity -->
+  <!-- Picker Activity - Dialog title -->
   <string name="picker_title">E Fichier wielen</string>
   <string name="directory_picker_title">En Dossier wielen</string>
+  <!-- Editor - Editor activity title -->
   <string name="editor">Editor</string>
+  <!-- Editor - Invalid file message -->
   <string name="editor_invalid_file_msg">Ongëltege Fichier.</string>
+  <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">Fichier net fonnt.</string>
+  <!-- Editor - File size exceed the limit -->
   <string name="editor_file_exceed_size_msg">De Fichier ass ze grouss, fir op dengem Apparat opgemaach ze ginn.</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">Erausgoe bestätegen</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <string name="editor_dirty_ask_msg">Et ginn ongespäichert Ännerungen.\n\nZoumaachen ouni ze späicheren?</string>
+  <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">De Fichier gouf erfollegräich gespäichert.</string>
+  <!-- Editor - Read-only file mode -->
   <string name="editor_read_only_mode">De Fichier ass ouni Schreifrechter opgemaach ginn.</string>
+  <!-- Editor - Dumping message -->
   <string name="dumping_message">Hexdump gëtt generéiert\u2026</string>
+  <!-- Editor - Displaying -->
   <string name="displaying_message">Gëtt ugewisen\u2026</string>
+  <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">Lieszeechen</string>
+  <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">Doheem</string>
+  <!-- Bookmarks - Bookmark name - Root folder -->
   <string name="bookmarks_root_folder">Wuerzeldossier</string>
+  <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">Systemdossier</string>
+  <!-- Bookmarks - Bookmark name - Secure storage -->
   <string name="bookmarks_secure">Séchere Späicher</string>
+  <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">Online-Späicher</string>
+  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">Den initialen Dossier setzen.</string>
+  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">Lieszeeche läschen.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">D\'Lieszeeche gouf erfollegräich dobäigesat.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">D\'Lieszeechen existéiert schonn.</string>
+  <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Initialen Dossier</string>
+  <!-- Initial directory label -->
   <string name="initial_directory_label">Wiel den initialen Dossier aus:</string>
+  <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Relativ Pade sinn net erlaabt.</string>
+  <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">Beim Späichere vum Standarddossier ass e Feeler opgetrueden.</string>
+  <!-- Menu - Navigation - Search -->
   <string name="menu_search">Sich</string>
+  <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">Astellungen</string>
+  <!-- Menu - History - Clear history -->
   <string name="menu_clear_history">Historique eidel maachen</string>
+  <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">Keng Virschléi</string>
+  <!-- Menu - Editor - Word wrap -->
   <string name="menu_word_wrap">Zeilenëmbroch</string>
+  <!-- Menu - Editor - Sintax highlight -->
   <string name="menu_syntax_highlight">Syntaxervirhiewung</string>
+  <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - nei<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Regular expression for new compressed file -->
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - nei<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">Operatioun gëtt ausgeféiert\u2026</string>
+  <!-- Waiting dialog - Copying title -->
   <string name="waiting_dialog_copying_title">Kopéieren\u2026</string>
+  <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>Vun</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>No</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">Réckelen\u2026</string>
+  <!-- Waiting dialog - Moving message -->
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>Vun</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>No</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Deleting title -->
   <string name="waiting_dialog_deleting_title">Läschen\u2026</string>
+  <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Fichier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_extracting_title">Entpaken\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Fichier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_compressing_title">Kompriméieren\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Fichier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Analyséieren\u2026</b>]]></string>
+  <!-- Extracting - Success message -->
   <string name="msgs_extracting_success">D\'Entpake gouf erfollegräich ofgeschloss. D\'Date goufen an den Dossier <xliff:g id="destination">%1$s</xliff:g> entpak.</string>
+  <!-- Compressing - Success message -->
   <string name="msgs_compressing_success">D\'Kompriméierung gouf erfollegräich ofgeschloss. D\'Date goufen an den Dossier <xliff:g id="destination">%1$s</xliff:g> kompriméiert.</string>
+  <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">Aktiounen</string>
+  <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">Eegeschaften</string>
+  <!-- Actions Dialog - Menu - Refresh -->
   <string name="actions_menu_refresh">Opfrëschen</string>
+  <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">Neien Dossier</string>
+  <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">Neie Fichier</string>
+  <!-- Actions Dialog - Menu - Select all -->
   <string name="actions_menu_select_all">Alles auswielen</string>
+  <!-- Actions Dialog - Menu - Deselect all -->
   <string name="actions_menu_deselect_all">Auswiel ophiewen</string>
+  <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">Auswielen</string>
+  <!-- Actions Dialog - Menu - Deselect -->
   <string name="actions_menu_deselect">Auswiel ophiewen</string>
+  <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <string name="actions_menu_paste_selection">Auswiel heihi kopéieren</string>
+  <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">Auswiel heihi réckelen</string>
+  <!-- Actions Dialog - Menu - Delete selection -->
   <string name="actions_menu_delete_selection">Auswiel läschen</string>
+  <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">Auswiel kompriméieren</string>
+  <!-- Actions Dialog - Menu - Create link -->
   <string name="actions_menu_create_link">Ofkierzung erstellen</string>
+  <!-- Actions Dialog - Menu - Open -->
   <string name="actions_menu_open">Opmaachen</string>
+  <!-- Actions Dialog - Menu - Open with -->
   <string name="actions_menu_open_with">Opmaache mat</string>
+  <!-- Actions Dialog - Menu - Execute -->
   <string name="actions_menu_execute">Ausféieren</string>
+  <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">Schécken</string>
+  <!-- Actions Dialog - Menu - Send selection -->
   <string name="actions_menu_send_selection">Auswiel schécken</string>
+  <!-- Actions Dialog - Menu - Compress -->
   <string name="actions_menu_compress">Kompriméieren</string>
+  <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">Entpaken</string>
+  <!-- Actions Dialog - Menu - Delete -->
   <string name="actions_menu_delete">Läschen</string>
+  <!-- Actions Dialog - Menu - Rename -->
   <string name="actions_menu_rename">Ëmbenennen</string>
+  <!-- Actions Dialog - Menu - Create copy -->
   <string name="actions_menu_create_copy">Kopie erstellen</string>
+  <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">Eegeschaften</string>
+  <!-- Actions Dialog - Menu - Add to bookmarks -->
   <string name="actions_menu_add_to_bookmarks">Bei d\'Lieszeechen dobäisetzen</string>
+  <!-- Actions Dialog - Menu - Add shortcut -->
   <string name="actions_menu_add_shortcut">Ofkierzung dobäisetzen</string>
+  <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">Iwwergeuerdneten Dossier opmaachen</string>
+  <!-- Actions Dialog - Menu - Compute checksum -->
   <string name="actions_menu_compute_checksum">Préifzomm generéieren</string>
+  <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">Drécken</string>
+  <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">Als Startpositioun setzen</string>
+  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">Dës Aktioun kann net réckgängeg gemaach ginn. Weidermaachen?</string>
+  <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">Numm:</string>
+  <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">Den Numm kann net eidel sinn.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_path_name">Ongëltegen Numm. D\'Zeechen \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' sinn net erlaabt.</string>
+  <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">Maximal Zeechelimitt erreecht.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_name">Ongëltegen Numm. D\'Nimm \".\" an \"..\" sinn net erlaabt.</string>
+  <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">Den Numm existéiert schonn.</string>
+  <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">Associatiounen</string>
+  <!-- Associations Dialog - Remember the user action -->
   <string name="associations_dialog_remember">Auswiell verhalen</string>
+  <!-- Associations Dialog - Open with Title -->
   <string name="associations_dialog_openwith_title">Opmaache mat</string>
+  <!-- Associations Dialog - Open action (button title) -->
   <string name="associations_dialog_openwith_action">Opmaachen</string>
+  <!-- Associations Dialog - Send with Title -->
   <string name="associations_dialog_sendwith_title">Schécke mat</string>
+  <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">Schécken</string>
+  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">Näischt fir ze vervollstännegen.</string>
+  <!-- Execution console - Title -->
   <string name="execution_console_title">Konsol</string>
+  <!-- Execution console - The script name label -->
   <string name="execution_console_script_name_label">Skript:</string>
+  <!-- Execution console - The script execution time label -->
   <string name="execution_console_script_execution_time_label">Zäit:</string>
+  <!-- Execution console - The script exit code label -->
   <string name="execution_console_script_exitcode_label">Skript-Resultat:</string>
+  <!-- Execution console - The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> Sek.</string>
+  <!-- Compute checksum - Title -->
   <string name="compute_checksum_title">Préifzomm generéieren</string>
+  <!-- Compute checksum - The file name label -->
   <string name="compute_checksum_filename_label">Fichier:</string>
+  <!-- Compute checksum - The MD5 label -->
+  <!-- Compute checksum - The SHA1 label -->
+  <!-- Compute checksum - The computing checksum message-->
   <string name="compute_checksum_computing_checksum_msg">Préifzomm gëtt generéieren\u2026</string>
+  <!-- Mime/Types - Folder -->
   <string name="mime_folder">Dossier</string>
+  <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">Symbolesche Link</string>
+  <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">Onbekannt</string>
+  <!--  Filetime formats -->
   <string name="filetime_format_mode_system">Systemdefinéiert</string>
   <string name="filetime_format_mode_locale">Standuertdefinéiert</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/jjjj hh:mm:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/jjjj hh:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">jjjj-mm-dd hh:mm:ss</string>
+  <!-- Selection -->
+  <!-- For example "2 folders and 1 file selected." -->
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> an <xliff:g id="files">%2$s</xliff:g> ausgewielt.</string>
+  <!-- Category descriptions -->
   <string name="category_system">SYSTEM</string>
   <string name="category_app">APP</string>
   <string name="category_binary">BINÄR</string>
@@ -287,86 +535,170 @@
   <string name="category_video">VIDEO</string>
   <string name="category_security">SÉCHERHEET</string>
   <string name="category_all">ALL</string>
+  <!-- Compression - Compression modes dialog title -->
   <string name="compression_mode_title">Kompressiounsmodus</string>
+  <!-- Compression - Supported archive and compression modes -->
+  <!-- Shortcut. Failed to handle the shortcut -->
   <string name="shortcut_failed_msg">Feeler beim Zougrëff op d\'Ofkierzung.</string>
+  <!-- Shortcut. The shortcut was created -->
   <string name="shortcut_creation_success_msg">Ofkierzung erfollegräich ugeluecht.</string>
+  <!-- Shortcut. The shortcut wasn't created -->
   <string name="shortcut_creation_failed_msg">Ofkierzung konnt net ugeluecht ginn.</string>
+  <!-- Preferences title -->
   <string name="pref">Astellungen</string>
+  <!-- Preferences - General title -->
   <string name="pref_general">Allgemeng Astellungen</string>
+  <!-- Preferences - Search title -->
   <string name="pref_search">Sichastellungen</string>
+  <!-- Preferences - Storage title -->
   <string name="pref_storage">Späicheroptiounen</string>
+  <!-- Preferences - Editor title -->
   <string name="pref_editor">Editorastellungen</string>
+  <!-- Preferences - Themes title -->
   <string name="pref_themes">Designen</string>
+  <!-- Preferences - About title -->
   <string name="pref_about">Iwwer</string>
+  <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">Allgemeng</string>
+  <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">Grouss-/Klengschreiwung respektéieren</string>
+  <!-- Preferences - General - Case sensitive sort and navigating summary -->
   <string name="pref_case_sensitive_sort_summary">Grouss-/Klengschreiwung respektéiere beim Navigéieren oder Zortéiere vu Sichresultater</string>
+  <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">Datums- an Zäitformat</string>
+  <!-- Preferences - General -Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">Späicherbenotzungswarnung</string>
+  <!-- Preferences - General - Disk usage warning level summary -->
+  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
+         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
   <string name="pref_disk_usage_warning_level_summary" formatted="false">Aner Faarf uweise, wa méi wéI <xliff:g id="level">%1$s</xliff:g> Prozent vun der Späicherplaz beluecht sinn</string>
+  <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Dossiersstatistike berechnen</string>
+  <!-- Preferences - General - Compute folder statistics summary on -->
   <string name="pref_compute_folder_statistics_on">Warnung! D\'Berechnung vun den Dossiersstatistiken ass Zäit- a Ressourcen-opwänneg</string>
+  <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">Virschau</string>
+  <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">Virschau fir Appen, Museksfichieren, Biller a Videoen uweisen</string>
+  <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Wëschgeste benotzen</string>
+  <!-- Preferences - General - Use flinger detection summary -->
   <string name="pref_use_flinger_summary">Vu lénks no riets wëschen, fir e Fichier oder en Dossier ze läschen</string>
+  <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Erweidert</string>
+  <!-- Preferences - General - Access mode -->
   <string name="pref_access_mode">Zougrëffsmodus</string>
+  <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">Séchere Modus</string>
+  <!-- Preferences - General - Safe mode summary -->
   <string name="pref_access_mode_safe_summary">Séchere Modus\n\nD\'App leeft ouni Privilegien an déi eenzeg Fichierssystemen déi accessibel sinn, sinn d\'Späicherlafwierker (SD-Kaart an USB)</string>
+  <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">Benotzermodus froen</string>
+  <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">Benotzermodus froen\n\nD\'App leeft mat vollem Accès op de Fichierssystem mä freet ëm Erlabnis ier privilegéiert Aktiounen ausgefouert ginn</string>
+  <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">Root-Zougrëffsmodus</string>
+  <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">Root-Zougrëffsmodus\n\nWarnung! Dëse Modus erlaabt Operatiounen déi däin Apparat kéinte futti maachen. Et ass deng Responsabilitéit sécherzestellen datt eng Operatioun sécher ass</string>
+  <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">Benotzerzougrëff aschränken</string>
+  <!-- Preferences - General - Restrict secondary users access summary -->
   <string name="pref_restrict_secondary_users_access_summary">Zougrëff op Systemfichieren op sekundär Benotzer beschränken</string>
+  <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">Resultater</string>
+  <!-- Preferences - Search - Show relevance widget -->
   <string name="pref_show_relevance_widget">Relevanzindikator uweisen</string>
+  <!-- Preferences - Search - Highlight search terms -->
   <string name="pref_highlight_terms">Sichresultater ervirhiewen</string>
+  <!-- Preferences - Search - Sort results mode -->
   <string name="pref_sort_search_results_mode">Zortéiermodus</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">Keng Zortéierung</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_name">No Numm</string>
+  <!-- Preferences - Search - Sort results mode. Relevance -->
   <string name="pref_sort_search_results_mode_relevance">No Relevanz</string>
+  <!-- Preferences - Search - Privacity category -->
   <string name="pref_search_privacity_category">Privatsphär</string>
+  <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">Sichbegrëffer späicheren</string>
+  <!-- Preferences - Search - Save search terms summary on -->
   <string name="pref_save_search_terms_on">Sichbegrëffer gi gespäichert an an Zukunft als Virschléi ugewisen</string>
+  <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">Sichbegrëffer ginn net gespäichert</string>
+  <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">Gespäichert Sichbegrëffer läschen</string>
+  <!-- Preferences - Search - Remove saved search terms summary -->
   <string name="pref_remove_saved_search_terms_summary">Dréck, fir all déi gespäichert Sichbegrëffer ze läschen</string>
+  <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">Déi gespäichert Sichbegrëffer goufe geläscht</string>
+  <!-- Preferences - Storage - Secure Storage category -->
   <string name="pref_secure_storage_category">Séchere Späicher</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">Verzögert Synchroniséierung</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <string name="pref_secure_storage_delayed_sync_summary">D\'Synchroniséierung vun engem séchere Fichierssystem ass en opwännege Virgank. Aktivéier dës Optioun, fir d\'Reaktiounszäit no all Operatioun ze verbesseren, andeem d\'Synchronisatioun vum Fichierssystem eréischt da gemaach gëtt, wann de System net méi benotzt gëtt. Doduerch besteet awer de Risiko, datt Informatiounen déi nach net synchroniséiert sinn, bei engem Ofstuerz vun der App verluer ginn.</string>
+  <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">Passwuert änneren</string>
+  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">Späicher läschen</string>
+  <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">Behuelen</string>
+  <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">Keng Virschléi</string>
+  <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">Keng Wuertvirschléi uweise wann e Fichier editéiert gëtt</string>
+  <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">Zeilenëmbroch</string>
+  <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">Hexdump-Binärfichieren</string>
+  <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">Beim Opmaache vun engem Binärfichier en Hexdump vum Fichier generéieren an am Hex-Editor uweisen</string>
+  <!-- Preferences - Editor - Syntax highlight category -->
   <string name="pref_editor_syntax_highlight_category">Afierwung vun der Syntax</string>
+  <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">Syntaxervirhiewung</string>
+  <!-- Preferences - Editor - Syntax highlight summary -->
   <string name="pref_syntax_highlight_desc">Hieft d\'Syntax vum Fichier ervir, deen am Editor ugewise gëtt (just wann e Syntaxervirhiewungsveraarbechter fir dëse Fichierstyp disponibel ass)</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">Faarfschema</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
   <string name="pref_syntax_highlight_color_scheme_desc">Faarfschema fir d\'Syntaxervirhiewung auswielen</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">Standard-Design benotzen</string>
+  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <string name="pref_syntax_sh_use_theme_default_desc">Dat standardméissegt Faarfschema vum aktuellen Design benotzen</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">Elementer</string>
+  <!-- Preferences - Themes - Themes selection category -->
   <string name="pref_themes_selection_category">Designen</string>
+  <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">Design auswielen</string>
+  <!-- Preferences - Themes - Confirmation message -->
   <string name="pref_themes_confirmation">Design erfollegräich applizéiert.</string>
+  <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">Design net fonnt.</string>
+  <!-- Preferences - Debug - Capture debug traces -->
   <string name="pref_debug_traces">Debugging-Informatioune protokolléieren</string>
+  <!-- Themes - Default theme name -->
   <string name="theme_default_name">Hellen Design</string>
+  <!-- Themes - Default theme description -->
   <string name="theme_default_description">Hellen Design fir den CM-Fichiersmanager.</string>
+  <!-- Themes - Default theme author -->
   <string name="themes_author">CyanogenMod</string>
+  <!-- Navigation drawer -->
   <string name="drawer_open">Navigatiounsläischt opmaachen</string>
   <string name="drawer_close">Navigatiounsläischt zoumaachen</string>
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">Alpha</string>
+  <!-- The label of the current color panel -->
   <string name="color_picker_current_text">Aktuell:</string>
+  <!-- The label of the new color panel -->
   <string name="color_picker_new_text">Nei:</string>
+  <!-- The label of the color input -->
   <string name="color_picker_color">Faarf:</string>
+  <!-- Android Syntax Highlight -->
   <string name="ash_reset_color_scheme">Standard-Faarfschema vun der Syntaxervirhiewung erëmhierstellen</string>
   <string name="ash_text">Text</string>
   <string name="ash_assignment">Zouweisung</string>
@@ -375,33 +707,63 @@
   <string name="ash_keyword">Schlësselwuert</string>
   <string name="ash_quoted_string">Text tëscht Gänseféisercher</string>
   <string name="ash_variable">Variabel</string>
+  <!-- Secure Storage -->
+  <!-- Secure Storage dialog title - Unlock -->
   <string name="secure_storage_unlock_title">Séchere Späicher entspären</string>
+  <!-- Secure Storage dialog title - Create -->
   <string name="secure_storage_create_title">Séchere Späicher erstellen</string>
+  <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">Passwuert zrécksetzen</string>
+  <!-- Secure Storage dialog title - Delete -->
   <string name="secure_storage_delete_title">Séchere Späicher läschen</string>
+  <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">Passwuert agi fir de séchere Fichierssystem z\'entspären.</string>
+  <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">Gëff e Passwuert a fir de séchere Fichierssystem ze schützen.</string>
+  <!-- Secure Storage unlock dialog message (reset the current password) -->
   <string name="secure_storage_unlock_key_reset_msg">Gëff dat aktuellt an dat neit Passwuert an, fir de séchere Fichierssystem zréckzesetzen.</string>
+  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">Gëff dat aktuellt Passwuert a fir de séchere Fichierssystem ze läschen.</string>
+  <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">Aalt Passwuert:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_new_key_title">Neit Passwuert:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">Passwuert:</string>
+  <!-- Secure Storage unlock dialog repeat key title-->
   <string name="secure_storage_unlock_repeat_title">Passwuert widderhuelen:</string>
+  <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">Erstellen</string>
+  <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Entspären</string>
+  <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">Zrécksetzen</string>
+  <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Läschen</string>
+  <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">Kann de Späicher net entspären</string>
+  <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">D\'Passwuert muss mindestens <xliff:g id="characters">%1$d</xliff:g> Zeechen hunn.</string>
+  <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">D\'Passwierder stëmmen net iwwereneen.</string>
+  <!-- Secure storage open file warning -->
   <string name="secure_storage_open_file_warning">Doduerch gëtt de Fichier temporär op eng onverschlësselt Plaz kopéiert. E gëtt no enger Stonn geläscht.</string>
+  <!-- Print messages -->
+  <!-- Unsupported document format -->
   <string name="print_unsupported_document">Dokumenteformat net ënnerstëtzt</string>
+  <!-- Unsupported image format -->
   <string name="print_unsupported_image">Bildformat net ënnerstëtzt</string>
+  <!-- Print header -->
   <string name="print_document_header">Dokument: <xliff:g id="document_name">%1$s</xliff:g></string>
+  <!-- Print footer -->
   <string name="print_document_footer">Säit <xliff:g id="page_number">%1$s</xliff:g></string>
+  <!-- Security - Extract relative or absolute files -->
   <string name="security_warning_extract">Warnung!\n\nWann en Archiv mat relativen oder absolute Paden entpak gëtt, kéinte Systemfichieren iwwerschriwwen an den Apparat sou beschiedegt ginn.\n\nWëlls du weidermaachen?</string>
+  <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">Ännerungshiwäiser</string>
+  <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Wëllkomm</string>
+  <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Wëllkomm am Fichiersmanager vu CyanogenMod.\n\nDës App erméiglecht der de Fichierssystem ze duerchsichen an Operatiounen drop auszeféieren déi den Apparat kéinte stéieren. Fir Schied ze vermeide start d\'App am séchere Modus mat manner Privilegien.\n\nIwwer d\'Astellunge kanns du den erweiderten, voll-privilegéierten, Modus aktivéieren. Et ass deng eege Responsabilitéit, sécherzestellen datt keng vun den Operatiounen däi System zerstéiert.\n\nD\'Equipe vu CyanogenMod</string>
   <string name="activity_not_found_exception">Konnt keng App fanne fir dëse Fichier opzemaachen</string>
   <string name="snackbar_settings">Astellungen</string>

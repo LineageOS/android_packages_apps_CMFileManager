@@ -26,11 +26,13 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> fișiere</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> de fișiere</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element găsit</item>
     <item quantity="few"><xliff:g id="count">%d</xliff:g> elemente găsite</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> de elemente găsite</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> folder selectat.</item>
     <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> foldere selectate.</item>
@@ -41,4 +43,5 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> fișire selectate.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> de fișire selectate.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
 </resources>

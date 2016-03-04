@@ -24,10 +24,12 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> Fichier</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> Fichieren</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> Element fonnt</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> Elementer fonnt</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> Dossier ausgewielt.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> Dossieren ausgewielt.</item>
@@ -36,6 +38,7 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> Fichier ausgewielt.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> Fichieren ausgewielt.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> Element gëtt geläscht.</item>
     <item quantity="other"><xliff:g id="count">%1$d</xliff:g> Elementer gi geläscht.</item>

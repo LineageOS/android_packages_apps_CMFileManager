@@ -26,11 +26,13 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> файлы</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> файлаў</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one">Знойдзены <xliff:g id="count">%1$d</xliff:g> аб\'ект</item>
     <item quantity="few">Знойдзена <xliff:g id="count">%d</xliff:g> аб\'екты</item>
     <item quantity="other">Знойдзена <xliff:g id="count">%d</xliff:g> аб\'ектаў</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one">Вылучана <xliff:g id="folders">%1$d</xliff:g> тэчка.</item>
     <item quantity="few">Вылучана <xliff:g id="folders">%1$d</xliff:g> тэчкі.</item>
@@ -41,6 +43,7 @@
     <item quantity="few">Вылучаны <xliff:g id="files">%1$d</xliff:g> файлы.</item>
     <item quantity="other">Вылучаны <xliff:g id="files">%1$d</xliff:g> файлаў.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> элемент выдалены беззваротна.</item>
     <item quantity="few"><xliff:g id="count">%1$d</xliff:g> элемента выдалены беззваротна.</item>

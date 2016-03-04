@@ -24,10 +24,12 @@
     <item quantity="one">קובץ <xliff:g id="files">%1$d</xliff:g></item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> קבצים</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one">פריט <xliff:g id="count">%1$d</xliff:g> נמצא</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> פריטים נמצאו</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one">נבחרה תיקייה <xliff:g id="folders">%1$d</xliff:g>.</item>
     <item quantity="other">נבחרו <xliff:g id="folders">%1$d</xliff:g> תיקיות.</item>
@@ -36,6 +38,7 @@
     <item quantity="one">נבחר קובץ <xliff:g id="files">%1$d</xliff:g>.</item>
     <item quantity="other">נבחרו <xliff:g id="files">%1$d</xliff:g> קבצים.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one">פריט <xliff:g id="count">%1$d</xliff:g> הולך להימחק.</item>
     <item quantity="other"><xliff:g id="count">%1$d</xliff:g> פריטים הולכים להימחק.</item>

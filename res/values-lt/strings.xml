@@ -16,130 +16,254 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- The name of the app -->
   <string name="app_name">Failų tvarkyklė</string>
+  <!-- The description of the app -->
   <string name="app_description">„CyanogenMod“ failų tvarkyklė</string>
+  <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">kB</string>
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">GB</string>
+  <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
+  <!-- Devices types -->
   <string name="device_blockdevice">Blokuoti įrenginį</string>
   <string name="device_characterdevice">Simbolių įrenginys</string>
   <string name="device_namedpipe">FIFO</string>
   <string name="device_domainsocket">Domeno lizdas</string>
+  <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
+  <!-- Default buttons -->
   <string name="yes">Taip</string>
   <string name="no">Ne</string>
   <string name="all">Visi</string>
   <string name="overwrite">Perrašyti</string>
   <string name="select">Pasirinkti</string>
+  <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<Root aplankas>]]></string>
+  <!-- The search result name -->
   <string name="search_result_name">Paieška: <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Loading waiting message -->
   <string name="loading_message">Įkeliama\u2026</string>
+  <!-- Computing message -->
+  <!-- Computing new line message -->
+  <!-- Cancelled message -->
   <string name="cancelled_message">Atšaukta.</string>
+  <!-- Error message -->
   <string name="error_message">Klaida.</string>
+  <!-- Copy text content description -->
   <string name="copy_text_cd">Bakstelėkite, kad nukopijuotumėte tekstą į iškarpinę</string>
+  <!-- Copy text content message -->
   <string name="copy_text_msg">Tekstas nukopijuotas į iškarpinę</string>
+  <!-- Warning dialog title -->
   <string name="warning_title">Įspėjimas</string>
+  <!-- Error dialog title -->
   <string name="error_title">Klaida</string>
+  <!-- Confirm operation dialog title -->
   <string name="confirm_operation">Patvirtinkite veiksmą</string>
+  <!-- Confirm overwrite dialog title -->
   <string name="confirm_overwrite">Patvirtinkite perrašymą</string>
+  <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">Patvirtinkite trynimą</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Patvirtinkite perjungimą</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
   <string name="msgs_change_to_prompt_access_mode_msg">Nepavyko paleisti „Root“ režimu. Keičiama į saugų režimą.\n\nTaikyti šį pakeitimą?</string>
+  <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">Nepavyko gauti reikiamų privilegijų, veikimui.</string>
+  <!-- The message shown when an allocation of a privileged console fails, and a non
+         privileged is allocated -->
   <string name="msgs_privileged_console_alloc_failed">Nepavyko paleisti „Root“ prieigos režimu. Keičiama į saugų režimą.</string>
+  <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Nustatymas negali būti taikomas / saugomas.</string>
+  <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">Pradinis aplankas „<xliff:g id="initial_dir">%1$s</xliff:g>“ yra negaliojantis. Keičiama į „Root“ aplanką.</string>
+  <!-- Root is not available message -->
   <string name="root_not_available_msg">Šiame įrenginyje nėra „Root“. Negalima atlikti šios operacijos.</string>
+  <!-- Success -->
   <string name="msgs_success">Veiksmas baigtas sėkmingai.</string>
+  <!-- Unknown error -->
   <string name="msgs_unknown">Aptikta klaida. Veiksmas nepavyko.</string>
+  <!-- When an operation requires elevated privileged (normally caused for the use of a
+         non-privileged console) -->
   <string name="msgs_insufficient_permissions">Šis veiksmas reikalauja didesnių leidimų. Pabandykite pakeisti į „Root“ prieigos režimą.</string>
+  <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">Ši operacija nepavyko, nes nebėra likę vietos šiame įrenginyje.</string>
+  <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">Failas arba aplankas nerastas.</string>
+  <!-- The command reference couldn't be created (not found or invalid definition)
+         (normally caused by a development error) -->
   <string name="msgs_command_not_found">Veiksmo komanda nerasta arba turi neteisingą apibrėžimą.</string>
+  <!-- I/O exception -->
   <string name="msgs_io_failed">Skaitymo / rašymo triktis.</string>
+  <!-- Operation timeout detected -->
   <string name="msgs_operation_timeout">Veiksmui skirtas laikas baigėsi.</string>
+  <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">Operacija nepavyko.</string>
+  <!-- A console couldn't be allocated -->
   <string name="msgs_console_alloc_failure">Įvyko vidinė klaida.</string>
+  <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">Veiksmas negali būti atšauktas.</string>
+  <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">Failai sistemos yra tik skaitomi. Pabandykite prijungti failų sistemą kaip skaitomą ir rašomą, prieš pradedant veiksmą.</string>
+  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">Neteisingas argumentas. Kreipimasis nepavyko.</string>
+  <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">Šis veiksmas neleidžiamas, nes tai sukels neatitikimų.</string>
+  <!-- Operation not permitted in the current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">Paskirties aplankas negali būti šaltinio aplankas arba būti toks pat kaip šaltinis.</string>
+  <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">Paspauskite dar kartą, kad išeitumėte.</string>
+  <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">Nėra registruotos programos kuri tvarkytu pasirinktą failo tipą.</string>
+  <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">Kai kurie failai jau egzistuoja aplanke.\n\nPerrašyti?</string>
+  <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">Nepavyko susieti veiksmo, programai.</string>
+  <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">Veiksmas reikalauja didesnės privilegijos.\n\nAr norite pakeisti į root prieigos režimą?</string>
+  <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Pagrindinis aplankas</string>
+  <!-- External storage descripton -->
   <string name="external_storage">Išorinė saugykla</string>
+  <!-- Usb storage descripton -->
   <string name="usb_storage">USB saugykla</string>
+  <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">Failų sistemos informacija</string>
+  <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">Rūšiavimo režimas</string>
+  <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">Išdėstymo režimas</string>
+  <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">Kitos rodinio parinktys</string>
+  <!-- ActionBar Buttons - Done -->
   <string name="actionbar_button_selection_done_cd">Baigta</string>
+  <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">Veiksmai</string>
+  <!-- ActionBar Buttons - Search -->
   <string name="actionbar_button_search_cd">Paieška</string>
+  <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">Daugiau parinkčių</string>
+  <!-- ActionBar Buttons - Storage volumes -->
   <string name="actionbar_button_storage_cd">Saugyklos talpa</string>
+  <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">Išsaugoti</string>
+  <!-- ActionBar Buttons - Print -->
   <string name="actionbar_button_print_cd">Spausdinti</string>
+  <!-- Navigation View - Sort - Sort by name (ascending) -->
   <string name="sort_by_name_asc">Pagal pavadinimą \u25B2</string>
+  <!-- Navigation View - Sort - Sort by name (descending) -->
   <string name="sort_by_name_desc">Pagal pavadinimą \u25BC</string>
+  <!-- Navigation View - Sort - Sort by date (ascending) -->
   <string name="sort_by_date_asc">Pagal datą \u25B2</string>
+  <!-- Navigation View - Sort - Sort by date (descending) -->
   <string name="sort_by_date_desc">Pagal datą \u25BC</string>
+  <!-- Navigation View - Sort - Sort by size (ascending) -->
   <string name="sort_by_size_asc">Pagal dydį \u25B2</string>
+  <!-- Navigation View - Sort - Sort by size (descending) -->
   <string name="sort_by_size_desc">Pagal dydį \u25BC</string>
+  <!-- Navigation View - Sort - Sort by type (ascending) -->
   <string name="sort_by_type_asc">Pagal tipą \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (descending) -->
   <string name="sort_by_type_desc">Pagal tipą \u25BC</string>
+  <!-- Navigation View - Layout - Icons -->
   <string name="layout_icons">Piktogramos</string>
+  <!-- Navigation View - Layout - Simple -->
   <string name="layout_simple">Paprastas</string>
+  <!-- Navigation View - Layout - Details -->
   <string name="layout_details">Informacinis</string>
+  <!-- Navigation View - View - Show folders first -->
   <string name="cm_filemanager_show_dirs_first">Pirma rodyti aplankus</string>
+  <!-- Navigation View - View - Show hidden files option -->
   <string name="cm_filemanager_show_hidden">Rodyti paslėptus failus</string>
+  <!-- Navigation View - View - Show system files option -->
   <string name="cm_filemanager_show_system">Rodyti sistemos failus</string>
+  <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">Rodyti simbolines nuorodas</string>
+  <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">Nėra informacijos</string>
+  <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">Nėra pasiekiamos failų sistemos informacijos.</string>
+  <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">Failų sistema negali būti prijungiama / atjungiama.</string>
+  <!-- Filesystem Info - Not allowed message -->
   <string name="filesystem_info_mount_not_allowed_msg">Failų sistemos prijungimo veiksmas neleidžiamas saugiame režime. Bakstelėkite, kad pakeistumėte į „Root“ prieigos režimą.</string>
+  <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">Failų sistemos prijungimo veiksmas nepavyko. Kai kurios failų sistemos, pavyzdžiui, SD kortelių, negali būti prijungiamos / atjungiamos, nes jos yra įtaisytos ir naudojamos tik failų sistemos skaitymui.</string>
+  <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">Failų sistemos informacija</string>
+  <!-- Filesystem Info Dialog - Tab - Info -->
   <string name="filesystem_info_dialog_tab_info">Informacija</string>
+  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">Disko naudojimas</string>
+  <!-- Filesystem Info Dialog - Status Label -->
   <string name="filesystem_info_dialog_status">Prijungta:</string>
+  <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">Prijungimo vieta:</string>
+  <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">Įrenginys:</string>
+  <!-- Filesystem Info Dialog - Type Label -->
   <string name="filesystem_info_dialog_type">Tipas:</string>
+  <!-- Filesystem Info Dialog - Options Label -->
   <string name="filesystem_info_dialog_options">Parinktys:</string>
+  <!-- Filesystem Info Dialog - Dump/Pass Label -->
   <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
+  <!-- Filesystem Info Dialog - Virtual Label -->
   <string name="filesystem_info_dialog_virtual">Virtuali:</string>
+  <!-- Filesystem Info Dialog - Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">Viso:</string>
+  <!-- Filesystem Info Dialog - Used Disk Usage -->
   <string name="filesystem_info_dialog_used_disk_usage">Naudojama:</string>
+  <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Laisva:</string>
+  <!-- Fso Properties - Not allowed message -->
   <string name="fso_properties_permissions_not_allowed_msg">Veiksmų leidimai negalimi saugiame režime. Bakstelėkite, kad pakeistumėte į „Root“ prieigos režimą.</string>
+  <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">Savininko eksploatavimo pakeitimas nepavyko.\n\nDėl saugumo priežasčių, kai kurios failų sistemos, pavyzdžiui, SD kortelių, neleidžia nuosavybės keitimuisi.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">Grupės eksploatavimo pakeitimas nepavyko.\n\nDėl saugumo priežasčių, kai kurios failų sistemos, pavyzdžiui, SD kortelių, neleidžia grupių keitimuisi.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_permission_msg">Leidimų eksploatavimo pakeitimas nepavyko.\n\nDėl saugumo priežasčių, kai kurios failų sistemos, pavyzdžiui, SD kortelių, neleidžia leidimų keitimuisi.</string>
+  <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">Savybės</string>
+  <!-- Fso Properties Dialog - Tab - Info -->
   <string name="fso_properties_dialog_tab_info">Informacija</string>
+  <!-- Fso Properties Dialog - Tab - Permissions -->
   <string name="fso_properties_dialog_tab_permissions">Leidimai</string>
+  <!-- Fso Properties Dialog - Name Label -->
   <string name="fso_properties_dialog_name">Pavadinimas:</string>
+  <!-- Fso Properties Dialog - Parent Folder Label -->
   <string name="fso_properties_dialog_parent">Pagrindinis aplankas:</string>
+  <!-- Fso Properties Dialog - Type Label -->
   <string name="fso_properties_dialog_type">Tipas:</string>
+  <!-- Fso Properties Dialog - Category Label -->
   <string name="fso_properties_dialog_category">Kategorija:</string>
+  <!-- Fso Properties Dialog - Link Label -->
   <string name="fso_properties_dialog_link">Nuoroda:</string>
+  <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">Dydis:</string>
+  <!-- Fso Properties Dialog - Contains Label -->
   <string name="fso_properties_dialog_contains">Etiketė:</string>
+  <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <string name="fso_properties_dialog_last_accessed_date">Atverta:</string>
+  <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">Modifikuota:</string>
+  <!-- Fso Properties Dialog - Last Changed Time -->
   <string name="fso_properties_dialog_last_changed_date">Pakeista:</string>
+  <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">Savininkas:</string>
+  <!-- Fso Properties Dialog - Group Label -->
   <string name="fso_properties_dialog_group">Grupė:</string>
+  <!-- Fso Properties Dialog - Others Label -->
   <string name="fso_properties_dialog_others">Kiti:</string>
+  <!-- Fso Properties Dialog - Special Label -->
+  <!-- Fso Properties Dialog - Read Label -->
+  <!-- Fso Properties Dialog - Write Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Skip media scan -->
   <string name="fso_properties_dialog_include_in_media_scan">Praleisti medijos nuskaitymą:</string>
   <string name="fso_failed_to_allow_media_scan">Nepavyko leisti nuskaityti mediją</string>
   <string name="fso_failed_to_prevent_media_scan">Nepavyko išvengti medijos nuskaitymo</string>
@@ -147,130 +271,254 @@
   <string name="fso_delete_nomedia_dir_body">Šiame kataloge yra .nomedia katalogas.\n\nAr norite jį ir visą jo turinį ištrinti?</string>
   <string name="fso_delete_nomedia_non_empty_title">Ištrinti .nomedia failą</string>
   <string name="fso_delete_nomedia_non_empty_body">Šiame kataloge yra ne tuščias .nomedia failas.\n\nAr norite jį ištrinti?</string>
+  <!-- History - History activity title -->
   <string name="history">Istorija</string>
+  <!-- History - The history is empty -->
   <string name="msgs_history_empty">Istorija tuščia.</string>
+  <!-- History - The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">Nežinomas istorijos elementas.</string>
+  <!-- Search - Search activity title -->
   <string name="search">Paieškos rezultatai</string>
+  <!-- Search - Search hint message -->
   <string name="search_hint">Įveskite savo paiešką</string>
+  <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">Sakykite savo paiešką</string>
+  <!-- Search - Search error message -->
   <string name="search_error_msg">Beieškant įvyko klaida. Rezultatų nerasta.</string>
+  <!-- Search - Search no results message -->
   <string name="search_no_results_msg">Rezultatų nerasta.</string>
+  <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> tarp <xliff:g id="path">%2$s</xliff:g></string>
+  <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>Terminai:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Search - Confirm search -->
   <string name="search_few_characters_title">Patvirtinkite paiešką</string>
+  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">Kai kurie paieškos terminai turi nedidelius skaičius. Ši operacija gali pareikalauti daug laiko ir sistemos išteklių.\n\nAr norite tęsti?</string>
+  <!-- Search - Searching dialog title -->
   <string name="searching">Prašome palaukti\u2026</string>
+  <!-- Search - Searching label -->
   <string name="searching_action_label">Ieškoma</string>
+  <!-- Picker Activity -->
+  <!-- Picker Activity - Dialog title -->
   <string name="picker_title">Pasirinkite failą</string>
   <string name="directory_picker_title">Pasirinkite katalogą</string>
+  <!-- Editor - Editor activity title -->
   <string name="editor">Redaktorius</string>
+  <!-- Editor - Invalid file message -->
   <string name="editor_invalid_file_msg">Netinkamas failas.</string>
+  <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">Failas nerastas.</string>
+  <!-- Editor - File size exceed the limit -->
   <string name="editor_file_exceed_size_msg">Failas yra per didelis, kad būtų atidarytas šiame įrenginyje.</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">Patvirtinkite išėjimą</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <string name="editor_dirty_ask_msg">Yra neišsaugotų pakeitimų.\n\nIšeiti neišsaugant?</string>
+  <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">Failas sėkmingai išsaugotas.</string>
+  <!-- Editor - Read-only file mode -->
   <string name="editor_read_only_mode">Failas atidarytas tik skaitymo režimu.</string>
+  <!-- Editor - Dumping message -->
   <string name="dumping_message">Generuojamas dvejetainis failas\u2026</string>
+  <!-- Editor - Displaying -->
   <string name="displaying_message">Rodoma\u2026</string>
+  <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">Žymės</string>
+  <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">Pagrindinis</string>
+  <!-- Bookmarks - Bookmark name - Root folder -->
   <string name="bookmarks_root_folder">„Root“ aplankas</string>
+  <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">Sistemos aplankas</string>
+  <!-- Bookmarks - Bookmark name - Secure storage -->
   <string name="bookmarks_secure">Saugi saugykla</string>
+  <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">Nuotolinė saugykla</string>
+  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">Nustatykite pradinį aplanką.</string>
+  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">Pašalinti žymę.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">Žymė sėkmingai pridėta.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">Žymė jau egzistuoja.</string>
+  <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Pagrindinis aplankas</string>
+  <!-- Initial directory label -->
   <string name="initial_directory_label">Pasirinkite pradinį aplanką:</string>
+  <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Susiję keliai neleidžiami.</string>
+  <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">Įvyko klaida išsaugant pradinį aplanką.</string>
+  <!-- Menu - Navigation - Search -->
   <string name="menu_search">Paieška</string>
+  <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">Nustatymai</string>
+  <!-- Menu - History - Clear history -->
   <string name="menu_clear_history">Ištrinti istoriją</string>
+  <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">Jokių pasiūlymų</string>
+  <!-- Menu - Editor - Word wrap -->
   <string name="menu_word_wrap">Žodžių laužymas</string>
+  <!-- Menu - Editor - Sintax highlight -->
   <string name="menu_syntax_highlight">Sintaksės išryškinimas</string>
+  <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - kopija<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Regular expression for new compressed file -->
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - naujas<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">Atliekamas veiksmas\u2026</string>
+  <!-- Waiting dialog - Copying title -->
   <string name="waiting_dialog_copying_title">Kopijuojama\u2026</string>
+  <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>Iš</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Į</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">Perkeliama\u2026</string>
+  <!-- Waiting dialog - Moving message -->
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>Iš</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Į</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Deleting title -->
   <string name="waiting_dialog_deleting_title">Ištrinama\u2026</string>
+  <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Failas</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_extracting_title">Išpakuojama\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Failas</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_compressing_title">Suglaudinama\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Failas</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Analizuojama\u2026</b>]]></string>
+  <!-- Extracting - Success message -->
   <string name="msgs_extracting_success">Išpakavimo veiksmas baigtas sėkmingai. Duomenys išpakuoti į <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Compressing - Success message -->
   <string name="msgs_compressing_success">Suglaudinimo veiksmas baigtas sėkmingai. Duomenys suglaudinti į <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">Veiksmai</string>
+  <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">Savybės</string>
+  <!-- Actions Dialog - Menu - Refresh -->
   <string name="actions_menu_refresh">Atnaujinti</string>
+  <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">Naujas aplankas</string>
+  <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">Naujas failas</string>
+  <!-- Actions Dialog - Menu - Select all -->
   <string name="actions_menu_select_all">Pasirinkti viską</string>
+  <!-- Actions Dialog - Menu - Deselect all -->
   <string name="actions_menu_deselect_all">Atžymėti viską</string>
+  <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">Pasirinkti</string>
+  <!-- Actions Dialog - Menu - Deselect -->
   <string name="actions_menu_deselect">Atžymėti</string>
+  <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <string name="actions_menu_paste_selection">Kopijuoti čia</string>
+  <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">Perkelti čia</string>
+  <!-- Actions Dialog - Menu - Delete selection -->
   <string name="actions_menu_delete_selection">Ištrinti</string>
+  <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">Suglaudinti</string>
+  <!-- Actions Dialog - Menu - Create link -->
   <string name="actions_menu_create_link">Sukurti nuorodą</string>
+  <!-- Actions Dialog - Menu - Open -->
   <string name="actions_menu_open">Atidaryti</string>
+  <!-- Actions Dialog - Menu - Open with -->
   <string name="actions_menu_open_with">Atidaryti naudojant</string>
+  <!-- Actions Dialog - Menu - Execute -->
   <string name="actions_menu_execute">Vykdyti</string>
+  <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">Siųsti</string>
+  <!-- Actions Dialog - Menu - Send selection -->
   <string name="actions_menu_send_selection">Siųsti</string>
+  <!-- Actions Dialog - Menu - Compress -->
   <string name="actions_menu_compress">Suglaudinti</string>
+  <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">Išpakuoti</string>
+  <!-- Actions Dialog - Menu - Delete -->
   <string name="actions_menu_delete">Ištrinti</string>
+  <!-- Actions Dialog - Menu - Rename -->
   <string name="actions_menu_rename">Pervardyti</string>
+  <!-- Actions Dialog - Menu - Create copy -->
   <string name="actions_menu_create_copy">Sukurti kopiją</string>
+  <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">Savybės</string>
+  <!-- Actions Dialog - Menu - Add to bookmarks -->
   <string name="actions_menu_add_to_bookmarks">Pridėti į užrašus</string>
+  <!-- Actions Dialog - Menu - Add shortcut -->
   <string name="actions_menu_add_shortcut">Pridėti spartujį klavišą</string>
+  <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">Atidaryti aplanką su failu</string>
+  <!-- Actions Dialog - Menu - Compute checksum -->
   <string name="actions_menu_compute_checksum">Apskaičiuoti kontrolinę sumą</string>
+  <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">Spausdinti</string>
+  <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">Nustatyti kaip pagrindinį</string>
+  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">Šis veiksmas negali būti atšauktas. Ar norite tęsti?</string>
+  <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">Pavadinimas:</string>
+  <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">Pavadinimas negali būti tuščias.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_path_name">Neteisingas pavadinimas. Simboliai „<xliff:g id="invalid_characters">%1$s</xliff:g>“ neleidžiami.</string>
+  <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">Pasiektas maksimalus simbolių limitas.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_name">Neteisingas pavadinimas. Pavadinimai su „.“ ir „..“ neleidžiami.</string>
+  <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">Pavadinimas jau egzistuoja.</string>
+  <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">Asociacijos</string>
+  <!-- Associations Dialog - Remember the user action -->
   <string name="associations_dialog_remember">Prisiminti pasirinkimą</string>
+  <!-- Associations Dialog - Open with Title -->
   <string name="associations_dialog_openwith_title">Atidaryti naudojant</string>
+  <!-- Associations Dialog - Open action (button title) -->
   <string name="associations_dialog_openwith_action">Atidaryti</string>
+  <!-- Associations Dialog - Send with Title -->
   <string name="associations_dialog_sendwith_title">Siųsti naudojant</string>
+  <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">Siųsti</string>
+  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">Neužpildyta.</string>
+  <!-- Execution console - Title -->
   <string name="execution_console_title">Konsolė</string>
+  <!-- Execution console - The script name label -->
   <string name="execution_console_script_name_label">Scenarijus:</string>
+  <!-- Execution console - The script execution time label -->
   <string name="execution_console_script_execution_time_label">Laikas:</string>
+  <!-- Execution console - The script exit code label -->
   <string name="execution_console_script_exitcode_label">Išėjimo kodas:</string>
+  <!-- Execution console - The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> sek.</string>
+  <!-- Compute checksum - Title -->
   <string name="compute_checksum_title">Apskaičiuoti kontrolinę sumą</string>
+  <!-- Compute checksum - The file name label -->
   <string name="compute_checksum_filename_label">Failas:</string>
+  <!-- Compute checksum - The MD5 label -->
+  <!-- Compute checksum - The SHA1 label -->
+  <!-- Compute checksum - The computing checksum message-->
   <string name="compute_checksum_computing_checksum_msg">Apskaičiuojama kontrolinė suma\u2026</string>
+  <!-- Mime/Types - Folder -->
   <string name="mime_folder">Aplankas</string>
+  <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">Simbolinė nuoroda</string>
+  <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">Nežinoma</string>
+  <!--  Filetime formats -->
   <string name="filetime_format_mode_system">Sistemos nuostata</string>
   <string name="filetime_format_mode_locale">Regiono nuostata</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/mmmm vv:mm:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/mmmm vv:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">mmmm-mm-dd vv:mm:ss</string>
+  <!-- Selection -->
+  <!-- For example "2 folders and 1 file selected." -->
   <string name="selection_folders_and_files">Pasirinkta: <xliff:g id="folders">%1$s</xliff:g> ir <xliff:g id="files">%2$s</xliff:g></string>
+  <!-- Category descriptions -->
   <string name="category_system">SISTEMA</string>
   <string name="category_app">PROGRAMA</string>
   <string name="category_binary">DVEJETAINIS</string>
@@ -287,86 +535,170 @@
   <string name="category_video">VAIZDAS</string>
   <string name="category_security">SAUGA</string>
   <string name="category_all">VISKAS</string>
+  <!-- Compression - Compression modes dialog title -->
   <string name="compression_mode_title">Suglaudinimo režimas</string>
+  <!-- Compression - Supported archive and compression modes -->
+  <!-- Shortcut. Failed to handle the shortcut -->
   <string name="shortcut_failed_msg">Nepavyko apdoroti sparčiojo klavišo.</string>
+  <!-- Shortcut. The shortcut was created -->
   <string name="shortcut_creation_success_msg">Spartusis klavišas sukurtas sėkmingai.</string>
+  <!-- Shortcut. The shortcut wasn't created -->
   <string name="shortcut_creation_failed_msg">Sparčiojo klavišo sukurti nepavyko.</string>
+  <!-- Preferences title -->
   <string name="pref">Nustatymai</string>
+  <!-- Preferences - General title -->
   <string name="pref_general">Bendrieji nustatymai</string>
+  <!-- Preferences - Search title -->
   <string name="pref_search">Paieškos parinktys</string>
+  <!-- Preferences - Storage title -->
   <string name="pref_storage">Saugyklos parinktys</string>
+  <!-- Preferences - Editor title -->
   <string name="pref_editor">Redaktoriaus parinktys</string>
+  <!-- Preferences - Themes title -->
   <string name="pref_themes">Temos</string>
+  <!-- Preferences - About title -->
   <string name="pref_about">Apie</string>
+  <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">Bendra</string>
+  <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">Didžiosios ir mažosios raidės</string>
+  <!-- Preferences - General - Case sensitive sort and navigating summary -->
   <string name="pref_case_sensitive_sort_summary">Naršymo ir paieškos rezultatų jautrus rūšiavimas</string>
+  <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">Datos / laiko formatas</string>
+  <!-- Preferences - General -Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">Disko naudojimo įspėjimas</string>
+  <!-- Preferences - General - Disk usage warning level summary -->
+  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
+         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
   <string name="pref_disk_usage_warning_level_summary" formatted="false">Kita spalva disko naudojimo raštai rodomi, kai <xliff:g id="level">%1$s</xliff:g> procentai (-ų) laisvos vietos lieka diske</string>
+  <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Apskaičiuoti aplanko statistiką</string>
+  <!-- Preferences - General - Compute folder statistics summary on -->
   <string name="pref_compute_folder_statistics_on">Įspėjimas! aplanko statistikos skaičiavimas užima daug laiko ir sistemos išteklių</string>
+  <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">Peržiūra</string>
+  <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">Rodyti programų vaizdų, muzikos failų, nuotraukų ir vaizdo įrašų peržiūrą</string>
+  <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Naudoti braukiamuosius gestus</string>
+  <!-- Preferences - General - Use flinger detection summary -->
   <string name="pref_use_flinger_summary">Naudoti braukimą iš kairės į dešinę, kad ištrinti failus ar aplankus</string>
+  <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Papildoma</string>
+  <!-- Preferences - General - Access mode -->
   <string name="pref_access_mode">Prieigos režimas</string>
+  <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">Saugus režimas</string>
+  <!-- Preferences - General - Safe mode summary -->
   <string name="pref_access_mode_safe_summary">Saugus režimas\n\nPrograma veikia be privilegijų. Vienintelės prieinamos failų sistemos yra (SD kortelės ir USB) saugyklos talpos</string>
+  <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">Vartotojo įspėjimo režimas</string>
+  <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">Vartotojo įspėjimo režimas\n\nPrograma veikia su pilna prieiga prie failų sistemos, bet paprašys leidimo prieš vykdant bet kokius išskirtinius veiksmus</string>
+  <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">„Root“ prieigos režimas</string>
+  <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">„Root“ prieigos režimas\n\nĮspėjimas! Šis režimas leidžia veiksmus kurie galį pakenkti jūsų įrenginiui. jūsų atsakomybė yra užtikrinti, kad veiksmas yra saugus</string>
+  <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">Apriboti vartotojų prieigą</string>
+  <!-- Preferences - General - Restrict secondary users access summary -->
   <string name="pref_restrict_secondary_users_access_summary">Apriboti prieigą  prie visos sistemos antriniams vartotojams</string>
+  <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">Rezultatai</string>
+  <!-- Preferences - Search - Show relevance widget -->
   <string name="pref_show_relevance_widget">Rodyti valdiklį</string>
+  <!-- Preferences - Search - Highlight search terms -->
   <string name="pref_highlight_terms">Išryškinti paieškos terminus</string>
+  <!-- Preferences - Search - Sort results mode -->
   <string name="pref_sort_search_results_mode">Rezultatų rūšiavimo režimas</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">Nerūšiuoti</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_name">Pagal pavadinimą</string>
+  <!-- Preferences - Search - Sort results mode. Relevance -->
   <string name="pref_sort_search_results_mode_relevance">Pagal svarbumą</string>
+  <!-- Preferences - Search - Privacity category -->
   <string name="pref_search_privacity_category">Privatumas</string>
+  <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">Išsaugoti paieškos terminus</string>
+  <!-- Preferences - Search - Save search terms summary on -->
   <string name="pref_save_search_terms_on">Paieškos terminai bus išsaugoti ir naudojami kaip pasiūlymai būsimoms paieškoms</string>
+  <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">Paieškos terminai nebus išsaugoti</string>
+  <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">Pašalinti paieškos terminus</string>
+  <!-- Preferences - Search - Remove saved search terms summary -->
   <string name="pref_remove_saved_search_terms_summary">Bakstelėkite, kad pašalintumėte visus išsaugotus paieškos terminus</string>
+  <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">Visi išsaugoti paieškos terminai buvo pašalinti</string>
+  <!-- Preferences - Storage - Secure Storage category -->
   <string name="pref_secure_storage_category">Saugi saugykla</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">Uždelstas sinchronizavimas</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <string name="pref_secure_storage_delayed_sync_summary">Saugių sistemų failų sinchronizavimas yra reikalaujanti daug laiko operacija. Įgalinkite šią parinktį, kad leistumėte greitesnį atsaką po kiekvienos operacijos, atliekant sinchronizavimą, kai sistemos failai yra nenaudojami, tačiau rizikuojate prarasti nesinchronizuotą trūkstamą informaciją po netikėto programos sustojimo.</string>
+  <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">Pakeisti slaptažodį</string>
+  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">Ištrinti saugyklą</string>
+  <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">Elgsena</string>
+  <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">Jokių pasiūlymų</string>
+  <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">Nerodyti žodyno pasiūlymų redaguojant failą</string>
+  <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">Žodžio apsuptis</string>
+  <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">Dvejetainiai failai</string>
+  <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">Rodyti dvejetainių failų turinį šešioliktainiu formatu</string>
+  <!-- Preferences - Editor - Syntax highlight category -->
   <string name="pref_editor_syntax_highlight_category">Sintaksės išryškinimas</string>
+  <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">Sintaksės išryškinimas</string>
+  <!-- Preferences - Editor - Syntax highlight summary -->
   <string name="pref_syntax_highlight_desc">Išryškinti redaktoriuje rodomojo failo sintaksę (tik tada, kai sintaksės išryškinimo procesorius yra pasiekiamas failo tipui)</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">Spalvų schema</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
   <string name="pref_syntax_highlight_color_scheme_desc">Pasirinkti sintaksės išryškinimo spalvų schemą</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">Naudoti numatytąją temą</string>
+  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <string name="pref_syntax_sh_use_theme_default_desc">Naudokite numatytąjį sintaksės išryškinimą dabartinėje temoje</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">Elementai</string>
+  <!-- Preferences - Themes - Themes selection category -->
   <string name="pref_themes_selection_category">Temos</string>
+  <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">Nustatyti temą</string>
+  <!-- Preferences - Themes - Confirmation message -->
   <string name="pref_themes_confirmation">Tema sėkmingai pritaikyta.</string>
+  <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">Tema nerasta.</string>
+  <!-- Preferences - Debug - Capture debug traces -->
   <string name="pref_debug_traces">Registruoti derinimo informaciją</string>
+  <!-- Themes - Default theme name -->
   <string name="theme_default_name">Šviesi tema</string>
+  <!-- Themes - Default theme description -->
   <string name="theme_default_description">Šviesi tema „CyanogenMod“ failų tvarkyklei</string>
+  <!-- Themes - Default theme author -->
   <string name="themes_author">CyanogenMod</string>
+  <!-- Navigation drawer -->
   <string name="drawer_open">Atidaryti naršymo stalčių</string>
   <string name="drawer_close">Uždaryti naršymo stalčių</string>
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">Skaidrumas</string>
+  <!-- The label of the current color panel -->
   <string name="color_picker_current_text">Dabartinė:</string>
+  <!-- The label of the new color panel -->
   <string name="color_picker_new_text">Nauja:</string>
+  <!-- The label of the color input -->
   <string name="color_picker_color">Spalva:</string>
+  <!-- Android Syntax Highlight -->
   <string name="ash_reset_color_scheme">Atkurti numatytąją temos spalvos schemą</string>
   <string name="ash_text">Tekstas</string>
   <string name="ash_assignment">Paskyrimas</string>
@@ -375,33 +707,63 @@
   <string name="ash_keyword">Raktinis žodis</string>
   <string name="ash_quoted_string">Cituojama eilutė</string>
   <string name="ash_variable">Kintamasis</string>
+  <!-- Secure Storage -->
+  <!-- Secure Storage dialog title - Unlock -->
   <string name="secure_storage_unlock_title">Atrakinti saugią saugyklą</string>
+  <!-- Secure Storage dialog title - Create -->
   <string name="secure_storage_create_title">Sukurti saugią saugyklą</string>
+  <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">Nustatyti iš naujo slaptažodį</string>
+  <!-- Secure Storage dialog title - Delete -->
   <string name="secure_storage_delete_title">Ištrinti saugią saugyklą</string>
+  <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">Įveskite slaptažodį, kad atrakintumėte saugią failų sistemą.</string>
+  <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">Įveskite slaptažodį, kad apsaugotumėte failų sistemą.</string>
+  <!-- Secure Storage unlock dialog message (reset the current password) -->
   <string name="secure_storage_unlock_key_reset_msg">Įrašykite esamą ir naują slaptažodžius, kad nustatytumėte iš naujo saugią failų sistemą.</string>
+  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">Įrašykite esamą slaptažodį, kad ištrintumėte saugią failų sistemą.</string>
+  <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">Senas slaptažodis:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_new_key_title">Naujas slaptažodis:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">Slaptažodis:</string>
+  <!-- Secure Storage unlock dialog repeat key title-->
   <string name="secure_storage_unlock_repeat_title">Pakartokite slaptažodį:</string>
+  <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">Sukurti</string>
+  <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Atrakinti</string>
+  <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">Atstatyti</string>
+  <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Ištrinti</string>
+  <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">Nepavyko atrakinti saugyklos</string>
+  <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">Slaptažodyje turi būti mažiausiai <xliff:g id="characters">%1$d</xliff:g> simboliai.</string>
+  <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">Slaptažodžiai nesutampa.</string>
+  <!-- Secure storage open file warning -->
   <string name="secure_storage_open_file_warning">Bus nukopijuotas failas iš laikinos neužšifruotos vietos. Bus pašalintas po 1 valandos.</string>
+  <!-- Print messages -->
+  <!-- Unsupported document format -->
   <string name="print_unsupported_document">Nepalaikomas dokumento formatas</string>
+  <!-- Unsupported image format -->
   <string name="print_unsupported_image">Nepalaikomas vaizdo formatas</string>
+  <!-- Print header -->
   <string name="print_document_header">Dokumentas: <xliff:g id="document_name">%1$s</xliff:g></string>
+  <!-- Print footer -->
   <string name="print_document_footer">Puslapis <xliff:g id="page_number">%1$s</xliff:g></string>
+  <!-- Security - Extract relative or absolute files -->
   <string name="security_warning_extract">Įspėjimas!\n\nIšpakuojant archyvo failą su susijusiu arba absoliučiu keliu gali pakenkti jūsų įrenginiui perrašant sistemos failus.\n\nAr norite tęsti?</string>
+  <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">Pakeitimų sąrašas</string>
+  <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Sveiki</string>
+  <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Sveiki atvykę į „CyanogenMod“ failų tvarkyklę.\n\nŠi programa leidžia ieškoti sistemos failų ir daryti veiksmus kurie gali pažeisti jūsų įrenginį. Kad išvengtumėte galymos žalos, programa startuos saugiame, mažo privilegijuotumo režime.\n\nNaudodamiesi nustatymais jūs galite prisijungti prie pažangaus, pilnai priveligijuoto režimo. Jūsų atsakomybė yra užtikrinti, kad savo veiksmais nepažeisite sistemos.\n\n„CyanogenMod“ komanda</string>
   <string name="activity_not_found_exception">Nepavyko rasti programos, kad atidaryti šį failą</string>
   <string name="snackbar_settings">Nustatymai</string>

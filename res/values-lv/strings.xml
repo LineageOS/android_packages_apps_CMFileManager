@@ -16,125 +16,249 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- The name of the app -->
   <string name="app_name">Failu pārvaldnieks</string>
+  <!-- The description of the app -->
   <string name="app_description">CyanogenMod failu pārvaldnieks</string>
+  <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">kB</string>
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">GB</string>
+  <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
+  <!-- Devices types -->
   <string name="device_blockdevice">Bloku iekārta</string>
   <string name="device_characterdevice">Rakstzīmju iekārta</string>
   <string name="device_namedpipe">Nosaukts programmkanāls</string>
   <string name="device_domainsocket">Domēna ligzda</string>
+  <!-- Mount Point States -->
   <string name="mount_point_readonly">Lasāms</string>
   <string name="mount_point_readwrite">Rakstāms</string>
+  <!-- Default buttons -->
   <string name="yes">Jā</string>
   <string name="no">Nē</string>
   <string name="all">Viss</string>
   <string name="overwrite">Pārrakstīt</string>
   <string name="select">Izvēlēties</string>
+  <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
+  <!-- The search result name -->
   <string name="search_result_name">Meklēt: <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Loading waiting message -->
   <string name="loading_message">Ielādē\u2026</string>
+  <!-- Computing message -->
+  <!-- Computing new line message -->
+  <!-- Cancelled message -->
   <string name="cancelled_message">Atcelts.</string>
+  <!-- Error message -->
   <string name="error_message">Kļūda.</string>
+  <!-- Copy text content description -->
   <string name="copy_text_cd">Piesitiet, lai kopētu tekstu starpliktuvē</string>
+  <!-- Copy text content message -->
   <string name="copy_text_msg">Teksts iekopēts starpliktuvē</string>
+  <!-- Warning dialog title -->
   <string name="warning_title">Brīdinājums</string>
+  <!-- Error dialog title -->
+  <!-- Confirm operation dialog title -->
   <string name="confirm_operation">Apstipriniet darbību</string>
+  <!-- Confirm overwrite dialog title -->
   <string name="confirm_overwrite">Apstipriniet pārrakstīšanu</string>
+  <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">Apstipriniet dzēšanu</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Apstipriniet pārslēgšanu</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
   <string name="msgs_change_to_prompt_access_mode_msg">Neizdevās palaist Root pieejas režīmā. Mainu uz Drošo režīmu.\n\nApstiprināt šīs izmaiņas?</string>
+  <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">Neizdevās iegūt šai darbībai nepieciešamās tiesības.</string>
+  <!-- The message shown when an allocation of a privileged console fails, and a non
+         privileged is allocated -->
   <string name="msgs_privileged_console_alloc_failed">Neizdevās palaist Root pieejas režīmā. Mainu uz Drošo režīmu.</string>
+  <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Iestatījumu neizdevās pielietot vai saglabāt.</string>
+  <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">Sākotnējā mape \'<xliff:g id="initial_dir"> %1$s</xliff:g>\' ir nepareiza. Mainu uz saknes mapi.</string>
+  <!-- Root is not available message -->
+  <!-- Success -->
   <string name="msgs_success">Darbība tika veiksmīgi pabeigta.</string>
+  <!-- Unknown error -->
   <string name="msgs_unknown">Tika atrasta kļūda. Darbība bija neveiksmīga.</string>
+  <!-- When an operation requires elevated privileged (normally caused for the use of a
+         non-privileged console) -->
   <string name="msgs_insufficient_permissions">Šai darbībai ir nepieciešamas paaugstinātas tiesības. Mēģiniet nomainīt uz Root pieejas režīmu.</string>
+  <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">Darbība neizdevās, jo nepietiek vietas.</string>
+  <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">Neizdevās atrast failu vai mapi.</string>
+  <!-- The command reference couldn't be created (not found or invalid definition)
+         (normally caused by a development error) -->
   <string name="msgs_command_not_found">Darbības komandas netika atrastas vai arī ir nepareizi norādītas.</string>
+  <!-- I/O exception -->
   <string name="msgs_io_failed">Lasīšanas/rakstīšanas kļūda.</string>
+  <!-- Operation timeout detected -->
   <string name="msgs_operation_timeout">Darbībai iestājās noildze.</string>
+  <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">Darbība neizdevās.</string>
+  <!-- A console couldn't be allocated -->
   <string name="msgs_console_alloc_failure">Radās iekšēja kļūda.</string>
+  <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">Darbību nevar atcelt.</string>
+  <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">Failu sistēma ir tikai lasāma. Pirms mēģināt veikt šo darbību, mēģiniet uzmontēt failu sistēmu kā rakstāmu.</string>
+  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">Nepareizs arguments. Izsaukums neizdevās.</string>
+  <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">Darbība nav atļauta, jo tā varētu radīt nesaskaņas.</string>
+  <!-- Operation not permitted in the current directory -->
+  <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">Lai izietu, nospiediet vēlreiz.</string>
+  <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">Nav reģistrēta lietotne, kura varētu apstrādāt izvēlēto faila veidu.</string>
+  <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">Daži faili mērķa mapē jau pastāv.\n\nPārrakstīt?</string>
+  <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">Sasaistīt darbību ar lietotni neizdevās.</string>
+  <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">Darbībai nepieciešamas paaugstinātas tiesības.\n\nVai vēlaties pāriet Root pieejas režīmu?</string>
+  <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Vecākā mape</string>
+  <!-- External storage descripton -->
   <string name="external_storage">Ārēja krātuve</string>
+  <!-- Usb storage descripton -->
   <string name="usb_storage">USB krātuve</string>
+  <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">Failsistēmas informācija</string>
+  <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">Kārtošanas veids</string>
+  <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">Izklājuma vieds</string>
+  <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">Citas skata opcijas</string>
+  <!-- ActionBar Buttons - Done -->
   <string name="actionbar_button_selection_done_cd">Gatavs</string>
+  <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">Darbības</string>
+  <!-- ActionBar Buttons - Search -->
   <string name="actionbar_button_search_cd">Meklēt</string>
+  <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">Papildu opcijas</string>
+  <!-- ActionBar Buttons - Storage volumes -->
   <string name="actionbar_button_storage_cd">Krātuvju sējumi</string>
+  <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">Saglabāt</string>
+  <!-- ActionBar Buttons - Print -->
   <string name="actionbar_button_print_cd">Drukāt</string>
+  <!-- Navigation View - Sort - Sort by name (ascending) -->
   <string name="sort_by_name_asc">Pēc nosaukuma \u25B2</string>
+  <!-- Navigation View - Sort - Sort by name (descending) -->
   <string name="sort_by_name_desc">Pēc nosaukuma \u25BC</string>
+  <!-- Navigation View - Sort - Sort by date (ascending) -->
   <string name="sort_by_date_asc">Pēc datuma \u25B2</string>
+  <!-- Navigation View - Sort - Sort by date (descending) -->
   <string name="sort_by_date_desc">Pēc datuma \u25BC</string>
+  <!-- Navigation View - Sort - Sort by size (ascending) -->
   <string name="sort_by_size_asc">Pēc lieluma \u25B2</string>
+  <!-- Navigation View - Sort - Sort by size (descending) -->
   <string name="sort_by_size_desc">Pēc lieluma \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (ascending) -->
   <string name="sort_by_type_asc">Pēc veida \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (descending) -->
   <string name="sort_by_type_desc">Pēc veida \u25B2</string>
+  <!-- Navigation View - Layout - Icons -->
   <string name="layout_icons">Ikonas</string>
+  <!-- Navigation View - Layout - Simple -->
   <string name="layout_simple">Vienkāršs</string>
+  <!-- Navigation View - Layout - Details -->
   <string name="layout_details">Detalizēts</string>
+  <!-- Navigation View - View - Show folders first -->
   <string name="cm_filemanager_show_dirs_first">Vispirms rādīt mapes</string>
+  <!-- Navigation View - View - Show hidden files option -->
   <string name="cm_filemanager_show_hidden">Rādīt slēptos failus</string>
+  <!-- Navigation View - View - Show system files option -->
   <string name="cm_filemanager_show_system">Rādīt sistēmas failus</string>
+  <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">Rādīt simboliskās saites</string>
+  <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">Nav informācijas</string>
+  <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">Par failu sistēmu nav pieejama nekāda informācija.</string>
+  <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">Failu sistēmu nevar uzmontēt/nomontēt.</string>
+  <!-- Filesystem Info - Not allowed message -->
+  <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">Failu sistēmas montēšana neizdevās. Dažas failu sistēmas, piemēram, SD kartes, nevar montēt/nomontēt, jo tās ir izveidotas kā tikai lasāmas failu sistēmas.</string>
+  <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">Informācija par failu sistēmu</string>
+  <!-- Filesystem Info Dialog - Tab - Info -->
   <string name="filesystem_info_dialog_tab_info">Informācija</string>
+  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">Diska lietojums</string>
+  <!-- Filesystem Info Dialog - Status Label -->
+  <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">Montēšanas punkts:</string>
+  <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">Iekārta:</string>
+  <!-- Filesystem Info Dialog - Type Label -->
   <string name="filesystem_info_dialog_type">Veids:</string>
+  <!-- Filesystem Info Dialog - Options Label -->
   <string name="filesystem_info_dialog_options">Opcijas:</string>
+  <!-- Filesystem Info Dialog - Dump/Pass Label -->
   <string name="filesystem_info_dialog_dump_pass">Izmest/Izlaist:</string>
+  <!-- Filesystem Info Dialog - Virtual Label -->
   <string name="filesystem_info_dialog_virtual">Virtuāls:</string>
+  <!-- Filesystem Info Dialog - Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">Kopā:</string>
+  <!-- Filesystem Info Dialog - Used Disk Usage -->
   <string name="filesystem_info_dialog_used_disk_usage">Izmantots:</string>
+  <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Brīvs:</string>
+  <!-- Fso Properties - Not allowed message -->
   <string name="fso_properties_permissions_not_allowed_msg">Pieejas tiesību darbības drošajā režīmā nav atļautas. Piesitiet, lai pārietu uz Root pieejas režīmu.</string>
+  <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">Īpašnieku mainīšana neizdevās.\n\nDrošības apsvērumu dēļ dažās failu sistēmās, piemēram, SD kartēs, īpašnieka maiņa nav atļauta.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">Grupas mainīšana neizdevās.\n\nDrošības apsvērumu dēļ dažās failu sistēmās, piemēram, SD kartēs, grupu maiņa nav atļauta.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_permission_msg">Pieejas tiesību izmainīšana neizdevās.\n\nDrošības apsvērumu dēļ dažās failu sistēmās, piemēram, SD kartēs, pieejas tiesības neļauj mainīt.</string>
+  <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">Īpašības</string>
+  <!-- Fso Properties Dialog - Tab - Info -->
   <string name="fso_properties_dialog_tab_info">Informācija</string>
+  <!-- Fso Properties Dialog - Tab - Permissions -->
   <string name="fso_properties_dialog_tab_permissions">Atļaujas</string>
+  <!-- Fso Properties Dialog - Name Label -->
   <string name="fso_properties_dialog_name">Nosaukums:</string>
+  <!-- Fso Properties Dialog - Parent Folder Label -->
   <string name="fso_properties_dialog_parent">Vecāks:</string>
+  <!-- Fso Properties Dialog - Type Label -->
   <string name="fso_properties_dialog_type">Veids:</string>
+  <!-- Fso Properties Dialog - Category Label -->
   <string name="fso_properties_dialog_category">Kategorija:</string>
+  <!-- Fso Properties Dialog - Link Label -->
   <string name="fso_properties_dialog_link">Saite:</string>
+  <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">Izmērs:</string>
+  <!-- Fso Properties Dialog - Contains Label -->
   <string name="fso_properties_dialog_contains">Satur:</string>
+  <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <string name="fso_properties_dialog_last_accessed_date">Piekļūts:</string>
+  <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">Mainīts:</string>
+  <!-- Fso Properties Dialog - Last Changed Time -->
   <string name="fso_properties_dialog_last_changed_date">Mainīts:</string>
+  <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">Īpašnieks:</string>
+  <!-- Fso Properties Dialog - Group Label -->
   <string name="fso_properties_dialog_group">Grupa:</string>
+  <!-- Fso Properties Dialog - Others Label -->
   <string name="fso_properties_dialog_others">Citi:</string>
+  <!-- Fso Properties Dialog - Special Label -->
+  <!-- Fso Properties Dialog - Read Label -->
+  <!-- Fso Properties Dialog - Write Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Skip media scan -->
   <string name="fso_properties_dialog_include_in_media_scan">Izlaist nesēja skenēšanu:</string>
   <string name="fso_failed_to_allow_media_scan">Neizdevās atļaut nesēja skenēšanu</string>
   <string name="fso_failed_to_prevent_media_scan">Neizdevās novērst nesēja skenēšanu</string>
@@ -142,128 +266,252 @@
   <string name="fso_delete_nomedia_dir_body">Šī mape .nomedia mapi.\n\nVai vēlaties dzēst šo mapi un visu tās saturu?</string>
   <string name="fso_delete_nomedia_non_empty_title">Dzēst .nomedia failu</string>
   <string name="fso_delete_nomedia_non_empty_body">Šī mape satur netukšu .nomedia failu.\n\nVai vēlaties to dzēst?</string>
+  <!-- History - History activity title -->
   <string name="history">Vēsture</string>
+  <!-- History - The history is empty -->
   <string name="msgs_history_empty">Vēsture ir tukša.</string>
+  <!-- History - The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">Nezināms vēstures vienums.</string>
+  <!-- Search - Search activity title -->
   <string name="search">Meklēšanas rezultāti</string>
+  <!-- Search - Search hint message -->
   <string name="search_hint">Ievadiet meklējamo</string>
+  <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">Ierunājiet meklējamo</string>
+  <!-- Search - Search error message -->
   <string name="search_error_msg">Meklējot radās kļūda. Nav atrasts neviens rezultāts.</string>
+  <!-- Search - Search no results message -->
   <string name="search_no_results_msg">Rezultāti netika atrasti.</string>
+  <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> iekš <xliff:g id="path">%2$s</xliff:g></string>
+  <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>Noteikumi:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Search - Confirm search -->
   <string name="search_few_characters_title">Apstipriniet meklēšanu</string>
+  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">Dažiem meklēšanas nosacījumiem ir maz rakstzīmju. Darbība var ilga un resursietilpīga.\n\nVai tiešām vēlaties turpināt?</string>
+  <!-- Search - Searching dialog title -->
   <string name="searching">Lūdzu, gaidiet\u2026</string>
+  <!-- Search - Searching label -->
   <string name="searching_action_label">Meklē</string>
+  <!-- Picker Activity -->
+  <!-- Picker Activity - Dialog title -->
   <string name="picker_title">Izvēlieties failu</string>
   <string name="directory_picker_title">Izvēlēties mapi</string>
+  <!-- Editor - Editor activity title -->
   <string name="editor">Redaktors</string>
+  <!-- Editor - Invalid file message -->
   <string name="editor_invalid_file_msg">Nepareizs fails.</string>
+  <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">Fails nav atrasts.</string>
+  <!-- Editor - File size exceed the limit -->
   <string name="editor_file_exceed_size_msg">Fails ir pār lielu, lai to atvērtu šajā iekārtā.</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">Apstipriniet iziešanu</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <string name="editor_dirty_ask_msg">Ir nesaglabātas izmaiņas.\n\nIziet, nesaglabājot izmaiņas?</string>
+  <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">Fails ir veiksmīgi saglabāts.</string>
+  <!-- Editor - Read-only file mode -->
   <string name="editor_read_only_mode">Fails ir atvērts tikai lasīšanai.</string>
+  <!-- Editor - Dumping message -->
   <string name="dumping_message">Izveido hexadecimālo izmeti\u2026</string>
+  <!-- Editor - Displaying -->
   <string name="displaying_message">Rāda\u2026</string>
+  <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">Grāmatzīmes</string>
+  <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">Mājas</string>
+  <!-- Bookmarks - Bookmark name - Root folder -->
   <string name="bookmarks_root_folder">Saknes mape</string>
+  <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">Sistēmas mape</string>
+  <!-- Bookmarks - Bookmark name - Secure storage -->
   <string name="bookmarks_secure">Drošā krātuve</string>
+  <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">Attālinātā krātuve</string>
+  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">Iestatiet sākuma mapi.</string>
+  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">Dzēst grāmatzīmi.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">Grāmatzīme ir veiksmīgi pievienota.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
+  <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Sākotnējā mape</string>
+  <!-- Initial directory label -->
   <string name="initial_directory_label">Izvēlieties sākotnējo mapi:</string>
+  <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Relatīvi ceļi nav atļauti.</string>
+  <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">Saglabājot sākotnējo mapi, radās kļūda.</string>
+  <!-- Menu - Navigation - Search -->
   <string name="menu_search">Meklēt</string>
+  <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">Iestatījumi</string>
+  <!-- Menu - History - Clear history -->
   <string name="menu_clear_history">Notīrīt vēsturi</string>
+  <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">Nav ieteikumu</string>
+  <!-- Menu - Editor - Word wrap -->
   <string name="menu_word_wrap">Teksta aplaušana</string>
+  <!-- Menu - Editor - Sintax highlight -->
   <string name="menu_syntax_highlight">Sintakses izcelšana</string>
+  <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - kopēt<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Regular expression for new compressed file -->
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - jauns<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">Veic darbību\u2026</string>
+  <!-- Waiting dialog - Copying title -->
   <string name="waiting_dialog_copying_title">Kopē\u2026</string>
+  <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>No</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Uz</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">Pārvieto\u2026</string>
+  <!-- Waiting dialog - Moving message -->
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>No</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Uz</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Deleting title -->
   <string name="waiting_dialog_deleting_title">Dzēš\u2026</string>
+  <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Fails</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_extracting_title">Atspiež\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Fails</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_compressing_title">Saspiež\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Fails</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Analizē\u2026</b>]]></string>
+  <!-- Extracting - Success message -->
   <string name="msgs_extracting_success">Atspiešana darbība ir sekmīgi pabeigta. Dati ir atspiesti <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Compressing - Success message -->
   <string name="msgs_compressing_success">Saspiešana ir sekmīgi pabeigta. Dati tika saspiesti <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">Darbības</string>
+  <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">Īpašības</string>
+  <!-- Actions Dialog - Menu - Refresh -->
   <string name="actions_menu_refresh">Atjaunot</string>
+  <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">Jauna mape</string>
+  <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">Jauns fails</string>
+  <!-- Actions Dialog - Menu - Select all -->
   <string name="actions_menu_select_all">Izvēlēties visu</string>
+  <!-- Actions Dialog - Menu - Deselect all -->
   <string name="actions_menu_deselect_all">Neizvēlēties nevienu</string>
+  <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">Izvēlēties</string>
+  <!-- Actions Dialog - Menu - Deselect -->
   <string name="actions_menu_deselect">Neizvēlēties</string>
+  <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <string name="actions_menu_paste_selection">Kopēt izvēlēto šeit</string>
+  <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">Pārvietot izvēlēto šeit</string>
+  <!-- Actions Dialog - Menu - Delete selection -->
   <string name="actions_menu_delete_selection">Dzēst izvēlēto</string>
+  <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">Saspiest izvēlēto</string>
+  <!-- Actions Dialog - Menu - Create link -->
   <string name="actions_menu_create_link">Izveidot saiti</string>
+  <!-- Actions Dialog - Menu - Open -->
   <string name="actions_menu_open">Atvērt</string>
+  <!-- Actions Dialog - Menu - Open with -->
   <string name="actions_menu_open_with">Atvērt ar</string>
+  <!-- Actions Dialog - Menu - Execute -->
   <string name="actions_menu_execute">Izpildīt</string>
+  <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">Sūtīt</string>
+  <!-- Actions Dialog - Menu - Send selection -->
   <string name="actions_menu_send_selection">Sūtīt izvēlēto</string>
+  <!-- Actions Dialog - Menu - Compress -->
   <string name="actions_menu_compress">Saspiest</string>
+  <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">Atspiest</string>
+  <!-- Actions Dialog - Menu - Delete -->
   <string name="actions_menu_delete">Dzēst</string>
+  <!-- Actions Dialog - Menu - Rename -->
   <string name="actions_menu_rename">Pārsaukt</string>
+  <!-- Actions Dialog - Menu - Create copy -->
   <string name="actions_menu_create_copy">Izveidot kopiju</string>
+  <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">Īpašības</string>
+  <!-- Actions Dialog - Menu - Add to bookmarks -->
   <string name="actions_menu_add_to_bookmarks">Pievienot grāmatzīmēm</string>
+  <!-- Actions Dialog - Menu - Add shortcut -->
   <string name="actions_menu_add_shortcut">Pievienot saīsni</string>
+  <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">Atvērt vecāku</string>
+  <!-- Actions Dialog - Menu - Compute checksum -->
   <string name="actions_menu_compute_checksum">Aprēķināt kontrolsummu</string>
+  <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">Drukāt</string>
+  <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">Iestatīt kā mājas</string>
+  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">Šo darbību nevar atsaukt. Vai vēlaties turpināt?</string>
+  <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">Nosaukums:</string>
+  <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">Nosaukums nevar būt tukšs.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_path_name">Nederīgs nosaukums. \' <xliff:g id="invalid_characters">%1$s </xliff:g>\'rakstzīmes nav atļautas.</string>
+  <!-- Enter Name Dialog - Message - Invalid name length -->
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_name">Nepareizs nosaukums. Nosaukumi \'.\' un \'..\' nav atļauti.</string>
+  <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">Nosaukums jau pastāv.</string>
+  <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">Asociācijas</string>
+  <!-- Associations Dialog - Remember the user action -->
   <string name="associations_dialog_remember">Atcerēties izvēli</string>
+  <!-- Associations Dialog - Open with Title -->
   <string name="associations_dialog_openwith_title">Atvērt ar</string>
+  <!-- Associations Dialog - Open action (button title) -->
   <string name="associations_dialog_openwith_action">Atvērt</string>
+  <!-- Associations Dialog - Send with Title -->
   <string name="associations_dialog_sendwith_title">Sūtīt ar</string>
+  <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">Sūtīt</string>
+  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">Nav ko pabeigt.</string>
+  <!-- Execution console - Title -->
   <string name="execution_console_title">Konsole</string>
+  <!-- Execution console - The script name label -->
   <string name="execution_console_script_name_label">Skripts:</string>
+  <!-- Execution console - The script execution time label -->
   <string name="execution_console_script_execution_time_label">Laiks:</string>
+  <!-- Execution console - The script exit code label -->
   <string name="execution_console_script_exitcode_label">Izejas kods:</string>
+  <!-- Execution console - The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> sek.</string>
+  <!-- Compute checksum - Title -->
   <string name="compute_checksum_title">Aprēķināt kontrolsummu</string>
+  <!-- Compute checksum - The file name label -->
   <string name="compute_checksum_filename_label">Fails:</string>
+  <!-- Compute checksum - The MD5 label -->
+  <!-- Compute checksum - The SHA1 label -->
+  <!-- Compute checksum - The computing checksum message-->
   <string name="compute_checksum_computing_checksum_msg">Rēķina kontrolsummu\u2026</string>
+  <!-- Mime/Types - Folder -->
   <string name="mime_folder">Mape</string>
+  <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">Simboliskā saite</string>
+  <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">Nezināms</string>
+  <!--  Filetime formats -->
   <string name="filetime_format_mode_system">Sistēmā noteikts</string>
   <string name="filetime_format_mode_locale">Lokālē noteikts</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd.mm.yyyy hh:mm:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">mm.dd.yyyy hh:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
+  <!-- Selection -->
+  <!-- For example "2 folders and 1 file selected." -->
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> un <xliff:g id="files">%2$s</xliff:g> atlasīti.</string>
+  <!-- Category descriptions -->
   <string name="category_system">SISTĒMA</string>
   <string name="category_app">LIET</string>
   <string name="category_binary">BINĀRĀ</string>
@@ -280,83 +528,167 @@
   <string name="category_video">VIDEO</string>
   <string name="category_security">DROŠĪBA</string>
   <string name="category_all">VISI</string>
+  <!-- Compression - Compression modes dialog title -->
   <string name="compression_mode_title">Saspiešanas veids</string>
+  <!-- Compression - Supported archive and compression modes -->
+  <!-- Shortcut. Failed to handle the shortcut -->
   <string name="shortcut_failed_msg">Neizdevās apstrādāt šo saīsni.</string>
+  <!-- Shortcut. The shortcut was created -->
   <string name="shortcut_creation_success_msg">Saīsne veiksmīgi izveidota.</string>
+  <!-- Shortcut. The shortcut wasn't created -->
   <string name="shortcut_creation_failed_msg">Saīsnes izveide neizdevās.</string>
+  <!-- Preferences title -->
   <string name="pref">Iestatījumi</string>
+  <!-- Preferences - General title -->
   <string name="pref_general">Vispārīgie iestatījumi</string>
+  <!-- Preferences - Search title -->
   <string name="pref_search">Meklēšanas opcijas</string>
+  <!-- Preferences - Storage title -->
   <string name="pref_storage">Krātuves iespējas</string>
+  <!-- Preferences - Editor title -->
   <string name="pref_editor">Redaktora opcijas</string>
+  <!-- Preferences - Themes title -->
   <string name="pref_themes">Tēmas</string>
+  <!-- Preferences - About title -->
   <string name="pref_about">Par</string>
+  <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">Vispārīgi</string>
+  <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">Reģistrjutīgs</string>
+  <!-- Preferences - General - Case sensitive sort and navigating summary -->
   <string name="pref_case_sensitive_sort_summary">Navigējot un kārtojot meklēšanas rezultātus ņem vērā reģistru</string>
+  <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">Datuma/laika formāts</string>
+  <!-- Preferences - General -Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">Diska lietojuma brīdinājums</string>
+  <!-- Preferences - General - Disk usage warning level summary -->
+  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
+         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
   <string name="pref_disk_usage_warning_level_summary" formatted="false">Sasniedzot <xliff:g id="level">%1$s</xliff:g> % brīvas vietas diskā, parādīt to citā krāsā</string>
+  <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Aprēķināt mapes statistiku</string>
+  <!-- Preferences - General - Compute folder statistics summary on -->
   <string name="pref_compute_folder_statistics_on">Brīdinājums! Mapes statistikas aprēķināšana ir ilga un resursietilpīga</string>
+  <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">Priekšskatīt</string>
+  <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">Rādīt priekšskatījuma attēlu lietotnēm, mūzikas failiem, attēliem un videoklipiem</string>
+  <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Lietot pavilkšanas žestus</string>
+  <!-- Preferences - General - Use flinger detection summary -->
   <string name="pref_use_flinger_summary">Lietot pavilkšanas žestu no kreisās puses uz labo, lai izdzēstu failus vai mapes</string>
+  <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Padziļināti</string>
+  <!-- Preferences - General - Access mode -->
   <string name="pref_access_mode">Piekļuves režīms</string>
+  <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">Drošais režīms</string>
+  <!-- Preferences - General - Safe mode summary -->
   <string name="pref_access_mode_safe_summary">Drošais režīms\n\nLietotne darbojas bez īpašām tiesībām un vienīgās pieejamās failu sistēmas ir krātuvju (SD kartes un USB) sējumi</string>
+  <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">Lietotāja režīma uzvedne</string>
+  <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">Lietotāja režīma uzvedne\n\nLietotne darbojas ar pilnu piekļuvi failu sistēmai, bet, pirms jebkādām priviliģētām darbībām, tiks pieprasīta atļauja</string>
+  <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">Root pieejas režīms</string>
+  <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">Root pieejas režīms\n\nBrīdinājums! Šis režīms ļauj veikt darbības, kas varētu salauzt jūsu iekārtu. Jūs atbildat par to, lai nodrošinātos, ka veicamās darbības ir drošas</string>
+  <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">Ierobežot lietotāju piekļuvi</string>
+  <!-- Preferences - General - Restrict secondary users access summary -->
   <string name="pref_restrict_secondary_users_access_summary">Ierobežot piekļuvi sistēmai sekundāriem lietotājiem</string>
+  <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">Rezultāti</string>
+  <!-- Preferences - Search - Show relevance widget -->
   <string name="pref_show_relevance_widget">Rādīt atbilstības logrīku</string>
+  <!-- Preferences - Search - Highlight search terms -->
   <string name="pref_highlight_terms">Izelt meklējamo vārdu</string>
+  <!-- Preferences - Search - Sort results mode -->
   <string name="pref_sort_search_results_mode">Rezultātu kārtošanas režīms</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">Nekārtot</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_name">Pēc nosaukuma</string>
+  <!-- Preferences - Search - Sort results mode. Relevance -->
   <string name="pref_sort_search_results_mode_relevance">Pēc atbilstības</string>
+  <!-- Preferences - Search - Privacity category -->
   <string name="pref_search_privacity_category">Konfidencialitāte</string>
+  <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">Saglabāt meklēšanas nosacījumus</string>
+  <!-- Preferences - Search - Save search terms summary on -->
   <string name="pref_save_search_terms_on">Meklējamie vārdi tiks saglabāti un tiks izmantoti kā ieteikumi tālākajiem meklējumiem</string>
+  <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">Meklēšanas nosacījumi netiks saglabāti</string>
+  <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">Dzēst saglabātos meklēšanas nosacījumus</string>
+  <!-- Preferences - Search - Remove saved search terms summary -->
   <string name="pref_remove_saved_search_terms_summary">Piesitiet, lai dzēstu visas saglabātos meklēšanas nosacījumus</string>
+  <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">Visi saglabātie meklēšanas nosacījumi ir izdzēsti</string>
+  <!-- Preferences - Storage - Secure Storage category -->
   <string name="pref_secure_storage_category">Drošā krātuve</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">Aizkavēta sinhronizācija</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <string name="pref_secure_storage_delayed_sync_summary">Droša failu sistēmas sinhronizācija ir \"dārga\" darbība. Ieslēdzot šo opciju, katras darbības pabeigšana notiek ātrāk, jo darbības ar failu sistēmu veic laikā, kad sistēmu izmanto mazāk. Tomēr jārēķinās, ka šādi var pazaudēt datus, ja lietotne salūzt laikā, kad visas failu darbības nav pabeigtas.</string>
+  <!-- Preferences - Storage - Secure Storage - Change password title -->
+  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">Dzēst krātuvi</string>
+  <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">Uzvedība</string>
+  <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">Nav ieteikumu</string>
+  <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">Mainot failu nerādīt vārdnīcas ieteikumus</string>
+  <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">Teksta aplaušana</string>
+  <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">Bināros failus kā heksadecimālo izmeti</string>
+  <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">Atverot bināru failu, izveidot heksadecimālo izmeti failu un rādīt to hex skatītājā</string>
+  <!-- Preferences - Editor - Syntax highlight category -->
+  <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">Sintakses izcelšana</string>
+  <!-- Preferences - Editor - Syntax highlight summary -->
+  <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">Krāsu shēma</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
   <string name="pref_syntax_highlight_color_scheme_desc">Izvēlieties sintakses izcēlumu krāsu shēmu</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">Izmantot noklusēto tēmu</string>
+  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <string name="pref_syntax_sh_use_theme_default_desc">Izmantot izvēlētās tēmas noklusēto sintakses izcēlumu</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">Vienumi</string>
+  <!-- Preferences - Themes - Themes selection category -->
   <string name="pref_themes_selection_category">Tēmas</string>
+  <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">Iestatīt tēmu</string>
+  <!-- Preferences - Themes - Confirmation message -->
   <string name="pref_themes_confirmation">Tēma ir pielietota veiksmīgi.</string>
+  <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">Tēma nav atrasta.</string>
+  <!-- Preferences - Debug - Capture debug traces -->
   <string name="pref_debug_traces">Žurnalēt atkļūdošanas informāciju</string>
+  <!-- Themes - Default theme name -->
   <string name="theme_default_name">Gaiša tēma</string>
+  <!-- Themes - Default theme description -->
   <string name="theme_default_description">CyanogenMod failu pārvaldnieka gaišā tēma.</string>
+  <!-- Themes - Default theme author -->
   <string name="themes_author">CyanogenMod</string>
+  <!-- Navigation drawer -->
   <string name="drawer_open">Atvērt navigācijas atvilktni</string>
   <string name="drawer_close">Aizvērt navigācijas atvilktni</string>
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">Alfa</string>
+  <!-- The label of the current color panel -->
   <string name="color_picker_current_text">Pašreizējā:</string>
+  <!-- The label of the new color panel -->
   <string name="color_picker_new_text">Jauns:</string>
+  <!-- The label of the color input -->
   <string name="color_picker_color">Krāsa:</string>
+  <!-- Android Syntax Highlight -->
   <string name="ash_reset_color_scheme">Atjaunot noklusētās tēmas krāsu shēmu</string>
   <string name="ash_text">Teksts</string>
   <string name="ash_assignment">Uzdevums</string>
@@ -365,29 +697,59 @@
   <string name="ash_keyword">Atslēgvārds</string>
   <string name="ash_quoted_string">Pēdiņās iekļauta virkne</string>
   <string name="ash_variable">Mainīgais</string>
+  <!-- Secure Storage -->
+  <!-- Secure Storage dialog title - Unlock -->
+  <!-- Secure Storage dialog title - Create -->
+  <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">Pārstatīt paroli</string>
+  <!-- Secure Storage dialog title - Delete -->
+  <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">Ievadiet paroli, lai atbloķētu drošās krātuves failu sistēmu.</string>
+  <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">Ievadiet paroli, lai aizsargātu drošās krātuves failu sistēmu.</string>
+  <!-- Secure Storage unlock dialog message (reset the current password) -->
   <string name="secure_storage_unlock_key_reset_msg">Ierakstiet tekošo un jauno paroli lai pārstatītu drošās krātuves failu sistēmu.</string>
+  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">Ievadiet pašreizējo paroli, lai dzēstu drošās krātuves failu sistēmu.</string>
+  <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">Vecā parole:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_new_key_title">Jaunā parole:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">Parole:</string>
+  <!-- Secure Storage unlock dialog repeat key title-->
   <string name="secure_storage_unlock_repeat_title">Atkārtojiet paroli:</string>
+  <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">Izveidot</string>
+  <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Atbloķēt</string>
+  <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">Pārstatīt</string>
+  <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Dzēst</string>
+  <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">Krātuvi nevar atbloķēt</string>
+  <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">Parolē jābūt vismaz <xliff:g id="characters">%1$d</xliff:g> rakstzīmēm.</string>
+  <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">Paroles nesakrīt.</string>
+  <!-- Secure storage open file warning -->
+  <!-- Print messages -->
+  <!-- Unsupported document format -->
   <string name="print_unsupported_document">Neatbalstīts dokumenta formāts</string>
+  <!-- Unsupported image format -->
   <string name="print_unsupported_image">Neatbalstīts attēla formāts</string>
+  <!-- Print header -->
   <string name="print_document_header">Dokuments: <xliff:g id="document_name">%1$s</xliff:g></string>
+  <!-- Print footer -->
   <string name="print_document_footer">Lapa <xliff:g id="page_number">%1$s</xliff:g></string>
+  <!-- Security - Extract relative or absolute files -->
   <string name="security_warning_extract">Brīdinājums!\n\nAtarhivējot arhīva failu ar relatīvo vai absolūto ceļu var pārrakstīt sistēmas failus un sabojāt iekārtu.\n\nVai tiešām vēlaties turpināt?</string>
+  <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">Izmaiņu žurnāls</string>
+  <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Sveicināti</string>
+  <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Sveicināti CyanogenMod failu pārvaldniekā.\n\nŠī lietotne ļauj jums pārlūkot failu sistēmu un veikt darbības, kas varētu salauzt jūsu iekārtu. Lai izvairītos no bojājumiem, palaidiet lietotni drošā režīmā ar mazām tiesībām.\n\nJūsu varat piekļūt papildu priviliģētam režīmam, izmantojot iestatījumus. Tajā jūs atbildat par jūsu sistēmas darbības nodrošināšanu.\n\nCyanogenMod komanda</string>
   <string name="snackbar_settings">Iestatījumi</string>
 </resources>

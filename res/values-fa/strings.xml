@@ -16,130 +16,254 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- The name of the app -->
   <string name="app_name">مدیر فایل</string>
+  <!-- The description of the app -->
   <string name="app_description">مدیر فایل سایانوژن‌مود</string>
+  <!-- Human readable sizes -->
   <string name="size_bytes">بایت</string>
   <string name="size_kilobytes">کیلوبایت</string>
   <string name="size_megabytes">مگابایت</string>
   <string name="size_gigabytes">گیگابایت</string>
+  <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
+  <!-- Devices types -->
   <string name="device_blockdevice">مسدود کردن دستگاه</string>
   <string name="device_characterdevice">دستگاه کاراکتر</string>
   <string name="device_namedpipe">Named pipe</string>
   <string name="device_domainsocket">سوکت دامنه</string>
+  <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
+  <!-- Default buttons -->
   <string name="yes">بله</string>
   <string name="no">خیر</string>
   <string name="all">همه</string>
   <string name="overwrite">رونویسی</string>
   <string name="select">انتخاب</string>
+  <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<پوشه روت>]]></string>
+  <!-- The search result name -->
   <string name="search_result_name">جستجو: <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Loading waiting message -->
   <string name="loading_message">در حال بارگذاری\u2026</string>
+  <!-- Computing message -->
+  <!-- Computing new line message -->
+  <!-- Cancelled message -->
   <string name="cancelled_message">لغو شد.</string>
+  <!-- Error message -->
   <string name="error_message">خطا.</string>
+  <!-- Copy text content description -->
   <string name="copy_text_cd">برای کپی کردن متن در کلیپ برد لمس کنید</string>
+  <!-- Copy text content message -->
   <string name="copy_text_msg">متن در کلیپ بورد کپی شد</string>
+  <!-- Warning dialog title -->
   <string name="warning_title">هشدار</string>
+  <!-- Error dialog title -->
   <string name="error_title">خطا</string>
+  <!-- Confirm operation dialog title -->
   <string name="confirm_operation">تأیید عملیات</string>
+  <!-- Confirm overwrite dialog title -->
   <string name="confirm_overwrite">تأیید رونویسی</string>
+  <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">تأیید حذف</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">تأیید جابجایی</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
   <string name="msgs_change_to_prompt_access_mode_msg">اجرا در حالت دسترسی به روت ممکن نیست. در حال تغییر به حالت ایمن.\n\nاین تغییر اعمال شود؟</string>
+  <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">امکان بدست آوردن دسترسی‌های لازم برای عملکرد وجود ندارد.</string>
+  <!-- The message shown when an allocation of a privileged console fails, and a non
+         privileged is allocated -->
   <string name="msgs_privileged_console_alloc_failed">اجرا در حالت دسترسی به روت ممکن نیست. در حال تغییر به حالت ایمن.</string>
+  <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">امکان اعمال یا ذخیره این تنظیمات وجود ندارد.</string>
+  <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">پوشه اولیه «<xliff:g id="initial_dir">%1$s</xliff:g>» نامعتبر است. در حال رفتن به پوشه روت.</string>
+  <!-- Root is not available message -->
   <string name="root_not_available_msg">این دستگاه روت نشده است. امکان اجرای این عملیات وجود ندارد.</string>
+  <!-- Success -->
   <string name="msgs_success">عملیات با موفقیت انجام شد.</string>
+  <!-- Unknown error -->
   <string name="msgs_unknown">خطایی شناسایی شد. عملیات ناموفق بود.</string>
+  <!-- When an operation requires elevated privileged (normally caused for the use of a
+         non-privileged console) -->
   <string name="msgs_insufficient_permissions">این عملیات به مجوزهای بالاتری نیاز دارد. سعی کنید به حالت دسترسی به روت بروید.</string>
+  <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">این عملیات ناموفق بود زیرا فضای کافی در دستگاه وجود ندارد.</string>
+  <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">فایل یا پوشه پیدا نشد.</string>
+  <!-- The command reference couldn't be created (not found or invalid definition)
+         (normally caused by a development error) -->
   <string name="msgs_command_not_found">دستور عملکرد پیدا نشد یا تعریف معتبری ندارد.</string>
+  <!-- I/O exception -->
   <string name="msgs_io_failed">ناتوانی خواندن/نوشتن.</string>
+  <!-- Operation timeout detected -->
   <string name="msgs_operation_timeout">مهلت عملیات تمام شد.</string>
+  <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">عملیات ناموفق بود.</string>
+  <!-- A console couldn't be allocated -->
   <string name="msgs_console_alloc_failure">یک خطای داخلی رخ داد.</string>
+  <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">عملیات قابل لغو شدن نیست.</string>
+  <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">سیستم فایل فقط خواندنی است. سعی کنید قبل از اقدام به این کار، سیستم فایل را به صورت خواندنی-نوشتنی کنید.</string>
+  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">مقدار غیرمجاز. تلاش ناموفق بود.</string>
+  <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">این عملیات مجاز نیست زیرا باعث بی‌ثباتی می‌شود.</string>
+  <!-- Operation not permitted in the current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">پوشه مقصد نمی‌تواند زیرپوشه مبدأ یا همانند مبدأ باشد.</string>
+  <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">برای خروج دوباره فشار دهید.</string>
+  <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">هیچ برنامه‌ای برای اجرای این نوع فایل مورد نظر ثبت نشده است.</string>
+  <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">برخی از فایل‌ها در حال حاضر در پوشه مقصد وجود دارند.\n\nرونویسی شوند؟</string>
+  <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">مرتبط کردن عملیات به این برنامه ناموفق بود.</string>
+  <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">این عملیات به مجوزهای بالاتری نیاز دارد.\n\nآیا می‌خواهید به حالت دسترسی به روت بروید؟</string>
+  <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">پوشه مادر</string>
+  <!-- External storage descripton -->
   <string name="external_storage">حافظه خارجی</string>
+  <!-- Usb storage descripton -->
   <string name="usb_storage">حافظه USB</string>
+  <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">اطلاعات سیستم فایل</string>
+  <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">حالت مرتب‌سازی</string>
+  <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">حالت چینش</string>
+  <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">سایر گزینه‌های نما</string>
+  <!-- ActionBar Buttons - Done -->
   <string name="actionbar_button_selection_done_cd">انجام شد</string>
+  <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">عملیات‌ها</string>
+  <!-- ActionBar Buttons - Search -->
   <string name="actionbar_button_search_cd">جستجو</string>
+  <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">گزینه‌های بیشتر</string>
+  <!-- ActionBar Buttons - Storage volumes -->
   <string name="actionbar_button_storage_cd">محل‌های ذخیره‌سازی</string>
+  <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">ذخیره</string>
+  <!-- ActionBar Buttons - Print -->
   <string name="actionbar_button_print_cd">چاپ</string>
+  <!-- Navigation View - Sort - Sort by name (ascending) -->
   <string name="sort_by_name_asc">بر اساس نام \u25B2</string>
+  <!-- Navigation View - Sort - Sort by name (descending) -->
   <string name="sort_by_name_desc">بر اساس نام \u25BC</string>
+  <!-- Navigation View - Sort - Sort by date (ascending) -->
   <string name="sort_by_date_asc">بر اساس تاریخ \u25B2</string>
+  <!-- Navigation View - Sort - Sort by date (descending) -->
   <string name="sort_by_date_desc">بر اساس تاریخ \u25BC</string>
+  <!-- Navigation View - Sort - Sort by size (ascending) -->
   <string name="sort_by_size_asc">بر اساس حجم \u25B2</string>
+  <!-- Navigation View - Sort - Sort by size (descending) -->
   <string name="sort_by_size_desc">بر اساس حجم \u25BC</string>
+  <!-- Navigation View - Sort - Sort by type (ascending) -->
   <string name="sort_by_type_asc">بر اساس نوع \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (descending) -->
   <string name="sort_by_type_desc">بر اساس نوع \u25BC</string>
+  <!-- Navigation View - Layout - Icons -->
   <string name="layout_icons">آیکون‌ها</string>
+  <!-- Navigation View - Layout - Simple -->
   <string name="layout_simple">ساده</string>
+  <!-- Navigation View - Layout - Details -->
   <string name="layout_details">جزئيات</string>
+  <!-- Navigation View - View - Show folders first -->
   <string name="cm_filemanager_show_dirs_first">نمایش پوشه‌ها در ابتدا</string>
+  <!-- Navigation View - View - Show hidden files option -->
   <string name="cm_filemanager_show_hidden">نمایش فایل‌های مخفی</string>
+  <!-- Navigation View - View - Show system files option -->
   <string name="cm_filemanager_show_system">نمایش فایل‌های سیستمی</string>
+  <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">نمایش میانبرها</string>
+  <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">اطلاعاتی وجود ندارد</string>
+  <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">هیچ اطلاعاتی درباره سیستم فایل در دسترس نیست.</string>
+  <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">امکان قطع/وصل دسترسی سیستم فایل وجود ندارد.</string>
+  <!-- Filesystem Info - Not allowed message -->
   <string name="filesystem_info_mount_not_allowed_msg">در حالت ایمن عملیات دادن دسترسی به سیستم فایل امکان پذیر نیست. برای رفتن به حالت دسترسی روت ضربه بزنید.</string>
+  <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">عملیات دادن دسترسی به سیستم فایل ناموفق بود. نمی‌توان دسترسی برخی از سیستم‌های فایل، مثل کارت‌های حافظه را قطع/وصل کرد زیرا از درون به صورت سیستم‌های فایل فقط خواندنی ساخته شده‌اند.</string>
+  <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">اطلاعات سیستم فایل</string>
+  <!-- Filesystem Info Dialog - Tab - Info -->
   <string name="filesystem_info_dialog_tab_info">اطلاعات</string>
+  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">استفاده از حافظه</string>
+  <!-- Filesystem Info Dialog - Status Label -->
   <string name="filesystem_info_dialog_status">دارای دسترسی:</string>
+  <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">نقطه دسترسی:</string>
+  <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">دستگاه:</string>
+  <!-- Filesystem Info Dialog - Type Label -->
   <string name="filesystem_info_dialog_type">نوع:</string>
+  <!-- Filesystem Info Dialog - Options Label -->
   <string name="filesystem_info_dialog_options">گزینه‌ها:</string>
+  <!-- Filesystem Info Dialog - Dump/Pass Label -->
   <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
+  <!-- Filesystem Info Dialog - Virtual Label -->
   <string name="filesystem_info_dialog_virtual">مجازی:</string>
+  <!-- Filesystem Info Dialog - Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">مجموع:</string>
+  <!-- Filesystem Info Dialog - Used Disk Usage -->
   <string name="filesystem_info_dialog_used_disk_usage">استفاده شده:</string>
+  <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">آزاد:</string>
+  <!-- Fso Properties - Not allowed message -->
   <string name="fso_properties_permissions_not_allowed_msg">عملیات مجوزها در حالت ایمن مجاز نمی‌باشد. برای رفتن به حالت دسترسی به روت لمس کنید.</string>
+  <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">عملیات تغییر مالکیت ناموفق بود.\n\nبه دلایل امنیتی، برخی سیستم‌های فایل، مثل کارت‌های حافظه، اجازه تغییر مالکیت را نمی‌دهند.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">عملیات تغییر گروه ناموفق بود.\n\nبه دلایل امنیتی، برخی سیستم‌های فایل، مثل کارت‌های حافظه، اجازه تغییر گروه‌ها را نمی‌دهند.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_permission_msg">عملیات تغییر مجوزها ناموفق بود.\n\nبه دلایل امنیتی، برخی سیستم‌های فایل، مثل کارت‌های حافظه، اجازه تغییر مجوزها را نمی‌دهند.</string>
+  <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">مشخصات</string>
+  <!-- Fso Properties Dialog - Tab - Info -->
   <string name="fso_properties_dialog_tab_info">اطلاعات</string>
+  <!-- Fso Properties Dialog - Tab - Permissions -->
   <string name="fso_properties_dialog_tab_permissions">مجوزها</string>
+  <!-- Fso Properties Dialog - Name Label -->
   <string name="fso_properties_dialog_name">نام:</string>
+  <!-- Fso Properties Dialog - Parent Folder Label -->
   <string name="fso_properties_dialog_parent">والد:</string>
+  <!-- Fso Properties Dialog - Type Label -->
   <string name="fso_properties_dialog_type">نوع:</string>
+  <!-- Fso Properties Dialog - Category Label -->
   <string name="fso_properties_dialog_category">دسته‌بندی:</string>
+  <!-- Fso Properties Dialog - Link Label -->
   <string name="fso_properties_dialog_link">لینک:</string>
+  <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">اندازه‌:</string>
+  <!-- Fso Properties Dialog - Contains Label -->
   <string name="fso_properties_dialog_contains">شامل:</string>
+  <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <string name="fso_properties_dialog_last_accessed_date">دسترسی در:</string>
+  <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">تغییر یافته در:</string>
+  <!-- Fso Properties Dialog - Last Changed Time -->
   <string name="fso_properties_dialog_last_changed_date">عوض شده در:</string>
+  <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">مالک:</string>
+  <!-- Fso Properties Dialog - Group Label -->
   <string name="fso_properties_dialog_group">گروه:</string>
+  <!-- Fso Properties Dialog - Others Label -->
   <string name="fso_properties_dialog_others">سایر:</string>
+  <!-- Fso Properties Dialog - Special Label -->
+  <!-- Fso Properties Dialog - Read Label -->
+  <!-- Fso Properties Dialog - Write Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Skip media scan -->
   <string name="fso_properties_dialog_include_in_media_scan">لغو اسکن رسانه:</string>
   <string name="fso_failed_to_allow_media_scan">اجازه برای اسکن کردن رسانه به مشکل خورد</string>
   <string name="fso_failed_to_prevent_media_scan">جلوگیری از اسکن رسانه ناموفق بود</string>
@@ -147,130 +271,254 @@
   <string name="fso_delete_nomedia_dir_body">این فهرست شامل یک فهرست .nomedia است.\n\nآیا می‌خواهید آن را به همراه همه محتویاتش حذف کنید؟</string>
   <string name="fso_delete_nomedia_non_empty_title">حذف فایل .nomedia</string>
   <string name="fso_delete_nomedia_non_empty_body">این فهرست شامل یک فایل غیر خالی .nomedia است.\n\nآیا می‌خواهید آن را حذف کنید؟</string>
+  <!-- History - History activity title -->
   <string name="history">تاریخچه</string>
+  <!-- History - The history is empty -->
   <string name="msgs_history_empty">تاریخچه خالی است.</string>
+  <!-- History - The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">مورد ناشناخته در تاریخچه.</string>
+  <!-- Search - Search activity title -->
   <string name="search">نتایج جستجو</string>
+  <!-- Search - Search hint message -->
   <string name="search_hint">جستجوی خود را تایپ کنید</string>
+  <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">گفتگوی خود را بگویید</string>
+  <!-- Search - Search error message -->
   <string name="search_error_msg">خطایی در حین جستجو رخ داد. نتیجه‌ای پیدا نشد.</string>
+  <!-- Search - Search no results message -->
   <string name="search_no_results_msg">هیچ نتیجه‌ای پیدا نشد.</string>
+  <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> در <xliff:g id="path">%2$s</xliff:g></string>
+  <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>شرایط:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Search - Confirm search -->
   <string name="search_few_characters_title">تأیید جستجو</string>
+  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">بعضی از واژه‌های جستجو دارای نویسه‌های کوتاهی هستند. این عملیات می‌تواند زمان‌بر و سنگین باشد.\n\nادامه می‌دهید؟</string>
+  <!-- Search - Searching dialog title -->
   <string name="searching">لطفاً منتظر بمانید\u2026</string>
+  <!-- Search - Searching label -->
   <string name="searching_action_label">در حال جستجو</string>
+  <!-- Picker Activity -->
+  <!-- Picker Activity - Dialog title -->
   <string name="picker_title">انتخاب یک فایل</string>
   <string name="directory_picker_title">انتخاب یک فهرست</string>
+  <!-- Editor - Editor activity title -->
   <string name="editor">ویرایشگر</string>
+  <!-- Editor - Invalid file message -->
   <string name="editor_invalid_file_msg">فایل نامعتبر.</string>
+  <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">فایل پیدا نشد.</string>
+  <!-- Editor - File size exceed the limit -->
   <string name="editor_file_exceed_size_msg">این فایل برای بازشدن در این دستگاه بسیار بزرگ است.</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">تأیید خروج</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <string name="editor_dirty_ask_msg">چند تغییر ذخیره‌نشده وجود دارد.\n\nبدون ذخیره آنها خارج می‌شوید؟</string>
+  <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">فایل با موفقیت ذخیره شد.</string>
+  <!-- Editor - Read-only file mode -->
   <string name="editor_read_only_mode">این فایل در حالت فقط خواندنی باز است.</string>
+  <!-- Editor - Dumping message -->
   <string name="dumping_message">در حال تولید هگز دامپ\u2026</string>
+  <!-- Editor - Displaying -->
   <string name="displaying_message">در حال نمایش\u2026</string>
+  <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">نشانک‌ها</string>
+  <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">صفحه اصلی</string>
+  <!-- Bookmarks - Bookmark name - Root folder -->
   <string name="bookmarks_root_folder">پوشه روت</string>
+  <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">پوشه سیستم</string>
+  <!-- Bookmarks - Bookmark name - Secure storage -->
   <string name="bookmarks_secure">ذخیره‌سازی امن</string>
+  <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">محل ذخیره دور</string>
+  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">تعیین پوشه آغازین.</string>
+  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">حذف نشانک.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">نشانک با موفقیت اضافه شد.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">نشانک از قبل وجود دارد.</string>
+  <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">پوشه اولیه</string>
+  <!-- Initial directory label -->
   <string name="initial_directory_label">انتخاب پوشه اولیه:</string>
+  <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">مسیرهای نسبی مجاز نیست.</string>
+  <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">خطایی هنگام ذخیره پوشه ابتدایی رخ داد.</string>
+  <!-- Menu - Navigation - Search -->
   <string name="menu_search">جستجو</string>
+  <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">تنظیمات</string>
+  <!-- Menu - History - Clear history -->
   <string name="menu_clear_history">پاک‌کردن تاریخچه</string>
+  <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">بدون پیشنهاد</string>
+  <!-- Menu - Editor - Word wrap -->
   <string name="menu_word_wrap">خط‌چینی</string>
+  <!-- Menu - Editor - Sintax highlight -->
   <string name="menu_syntax_highlight">نمایش رنگی واژگان</string>
+  <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - کپی<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Regular expression for new compressed file -->
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - جدید<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">انجام عملیات\u2026</string>
+  <!-- Waiting dialog - Copying title -->
   <string name="waiting_dialog_copying_title">در حال کپی\u2026</string>
+  <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>از</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>به</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">در حال انتقال\u2026</string>
+  <!-- Waiting dialog - Moving message -->
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>از</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>به</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Deleting title -->
   <string name="waiting_dialog_deleting_title">در حال حذف\u2026</string>
+  <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>فایل</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_extracting_title">در حال استخراج\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>فایل</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_compressing_title">در حال فشرده‌سازی\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>فایل</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>در حال تحلیل\u2026</b>]]></string>
+  <!-- Extracting - Success message -->
   <string name="msgs_extracting_success">عملیات استخراج با موفقیت انجام شد. داده‌ها در <xliff:g id="destination">%1$s</xliff:g> استخراج شدند.</string>
+  <!-- Compressing - Success message -->
   <string name="msgs_compressing_success">عملیات فشرده‌سازی با موفقیت انجام شد. داده‌ها در <xliff:g id="destination">%1$s</xliff:g> فشرده شدند.</string>
+  <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">اقدامات</string>
+  <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">مشخصات</string>
+  <!-- Actions Dialog - Menu - Refresh -->
   <string name="actions_menu_refresh">تازه‌سازی</string>
+  <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">پوشه جدید</string>
+  <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">فایل جدید</string>
+  <!-- Actions Dialog - Menu - Select all -->
   <string name="actions_menu_select_all">انتخاب همه</string>
+  <!-- Actions Dialog - Menu - Deselect all -->
   <string name="actions_menu_deselect_all">لغو انتخاب همه</string>
+  <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">انتخاب</string>
+  <!-- Actions Dialog - Menu - Deselect -->
   <string name="actions_menu_deselect">لغو انتخاب</string>
+  <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <string name="actions_menu_paste_selection">کپی انتخاب‌شده‌ها در اینجا</string>
+  <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">انتقال انتخاب‌شده‌ها در اینجا</string>
+  <!-- Actions Dialog - Menu - Delete selection -->
   <string name="actions_menu_delete_selection">حذف انتخاب‌شده‌ها</string>
+  <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">فشرده‌سازی انتخاب‌شده‌ها</string>
+  <!-- Actions Dialog - Menu - Create link -->
   <string name="actions_menu_create_link">ایجاد لینک</string>
+  <!-- Actions Dialog - Menu - Open -->
   <string name="actions_menu_open">بازکردن</string>
+  <!-- Actions Dialog - Menu - Open with -->
   <string name="actions_menu_open_with">بازکردن با</string>
+  <!-- Actions Dialog - Menu - Execute -->
   <string name="actions_menu_execute">اجرا</string>
+  <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">ارسال</string>
+  <!-- Actions Dialog - Menu - Send selection -->
   <string name="actions_menu_send_selection">ارسال انتخاب‌شده‌ها</string>
+  <!-- Actions Dialog - Menu - Compress -->
   <string name="actions_menu_compress">فشرده‌سازی</string>
+  <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">استخراج</string>
+  <!-- Actions Dialog - Menu - Delete -->
   <string name="actions_menu_delete">حذف</string>
+  <!-- Actions Dialog - Menu - Rename -->
   <string name="actions_menu_rename">تغییر نام</string>
+  <!-- Actions Dialog - Menu - Create copy -->
   <string name="actions_menu_create_copy">ایجاد کپی</string>
+  <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">مشخصات</string>
+  <!-- Actions Dialog - Menu - Add to bookmarks -->
   <string name="actions_menu_add_to_bookmarks">افزودن به نشانک‌ها</string>
+  <!-- Actions Dialog - Menu - Add shortcut -->
   <string name="actions_menu_add_shortcut">افزودن میانبر</string>
+  <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">بازکردن پوشه بالاتر</string>
+  <!-- Actions Dialog - Menu - Compute checksum -->
   <string name="actions_menu_compute_checksum">محاسبه مجموع مقابله‌ای</string>
+  <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">چاپ</string>
+  <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">تنظیم به عنوان صفحه اصلی</string>
+  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">امکان بازگرداندن این عملیات وجود ندارد. ادامه دهید؟</string>
+  <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">نام:</string>
+  <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">نام نمی‌تواند خالی باشد.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_path_name">نام نامعتبر. استفاده نویسه‌های\'<xliff:g id="invalid_characters">%1$s</xliff:g>\' مجاز نیست.</string>
+  <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">به سقف مجاز نوشتن نویسه رسیده‌اید.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_name">نام نامعتبر است. نام‌های «.» و «..» مجاز نیستند.</string>
+  <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">این نام از قبل وجود دارد.</string>
+  <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">انجمن‌ها</string>
+  <!-- Associations Dialog - Remember the user action -->
   <string name="associations_dialog_remember">به خاطر سپردن انتخاب</string>
+  <!-- Associations Dialog - Open with Title -->
   <string name="associations_dialog_openwith_title">بازکردن با</string>
+  <!-- Associations Dialog - Open action (button title) -->
   <string name="associations_dialog_openwith_action">بازکردن</string>
+  <!-- Associations Dialog - Send with Title -->
   <string name="associations_dialog_sendwith_title">ارسال با</string>
+  <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">ارسال</string>
+  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">چیزی برای تکمیل وجود ندارد.</string>
+  <!-- Execution console - Title -->
   <string name="execution_console_title">کنسول</string>
+  <!-- Execution console - The script name label -->
   <string name="execution_console_script_name_label">نوشته:</string>
+  <!-- Execution console - The script execution time label -->
   <string name="execution_console_script_execution_time_label">زمان:</string>
+  <!-- Execution console - The script exit code label -->
   <string name="execution_console_script_exitcode_label">کد خروج:</string>
+  <!-- Execution console - The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> ثانیه.</string>
+  <!-- Compute checksum - Title -->
   <string name="compute_checksum_title">محاسبه مجموع مقابله‌ای</string>
+  <!-- Compute checksum - The file name label -->
   <string name="compute_checksum_filename_label">فایل:</string>
+  <!-- Compute checksum - The MD5 label -->
+  <!-- Compute checksum - The SHA1 label -->
+  <!-- Compute checksum - The computing checksum message-->
   <string name="compute_checksum_computing_checksum_msg">در حال محاسبه مجموع مقابله‌ای\u2026</string>
+  <!-- Mime/Types - Folder -->
   <string name="mime_folder">پوشه</string>
+  <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">Symlink</string>
+  <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">ناشناخته</string>
+  <!--  Filetime formats -->
   <string name="filetime_format_mode_system">تعیین‌شده توسط سیستم</string>
   <string name="filetime_format_mode_locale">تعیین‌شده توسط منطقه</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/yyyy hh:mm:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
+  <!-- Selection -->
+  <!-- For example "2 folders and 1 file selected." -->
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> و <xliff:g id="files">%2$s</xliff:g> انتخاب شدند.</string>
+  <!-- Category descriptions -->
   <string name="category_system">سیستم</string>
   <string name="category_app">برنامه</string>
   <string name="category_binary">دوگانی</string>
@@ -287,86 +535,170 @@
   <string name="category_video">ویدئویی</string>
   <string name="category_security">امنیت</string>
   <string name="category_all">همه</string>
+  <!-- Compression - Compression modes dialog title -->
   <string name="compression_mode_title">حالت فشرده‌سازی</string>
+  <!-- Compression - Supported archive and compression modes -->
+  <!-- Shortcut. Failed to handle the shortcut -->
   <string name="shortcut_failed_msg">رسیدگی به میانبر ناموفق بود.</string>
+  <!-- Shortcut. The shortcut was created -->
   <string name="shortcut_creation_success_msg">میانبر با موفقیت ایجاد شد.</string>
+  <!-- Shortcut. The shortcut wasn't created -->
   <string name="shortcut_creation_failed_msg">ایجاد میانبر ناموفق بود.</string>
+  <!-- Preferences title -->
   <string name="pref">تنظیمات</string>
+  <!-- Preferences - General title -->
   <string name="pref_general">تنظیمات عمومی</string>
+  <!-- Preferences - Search title -->
   <string name="pref_search">گزینه‌های جستجو</string>
+  <!-- Preferences - Storage title -->
   <string name="pref_storage">گزینه‌های ذخیره‌سازی</string>
+  <!-- Preferences - Editor title -->
   <string name="pref_editor">گزینه‌های ویرایشگر</string>
+  <!-- Preferences - Themes title -->
   <string name="pref_themes">تم‌ها</string>
+  <!-- Preferences - About title -->
   <string name="pref_about">درباره</string>
+  <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">عمومي</string>
+  <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">حساس به حالت</string>
+  <!-- Preferences - General - Case sensitive sort and navigating summary -->
   <string name="pref_case_sensitive_sort_summary">هنگام پیمایش یا مرتب‌سازی نتایج جستجو به حالت توجه کنید</string>
+  <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">فرمت تاریخ/زمان</string>
+  <!-- Preferences - General -Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">هشدار استفاده دیسک</string>
+  <!-- Preferences - General - Disk usage warning level summary -->
+  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
+         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
   <string name="pref_disk_usage_warning_level_summary" formatted="false">نمایش رنگ متفاوت در ویجت‌های استفاده از دیسک هنگامی که <xliff:g id="level">%1$s</xliff:g> درصد از فضای دیسک پر شده است</string>
+  <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">محاسبه آمار پوشه</string>
+  <!-- Preferences - General - Compute folder statistics summary on -->
   <string name="pref_compute_folder_statistics_on">هشدار! محاسبه آمار پوشه زمان‌بر و سنگین است</string>
+  <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">پیش‌نمایش</string>
+  <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">ارائه تصویر پیش‌نمایش برای برنامه‌ها، فایل‌های موسیقی، تصاویر و ویدئوها</string>
+  <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">استفاده از حرکات کشیدنی</string>
+  <!-- Preferences - General - Use flinger detection summary -->
   <string name="pref_use_flinger_summary">استفاده از تشخیص حرکت لغزاندن چپ به راست برای حذف فایل‌ها یا پوشه‌ها</string>
+  <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">پیشرفته</string>
+  <!-- Preferences - General - Access mode -->
   <string name="pref_access_mode">حالت دسترسی</string>
+  <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">حالت ایمن</string>
+  <!-- Preferences - General - Safe mode summary -->
   <string name="pref_access_mode_safe_summary">حالت ایمن\n\nاین برنامه بدون دسترسی در حال اجراست و تنها سیستم فایل‌های قابل دسترسی، دستگاه‌های ذخیره‌سازی (کارت‌های SD و USB) هستند</string>
+  <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">حالت همراه با راهنمای کاربر</string>
+  <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">حالت همراه با راهنمای کاربر\n\nاین برنامه با دسترسی کامل به سیستم فایل در حال اجراست اما قبل از اجرای عملیات‌های دسترسی از شما اجازه می‌گیرد</string>
+  <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">حالت دسترسی روت</string>
+  <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">حالت دسترسی روت\n\nهشدار! این حالت عملیات‌هایی با امکان تخریب تلفن همراه شما را مجاز می‌داند. مسئولیت شما حصول اطمینان از ایمن بودن این عملیات‌ها می‌باشد</string>
+  <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">دسترسی محدود کاربر</string>
+  <!-- Preferences - General - Restrict secondary users access summary -->
   <string name="pref_restrict_secondary_users_access_summary">دسترسی محدود به کل سیستم برای کاربران ثانویه</string>
+  <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">نتایج</string>
+  <!-- Preferences - Search - Show relevance widget -->
   <string name="pref_show_relevance_widget">نمایش ابزارک مرتبط</string>
+  <!-- Preferences - Search - Highlight search terms -->
   <string name="pref_highlight_terms">نمایش رنگی واژه‌های جستجو</string>
+  <!-- Preferences - Search - Sort results mode -->
   <string name="pref_sort_search_results_mode">حالت دسته‌بندی نتایج</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">بدون دسته‌بندی</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_name">بر اساس نام</string>
+  <!-- Preferences - Search - Sort results mode. Relevance -->
   <string name="pref_sort_search_results_mode_relevance">براساس ارتباط</string>
+  <!-- Preferences - Search - Privacity category -->
   <string name="pref_search_privacity_category">حریم خصوصی</string>
+  <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">ذخیره عبارات جستجو</string>
+  <!-- Preferences - Search - Save search terms summary on -->
   <string name="pref_save_search_terms_on">واژه‌های جستجو شده ذخیره و در جستجوهای آینده به عنوان پیشنهاد استفاده می‌شوند</string>
+  <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">واژه‌های جستجو شده ذخیره نخواهند شد</string>
+  <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">حذف واژه‌های جستجوی ذخیره‌ شده</string>
+  <!-- Preferences - Search - Remove saved search terms summary -->
   <string name="pref_remove_saved_search_terms_summary">برای حذف تمام واژه‌های جستجوی ذخیره شده ضربه بزنید</string>
+  <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">تمام واژه‌های جستجوی ذخیره شده پاک شدند</string>
+  <!-- Preferences - Storage - Secure Storage category -->
   <string name="pref_secure_storage_category">ذخیره‌سازی ایمن</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">همگام‌سازی با تأخیر</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <string name="pref_secure_storage_delayed_sync_summary">همگام‌سازی سیستم فایل‌های ایمن، یک عملیات هزینه‌بر است. این گزینه را فعال کنید تا پاسخ سریع‌تری بعد از هر عملیات وجود داشته باشد یا همگام‌سازی هنگام قرار داشتن سیستم فایل‌ها در حالت بیکار اجرا شود، اما در عوض در صورت خراب شدن برنامه اطلاعات همگام‌سازی‌ نشده‌ای که در حالت انتظار هستند از دست می‌روند.</string>
+  <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">تغییر گذرواژه</string>
+  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">حذف حافظه</string>
+  <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">رفتار</string>
+  <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">بدون پیشنهاد</string>
+  <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">هنگام ویرایش فایل پیشنهادهای واژه‌نامه را نمایش نده</string>
+  <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">خط‌چینی</string>
+  <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">فایل‌های دوگانی هگز دامپ</string>
+  <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">هنگام بازکردن فایل دوگانی، یک هگز دامپ از فایل ایجاد کنید و آن را در مرورگر هگز باز کنید</string>
+  <!-- Preferences - Editor - Syntax highlight category -->
   <string name="pref_editor_syntax_highlight_category">نمایش رنگی واژگان</string>
+  <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">نمایش رنگی واژگان</string>
+  <!-- Preferences - Editor - Syntax highlight summary -->
   <string name="pref_syntax_highlight_desc">نمایش رنگی واژگان فایل نمایش داده شده در ویرایشگر (تنها هنگامی که پردازشگر نمایش رنگی برای نوع فایل موجود باشد)</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">طرح رنگ</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
   <string name="pref_syntax_highlight_color_scheme_desc">انتخاب طرح رنگ نمایش رنگی واژگان</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">استفاده از تم پیش‌فرض</string>
+  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <string name="pref_syntax_sh_use_theme_default_desc">استفاده از نمایش رنگی پیش‌فرض واژگان تم فعلی</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">موارد</string>
+  <!-- Preferences - Themes - Themes selection category -->
   <string name="pref_themes_selection_category">مضامین</string>
+  <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">تنظیم مضمون</string>
+  <!-- Preferences - Themes - Confirmation message -->
   <string name="pref_themes_confirmation">تم با موفقیت اعمال شد.</string>
+  <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">تم پیدا نشد.</string>
+  <!-- Preferences - Debug - Capture debug traces -->
   <string name="pref_debug_traces">اطلاعات اشکال‌زدایی گزارش</string>
+  <!-- Themes - Default theme name -->
   <string name="theme_default_name">تم ملایم</string>
+  <!-- Themes - Default theme description -->
   <string name="theme_default_description">تم روشن برای مدیر فایل سایانوژن‌مود.</string>
+  <!-- Themes - Default theme author -->
   <string name="themes_author">سایانوژن‌مود</string>
+  <!-- Navigation drawer -->
   <string name="drawer_open">بازکردن کشوی پیمایش</string>
   <string name="drawer_close">بستن کشوی پیمایش</string>
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">آلفا</string>
+  <!-- The label of the current color panel -->
   <string name="color_picker_current_text">فعلی:</string>
+  <!-- The label of the new color panel -->
   <string name="color_picker_new_text">جدید:</string>
+  <!-- The label of the color input -->
   <string name="color_picker_color">رنگ:</string>
+  <!-- Android Syntax Highlight -->
   <string name="ash_reset_color_scheme">بازیابی طرح رنگ پیش‌فرض تم</string>
   <string name="ash_text">متن</string>
   <string name="ash_assignment">تخصیص</string>
@@ -375,33 +707,63 @@
   <string name="ash_keyword">کلید واژه</string>
   <string name="ash_quoted_string">رشته نقل</string>
   <string name="ash_variable">متغیر</string>
+  <!-- Secure Storage -->
+  <!-- Secure Storage dialog title - Unlock -->
   <string name="secure_storage_unlock_title">بازکردن قفل حافظه ایمن</string>
+  <!-- Secure Storage dialog title - Create -->
   <string name="secure_storage_create_title">ایجاد حافظه ایمن</string>
+  <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">تنظیم مجدد گذرواژه</string>
+  <!-- Secure Storage dialog title - Delete -->
   <string name="secure_storage_delete_title">حذف حافظه ایمن</string>
+  <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">برای باز کردن فایل‌سیستم ایمن حافظه، گذرواژه را تایپ کنید.</string>
+  <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">برای محافظت از فایل‌سیستم ایمن حافظه، گذرواژه‌ای را تایپ کنید.</string>
+  <!-- Secure Storage unlock dialog message (reset the current password) -->
   <string name="secure_storage_unlock_key_reset_msg">برای تنظیم مجدد فایل‌سیستم ایمن در حافظه، گذرواژه فعلی و گذرواژه‌های جدید را تایپ کنید.</string>
+  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">برای حذف فایل‌سیستم ایمن حافظه، گذرواژه فعلی را تایپ کنید.</string>
+  <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">گذرواژه قدیمی:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_new_key_title">گذرواژه جدید:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">گذرواژه:</string>
+  <!-- Secure Storage unlock dialog repeat key title-->
   <string name="secure_storage_unlock_repeat_title">تکرار گذرواژه:</string>
+  <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">ایجاد</string>
+  <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">بازگشایی</string>
+  <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">تنظیم مجدد</string>
+  <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">حذف</string>
+  <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">بازکردن قفل حافظه ممکن نیست</string>
+  <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">گذرواژه باید حداقل <xliff:g id="characters">%1$d</xliff:g> کاراکتر داشته باشد.</string>
+  <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">گذرواژه‌ها یکسان نیستند.</string>
+  <!-- Secure storage open file warning -->
   <string name="secure_storage_open_file_warning">اینکار باعث کپی شدن فایل در یک محل کدگذاری‌نشده موقت خواهد شد. این عملیات پس از 1 ساعت لغو خواهد شد.</string>
+  <!-- Print messages -->
+  <!-- Unsupported document format -->
   <string name="print_unsupported_document">فرمت سند پشتیبانی‌نشده</string>
+  <!-- Unsupported image format -->
   <string name="print_unsupported_image">فرمت تصویر پشتیبانی‌نشده</string>
+  <!-- Print header -->
   <string name="print_document_header">سند: <xliff:g id="document_name">%1$s</xliff:g></string>
+  <!-- Print footer -->
   <string name="print_document_footer">صفحه <xliff:g id="page_number">%1$s</xliff:g></string>
+  <!-- Security - Extract relative or absolute files -->
   <string name="security_warning_extract">هشدار!\n\nممکن است استخراج یک فایل آرشیوشدۀ دارای مسیرهای نسبی یا کامل به وسیله رونویسی فایل‌های سیستمی به دستگاه شما آسیب وارد کند.\n\nادامه می‌دهید؟</string>
+  <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">لیست تغییرات</string>
+  <!-- Welcome Dialog - Title -->
   <string name="welcome_title">خوش آمدید</string>
+  <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">به مدیر فایل سایانوژن‌مود خوش‌ آمدید.\n\nاین برنامه به شما اجازه می‌دهد سیستم فایل را اجرا و عملکردهایی را فعال کنید که می‌تواند به دستگاه شما آسیب وارد کند. برای پیش‌گیری از این آسیب‌ها، برنامه در حالت ایمن و دسترسی پایین شروع به کار می‌کند.\n\nشما می‌توانید از طریق تنظیمات، حالت پیشرفته و دسترسی کامل را انتخاب کنید. مسئولیت حصول اطمینان از این که عملکردی به سیستم شما آسیب نمی‌زند، به عهده شماست.\n\n تیم سایانوژن‌مود</string>
   <string name="activity_not_found_exception">برنامه‌ای برای بازکردن این فایل یافت نشد</string>
   <string name="snackbar_settings">تنظیمات</string>

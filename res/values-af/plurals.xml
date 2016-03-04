@@ -24,10 +24,12 @@
     <item quantity="one">1 lêer</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> lêers</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one">1 item gevind</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> items gevind</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one">1 vouergids geselekteer.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> vouergids geselekteer.</item>
@@ -36,6 +38,7 @@
     <item quantity="one">1 lêer geselekteer.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> lêers geselekteer.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item gaan verwyder word.</item>
     <item quantity="other"><xliff:g id="count">%1$d</xliff:g> items gaan verwyder word.</item>
