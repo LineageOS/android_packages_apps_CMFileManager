@@ -16,130 +16,254 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- The name of the app -->
   <string name="app_name">Failihaldur</string>
+  <!-- The description of the app -->
   <string name="app_description">CyanogenModi failihaldur</string>
+  <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">kB</string>
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">GB</string>
+  <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
+  <!-- Devices types -->
   <string name="device_blockdevice">Blokeeri seade</string>
   <string name="device_characterdevice">Märkseade</string>
   <string name="device_namedpipe">Nimeline toru</string>
   <string name="device_domainsocket">Domeeni pesa</string>
+  <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
+  <!-- Default buttons -->
   <string name="yes">Jah</string>
   <string name="no">Ei</string>
   <string name="all">Kõik</string>
   <string name="overwrite">Kirjuta üle</string>
   <string name="select">Vali</string>
+  <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<Juurkaust>]]></string>
+  <!-- The search result name -->
   <string name="search_result_name">Otsing: <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Loading waiting message -->
   <string name="loading_message">Laadin\u2026</string>
+  <!-- Computing message -->
+  <!-- Computing new line message -->
+  <!-- Cancelled message -->
   <string name="cancelled_message">Katkestatud.</string>
+  <!-- Error message -->
   <string name="error_message">Tõrge.</string>
+  <!-- Copy text content description -->
   <string name="copy_text_cd">Koputa teksti lõikelauale kopeerimiseks</string>
+  <!-- Copy text content message -->
   <string name="copy_text_msg">Tekst on kleebitud lõikelauale</string>
+  <!-- Warning dialog title -->
   <string name="warning_title">Hoiatus</string>
+  <!-- Error dialog title -->
   <string name="error_title">Tõrge</string>
+  <!-- Confirm operation dialog title -->
   <string name="confirm_operation">Kinnita toiming</string>
+  <!-- Confirm overwrite dialog title -->
   <string name="confirm_overwrite">Kinnita ülekirjutus</string>
+  <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">Kinnita kustutus</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Kinnita vahetus</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
   <string name="msgs_change_to_prompt_access_mode_msg">Ei saa käivitada Root Õigustega režiimi. Käivitan Turvalise Režiimi. \n\nKas rakendan muudatuse?</string>
+  <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">Ei saanud nõutavaid õiguseid toimimiseks.</string>
+  <!-- The message shown when an allocation of a privileged console fails, and a non
+         privileged is allocated -->
   <string name="msgs_privileged_console_alloc_failed">Ei saa käivitada Root ligipääsuga režiimi. Käivitan Turvalise režiimi.</string>
+  <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Sätet ei suudetud rakendada või salvestada.</string>
+  <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">Lähtekaust \'<xliff:g id="initial_dir">%1$s</xliff:g>\' on vigane. Avan juurkausta.</string>
+  <!-- Root is not available message -->
   <string name="root_not_available_msg">Seadmel puudub Root ligipääs. Ei saa toimingut teostada.</string>
+  <!-- Success -->
   <string name="msgs_success">Toiming on edukalt lõpetatud.</string>
+  <!-- Unknown error -->
   <string name="msgs_unknown">Leiti tõrge. Toiming ei õnnestunud.</string>
+  <!-- When an operation requires elevated privileged (normally caused for the use of a
+         non-privileged console) -->
   <string name="msgs_insufficient_permissions">See toiming nõuab kõrgendatud õigused. Proovige muuta Root ligipääsuga režiimi.</string>
+  <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">Toiming nurjus, sest seadmel pole piisaval vaba ruumi.</string>
+  <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">Faili või kausta ei leitud.</string>
+  <!-- The command reference couldn't be created (not found or invalid definition)
+         (normally caused by a development error) -->
   <string name="msgs_command_not_found">Operatsiooni käsku ei leitud või on sobimatu määratlus.</string>
+  <!-- I/O exception -->
   <string name="msgs_io_failed">Lugemise/kirjutamise tõrge.</string>
+  <!-- Operation timeout detected -->
   <string name="msgs_operation_timeout">Tegevus aegus.</string>
+  <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">Toiming nurjus.</string>
+  <!-- A console couldn't be allocated -->
   <string name="msgs_console_alloc_failure">Ilmnes sisemine tõrge.</string>
+  <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">Tegevust ei saa katkestada.</string>
+  <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">Failisüsteem on kirjutuskaitstud. Püüa rakendada failisüsteemi lugemise-kirjutamise õigus enne selle toimingu proovimist.</string>
+  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">Lubamatu argument. Käsk ebaõnnestus.</string>
+  <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">Toiming pole lubatud, kuna loob vastuolusid.</string>
+  <!-- Operation not permitted in the current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">Sihtkaust ei saa olla allika alamkaust või sama mis allikas.</string>
+  <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">Väljumiseks vajutage korra veel.</string>
+  <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">Valitud failitüübi käsitsemiseks ei ole valitud rakendust.</string>
+  <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">Mõni fail on sihtkaustas juba olemas.\n\nKas kirjutan üle?</string>
+  <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">Tegevuse seostamine rakendusega nurjus.</string>
+  <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">Toiming nõuab kõrgendatud õiguseid.\n\nKas soovite käivitada Root ligipääsuga režiimi?</string>
+  <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Eelnev kaust</string>
+  <!-- External storage descripton -->
   <string name="external_storage">Väline mälu</string>
+  <!-- Usb storage descripton -->
   <string name="usb_storage">USB mälu</string>
+  <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">Failisüsteemi info</string>
+  <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">Sorteerimisviis</string>
+  <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">Paigutus</string>
+  <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">Muud vaate suvandid</string>
+  <!-- ActionBar Buttons - Done -->
   <string name="actionbar_button_selection_done_cd">Valmis</string>
+  <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">Tegevused</string>
+  <!-- ActionBar Buttons - Search -->
   <string name="actionbar_button_search_cd">Otsi</string>
+  <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">Rohkem valikuid</string>
+  <!-- ActionBar Buttons - Storage volumes -->
   <string name="actionbar_button_storage_cd">Mälumahud</string>
+  <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">Salvesta</string>
+  <!-- ActionBar Buttons - Print -->
   <string name="actionbar_button_print_cd">Prindi</string>
+  <!-- Navigation View - Sort - Sort by name (ascending) -->
   <string name="sort_by_name_asc">Nime järgi \u25B2</string>
+  <!-- Navigation View - Sort - Sort by name (descending) -->
   <string name="sort_by_name_desc">Nime järgi \u25BC</string>
+  <!-- Navigation View - Sort - Sort by date (ascending) -->
   <string name="sort_by_date_asc">Kuupäeva järgi \u25B2</string>
+  <!-- Navigation View - Sort - Sort by date (descending) -->
   <string name="sort_by_date_desc">Kuupäeva järgi \u25BC</string>
+  <!-- Navigation View - Sort - Sort by size (ascending) -->
   <string name="sort_by_size_asc">Suuruse järgi \u25B2</string>
+  <!-- Navigation View - Sort - Sort by size (descending) -->
   <string name="sort_by_size_desc">Suuruse järgi \u25BC</string>
+  <!-- Navigation View - Sort - Sort by type (ascending) -->
   <string name="sort_by_type_asc">Tüübi järgi \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (descending) -->
   <string name="sort_by_type_desc">Tüübi järgi \u25BC</string>
+  <!-- Navigation View - Layout - Icons -->
   <string name="layout_icons">Ikoonid</string>
+  <!-- Navigation View - Layout - Simple -->
   <string name="layout_simple">Lihtne</string>
+  <!-- Navigation View - Layout - Details -->
   <string name="layout_details">Detailne</string>
+  <!-- Navigation View - View - Show folders first -->
   <string name="cm_filemanager_show_dirs_first">Kuva kaustad esimesena</string>
+  <!-- Navigation View - View - Show hidden files option -->
   <string name="cm_filemanager_show_hidden">Näita peidetud faile</string>
+  <!-- Navigation View - View - Show system files option -->
   <string name="cm_filemanager_show_system">Näita süsteemi faile</string>
+  <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">Näita faili viiteid</string>
+  <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">Info puudub</string>
+  <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">Infot failisüsteemi jaoks ei ole saadaval.</string>
+  <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">Failisüsteemi ei saa paigaldada/lahutada.</string>
+  <!-- Filesystem Info - Not allowed message -->
   <string name="filesystem_info_mount_not_allowed_msg">Failisüsteemi paigaldus ei ole lubatud Turvalises režiimis. Koputage Root ligipääsuga režiimi muutmiseks.</string>
+  <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">Failisüsteemi paigaldamine nurjus. Teatud failisüsteemid, näiteks SD-kaarte, ei saa paigaldada/lahutada, kuna nad on sisseehitatud kui kirjutuskaitstud.</string>
+  <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">Failisüsteemi info</string>
+  <!-- Filesystem Info Dialog - Tab - Info -->
   <string name="filesystem_info_dialog_tab_info">Lisainfo</string>
+  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">Ruumi kasutus</string>
+  <!-- Filesystem Info Dialog - Status Label -->
   <string name="filesystem_info_dialog_status">Liidetud:</string>
+  <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">Paigalduskoht:</string>
+  <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">Seade:</string>
+  <!-- Filesystem Info Dialog - Type Label -->
   <string name="filesystem_info_dialog_type">Tüüp:</string>
+  <!-- Filesystem Info Dialog - Options Label -->
   <string name="filesystem_info_dialog_options">Valikud:</string>
+  <!-- Filesystem Info Dialog - Dump/Pass Label -->
   <string name="filesystem_info_dialog_dump_pass">Lahendamata:</string>
+  <!-- Filesystem Info Dialog - Virtual Label -->
   <string name="filesystem_info_dialog_virtual">Virtuaalne:</string>
+  <!-- Filesystem Info Dialog - Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">Kokku:</string>
+  <!-- Filesystem Info Dialog - Used Disk Usage -->
   <string name="filesystem_info_dialog_used_disk_usage">Kasutatud:</string>
+  <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Vaba:</string>
+  <!-- Fso Properties - Not allowed message -->
   <string name="fso_properties_permissions_not_allowed_msg">Õiguste toimingud ei ole lubatud Turvalises režiimis. Koputage Root ligipääsuga režiimi muutmiseks.</string>
+  <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">Omaniku muutmise toiming nurjus.\n\nTurvalisuse huvides ei lubata teatud failisüsteemide, näiteks SD-kaardid, omanikku muuta.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">Grupi muutmise toiming nurjus.\n\nTurvalisuse huvides ei lubata teatud failisüsteemide, näiteks SD-kaardid, gruppe muuta.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_permission_msg">Õiguste muutmise toiming nurjus.\n\nTurvalisuse huvides ei lubatud teatud failisüsteemide, näiteks SD-kaardid, õiguseid muuta.</string>
+  <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">Atribuudid</string>
+  <!-- Fso Properties Dialog - Tab - Info -->
   <string name="fso_properties_dialog_tab_info">Lisainfo</string>
+  <!-- Fso Properties Dialog - Tab - Permissions -->
   <string name="fso_properties_dialog_tab_permissions">Õigused</string>
+  <!-- Fso Properties Dialog - Name Label -->
   <string name="fso_properties_dialog_name">Nimi:</string>
+  <!-- Fso Properties Dialog - Parent Folder Label -->
   <string name="fso_properties_dialog_parent">Ülem:</string>
+  <!-- Fso Properties Dialog - Type Label -->
   <string name="fso_properties_dialog_type">Tüüp:</string>
+  <!-- Fso Properties Dialog - Category Label -->
   <string name="fso_properties_dialog_category">Kategooria:</string>
+  <!-- Fso Properties Dialog - Link Label -->
   <string name="fso_properties_dialog_link">Link:</string>
+  <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">Suurus:</string>
+  <!-- Fso Properties Dialog - Contains Label -->
   <string name="fso_properties_dialog_contains">Sisaldab:</string>
+  <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <string name="fso_properties_dialog_last_accessed_date">Loetud:</string>
+  <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">Muudetud:</string>
+  <!-- Fso Properties Dialog - Last Changed Time -->
   <string name="fso_properties_dialog_last_changed_date">Muutunud:</string>
+  <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">Omanik:</string>
+  <!-- Fso Properties Dialog - Group Label -->
   <string name="fso_properties_dialog_group">Grupp:</string>
+  <!-- Fso Properties Dialog - Others Label -->
   <string name="fso_properties_dialog_others">Muud:</string>
+  <!-- Fso Properties Dialog - Special Label -->
+  <!-- Fso Properties Dialog - Read Label -->
+  <!-- Fso Properties Dialog - Write Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Skip media scan -->
   <string name="fso_properties_dialog_include_in_media_scan">Jäta meedia skaneerimine vahele:</string>
   <string name="fso_failed_to_allow_media_scan">Ei õnnestunud lubada meedia skaneerimist</string>
   <string name="fso_failed_to_prevent_media_scan">Ei õnnestunud takistada meedia skaneerimist</string>
@@ -147,130 +271,254 @@
   <string name="fso_delete_nomedia_dir_body">See kaust sisaldab .nomedia kausta.\n\nKas sa soovid selle ja kogu selle sisu kustutada?</string>
   <string name="fso_delete_nomedia_non_empty_title">Kustuta .nomedia fail</string>
   <string name="fso_delete_nomedia_non_empty_body">See kaust sisaldab mitte tühja .nomedia faili.\n\nKas soovite selle kustutada?</string>
+  <!-- History - History activity title -->
   <string name="history">Ajalugu</string>
+  <!-- History - The history is empty -->
   <string name="msgs_history_empty">Puuduvad üksused ajaloos.</string>
+  <!-- History - The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">Tundmatu üksus ajaloos.</string>
+  <!-- Search - Search activity title -->
   <string name="search">Otsingutulemused</string>
+  <!-- Search - Search hint message -->
   <string name="search_hint">Sisesta otsingusõna</string>
+  <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">Ütle mida otsida</string>
+  <!-- Search - Search error message -->
   <string name="search_error_msg">Otsimisel ilmnes tõrge. Vastuseid ei leitud.</string>
+  <!-- Search - Search no results message -->
   <string name="search_no_results_msg">Vastuseid ei leitud.</string>
+  <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> kaustas <xliff:g id="path">%2$s</xliff:g></string>
+  <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>Mõisted:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Search - Confirm search -->
   <string name="search_few_characters_title">Kinnita otsing</string>
+  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">Mõned otsingusõnad sisaldavad endas vähe sümboleid. Otsing võib olla kauakestev ja ressursinõudlik.\n\nKas jätkame?</string>
+  <!-- Search - Searching dialog title -->
   <string name="searching">Palun oodake\u2026</string>
+  <!-- Search - Searching label -->
   <string name="searching_action_label">Otsing käimas</string>
+  <!-- Picker Activity -->
+  <!-- Picker Activity - Dialog title -->
   <string name="picker_title">Valige fail</string>
   <string name="directory_picker_title">Valige kaust</string>
+  <!-- Editor - Editor activity title -->
   <string name="editor">Redaktor</string>
+  <!-- Editor - Invalid file message -->
   <string name="editor_invalid_file_msg">Vigane fail.</string>
+  <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">Faili ei leitud.</string>
+  <!-- Editor - File size exceed the limit -->
   <string name="editor_file_exceed_size_msg">See fail on liiga suur seadmes avamiseks.</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">Kinnita väljumine</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <string name="editor_dirty_ask_msg">Muudatused pole salvestatud\n\nKas väljuda salvestamata?</string>
+  <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">Fail on edukalt salvestatud.</string>
+  <!-- Editor - Read-only file mode -->
   <string name="editor_read_only_mode">Fail on avatud kirjutuskaitstud režiimis.</string>
+  <!-- Editor - Dumping message -->
   <string name="dumping_message">Hex dump\u2026 genereerimine</string>
+  <!-- Editor - Displaying -->
   <string name="displaying_message">Kuvan\u2026</string>
+  <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">Järjehoidjad</string>
+  <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">Kodu</string>
+  <!-- Bookmarks - Bookmark name - Root folder -->
   <string name="bookmarks_root_folder">Juurkaust</string>
+  <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">Süsteemikaust</string>
+  <!-- Bookmarks - Bookmark name - Secure storage -->
   <string name="bookmarks_secure">Turvaline andmekandja</string>
+  <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">Kaugmälu</string>
+  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">Määra algkaust.</string>
+  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">Eemalda järjehoidja.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">Järjehoidja lisati edukalt.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">Järjehoidja on juba olemas.</string>
+  <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Algkaust</string>
+  <!-- Initial directory label -->
   <string name="initial_directory_label">Valige algkaust:</string>
+  <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Suhtelised süsteemiteed ei ole lubatud.</string>
+  <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">Algse kausta salvestamisel ilmnes tõrge.</string>
+  <!-- Menu - Navigation - Search -->
   <string name="menu_search">Otsi</string>
+  <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">Seaded</string>
+  <!-- Menu - History - Clear history -->
   <string name="menu_clear_history">Kustuta ajalugu</string>
+  <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">Keela korrektor</string>
+  <!-- Menu - Editor - Word wrap -->
   <string name="menu_word_wrap">Murra ridu</string>
+  <!-- Menu - Editor - Sintax highlight -->
   <string name="menu_syntax_highlight">Programmeerimissüntaksi sätted</string>
+  <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name"> %1$s </xliff:g> - koopia <xliff:g id="extension"> %2$s </xliff:g></string>
+  <!-- Regular expression for new compressed file -->
   <string name="create_new_compress_file_regexp"><xliff:g id="name"> %1$s </xliff:g> - uus <xliff:g id="extension"> %2$s </xliff:g></string>
+  <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">Täidan tegevust/u2026</string>
+  <!-- Waiting dialog - Copying title -->
   <string name="waiting_dialog_copying_title">Kopeerin\u2026</string>
+  <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>Kust</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Kuhu</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">Liigutan\u2026</string>
+  <!-- Waiting dialog - Moving message -->
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>Kust</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Kuhu</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Deleting title -->
   <string name="waiting_dialog_deleting_title">Kustutan\u2026</string>
+  <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Fail</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_extracting_title">Pakin lahti\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Fail</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_compressing_title">Pakin kokku\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Fail</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Analüüsin\u2026</b>]]></string>
+  <!-- Extracting - Success message -->
   <string name="msgs_extracting_success">Lahtipakkimine edukalt lõpetatud. Failid asuvad <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Compressing - Success message -->
   <string name="msgs_compressing_success">Kokkupakkimine edukalt lõpetatud. Pakitu asub <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">Tegevused</string>
+  <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">Atribuudid</string>
+  <!-- Actions Dialog - Menu - Refresh -->
   <string name="actions_menu_refresh">Värskenda</string>
+  <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">Uus kaust</string>
+  <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">Uus fail</string>
+  <!-- Actions Dialog - Menu - Select all -->
   <string name="actions_menu_select_all">Vali kõik</string>
+  <!-- Actions Dialog - Menu - Deselect all -->
   <string name="actions_menu_deselect_all">Tühista kõik valikud</string>
+  <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">Vali</string>
+  <!-- Actions Dialog - Menu - Deselect -->
   <string name="actions_menu_deselect">Tühista valitud</string>
+  <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <string name="actions_menu_paste_selection">Kopeeri valitud siia</string>
+  <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">Liiguta valitud siia</string>
+  <!-- Actions Dialog - Menu - Delete selection -->
   <string name="actions_menu_delete_selection">Kustuta valitud</string>
+  <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">Paki valitud kokku</string>
+  <!-- Actions Dialog - Menu - Create link -->
   <string name="actions_menu_create_link">Loo link</string>
+  <!-- Actions Dialog - Menu - Open -->
   <string name="actions_menu_open">Ava</string>
+  <!-- Actions Dialog - Menu - Open with -->
   <string name="actions_menu_open_with">Ava programmiga</string>
+  <!-- Actions Dialog - Menu - Execute -->
   <string name="actions_menu_execute">Käivita</string>
+  <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">Saada</string>
+  <!-- Actions Dialog - Menu - Send selection -->
   <string name="actions_menu_send_selection">Saada valitud</string>
+  <!-- Actions Dialog - Menu - Compress -->
   <string name="actions_menu_compress">Paki kokku</string>
+  <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">Paki lahti</string>
+  <!-- Actions Dialog - Menu - Delete -->
   <string name="actions_menu_delete">Kustuta</string>
+  <!-- Actions Dialog - Menu - Rename -->
   <string name="actions_menu_rename">Nimeta ümber</string>
+  <!-- Actions Dialog - Menu - Create copy -->
   <string name="actions_menu_create_copy">Loo koopia</string>
+  <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">Atribuudid</string>
+  <!-- Actions Dialog - Menu - Add to bookmarks -->
   <string name="actions_menu_add_to_bookmarks">Lisa järjehoidjatesse</string>
+  <!-- Actions Dialog - Menu - Add shortcut -->
   <string name="actions_menu_add_shortcut">Lisa otsetee</string>
+  <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">Ava ülemine</string>
+  <!-- Actions Dialog - Menu - Compute checksum -->
   <string name="actions_menu_compute_checksum">Arvutage kontrollsumma</string>
+  <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">Prindi</string>
+  <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">Sea avaleheks</string>
+  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">Seda toimingut ei saa tagasi võtta. Kas soovite jätkata?</string>
+  <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">Nimi:</string>
+  <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">Nimi ei või olla tühi.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_path_name">Nimi ei sobi. Märk \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' pole lubatud.</string>
+  <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">Lubatud märkide arvu saavutatud.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_name">Nimi ei sobi. Nimes ei või esineda \'.\' ja \'..\' .</string>
+  <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">Nimi on juba kasutusel.</string>
+  <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">Seotud</string>
+  <!-- Associations Dialog - Remember the user action -->
   <string name="associations_dialog_remember">Pea valik meeles</string>
+  <!-- Associations Dialog - Open with Title -->
   <string name="associations_dialog_openwith_title">Ava programmiga</string>
+  <!-- Associations Dialog - Open action (button title) -->
   <string name="associations_dialog_openwith_action">Ava</string>
+  <!-- Associations Dialog - Send with Title -->
   <string name="associations_dialog_sendwith_title">Saada kasutades</string>
+  <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">Saada</string>
+  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">Pole midagi lõpetada.</string>
+  <!-- Execution console - Title -->
   <string name="execution_console_title">Konsool</string>
+  <!-- Execution console - The script name label -->
   <string name="execution_console_script_name_label">Skript:</string>
+  <!-- Execution console - The script execution time label -->
   <string name="execution_console_script_execution_time_label">Aeg:</string>
+  <!-- Execution console - The script exit code label -->
   <string name="execution_console_script_exitcode_label">Väljumiskood:</string>
+  <!-- Execution console - The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text"><xliff:g id="seconds"> %1$s </xliff:g> sek.</string>
+  <!-- Compute checksum - Title -->
   <string name="compute_checksum_title">Arvutage kontrollsumma</string>
+  <!-- Compute checksum - The file name label -->
   <string name="compute_checksum_filename_label">Fail:</string>
+  <!-- Compute checksum - The MD5 label -->
+  <!-- Compute checksum - The SHA1 label -->
+  <!-- Compute checksum - The computing checksum message-->
   <string name="compute_checksum_computing_checksum_msg">Arvutan kontrollsummat\u2026</string>
+  <!-- Mime/Types - Folder -->
   <string name="mime_folder">Kaust</string>
+  <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">Sümlink</string>
+  <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">Teadmata</string>
+  <!--  Filetime formats -->
   <string name="filetime_format_mode_system">Süsteemi määratletud</string>
   <string name="filetime_format_mode_locale">Asukoha määratud</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">pp/kk/aaaa hh:mm:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">kk/pp/aaaa hh:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">aaa-kk-pp hh:mm:ss</string>
+  <!-- Selection -->
+  <!-- For example "2 folders and 1 file selected." -->
   <string name="selection_folders_and_files"><xliff:g id="folders"> %1$s </xliff:g> ning <xliff:g id="files"> %2$s </xliff:g> valitud.</string>
+  <!-- Category descriptions -->
   <string name="category_system">SÜSTEEM</string>
   <string name="category_app">RAKENDUS</string>
   <string name="category_binary">BIRNAAR</string>
@@ -287,86 +535,170 @@
   <string name="category_video">VIDEO</string>
   <string name="category_security">TURVALISUS</string>
   <string name="category_all">KÕIK</string>
+  <!-- Compression - Compression modes dialog title -->
   <string name="compression_mode_title">Pakkimise viis</string>
+  <!-- Compression - Supported archive and compression modes -->
+  <!-- Shortcut. Failed to handle the shortcut -->
   <string name="shortcut_failed_msg">Viga otsetee leidmisel.</string>
+  <!-- Shortcut. The shortcut was created -->
   <string name="shortcut_creation_success_msg">Otsetee loomine õnnestus.</string>
+  <!-- Shortcut. The shortcut wasn't created -->
   <string name="shortcut_creation_failed_msg">Otsetee loomine nurjus.</string>
+  <!-- Preferences title -->
   <string name="pref">Sätted</string>
+  <!-- Preferences - General title -->
   <string name="pref_general">Üldseaded</string>
+  <!-- Preferences - Search title -->
   <string name="pref_search">Otsingu sätted</string>
+  <!-- Preferences - Storage title -->
   <string name="pref_storage">Mälu valikud</string>
+  <!-- Preferences - Editor title -->
   <string name="pref_editor">Redaktori sätted</string>
+  <!-- Preferences - Themes title -->
   <string name="pref_themes">Teemad</string>
+  <!-- Preferences - About title -->
   <string name="pref_about">Üldist</string>
+  <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">Üldine</string>
+  <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">Tõstutundlikus</string>
+  <!-- Preferences - General - Case sensitive sort and navigating summary -->
   <string name="pref_case_sensitive_sort_summary">Kaalu juhul kui navigeerid või sorteerid otsingutulemeid</string>
+  <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">Kuupäeva/kellaaja fromaat</string>
+  <!-- Preferences - General -Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">Kettakasutuse hoiatus</string>
+  <!-- Preferences - General - Disk usage warning level summary -->
+  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
+         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
   <string name="pref_disk_usage_warning_level_summary" formatted="false">Kui vaba andmemaht jõuab <xliff:g id="level"> %1$s </xliff:g> protsendini, siis kuva see vidinatel teise värviga</string>
+  <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Arvuta kausta statistika</string>
+  <!-- Preferences - General - Compute folder statistics summary on -->
   <string name="pref_compute_folder_statistics_on">Hoiatus! Kaustade statistika arvutamine võib võtta kaua aega ning palju telefoni ressurssi</string>
+  <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">Eelvaade</string>
+  <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">Näita eelvaateid piltidel, heli- ja videofailidel</string>
+  <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Sõrmežestidega juhitimine</string>
+  <!-- Preferences - General - Use flinger detection summary -->
   <string name="pref_use_flinger_summary">Kasuta vasakule või paremale libistamise žesti kausta kustutamiseks</string>
+  <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Edasijõudnute valikud</string>
+  <!-- Preferences - General - Access mode -->
   <string name="pref_access_mode">Ligipääsu võimalused</string>
+  <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">Ohutu režiim</string>
+  <!-- Preferences - General - Safe mode summary -->
   <string name="pref_access_mode_safe_summary">Ohutu reziim\n\nRakendus töötab õigusteta ning pääseb ligi vaid mälumahtude failisüsteemidele (SD-kaardid ja USB)</string>
+  <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">Viipa Kasutaja režiimi</string>
+  <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">Viipa Kasutaja režiimi\n\nRakendusel on kõik õigused kogu süsteemis, kuid kasutajalt küsitakse iga liigutuse juures luba</string>
+  <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">Root ligipääsu režiim</string>
+  <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">Root ligipääsu reziim\n\nTähelepanu! Root õigustes võite lõhkuda oma seadme operatsioonisüsteemi. Jätka vaid siis, kui oled kindel, et tegevus on ohutu</string>
+  <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">Piira kasutajate ligipääsu</string>
+  <!-- Preferences - General - Restrict secondary users access summary -->
   <string name="pref_restrict_secondary_users_access_summary">Piira teisaste kasutajate juurdepääs kogu süsteemis</string>
+  <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">Tulemused</string>
+  <!-- Preferences - Search - Show relevance widget -->
   <string name="pref_show_relevance_widget">Näita asjakohast vidinat</string>
+  <!-- Preferences - Search - Highlight search terms -->
   <string name="pref_highlight_terms">Märgi ostingusõnad</string>
+  <!-- Preferences - Search - Sort results mode -->
   <string name="pref_sort_search_results_mode">Sorteerimise viis</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">Ei sorteeri</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_name">Nime järgi</string>
+  <!-- Preferences - Search - Sort results mode. Relevance -->
   <string name="pref_sort_search_results_mode_relevance">Tähtsuse järgi</string>
+  <!-- Preferences - Search - Privacity category -->
   <string name="pref_search_privacity_category">Privaatsus</string>
+  <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">Salvesta otsinguajalgu</string>
+  <!-- Preferences - Search - Save search terms summary on -->
   <string name="pref_save_search_terms_on">Otsingusõnu salvestatakse ja andmeid kasutatakse otsingusõnade väljapakkumiseks</string>
+  <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">Otsinguajalugu ei salvestata</string>
+  <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">Kustuta otsinguajalgu</string>
+  <!-- Preferences - Search - Remove saved search terms summary -->
   <string name="pref_remove_saved_search_terms_summary">Vajutades kustutatakse otsingu ajalugu/ otsingusõnad</string>
+  <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">Kõik salvestatud otsingu tingimused eemaldati</string>
+  <!-- Preferences - Storage - Secure Storage category -->
   <string name="pref_secure_storage_category">Turvaline mälu</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">Hilinenud sünkrooniseerimine</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <string name="pref_secure_storage_delayed_sync_summary">Turvalise failisüsteemi sünkroniseerimine on kulukas toiming. Aktiveeri säte lubamaks kiiremat reageerimist peale iga operatsiooni, sünkroniseerimist, kui failisüsteem on kasutamata olekus, kuid võid kaotada sünkroniseerimata info rakenduse kokkujooksmisel.</string>
+  <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">Vaheta parool</string>
+  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">kustuta mälu</string>
+  <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">Käitumine</string>
+  <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">Keela korrektor</string>
+  <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">Ära näita korrigeerivaid ettepanekuid faili muutmisel</string>
+  <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">Murra ridu</string>
+  <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">Hex dump binaarfailid</string>
+  <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">Binaarfaili avamisel genereerida hex dump fail ning avada see hex vaatajaga</string>
+  <!-- Preferences - Editor - Syntax highlight category -->
   <string name="pref_editor_syntax_highlight_category">Süntaksi märkimine</string>
+  <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">Süntaksi esiletoomine</string>
+  <!-- Preferences - Editor - Syntax highlight summary -->
   <string name="pref_syntax_highlight_desc">Märgi toimetajas kuvatud süntaks (ainult siis, kui süntaksi märkimine on failitüübi jaoks saadaval)</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">Värviskeem</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
   <string name="pref_syntax_highlight_color_scheme_desc">Valige süntaksi värviskeem</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">Kasuta kujunduse vaikesätteid</string>
+  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <string name="pref_syntax_sh_use_theme_default_desc">Kasuta vaikimisi süntaksi märkimist praeguse kujundusega</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">Üksused</string>
+  <!-- Preferences - Themes - Themes selection category -->
   <string name="pref_themes_selection_category">Kujundused</string>
+  <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">Vali kujundus</string>
+  <!-- Preferences - Themes - Confirmation message -->
   <string name="pref_themes_confirmation">Teema edukalt vahetatud.</string>
+  <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">Teemat ei leitud.</string>
+  <!-- Preferences - Debug - Capture debug traces -->
   <string name="pref_debug_traces">Logid</string>
+  <!-- Themes - Default theme name -->
   <string name="theme_default_name">Hele kujundus</string>
+  <!-- Themes - Default theme description -->
   <string name="theme_default_description">Hele kujundus failihaldurile.</string>
+  <!-- Themes - Default theme author -->
   <string name="themes_author">CyanogenMod</string>
+  <!-- Navigation drawer -->
   <string name="drawer_open">Ava navigeerimise sakk</string>
   <string name="drawer_close">Sulge navigeerimise sakk</string>
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">Alfa</string>
+  <!-- The label of the current color panel -->
   <string name="color_picker_current_text">Praegune:</string>
+  <!-- The label of the new color panel -->
   <string name="color_picker_new_text">Uus:</string>
+  <!-- The label of the color input -->
   <string name="color_picker_color">Värv:</string>
+  <!-- Android Syntax Highlight -->
   <string name="ash_reset_color_scheme">Muuda värvid nii nagu need olid alguses</string>
   <string name="ash_text">Tekst</string>
   <string name="ash_assignment">Omistamine</string>
@@ -375,33 +707,63 @@
   <string name="ash_keyword">Märksõna</string>
   <string name="ash_quoted_string">Tsiteeritud string</string>
   <string name="ash_variable">Muutuja</string>
+  <!-- Secure Storage -->
+  <!-- Secure Storage dialog title - Unlock -->
   <string name="secure_storage_unlock_title">Lukusta lahti turvaline mälu</string>
+  <!-- Secure Storage dialog title - Create -->
   <string name="secure_storage_create_title">Loo turvaline mälu</string>
+  <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">Parooli lähtestamine</string>
+  <!-- Secure Storage dialog title - Delete -->
   <string name="secure_storage_delete_title">Kustuta turvaline mälu</string>
+  <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">Tippige parool turvalise mälu failisüsteemi lahtilukustamiseks.</string>
+  <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">Sisesta parool turvalise mälu failisüsteemi kaitsmiseks.</string>
+  <!-- Secure Storage unlock dialog message (reset the current password) -->
   <string name="secure_storage_unlock_key_reset_msg">Sisesta kasutusel olev ja uus parool, et lähtestada turvalise mälu failisüsteem.</string>
+  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">Sisesta kasutusel olev parool, et kustutada turvalise mälu failisüsteem.</string>
+  <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">Vana parool:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_new_key_title">Uus parool:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">Parool:</string>
+  <!-- Secure Storage unlock dialog repeat key title-->
   <string name="secure_storage_unlock_repeat_title">Korda parooli:</string>
+  <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">Loo</string>
+  <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Ava lukustus</string>
+  <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">Lähtesta</string>
+  <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Kustuta</string>
+  <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">Mälu lahtilukustamine ebaõnnestus</string>
+  <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">Parool peab olema vähemalt <xliff:g id="characters">%1$d</xliff:g> märki.</string>
+  <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">Paroolid ei kattu.</string>
+  <!-- Secure storage open file warning -->
   <string name="secure_storage_open_file_warning">Sellega kopeeritakse fail ajutisse krüpteerimata asukohta. See tühejdatakse 1 tunni pärast.</string>
+  <!-- Print messages -->
+  <!-- Unsupported document format -->
   <string name="print_unsupported_document">Dokumendi vorming pole toetatud</string>
+  <!-- Unsupported image format -->
   <string name="print_unsupported_image">Pildivorming pole toetatud</string>
+  <!-- Print header -->
   <string name="print_document_header">Dokument: <xliff:g id="document_name">%1$s </xliff:g></string>
+  <!-- Print footer -->
   <string name="print_document_footer">Lehekülg <xliff:g id="page_number">%1$s </xliff:g></string>
+  <!-- Security - Extract relative or absolute files -->
   <string name="security_warning_extract">Hoiatus! \n\nArhiivifaili lahtipakkides võidakse kirjutada üle süsteemifaile\n\nOlete te kindel, et soovite jätkata?</string>
+  <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">Mida uut</string>
+  <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Tere tulemast</string>
+  <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Tere tulemast CyanogenMod failihalduri.\n\nSee rakendus võimaldab failisüsteemi sedasi muuta, et seade ei tööta enam korrektselt või sootuks rikute operatsioonisüsteemi. Kahju vältimiseks rakendus käivitatakse madalates õigustes (low-privileged mode).\n\nEdasijõudnud kasutajad võivad rohkem õigusi anda Androidi sätete alt. Vastutate ise kui teete tegevusi mis võivad kahjustada seadme faili- või operatsioonisüsteemi.\n\nCyanogenMod-i meeskond</string>
   <string name="activity_not_found_exception">Ei leidnud faili avamiseks rakendust</string>
   <string name="snackbar_settings">Seaded</string>

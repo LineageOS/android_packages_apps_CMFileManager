@@ -24,10 +24,12 @@
     <item quantity="one">1 bestand</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> bestanden</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one">1 item gevonden</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> items gevonden</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one">1 map geselecteerd.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mappen geselecteerd.</item>
@@ -36,6 +38,7 @@
     <item quantity="one">1 bestand geselecteerd.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> bestanden geselecteerd.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item wordt verwijderd</item>
     <item quantity="other"><xliff:g id="count">%1$d</xliff:g> items worden verwijderd</item>

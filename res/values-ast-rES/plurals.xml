@@ -24,10 +24,12 @@
     <item quantity="one">1 ficheru</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ficheros</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one">1 elementu alcontráu</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> elementos alcontraos</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one">1 carpeta esbillada.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> carpetes esbillaes.</item>
@@ -36,6 +38,7 @@
     <item quantity="one">1 ficheru esbilláu.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ficheros esbillaos.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one">Va desaniciase <xliff:g id="count">%1$d</xliff:g> elementu.</item>
     <item quantity="other">Van desaniciase <xliff:g id="count">%1$d</xliff:g> elementos.</item>

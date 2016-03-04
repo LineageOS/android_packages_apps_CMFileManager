@@ -16,130 +16,254 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- The name of the app -->
   <string name="app_name">Manager Fișiere</string>
+  <!-- The description of the app -->
   <string name="app_description">Manager de fișiere CyanogenMod.</string>
+  <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">kB</string>
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">GB</string>
+  <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
+  <!-- Devices types -->
   <string name="device_blockdevice">Blocare dispozitiv</string>
   <string name="device_characterdevice">Caracter dispozitiv</string>
   <string name="device_namedpipe">Cale numită</string>
   <string name="device_domainsocket">Socket domeniu</string>
+  <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
+  <!-- Default buttons -->
   <string name="yes">Da</string>
   <string name="no">Nu</string>
   <string name="all">Toate</string>
   <string name="overwrite">Suprascriere</string>
   <string name="select">Selectare</string>
+  <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
+  <!-- The search result name -->
   <string name="search_result_name">Căutare: <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Loading waiting message -->
   <string name="loading_message">Încărcare\u2026</string>
+  <!-- Computing message -->
+  <!-- Computing new line message -->
+  <!-- Cancelled message -->
   <string name="cancelled_message">Anulat.</string>
+  <!-- Error message -->
   <string name="error_message">Eroare.</string>
+  <!-- Copy text content description -->
   <string name="copy_text_cd">Atingeți pentru a copia textul în clipboard</string>
+  <!-- Copy text content message -->
   <string name="copy_text_msg">Textul s-a copiat în clipboard</string>
+  <!-- Warning dialog title -->
   <string name="warning_title">Avertizare</string>
+  <!-- Error dialog title -->
   <string name="error_title">Eroare</string>
+  <!-- Confirm operation dialog title -->
   <string name="confirm_operation">Confirmați operațiunea</string>
+  <!-- Confirm overwrite dialog title -->
   <string name="confirm_overwrite">Confirmați suprascrierea</string>
+  <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">Confirmați ștergerea</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Confirmați comutarea</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
   <string name="msgs_change_to_prompt_access_mode_msg">Imposibil de executat în modul Acces Root. Schimbare la modul Sigur.\n\nAplicați acestă modificare?</string>
+  <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">Imposibil de obținut privilegiile necesare pentru funcționare.</string>
+  <!-- The message shown when an allocation of a privileged console fails, and a non
+         privileged is allocated -->
   <string name="msgs_privileged_console_alloc_failed">Imposibil de executat în modul Acces Root. Schimbare la modul Sigur.</string>
+  <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Setarea nu poate fi aplicată sau stocată.</string>
+  <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">Dosarul inițial \"<xliff:g id="initial_dir">%1$s</xliff:g>\" nu este corect. Schimbare la dosarul rădăcină.</string>
+  <!-- Root is not available message -->
   <string name="root_not_available_msg">Accesul Root nu este disponibil pentru acest dispozitiv. Imposibil de efectuat această operațiune.</string>
+  <!-- Success -->
   <string name="msgs_success">Operațiunea a fost finalizată cu succes.</string>
+  <!-- Unknown error -->
   <string name="msgs_unknown">A fost detectată o eroare. Operațiunea nu a reușit.</string>
+  <!-- When an operation requires elevated privileged (normally caused for the use of a
+         non-privileged console) -->
   <string name="msgs_insufficient_permissions">Această operațiune necesită permisiuni ridicate. Încercați să schimbați la modul de Acces Root.</string>
+  <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">Operația nu a reușit deoarece nu există spațiu liber rămas pe dispozitiv.</string>
+  <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">Fișierul sau dosarul nu a fost găsit.</string>
+  <!-- The command reference couldn't be created (not found or invalid definition)
+         (normally caused by a development error) -->
   <string name="msgs_command_not_found">Comanda operațiunii nu a fost găsită sau are o definiție incorectă.</string>
+  <!-- I/O exception -->
   <string name="msgs_io_failed">Eroare citire/scriere.</string>
+  <!-- Operation timeout detected -->
   <string name="msgs_operation_timeout">Operațiunea a expirat.</string>
+  <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">Operațiunea a eșuat.</string>
+  <!-- A console couldn't be allocated -->
   <string name="msgs_console_alloc_failure">Eroare internă.</string>
+  <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">Operațiunea nu poate fi anulată.</string>
+  <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">Sistemul de fișiere este doar în citire. Încercați montarea sistemului de fișiere ca citire-scriere înainte de a încerca operațiunea.</string>
+  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">Argument ilegal. Invocarea nu a reușit.</string>
+  <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">Operațiunea nu este permisă pentru că ar crea incoerențe.</string>
+  <!-- Operation not permitted in the current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">Dosarul destinație nu poate fi un subdosar al sursei sau să fie la fel ca sursa.</string>
+  <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">Apăsați din nou pentru a ieși.</string>
+  <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">Nu există nicio aplicație înregistrată care ar deschide tipul de fișier selectat.</string>
+  <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">Unele dintre fișiere există deja în dosarul destinație.\n\nSuprascrieți?</string>
+  <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">Asocierea acțiunii la aplicație a eșuat.</string>
+  <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">Această operațiune necesită permisiuni ridicate.\n\nDoriți să schimbați la modul de Acces Root?</string>
+  <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Dosarul sursă</string>
+  <!-- External storage descripton -->
   <string name="external_storage">Stocare externă</string>
+  <!-- Usb storage descripton -->
   <string name="usb_storage">Stocare USB</string>
+  <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">Info sistem de fișiere</string>
+  <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">Mod sortare</string>
+  <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">Mod aspect</string>
+  <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">Alte opțiuni de vizualizare</string>
+  <!-- ActionBar Buttons - Done -->
   <string name="actionbar_button_selection_done_cd">Terminat</string>
+  <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">Acțiuni</string>
+  <!-- ActionBar Buttons - Search -->
   <string name="actionbar_button_search_cd">Căutare</string>
+  <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">Mai multe opțiuni</string>
+  <!-- ActionBar Buttons - Storage volumes -->
   <string name="actionbar_button_storage_cd">Volume stocare</string>
+  <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">Salvare</string>
+  <!-- ActionBar Buttons - Print -->
   <string name="actionbar_button_print_cd">Imprimare</string>
+  <!-- Navigation View - Sort - Sort by name (ascending) -->
   <string name="sort_by_name_asc">După nume ▲</string>
+  <!-- Navigation View - Sort - Sort by name (descending) -->
   <string name="sort_by_name_desc">După nume ▼</string>
+  <!-- Navigation View - Sort - Sort by date (ascending) -->
   <string name="sort_by_date_asc">După dată ▲</string>
+  <!-- Navigation View - Sort - Sort by date (descending) -->
   <string name="sort_by_date_desc">După dată ▼</string>
+  <!-- Navigation View - Sort - Sort by size (ascending) -->
   <string name="sort_by_size_asc">După dimensiune \u25B2</string>
+  <!-- Navigation View - Sort - Sort by size (descending) -->
   <string name="sort_by_size_desc">După dimensiune \u25BC</string>
+  <!-- Navigation View - Sort - Sort by type (ascending) -->
   <string name="sort_by_type_asc">După tip \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (descending) -->
   <string name="sort_by_type_desc">După tip \u25BC</string>
+  <!-- Navigation View - Layout - Icons -->
   <string name="layout_icons">Pictograme</string>
+  <!-- Navigation View - Layout - Simple -->
   <string name="layout_simple">Simplu</string>
+  <!-- Navigation View - Layout - Details -->
   <string name="layout_details">Detaliat</string>
+  <!-- Navigation View - View - Show folders first -->
   <string name="cm_filemanager_show_dirs_first">Afișare dosare întâi</string>
+  <!-- Navigation View - View - Show hidden files option -->
   <string name="cm_filemanager_show_hidden">Afișare fișiere ascunse</string>
+  <!-- Navigation View - View - Show system files option -->
   <string name="cm_filemanager_show_system">Afișare fișiere de sistem</string>
+  <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">Afișare legături simbolice</string>
+  <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">Nu există informații</string>
+  <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">Nu există informații disponibile pentru fișierele de sistem.</string>
+  <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">Fișierele de sistem nu pot fi montate/demontate.</string>
+  <!-- Filesystem Info - Not allowed message -->
   <string name="filesystem_info_mount_not_allowed_msg">Operațiunile de montare a fișierelor de sistem nu sunt permise în modul Sigur. Atingeți pentru a schimba modul de acces Root.</string>
+  <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">Operațiunea de montare a fișierelor de sistemul nu a reușit. Unele sisteme de fișier, ca de ex. cardurile SD, nu pot fi montate/demontate deoarece ele sunt încorporate ca sisteme de fișiere doar în citire.</string>
+  <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">Informație despre sistemul de fișiere</string>
+  <!-- Filesystem Info Dialog - Tab - Info -->
   <string name="filesystem_info_dialog_tab_info">Info</string>
+  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">Utilizare disc</string>
+  <!-- Filesystem Info Dialog - Status Label -->
   <string name="filesystem_info_dialog_status">Montat:</string>
+  <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">Punct de montare:</string>
+  <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">Dispozitiv:</string>
+  <!-- Filesystem Info Dialog - Type Label -->
   <string name="filesystem_info_dialog_type">Tip:</string>
+  <!-- Filesystem Info Dialog - Options Label -->
   <string name="filesystem_info_dialog_options">Opțiuni:</string>
+  <!-- Filesystem Info Dialog - Dump/Pass Label -->
   <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
+  <!-- Filesystem Info Dialog - Virtual Label -->
   <string name="filesystem_info_dialog_virtual">Virtuală:</string>
+  <!-- Filesystem Info Dialog - Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">Total:</string>
+  <!-- Filesystem Info Dialog - Used Disk Usage -->
   <string name="filesystem_info_dialog_used_disk_usage">Utilizat:</string>
+  <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Disponibil:</string>
+  <!-- Fso Properties - Not allowed message -->
   <string name="fso_properties_permissions_not_allowed_msg">Operațiunile de permisiuni nu sunt admise în modul Sigur. Atingeți pentru a schimba modul de acces Root.</string>
+  <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">Operațiunea de schimbare a proprietarului nu a reușit.\n\nDin motive de securitate, unele sistem de fișiere, ca de ex. cardurile SD, nu admit schimbarea proprietarului.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">Operațiunea de schimbarea a grupului nu a reușit.\n\nDin motive de securitate, unele sistem de fișiere, ca de ex. cardurile SD, nu admit schimbarea grupurilor.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_permission_msg">Operațiunea de schimbare a permisiunilor nu a reușit.\n\nDin motive de securitate, unele sistem de fișiere, ca de ex. cardurile SD, nu admit schimbarea permisiunilor.</string>
+  <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">Proprietăți</string>
+  <!-- Fso Properties Dialog - Tab - Info -->
   <string name="fso_properties_dialog_tab_info">Info</string>
+  <!-- Fso Properties Dialog - Tab - Permissions -->
   <string name="fso_properties_dialog_tab_permissions">Permisiuni</string>
+  <!-- Fso Properties Dialog - Name Label -->
   <string name="fso_properties_dialog_name">Nume:</string>
+  <!-- Fso Properties Dialog - Parent Folder Label -->
   <string name="fso_properties_dialog_parent">Sursă:</string>
+  <!-- Fso Properties Dialog - Type Label -->
   <string name="fso_properties_dialog_type">Tip:</string>
+  <!-- Fso Properties Dialog - Category Label -->
   <string name="fso_properties_dialog_category">Categorie:</string>
+  <!-- Fso Properties Dialog - Link Label -->
   <string name="fso_properties_dialog_link">Link:</string>
+  <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">Dimensiune:</string>
+  <!-- Fso Properties Dialog - Contains Label -->
   <string name="fso_properties_dialog_contains">Conțin:</string>
+  <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <string name="fso_properties_dialog_last_accessed_date">Accesate:</string>
+  <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">Modificat:</string>
+  <!-- Fso Properties Dialog - Last Changed Time -->
   <string name="fso_properties_dialog_last_changed_date">Schimbat:</string>
+  <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">Proprietar:</string>
+  <!-- Fso Properties Dialog - Group Label -->
   <string name="fso_properties_dialog_group">Grup:</string>
+  <!-- Fso Properties Dialog - Others Label -->
   <string name="fso_properties_dialog_others">Altele:</string>
+  <!-- Fso Properties Dialog - Special Label -->
+  <!-- Fso Properties Dialog - Read Label -->
+  <!-- Fso Properties Dialog - Write Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Skip media scan -->
   <string name="fso_properties_dialog_include_in_media_scan">Sări peste scanarea media:</string>
   <string name="fso_failed_to_allow_media_scan">Permiterea scanării media a eșuat</string>
   <string name="fso_failed_to_prevent_media_scan">Prevenirea scanării media a eșuat</string>
@@ -147,129 +271,253 @@
   <string name="fso_delete_nomedia_dir_body">Acest director conține un director .nomedia.\n\nVreți să îl ștergeți împreună cu tot conținutul lui?</string>
   <string name="fso_delete_nomedia_non_empty_title">Ștergeți fișierul .nomedia</string>
   <string name="fso_delete_nomedia_non_empty_body">Directorul conține un fișier non-gol .nomedia.\n\nVreți să îl ștergeți?</string>
+  <!-- History - History activity title -->
   <string name="history">Istoric</string>
+  <!-- History - The history is empty -->
   <string name="msgs_history_empty">Istoric gol.</string>
+  <!-- History - The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">Element istoric necunoscut.</string>
+  <!-- Search - Search activity title -->
   <string name="search">Rezultatele căutării</string>
+  <!-- Search - Search hint message -->
   <string name="search_hint">Introduceți căutarea</string>
+  <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">Rostiți căutarea</string>
+  <!-- Search - Search error message -->
   <string name="search_error_msg">O eroare a avut loc în timpul căutării. Niciun rezultat găsit.</string>
+  <!-- Search - Search no results message -->
   <string name="search_no_results_msg">Niciun rezultat găsit.</string>
+  <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> în<xliff:g id="path">%2$s</xliff:g></string>
+  <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>Termeni:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Search - Confirm search -->
   <string name="search_few_characters_title">Confirmați căutarea</string>
+  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">Unii termeni de căutare au un număr mic de caractere. Operațiunea ar putea fi foarte costisitoare în timp și resurse de sistem.\n\nDoriți să continuați?</string>
+  <!-- Search - Searching dialog title -->
   <string name="searching">Așteptați\u2026</string>
+  <!-- Search - Searching label -->
   <string name="searching_action_label">Căutare în curs</string>
+  <!-- Picker Activity -->
+  <!-- Picker Activity - Dialog title -->
   <string name="picker_title">Alegeți un fișier</string>
   <string name="directory_picker_title">Alegeți un director</string>
+  <!-- Editor - Editor activity title -->
   <string name="editor">Editor</string>
+  <!-- Editor - Invalid file message -->
   <string name="editor_invalid_file_msg">Fișier incorect.</string>
+  <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">Fișierul nu a fost găsit.</string>
+  <!-- Editor - File size exceed the limit -->
   <string name="editor_file_exceed_size_msg">Fișierul este prea mare pentru a fi deschis în interiorul acestui dispozitiv.</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">Confirmați ieșirea</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <string name="editor_dirty_ask_msg">Există modificări nesalvate.\n\nIeșiți fără salvare?</string>
+  <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">Fișierul a fost salvat cu succes.</string>
+  <!-- Editor - Read-only file mode -->
   <string name="editor_read_only_mode">Fișierul este deschis în modul doar-în-citire.</string>
+  <!-- Editor - Dumping message -->
   <string name="dumping_message">Generarea unui hex dump\u2026</string>
+  <!-- Editor - Displaying -->
   <string name="displaying_message">Afișez\u2026</string>
+  <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">Marcaje</string>
+  <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">Acasă</string>
+  <!-- Bookmarks - Bookmark name - Root folder -->
   <string name="bookmarks_root_folder">Dosarul rădăcină</string>
+  <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">Dosarul sistem</string>
+  <!-- Bookmarks - Bookmark name - Secure storage -->
   <string name="bookmarks_secure">Stocare securizată</string>
+  <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">Stocare la distanță</string>
+  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">Setați folderul inițial.</string>
+  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">Eliminați marcajul.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">Marcajul a fost adăugat cu succes.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
+  <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Dosarul inițial</string>
+  <!-- Initial directory label -->
   <string name="initial_directory_label">Alegeți folderul inițial:</string>
+  <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Căile relative nu sunt permise.</string>
+  <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">Eroare la salvarea folderului inițial.</string>
+  <!-- Menu - Navigation - Search -->
   <string name="menu_search">Căutare</string>
+  <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">Setări</string>
+  <!-- Menu - History - Clear history -->
   <string name="menu_clear_history">Ștergeți istoricul</string>
+  <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">Fără sugestii</string>
+  <!-- Menu - Editor - Word wrap -->
   <string name="menu_word_wrap">Încadrează textul</string>
+  <!-- Menu - Editor - Sintax highlight -->
   <string name="menu_syntax_highlight">Evidențiere sintaxă</string>
+  <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - copie<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Regular expression for new compressed file -->
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - nou<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">Efectuare operațiune\u2026</string>
+  <!-- Waiting dialog - Copying title -->
   <string name="waiting_dialog_copying_title">Copiere\u2026</string>
+  <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>De la</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>La</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">Mutare\u2026</string>
+  <!-- Waiting dialog - Moving message -->
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>De la</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Pentru</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Deleting title -->
   <string name="waiting_dialog_deleting_title">Ștergere\u2026</string>
+  <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Fișier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_extracting_title">Extragere\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Fișier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_compressing_title">Comprimare\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Fișier</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Analizez\u2026</b>]]></string>
+  <!-- Extracting - Success message -->
   <string name="msgs_extracting_success">Operațiunea de extragere a fost finalizată cu succes. Datele au fost extrase în<xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Compressing - Success message -->
   <string name="msgs_compressing_success">Operațiunea de comprimare a fost finalizată cu succes. Datele au fost comprimate în<xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">Acțiuni</string>
+  <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">Proprietăți</string>
+  <!-- Actions Dialog - Menu - Refresh -->
   <string name="actions_menu_refresh">Reîmprospătare</string>
+  <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">Dosar nou</string>
+  <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">Fișier nou</string>
+  <!-- Actions Dialog - Menu - Select all -->
   <string name="actions_menu_select_all">Selectare totală</string>
+  <!-- Actions Dialog - Menu - Deselect all -->
   <string name="actions_menu_deselect_all">Anulare selectare totală</string>
+  <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">Selectare</string>
+  <!-- Actions Dialog - Menu - Deselect -->
   <string name="actions_menu_deselect">Deselectare</string>
+  <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <string name="actions_menu_paste_selection">Lipește selecția aici</string>
+  <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">Mutare</string>
+  <!-- Actions Dialog - Menu - Delete selection -->
   <string name="actions_menu_delete_selection">Ștergere</string>
+  <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">Comprimare</string>
+  <!-- Actions Dialog - Menu - Create link -->
   <string name="actions_menu_create_link">Creare legătură</string>
+  <!-- Actions Dialog - Menu - Open -->
   <string name="actions_menu_open">Deschidere</string>
+  <!-- Actions Dialog - Menu - Open with -->
   <string name="actions_menu_open_with">Deschidere cu</string>
+  <!-- Actions Dialog - Menu - Execute -->
   <string name="actions_menu_execute">Executare</string>
+  <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">Trimitere</string>
+  <!-- Actions Dialog - Menu - Send selection -->
   <string name="actions_menu_send_selection">Trimite selecția</string>
+  <!-- Actions Dialog - Menu - Compress -->
   <string name="actions_menu_compress">Comprimare</string>
+  <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">Extragere</string>
+  <!-- Actions Dialog - Menu - Delete -->
   <string name="actions_menu_delete">Ștergere</string>
+  <!-- Actions Dialog - Menu - Rename -->
   <string name="actions_menu_rename">Redenumire</string>
+  <!-- Actions Dialog - Menu - Create copy -->
   <string name="actions_menu_create_copy">Creare copie</string>
+  <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">Proprietăți</string>
+  <!-- Actions Dialog - Menu - Add to bookmarks -->
   <string name="actions_menu_add_to_bookmarks">Adăugare la marcaje</string>
+  <!-- Actions Dialog - Menu - Add shortcut -->
   <string name="actions_menu_add_shortcut">Adăugare comandă rapidă</string>
+  <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">Deschidere sursă</string>
+  <!-- Actions Dialog - Menu - Compute checksum -->
   <string name="actions_menu_compute_checksum">Calculează checksum</string>
+  <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">Imprimare</string>
+  <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">Setați ca acasă</string>
+  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">Această acțiune nu poate fi anulată. Doriți să continuați?</string>
+  <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">Nume:</string>
+  <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">Numele nu poate fi gol.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_path_name">Nume incorect. Caracterele \"<xliff:g id="invalid_characters">%1$s</xliff:g>\" nu sunt admise.</string>
+  <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">Limita maximă de caractere atinsă.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_name">Nume incorect. Numele \".\" și \"..\" nu sunt admise.</string>
+  <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">Numele există deja.</string>
+  <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">Asociații</string>
+  <!-- Associations Dialog - Remember the user action -->
   <string name="associations_dialog_remember">Rețineți selecția</string>
+  <!-- Associations Dialog - Open with Title -->
   <string name="associations_dialog_openwith_title">Deschideți cu</string>
+  <!-- Associations Dialog - Open action (button title) -->
   <string name="associations_dialog_openwith_action">Deschideți</string>
+  <!-- Associations Dialog - Send with Title -->
   <string name="associations_dialog_sendwith_title">Trimiteți cu</string>
+  <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">Trimiteți</string>
+  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">Nimic de finalizat.</string>
+  <!-- Execution console - Title -->
   <string name="execution_console_title">Consolă</string>
+  <!-- Execution console - The script name label -->
   <string name="execution_console_script_name_label">Script:</string>
+  <!-- Execution console - The script execution time label -->
   <string name="execution_console_script_execution_time_label">Timp:</string>
+  <!-- Execution console - The script exit code label -->
   <string name="execution_console_script_exitcode_label">Cod ieșire:</string>
+  <!-- Execution console - The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> s.</string>
+  <!-- Compute checksum - Title -->
   <string name="compute_checksum_title">Calculează checksum</string>
+  <!-- Compute checksum - The file name label -->
   <string name="compute_checksum_filename_label">Fișier:</string>
+  <!-- Compute checksum - The MD5 label -->
+  <!-- Compute checksum - The SHA1 label -->
+  <!-- Compute checksum - The computing checksum message-->
   <string name="compute_checksum_computing_checksum_msg">Calculează checksum\u2026</string>
+  <!-- Mime/Types - Folder -->
   <string name="mime_folder">Dosar</string>
+  <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">Legătură simbolică</string>
+  <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">Necunoscut</string>
+  <!--  Filetime formats -->
   <string name="filetime_format_mode_system">Definit-de-sistem</string>
   <string name="filetime_format_mode_locale">Definit-local</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">zz/ll/aaaa oo:mm:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">ll/zz/aaaa oo:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">aaaa-ll-zz oo:mm:ss</string>
+  <!-- Selection -->
+  <!-- For example "2 folders and 1 file selected." -->
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> și <xliff:g id="files">%2$s</xliff:g> selectate.</string>
+  <!-- Category descriptions -->
   <string name="category_system">SISTEM</string>
   <string name="category_app">APLICAŢIE</string>
   <string name="category_binary">BINAR</string>
@@ -286,86 +534,170 @@
   <string name="category_video">VIDEO</string>
   <string name="category_security">SECURITATE</string>
   <string name="category_all">TOATE</string>
+  <!-- Compression - Compression modes dialog title -->
   <string name="compression_mode_title">Mod comrimare</string>
+  <!-- Compression - Supported archive and compression modes -->
+  <!-- Shortcut. Failed to handle the shortcut -->
   <string name="shortcut_failed_msg">Eșuat.</string>
+  <!-- Shortcut. The shortcut was created -->
   <string name="shortcut_creation_success_msg">Comandă rapidă creată cu succes.</string>
+  <!-- Shortcut. The shortcut wasn't created -->
   <string name="shortcut_creation_failed_msg">Crearea comandă rapidă eșuată.</string>
+  <!-- Preferences title -->
   <string name="pref">Setări</string>
+  <!-- Preferences - General title -->
   <string name="pref_general">Setări generale</string>
+  <!-- Preferences - Search title -->
   <string name="pref_search">Opțiuni căutare</string>
+  <!-- Preferences - Storage title -->
   <string name="pref_storage">Opțiuni de stocare</string>
+  <!-- Preferences - Editor title -->
   <string name="pref_editor">Opțiuni editor</string>
+  <!-- Preferences - Themes title -->
   <string name="pref_themes">Teme</string>
+  <!-- Preferences - About title -->
   <string name="pref_about">Despre</string>
+  <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">Generale</string>
+  <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">Utilizare sortare litere mari apoi mici</string>
+  <!-- Preferences - General - Case sensitive sort and navigating summary -->
   <string name="pref_case_sensitive_sort_summary">Luați în considerare cazul când navigați sau sortați rezultatele de căutare</string>
+  <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">Formatul datei/orei</string>
+  <!-- Preferences - General -Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">Avertizare utilizare disc</string>
+  <!-- Preferences - General - Disk usage warning level summary -->
+  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
+         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
   <string name="pref_disk_usage_warning_level_summary" formatted="false">Afișați o altă culoare în widget-urile utilizare disc, atunci când se ajunge la <xliff:g id="level">%1$s</xliff:g> procente din spațiul disponibil pe disc</string>
+  <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Calcul statistică dosare</string>
+  <!-- Preferences - General - Compute folder statistics summary on -->
   <string name="pref_compute_folder_statistics_on">Avertizare! Calculul statisticii dosarelor este costisitor în timp și resurse de sistem</string>
+  <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">Previzualizare</string>
+  <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">Arată o imagine de previzualizare pentru aplicații, fișiere audio, video și poze</string>
+  <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Utilizare gesturi</string>
+  <!-- Preferences - General - Use flinger detection summary -->
   <string name="pref_use_flinger_summary">Utilizați detectarea gestului stânga-spre-dreapta pentru ștergerea fișierelor sau a folder-elor</string>
+  <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Avansat</string>
+  <!-- Preferences - General - Access mode -->
   <string name="pref_access_mode">Mod acces</string>
+  <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">Mod sigur</string>
+  <!-- Preferences - General - Safe mode summary -->
   <string name="pref_access_mode_safe_summary">Mod Sigur\n\nAplicația se execută, fără privilegii și are acces numai la volumele de stocare (SD carduri și USB)</string>
+  <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">Mod interogare</string>
+  <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">Mod interogare\n\nAplicația se execută cu acces total la fișierele de sistem, dar va solicita permisiuni pentru a efectua operațiuni privelegiate</string>
+  <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">Mod acces Root</string>
+  <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">Mod acces Root\n\nAvertizare! Acest mod permite operațiuni ce pot duce la defectarea dispozitivului Dvs. Este responsabilitatea Dvs. să vă asigurați ce operațiune este sigură</string>
+  <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">Restricționează accesul utilizatorilor</string>
+  <!-- Preferences - General - Restrict secondary users access summary -->
   <string name="pref_restrict_secondary_users_access_summary">Restricționează accesul la întregul sistem pentru utilizatorii secundari</string>
+  <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">Rezultate</string>
+  <!-- Preferences - Search - Show relevance widget -->
   <string name="pref_show_relevance_widget">Afișare widget relevanță</string>
+  <!-- Preferences - Search - Highlight search terms -->
   <string name="pref_highlight_terms">Evidențiere termeni de căutare</string>
+  <!-- Preferences - Search - Sort results mode -->
   <string name="pref_sort_search_results_mode">Mod sortare rezultate</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">Fără sortare</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_name">După nume</string>
+  <!-- Preferences - Search - Sort results mode. Relevance -->
   <string name="pref_sort_search_results_mode_relevance">După relevanță</string>
+  <!-- Preferences - Search - Privacity category -->
   <string name="pref_search_privacity_category">Privat</string>
+  <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">Salvați termenii de căutare</string>
+  <!-- Preferences - Search - Save search terms summary on -->
   <string name="pref_save_search_terms_on">Termenii de căutare vor fi salvați și folosiți ca sugestii pentru căutări în viitor</string>
+  <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">Termenii de căutare nu vor fi salvați</string>
+  <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">Eliminați termenii de căutare salvați</string>
+  <!-- Preferences - Search - Remove saved search terms summary -->
   <string name="pref_remove_saved_search_terms_summary">Apăsați pentru eliminarea tuturor termenilor de căutare salvați</string>
+  <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">Toți termenii de căutare salvați au fost eliminați</string>
+  <!-- Preferences - Storage - Secure Storage category -->
   <string name="pref_secure_storage_category">Stocare securizată</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">Sincronizare întârziată</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <string name="pref_secure_storage_delayed_sync_summary">Sincronizarea unor sisteme cu fișiere sigure este o operație costisitoare. Activați această opțiune pentru a permite răspunsuri în timp mai bune după fiecare operațiune, efectuând sincronizări atunci când sistemul de fișiere este în stare nefolosită, dar în detrimentul pierderii de informații în așteptare nesincronizate în cazul unei erori a aplicației.</string>
+  <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">Schimbă parola</string>
+  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">Ștergeți stocarea</string>
+  <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">Comportament</string>
+  <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">Fără sugestii</string>
+  <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">Nu afișa sugestiile din dicționar în timp ce editez fișierul</string>
+  <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">Încadrare text</string>
+  <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">Fișiere binare hexdump</string>
+  <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">Când deschid un fișier binar, generează un hexdump pentru fișier și deschide-l în vizualizatorul hex</string>
+  <!-- Preferences - Editor - Syntax highlight category -->
   <string name="pref_editor_syntax_highlight_category">Evidențiere sintaxă</string>
+  <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">Evidențiere sintaxă</string>
+  <!-- Preferences - Editor - Syntax highlight summary -->
   <string name="pref_syntax_highlight_desc">Evidențiază sintaxa fișierului afișat în editor (numai atunci când un procesor de sintaxă pentru tipul de fișier este disponibil)</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">Schema de culoare</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
   <string name="pref_syntax_highlight_color_scheme_desc">Selectează schema de culoare a evidențierii sintaxei</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">Utilizează temă implicită</string>
+  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <string name="pref_syntax_sh_use_theme_default_desc">Utilizați evidențierea de sintaxă implicită din tema curentă</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">Elemente</string>
+  <!-- Preferences - Themes - Themes selection category -->
   <string name="pref_themes_selection_category">Teme</string>
+  <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">Aplicați tema</string>
+  <!-- Preferences - Themes - Confirmation message -->
   <string name="pref_themes_confirmation">Tema a fost aplicată cu succes.</string>
+  <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">Tema nu a fost găsită.</string>
+  <!-- Preferences - Debug - Capture debug traces -->
   <string name="pref_debug_traces">Jurnal cu informații de depanare</string>
+  <!-- Themes - Default theme name -->
   <string name="theme_default_name">Temă „deschisă”</string>
+  <!-- Themes - Default theme description -->
   <string name="theme_default_description">Temă „deschisă” pentru Managerul de Fișiere CyanogenMod.</string>
+  <!-- Themes - Default theme author -->
   <string name="themes_author">CyanogenMod</string>
+  <!-- Navigation drawer -->
   <string name="drawer_open">Deschide sertarul de navigare</string>
   <string name="drawer_close">Închide sertarul de navigare</string>
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">Alfa</string>
+  <!-- The label of the current color panel -->
   <string name="color_picker_current_text">Curent:</string>
+  <!-- The label of the new color panel -->
   <string name="color_picker_new_text">Nou:</string>
+  <!-- The label of the color input -->
   <string name="color_picker_color">Culoare:</string>
+  <!-- Android Syntax Highlight -->
   <string name="ash_reset_color_scheme">Reinițializează schema de culoare implicită</string>
   <string name="ash_text">Text</string>
   <string name="ash_assignment">Atribuire</string>
@@ -374,30 +706,60 @@
   <string name="ash_keyword">Cuvânt cheie</string>
   <string name="ash_quoted_string">Șir de citate</string>
   <string name="ash_variable">Variabila</string>
+  <!-- Secure Storage -->
+  <!-- Secure Storage dialog title - Unlock -->
+  <!-- Secure Storage dialog title - Create -->
+  <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">Resetare parolă</string>
+  <!-- Secure Storage dialog title - Delete -->
+  <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">Introduceți parola pentru a debloca sistemul de fișiere sigure de stocare.</string>
+  <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">Tastați o parolă pentru a proteja sistemul de fișiere sigure de stocare.</string>
+  <!-- Secure Storage unlock dialog message (reset the current password) -->
   <string name="secure_storage_unlock_key_reset_msg">Tastați parola curentă și ceea nouă pentru a reseta sistemul de fișiere sigure de stocare.</string>
+  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">Tastați parola curentă pentru a șterge sistemul de fișiere securizate de stocare.</string>
+  <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">Parola veche:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_new_key_title">Parolă nouă:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">Parola:</string>
+  <!-- Secure Storage unlock dialog repeat key title-->
   <string name="secure_storage_unlock_repeat_title">Repetați parola:</string>
+  <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">Creează</string>
+  <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Deblocare</string>
+  <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">Resetați</string>
+  <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Ștergeți</string>
+  <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">Nu s-a pot debloca stocarea</string>
+  <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">Parola trebuie să aibă cel puțin <xliff:g id="characters">%1$d</xliff:g> caractere.</string>
+  <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">Parolele nu se potrivesc.</string>
+  <!-- Secure storage open file warning -->
   <string name="secure_storage_open_file_warning">Aceasta va copia fișierul într-un loc temporar necriptat. Acesta va fi șters după 1 oră.</string>
+  <!-- Print messages -->
+  <!-- Unsupported document format -->
   <string name="print_unsupported_document">Formatul documentului neacceptat</string>
+  <!-- Unsupported image format -->
   <string name="print_unsupported_image">Format de imagine neacceptat</string>
+  <!-- Print header -->
   <string name="print_document_header">Document: <xliff:g id="document_name">%1$s</xliff:g></string>
+  <!-- Print footer -->
   <string name="print_document_footer">Pagina <xliff:g id="page_number">%1$s</xliff:g></string>
+  <!-- Security - Extract relative or absolute files -->
   <string name="security_warning_extract">Avertizare!\n\nExtragerea unui fișier arhivă cu căi relative sau absolute poate cauza defecțiuni dispozitivului dvs. prin suprascrierea fișierelor de sistem.\n\nDoriți să continuați?</string>
+  <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">Istoria schimbărilor</string>
+  <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Bun venit</string>
+  <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Bine ați venit la managerul de fișiere CyanogenMod.\n\nAceastă aplicație vă permite să explorați sistemul de fișiere și să efectuați operații care ar putea deteriora dispozitivul dvs. Pentru a preveni stricăciunile, aplicația pornește în modul sigur, un mod cu privilegii reduse.\n\nPuteți accesa modul avansat, cu privilegii complete via Setări. Este responsabilitatea dvs să vă asigurați că operațile făcute de dvs nu distrug dispozitivul.\n\nEchipa CyanogenMod</string>
   <string name="activity_not_found_exception">Nu s-a găsit o aplicație pentru a deschide acest fișier</string>
   <string name="storage_permissions_denied">Managerul de fișiere necesită permisiune de stocare pentru a putea vizualiza fișierele tale.</string>

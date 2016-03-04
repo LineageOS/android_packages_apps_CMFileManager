@@ -26,11 +26,13 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> файли</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> файлів</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> об’єкт знайдено</item>
     <item quantity="few"><xliff:g id="count">%1$d</xliff:g> об’єкти знайдено</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> об’єктів знайдено</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> папка вибрано.</item>
     <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> папки вибрано.</item>
@@ -41,6 +43,7 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> файли вибрано.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> файлів вибрано.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g>об\'єкт буде видалено.</item>
     <item quantity="few"><xliff:g id="count">%1$d</xliff:g>об\'єкти буде видалено.</item>

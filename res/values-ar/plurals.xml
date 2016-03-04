@@ -32,6 +32,7 @@
     <item quantity="many"><xliff:g id="files">%1$d</xliff:g> ملفات</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ملفات</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="zero">تم العثور على <xliff:g id="count">%1$d</xliff:g> بنداً</item>
     <item quantity="one">تم العثور على <xliff:g id="count">%1$d</xliff:g> بنوداً</item>
@@ -40,6 +41,7 @@
     <item quantity="many">تم العثور على <xliff:g id="count">%1$d</xliff:g> بنوداً</item>
     <item quantity="other">تم العثور على <xliff:g id="count">%1$d</xliff:g> بنوداً</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="zero">تم تحديد <xliff:g id="folders">%1$d</xliff:g> مجلداً.</item>
     <item quantity="one">تم تحديد <xliff:g id="folders">%1$d</xliff:g> مجلدات.</item>
@@ -56,4 +58,5 @@
     <item quantity="many">تم تحديد <xliff:g id="files">%1$d</xliff:g> ملفات.</item>
     <item quantity="other">تم تحديد <xliff:g id="files">%1$d</xliff:g> ملفات.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
 </resources>

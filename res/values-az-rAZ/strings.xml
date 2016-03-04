@@ -16,130 +16,254 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- The name of the app -->
   <string name="app_name">Fayl İdarəçisi</string>
+  <!-- The description of the app -->
   <string name="app_description">CyanogenMod fayl idarəçisi</string>
+  <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">kB</string>
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">QB</string>
+  <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
+  <!-- Devices types -->
   <string name="device_blockdevice">Cihazı əngəllə</string>
   <string name="device_characterdevice">Xarakter cihazı</string>
   <string name="device_namedpipe">Adlandırılmış kəmər</string>
   <string name="device_domainsocket">Domen soketi</string>
+  <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
+  <!-- Default buttons -->
   <string name="yes">Bəli</string>
   <string name="no">Xeyr</string>
   <string name="all">Hamısı</string>
   <string name="overwrite">Üzərinə yaz</string>
   <string name="select">Seç</string>
+  <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
+  <!-- The search result name -->
   <string name="search_result_name">Axtar: <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Loading waiting message -->
   <string name="loading_message">Yüklənir\u2026</string>
+  <!-- Computing message -->
+  <!-- Computing new line message -->
+  <!-- Cancelled message -->
   <string name="cancelled_message">Ləğv edildi.</string>
+  <!-- Error message -->
   <string name="error_message">Xəta.</string>
+  <!-- Copy text content description -->
   <string name="copy_text_cd">Mətni lövhəyə kopyalamaq üçün toxunun</string>
+  <!-- Copy text content message -->
   <string name="copy_text_msg">Mətn lövhəyə kopyalandı</string>
+  <!-- Warning dialog title -->
   <string name="warning_title">Xəbərdarlıq</string>
+  <!-- Error dialog title -->
   <string name="error_title">Xəta</string>
+  <!-- Confirm operation dialog title -->
   <string name="confirm_operation">Əməliyyatı təsdiqlə</string>
+  <!-- Confirm overwrite dialog title -->
   <string name="confirm_overwrite">Dəyişdirməni təsdiqlə</string>
+  <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">Silməni təsdiqlə</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Keçidi təsdiqlə</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
   <string name="msgs_change_to_prompt_access_mode_msg">Root Müraciəti rejimində işləyə bilmir. Təhlükəsiz rejimə keçilir.\n\nDəyişiklik təsdiqlənsin?</string>
+  <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">Fəaliyyət üçün lazım olan səlahiyyətlər alına bilmədi.</string>
+  <!-- The message shown when an allocation of a privileged console fails, and a non
+         privileged is allocated -->
   <string name="msgs_privileged_console_alloc_failed">Root Müraciəti rejimində işləyə bilmir. Təhlükəsiz rejimə keçilir.</string>
+  <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Tənzimləmə tətbiq edilə və ya saxlanıla bilmədi.</string>
+  <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">Başlanğıc qovluğu \'<xliff:g id="initial_dir">%1$s</xliff:g>\' etibarsızdır. Kök qovluğuna keçilir.</string>
+  <!-- Root is not available message -->
   <string name="root_not_available_msg">Bu cihazda root müraciəti yoxdur. Əməliyyat baş tuta bilməz.</string>
+  <!-- Success -->
   <string name="msgs_success">Əməliyyat uğurla başa çatdı.</string>
+  <!-- Unknown error -->
   <string name="msgs_unknown">Xəta aşkarlandı. Əməliyyat uğursuz oldu.</string>
+  <!-- When an operation requires elevated privileged (normally caused for the use of a
+         non-privileged console) -->
   <string name="msgs_insufficient_permissions">Bu əməliyyat yüksək icazələr tələb edir. Root Müraciəti rejiminə keçməyə çalışın.</string>
+  <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">Cihazda kifayət qədər yer olmadığı üçün əməliyyat baş tutmadı.</string>
+  <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">Fayl və ya qovluq tapılmadı.</string>
+  <!-- The command reference couldn't be created (not found or invalid definition)
+         (normally caused by a development error) -->
   <string name="msgs_command_not_found">Bu əməliyyatın əmri tapılmadı və ya tərifi etibarsızdır.</string>
+  <!-- I/O exception -->
   <string name="msgs_io_failed">Oxuma/yazma xətası.</string>
+  <!-- Operation timeout detected -->
   <string name="msgs_operation_timeout">Əməliyyata qoyulan vaxt bitdi.</string>
+  <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">Əməliyyat baş tutmadı.</string>
+  <!-- A console couldn't be allocated -->
   <string name="msgs_console_alloc_failure">Daxili xəta baş verdi.</string>
+  <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">Əməliyyat ləğv edilə bilməz.</string>
+  <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">Fayl sistemi ancaq oxunur. Əməliyyatı başlatmazdan əvvəl fayl sistemini oxunur-yazılır olaraq qoşmağa çalışın.</string>
+  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">Yolverilməz ifadə. Əməliyyat uğursuz oldu.</string>
+  <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">Qərarsızlıqlar olacağı üçün bu əməliyyata icazə verilmir.</string>
+  <!-- Operation not permitted in the current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">Təyinat qovluq mənbə qovluğunun eynisi və ya altqovluğu ola bilməz.</string>
+  <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">Çıxmaq üçün təkrar basın.</string>
+  <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">Seçilmiş növ faylla işləyəcək tətbiqetmə təyin olunmayıb.</string>
+  <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">Bəzi fayllar təyinat qovluğunda artıq mövcuddur.\n\nÜzərinə yazılsın?</string>
+  <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">Əməliyyatı tətbiqetmə ilə əlaqələndirmə uğursuz oldu.</string>
+  <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">Əməliyyat yüksək səlahiyyətlər tələb edir.\n\nRoot Müraciəti  rejiminə keçmək istəyirsiniz?</string>
+  <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Üst qovluq</string>
+  <!-- External storage descripton -->
   <string name="external_storage">Xarici saxlama</string>
+  <!-- Usb storage descripton -->
   <string name="usb_storage">USB yaddaş</string>
+  <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">Fayl sistemi məlumatı</string>
+  <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">Çeşidləmə rejimi</string>
+  <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">Düzülüş rejimi</string>
+  <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">Digər baxış seçimləri</string>
+  <!-- ActionBar Buttons - Done -->
   <string name="actionbar_button_selection_done_cd">Bitdi</string>
+  <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">Hərəkətlər</string>
+  <!-- ActionBar Buttons - Search -->
   <string name="actionbar_button_search_cd">Axtar</string>
+  <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">Daha çox seçimlər</string>
+  <!-- ActionBar Buttons - Storage volumes -->
   <string name="actionbar_button_storage_cd">Saxlama vahidləri</string>
+  <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">Saxla</string>
+  <!-- ActionBar Buttons - Print -->
   <string name="actionbar_button_print_cd">Çap et</string>
+  <!-- Navigation View - Sort - Sort by name (ascending) -->
   <string name="sort_by_name_asc">Ada görə \u25B2</string>
+  <!-- Navigation View - Sort - Sort by name (descending) -->
   <string name="sort_by_name_desc">Ada görə \u25BC</string>
+  <!-- Navigation View - Sort - Sort by date (ascending) -->
   <string name="sort_by_date_asc">Tarixə görə \u25B2</string>
+  <!-- Navigation View - Sort - Sort by date (descending) -->
   <string name="sort_by_date_desc">Tarixə görə \u25BC</string>
+  <!-- Navigation View - Sort - Sort by size (ascending) -->
   <string name="sort_by_size_asc">Ölçüyə görə \u25B2</string>
+  <!-- Navigation View - Sort - Sort by size (descending) -->
   <string name="sort_by_size_desc">Ölçüyə görə \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (ascending) -->
   <string name="sort_by_type_asc">Növə görə \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (descending) -->
   <string name="sort_by_type_desc">Növə görə \u25B2</string>
+  <!-- Navigation View - Layout - Icons -->
   <string name="layout_icons">Nişanlar</string>
+  <!-- Navigation View - Layout - Simple -->
   <string name="layout_simple">Sadə</string>
+  <!-- Navigation View - Layout - Details -->
   <string name="layout_details">Təfsilatlar</string>
+  <!-- Navigation View - View - Show folders first -->
   <string name="cm_filemanager_show_dirs_first">Əvvəlcə qovluqları göstər</string>
+  <!-- Navigation View - View - Show hidden files option -->
   <string name="cm_filemanager_show_hidden">Gizli faylları göstər</string>
+  <!-- Navigation View - View - Show system files option -->
   <string name="cm_filemanager_show_system">Sistem fayllarını göstər</string>
+  <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">Simvolik keçidləri göstər</string>
+  <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">Məlumat yoxdur</string>
+  <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">Fayl sistemi üçün məlumat yoxdur.</string>
+  <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">Fayl sistemi qoşula/ayrıla bilmədi.</string>
+  <!-- Filesystem Info - Not allowed message -->
   <string name="filesystem_info_mount_not_allowed_msg">Fayl sistemi qoşma əməliyyatlarına Təhlükəsiz rejimdə icazə verilmir. Root Müraciəti rejiminə keçmək üçün toxunun.</string>
+  <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">Fayl sistemi qoşma uğursuz oldu. SD kartlar kimi bəzi fayl sistemləri qoşula/çıxarıla bilməz, çünki yalnız-oxunan fayl sistemləri olaraq daxil edilmişdir.</string>
+  <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">Fayl sistemi məlumatı</string>
+  <!-- Filesystem Info Dialog - Tab - Info -->
   <string name="filesystem_info_dialog_tab_info">Məlumat</string>
+  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">Disk istifadəsi</string>
+  <!-- Filesystem Info Dialog - Status Label -->
   <string name="filesystem_info_dialog_status">Qoşulu:</string>
+  <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">Qoşulma nöqtəsi:</string>
+  <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">Cihaz:</string>
+  <!-- Filesystem Info Dialog - Type Label -->
   <string name="filesystem_info_dialog_type">Növü:</string>
+  <!-- Filesystem Info Dialog - Options Label -->
   <string name="filesystem_info_dialog_options">Seçimlər:</string>
+  <!-- Filesystem Info Dialog - Dump/Pass Label -->
   <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
+  <!-- Filesystem Info Dialog - Virtual Label -->
   <string name="filesystem_info_dialog_virtual">Virtual:</string>
+  <!-- Filesystem Info Dialog - Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">Cəmi:</string>
+  <!-- Filesystem Info Dialog - Used Disk Usage -->
   <string name="filesystem_info_dialog_used_disk_usage">İstf. olunan:</string>
+  <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Boş:</string>
+  <!-- Fso Properties - Not allowed message -->
   <string name="fso_properties_permissions_not_allowed_msg">İcazə əməliyyatlarına Təhlükəsiz rejimdə icazə verilmir. Root Müraciəti rejiminə keçmək üçün toxunun.</string>
+  <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">Sahib dəyişdirmə əməliyyatı uğursuz oldu.\n\nTəhlükəsizlik səbəbləri baxımından SD kartlar kimi bəzi fayl sistemləri sahib dəyişdirməyə icazə vermir.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">Qrup dəyişdirmə əməliyyatı uğursuz oldu.\n\nTəhlükəsizlik səbəbləri baxımından SD kartlar kimi bəzi fayl sistemləri qrup dəyişdirməyə icazə vermir.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_permission_msg">İcazə dəyişdirmə əməliyyatı uğursuz oldu.\n\nTəhlükəsizlik səbəbləri baxımından SD kartlar kimi bəzi fayl sistemləri icazə dəyişdirməyə icazə vermir.</string>
+  <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">Xüsusiyyətlər</string>
+  <!-- Fso Properties Dialog - Tab - Info -->
   <string name="fso_properties_dialog_tab_info">Məlumat</string>
+  <!-- Fso Properties Dialog - Tab - Permissions -->
   <string name="fso_properties_dialog_tab_permissions">İcazələr</string>
+  <!-- Fso Properties Dialog - Name Label -->
   <string name="fso_properties_dialog_name">Ad:</string>
+  <!-- Fso Properties Dialog - Parent Folder Label -->
   <string name="fso_properties_dialog_parent">Əsas:</string>
+  <!-- Fso Properties Dialog - Type Label -->
   <string name="fso_properties_dialog_type">Növü:</string>
+  <!-- Fso Properties Dialog - Category Label -->
   <string name="fso_properties_dialog_category">Kateqoriya:</string>
+  <!-- Fso Properties Dialog - Link Label -->
   <string name="fso_properties_dialog_link">Keçid:</string>
+  <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">Həcmi:</string>
+  <!-- Fso Properties Dialog - Contains Label -->
   <string name="fso_properties_dialog_contains">Ehtiva edir:</string>
+  <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <string name="fso_properties_dialog_last_accessed_date">Müraciət edildi:</string>
+  <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">Düzəliş olunub:</string>
+  <!-- Fso Properties Dialog - Last Changed Time -->
   <string name="fso_properties_dialog_last_changed_date">Dəyişdirilib:</string>
+  <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">Sahibi:</string>
+  <!-- Fso Properties Dialog - Group Label -->
   <string name="fso_properties_dialog_group">Qrup:</string>
+  <!-- Fso Properties Dialog - Others Label -->
   <string name="fso_properties_dialog_others">Digər:</string>
+  <!-- Fso Properties Dialog - Special Label -->
+  <!-- Fso Properties Dialog - Read Label -->
+  <!-- Fso Properties Dialog - Write Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Skip media scan -->
   <string name="fso_properties_dialog_include_in_media_scan">Media axtarışını ötür:</string>
   <string name="fso_failed_to_allow_media_scan">Media axtarışına icazə vermə uğursuz oldu</string>
   <string name="fso_failed_to_prevent_media_scan">Media axtarışını əngəlləmə uğursuz oldu</string>
@@ -147,130 +271,254 @@
   <string name="fso_delete_nomedia_dir_body">Kataloqda .nomedia kataloqu mövcuddur.\n\nBunu və bütün məzmununu silmək istəyirsiniz?</string>
   <string name="fso_delete_nomedia_non_empty_title">nomedia faylını sil</string>
   <string name="fso_delete_nomedia_non_empty_body">Bu kataloqda boş olmayan .nomedia faylı mövcuddur.\n\nBunu silmək istəyirsiniz?</string>
+  <!-- History - History activity title -->
   <string name="history">Tarixçə</string>
+  <!-- History - The history is empty -->
   <string name="msgs_history_empty">Tarixçə boşdur.</string>
+  <!-- History - The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">Bilinməyən tarixçə elementi.</string>
+  <!-- Search - Search activity title -->
   <string name="search">Axtarış nəticələri</string>
+  <!-- Search - Search hint message -->
   <string name="search_hint">Axtardığınızı yazın</string>
+  <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">Axtardığınızı deyin</string>
+  <!-- Search - Search error message -->
   <string name="search_error_msg">Axtarış vaxtı xəta baş verdi. Heç bir nəticə tapılmadı.</string>
+  <!-- Search - Search no results message -->
   <string name="search_no_results_msg">Heç bir nəticə tapılmadı.</string>
+  <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="path">%2$s</xliff:g> kataloqunda <xliff:g id="items">%1$s</xliff:g></string>
+  <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>Şərtlər:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Search - Confirm search -->
   <string name="search_few_characters_title">Axtarışı təsdiqlə</string>
+  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">Bəzi axtarış terminləri az sayda simvola sahibdir. Bu əməliyyat vaxt və sistem qaynağı baxımından həddən artıq baha ola bilər.\n\nDavam etmək istəyirsiniz?</string>
+  <!-- Search - Searching dialog title -->
   <string name="searching">Zəhmət olmasa gözləyin\u2026</string>
+  <!-- Search - Searching label -->
   <string name="searching_action_label">Axtarış davam edir</string>
+  <!-- Picker Activity -->
+  <!-- Picker Activity - Dialog title -->
   <string name="picker_title">Fayl seçin</string>
   <string name="directory_picker_title">Kataloq seçin</string>
+  <!-- Editor - Editor activity title -->
   <string name="editor">Düzəlişçi</string>
+  <!-- Editor - Invalid file message -->
   <string name="editor_invalid_file_msg">Etibarsız fayl.</string>
+  <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">Fayl tapılmadı.</string>
+  <!-- Editor - File size exceed the limit -->
   <string name="editor_file_exceed_size_msg">Fayl bu cihaz içində açmaq üçün çox böyükdür.</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">Çıxışı təsdiqlə</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <string name="editor_dirty_ask_msg">Dəyişikliklər saxlanılmadı.\n\nSaxlanılmadan çıxılsın?</string>
+  <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">Fayl uğurla saxlanıldı.</string>
+  <!-- Editor - Read-only file mode -->
   <string name="editor_read_only_mode">Fayl yalnız oxunur rejimində açıldı.</string>
+  <!-- Editor - Dumping message -->
   <string name="dumping_message">Hex dump yaradılır\u2026</string>
+  <!-- Editor - Displaying -->
   <string name="displaying_message">Göstərilir\u2026</string>
+  <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">Əlfəcinlər</string>
+  <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">Əsas</string>
+  <!-- Bookmarks - Bookmark name - Root folder -->
   <string name="bookmarks_root_folder">Kök qovluğu</string>
+  <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">Sistem qovluğu</string>
+  <!-- Bookmarks - Bookmark name - Secure storage -->
   <string name="bookmarks_secure">Təhlükəsiz saxlama</string>
+  <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">Uzaqdan saxlama</string>
+  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">Açılış qovluğunu tənzimlə.</string>
+  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">Əlfəcini sil.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">Əlfəcin uğurla əlavə olundu.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">Əlfəcin artıq mövcuddur.</string>
+  <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Açılış qovluğu</string>
+  <!-- Initial directory label -->
   <string name="initial_directory_label">Açılış qovluğunu seçin:</string>
+  <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Şərti yollara icazə verilmir.</string>
+  <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">Açılış qovluğunu saxlayarkən xəta baş verdi.</string>
+  <!-- Menu - Navigation - Search -->
   <string name="menu_search">Axtar</string>
+  <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">Tənzimləmələr</string>
+  <!-- Menu - History - Clear history -->
   <string name="menu_clear_history">Tarixçəni təmizlə</string>
+  <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">Təklif yoxdur</string>
+  <!-- Menu - Editor - Word wrap -->
   <string name="menu_word_wrap">Söz sürüşdürmə</string>
+  <!-- Menu - Editor - Sintax highlight -->
   <string name="menu_syntax_highlight">Sintaksisin vurğulanması</string>
+  <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - kopya<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Regular expression for new compressed file -->
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - yeni<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">Əməliyyat həyata keçirilir\u2026</string>
+  <!-- Waiting dialog - Copying title -->
   <string name="waiting_dialog_copying_title">Kopyalanır\u2026</string>
+  <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>Buradan</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Buraya</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">Köçürülür\u2026</string>
+  <!-- Waiting dialog - Moving message -->
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>Buradan</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Buraya</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Deleting title -->
   <string name="waiting_dialog_deleting_title">Silinir\u2026</string>
+  <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Fayl</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_extracting_title">Çıxarılır\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Fayl</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_compressing_title">Sıxışdırılır\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Fayl</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Təhlil olunur\u2026</b>]]></string>
+  <!-- Extracting - Success message -->
   <string name="msgs_extracting_success">Arxivdən çıxarma əməliyyatı uğurla tamamlandı. Verilənlər bura çıxarıldı: <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Compressing - Success message -->
   <string name="msgs_compressing_success">Sıxışdırma əməliyyatı uğurla tamamlandı. Verilənlər bura sıxışdırıldı: <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">Hərəkətlər</string>
+  <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">Xüsusiyyətlər</string>
+  <!-- Actions Dialog - Menu - Refresh -->
   <string name="actions_menu_refresh">Yenilə</string>
+  <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">Yeni qovluq</string>
+  <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">Yeni fayl</string>
+  <!-- Actions Dialog - Menu - Select all -->
   <string name="actions_menu_select_all">Hamısını seç</string>
+  <!-- Actions Dialog - Menu - Deselect all -->
   <string name="actions_menu_deselect_all">Heç birini seçmə</string>
+  <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">Seç</string>
+  <!-- Actions Dialog - Menu - Deselect -->
   <string name="actions_menu_deselect">Seçimi götür</string>
+  <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <string name="actions_menu_paste_selection">Seçimi bura kopyala</string>
+  <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">Seçimi bura köçür</string>
+  <!-- Actions Dialog - Menu - Delete selection -->
   <string name="actions_menu_delete_selection">Seçimi sil</string>
+  <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">Seçilənləri sıxışdır</string>
+  <!-- Actions Dialog - Menu - Create link -->
   <string name="actions_menu_create_link">Keçid yarat</string>
+  <!-- Actions Dialog - Menu - Open -->
   <string name="actions_menu_open">Aç</string>
+  <!-- Actions Dialog - Menu - Open with -->
   <string name="actions_menu_open_with">Bununla aç</string>
+  <!-- Actions Dialog - Menu - Execute -->
   <string name="actions_menu_execute">İcra et</string>
+  <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">Göndər</string>
+  <!-- Actions Dialog - Menu - Send selection -->
   <string name="actions_menu_send_selection">Seçiləni göndər</string>
+  <!-- Actions Dialog - Menu - Compress -->
   <string name="actions_menu_compress">Sıxışdır</string>
+  <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">Çıxar</string>
+  <!-- Actions Dialog - Menu - Delete -->
   <string name="actions_menu_delete">Sil</string>
+  <!-- Actions Dialog - Menu - Rename -->
   <string name="actions_menu_rename">Yenidən adlandır</string>
+  <!-- Actions Dialog - Menu - Create copy -->
   <string name="actions_menu_create_copy">Kopya yarat</string>
+  <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">Xüsusiyyətlər</string>
+  <!-- Actions Dialog - Menu - Add to bookmarks -->
   <string name="actions_menu_add_to_bookmarks">Əlfəcinlərə əlavə et</string>
+  <!-- Actions Dialog - Menu - Add shortcut -->
   <string name="actions_menu_add_shortcut">Qısayol əlavə et</string>
+  <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">Üst qovluğu aç</string>
+  <!-- Actions Dialog - Menu - Compute checksum -->
   <string name="actions_menu_compute_checksum">Yoxlanış nəticəsini hesabla</string>
+  <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">Çap et</string>
+  <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">Əsas səhifə olaraq tənzimlə</string>
+  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">Bu əməliyyatən geri dönüşü yoxdur. Davam etmək istəyirsiniz?</string>
+  <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">Ad:</string>
+  <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">Ad boş buraxıla bilməz.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_path_name">Etibarsız ad. \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' simvollarına icazə verilmir.</string>
+  <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">Maksimum simvol həddinə çatdı.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_name">Etibarsız ad. \'.\' və \'..\' yə icazə verilmir.</string>
+  <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">Ad artıq mövcuddur.</string>
+  <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">Əlaqələndirmələr</string>
+  <!-- Associations Dialog - Remember the user action -->
   <string name="associations_dialog_remember">Seçimi xatırla</string>
+  <!-- Associations Dialog - Open with Title -->
   <string name="associations_dialog_openwith_title">Bununla aç</string>
+  <!-- Associations Dialog - Open action (button title) -->
   <string name="associations_dialog_openwith_action">Aç</string>
+  <!-- Associations Dialog - Send with Title -->
   <string name="associations_dialog_sendwith_title">Bununla göndər</string>
+  <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">Göndər</string>
+  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">Tamamlanacaq heç nə yoxdur.</string>
+  <!-- Execution console - Title -->
   <string name="execution_console_title">Əmr sətri</string>
+  <!-- Execution console - The script name label -->
   <string name="execution_console_script_name_label">Skript:</string>
+  <!-- Execution console - The script execution time label -->
   <string name="execution_console_script_execution_time_label">Zaman:</string>
+  <!-- Execution console - The script exit code label -->
   <string name="execution_console_script_exitcode_label">Çıxış kodu:</string>
+  <!-- Execution console - The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> san.</string>
+  <!-- Compute checksum - Title -->
   <string name="compute_checksum_title">Yoxlanış nəticəsini hesabla</string>
+  <!-- Compute checksum - The file name label -->
   <string name="compute_checksum_filename_label">Fayl:</string>
+  <!-- Compute checksum - The MD5 label -->
+  <!-- Compute checksum - The SHA1 label -->
+  <!-- Compute checksum - The computing checksum message-->
   <string name="compute_checksum_computing_checksum_msg">Yoxlanış nəticəsi hesablanır\u2026</string>
+  <!-- Mime/Types - Folder -->
   <string name="mime_folder">Qovluq</string>
+  <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">Simvolik keçid</string>
+  <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">Bilinməyən</string>
+  <!--  Filetime formats -->
   <string name="filetime_format_mode_system">Sistem təyinatlı</string>
   <string name="filetime_format_mode_locale">Yerli təyinatlı</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">gg/aa/iiii ss:dd:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">aa/gg/iiii ss:dd:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">iiii-aa-gg ss:dd:ss</string>
+  <!-- Selection -->
+  <!-- For example "2 folders and 1 file selected." -->
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> və <xliff:g id="files">%2$s</xliff:g> seçildi.</string>
+  <!-- Category descriptions -->
   <string name="category_system">SİSTEM</string>
   <string name="category_app">TƏTBİQETMƏ</string>
   <string name="category_binary">İKİLİ</string>
@@ -287,86 +535,170 @@
   <string name="category_video">VİDEO</string>
   <string name="category_security">TƏHLÜKƏSİZLİK</string>
   <string name="category_all">HAMISI</string>
+  <!-- Compression - Compression modes dialog title -->
   <string name="compression_mode_title">Sıxışdırma rejimi</string>
+  <!-- Compression - Supported archive and compression modes -->
+  <!-- Shortcut. Failed to handle the shortcut -->
   <string name="shortcut_failed_msg">Qısayolla işləmək uğursuz oldu.</string>
+  <!-- Shortcut. The shortcut was created -->
   <string name="shortcut_creation_success_msg">Qısayol uğurla yaradıldı.</string>
+  <!-- Shortcut. The shortcut wasn't created -->
   <string name="shortcut_creation_failed_msg">Qısayolun yaratma xətası.</string>
+  <!-- Preferences title -->
   <string name="pref">Tənzimləmələr</string>
+  <!-- Preferences - General title -->
   <string name="pref_general">Ümumi tənzimləmələr</string>
+  <!-- Preferences - Search title -->
   <string name="pref_search">Axtarış seçimləri</string>
+  <!-- Preferences - Storage title -->
   <string name="pref_storage">Saxlama seçimləri</string>
+  <!-- Preferences - Editor title -->
   <string name="pref_editor">Düzəlişçi seçimləri</string>
+  <!-- Preferences - Themes title -->
   <string name="pref_themes">Temalar</string>
+  <!-- Preferences - About title -->
   <string name="pref_about">Haqqında</string>
+  <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">Ümumi</string>
+  <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">Hərf ölçüsünə həssas</string>
+  <!-- Preferences - General - Case sensitive sort and navigating summary -->
   <string name="pref_case_sensitive_sort_summary">Axtarış nəticələri arasında naviqasiya və ya çeşidləmə hərf ölçüsünü diqqətə alın</string>
+  <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">Tarix/saat formatı</string>
+  <!-- Preferences - General -Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">Disk istifadə xəbərdarlığı</string>
+  <!-- Preferences - General - Disk usage warning level summary -->
+  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
+         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
   <string name="pref_disk_usage_warning_level_summary" formatted="false"><xliff:g id="level">%1$s</xliff:g> faiz boş disk sahəsi çatanda, disk istifadə ekran alətləri üçün fərqli rənglər göstər</string>
+  <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Qovluq statistikalarını hesabla</string>
+  <!-- Preferences - General - Compute folder statistics summary on -->
   <string name="pref_compute_folder_statistics_on">Diqqət! Qovluq statistikalarının hesablanması vaxt və sistem ehtiyatları baxımından bahalıdır</string>
+  <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">Önizləmə</string>
+  <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">Tətbiqetmələr, musiqi faylları, şəkillər və videolar üçün önizləmə təsvirlərini göstər</string>
+  <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Sürüşdürmə qısayollarından istifadə et</string>
+  <!-- Preferences - General - Use flinger detection summary -->
   <string name="pref_use_flinger_summary">Faylları və ya qovluqları silmək üçün soldan sağa sürüşdürmə hərəkətindən istifadə et</string>
+  <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Qabaqcıl</string>
+  <!-- Preferences - General - Access mode -->
   <string name="pref_access_mode">Müraciət rejimi</string>
+  <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">Təhlükəsiz rejim</string>
+  <!-- Preferences - General - Safe mode summary -->
   <string name="pref_access_mode_safe_summary">Təhlükəsiz rejim\n\nTətbiqetmə səlahiyyətsiz işləyir və yeganə müraciət edilə bilən fayl sistemləri saxlama vahidləridir (SD kartlar və USB)</string>
+  <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">İstifadəçidən Soruş rejimi</string>
+  <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">İstifadəçidən soruş rejimi\n\nTətbiqetmə fayl sisteminə tam icazə ilə işləyir, ancaq səlahiyyət tələb edən əməliyyatları istifadəçidən soruşar</string>
+  <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">Root Müraciəti rejimi</string>
+  <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">Root Müraciət rejimi\n\nDiqqət! Bu rejim cihazınıza zərər verə biləcək əməliyyatlara icazə verər. Əməliyyatın təhlükəsiz olub-olmadığı tamamilə sizin məsuliyyətinizdədir</string>
+  <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">İstifadəçi müraciətini məhdudlaşdır</string>
+  <!-- Preferences - General - Restrict secondary users access summary -->
   <string name="pref_restrict_secondary_users_access_summary">İkinci dərəcəli istifadəçilər üçün bütün sistem müraciətini məhdudlaşdır</string>
+  <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">Nəticələr</string>
+  <!-- Preferences - Search - Show relevance widget -->
   <string name="pref_show_relevance_widget">Uyğun widgeti göstər</string>
+  <!-- Preferences - Search - Highlight search terms -->
   <string name="pref_highlight_terms">Axtarış terminlərini vurğula</string>
+  <!-- Preferences - Search - Sort results mode -->
   <string name="pref_sort_search_results_mode">Nəticələrin çeşidlənməsi rejimi</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">Çeşidləmədən</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_name">Ada görə</string>
+  <!-- Preferences - Search - Sort results mode. Relevance -->
   <string name="pref_sort_search_results_mode_relevance">Uyğunluğa görə</string>
+  <!-- Preferences - Search - Privacity category -->
   <string name="pref_search_privacity_category">Gizlilik</string>
+  <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">Axtarış terminlərini saxla</string>
+  <!-- Preferences - Search - Save search terms summary on -->
   <string name="pref_save_search_terms_on">Axtarış terminləri saxlanılacaq və gələcək axtarışlarda təklif kimi istifadə olunacaq</string>
+  <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">Axtarış terminləri saxlanılmayacaq</string>
+  <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">Saxlanılmış axtarış terminlərini sil</string>
+  <!-- Preferences - Search - Remove saved search terms summary -->
   <string name="pref_remove_saved_search_terms_summary">Saxlanmış axtarış terminlərini silmək üçün toxunun</string>
+  <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">Bütün saxlanılan axtarış terminləri silindi</string>
+  <!-- Preferences - Storage - Secure Storage category -->
   <string name="pref_secure_storage_category">Təhlükəsiz saxlama</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">Gecikmiş sinxronizasiya</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <string name="pref_secure_storage_delayed_sync_summary">Təhlükəsiz saxlama fayl sisteminin sinxronizasiyası riskli əməliyyatdır. Hər əməliyyatdan sonra daha sürətli cavablar üçün bu seçimi fəallaşdırın, sinxronizasiya fayl sistemi istifadə olunmayanda edilir, ancaq tətbiqetmə çöksə sinxronizasiya gözləyən məlumatlar itirilə bilər.</string>
+  <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">Şifrəni dəyişdir</string>
+  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">Saxlamanı sil</string>
+  <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">Rəftar</string>
+  <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">Təklif yoxdur</string>
+  <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">Fayla düzəliş edərkən lüğət təkliflərini göstərmə</string>
+  <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">Söz sürüşdürmə</string>
+  <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">İkili faylları hex dumpla</string>
+  <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">Binar faylı açarkən, hex dump yarat və onaltılıq göstəricidə aç</string>
+  <!-- Preferences - Editor - Syntax highlight category -->
   <string name="pref_editor_syntax_highlight_category">Sintaksis vurğulama</string>
+  <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">Sintaksisin vurğulanması</string>
+  <!-- Preferences - Editor - Syntax highlight summary -->
   <string name="pref_syntax_highlight_desc">Düzəlişçidə göstərilən faylın sintaksisini vurğula (yalnız bu fayl növü üçün sintaksis vurğulama mümkün olarsa)</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">Rəng sxemi</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
   <string name="pref_syntax_highlight_color_scheme_desc">Sintaksis vurğulama rəng sxemini seç</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">İlkin temadan istifadə et</string>
+  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <string name="pref_syntax_sh_use_theme_default_desc">Hazırki temanın ilkin sintaksis vurğulamasından istifadə et</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">Elementlər</string>
+  <!-- Preferences - Themes - Themes selection category -->
   <string name="pref_themes_selection_category">Temalar</string>
+  <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">Temanı tənzimlə</string>
+  <!-- Preferences - Themes - Confirmation message -->
   <string name="pref_themes_confirmation">Tema uğurla tətbiq olundu.</string>
+  <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">Tema tapılmadı.</string>
+  <!-- Preferences - Debug - Capture debug traces -->
   <string name="pref_debug_traces">Xəta ayırdetmə məlumatını qeydə al</string>
+  <!-- Themes - Default theme name -->
   <string name="theme_default_name">Açıq Rəngli Tema</string>
+  <!-- Themes - Default theme description -->
   <string name="theme_default_description">CyanogenMod Fayl İdarəçisi üçün açıq rəngli tema.</string>
+  <!-- Themes - Default theme author -->
   <string name="themes_author">CyanogenMod</string>
+  <!-- Navigation drawer -->
   <string name="drawer_open">Hərəkət panelini aç</string>
   <string name="drawer_close">Naviqasiya panelini bağla</string>
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">Alfa</string>
+  <!-- The label of the current color panel -->
   <string name="color_picker_current_text">Hazırki:</string>
+  <!-- The label of the new color panel -->
   <string name="color_picker_new_text">Yeni:</string>
+  <!-- The label of the color input -->
   <string name="color_picker_color">Rəng:</string>
+  <!-- Android Syntax Highlight -->
   <string name="ash_reset_color_scheme">Temanın ilkin rəng sxeminə geri qayıt</string>
   <string name="ash_text">Mətn</string>
   <string name="ash_assignment">Əlaqələndirmə</string>
@@ -375,33 +707,63 @@
   <string name="ash_keyword">Açar söz</string>
   <string name="ash_quoted_string">Sitat sətir</string>
   <string name="ash_variable">Dəyişkən</string>
+  <!-- Secure Storage -->
+  <!-- Secure Storage dialog title - Unlock -->
   <string name="secure_storage_unlock_title">Təhlükəsiz yaddaşın kilidini açın</string>
+  <!-- Secure Storage dialog title - Create -->
   <string name="secure_storage_create_title">Təhlükəsiz yaddaş yarat</string>
+  <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">Şifrəni sıfırla</string>
+  <!-- Secure Storage dialog title - Delete -->
   <string name="secure_storage_delete_title">Təhlükəsiz yaddaşı sil</string>
+  <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">Təhlükəsiz saxlama fayl sistemini açmaq üçün şifrəni daxil edin.</string>
+  <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">Təhlükəsiz saxlama fayl sistemini kilidləmək üçün şifrəni daxil edin.</string>
+  <!-- Secure Storage unlock dialog message (reset the current password) -->
   <string name="secure_storage_unlock_key_reset_msg">Təhlükəsiz saxlama fayl sistemini sıfırlamaq üçün mövcud və yeni şifrələri daxil edin.</string>
+  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">Təhlükəsiz saxlama fayl sistemini silmək üçün şifrəni daxil edin.</string>
+  <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">Köhnə şifrə:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_new_key_title">Yeni şifrə:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">Şifrə:</string>
+  <!-- Secure Storage unlock dialog repeat key title-->
   <string name="secure_storage_unlock_repeat_title">Şifrəni təkrarla:</string>
+  <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">Yarat</string>
+  <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Kilidi aç</string>
+  <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">Sıfırla</string>
+  <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Sil</string>
+  <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">Saxlama kilidi açıla bilmir</string>
+  <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">Şifrədə ən az <xliff:g id="characters">%1$d</xliff:g> simvol olmalıdır.</string>
+  <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">Şifrələr uyğunlaşmır.</string>
+  <!-- Secure storage open file warning -->
   <string name="secure_storage_open_file_warning">Bu, faylı müvəqqəti şifrəsiz yerə kopyalayacaq. 1 saat sonra təmizlənəcək.</string>
+  <!-- Print messages -->
+  <!-- Unsupported document format -->
   <string name="print_unsupported_document">Dəstəklənməyən sənəd formatı</string>
+  <!-- Unsupported image format -->
   <string name="print_unsupported_image">Dəstəklənməyən şəkil formatı</string>
+  <!-- Print header -->
   <string name="print_document_header">Sənəd: <xliff:g id="document_name">%1$s</xliff:g></string>
+  <!-- Print footer -->
   <string name="print_document_footer">Səhifə <xliff:g id="page_number">%1$s</xliff:g></string>
+  <!-- Security - Extract relative or absolute files -->
   <string name="security_warning_extract">Xəbərdarlıq!\n\nNisbi və ya mütləq yol ilə arxivləri çıxarmaq, sistem fayllarının üzərinə yazaraq cihazınıza ziyan vura bilər.\n\nDavam etmək istəyirsiniz?</string>
+  <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">Dəyişiklik qeydi</string>
+  <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Xoş gəldiniz</string>
+  <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">CyanogenMod Fayl İdarəçisinə Xoş Gəldiniz.\n\nBu tətbiqetmə fayl sistemini tədqiq etməyə və cihazınıza ziyan vura biləcək əməliyyatlara icazə verir. Ziyanın qarşısını almaq üçün, tətbiqetmə təhlükəsiz, aşağı səlahiyyətli rejimdə açılacaq.\n\nQabaqcıl, tam səlahiyyətli rejimə Tənzimləmələrdən müraciət edə bilərsiniz. Etdiyiniz əməliyyatların cihazınıza ziyan vurmamasını təmin etmək sizin öhdəliyinizdədir.\n\nCyanogenMod Komandası</string>
   <string name="activity_not_found_exception">Bu faylı açacaq tətbiqetmə tapılmadı</string>
   <string name="snackbar_settings">Tənzimləmələr</string>

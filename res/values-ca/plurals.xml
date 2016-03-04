@@ -24,10 +24,12 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fitxer</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> fitxers</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element trobat</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> elements trobats</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> carpeta seleccionada.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> carpetes seleccionades.</item>
@@ -36,6 +38,7 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> arxiu seleccionat.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> arxius seleccionats.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element serà esborrat.</item>
     <item quantity="other"><xliff:g id="count">%1$d</xliff:g> elements seran esborrats.</item>

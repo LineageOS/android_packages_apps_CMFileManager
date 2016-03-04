@@ -16,133 +16,257 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- The name of the app -->
   <string name="app_name">Filhanterare</string>
+  <!-- The description of the app -->
   <string name="app_description">CyanogenMods filhanterare.</string>
+  <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">kB</string>
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">GB</string>
+  <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
-  <string name="device_blockdevice">Blockenhet</string>
+  <!-- Devices types -->
+  <string name="device_blockdevice">Blockera enhet</string>
   <string name="device_characterdevice">Teckenenhet</string>
   <string name="device_namedpipe">Namngiven pipe</string>
-  <string name="device_domainsocket">Sockel</string>
+  <string name="device_domainsocket">Domän sockel</string>
+  <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
+  <!-- Default buttons -->
   <string name="yes">Ja</string>
   <string name="no">Nej</string>
   <string name="all">Alla</string>
   <string name="overwrite">Skriv över</string>
   <string name="select">Välj</string>
+  <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<Rot>]]></string>
+  <!-- The search result name -->
   <string name="search_result_name">Sök: <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Loading waiting message -->
   <string name="loading_message">Laddar\u2026</string>
+  <!-- Computing message -->
+  <!-- Computing new line message -->
+  <!-- Cancelled message -->
   <string name="cancelled_message">Avbruten.</string>
+  <!-- Error message -->
   <string name="error_message">Fel.</string>
+  <!-- Copy text content description -->
   <string name="copy_text_cd">Tryck för att kopiera till urklipp</string>
+  <!-- Copy text content message -->
   <string name="copy_text_msg">Text kopierad till urklipp</string>
+  <!-- Warning dialog title -->
   <string name="warning_title">Varning</string>
+  <!-- Error dialog title -->
   <string name="error_title">Fel</string>
+  <!-- Confirm operation dialog title -->
   <string name="confirm_operation">Bekräfta åtgärd</string>
+  <!-- Confirm overwrite dialog title -->
   <string name="confirm_overwrite">Bekräfta överskrivning</string>
+  <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">Bekräfta radering</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Bekräfta byte</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
   <string name="msgs_change_to_prompt_access_mode_msg">Kan inte köra med Rootläge. Växlar till Säkert läge.\n\nTillämpa denna ändring?</string>
+  <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">Kan inte få de nödvändiga rättigheterna för att fungera.</string>
+  <!-- The message shown when an allocation of a privileged console fails, and a non
+         privileged is allocated -->
   <string name="msgs_privileged_console_alloc_failed">Kan inte köra med Rootläge. Växlar lite Säkert läge.</string>
+  <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Denna inställning kunde inte verkställas eller lagras.</string>
+  <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">Hemmappen \"<xliff:g id="initial_dir">%1$s</xliff:g>\" är felaktig. Växlar till rotmapp.</string>
+  <!-- Root is not available message -->
   <string name="root_not_available_msg">Root är inte tillgänglig på den här enheten. Kan inte utföra den här åtgärden.</string>
+  <!-- Success -->
   <string name="msgs_success">Åtgärden genomfördes framgångsrikt.</string>
+  <!-- Unknown error -->
   <string name="msgs_unknown">Ett fel upptäcktes. Åtgärden misslyckades.</string>
+  <!-- When an operation requires elevated privileged (normally caused for the use of a
+         non-privileged console) -->
   <string name="msgs_insufficient_permissions">Denna åtgärd kräver förhöjda rättigheter. Försök att ändra till Rootläge.</string>
+  <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">Åtgärden misslyckades eftersom det inte finns något utrymme kvar på enheten.</string>
+  <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">Filen eller mappen kunde inte hittas.</string>
+  <!-- The command reference couldn't be created (not found or invalid definition)
+         (normally caused by a development error) -->
   <string name="msgs_command_not_found">Åtgärdens kommando kunde inte hittas eller har en felaktig definition.</string>
+  <!-- I/O exception -->
   <string name="msgs_io_failed">Read/write-fel.</string>
+  <!-- Operation timeout detected -->
   <string name="msgs_operation_timeout">Åtgärden överskred tidsgränsen.</string>
+  <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">Åtgärden misslyckades.</string>
+  <!-- A console couldn't be allocated -->
   <string name="msgs_console_alloc_failure">Ett internt fel inträffade.</string>
+  <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">Åtgärden kan inte avbrytas.</string>
+  <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">Filsystemet är read-only. Försök att montera filsystemet som read-write innan du försöker genomföra åtgärden.</string>
+  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">Illegalt argument. Invokationen misslyckades.</string>
+  <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">Åtgärden är inte tillåten eftersom den skulle skapa motsägelser.</string>
+  <!-- Operation not permitted in the current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">Målmappen kan inte vara en undermapp till källan eller vara samma som källan.</string>
+  <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">Tryck igen för att avsluta.</string>
+  <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">Det finns ingen app registrerad för att hantera vald filtyp.</string>
+  <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">Några av filerna finns redan i destinationsmappen.\n\nSkriva över?</string>
+  <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">Associering av åtgärden till appen misslyckades.</string>
+  <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">Åtgärden kräver förhöjda rättigheter\n\nVill du växla till Rootläge?</string>
+  <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Upp</string>
+  <!-- External storage descripton -->
   <string name="external_storage">Extern lagring</string>
+  <!-- Usb storage descripton -->
   <string name="usb_storage">USB-lagring</string>
+  <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">Filsystemsinformation</string>
+  <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">Sortering</string>
+  <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">Visning</string>
+  <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">Andra visningsinställningar</string>
+  <!-- ActionBar Buttons - Done -->
   <string name="actionbar_button_selection_done_cd">Färdig</string>
+  <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">Åtgärder</string>
+  <!-- ActionBar Buttons - Search -->
   <string name="actionbar_button_search_cd">Sök</string>
+  <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">Fler alternativ</string>
+  <!-- ActionBar Buttons - Storage volumes -->
   <string name="actionbar_button_storage_cd">Lagringsvolymer</string>
+  <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">Spara</string>
+  <!-- ActionBar Buttons - Print -->
   <string name="actionbar_button_print_cd">Skriv ut</string>
+  <!-- Navigation View - Sort - Sort by name (ascending) -->
   <string name="sort_by_name_asc">Efter namn \u25B2</string>
+  <!-- Navigation View - Sort - Sort by name (descending) -->
   <string name="sort_by_name_desc">Efter namn ▼</string>
+  <!-- Navigation View - Sort - Sort by date (ascending) -->
   <string name="sort_by_date_asc">Efter datum ▲</string>
+  <!-- Navigation View - Sort - Sort by date (descending) -->
   <string name="sort_by_date_desc">Efter datum ▼</string>
+  <!-- Navigation View - Sort - Sort by size (ascending) -->
   <string name="sort_by_size_asc">Per storlek \u25B2</string>
+  <!-- Navigation View - Sort - Sort by size (descending) -->
   <string name="sort_by_size_desc">Per storlek \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (ascending) -->
   <string name="sort_by_type_asc">Per typ \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (descending) -->
   <string name="sort_by_type_desc">Per typ \u25BC</string>
+  <!-- Navigation View - Layout - Icons -->
   <string name="layout_icons">Ikoner</string>
+  <!-- Navigation View - Layout - Simple -->
   <string name="layout_simple">Enkel</string>
+  <!-- Navigation View - Layout - Details -->
   <string name="layout_details">Detaljerad</string>
+  <!-- Navigation View - View - Show folders first -->
   <string name="cm_filemanager_show_dirs_first">Visa mappar först</string>
+  <!-- Navigation View - View - Show hidden files option -->
   <string name="cm_filemanager_show_hidden">Visa dolda filer</string>
+  <!-- Navigation View - View - Show system files option -->
   <string name="cm_filemanager_show_system">Visa systemfiler</string>
+  <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">Visa symlänkar</string>
+  <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">Ingen information</string>
+  <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">Det finns ingen information tillgänglig om filsystemet.</string>
+  <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">Filsystemet kan inte monteras/avmonteras.</string>
+  <!-- Filesystem Info - Not allowed message -->
   <string name="filesystem_info_mount_not_allowed_msg">Filsystemsmontering är inte tillåtet i Säkert läge. Tryck för att växla till Rootläge.</string>
+  <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">Filsystemsmonteringen misslyckades.
     Vissa filsystem, som SD-kort, kan inte monteras/avmonteras för att
     de är inbyggda som read-only.</string>
+  <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">Filsystemsinformation</string>
+  <!-- Filesystem Info Dialog - Tab - Info -->
   <string name="filesystem_info_dialog_tab_info">Information</string>
+  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">Diskanvändning</string>
+  <!-- Filesystem Info Dialog - Status Label -->
   <string name="filesystem_info_dialog_status">Monterad:</string>
+  <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">Monteringspunkt:</string>
+  <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">Enhet:</string>
+  <!-- Filesystem Info Dialog - Type Label -->
   <string name="filesystem_info_dialog_type">Typ:</string>
+  <!-- Filesystem Info Dialog - Options Label -->
   <string name="filesystem_info_dialog_options">Alternativ:</string>
+  <!-- Filesystem Info Dialog - Dump/Pass Label -->
   <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
+  <!-- Filesystem Info Dialog - Virtual Label -->
   <string name="filesystem_info_dialog_virtual">Virtuell:</string>
+  <!-- Filesystem Info Dialog - Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">Totalt:</string>
+  <!-- Filesystem Info Dialog - Used Disk Usage -->
   <string name="filesystem_info_dialog_used_disk_usage">Använt:</string>
+  <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Ledigt:</string>
+  <!-- Fso Properties - Not allowed message -->
   <string name="fso_properties_permissions_not_allowed_msg">Rättighetsåtgärder är inte tillåtna i Säkert läge. Tryck för att växla till Rootläge.</string>
+  <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">Ägarbytesåtgärden misslyckades.\n\nAv säkerhetsskäl tillåter inte vissa filsystem, som SD-kort, ägarskapsbyten.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">Gruppbytesåtgärden misslyckades.\n\n
     Av säkerhetsskäl tillåter inte vissa filsystem, som SD-kort, gruppbyten.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_permission_msg">Rättighetsbytet misslyckades.\n\nAv säkerhetsskäl tillåter inte vissa filsystem, som SD-kort, rättighetsbyten.</string>
+  <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">Egenskaper</string>
+  <!-- Fso Properties Dialog - Tab - Info -->
   <string name="fso_properties_dialog_tab_info">Information</string>
+  <!-- Fso Properties Dialog - Tab - Permissions -->
   <string name="fso_properties_dialog_tab_permissions">Rättigheter</string>
+  <!-- Fso Properties Dialog - Name Label -->
   <string name="fso_properties_dialog_name">Namn:</string>
+  <!-- Fso Properties Dialog - Parent Folder Label -->
   <string name="fso_properties_dialog_parent">Plats:</string>
+  <!-- Fso Properties Dialog - Type Label -->
   <string name="fso_properties_dialog_type">Typ:</string>
+  <!-- Fso Properties Dialog - Category Label -->
   <string name="fso_properties_dialog_category">Kategori:</string>
+  <!-- Fso Properties Dialog - Link Label -->
   <string name="fso_properties_dialog_link">Länk:</string>
+  <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">Storlek:</string>
+  <!-- Fso Properties Dialog - Contains Label -->
   <string name="fso_properties_dialog_contains">Innehåller:</string>
+  <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <string name="fso_properties_dialog_last_accessed_date">Använd:</string>
+  <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">Modifierad:</string>
+  <!-- Fso Properties Dialog - Last Changed Time -->
   <string name="fso_properties_dialog_last_changed_date">Ändrad:</string>
+  <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">Ägare:</string>
+  <!-- Fso Properties Dialog - Group Label -->
   <string name="fso_properties_dialog_group">Grupp:</string>
+  <!-- Fso Properties Dialog - Others Label -->
   <string name="fso_properties_dialog_others">Andra:</string>
+  <!-- Fso Properties Dialog - Special Label -->
+  <!-- Fso Properties Dialog - Read Label -->
+  <!-- Fso Properties Dialog - Write Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Skip media scan -->
   <string name="fso_properties_dialog_include_in_media_scan">Hoppa över mediaskanning:</string>
   <string name="fso_failed_to_allow_media_scan">Misslyckades med att tillåta mediaskanning</string>
   <string name="fso_failed_to_prevent_media_scan">Misslyckades med att hindra mediaskanning</string>
@@ -150,139 +274,263 @@
   <string name="fso_delete_nomedia_dir_body">Detta bibliotek innehåller ett .nomedia-bibliotek\n\nVill du ta bort det och allt dess innehåll?</string>
   <string name="fso_delete_nomedia_non_empty_title">Ta bort .nomedia-fil</string>
   <string name="fso_delete_nomedia_non_empty_body">Detta bibliotek innehåller en icke-tom .nomedia-fil\n\nVill du ta bort den?</string>
+  <!-- History - History activity title -->
   <string name="history">Historik</string>
+  <!-- History - The history is empty -->
   <string name="msgs_history_empty">Historiken är tom.</string>
-  <string name="msgs_history_unknown">Okänt historikföremål.</string>
+  <!-- History - The history reference is not in the actual history list -->
+  <string name="msgs_history_unknown">Okänt historikobjekt.</string>
+  <!-- Search - Search activity title -->
   <string name="search">Sökresultat</string>
+  <!-- Search - Search hint message -->
   <string name="search_hint">Skriv in din sökning</string>
+  <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">Tala in din sökning</string>
+  <!-- Search - Search error message -->
   <string name="search_error_msg">Ett fel inträffade under sökning. Inga resultat funna.</string>
+  <!-- Search - Search no results message -->
   <string name="search_no_results_msg">Inga resultat funna.</string>
+  <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> i
     <xliff:g id="path">%2$s</xliff:g></string>
+  <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>Terms:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Search - Confirm search -->
   <string name="search_few_characters_title">Bekräfta sökning</string>
+  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">Några av söktermerna har få tecken. Sökåtgärden kan bli väldigt kostsam i tid och systemresurser.\n\nVill du fortsätta?</string>
+  <!-- Search - Searching dialog title -->
   <string name="searching">Var god vänta\u2026</string>
+  <!-- Search - Searching label -->
   <string name="searching_action_label">Sökning pågår</string>
+  <!-- Picker Activity -->
+  <!-- Picker Activity - Dialog title -->
   <string name="picker_title">Välj en fil</string>
   <string name="directory_picker_title">Välj ett bibliotek</string>
+  <!-- Editor - Editor activity title -->
   <string name="editor">Redigerare</string>
+  <!-- Editor - Invalid file message -->
   <string name="editor_invalid_file_msg">Ogiltig fil.</string>
+  <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">Kan inte hitta filen.</string>
+  <!-- Editor - File size exceed the limit -->
   <string name="editor_file_exceed_size_msg">Filen är för stor för att öppnas på denna enhet.</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">Bekräfta avslut</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <string name="editor_dirty_ask_msg">Det finns osparade ändringar.\n\nAvsluta utan att spara?</string>
+  <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">Filen sparades framgångsrikt.</string>
+  <!-- Editor - Read-only file mode -->
   <string name="editor_read_only_mode">Filen öppnades som read-only.</string>
+  <!-- Editor - Dumping message -->
   <string name="dumping_message">Genererar hex dump\u2026</string>
+  <!-- Editor - Displaying -->
   <string name="displaying_message">Visar\u2026</string>
+  <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">Bokmärken</string>
+  <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">Hem</string>
+  <!-- Bookmarks - Bookmark name - Root folder -->
   <string name="bookmarks_root_folder">Rot</string>
+  <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">System</string>
+  <!-- Bookmarks - Bookmark name - Secure storage -->
   <string name="bookmarks_secure">Skyddad lagring</string>
+  <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">Fjärrlagring</string>
+  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">Välj hemmapp.</string>
+  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">Ta bort bokmärket.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">Bokmärket tillagt.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">Bokmärket finns redan.</string>
+  <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Hemmapp</string>
+  <!-- Initial directory label -->
   <string name="initial_directory_label">Välj Hemmapp:</string>
+  <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Relativa sökvägar är inte tillåtna.</string>
+  <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">Ett fel inträffade när hemmappen sparades.</string>
+  <!-- Menu - Navigation - Search -->
   <string name="menu_search">Sök</string>
+  <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">Inställningar</string>
+  <!-- Menu - History - Clear history -->
   <string name="menu_clear_history">Rensa historik</string>
+  <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">Inga förslag</string>
+  <!-- Menu - Editor - Word wrap -->
   <string name="menu_word_wrap">Radbrytning</string>
+  <!-- Menu - Editor - Sintax highlight -->
   <string name="menu_syntax_highlight">Markera syntax</string>
+  <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - kopiera<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Regular expression for new compressed file -->
   <string name="create_new_compress_file_regexp">
     <xliff:g id="name">%1$s</xliff:g> - ny<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">Utför åtgärd\u2026</string>
+  <!-- Waiting dialog - Copying title -->
   <string name="waiting_dialog_copying_title">Kopierar\u2026</string>
+  <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>Från</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Till</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">Flyttar\u2026</string>
+  <!-- Waiting dialog - Moving message -->
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>Från</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Till</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Deleting title -->
   <string name="waiting_dialog_deleting_title">Raderar\u2026</string>
+  <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg">
     <![CDATA[<b>Fil</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_extracting_title">Extraherar\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg">
     <![CDATA[<b>Fil</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_compressing_title">Komprimerar\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg">
     <![CDATA[<b>Fil</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Analyserar\u2026</b>]]></string>
+  <!-- Extracting - Success message -->
   <string name="msgs_extracting_success">Extraheringsåtgärden genomfördes framgångsrikt. Filerna packades upp till <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Compressing - Success message -->
   <string name="msgs_compressing_success">Komprimeringsåtgärden genomfördes framgångsrikt. Filerna packades till <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">Åtgärder</string>
+  <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">Egenskaper</string>
+  <!-- Actions Dialog - Menu - Refresh -->
   <string name="actions_menu_refresh">Uppdatera</string>
+  <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">Ny mapp</string>
+  <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">Ny fil</string>
+  <!-- Actions Dialog - Menu - Select all -->
   <string name="actions_menu_select_all">Markera alla</string>
+  <!-- Actions Dialog - Menu - Deselect all -->
   <string name="actions_menu_deselect_all">Avmarkera alla</string>
+  <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">Markera</string>
+  <!-- Actions Dialog - Menu - Deselect -->
   <string name="actions_menu_deselect">Avmarkera</string>
+  <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <string name="actions_menu_paste_selection">Kopiera markerade hit</string>
+  <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">Flytta markerade hit</string>
+  <!-- Actions Dialog - Menu - Delete selection -->
   <string name="actions_menu_delete_selection">Ta bort markerade</string>
+  <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">Komprimera markerade</string>
+  <!-- Actions Dialog - Menu - Create link -->
   <string name="actions_menu_create_link">Skapa länk</string>
+  <!-- Actions Dialog - Menu - Open -->
   <string name="actions_menu_open">Öppna</string>
+  <!-- Actions Dialog - Menu - Open with -->
   <string name="actions_menu_open_with">Öppna med</string>
+  <!-- Actions Dialog - Menu - Execute -->
   <string name="actions_menu_execute">Kör</string>
+  <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">Skicka</string>
+  <!-- Actions Dialog - Menu - Send selection -->
   <string name="actions_menu_send_selection">Skicka markering</string>
+  <!-- Actions Dialog - Menu - Compress -->
   <string name="actions_menu_compress">Komprimera</string>
+  <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">Extrahera</string>
+  <!-- Actions Dialog - Menu - Delete -->
   <string name="actions_menu_delete">Ta bort</string>
+  <!-- Actions Dialog - Menu - Rename -->
   <string name="actions_menu_rename">Byt namn</string>
+  <!-- Actions Dialog - Menu - Create copy -->
   <string name="actions_menu_create_copy">Skapa kopia</string>
+  <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">Egenskaper</string>
+  <!-- Actions Dialog - Menu - Add to bookmarks -->
   <string name="actions_menu_add_to_bookmarks">Lägg till bokmärken</string>
+  <!-- Actions Dialog - Menu - Add shortcut -->
   <string name="actions_menu_add_shortcut">Lägg till genväg</string>
+  <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">Öppna övermapp</string>
+  <!-- Actions Dialog - Menu - Compute checksum -->
   <string name="actions_menu_compute_checksum">Beräkna kontrollsumma</string>
+  <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">Skriv ut</string>
+  <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">Ange som hem</string>
+  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">
     Denna åtgärd kan inte ångras. Vill du fortsätta?</string>
+  <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">Namn:</string>
+  <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">Namnet kan inte vara tomt.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_path_name">Ogiltigt namn. Tecknena
     \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' är inte tillåtna.</string>
+  <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">Högsta tillåtna teckengränsen nådd.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_name">Ogiltigt namn. Namnen \'.\' och
     \'..\' är inte tillåtna.</string>
+  <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">Namnet finns redan.</string>
+  <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">Associeringar</string>
+  <!-- Associations Dialog - Remember the user action -->
   <string name="associations_dialog_remember">Kom ihåg markering</string>
+  <!-- Associations Dialog - Open with Title -->
   <string name="associations_dialog_openwith_title">Öppna med</string>
+  <!-- Associations Dialog - Open action (button title) -->
   <string name="associations_dialog_openwith_action">Öppna</string>
+  <!-- Associations Dialog - Send with Title -->
   <string name="associations_dialog_sendwith_title">Skicka med</string>
+  <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">Skicka</string>
+  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">Inget att slutföra.</string>
+  <!-- Execution console - Title -->
   <string name="execution_console_title">Konsol</string>
+  <!-- Execution console - The script name label -->
   <string name="execution_console_script_name_label">Skript:</string>
+  <!-- Execution console - The script execution time label -->
   <string name="execution_console_script_execution_time_label">Tid:</string>
+  <!-- Execution console - The script exit code label -->
   <string name="execution_console_script_exitcode_label">Utgångskod:</string>
+  <!-- Execution console - The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text">
     <xliff:g id="seconds">%1$s</xliff:g> sek.</string>
+  <!-- Compute checksum - Title -->
   <string name="compute_checksum_title">Beräkna kontrollsumma</string>
+  <!-- Compute checksum - The file name label -->
   <string name="compute_checksum_filename_label">Fil:</string>
+  <!-- Compute checksum - The MD5 label -->
+  <!-- Compute checksum - The SHA1 label -->
+  <!-- Compute checksum - The computing checksum message-->
   <string name="compute_checksum_computing_checksum_msg">Beräknar kontrollsumma\u2026</string>
+  <!-- Mime/Types - Folder -->
   <string name="mime_folder">Mapp</string>
+  <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">Symlink</string>
+  <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">Okänd</string>
+  <!--  Filetime formats -->
   <string name="filetime_format_mode_system">Efter system</string>
   <string name="filetime_format_mode_locale">Efter språk</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/åååå hh:mm:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/åååå hh:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">åååå-mm-dd hh:mm:ss</string>
+  <!-- Selection -->
+  <!-- For example "2 folders and 1 file selected." -->
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> och <xliff:g id="files">%2$s</xliff:g> markerade.</string>
+  <!-- Category descriptions -->
   <string name="category_system">SYSTEM</string>
   <string name="category_app">APP</string>
   <string name="category_binary">BINÄR</string>
@@ -299,87 +547,171 @@
   <string name="category_video">VIDEO</string>
   <string name="category_security">SÄKERHET</string>
   <string name="category_all">ALLA</string>
+  <!-- Compression - Compression modes dialog title -->
   <string name="compression_mode_title">Kompressionstyp</string>
+  <!-- Compression - Supported archive and compression modes -->
+  <!-- Shortcut. Failed to handle the shortcut -->
   <string name="shortcut_failed_msg">Misslyckades med att hantera genvägen.</string>
+  <!-- Shortcut. The shortcut was created -->
   <string name="shortcut_creation_success_msg">Genvägen skapades framgångsrikt.</string>
+  <!-- Shortcut. The shortcut wasn't created -->
   <string name="shortcut_creation_failed_msg">Misslyckades med att skapa genväg.</string>
+  <!-- Preferences title -->
   <string name="pref">Inställningar</string>
+  <!-- Preferences - General title -->
   <string name="pref_general">Allmäna inställningar</string>
+  <!-- Preferences - Search title -->
   <string name="pref_search">Sökinställningar</string>
+  <!-- Preferences - Storage title -->
   <string name="pref_storage">Lagringsalternativ</string>
+  <!-- Preferences - Editor title -->
   <string name="pref_editor">Redigerarinställningar</string>
+  <!-- Preferences - Themes title -->
   <string name="pref_themes">Teman</string>
+  <!-- Preferences - About title -->
   <string name="pref_about">Om</string>
+  <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">Allmänt</string>
+  <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">Skriftlägeskänslig</string>
+  <!-- Preferences - General - Case sensitive sort and navigating summary -->
   <string name="pref_case_sensitive_sort_summary">Överväger skriftläge vid navigering eller sortering av sökresultat</string>
+  <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">Datum-/tidformat</string>
+  <!-- Preferences - General -Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">Varning vid diskanvändning</string>
+  <!-- Preferences - General - Disk usage warning level summary -->
+  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
+         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
   <string name="pref_disk_usage_warning_level_summary" formatted="false">Visa diskanvändningswidgets i en annan färg när de når <xliff:g id="level">%1$s</xliff:g> procent
     ledigt utrymme</string>
+  <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Beräkna mappstatistik</string>
+  <!-- Preferences - General - Compute folder statistics summary on -->
   <string name="pref_compute_folder_statistics_on">Varning! Beräkningen av mappstatistik är kostsamt i tid och systemresurser</string>
+  <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">Förhandsgranska</string>
+  <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">Visa en förhandsgranskningsbild för appar, musik, bilder och videor</string>
+  <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Använd svepgester</string>
+  <!-- Preferences - General - Use flinger detection summary -->
   <string name="pref_use_flinger_summary">Använd ett svep från vänster till till höger för att radera filer eller mappar</string>
+  <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Avancerat</string>
+  <!-- Preferences - General - Access mode -->
   <string name="pref_access_mode">Behörighet</string>
+  <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">Säkert läge</string>
+  <!-- Preferences - General - Safe mode summary -->
   <string name="pref_access_mode_safe_summary">Säkert läge\n\nAppen körs utan rättigheter och de enda tillgängliga filsystemen är lagringsvolymerna (SD-kort och USB)</string>
+  <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">Promptläge</string>
+  <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">Promptläge\n\nAppen körs med full behörighet till filsystemet men kommer att fråga om tillstånd innan körning av förhöjda åtgärder</string>
+  <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">Rootläge</string>
+  <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">Rootläge\n\nVarning! Detta läge möjliggör åtgärder som kan skada din enhet. Det är ditt eget ansvar att försäkra dig om att en åtgärd är säker</string>
+  <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">Begränsa användaråtkomst</string>
+  <!-- Preferences - General - Restrict secondary users access summary -->
   <string name="pref_restrict_secondary_users_access_summary">Begränsa åtkomst till hela systemet för sekundära användare</string>
+  <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">Resultat</string>
+  <!-- Preferences - Search - Show relevance widget -->
   <string name="pref_show_relevance_widget">Visa relevans</string>
+  <!-- Preferences - Search - Highlight search terms -->
   <string name="pref_highlight_terms">Markera söktermer</string>
+  <!-- Preferences - Search - Sort results mode -->
   <string name="pref_sort_search_results_mode">Sortera resultat</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">Sortera inte</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_name">Efter namn</string>
+  <!-- Preferences - Search - Sort results mode. Relevance -->
   <string name="pref_sort_search_results_mode_relevance">Efter relevans</string>
+  <!-- Preferences - Search - Privacity category -->
   <string name="pref_search_privacity_category">Integritet</string>
+  <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">Spara söktermer</string>
+  <!-- Preferences - Search - Save search terms summary on -->
   <string name="pref_save_search_terms_on">Söktermer kommer att sparas och användas som förslag i framtida sökningar</string>
+  <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">Söktermer kommer inte att sparas</string>
+  <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">Ta bort sparade söktermer</string>
+  <!-- Preferences - Search - Remove saved search terms summary -->
   <string name="pref_remove_saved_search_terms_summary">Tryck för att ta bort alla sparade söktermer</string>
+  <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">Alla sparade söktermer togs bort</string>
+  <!-- Preferences - Storage - Secure Storage category -->
   <string name="pref_secure_storage_category">Skyddad lagring</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">Fördröjd synkronisering</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <string name="pref_secure_storage_delayed_sync_summary">Synkronisering av skyddade filsystem är en kostsam operation. Aktivera detta alternativ för att tillåta snabbare respons efter varje operation, utför synkroniseringen när filsystemet inte används, men på bekostnad av att förlora den väntande informationen om appen kraschar.</string>
+  <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">Byt lösenord</string>
+  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">Ta bort lagringsenhet</string>
+  <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">Beteende</string>
+  <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">Inga förslag</string>
+  <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">Visa inte ordboksförslag vid redigering av fil</string>
+  <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">Radbrytning</string>
+  <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">Hexdumpbinärfiler</string>
+  <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">Vid öppning av en binärfil genereras en hexdump av filen som sedan öppnas i hexläsaren</string>
+  <!-- Preferences - Editor - Syntax highlight category -->
   <string name="pref_editor_syntax_highlight_category">Markera syntax</string>
+  <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">Markera syntax</string>
+  <!-- Preferences - Editor - Syntax highlight summary -->
   <string name="pref_syntax_highlight_desc">Markera syntaxen för den fil som visas i redigeraren (endast när en processor för att markera syntaxen för filtypen är tillgänglig)</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">Färgschema</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
   <string name="pref_syntax_highlight_color_scheme_desc">Välj färgschema för syntaxmarkering</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">Använd standardtema</string>
+  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <string name="pref_syntax_sh_use_theme_default_desc">Använd nuvarande temas standardsyntaxmarkering</string>
-  <string name="pref_editor_sh_item_category">Föremål</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
+  <string name="pref_editor_sh_item_category">Objekt</string>
+  <!-- Preferences - Themes - Themes selection category -->
   <string name="pref_themes_selection_category">Teman</string>
+  <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">Välj tema</string>
+  <!-- Preferences - Themes - Confirmation message -->
   <string name="pref_themes_confirmation">Temat tillämpades med framgång.</string>
+  <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">Temat hittades inte.</string>
+  <!-- Preferences - Debug - Capture debug traces -->
   <string name="pref_debug_traces">Logga debuginformation</string>
+  <!-- Themes - Default theme name -->
   <string name="theme_default_name">Ljust tema</string>
+  <!-- Themes - Default theme description -->
   <string name="theme_default_description">Ett ljust tema för CyanogenMods filhanterare.</string>
+  <!-- Themes - Default theme author -->
   <string name="themes_author">CyanogenMod</string>
+  <!-- Navigation drawer -->
   <string name="drawer_open">Öppna navigeringsmeny</string>
   <string name="drawer_close">Stäng navigeringsmeny</string>
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">Alfa</string>
+  <!-- The label of the current color panel -->
   <string name="color_picker_current_text">Nuvarande:</string>
+  <!-- The label of the new color panel -->
   <string name="color_picker_new_text">Ny:</string>
+  <!-- The label of the color input -->
   <string name="color_picker_color">Färg:</string>
+  <!-- Android Syntax Highlight -->
   <string name="ash_reset_color_scheme">Återställ till temats standardfärgschema</string>
   <string name="ash_text">Text</string>
   <string name="ash_assignment">Tilldelning</string>
@@ -388,33 +720,63 @@
   <string name="ash_keyword">Nyckelord</string>
   <string name="ash_quoted_string">Statisk sträng</string>
   <string name="ash_variable">Variabel</string>
+  <!-- Secure Storage -->
+  <!-- Secure Storage dialog title - Unlock -->
   <string name="secure_storage_unlock_title">Lås upp säker lagring</string>
+  <!-- Secure Storage dialog title - Create -->
   <string name="secure_storage_create_title">Skapa säker lagring</string>
+  <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">Återställ lösenord</string>
+  <!-- Secure Storage dialog title - Delete -->
   <string name="secure_storage_delete_title">Ta bort säker lagring</string>
+  <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">Ange ett lösenord för att skydda filsystemet.</string>
+  <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">Ange ett lösenord för att skydda filsystemet.</string>
+  <!-- Secure Storage unlock dialog message (reset the current password) -->
   <string name="secure_storage_unlock_key_reset_msg">Ange det nuvarande och nya lösenordet för att återställa det skyddade filsystemet.</string>
+  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">Ange det aktuella lösenordet för att ta bort det skyddade filsystemet.</string>
+  <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">Tidigare lösenord:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_new_key_title">Nytt Lösenord:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">Lösenord:</string>
+  <!-- Secure Storage unlock dialog repeat key title-->
   <string name="secure_storage_unlock_repeat_title">Upprepa lösenord:</string>
+  <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">Skapa</string>
+  <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Lås upp</string>
+  <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">Återställ</string>
+  <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Ta bort</string>
+  <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">Kan inte låsa upp filsystemet</string>
+  <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">Lösenordet måste ha minst <xliff:g id="characters">%1$d </xliff:g> tecken.</string>
+  <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">Lösenorden stämmer inte överens.</string>
+  <!-- Secure storage open file warning -->
   <string name="secure_storage_open_file_warning">Detta kommer att kopiera filen till en tillfällig okrypterad plats. Detta kommer att nollställas efter 1 timme.</string>
+  <!-- Print messages -->
+  <!-- Unsupported document format -->
   <string name="print_unsupported_document">Dokumentformatet stöds ej</string>
+  <!-- Unsupported image format -->
   <string name="print_unsupported_image">Bildformat stöds ej</string>
+  <!-- Print header -->
   <string name="print_document_header">Dokument: <xliff:g id="document_name">%1$s</xliff:g></string>
+  <!-- Print footer -->
   <string name="print_document_footer">Sida <xliff:g id="page_number">%1$s</xliff:g></string>
+  <!-- Security - Extract relative or absolute files -->
   <string name="security_warning_extract">Varning!\n\nExtrahering av arkiv till relativa eller absolut sökvägar kan orsaka skada i din enhet genom att skriva över systemfiler.\n\nVill du fortsätta?</string>
+  <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">Ändringslogg</string>
+  <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Välkommen</string>
+  <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Välkommen till CyanogenMods filhanterare.\n\nDenna app låter dig utforska filsystemet och genomföra åtgärder som kan skada din enhet. För att motverka skada startar appen i ett säkert läge utan rättigheter.\n\nDu kan komma åt det avancerade läget med fulla rättigheter i Inställningar. Det är ditt ansvar att försäkra dig om att en åtgärd inte skadar din enhet.\n\nThe CyanogenMod Team.\n</string>
   <string name="activity_not_found_exception">Kunde inte hitta en app för att öppna den här filen</string>
   <string name="storage_permissions_denied">Filhanteraren behöver behörighet till lagring för att kunna visa dina filer.</string>

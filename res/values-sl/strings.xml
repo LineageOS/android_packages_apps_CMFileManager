@@ -16,129 +16,253 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- The name of the app -->
   <string name="app_name">Upravljalnik datotek</string>
+  <!-- The description of the app -->
   <string name="app_description">Upravljalnik datotek CyanogenMod</string>
+  <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">kB</string>
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">GB</string>
+  <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
+  <!-- Devices types -->
   <string name="device_blockdevice">Bločna naprava</string>
   <string name="device_characterdevice">Znakovna naprava</string>
   <string name="device_namedpipe">Poimenovana cev</string>
   <string name="device_domainsocket">Vtič domene</string>
+  <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
+  <!-- Default buttons -->
   <string name="yes">Da</string>
   <string name="no">Ne</string>
   <string name="all">Vse</string>
   <string name="overwrite">Prepiši</string>
   <string name="select">Izberi</string>
+  <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<Korenska mapa>]]></string>
+  <!-- The search result name -->
   <string name="search_result_name">Iskanje: <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Loading waiting message -->
   <string name="loading_message">Nalaganje \u2026</string>
+  <!-- Computing message -->
+  <!-- Computing new line message -->
+  <!-- Cancelled message -->
   <string name="cancelled_message">Preklicano.</string>
+  <!-- Error message -->
   <string name="error_message">Napaka.</string>
+  <!-- Copy text content description -->
   <string name="copy_text_cd">Tapnite, če želite kopirati besedilo na odložišče</string>
+  <!-- Copy text content message -->
   <string name="copy_text_msg">Besedilo kopirano na odložišče</string>
+  <!-- Warning dialog title -->
   <string name="warning_title">Opozorilo</string>
+  <!-- Error dialog title -->
   <string name="error_title">Napaka</string>
+  <!-- Confirm operation dialog title -->
   <string name="confirm_operation">Potrdi opravilo</string>
+  <!-- Confirm overwrite dialog title -->
   <string name="confirm_overwrite">Potrdi prepis</string>
+  <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">Potrdi izbris</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Potrdi zamenjavo</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
   <string name="msgs_change_to_prompt_access_mode_msg">Ni mogoče zagnati v načinu Skrbniškega dostopa. Spreminjanje v Varni način\n\nUveljavi to spremembo?</string>
+  <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">Zahtevanih dovoljenj za delovanje ni mogoče pridobiti.</string>
+  <!-- The message shown when an allocation of a privileged console fails, and a non
+         privileged is allocated -->
   <string name="msgs_privileged_console_alloc_failed">Ni mogoče zagnati v načinu Skrbniškega dostopa. Spreminjanje v Varni način.</string>
+  <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Nastavitve ni mogoče uveljaviti ali shraniti.</string>
+  <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">Začetna mapa \'<xliff:g id="initial_dir">%1$s</xliff:g>\' je neveljavna. Spreminjanje v korensko mapo.</string>
+  <!-- Root is not available message -->
   <string name="root_not_available_msg">Skrbniški dostop ni na voljo na tej napravi. Tega opravila ni mogoče izvesti.</string>
+  <!-- Success -->
   <string name="msgs_success">Opravilo je bilo uspešno končano.</string>
+  <!-- Unknown error -->
   <string name="msgs_unknown">Zaznana je bila napaka. Opravilo ni uspelo.</string>
+  <!-- When an operation requires elevated privileged (normally caused for the use of a
+         non-privileged console) -->
   <string name="msgs_insufficient_permissions">To opravilo zahteva skrbniška dovoljenja. Poskusite spremeniti v način Skrbniškega dostopa.</string>
+  <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">To opravilo je spodletelo, ker na napravi ni več prostora.</string>
+  <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">Datoteke ali mape ni bilo mogoče najti.</string>
+  <!-- The command reference couldn't be created (not found or invalid definition)
+         (normally caused by a development error) -->
   <string name="msgs_command_not_found">Ukaza opravila ni bilo mogoče najti ali pa ima neveljavno določilo.</string>
+  <!-- I/O exception -->
   <string name="msgs_io_failed">Branje/pisanje je spodletelo.</string>
+  <!-- Operation timeout detected -->
   <string name="msgs_operation_timeout">Opravilo je poteklo.</string>
+  <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">Opravilo je spodletelo.</string>
+  <!-- A console couldn't be allocated -->
   <string name="msgs_console_alloc_failure">Prišlo je do notranje napake.</string>
+  <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">Opravila ni mogoče preklicati.</string>
+  <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">Datotečni sistem je samo za branje. Poskusite priklopiti datotečni sistem v načinu za branje-pisanje pred poskusom opravila.</string>
+  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">Neveljaven argument. Priklic ni uspel.</string>
+  <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">Opravilo ni dovoljeno, ker bi to ustvarilo neskladja.</string>
+  <!-- Operation not permitted in the current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">Ciljna mapa ne more biti podmapa izvorne mape ali ista kot izvorna.</string>
+  <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">Pritisnite znova za izhod.</string>
+  <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">Nobena aplikacija ni registrirana za obravnavo izbrane vrste datoteke.</string>
+  <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">Nekatere mape že obstajajo v ciljni mapi.\n\nPrepiši?</string>
+  <!-- The association of an action to the app failed -->
+  <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">Opravilo zahteva skrbniška dovoljenja.\n\nAli želite spremeniti v način Skrbniškega dostopa?</string>
+  <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Nadrejena mapa</string>
+  <!-- External storage descripton -->
   <string name="external_storage">Zunanja pomnilniška naprava</string>
+  <!-- Usb storage descripton -->
   <string name="usb_storage">Pomnilniška naprava USB</string>
+  <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">Podatki o datotečnem sistemu</string>
+  <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">Način razvrščanja</string>
+  <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">Način razporeditve</string>
+  <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">Druge možnosti pogleda</string>
+  <!-- ActionBar Buttons - Done -->
   <string name="actionbar_button_selection_done_cd">Končano</string>
+  <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">Dejanja</string>
+  <!-- ActionBar Buttons - Search -->
   <string name="actionbar_button_search_cd">Iskanje</string>
+  <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">Več možnosti</string>
+  <!-- ActionBar Buttons - Storage volumes -->
   <string name="actionbar_button_storage_cd">Nosilci pomnilniške naprave</string>
+  <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">Shrani</string>
+  <!-- ActionBar Buttons - Print -->
   <string name="actionbar_button_print_cd">Natisni</string>
+  <!-- Navigation View - Sort - Sort by name (ascending) -->
   <string name="sort_by_name_asc">Po imenu \u25B2</string>
+  <!-- Navigation View - Sort - Sort by name (descending) -->
   <string name="sort_by_name_desc">Po imenu \u25BC</string>
+  <!-- Navigation View - Sort - Sort by date (ascending) -->
   <string name="sort_by_date_asc">Po datumu \u25B2</string>
+  <!-- Navigation View - Sort - Sort by date (descending) -->
   <string name="sort_by_date_desc">Po datumu \u25BC</string>
+  <!-- Navigation View - Sort - Sort by size (ascending) -->
   <string name="sort_by_size_asc">Po velikosti \u25B2</string>
+  <!-- Navigation View - Sort - Sort by size (descending) -->
   <string name="sort_by_size_desc">Po velikosti \u25BC</string>
+  <!-- Navigation View - Sort - Sort by type (ascending) -->
   <string name="sort_by_type_asc">Po vrsti \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (descending) -->
   <string name="sort_by_type_desc">Po vrsti \u25BC</string>
+  <!-- Navigation View - Layout - Icons -->
   <string name="layout_icons">Ikone</string>
+  <!-- Navigation View - Layout - Simple -->
   <string name="layout_simple">Enostavna</string>
+  <!-- Navigation View - Layout - Details -->
   <string name="layout_details">Podrobnosti</string>
+  <!-- Navigation View - View - Show folders first -->
   <string name="cm_filemanager_show_dirs_first">Najprej prikaži mape</string>
+  <!-- Navigation View - View - Show hidden files option -->
   <string name="cm_filemanager_show_hidden">Prikaži skrite datoteke</string>
+  <!-- Navigation View - View - Show system files option -->
   <string name="cm_filemanager_show_system">Prikaži sistemske datoteke</string>
+  <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">Prikaži simbolične povezave</string>
+  <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">Brez podatkov</string>
+  <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">Za datotečni sistem ni na voljo nobenih podatkov.</string>
+  <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">Datotečnega sistema ni mogoče priklopiti/odklopiti.</string>
+  <!-- Filesystem Info - Not allowed message -->
   <string name="filesystem_info_mount_not_allowed_msg">Opravila priklapljanja datotečnih sistemov niso dovoljena v Varnem načinu. Tapnite, da spremenite v način Skrbniškega dostopa.</string>
+  <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">Opravilo priklapljanja datotečnega sistema je spodletelo. Nekaterih datotečnih sistemov, kot so kartice SD, ni mogoče priklopiti/odklopiti, ker so vgrajeni samo za branje.</string>
+  <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">Podatki o datotečnem sistemu</string>
+  <!-- Filesystem Info Dialog - Tab - Info -->
   <string name="filesystem_info_dialog_tab_info">Podatki</string>
+  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">Uporaba diska</string>
+  <!-- Filesystem Info Dialog - Status Label -->
   <string name="filesystem_info_dialog_status">Priklopljeno:</string>
+  <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">Priklopna točka:</string>
+  <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">Naprava:</string>
+  <!-- Filesystem Info Dialog - Type Label -->
   <string name="filesystem_info_dialog_type">Vrsta:</string>
+  <!-- Filesystem Info Dialog - Options Label -->
   <string name="filesystem_info_dialog_options">Možnosti:</string>
+  <!-- Filesystem Info Dialog - Dump/Pass Label -->
   <string name="filesystem_info_dialog_dump_pass">Izpis / Prelet:</string>
+  <!-- Filesystem Info Dialog - Virtual Label -->
   <string name="filesystem_info_dialog_virtual">Navidezno:</string>
+  <!-- Filesystem Info Dialog - Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">Skupaj:</string>
+  <!-- Filesystem Info Dialog - Used Disk Usage -->
   <string name="filesystem_info_dialog_used_disk_usage">Uporabljeno:</string>
+  <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Prosto:</string>
+  <!-- Fso Properties - Not allowed message -->
   <string name="fso_properties_permissions_not_allowed_msg">Opravila dovoljenj niso dovoljena v Varnem načinu. Tapnite, da spremenite v način Skrbniškega dostopa.</string>
+  <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">Opravilo spremembe lastnika ni uspelo.\n\nNekateri datotečni sistemi, kot so kartice SD, ne dovolijo spreminjanja lastnikov iz varnostnih razlogov.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">Opravilo spremembe skupine ni uspelo.\n\nNekateri datotečni sistemi, kot so kartice SD, ne dovolijo spreminjanja skupin iz varnostnih razlogov.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_permission_msg">Opravilo spremembe dovoljenj ni uspelo.\n\nNekateri datotečni sistemi, kot so kartice SD, ne dovolijo spreminjanja dovoljenj iz varnostnih razlogov.</string>
+  <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">Lastnosti</string>
+  <!-- Fso Properties Dialog - Tab - Info -->
   <string name="fso_properties_dialog_tab_info">Podatki</string>
+  <!-- Fso Properties Dialog - Tab - Permissions -->
   <string name="fso_properties_dialog_tab_permissions">Dovoljenja</string>
+  <!-- Fso Properties Dialog - Name Label -->
   <string name="fso_properties_dialog_name">Ime:</string>
+  <!-- Fso Properties Dialog - Parent Folder Label -->
   <string name="fso_properties_dialog_parent">Nadrejena mapa:</string>
+  <!-- Fso Properties Dialog - Type Label -->
   <string name="fso_properties_dialog_type">Vrsta:</string>
+  <!-- Fso Properties Dialog - Category Label -->
   <string name="fso_properties_dialog_category">Kategorija:</string>
+  <!-- Fso Properties Dialog - Link Label -->
   <string name="fso_properties_dialog_link">Povezava:</string>
+  <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">Velikost:</string>
+  <!-- Fso Properties Dialog - Contains Label -->
   <string name="fso_properties_dialog_contains">Vsebuje:</string>
+  <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <string name="fso_properties_dialog_last_accessed_date">Dostopano:</string>
+  <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">Spremenjeno:</string>
+  <!-- Fso Properties Dialog - Last Changed Time -->
   <string name="fso_properties_dialog_last_changed_date">Spremenjeno:</string>
+  <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">Lastnik:</string>
+  <!-- Fso Properties Dialog - Group Label -->
   <string name="fso_properties_dialog_group">Skupina:</string>
+  <!-- Fso Properties Dialog - Others Label -->
   <string name="fso_properties_dialog_others">Ostalo:</string>
+  <!-- Fso Properties Dialog - Special Label -->
+  <!-- Fso Properties Dialog - Read Label -->
+  <!-- Fso Properties Dialog - Write Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Skip media scan -->
   <string name="fso_properties_dialog_include_in_media_scan">Preskoči preiskovanje nosilcev:</string>
   <string name="fso_failed_to_allow_media_scan">Dovolitev preiskovanja nosilca je spodletela</string>
   <string name="fso_failed_to_prevent_media_scan">Onemogočanje preiskovanja nosilca je spodletelo</string>
@@ -146,130 +270,254 @@
   <string name="fso_delete_nomedia_dir_body">Ta mapa vsebuje mapo .nomedia.\n\nAli jo želite izbrisati z vso njeno vsebino?</string>
   <string name="fso_delete_nomedia_non_empty_title">Izbriši datoteko .nomedia</string>
   <string name="fso_delete_nomedia_non_empty_body">Ta mapa vsebuje neprazno datoteko .nomedia.\n\nAli jo želite izbrisati?</string>
+  <!-- History - History activity title -->
   <string name="history">Zgodovina</string>
+  <!-- History - The history is empty -->
   <string name="msgs_history_empty">Zgodovina je prazna.</string>
+  <!-- History - The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">Neznan predmet zgodovine.</string>
+  <!-- Search - Search activity title -->
   <string name="search">Rezultati iskanja</string>
+  <!-- Search - Search hint message -->
   <string name="search_hint">Vtipkajte svoje iskanje</string>
+  <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">Izgovorite svoje iskanje</string>
+  <!-- Search - Search error message -->
   <string name="search_error_msg">Med iskanjem se je pojavila napaka. Ni rezultatov.</string>
+  <!-- Search - Search no results message -->
   <string name="search_no_results_msg">Ni najdenih rezultatov.</string>
+  <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> v <xliff:g id="path">%2$s</xliff:g></string>
+  <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>Izrazi:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Search - Confirm search -->
   <string name="search_few_characters_title">Potrdite iskanje</string>
+  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">Nekateri iskalni izrazi imajo majhno število znakov. Opravilo je lahko potratno tako časovno kot s sistemskimi sredstvi.\n\nAli želite nadaljevati?</string>
+  <!-- Search - Searching dialog title -->
   <string name="searching">Počakajte \u2026</string>
+  <!-- Search - Searching label -->
   <string name="searching_action_label">Iskanje je v teku</string>
+  <!-- Picker Activity -->
+  <!-- Picker Activity - Dialog title -->
   <string name="picker_title">Izberite datoteko</string>
   <string name="directory_picker_title">Izberite mapo</string>
+  <!-- Editor - Editor activity title -->
   <string name="editor">Urejevalnik</string>
+  <!-- Editor - Invalid file message -->
   <string name="editor_invalid_file_msg">Neveljavna datoteka.</string>
+  <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">Datoteke ni bilo mogoče najti.</string>
+  <!-- Editor - File size exceed the limit -->
   <string name="editor_file_exceed_size_msg">Datoteke ni mogoče odpreti znotraj te naprave, ker je prevelika.</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">Potrdi izhod</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <string name="editor_dirty_ask_msg">Obstajajo neshranjene spremembe.\n\nKončaj brez shranjevanja?</string>
+  <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">Datoteka je bila uspešno shranjena.</string>
+  <!-- Editor - Read-only file mode -->
   <string name="editor_read_only_mode">Datoteka je odprta v načinu samo za branje.</string>
+  <!-- Editor - Dumping message -->
   <string name="dumping_message">Ustvarjanje šestnajstiškega izpisa \u2026</string>
+  <!-- Editor - Displaying -->
   <string name="displaying_message">Prikazovanje \u2026</string>
+  <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">Zaznamki</string>
+  <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">Domov</string>
+  <!-- Bookmarks - Bookmark name - Root folder -->
   <string name="bookmarks_root_folder">Korenska mapa</string>
+  <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">Sistemska mapa</string>
+  <!-- Bookmarks - Bookmark name - Secure storage -->
   <string name="bookmarks_secure">Varna pomnilniška naprava</string>
+  <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">Oddaljena pomnilniška naprava</string>
+  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">Nastavi začetno mapo.</string>
+  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">Odstrani zaznamek.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">Zaznamek je bil uspešno dodan.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">Zaznamek že obstaja.</string>
+  <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Začetna mapa</string>
+  <!-- Initial directory label -->
   <string name="initial_directory_label">Izberite začetno mapo:</string>
+  <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Relativne poti niso dovoljene.</string>
+  <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">Med shranjevanjem začetne mape je prišlo do napake.</string>
+  <!-- Menu - Navigation - Search -->
   <string name="menu_search">Iskanje</string>
+  <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">Nastavitve</string>
+  <!-- Menu - History - Clear history -->
   <string name="menu_clear_history">Počisti zgodovino</string>
+  <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">Brez predlogov</string>
+  <!-- Menu - Editor - Word wrap -->
   <string name="menu_word_wrap">Prelom besed</string>
+  <!-- Menu - Editor - Sintax highlight -->
   <string name="menu_syntax_highlight">Poudarjanje skladnosti</string>
+  <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - kopija<xliff:g id="extension">%2$s </xliff:g></string>
+  <!-- Regular expression for new compressed file -->
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - novo<xliff:g id="extension">%2$s </xliff:g></string>
+  <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">Izvajanje opravila \u2026</string>
+  <!-- Waiting dialog - Copying title -->
   <string name="waiting_dialog_copying_title">Kopiranje \u2026</string>
+  <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>Iz</b>]]> <xliff:g id="from">%1$s</xliff:g> <![CDATA[<br/><b>v</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">Premikanje \u2026</string>
+  <!-- Waiting dialog - Moving message -->
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>Iz</b>]]> <xliff:g id="from">%1$s</xliff:g> <![CDATA[<br/><b>v</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Deleting title -->
   <string name="waiting_dialog_deleting_title">Brisanje \u2026</string>
+  <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Datoteka</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_extracting_title">Razširjanje \u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Datoteka</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_compressing_title">Stiskanje \u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Datoteka</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Preučevanje \u2026</b>]]></string>
+  <!-- Extracting - Success message -->
   <string name="msgs_extracting_success">Opravilo razširjanja je bilo uspešno končano. Podatki so bili razširjeni v <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Compressing - Success message -->
   <string name="msgs_compressing_success">Opravilo stiskanja je bilo uspešno končano. Podatki so bili stisnjeni v <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">Dejanja</string>
+  <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">Lastnosti</string>
+  <!-- Actions Dialog - Menu - Refresh -->
   <string name="actions_menu_refresh">Osveži</string>
+  <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">Nova mapa</string>
+  <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">Nova datoteka</string>
+  <!-- Actions Dialog - Menu - Select all -->
   <string name="actions_menu_select_all">Označi vse</string>
+  <!-- Actions Dialog - Menu - Deselect all -->
   <string name="actions_menu_deselect_all">Odznači vse</string>
+  <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">Izberi</string>
+  <!-- Actions Dialog - Menu - Deselect -->
   <string name="actions_menu_deselect">Odstrani izbiro</string>
+  <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <string name="actions_menu_paste_selection">Kopiraj izbiro sem</string>
+  <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">Prem. izbiro sem</string>
+  <!-- Actions Dialog - Menu - Delete selection -->
   <string name="actions_menu_delete_selection">Izbriši izbiro</string>
+  <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">Stisni izbiro</string>
+  <!-- Actions Dialog - Menu - Create link -->
   <string name="actions_menu_create_link">Ustvari povezavo</string>
+  <!-- Actions Dialog - Menu - Open -->
   <string name="actions_menu_open">Odpri</string>
+  <!-- Actions Dialog - Menu - Open with -->
   <string name="actions_menu_open_with">Odpri s/z</string>
+  <!-- Actions Dialog - Menu - Execute -->
   <string name="actions_menu_execute">Izvedi</string>
+  <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">Pošlji</string>
+  <!-- Actions Dialog - Menu - Send selection -->
   <string name="actions_menu_send_selection">Pošlji izbiro</string>
+  <!-- Actions Dialog - Menu - Compress -->
   <string name="actions_menu_compress">Stisni</string>
+  <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">Razširi</string>
+  <!-- Actions Dialog - Menu - Delete -->
   <string name="actions_menu_delete">Izbriši</string>
+  <!-- Actions Dialog - Menu - Rename -->
   <string name="actions_menu_rename">Preimenuj</string>
+  <!-- Actions Dialog - Menu - Create copy -->
   <string name="actions_menu_create_copy">Ustvari kopijo</string>
+  <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">Lastnosti</string>
+  <!-- Actions Dialog - Menu - Add to bookmarks -->
   <string name="actions_menu_add_to_bookmarks">Dodaj med zazn.</string>
+  <!-- Actions Dialog - Menu - Add shortcut -->
   <string name="actions_menu_add_shortcut">Dodaj bližnjico</string>
+  <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">Odpri nadrejeno</string>
+  <!-- Actions Dialog - Menu - Compute checksum -->
   <string name="actions_menu_compute_checksum">Izračun nadzorne vsote</string>
+  <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">Natisni</string>
+  <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">Nast. kot domačo</string>
+  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">Tega dejanja ni mogoče razveljaviti. Ali želite nadaljevati?</string>
+  <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">Ime:</string>
+  <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">Ime ne sme biti prazno.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_path_name">Neveljavno ime. Znaki \"<xliff:g id="invalid_characters">%1$s</xliff:g>\" niso dovoljeni.</string>
+  <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">Doseženo največje dovoljeno število znakov.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_name">Neveljavno ime. Imeni \".\"in\"..\" nista dovoljeni.</string>
+  <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">To ime že obstaja.</string>
+  <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">Povezave</string>
+  <!-- Associations Dialog - Remember the user action -->
   <string name="associations_dialog_remember">Zapomni si izbiro</string>
+  <!-- Associations Dialog - Open with Title -->
   <string name="associations_dialog_openwith_title">Odpri s/z</string>
+  <!-- Associations Dialog - Open action (button title) -->
   <string name="associations_dialog_openwith_action">Odpri</string>
+  <!-- Associations Dialog - Send with Title -->
   <string name="associations_dialog_sendwith_title">Pošlji s/z</string>
+  <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">Pošlji</string>
+  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">Ničesar ni za dokončati.</string>
+  <!-- Execution console - Title -->
   <string name="execution_console_title">Konzola</string>
+  <!-- Execution console - The script name label -->
   <string name="execution_console_script_name_label">Skript:</string>
+  <!-- Execution console - The script execution time label -->
   <string name="execution_console_script_execution_time_label">Čas:</string>
+  <!-- Execution console - The script exit code label -->
   <string name="execution_console_script_exitcode_label">Koda končanja:</string>
+  <!-- Execution console - The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> sek.</string>
+  <!-- Compute checksum - Title -->
   <string name="compute_checksum_title">Izračun nadzorne vsote</string>
+  <!-- Compute checksum - The file name label -->
   <string name="compute_checksum_filename_label">Datoteka:</string>
+  <!-- Compute checksum - The MD5 label -->
+  <!-- Compute checksum - The SHA1 label -->
+  <!-- Compute checksum - The computing checksum message-->
   <string name="compute_checksum_computing_checksum_msg">Računanje nadzorne vsote \u2026</string>
+  <!-- Mime/Types - Folder -->
   <string name="mime_folder">Mapa</string>
+  <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">Simbolna povezava</string>
+  <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">Neznano</string>
+  <!--  Filetime formats -->
   <string name="filetime_format_mode_system">Sistemsko določeno</string>
   <string name="filetime_format_mode_locale">Določeno z jezikovno oznako</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd.mm.yyyy hh:mm:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
+  <!-- Selection -->
+  <!-- For example "2 folders and 1 file selected." -->
   <string name="selection_folders_and_files">Izbrano je <xliff:g id="folders">%1$s</xliff:g> in <xliff:g id="files">%2$s</xliff:g>.</string>
+  <!-- Category descriptions -->
   <string name="category_system">SISTEM</string>
   <string name="category_app">APLIKACIJA</string>
   <string name="category_binary">DVOJIŠKO</string>
@@ -286,86 +534,170 @@
   <string name="category_video">VIDEOPOS.</string>
   <string name="category_security">VARNOST</string>
   <string name="category_all">VSE</string>
+  <!-- Compression - Compression modes dialog title -->
   <string name="compression_mode_title">Način stiskanja</string>
+  <!-- Compression - Supported archive and compression modes -->
+  <!-- Shortcut. Failed to handle the shortcut -->
   <string name="shortcut_failed_msg">Obravnava bližnjice je spodletela.</string>
+  <!-- Shortcut. The shortcut was created -->
   <string name="shortcut_creation_success_msg">Bližnjica uspešno ustvarjena.</string>
+  <!-- Shortcut. The shortcut wasn't created -->
   <string name="shortcut_creation_failed_msg">Ustvarjanje bližnjice je spodletelo.</string>
+  <!-- Preferences title -->
   <string name="pref">Nastavitve</string>
+  <!-- Preferences - General title -->
   <string name="pref_general">Splošne nastavitve</string>
+  <!-- Preferences - Search title -->
   <string name="pref_search">Možnosti iskanja</string>
+  <!-- Preferences - Storage title -->
   <string name="pref_storage">Možnosti za shranjevanje</string>
+  <!-- Preferences - Editor title -->
   <string name="pref_editor">Možnosti urejevalnika</string>
+  <!-- Preferences - Themes title -->
   <string name="pref_themes">Teme</string>
+  <!-- Preferences - About title -->
   <string name="pref_about">O programu</string>
+  <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">Splošno</string>
+  <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">Razlikovanje velikosti črk</string>
+  <!-- Preferences - General - Case sensitive sort and navigating summary -->
   <string name="pref_case_sensitive_sort_summary">Upoštevaj velikost črk med krmarjenjem ali razvrščanjem rezultatov iskanja</string>
+  <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">Oblika zapisa datuma/časa</string>
+  <!-- Preferences - General -Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">Opozorilo o uporabi diska</string>
+  <!-- Preferences - General - Disk usage warning level summary -->
+  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
+         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
   <string name="pref_disk_usage_warning_level_summary" formatted="false">Prikaži različno barvo v gradnikih uporabe diska, ko dosežejo <xliff:g id="level">%1$s</xliff:g> odstotkov nezasedenega prostora</string>
+  <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Izračun statistike map</string>
+  <!-- Preferences - General - Compute folder statistics summary on -->
   <string name="pref_compute_folder_statistics_on">Opozorilo! Izračun statistike map je potratno časovno in s sistemskimi sredstvi</string>
+  <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">Predogled</string>
+  <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">Prikaži sliko predogleda za aplikacije, glasbene datoteke, slike in videoposnetke</string>
+  <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Uporabi poteze s potegi</string>
+  <!-- Preferences - General - Use flinger detection summary -->
   <string name="pref_use_flinger_summary">Uporabi zaznavo poteze s potegom od leve proti desni za izbris datotek ali map</string>
+  <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Napredno</string>
+  <!-- Preferences - General - Access mode -->
   <string name="pref_access_mode">Način dostopa</string>
+  <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">Varni način</string>
+  <!-- Preferences - General - Safe mode summary -->
   <string name="pref_access_mode_safe_summary">Varni način\n\nAplikacija se izvaja brez dovoljenj ter edini dostopni datotečni sistemi so nosilci pomnilniških naprav (kartice SD in USB)</string>
+  <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">Način Poziva uporabnika</string>
+  <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">Način Poziva uporabnika\n\nAplikacija se izvaja s polnim dostopom do datotečnega sistema in bo pozval za dovoljenja pred izvedbo katerihkoli dejanj z dovoljenji</string>
+  <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">Način skrbniškega dostopa</string>
+  <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">Način skrbniškega dostopa\n\nOpozorilo! Ta način dovoli opravila, ki lahko škodijo napravi. Zagotovitev, da je opravilo varno, je vaša odgovornost</string>
+  <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">Omeji dostop uporabnikom</string>
+  <!-- Preferences - General - Restrict secondary users access summary -->
   <string name="pref_restrict_secondary_users_access_summary">Omeji dostop do celotnega sistema vsem drugim uporabnikom</string>
+  <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">Rezultati</string>
+  <!-- Preferences - Search - Show relevance widget -->
   <string name="pref_show_relevance_widget">Prikaži pripomoček pomembnosti</string>
+  <!-- Preferences - Search - Highlight search terms -->
   <string name="pref_highlight_terms">Poudari iskalne izraze</string>
+  <!-- Preferences - Search - Sort results mode -->
   <string name="pref_sort_search_results_mode">Način razvrščanja rezultatov</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">Brez razvrščanja</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_name">Po imenu</string>
+  <!-- Preferences - Search - Sort results mode. Relevance -->
   <string name="pref_sort_search_results_mode_relevance">Po pomembnosti</string>
+  <!-- Preferences - Search - Privacity category -->
   <string name="pref_search_privacity_category">Zasebnost</string>
+  <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">Shrani iskalne izraze</string>
+  <!-- Preferences - Search - Save search terms summary on -->
   <string name="pref_save_search_terms_on">Iskalni izrazi bodo shranjeni in uporabljeni kot predloge v prihodnjih iskanjih</string>
+  <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">Iskalni izrazi ne bodo shranjeni</string>
+  <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">Odstrani shranjene iskalne izraze</string>
+  <!-- Preferences - Search - Remove saved search terms summary -->
   <string name="pref_remove_saved_search_terms_summary">Tapnite za odstranitev vseh shranjenih izrazov</string>
+  <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">Vsi shranjeni iskalni izrazi so bili odstranjeni</string>
+  <!-- Preferences - Storage - Secure Storage category -->
   <string name="pref_secure_storage_category">Varna pomnilniška naprava</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">Zakasnjena sinhronizacija</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <string name="pref_secure_storage_delayed_sync_summary">Sinhronizacija varnih datotečnih sistemov je potratno opravilo. Omogočite to možnost, če želite hitrejše odzive po vsakem opravilu z izvajanjem sinhronizacije, kadar je datotečni sistem ni v uporabi, ampak na račun izgube nesinhroniziranih podatkov na čakanju, če se aplikacija sesuje.</string>
+  <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">Spremeni geslo</string>
+  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">Izbriši pomnilniško napravo</string>
+  <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">Vedenje</string>
+  <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">Brez predlogov</string>
+  <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">Med urejanjem datoteke ne prikaži predlogov iz slovarja</string>
+  <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">Prelom besed</string>
+  <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">Šestn. izpis dvo. datotek</string>
+  <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">Med odpiranjem dvojiške datoteke ustvari šestnajstiški izpis datoteke ter jo odpri v šestnajstiškem pregledovalniku</string>
+  <!-- Preferences - Editor - Syntax highlight category -->
   <string name="pref_editor_syntax_highlight_category">Poudarjanje skladnosti</string>
+  <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">Poudari skladnost</string>
+  <!-- Preferences - Editor - Syntax highlight summary -->
   <string name="pref_syntax_highlight_desc">Poudarite skladnost prikazane datoteke v urejevalniku (samo ko je procesor za poudarjanje skladnosti za to vrsto datoteke na voljo)</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">Barvna shema</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
   <string name="pref_syntax_highlight_color_scheme_desc">Izberite barvno shemo za poudarjanje skladnosti</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">Uporabi privzeto od teme</string>
+  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <string name="pref_syntax_sh_use_theme_default_desc">Uporabite privzeto poudarjanje skladnosti trenutne teme</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">Predmeti</string>
+  <!-- Preferences - Themes - Themes selection category -->
   <string name="pref_themes_selection_category">Teme</string>
+  <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">Nastavi temo</string>
+  <!-- Preferences - Themes - Confirmation message -->
   <string name="pref_themes_confirmation">Tema je bila uspešno uveljavljena.</string>
+  <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">Teme ni mogoče najti.</string>
+  <!-- Preferences - Debug - Capture debug traces -->
   <string name="pref_debug_traces">Beleži podatke o razhrošč.</string>
+  <!-- Themes - Default theme name -->
   <string name="theme_default_name">Svetla tema</string>
+  <!-- Themes - Default theme description -->
   <string name="theme_default_description">Lahka tema za Upravljalnika datotek CyanogenMod.</string>
+  <!-- Themes - Default theme author -->
   <string name="themes_author">CyanogenMod</string>
+  <!-- Navigation drawer -->
   <string name="drawer_open">Odpri predal za krmarjenje</string>
   <string name="drawer_close">Zapri predal za krmarjenje</string>
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">Alfa</string>
+  <!-- The label of the current color panel -->
   <string name="color_picker_current_text">Trenutna:</string>
+  <!-- The label of the new color panel -->
   <string name="color_picker_new_text">Nova:</string>
+  <!-- The label of the color input -->
   <string name="color_picker_color">Barva:</string>
+  <!-- Android Syntax Highlight -->
   <string name="ash_reset_color_scheme">Obnovi barvno shemo privzete teme</string>
   <string name="ash_text">Besedilo</string>
   <string name="ash_assignment">Dodelitev</string>
@@ -374,33 +706,63 @@
   <string name="ash_keyword">Ključna beseda</string>
   <string name="ash_quoted_string">Naveden niz</string>
   <string name="ash_variable">Spremenljivka</string>
+  <!-- Secure Storage -->
+  <!-- Secure Storage dialog title - Unlock -->
   <string name="secure_storage_unlock_title">Odkleni varno pomnilniško napravo</string>
+  <!-- Secure Storage dialog title - Create -->
   <string name="secure_storage_create_title">Ustvari varno pomnilniško napravo</string>
+  <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">Ponastavi geslo</string>
+  <!-- Secure Storage dialog title - Delete -->
   <string name="secure_storage_delete_title">Izbriši varno pomnilniško napravo</string>
+  <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">Vnesite geslo za odklep datotečnega sistema varne pomnilniške naprave.</string>
+  <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">Vnesite geslo za zaščito datotečnega sistema varne pomnilniške naprave.</string>
+  <!-- Secure Storage unlock dialog message (reset the current password) -->
   <string name="secure_storage_unlock_key_reset_msg">Vnesite trenutno in novo geslo za ponastavitev datotečnega sistema varne pomnilniške naprave.</string>
+  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">Vnesite trenutno geslo za izbris datotečnega sistema varne pomnilniške naprave.</string>
+  <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">Staro geslo:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_new_key_title">Novo geslo:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">Geslo:</string>
+  <!-- Secure Storage unlock dialog repeat key title-->
   <string name="secure_storage_unlock_repeat_title">Ponovi geslo:</string>
+  <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">Ustvari</string>
+  <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Odkleni</string>
+  <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">Ponastavi</string>
+  <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Izbriši</string>
+  <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">Pomnilniške naprave ni mogoče odkleniti</string>
+  <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">Geslo mora imeti najmanj <xliff:g id="characters">%1$d</xliff:g> znakov.</string>
+  <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">Gesli se ne ujemata.</string>
+  <!-- Secure storage open file warning -->
   <string name="secure_storage_open_file_warning">To bo kopiralo datoteko na začasno nešifrirano mesto. To bo počiščeno po 1 uri.</string>
+  <!-- Print messages -->
+  <!-- Unsupported document format -->
   <string name="print_unsupported_document">Nepodprta vrsta dokumenta</string>
+  <!-- Unsupported image format -->
   <string name="print_unsupported_image">Nepodprta vrsta slike</string>
+  <!-- Print header -->
   <string name="print_document_header">Dokument: <xliff:g id="document_name">%1$s</xliff:g></string>
+  <!-- Print footer -->
   <string name="print_document_footer">Stran <xliff:g id="page_number">%1$s</xliff:g></string>
+  <!-- Security - Extract relative or absolute files -->
   <string name="security_warning_extract">Opozorilo! \n\nRazširjanje arhivske datoteke z relativno ali absolutno potjo lahko poškoduje napravo s prepisom sistemskih datotek.\n\nAli želite nadaljevati?</string>
+  <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">Dnevnik sprememb</string>
+  <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Dobrodošli</string>
+  <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Dobrodošli v upravljalniku datotek CyanogenMod.\n\nTa aplikacija vam dovoli, da raziščete datotečni sistem in izvajate opravila, ki lahko poškodujejo vašo napravo. V izogib škodi se bo aplikacija začela v varnem načinu z nizkimi dovoljenji.\n\nDo naprednega načina z visokimi dovoljenji lahko dostopate v nastavitvah. Vaša odgovornost je zagotoviti, da opravilo ne poškoduje vašega sistema.\n\nEkipa CyanogenMod</string>
   <string name="storage_permissions_denied">Upravljalnik datotek potrebuje dovoljenje za pomnilniško napravo za prikaz vaših datotek.</string>
   <string name="storage_permissions_explanation">Pojdite v Nastavitve in tapnite Dovoljenja za odobritev dovoljenja.</string>
