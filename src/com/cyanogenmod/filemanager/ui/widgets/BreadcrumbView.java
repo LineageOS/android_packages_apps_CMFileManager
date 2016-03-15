@@ -16,6 +16,7 @@
 
 package com.cyanogenmod.filemanager.ui.widgets;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -137,6 +138,20 @@ public class BreadcrumbView extends RelativeLayout implements Breadcrumb, OnClic
                 getContext(), this.mFilesystemInfo, "filesystem_warning_drawable"); //$NON-NLS-1$
     }
 
+    private boolean isContextValid(Context context) {
+        Activity activity = (Activity) context;
+
+        if (activity == null) {
+            return false;
+        }
+
+        if (activity.isDestroyed() || activity.isFinishing()) {
+            return false;
+        }
+
+        return true;
+    }
+
     /**
      * {@inheritDoc}
      */
@@ -172,7 +187,9 @@ public class BreadcrumbView extends RelativeLayout implements Breadcrumb, OnClic
             public void run() {
                 BreadcrumbView.this.mFilesystemInfo.setVisibility(View.INVISIBLE);
                 BreadcrumbView.this.mDiskUsageInfo.setVisibility(View.INVISIBLE);
-                BreadcrumbView.this.mLoadingDialog.show();
+                if (isContextValid(getContext())) {
+                    BreadcrumbView.this.mLoadingDialog.show();
+                }
             }
         });
     }
@@ -186,7 +203,10 @@ public class BreadcrumbView extends RelativeLayout implements Breadcrumb, OnClic
         this.post(new Runnable() {
             @Override
             public void run() {
-                BreadcrumbView.this.mLoadingDialog.dismiss();
+                if (isContextValid(getContext()) &&
+                        BreadcrumbView.this.mLoadingDialog.isShowing()) {
+                    BreadcrumbView.this.mLoadingDialog.dismiss();
+                }
                 BreadcrumbView.this.mFilesystemInfo.setVisibility(View.VISIBLE);
                 BreadcrumbView.this.mDiskUsageInfo.setVisibility(View.VISIBLE);
             }
