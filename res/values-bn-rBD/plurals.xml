@@ -39,4 +39,8 @@
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> টি ফাইল নির্বাচিত।</item>
   </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d </xliff:g> টি আইটেম মুছতে যাচ্ছে।</item>
+    <item quantity="other"><xliff:g id="count">%1$d </xliff:g> টি আইটেম মুছতে যাচ্ছে।</item>
+  </plurals>
 </resources>

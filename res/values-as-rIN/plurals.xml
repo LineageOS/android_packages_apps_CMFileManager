@@ -16,7 +16,31 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <plurals name="n_folders">
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> ফ\'ল্ডাৰ</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> ফ\'ল্ডাৰ্চ</item>
+  </plurals>
+  <plurals name="n_files">
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ফাইল</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ফাইল্চ</item>
+  </plurals>
   <!-- Search - Found items -->
+  <plurals name="search_found_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> আইটেম পোৱা গৈছে</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> আইটেম পোৱা গৈছে</item>
+  </plurals>
   <!-- Statusbar text if there are selected files or folders -->
+  <plurals name="selection_folders">
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> ফ\'ল্ডাৰ চয়ন কৰা হৈছে।</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> ফ\'ল্ডাৰ চয়ন কৰা হৈছে।</item>
+  </plurals>
+  <plurals name="selection_files">
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ফাইল চয়ন কৰা হৈছে।</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ফাইল চয়ন কৰা হৈছে।</item>
+  </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> আইটেম বিলোপ কৰা হ\'ব।</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> আইটেম বিলোপ কৰা হ\'ব।</item>
+  </plurals>
 </resources>

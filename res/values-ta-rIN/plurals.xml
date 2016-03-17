@@ -16,7 +16,31 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <plurals name="n_folders">
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> கோப்புறை</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> கோப்புறைகள்</item>
+  </plurals>
+  <plurals name="n_files">
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> கோப்பு</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> கோப்புகள்</item>
+  </plurals>
   <!-- Search - Found items -->
+  <plurals name="search_found_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> உருப்படி கண்டுபிடிக்கப்பட்டது</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> உருப்படிகள் கண்டுபிடிக்கப்பட்டன</item>
+  </plurals>
   <!-- Statusbar text if there are selected files or folders -->
+  <plurals name="selection_folders">
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> கோப்புறை தேர்ந்தெடுக்கப்பட்டது.</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> கோப்புறைகள் தேர்ந்தெடுக்கப்பட்டன.</item>
+  </plurals>
+  <plurals name="selection_files">
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> கோப்பு தேர்ந்தெடுக்கப்பட்டது.</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> கோப்புகள் தேர்ந்தெடுக்கப்பட்டன.</item>
+  </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> உருப்படி நீக்கப்பட இருக்கிறது.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> உருப்படிகள் நீக்கப்பட இருக்கின்றன.</item>
+  </plurals>
 </resources>
