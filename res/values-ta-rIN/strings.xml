@@ -17,365 +17,756 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- The name of the app -->
+  <string name="app_name">கோப்பு மேலாளர்</string>
   <!-- The description of the app -->
+  <string name="app_description">ஒரு CyanogenMod கோப்பு மேலாளர்</string>
   <!-- Human readable sizes -->
+  <string name="size_bytes">பை.</string>
+  <string name="size_kilobytes">kB</string>
+  <string name="size_megabytes">மெ.பை.</string>
+  <string name="size_gigabytes">ஜி.பை.</string>
   <!-- Date/time format order (%1$s: date; %2$s: time) -->
+  <string name="datetime_format_order">%1$s %2$s</string>
   <!-- Devices types -->
+  <string name="device_blockdevice">சாதனத்தைத் தடு</string>
+  <string name="device_characterdevice">எழுத்து சாதனம்</string>
+  <string name="device_namedpipe">பெயரிடப்பட்ட குழாய்</string>
+  <string name="device_domainsocket">கள சாக்கெட்</string>
   <!-- Mount Point States -->
+  <string name="mount_point_readonly">RO</string>
+  <string name="mount_point_readwrite">RW</string>
   <!-- Default buttons -->
+  <string name="yes">அனுமதிக்கப்பட்டது</string>
+  <string name="no">அனுமதிக்கப்படவில்லை</string>
+  <string name="all">எல்லாம்</string>
+  <string name="overwrite">மேலெழுது</string>
+  <string name="select">தேர்ந்தெடு</string>
   <!-- The root directory name -->
+  <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
   <!-- The search result name -->
+  <string name="search_result_name">தேடல்: <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Loading waiting message -->
+  <string name="loading_message">ஏற்றுகிறது...</string>
   <!-- Computing message -->
   <!-- Computing new line message -->
   <!-- Cancelled message -->
+  <string name="cancelled_message">ரத்துசெய்யப்பட்டது.</string>
   <!-- Error message -->
+  <string name="error_message">பிழை.</string>
   <!-- Copy text content description -->
+  <string name="copy_text_cd">உரையை நகலகத்திற்கு நகல்செய்ய தட்டுக</string>
   <!-- Copy text content message -->
+  <string name="copy_text_msg">உரை நகலகத்திற்கு நகல்செய்யப்பட்டது</string>
   <!-- Warning dialog title -->
+  <string name="warning_title">எச்சரிக்கை</string>
   <!-- Error dialog title -->
+  <string name="error_title">பிழை</string>
   <!-- Confirm operation dialog title -->
+  <string name="confirm_operation">இயக்கத்தை உறுதிசெய்க</string>
   <!-- Confirm overwrite dialog title -->
+  <string name="confirm_overwrite">மேலெழுதுதலை உறுதிசெய்க</string>
   <!-- Confirm deletion dialog title -->
+  <string name="confirm_deletion">நீக்குதலை உறுதிசெய்க</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
+  <string name="msgs_change_to_prompt_access_mode_title">நிலைமாற்றத்தை உறுதிசெய்க</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
+  <string name="msgs_change_to_prompt_access_mode_msg">மூல அணுகல் பயன்முறையில் தொடர முடியவில்லை பாதுகாப்பு பயன்முறைக்கு மாறுகின்றது.\n\n இந்த மாற்றங்களை பயன்படுத்தவா?</string>
   <!-- A console couldn't be created - Without privileges, the app won't work -->
+  <string name="msgs_cant_create_console">இயங்குவதற்கு தேவையான சலுகைகளைப் பெற முடியவில்லை.</string>
   <!-- The message shown when an allocation of a privileged console fails, and a non
          privileged is allocated -->
+  <string name="msgs_privileged_console_alloc_failed">மூல அணுகல் பயன்முறையில் தொடர முடியவில்லை பாதுகாப்பு பயன்முறைக்கு மாறுகின்றது.</string>
   <!-- The selected setting was not applied or stored -->
+  <string name="msgs_settings_save_failure">இந்த அமைப்பு பயன்படுத்தப்படவோ அல்லது சேமிக்கப்படவோ முடியாது.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
+  <string name="msgs_settings_invalid_initial_directory">துவக்க கோப்புறை \’<xliff:g id="initial_dir">%1$s</xliff:g>\' செல்லுபடியாகாதது. மூல கோப்புறைக்கு மாறுகின்றது.</string>
   <!-- Root is not available message -->
+  <string name="root_not_available_msg">இந்த சாதனத்தில் மூலம் கிடைக்கவில்லை இந்த இயக்கத்தை செய்ய முடியாது.</string>
   <!-- Success -->
+  <string name="msgs_success">இந்த இயக்கம் வெற்றிகரமாக நிறைவுசெய்யப்பட்டது.</string>
   <!-- Unknown error -->
+  <string name="msgs_unknown">பிழை கண்டறியப்பட்டது. இயக்கம் வெற்றியடையவில்லை.</string>
   <!-- When an operation requires elevated privileged (normally caused for the use of a
          non-privileged console) -->
+  <string name="msgs_insufficient_permissions">இந்த இயக்கத்திற்கு விளிப்பூட்டிய அனுமதிகள் தேவைப்படும். மூல அணுகல் பயன்முறைக்கு மாற்ற முயற்சிக்கவும்.</string>
   <!-- When an operation fails because the device has run out of storage. -->
+  <string name="msgs_no_disk_space">சாதனத்தில் இடம் இல்லாத காரணத்தால் இந்த இயக்கம் தோல்வியுற்றது</string>
   <!-- The file or directory was not found -->
+  <string name="msgs_file_not_found">இந்த கோப்பு அல்லது கோப்புறை கண்டுபிடிக்கப்படவில்லை.</string>
   <!-- The command reference couldn't be created (not found or invalid definition)
          (normally caused by a development error) -->
+  <string name="msgs_command_not_found">இந்த இயக்கத்தின் கட்டளை கண்டுபிடிக்கப்படவில்லை அல்லது ஒரு செல்லுபடியாகாத வரையறை உள்ளது.</string>
   <!-- I/O exception -->
+  <string name="msgs_io_failed">படித்தல்/எழுதுதல் தோல்வி.</string>
   <!-- Operation timeout detected -->
+  <string name="msgs_operation_timeout">இயக்கம் நேரம் முடிந்தது.</string>
   <!-- The operation returns an invalid exit code -->
+  <string name="msgs_operation_failure">இயக்கம் தோல்வியுற்றது.</string>
   <!-- A console couldn't be allocated -->
+  <string name="msgs_console_alloc_failure">ஒரு உள்ளார்ந்த பிழை ஏற்பட்டது.</string>
   <!-- An operation can't be cancelled -->
+  <string name="msgs_operation_can_not_be_cancelled">இயக்கத்தை ரத்துசெய்ய முடியாது.</string>
   <!-- The operation requieres mount the file system prior to execute the command -->
+  <string name="msgs_read_only_filesystem">கோப்பு முறைமை படிக்க-மட்டும் இயக்கத்தை முயற்சிப்பதற்கு முன்பாக கோப்பு முறையை படிக்க-எழுத என்று மவுண்ட் செய்ய முயற்சிக்கவும்.</string>
   <!-- Illegal argument (normally caused by a development error when calling internal api) -->
+  <string name="msgs_illegal_argument">சட்டவிரோதமான விவாதம். தூண்டுதல் தோல்வியுற்றது.</string>
   <!-- The operation will cause inconsistencies -->
+  <string name="msgs_unresolved_inconsistencies">நிலையின்மைகளை உருவாக்கும் என்பதால் இந்த இயக்கம் அனுமதிக்கப்படவில்லை.</string>
   <!-- Operation not permitted in the current directory -->
+  <string name="msgs_operation_not_allowed_in_current_directory">இலக்கு கோப்புறையானது ஆதாரத்தின் உபகோப்புறையாகவோ அல்லது ஆதாரமாகவேவோ இருக்க முடியாது.</string>
   <!-- The advice message prior to exit the app -->
+  <string name="msgs_push_again_to_exit">வெளியேறுவதற்கு மீண்டும் அழுத்தவும்.</string>
   <!-- There is no registered app that can handle the mime-type -->
+  <string name="msgs_not_registered_app">தேர்ந்தெடுக்கப்பட்ட கோப்பு வகையை கையாள்வதற்கான பயன்பாடு எதுவும் பதிவுசெய்யப்படவில்லை.</string>
   <!-- Overwrite files? -->
+  <string name="msgs_overwrite_files">சில கோப்புகள் முன்னமே இலக்கு கோப்புறையில் இருக்கின்றன.\n\n மேலெழுதவா?</string>
   <!-- The association of an action to the app failed -->
+  <string name="msgs_action_association_failed">பயன்பாட்டுடன் செயலை தொடர்புபடுத்தல் தோல்வியுற்றது.</string>
   <!-- An operation requires elevated privileged. Ask the user. -->
+  <string name="advise_insufficient_permissions">இந்த இயக்கத்திற்கு விளிப்பூட்டிய அனுமதிகள் தேவைப்படும்.\n\nநீங்கள் மூல அணுகல் பயன்முறைக்கு மாற்ற விரும்புகிறீர்களா?</string>
   <!-- The parent directory of the current directory in navigation view -->
+  <string name="parent_dir">பெற்றோர் கோப்புறை</string>
   <!-- External storage descripton -->
+  <string name="external_storage">வெளிப்புறச் சேமிப்பிடம்</string>
   <!-- Usb storage descripton -->
+  <string name="usb_storage">USB சேமிப்பகம்</string>
   <!-- ActionBar Buttons - FileSystem -->
+  <string name="actionbar_button_filesystem_cd">கோப்பு முறைமை தகவல்</string>
   <!-- ActionBar Buttons - Sort Mode -->
+  <string name="actionbar_button_sort_mode_cd">வரிசைப்படுத்தல் பயன்முறை</string>
   <!-- ActionBar Buttons - Layout Mode -->
+  <string name="actionbar_button_layout_mode_cd">தளவமைப்பு பயன்முறை</string>
   <!-- ActionBar Buttons - Other View Options -->
+  <string name="actionbar_button_other_view_options_cd">மற்ற காட்சி விருப்பங்கள்</string>
   <!-- ActionBar Buttons - Done -->
+  <string name="actionbar_button_selection_done_cd">முடிந்தது</string>
   <!-- ActionBar Buttons - Actions -->
+  <string name="actionbar_button_actions_cd">செயல்கள்</string>
   <!-- ActionBar Buttons - Search -->
+  <string name="actionbar_button_search_cd">தேடு</string>
   <!-- ActionBar Buttons - Overflow -->
+  <string name="actionbar_button_overflow_cd">கூடுதல் விருப்பங்கள்</string>
   <!-- ActionBar Buttons - Storage volumes -->
+  <string name="actionbar_button_storage_cd">சேமிப்பக வால்யூம்கள்</string>
   <!-- ActionBar Buttons - Save -->
+  <string name="actionbar_button_save_cd">சேமி</string>
   <!-- ActionBar Buttons - Print -->
+  <string name="actionbar_button_print_cd">அச்சிடு</string>
   <!-- Navigation View - Sort - Sort by name (ascending) -->
+  <string name="sort_by_name_asc">பெயரின்படி \u25B2</string>
   <!-- Navigation View - Sort - Sort by name (descending) -->
+  <string name="sort_by_name_desc">பெயரின்படி \u25BC</string>
   <!-- Navigation View - Sort - Sort by date (ascending) -->
+  <string name="sort_by_date_asc">தேதியின்படி \u25B2</string>
   <!-- Navigation View - Sort - Sort by date (descending) -->
+  <string name="sort_by_date_desc">தேதியின்படி \u25BC</string>
   <!-- Navigation View - Sort - Sort by size (ascending) -->
+  <string name="sort_by_size_asc">அளவின்படி \u25B2</string>
   <!-- Navigation View - Sort - Sort by size (descending) -->
+  <string name="sort_by_size_desc">அளவின்படி\u25BC</string>
   <!-- Navigation View - Sort - Sort by type (ascending) -->
+  <string name="sort_by_type_asc">வகையின்படி \u25B2</string>
   <!-- Navigation View - Sort - Sort by type (descending) -->
+  <string name="sort_by_type_desc">வகையின்படி \u25BC</string>
   <!-- Navigation View - Layout - Icons -->
+  <string name="layout_icons">படவுருக்கள்</string>
   <!-- Navigation View - Layout - Simple -->
+  <string name="layout_simple">எளிமை</string>
   <!-- Navigation View - Layout - Details -->
+  <string name="layout_details">விவரங்கள்</string>
   <!-- Navigation View - View - Show folders first -->
+  <string name="cm_filemanager_show_dirs_first">முதலில் கோப்புகளை காண்பி</string>
   <!-- Navigation View - View - Show hidden files option -->
+  <string name="cm_filemanager_show_hidden">மறைக்கப்பட்ட கோப்புகளை காண்பி</string>
   <!-- Navigation View - View - Show system files option -->
+  <string name="cm_filemanager_show_system">கணினி கோப்புகளைக் காண்பி</string>
   <!-- Navigation View - View - Show symlinks option -->
+  <string name="cm_filemanager_show_symlinks">symlinks காண்பி</string>
   <!-- Filesystem Info (no data). Dialog title -->
+  <string name="filesystem_info_warning_title">தகவல் இல்லை</string>
   <!-- Filesystem Info (no data). Dialog message -->
+  <string name="filesystem_info_warning_msg">இந்த கோப்பு முறைமைக்கு தகவல் எதுவும் கிடைக்கவில்லை.</string>
   <!-- Filesystem Info - Filesystem couldn't be mounted -->
+  <string name="filesystem_info_cant_be_mounted_msg">இந்த கோப்பு முறைமையை மவுண்டட்/அன்மவுண்டட் செய்ய முடியாது</string>
   <!-- Filesystem Info - Not allowed message -->
+  <string name="filesystem_info_mount_not_allowed_msg">பாதுகாப்பு பயன்முறையில் கோப்பு முறைமை மவுண்டிங் இயக்கங்கள் அனுமதிக்கப்படுவது இல்லை. மூல அணுகல் பயன்முறைக்கு மாற்ற முயற்சிக்கவும்.</string>
   <!-- Filesystem Info - Mount failed -->
+  <string name="filesystem_info_mount_failed_msg">கோப்பு முறைமை மவுண்டிங் இயக்கம் தோல்வியுற்றது. SD கார்டுகள் போன்ற சில கோப்பு முறைமைகள் மவுண்ட்/அன்மவுண்ட் செய்ய முடியாது ஏனென்றால் அவை படிக்க-மட்டும் கோப்பு முறைமைகளாக உள்ளமைந்தவை.</string>
   <!-- Filesystem Info Dialog - Title -->
+  <string name="filesystem_info_dialog_title">கோப்பு முறைமை தகவல்</string>
   <!-- Filesystem Info Dialog - Tab - Info -->
+  <string name="filesystem_info_dialog_tab_info">தகவல்</string>
   <!-- Filesystem Info Dialog - Tab - Disk Usage -->
+  <string name="filesystem_info_dialog_tab_disk_usage">வட்டு பயன்பாடு</string>
   <!-- Filesystem Info Dialog - Status Label -->
+  <string name="filesystem_info_dialog_status">மவுண்டட்:</string>
   <!-- Filesystem Info Dialog - Mount Point Label -->
+  <string name="filesystem_info_dialog_mount_point">மவுண்ட் புள்ளி:</string>
   <!-- Filesystem Info Dialog - Device Label -->
+  <string name="filesystem_info_dialog_device">சாதனம்:</string>
   <!-- Filesystem Info Dialog - Type Label -->
+  <string name="filesystem_info_dialog_type">வகை:</string>
   <!-- Filesystem Info Dialog - Options Label -->
+  <string name="filesystem_info_dialog_options">விருப்பங்கள்:</string>
   <!-- Filesystem Info Dialog - Dump/Pass Label -->
+  <string name="filesystem_info_dialog_dump_pass">டம்ப்/பாஸ்:</string>
   <!-- Filesystem Info Dialog - Virtual Label -->
+  <string name="filesystem_info_dialog_virtual">தோற்றநிலை:</string>
   <!-- Filesystem Info Dialog - Total Disk Usage -->
+  <string name="filesystem_info_dialog_total_disk_usage">மொத்தம்:</string>
   <!-- Filesystem Info Dialog - Used Disk Usage -->
+  <string name="filesystem_info_dialog_used_disk_usage">பயன்படுத்தப்பட்டது:</string>
   <!-- Filesystem Info Dialog - Free Disk Usage -->
+  <string name="filesystem_info_dialog_free_disk_usage">வெறுமை:</string>
   <!-- Fso Properties - Not allowed message -->
+  <string name="fso_properties_permissions_not_allowed_msg">அனுமதிகள் இயக்கங்கள் பாதுகாப்பு பயன்முறையில் அனுமதிக்கப்படுவது இல்லை. மூல அணுகல் பயன்முறைக்கு மாற்ற முயற்சிக்கவும்.</string>
   <!-- Fso Properties - Failed to change owner to fso -->
+  <string name="fso_properties_failed_to_change_owner_msg">உரிமையாளரை மாற்றும் இயக்கம் தோல்வியுற்றது.\n\n பாதுகாப்பு காரணங்களுக்காக, SD கார்டுகள் போன்ற, சில கோப்பு முறைமைகள், உரிமைத்துவத்தை மாற்றுவதை அனுமதிப்பதில்லை.</string>
   <!-- Fso Properties - Failed to change group to fso -->
+  <string name="fso_properties_failed_to_change_group_msg">குழு மாற்ற இயக்கம் தோல்வியுற்றது.  அனுமதிகளை மாற்றும் இயக்கம் தோல்வியுற்றது. \n\n பாதுகாப்பு காரணங்களுக்காக, SD கார்டுகள் போன்ற, சில கோப்பு முறைமைகள், குழு மாற்றுவதை அனுமதிப்பதில்லை.</string>
   <!-- Fso Properties - Failed to change group to fso -->
+  <string name="fso_properties_failed_to_change_permission_msg">அனுமதிகளை மாற்றும் இயக்கம் தோல்வியுற்றது. \n\n பாதுகாப்பு காரணங்களுக்காக, SD கார்டுகள் போன்ற, சில கோப்பு முறைமைகள், அனுமதிகளை மாற்றுவதை அனுமதிப்பதில்லை.</string>
   <!-- Fso Properties Dialog - Title -->
+  <string name="fso_properties_dialog_title">பண்புகள்</string>
   <!-- Fso Properties Dialog - Tab - Info -->
+  <string name="fso_properties_dialog_tab_info">தகவல்</string>
   <!-- Fso Properties Dialog - Tab - Permissions -->
+  <string name="fso_properties_dialog_tab_permissions">அனுமதிகள்</string>
   <!-- Fso Properties Dialog - Name Label -->
+  <string name="fso_properties_dialog_name">பெயர்:</string>
   <!-- Fso Properties Dialog - Parent Folder Label -->
+  <string name="fso_properties_dialog_parent">பெற்றோர்:</string>
   <!-- Fso Properties Dialog - Type Label -->
+  <string name="fso_properties_dialog_type">வகை:</string>
   <!-- Fso Properties Dialog - Category Label -->
+  <string name="fso_properties_dialog_category">வகை:</string>
   <!-- Fso Properties Dialog - Link Label -->
+  <string name="fso_properties_dialog_link">இணைப்பு:</string>
   <!-- Fso Properties Dialog - Size Label -->
+  <string name="fso_properties_dialog_size">அளவு:</string>
   <!-- Fso Properties Dialog - Contains Label -->
+  <string name="fso_properties_dialog_contains">கொண்டுள்ளது:</string>
   <!-- Fso Properties Dialog - Last Accessed Time Label -->
+  <string name="fso_properties_dialog_last_accessed_date">அணுகப்பட்டது:</string>
   <!-- Fso Properties Dialog - Last Modified Time Label -->
+  <string name="fso_properties_dialog_last_modified_date">மாற்றியமைக்கப்பட்டது:</string>
   <!-- Fso Properties Dialog - Last Changed Time -->
+  <string name="fso_properties_dialog_last_changed_date">மாற்றப்பட்டது:</string>
   <!-- Fso Properties Dialog - Owner Label -->
+  <string name="fso_properties_dialog_owner">உரிமையாளர்:</string>
   <!-- Fso Properties Dialog - Group Label -->
+  <string name="fso_properties_dialog_group">குழு:</string>
   <!-- Fso Properties Dialog - Others Label -->
+  <string name="fso_properties_dialog_others">மற்றவை:</string>
   <!-- Fso Properties Dialog - Special Label -->
   <!-- Fso Properties Dialog - Read Label -->
   <!-- Fso Properties Dialog - Write Label -->
   <!-- Fso Properties Dialog - Execute Label -->
   <!-- Fso Properties Dialog - Execute Label -->
   <!-- Fso Properties Dialog - Skip media scan -->
+  <string name="fso_properties_dialog_include_in_media_scan">ஊடக ஸ்கேனை தவிர்க்கவும்:</string>
+  <string name="fso_failed_to_allow_media_scan">ஊடக ஸ்கேனிங்கை அனுமதிக்கத் தவறியது.</string>
+  <string name="fso_failed_to_prevent_media_scan">ஊடக ஸ்கேனிங்கை தவிர்க்கத் தவறியது.</string>
+  <string name="fso_delete_nomedia_dir_title">.nomedia கோப்பகத்தை நீக்கு</string>
+  <string name="fso_delete_nomedia_dir_body">இந்த கோப்பகத்தில் ஒரு .nomedia கோப்பகம் உள்ளது. \n\nநீங்கள் இதையும் இதிலுள்ள உள்ளடக்கங்கள் அனைத்தையும் நீக்க விரும்புகிறீர்களா?</string>
+  <string name="fso_delete_nomedia_non_empty_title">.nomedia கோப்பகத்தை நீக்கு</string>
+  <string name="fso_delete_nomedia_non_empty_body">இந்த கோப்பகத்தில் ஒரு வெறுமை இல்லாத .nomedia கோப்பு உள்ளது.\n\nநீங்கள் அதை நீக்க விரும்புகிறீர்களா?</string>
   <!-- History - History activity title -->
+  <string name="history">வரலாறு</string>
   <!-- History - The history is empty -->
+  <string name="msgs_history_empty">வரலாறு வெறுமையாக உள்ளது.</string>
   <!-- History - The history reference is not in the actual history list -->
+  <string name="msgs_history_unknown">அறியப்படாத வரலாற்று உருப்படி.</string>
   <!-- Search - Search activity title -->
+  <string name="search">தேடல் முடிவுகள்.</string>
   <!-- Search - Search hint message -->
+  <string name="search_hint">உங்கள் தேடலை தட்டச்சுசெய்க</string>
   <!-- Search - Voice search hint message -->
+  <string name="search_voice_hint">உங்கள் தேடலை பேசுக</string>
   <!-- Search - Search error message -->
+  <string name="search_error_msg">தேடும்போது ஒரு பிழை ஏற்பட்டது. முடிவுகள் எதுவுக் கண்டுபிடிக்கப்படவில்லை.</string>
   <!-- Search - Search no results message -->
+  <string name="search_no_results_msg">முடிவுகள் எதுவுக் கண்டுபிடிக்கப்படவில்லை.</string>
   <!-- Search - Number of items found in directory -->
+  <string name="search_found_items_in_directory"><xliff:g id="items">%2$s</xliff:g> இல் <xliff:g id="path">%1$s</xliff:g></string>
   <!-- Search - Search query terms -->
+  <string name="search_terms"><![CDATA[<b>விதிமுறைகள்.</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Search - Confirm search -->
+  <string name="search_few_characters_title">தேடலை உறுதிசெய்க</string>
   <!-- Search - Some terms of the search are too small. The operation could be very costly -->
+  <string name="search_few_characters_msg">சில தேடல் விதிமுறைகளுக்கு சிறிய எண்ணிக்கையிலான எழுத்துக்கள் உள்ளன. இந்த இயக்கம் நேரம் மற்றும் கணினி வளங்களில் அதிக விலையுயர்ந்ததாக இருக்கலாம். \n\n நீங்கள் தொடர விரும்புகிறீர்களா?</string>
   <!-- Search - Searching dialog title -->
+  <string name="searching">காத்திருக்கவும்…</string>
   <!-- Search - Searching label -->
+  <string name="searching_action_label">தேடல் நடைபெற்றுக்கொண்டு இருக்கிறது</string>
   <!-- Picker Activity -->
   <!-- Picker Activity - Dialog title -->
+  <string name="picker_title">ஒரு கோப்பை எடுக்கவும்</string>
+  <string name="directory_picker_title">ஒரு கோப்பகத்தை எடுக்கவும்</string>
   <!-- Editor - Editor activity title -->
+  <string name="editor">திருத்தி</string>
   <!-- Editor - Invalid file message -->
+  <string name="editor_invalid_file_msg">செல்லுபடியாகாத கோப்பு.</string>
   <!-- Editor - File not found message -->
+  <string name="editor_file_not_found_msg">கோப்பு கண்டுபிடிக்கப்படவில்லை.</string>
   <!-- Editor - File size exceed the limit -->
+  <string name="editor_file_exceed_size_msg">இந்த சாதனத்தின் உள்ளே திறக்க முடியாத அளவுக்கு இந்த கோப்பு மிக பெரியது.</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog title -->
+  <string name="editor_dirty_ask_title">வெளியேறுவதை உறுதிசெய்க</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog message -->
+  <string name="editor_dirty_ask_msg">சேமிக்கப்படாத மாற்றங்கள் உள்ளன.\n\nசேமிக்காமல் வெளியேறவா?</string>
   <!-- Editor - Save operation success -->
+  <string name="editor_successfully_saved">கோப்பு வெற்றிகரமாக சேமிக்கப்பட்டது.</string>
   <!-- Editor - Read-only file mode -->
+  <string name="editor_read_only_mode">கோப்பு படிக்க-மட்டும் பயன்முறையில் திறக்கப்பட்டுள்ளது.</string>
   <!-- Editor - Dumping message -->
+  <string name="dumping_message">ஹெக்ஸ் டம்ப் உருவாக்கப்படுகின்றது\u2026</string>
   <!-- Editor - Displaying -->
+  <string name="displaying_message">காட்டுகிறது\u2026</string>
   <!-- Bookmarks - Bookmarks activity title -->
+  <string name="bookmarks">அடையாளக்குறிகள்</string>
   <!-- Bookmarks - Bookmark name - Home -->
+  <string name="bookmarks_home">முகப்பு</string>
   <!-- Bookmarks - Bookmark name - Root folder -->
+  <string name="bookmarks_root_folder">மூலக் கோப்புறை</string>
   <!-- Bookmarks - Bookmark name - System folder -->
+  <string name="bookmarks_system_folder">முறைமைக் கோப்புறை</string>
   <!-- Bookmarks - Bookmark name - Secure storage -->
+  <string name="bookmarks_secure">பாதுகாப்பு சேமிப்பகம்</string>
   <!-- Bookmarks - Bookmark name - Remote storage -->
+  <string name="bookmarks_remote">தொலைநிலை சேமிப்பகம்</string>
   <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
+  <string name="bookmarks_button_config_cd">துவக்க கோப்புறையை அமை.</string>
   <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
+  <string name="bookmarks_button_remove_bookmark_cd">அடையாளக்குறியை நீக்கு.</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
+  <string name="bookmarks_msgs_add_success">அடையாளக்குறி வெற்றிகரமாக சேர்க்கப்பட்டது.</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
+  <string name="bookmarks_msgs_add_exists">அடையாளக்குறி முன்பே இருக்கிறது.</string>
   <!-- Initial directory dialog title -->
+  <string name="initial_directory_dialog_title">துவக்க கோப்புறை.</string>
   <!-- Initial directory label -->
+  <string name="initial_directory_label">துவக்க கோப்புறையை தேர்ந்தெடு:</string>
   <!-- Initial directory is relative -->
+  <string name="initial_directory_relative_msg">தொடர்புடைய பாதைகள் அனுமதிக்கப்படுவதில்லை.</string>
   <!-- Initial directory error message -->
+  <string name="initial_directory_error_msg">துவக்க கோப்புறையை சேமிக்கும்போது ஒரு பிழை ஏற்பட்டது.</string>
   <!-- Menu - Navigation - Search -->
+  <string name="menu_search">தேடு</string>
   <!-- Menu - Navigation - Settings -->
+  <string name="menu_settings">அமைப்புகள்</string>
   <!-- Menu - History - Clear history -->
+  <string name="menu_clear_history">வரலாற்றை அழி</string>
   <!-- Menu - Editor - No suggestions -->
+  <string name="menu_no_suggestions">பரிந்துரைகள் எதுவும் இல்லை</string>
   <!-- Menu - Editor - Word wrap -->
+  <string name="menu_word_wrap">சொல் மடிப்பு</string>
   <!-- Menu - Editor - Sintax highlight -->
+  <string name="menu_syntax_highlight">தொடரியல் தனிச்சிறப்பு</string>
   <!-- Regular expression for create copy action -->
+  <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - நகல்<xliff:g id="extension">%2$s</xliff:g></string>
   <!-- Regular expression for new compressed file -->
+  <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - புதிய<xliff:g id="extension">%2$s</xliff:g></string>
   <!-- Waiting dialog - Performing operation message -->
+  <string name="waiting_dialog_msg">இயக்கத்தை செய்கிறது\u2026</string>
   <!-- Waiting dialog - Copying title -->
+  <string name="waiting_dialog_copying_title">நகல்செய்கிறது\u2026</string>
   <!-- Waiting dialog - Copying message -->
+  <string name="waiting_dialog_copying_msg"><![CDATA[<b>இங்கிருந்து</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>இங்குவரை</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog - Moving title -->
+  <string name="waiting_dialog_moving_title">நகர்த்தப்படுகிறது\u2026</string>
   <!-- Waiting dialog - Moving message -->
+  <string name="waiting_dialog_moving_msg"><![CDATA[<b>இங்கிருந்து</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>இங்குவரை</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog - Deleting title -->
+  <string name="waiting_dialog_deleting_title">நீக்குகிறது\u2026</string>
   <!-- Waiting dialog - Deleting message -->
+  <string name="waiting_dialog_deleting_msg"><![CDATA[<b>கோப்பு</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Extracting title -->
+  <string name="waiting_dialog_extracting_title">பிரித்தெடுக்கிறது\u2026</string>
   <!-- Waiting dialog - Extracting message -->
+  <string name="waiting_dialog_extracting_msg"><![CDATA[<b>கோப்பு</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Extracting title -->
+  <string name="waiting_dialog_compressing_title">சுருக்குகிறது\u2026</string>
   <!-- Waiting dialog - Extracting message -->
+  <string name="waiting_dialog_compressing_msg"><![CDATA[<b>கோப்பு</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Initializing the dialog -->
+  <string name="waiting_dialog_analizing_msg"><![CDATA[<b>ஆய்வுசெய்கிறது\u2026</b>]]></string>
   <!-- Extracting - Success message -->
+  <string name="msgs_extracting_success">இந்த பிரித்தெடுத்தல் இயக்கம் வெற்றிகரமாக நிறைவுசெய்யப்பட்டது. தரவானது <xliff:g id="destination">%1$s</xliff:g>க்கு பிரித்தெடுக்கப்பட்டது.</string>
   <!-- Compressing - Success message -->
+  <string name="msgs_compressing_success">சுருக்குதல் இயக்கம் வெற்றிகரமாக நிறைவுசெய்யப்பட்டது. தரவானது <xliff:g id="destination">%1$s</xliff:g>க்கு சுருக்கப்பட்டது.</string>
   <!-- Actions Dialog - Title -->
+  <string name="actions_dialog_title">செயல்கள்</string>
   <!-- Actions Dialog - Menu - Properties of current folder -->
+  <string name="actions_menu_properties_current_folder">பண்புகள்</string>
   <!-- Actions Dialog - Menu - Refresh -->
+  <string name="actions_menu_refresh">புதுப்பி</string>
   <!-- Actions Dialog - Menu - New directory -->
+  <string name="actions_menu_new_directory">புதிய கோப்புறை</string>
   <!-- Actions Dialog - Menu - New file -->
+  <string name="actions_menu_new_file">புதிய கோப்பு</string>
   <!-- Actions Dialog - Menu - Select all -->
+  <string name="actions_menu_select_all">எல்லாவற்றையும் தேர்ந்தெடு</string>
   <!-- Actions Dialog - Menu - Deselect all -->
+  <string name="actions_menu_deselect_all">அனைத்தையும் தேர்வுநீக்கு</string>
   <!-- Actions Dialog - Menu - Select -->
+  <string name="actions_menu_select">தேர்ந்தெடு</string>
   <!-- Actions Dialog - Menu - Deselect -->
+  <string name="actions_menu_deselect">தேர்வுநீக்கு</string>
   <!-- Actions Dialog - Menu - Copy/Paste selection -->
+  <string name="actions_menu_paste_selection">தேர்ந்தெடுத்ததை இங்கே நகல்செய்</string>
   <!-- Actions Dialog - Menu - Move selection -->
+  <string name="actions_menu_move_selection">தேர்ந்தெடுத்ததை இங்கே நகர்த்து</string>
   <!-- Actions Dialog - Menu - Delete selection -->
+  <string name="actions_menu_delete_selection">தேர்ந்தெடுத்ததை நீக்கு</string>
   <!-- Actions Dialog - Menu - Compress selection -->
+  <string name="actions_menu_compress_selection">தேர்ந்தெடுத்ததை சுருக்கு</string>
   <!-- Actions Dialog - Menu - Create link -->
+  <string name="actions_menu_create_link">இணைப்பை உருவாக்கு</string>
   <!-- Actions Dialog - Menu - Open -->
+  <string name="actions_menu_open">திற</string>
   <!-- Actions Dialog - Menu - Open with -->
+  <string name="actions_menu_open_with">இதன்மூலம் திற</string>
   <!-- Actions Dialog - Menu - Execute -->
+  <string name="actions_menu_execute">செயலாக்கு</string>
   <!-- Actions Dialog - Menu - Send -->
+  <string name="actions_menu_send">அனுப்பு</string>
   <!-- Actions Dialog - Menu - Send selection -->
+  <string name="actions_menu_send_selection">தேர்ந்தெடுத்ததை அனுப்பு</string>
   <!-- Actions Dialog - Menu - Compress -->
+  <string name="actions_menu_compress">சுருக்கு</string>
   <!-- Actions Dialog - Menu - Extract -->
+  <string name="actions_menu_extract">பிரித்தெடு</string>
   <!-- Actions Dialog - Menu - Delete -->
+  <string name="actions_menu_delete">நீக்கு</string>
   <!-- Actions Dialog - Menu - Rename -->
+  <string name="actions_menu_rename">மறுபெயரிடு</string>
   <!-- Actions Dialog - Menu - Create copy -->
+  <string name="actions_menu_create_copy">நகல் உருவாக்கு</string>
   <!-- Actions Dialog - Menu - Properties -->
+  <string name="actions_menu_properties">பண்புகள்</string>
   <!-- Actions Dialog - Menu - Add to bookmarks -->
+  <string name="actions_menu_add_to_bookmarks">அடையாளக்குறிகளோடு சேர்</string>
   <!-- Actions Dialog - Menu - Add shortcut -->
+  <string name="actions_menu_add_shortcut">குறுக்குவழியைச் சேர்</string>
   <!-- Actions Dialog - Menu - Open parent folder -->
+  <string name="actions_menu_open_parent_folder">பெற்றோரை திற</string>
   <!-- Actions Dialog - Menu - Compute checksum -->
+  <string name="actions_menu_compute_checksum">சரிபார்ப்புத் தொகையை கணக்கிடு</string>
   <!-- Actions Dialog - Menu - Print -->
+  <string name="actions_menu_print">அச்சிடு</string>
   <!-- Actions Dialog - Menu - Set as home -->
+  <string name="actions_menu_set_as_home">முகப்பாக அமை</string>
   <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
+  <string name="actions_ask_undone_operation_msg">இந்தச் செயலை பின்னர் செயல்தவிர்க்க முடியாது. நீங்கள் தொடர விரும்புகிறீர்களா?</string>
   <!-- Enter Name Dialog - Label -->
+  <string name="input_name_dialog_label">பெயர்:</string>
   <!-- Enter Name Dialog - Message - Empty name -->
+  <string name="input_name_dialog_message_empty_name">பெயர் வெறுமையாக இருக்க முடியாது.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
+  <string name="input_name_dialog_message_invalid_path_name">செல்லுபடியாகாத பெயர். எழுத்துக்கள் \’<xliff:g id="invalid_characters">%1$s</xliff:g>\' அனுமதிக்கப்படுவதில்லை.</string>
   <!-- Enter Name Dialog - Message - Invalid name length -->
+  <string name="input_name_dialog_message_invalid_name_length">அதிகபட்ச எழுத்து வரம்பை அடைந்தது.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
+  <string name="input_name_dialog_message_invalid_name">செல்லுபடியாகாத பெயர். பெயர்கள் \'.\' மற்றும் \'..\' அனுமதிக்கப்படுவதில்லை.</string>
   <!-- Enter Name Dialog - Message - Name exists -->
+  <string name="input_name_dialog_message_name_exists">பெயர் முன்பே இருக்கிறது.</string>
   <!-- Associations Dialog - Title -->
+  <string name="associations_dialog_title">தொடர்புகள்</string>
   <!-- Associations Dialog - Remember the user action -->
+  <string name="associations_dialog_remember">தேர்வை நினைவுபடுத்தவும்</string>
   <!-- Associations Dialog - Open with Title -->
+  <string name="associations_dialog_openwith_title">இதன்மூலம் திற</string>
   <!-- Associations Dialog - Open action (button title) -->
+  <string name="associations_dialog_openwith_action">திற</string>
   <!-- Associations Dialog - Send with Title -->
+  <string name="associations_dialog_sendwith_title">இதோடு அனுப்பவும்</string>
   <!-- Associations Dialog - Send action (button title) -->
+  <string name="associations_dialog_sendwith_action">அனுப்பு</string>
   <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
+  <string name="inline_autocomplete_tab_nothing_to_complete_msg">நிறைவுசெய்ய எதுவுமில்லை.</string>
   <!-- Execution console - Title -->
+  <string name="execution_console_title">பணியகம்</string>
   <!-- Execution console - The script name label -->
+  <string name="execution_console_script_name_label">ஸ்க்ரிப்ட்:</string>
   <!-- Execution console - The script execution time label -->
+  <string name="execution_console_script_execution_time_label">நேரம்:</string>
   <!-- Execution console - The script exit code label -->
+  <string name="execution_console_script_exitcode_label">வெளியேறுதல் குறியீடு:</string>
   <!-- Execution console - The script execution time seconds string -->
+  <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> வினாடி.</string>
   <!-- Compute checksum - Title -->
+  <string name="compute_checksum_title">சரிபார்ப்புத் தொகையை கணக்கிடு</string>
   <!-- Compute checksum - The file name label -->
+  <string name="compute_checksum_filename_label">கோப்பு:</string>
   <!-- Compute checksum - The MD5 label -->
   <!-- Compute checksum - The SHA1 label -->
   <!-- Compute checksum - The computing checksum message-->
+  <string name="compute_checksum_computing_checksum_msg">சரிபார்ப்புத் தொகை கணக்கிடப்படுகிறது\u2026</string>
   <!-- Mime/Types - Folder -->
+  <string name="mime_folder">கோப்பு</string>
   <!-- Mime/Types - Symlink -->
+  <string name="mime_symlink">Symlink</string>
   <!-- Mime/Types - Unknown -->
+  <string name="mime_unknown">தெரியாதது</string>
   <!--  Filetime formats -->
+  <string name="filetime_format_mode_system">கணினி-வரையறுத்தது</string>
+  <string name="filetime_format_mode_locale">உள்ளிடம்-வரையறுத்தது</string>
+  <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/yyyy hh:mm:ss</string>
+  <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
+  <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
   <!-- Selection -->
   <!-- For example "2 folders and 1 file selected." -->
+  <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> மற்றும் <xliff:g id="files">%2$s</xliff:g> தேர்ந்தெடுக்கப்பட்டது.</string>
   <!-- Category descriptions -->
+  <string name="category_system">சிஸ்டம்</string>
+  <string name="category_app">ஆப்</string>
+  <string name="category_binary">பைனரி</string>
+  <string name="category_text">உரை</string>
+  <string name="category_document">ஆவணம்</string>
+  <string name="category_ebook">ஈபுக்</string>
+  <string name="category_mail">மின்னஞ்சல்</string>
+  <string name="category_compress">சுருக்கு</string>
+  <string name="category_exec">செயல்படத்தக்க</string>
+  <string name="category_database">தரவுத்தளம்</string>
+  <string name="category_font">எழுத்துரு</string>
+  <string name="category_image">இமேஜ்</string>
+  <string name="category_audio">ஆடியோ</string>
+  <string name="category_video">காணொளி</string>
+  <string name="category_security">பாதுகாப்பு</string>
+  <string name="category_all">அனைத்தும்</string>
   <!-- Compression - Compression modes dialog title -->
+  <string name="compression_mode_title">சுருக்குதல் பயன்முறை</string>
   <!-- Compression - Supported archive and compression modes -->
   <!-- Shortcut. Failed to handle the shortcut -->
+  <string name="shortcut_failed_msg">குறுக்குவழியைக் கையாள தவறியது.</string>
   <!-- Shortcut. The shortcut was created -->
+  <string name="shortcut_creation_success_msg">குறுக்குவழி வெற்றிகரமாக உருவாக்கப்பட்டது.</string>
   <!-- Shortcut. The shortcut wasn't created -->
+  <string name="shortcut_creation_failed_msg">குறுக்குவழி உருவாக்குதல் தோல்வியுற்றது.</string>
   <!-- Preferences title -->
+  <string name="pref">அமைப்புகள்</string>
   <!-- Preferences - General title -->
+  <string name="pref_general">பொது அமைப்பு</string>
   <!-- Preferences - Search title -->
+  <string name="pref_search">தேடல் விருப்பங்கள்</string>
   <!-- Preferences - Storage title -->
+  <string name="pref_storage">சேமிப்பு விருப்பங்கள்</string>
   <!-- Preferences - Editor title -->
+  <string name="pref_editor">திருத்தி விருப்பங்கள்</string>
   <!-- Preferences - Themes title -->
+  <string name="pref_themes">தீம்கள்</string>
   <!-- Preferences - About title -->
+  <string name="pref_about">இதுபற்றி</string>
   <!-- Preferences - General - Behaviour category -->
+  <string name="pref_general_behaviour_category">பொது</string>
   <!-- Preferences - General - Case sensitive sort and navigating title -->
+  <string name="pref_case_sensitive_sort">எழுத்து-உணரும்தன்மை</string>
   <!-- Preferences - General - Case sensitive sort and navigating summary -->
+  <string name="pref_case_sensitive_sort_summary">தேடல் முடிவுகளை வழிச்செல்லும்போது அல்லது வரிசைப்படுத்தும்போது எழுத்தை கருத்தில்கொள்ளவும்</string>
   <!-- Preferences - General - Filetime format mode title -->
+  <string name="pref_filetime_format_mode">தேதி/நேர வடிவம்</string>
   <!-- Preferences - General -Disk usage warning level title -->
+  <string name="pref_disk_usage_warning_level">வட்டு பயன்பாட்டு எச்சரிக்கை</string>
   <!-- Preferences - General - Disk usage warning level summary -->
   <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
          of ListPreference. This should be fixed in frameworks base prior to be added here. -->
+  <string name="pref_disk_usage_warning_level_summary" formatted="false"><xliff:g id="level">%1$s</xliff:g> சதவிகித வெறுமையான வட்டு இடத்தை அடையும்போது வட்டு பயன்பாட்டில் வித்தியாசமான வண்னத்தை காண்பி</string>
   <!-- Preferences - General - Compute folder statistics title -->
+  <string name="pref_compute_folder_statistics">கோப்புறை புள்ளிவிவரங்களை கணக்கிடு</string>
   <!-- Preferences - General - Compute folder statistics summary on -->
+  <string name="pref_compute_folder_statistics_on">எச்சரிக்கை! கோப்புறை புள்ளிவிவரங்களை கணக்கிடுதல் நேரம் மற்றும் கணினி வளங்களில் விலையுயர்ந்ததாக இருக்கிறது</string>
   <!-- Preferences - General - Display thumbs -->
+  <string name="pref_display_thumbs">முன்னோட்டம்</string>
   <!-- Preferences - General - Display thumbs summary -->
+  <string name="pref_display_thumbs_summary">பயன்பாடுகள், இசை கோப்புகள், படங்கள் மற்றும் வீடியோக்களுக்கான முன்னோட்ட படத்தை காண்பி</string>
   <!-- Preferences - General - Use flinger detection -->
+  <string name="pref_use_flinger">தேய்த்தல் குறிப்புணர்வுகளைப் பயன்படுத்து</string>
   <!-- Preferences - General - Use flinger detection summary -->
+  <string name="pref_use_flinger_summary">கோப்புகளை அல்லது கோப்புறைகளை கண்டுபிடிப்பதற்கு இடதிலிருந்து வலதுபுறம் தேய்க்கும் குறிப்புணர்வைப் பயன்படுத்து</string>
   <!-- Preferences - General - Advanced settings category -->
+  <string name="pref_general_advanced_settings_category">மேம்பட்டது</string>
   <!-- Preferences - General - Access mode -->
+  <string name="pref_access_mode">அணுகல் பயன்முறை</string>
   <!-- Preferences - General - Safe mode -->
+  <string name="pref_access_mode_safe">பாதுகாப்பு பயன்முறை</string>
   <!-- Preferences - General - Safe mode summary -->
+  <string name="pref_access_mode_safe_summary">பாதுகாப்பு பயன்முறை\n\nபயன்பாடானது சலுகைகள் இல்லாமல் தொடர்கிறது மற்றும் சேமிப்பக வால்யூம்கள் (SD கார்டுகள் மற்றும் USB) மட்டுமே அணுகக்கூடிய ஒரே கோப்பு முறைமைகள் ஆகும்</string>
   <!-- Preferences - General - Prompt user mode -->
+  <string name="pref_access_mode_prompt">அறிவிப்பான் பயனர் பயன்முறை</string>
   <!-- Preferences - General - Prompt user mode summary -->
+  <string name="pref_access_mode_prompt_summary">அறிவிப்பான் பயனர் பயன்முறை\n\n பயன்பாடானது கோப்பு முறைமைக்கு முழு அணுகலுடன் தொடர்கிறது ஆனால் எந்த ஒரு சலுகையான செயல்களையும் செய்வதற்கு முன்பாக அனுமதிக்காக அறிவிக்கும்</string>
   <!-- Preferences - General - Root access mode -->
+  <string name="pref_access_mode_root">மூல அணுகல் பயன்முறை</string>
   <!-- Preferences - General - Root access mode summary -->
+  <string name="pref_access_mode_root_summary">மூல அணுகல் பயன்முறை\n\nஎச்சரிக்கை! இந்த பயன்முறையானது உங்கள் சாதனத்தை உடைக்கக்கூடிய இயக்கங்களை அனுமதிக்கும் ஒரு இயக்கம் பாதுகாப்பானது என்பதை உறுதிப்படுத்தும் பொறுப்பு உங்களுடையது</string>
   <!-- Preferences - General - Restrict secondary users access title -->
+  <string name="pref_restrict_secondary_users_access_title">பயனர் அணுகலை கட்டுப்படுத்து</string>
   <!-- Preferences - General - Restrict secondary users access summary -->
+  <string name="pref_restrict_secondary_users_access_summary">இரண்டாம்நிலை பயனர்களுக்கு மொத்த கணினிக்கான அணுகலை கட்டுப்படுத்து</string>
   <!-- Preferences - Search - Results category -->
+  <string name="pref_search_results_category">முடிவுகள்</string>
   <!-- Preferences - Search - Show relevance widget -->
+  <string name="pref_show_relevance_widget">பொருத்தமான விட்ஜெட்டைக் காண்பி</string>
   <!-- Preferences - Search - Highlight search terms -->
+  <string name="pref_highlight_terms">தேடல் உருப்படிகளைத் தனிப்படுத்து</string>
   <!-- Preferences - Search - Sort results mode -->
+  <string name="pref_sort_search_results_mode">முடிவுகளை வரிசைப்படுத்து பயன்முறை</string>
   <!-- Preferences - Search - Sort results mode. None -->
+  <string name="pref_sort_search_results_mode_none">வரிசைப்படுத்தல் இல்லை</string>
   <!-- Preferences - Search - Sort results mode. None -->
+  <string name="pref_sort_search_results_mode_name">பெயரின்படி</string>
   <!-- Preferences - Search - Sort results mode. Relevance -->
+  <string name="pref_sort_search_results_mode_relevance">பொருத்தத்தின்படி</string>
   <!-- Preferences - Search - Privacity category -->
+  <string name="pref_search_privacity_category">தனியுரிமை</string>
   <!-- Preferences - Search - Save search terms -->
+  <string name="pref_save_search_terms">தேடல் வார்த்தைகளை சேமி</string>
   <!-- Preferences - Search - Save search terms summary on -->
+  <string name="pref_save_search_terms_on">தேடல் வார்த்தைகள் சேமிக்கப்பட்டு பரிந்துரைகளாக பிற்கால தேடல்களில் பயன்படுத்தப்படும்</string>
   <!-- Preferences - Search - Save search terms summary off -->
+  <string name="pref_save_search_terms_off">தேடல் வார்த்தைகள் சேமிக்கப்படாது</string>
   <!-- Preferences - Search - Remove saved search terms -->
+  <string name="pref_remove_saved_search_terms">சேமிக்கப்பட்ட தேடல் வார்த்தைகளை நீக்கு</string>
   <!-- Preferences - Search - Remove saved search terms summary -->
+  <string name="pref_remove_saved_search_terms_summary">அனைத்து சேமிக்கப்பட்ட தேடல் வார்த்தைகளையும் நீக்க தட்டு</string>
   <!-- Preferences - Search - Suggestions were truncated -->
+  <string name="pref_remove_saved_search_terms_msg">அனைத்து சேமிக்கப்பட்ட தேடல் வார்த்தைகளும் நீக்கப்பட்டன</string>
   <!-- Preferences - Storage - Secure Storage category -->
+  <string name="pref_secure_storage_category">பாதுகாப்பு சேமிப்பகம்</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
+  <string name="pref_secure_storage_delayed_sync_title">தாமதமான ஒத்திசைவு</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
+  <string name="pref_secure_storage_delayed_sync_summary">பாதுகாப்பான கோப்பு முறைமைகளின் ஒத்திசைவு என்பது ஒரு விலையுயர்ந்த இயக்கம். ஒவ்வொரு இயக்கத்திற்கு பின்னும் விரைவான பதில்களை அனுமதிப்பதற்கு இந்த விருப்பத்தை செயல்படுத்து, கோப்பு முறைமை பயன்படுத்தப்படாத நிலையில் இருக்கும்போது ஒத்திசைவை செய்கிறது, ஆனால் இந்த பயன்பாடு மோதும்பட்சத்தில் ஒத்திசைக்காத நிலுவையிலுள்ள தகவல்களை இழக்க நேரிடும் இடர் உள்ளது</string>
   <!-- Preferences - Storage - Secure Storage - Change password title -->
+  <string name="pref_secure_storage_reset_password_title">கடவுச்சொல்லை மாற்று</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
+  <string name="pref_secure_storage_delete_storage_title">சேமிப்பகத்தை நீக்கு</string>
   <!-- Preferences - Editor - Behaviour category -->
+  <string name="pref_editor_behaviour_category">நடத்தை</string>
   <!-- Preferences - Editor - No suggestions -->
+  <string name="pref_no_suggestions">பரிந்துரைகள் எதுவும் இல்லை</string>
   <!-- Preferences - Editor - No suggestions summary -->
+  <string name="pref_no_suggestions_desc">கோப்பை திருத்தும்போது அகராதி பரிந்துரைகளை காட்டாதே</string>
   <!-- Preferences - Editor - Word wrap -->
+  <string name="pref_word_wrap">சொல் மடிப்பு</string>
   <!-- Preferences - Editor - Hex dump -->
+  <string name="pref_hexdump">ஹெக்ஸ் டம்ப் பைனரி கோப்புகள்</string>
   <!-- Preferences - Editor - Hex dump desc -->
+  <string name="pref_hexdump_desc">ஒரு பைனரி கோப்பை திறக்கும்போது, அந்த கோப்பின் ஹெக்ஸ் டம்பை உருவாக்கி ஹெக்ஸ் வியூவரில் திற</string>
   <!-- Preferences - Editor - Syntax highlight category -->
+  <string name="pref_editor_syntax_highlight_category">தொடரியல் தனிச்சிறப்புசெய்தல்</string>
   <!-- Preferences - Editor - Syntax highlight -->
+  <string name="pref_syntax_highlight">தொடரியல் தனிச்சிறப்பு</string>
   <!-- Preferences - Editor - Syntax highlight summary -->
+  <string name="pref_syntax_highlight_desc">திருத்தியில் காட்டப்பட்ட கோப்பின் கோப்பு தொடரியலை தனிச்சிறப்பாக்கு (கோப்பு வகைக்கான தொடரியல் தனிச்சிறப்பாக்குதல் கிடைக்கும்போது மட்டும்)</string>
   <!-- Preferences - Editor - Syntax highlight color scheme -->
+  <string name="pref_syntax_highlight_color_scheme">வண்ண திட்டம்</string>
   <!-- Preferences - Editor - Syntax highlight color scheme summary -->
+  <string name="pref_syntax_highlight_color_scheme_desc">தொடரியல் தனிச்சிறப்பு வண்ன திட்டத்தைத் தேர்ந்தெடு</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
+  <string name="pref_syntax_sh_use_theme_default">இயல்புநிலை கருப்பொருளைப் பயன்படுத்து</string>
   <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
+  <string name="pref_syntax_sh_use_theme_default_desc">நடப்பு கருப்பொருளின் இயல்புநிலை தொடரியல் தனிச்சிறப்பைப் பயன்படுத்து</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
+  <string name="pref_editor_sh_item_category">உருப்படிகள்</string>
   <!-- Preferences - Themes - Themes selection category -->
+  <string name="pref_themes_selection_category">தீம்கள்</string>
   <!-- Preferences - Themes - Set theme button -->
+  <string name="pref_themes_set_theme">கருப்பொருளை அமை</string>
   <!-- Preferences - Themes - Confirmation message -->
+  <string name="pref_themes_confirmation">கருப்பொருள் வெற்றிகரமாக பயன்படுத்தப்பட்டது</string>
   <!-- Preferences - Themes - Theme not found message -->
+  <string name="pref_themes_not_found">கருப்பொருள் கண்டுபிடிக்கப்படவில்லை.</string>
   <!-- Preferences - Debug - Capture debug traces -->
+  <string name="pref_debug_traces">பிழைநீக்கல் தகவலை பதிவுசெய்</string>
   <!-- Themes - Default theme name -->
+  <string name="theme_default_name">ஒளி கருப்பொருள்</string>
   <!-- Themes - Default theme description -->
+  <string name="theme_default_description">CyanogenMod கோப்பு மேலாளருக்கான ஒரு ஒளி கருப்பொருள்</string>
   <!-- Themes - Default theme author -->
+  <string name="themes_author">CyanogenMod</string>
   <!-- Navigation drawer -->
+  <string name="drawer_open">வழிசெலுத்துதல் இழுப்பறையைத் திற</string>
+  <string name="drawer_close">வழிசெலுத்துதல் இழுப்பறையை மூடு</string>
   <!-- ColorPickerDialog -->
   <!-- The text of the alpha slider control -->
+  <string name="color_picker_alpha_slider_text">ஆல்ஃபா</string>
   <!-- The label of the current color panel -->
+  <string name="color_picker_current_text">நடப்பு:</string>
   <!-- The label of the new color panel -->
+  <string name="color_picker_new_text">புதிது:</string>
   <!-- The label of the color input -->
+  <string name="color_picker_color">வண்ணம்:</string>
   <!-- Android Syntax Highlight -->
+  <string name="ash_reset_color_scheme">இயல்புநிலை வண்ண திட்டத்தை மீட்டெடு</string>
+  <string name="ash_text">உரை</string>
+  <string name="ash_assignment">ஒதுக்கீடு</string>
+  <string name="ash_singleline_comment">ஒற்றை-வரி கருத்து</string>
+  <string name="ash_multiline_comment">பல-வரி கருத்து</string>
+  <string name="ash_keyword">திறவுச்சொல்</string>
+  <string name="ash_quoted_string">மேற்கோள்காட்டப்பட்ட சரம்</string>
+  <string name="ash_variable">மாறினி</string>
   <!-- Secure Storage -->
   <!-- Secure Storage dialog title - Unlock -->
+  <string name="secure_storage_unlock_title">பாதுகாப்பு சேமிப்பகத்தை பூட்டுநீக்கு</string>
   <!-- Secure Storage dialog title - Create -->
+  <string name="secure_storage_create_title">பாதுகாப்பு சேமிப்பகத்தை உருவாக்கு</string>
   <!-- Secure Storage dialog title - Reset -->
+  <string name="secure_storage_reset_title">கடவுச்சொல்லை மீட்டமை</string>
   <!-- Secure Storage dialog title - Delete -->
+  <string name="secure_storage_delete_title">பாதுகாப்பு சேமிப்பகத்தை நீக்கு</string>
   <!-- Secure Storage unlock dialog message (secure storage exists) -->
+  <string name="secure_storage_unlock_key_prompt_msg">பாதுகாப்பு சேமிப்பக கோப்புமுறையை பூட்டுநீக்க கடவுச்சொல்லை தட்டச்சுசெய்.</string>
   <!-- Secure Storage unlock dialog message (new secure storage) -->
+  <string name="secure_storage_unlock_key_new_msg">பாதுகாப்பு சேமிப்பக கோப்புமுறையை பாதுகாக்க ஒரு கடவுச்சொல்லை தட்டச்சுசெய்.</string>
   <!-- Secure Storage unlock dialog message (reset the current password) -->
+  <string name="secure_storage_unlock_key_reset_msg">பாதுகாப்பு சேமிப்பக கோப்புமுறையை மீட்டமைக்க நடப்பு மற்றும் புதிய கடவுச்சொல்லை தட்டச்சுசெய்.</string>
   <!-- Secure Storage unlock dialog message (delete the secure storage) -->
+  <string name="secure_storage_unlock_key_delete_msg">பாதுகாப்பு சேமிப்பக கோப்புமுறையை நீக்க நடப்பு கடவுச்சொல்லை தட்டச்சுசெய்.</string>
   <!-- Secure Storage unlock dialog old key title -->
+  <string name="secure_storage_unlock_old_key_title">பழைய கடவுச்சொல்:</string>
   <!-- Secure Storage unlock dialog key title -->
+  <string name="secure_storage_unlock_new_key_title">புதிய கடவுச்சொல்:</string>
   <!-- Secure Storage unlock dialog key title -->
+  <string name="secure_storage_unlock_key_title">கடவுச்சொல்:</string>
   <!-- Secure Storage unlock dialog repeat key title-->
+  <string name="secure_storage_unlock_repeat_title">மீண்டும் கடவுச்சொல்:</string>
   <!-- Secure Storage create button -->
+  <string name="secure_storage_create_button">உருவாக்கு</string>
   <!-- Secure Storage unlock button -->
+  <string name="secure_storage_unlock_button">தடைநீக்கு</string>
   <!-- Secure Storage reset button -->
+  <string name="secure_storage_reset_button">மீட்டமை</string>
   <!-- Secure Storage delete button -->
+  <string name="secure_storage_delete_button">நீக்கு</string>
   <!-- Secure Storage unlock failed toast -->
+  <string name="secure_storage_unlock_failed">சேமிப்பகத்தை பூட்டுநீக்க முடியவில்லை</string>
   <!-- Secure Storage unlock validation, length -->
+  <string name="secure_storage_unlock_validation_length">கடவுச்சொல்லில் குறைந்தபட்சம் <xliff:g id="characters">%1$d</xliff:g> எழுத்துக்கள் இருக்க வேண்டும்.</string>
   <!-- Secure Storage unlock validation, equal -->
+  <string name="secure_storage_unlock_validation_equals">கடவுச்சொற்கள் பொருந்தவில்லை.</string>
   <!-- Secure storage open file warning -->
+  <string name="secure_storage_open_file_warning">இது கோப்பை ஒரு தற்காலிக குறியாக்கப்படாத இடத்திற்கு நகல்செய்யும். இது 1 மணிநேரத்திற்கு பிறகு அழிக்கப்படும்.</string>
   <!-- Print messages -->
   <!-- Unsupported document format -->
+  <string name="print_unsupported_document">ஆதரிக்கப்படாத ஆவண வடிவம்</string>
   <!-- Unsupported image format -->
+  <string name="print_unsupported_image">ஆதரிக்கப்படாத பட வடிவம்</string>
   <!-- Print header -->
+  <string name="print_document_header">ஆவணம்: <xliff:g id="document_name">%1$s</xliff:g></string>
   <!-- Print footer -->
+  <string name="print_document_footer">பக்கம் <xliff:g id="page_number">%1$s</xliff:g></string>
   <!-- Security - Extract relative or absolute files -->
+  <string name="security_warning_extract">எச்சரிக்கை!\n\n ஒரு காப்பக கோப்பை தொடர்புடைய அல்லது நேரடி பாதைகளில் பிரித்தெடுப்பது கணினி கோப்புகளை மேலெழுதுவதன் மூலம் உங்கள் சாதனத்திற்கு சேதத்தை ஏற்படுத்தலாம்.\n\n நீங்கள் தொடர விரும்புகிறீர்களா?</string>
   <!-- ChangeLog - Dialog title -->
+  <string name="changelog_title">மாற்றபதிப்பு</string>
   <!-- Welcome Dialog - Title -->
+  <string name="welcome_title">நல்வரவு</string>
   <!-- Welcome Dialog - Message -->
+  <string name="welcome_msg">CyanogenMod கோப்பு மேலாளருக்கு வரவேற்கிறொம்.\n\n இந்த பயன்பாடானது நீங்கள் கோப்பு முறைமையை ஆராயவும் உங்கள் சாதனத்தை உடைக்கக்கூடிய இயக்கங்களை செய்யவும் உங்களை அனுமதிக்கும். சேதத்தைத் தவிற்க, பயன்பாடானது பாதுகாப்பான, குறைந்த சலுகை பயன்முறையில் தொடங்கும். \n\n நீங்கள் மேம்பட்ட, முழு சலுகையுள்ள பயன்முறையை அமைப்புகள் வழியாக அணுகலாம். ஒரு இயக்கம் உங்கள் கணினியை உடைக்காமல் இருப்பதை உறுதிசெய்வது உங்களுடைய பொறுப்பு.\n\nCyanogenMod குழு</string>
+  <string name="activity_not_found_exception">இந்த கோப்பை திறக்க ஒரு பயன்பாட்டை கண்டுபிடிக்க முடியவில்லை</string>
+  <string name="storage_permissions_denied">உங்கள் கோப்புகளை காண கோப்பு மேலாளருக்கு சேமிப்பகத்திற்கான அனுமதி தேவை</string>
+  <string name="storage_permissions_explanation">அமைப்புகளுக்குச் சென்று, அனுமதி வழங்குவதற்கு அனுமதிகளை தட்டவும்.</string>
+  <string name="snackbar_settings">அமைப்புகள்</string>
 </resources>

@@ -42,7 +42,7 @@
   <string name="overwrite">Skriv över</string>
   <string name="select">Välj</string>
   <!-- The root directory name -->
-  <string name="root_directory_name"><![CDATA[<Rot>]]></string>
+  <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
   <!-- The search result name -->
   <string name="search_result_name">Sök: <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Loading waiting message -->

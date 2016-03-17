@@ -16,7 +16,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <plurals name="n_folders">
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> thư mục</item>
+  </plurals>
+  <plurals name="n_files">
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> tập tin</item>
+  </plurals>
   <!-- Search - Found items -->
+  <plurals name="search_found_items">
+    <item quantity="other">Phát hiện <xliff:g id="count">%d</xliff:g> mục</item>
+  </plurals>
   <!-- Statusbar text if there are selected files or folders -->
+  <plurals name="selection_folders">
+    <item quantity="other">Đã chọn <xliff:g id="folders">%1$d</xliff:g> thư mục.</item>
+  </plurals>
+  <plurals name="selection_files">
+    <item quantity="other">Đã chọn <xliff:g id="files">%1$d</xliff:g> tập tin.</item>
+  </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
+  <plurals name="deleting_n_items">
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> mục sắp bị xoá.</item>
+  </plurals>
 </resources>
