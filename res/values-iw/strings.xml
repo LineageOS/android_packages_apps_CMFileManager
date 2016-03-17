@@ -28,8 +28,8 @@
   <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
   <!-- Devices types -->
-  <string name="device_blockdevice">התקן בלוקים</string>
-  <string name="device_characterdevice">התקן תווים</string>
+  <string name="device_blockdevice">מכשיר בלוקים</string>
+  <string name="device_characterdevice">מכשיר תווים</string>
   <string name="device_namedpipe">Named pipe</string>
   <string name="device_domainsocket">סוקט הדומיין</string>
   <!-- Mount Point States -->
@@ -42,7 +42,7 @@
   <string name="overwrite">החלף</string>
   <string name="select">בחר</string>
   <!-- The root directory name -->
-  <string name="root_directory_name"><![CDATA[<תיקיית השורש>]]></string>
+  <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
   <!-- The search result name -->
   <string name="search_result_name">חיפוש: <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Loading waiting message -->
@@ -54,7 +54,7 @@
   <!-- Error message -->
   <string name="error_message">שגיאה.</string>
   <!-- Copy text content description -->
-  <string name="copy_text_cd">הקש כדי להעתיק טקסט ללוח</string>
+  <string name="copy_text_cd">גע כדי להעתיק טקסט ללוח</string>
   <!-- Copy text content message -->
   <string name="copy_text_msg">הטקסט הועתק ללוח</string>
   <!-- Warning dialog title -->
@@ -68,43 +68,43 @@
   <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">אישור מחיקה</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
-  <string name="msgs_change_to_prompt_access_mode_title">אישור מעבר מצב</string>
+  <string name="msgs_change_to_prompt_access_mode_title">אישור למעבר מצב</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
-  <string name="msgs_change_to_prompt_access_mode_msg">לא ניתן לעלות במצב גישת Root. עובר למצב בטוח.\n\nלהחיל את השינוי?</string>
+  <string name="msgs_change_to_prompt_access_mode_msg">לא ניתן לעלות במצב גישת שורש. עובר למצב בטוח.\n\nלהחיל את השינוי?</string>
   <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">לא ניתן לקבל את ההרשאות המתאימות לפעולה.</string>
   <!-- The message shown when an allocation of a privileged console fails, and a non
          privileged is allocated -->
-  <string name="msgs_privileged_console_alloc_failed">לא ניתן לעלות במצב גישת Root. עובר למצב בטוח.</string>
+  <string name="msgs_privileged_console_alloc_failed">לא ניתן לעלות במצב גישת שורש. עובר למצב בטוח.</string>
   <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">נכשל בהחלת ההגדרה או שמירתה.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">התיקייה ההתחלתית
-    \"<xliff:g id="initial_dir">%1$s</xliff:g>\" שגויה. עובר לתיקיית השורש.</string>
+ \"<xliff:g id="initial_dir">%1$s</xliff:g>\" לא חוקית. עובר לתיקיית השורש.</string>
   <!-- Root is not available message -->
-  <string name="root_not_available_msg">גישת Root אינה זמינה במכשיר זה. אין אפשרות לבצע פעולה זאת.</string>
+  <string name="root_not_available_msg">גישת שורש אינה זמינה במכשיר זה. אין אפשרות לבצע פעולה זאת.</string>
   <!-- Success -->
   <string name="msgs_success">הפעולה הושלמה בהצלחה.</string>
   <!-- Unknown error -->
   <string name="msgs_unknown">התגלתה שגיאה. הפעולה נכשלה.</string>
   <!-- When an operation requires elevated privileged (normally caused for the use of a
          non-privileged console) -->
-  <string name="msgs_insufficient_permissions">פעולה זו דורשת הרשאות גבוהות. נסה לשנות למצב גישת Root.</string>
+  <string name="msgs_insufficient_permissions">פעולה זו דורשת הרשאות מלאות. נסה לשנות למצב גישת שורש.</string>
   <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">הפעולה נכשלה מכיוון שלא נותר זיכרון פנוי במכשיר.</string>
   <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">הקובץ או התיקייה לא נמצאו.</string>
   <!-- The command reference couldn't be created (not found or invalid definition)
          (normally caused by a development error) -->
-  <string name="msgs_command_not_found">הפקודה לפעולה לא נמצאה או בעלת הגדרה שגויה.</string>
+  <string name="msgs_command_not_found">הפקודה לפעולה לא נמצאה או בעלת הגדרה לא חוקית.</string>
   <!-- I/O exception -->
   <string name="msgs_io_failed">כישלון בקריאה/כתיבה.</string>
   <!-- Operation timeout detected -->
-  <string name="msgs_operation_timeout">הזמן המוקצב לפעולה נגמר.</string>
+  <string name="msgs_operation_timeout">תם הזמן המוקצב לפעולה.</string>
   <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">הפעולה נכשלה.</string>
   <!-- A console couldn't be allocated -->
-  <string name="msgs_console_alloc_failure">התרחשה שגיאה פנימית.</string>
+  <string name="msgs_console_alloc_failure">אירעה שגיאה פנימית.</string>
   <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">לא ניתן לבטל את הפעולה.</string>
   <!-- The operation requieres mount the file system prior to execute the command -->
@@ -124,7 +124,7 @@
   <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">שיוך הפעולה ליישום נכשלה.</string>
   <!-- An operation requires elevated privileged. Ask the user. -->
-  <string name="advise_insufficient_permissions">פעולה זו דורשת הרשאות גבוהות.\n\n לעבור למצב גישת Root?</string>
+  <string name="advise_insufficient_permissions">פעולה זו דורשת הרשאות מלאות.\n\n לעבור למצב גישת שורש?</string>
   <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">תיקיית אב</string>
   <!-- External storage descripton -->
@@ -136,11 +136,11 @@
   <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">אופן סידור</string>
   <!-- ActionBar Buttons - Layout Mode -->
-  <string name="actionbar_button_layout_mode_cd">מצב תצוגה</string>
+  <string name="actionbar_button_layout_mode_cd">מצב פריסה</string>
   <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">אפשרויות תצוגה נוספות</string>
   <!-- ActionBar Buttons - Done -->
-  <string name="actionbar_button_selection_done_cd">סיום</string>
+  <string name="actionbar_button_selection_done_cd">בוצע</string>
   <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">פעולות</string>
   <!-- ActionBar Buttons - Search -->
@@ -148,7 +148,7 @@
   <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">אפשרויות נוספות</string>
   <!-- ActionBar Buttons - Storage volumes -->
-  <string name="actionbar_button_storage_cd">מחיצות אחסון</string>
+  <string name="actionbar_button_storage_cd">אמצעי אחסון</string>
   <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">שמור</string>
   <!-- ActionBar Buttons - Print -->
@@ -182,7 +182,7 @@
   <!-- Navigation View - View - Show system files option -->
   <string name="cm_filemanager_show_system">הצג קבצי מערכת</string>
   <!-- Navigation View - View - Show symlinks option -->
-  <string name="cm_filemanager_show_symlinks">הצג קישורים</string>
+  <string name="cm_filemanager_show_symlinks">הצג קישורים סמליים</string>
   <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">לא קיים מידע</string>
   <!-- Filesystem Info (no data). Dialog message -->
@@ -190,9 +190,9 @@
   <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">לא ניתן לטעון, או לבטל את טעינת מערכת הקבצים.</string>
   <!-- Filesystem Info - Not allowed message -->
-  <string name="filesystem_info_mount_not_allowed_msg">פעולות טעינה של מערכות קבצים אסורות במצב בטוח. לחץ כדי לעבור למצב גישת שורש.</string>
+  <string name="filesystem_info_mount_not_allowed_msg">פעולות הטעינה של מערכות קבצים הן אסורות במצב בטוח. לחץ כדי לעבור למצב גישת שורש.</string>
   <!-- Filesystem Info - Mount failed -->
-  <string name="filesystem_info_mount_failed_msg">פעולת טעינת מערכת הקבצים נכשלה. ישנן מערכות קבצים, כמו כרטיסי זיכרון, שלא ניתן לטעון, או לבטל את טעינתן, היות שהן מובנות כמערכות קבצים לקריאה בלבד.</string>
+  <string name="filesystem_info_mount_failed_msg">פעולת טעינת מערכת הקבצים נכשלה. מערכות קבצים מסוימות, כמו כרטיסי זיכרון, אינן ניתנות לטעינה, או לביטול טעינה, כיוון שהן מובנות כמערכות קבצים לקריאה בלבד.</string>
   <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">מידע על מערכת קבצים</string>
   <!-- Filesystem Info Dialog - Tab - Info -->
@@ -220,13 +220,13 @@
   <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">פנוי:</string>
   <!-- Fso Properties - Not allowed message -->
-  <string name="fso_properties_permissions_not_allowed_msg">פעולות בהרשאות אינן אפשריות במצב בטוח. לחץ כדי לעבור למצב גישת Root.</string>
+  <string name="fso_properties_permissions_not_allowed_msg">פעולות בהרשאות אינן אפשריות במצב בטוח. לחץ כדי לעבור למצב גישת שורש.</string>
   <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">פעולת שינוי בעלות נכשלה.\n\nמסיבות בטיחותיות, חלק ממערכות הקבצים, כמו כרטיסי זיכרון, לא מאפשרות שינויי בעלות.</string>
   <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">פעולת שינוי קבוצה נכשלה.\n\nמסיבות בטיחותיות, חלק ממערכות הקבצים, כמו כרטיסי זיכרון, לא מאפשרות שינויי קבוצות.</string>
   <!-- Fso Properties - Failed to change group to fso -->
-  <string name="fso_properties_failed_to_change_permission_msg">פעולת שינוי הרשאות נכשלה.\n\nמסיבות בטיחותיות, חלק ממערכות הקבצים,כמו כרטיסי זיכרון, לא מאפשרות שינויי הרשאות.</string>
+  <string name="fso_properties_failed_to_change_permission_msg">פעולת שינוי הרשאות נכשלה.\n\nמסיבות בטיחותיות, חלק ממערכות הקבצים, כמו כרטיסי זיכרון, לא מאפשרות שינויי הרשאות.</string>
   <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">מאפיינים</string>
   <!-- Fso Properties Dialog - Tab - Info -->
@@ -266,18 +266,18 @@
   <!-- Fso Properties Dialog - Execute Label -->
   <!-- Fso Properties Dialog - Skip media scan -->
   <string name="fso_properties_dialog_include_in_media_scan">דלג על סריקת מדיה:</string>
-  <string name="fso_failed_to_allow_media_scan">נכשל באפשור סריקת מדיה</string>
+  <string name="fso_failed_to_allow_media_scan">נכשל במתן אפשרות לסריקת מדיה</string>
   <string name="fso_failed_to_prevent_media_scan">נכשל במניעת סריקת מדיה</string>
-  <string name="fso_delete_nomedia_dir_title">מחיקת תיקיית .nomedia</string>
+  <string name="fso_delete_nomedia_dir_title">מחק תיקיית .nomedia</string>
   <string name="fso_delete_nomedia_dir_body">תיקייה זו מכילה תיקיית .nomedia.\n\nהאם ברצונך למחוק אותה ואת כל תוכנה?</string>
-  <string name="fso_delete_nomedia_non_empty_title">מחיקת קובץ .nomedia</string>
+  <string name="fso_delete_nomedia_non_empty_title">מחק קובץ .nomedia</string>
   <string name="fso_delete_nomedia_non_empty_body">תיקייה זו מכילה קובץ .nomedia שאינו ריק.\n\nהאם ברצונך למחוק אותו?</string>
   <!-- History - History activity title -->
   <string name="history">היסטוריה</string>
   <!-- History - The history is empty -->
   <string name="msgs_history_empty">ההיסטוריה ריקה.</string>
   <!-- History - The history reference is not in the actual history list -->
-  <string name="msgs_history_unknown">קובץ היסטוריה לא ידוע.</string>
+  <string name="msgs_history_unknown">פריט היסטוריה לא ידוע.</string>
   <!-- Search - Search activity title -->
   <string name="search">תוצאות חיפוש</string>
   <!-- Search - Search hint message -->
@@ -285,7 +285,7 @@
   <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">דבר כדי לחפש</string>
   <!-- Search - Search error message -->
-  <string name="search_error_msg">התרחשה שגיאה במהלך החיפוש. לא נמצאו תוצאות.</string>
+  <string name="search_error_msg">אירעה שגיאה במהלך החיפוש. לא נמצאו תוצאות.</string>
   <!-- Search - Search no results message -->
   <string name="search_no_results_msg">לא נמצאו תוצאות.</string>
   <!-- Search - Number of items found in directory -->
@@ -295,7 +295,7 @@
   <!-- Search - Confirm search -->
   <string name="search_few_characters_title">אשר חיפוש</string>
   <!-- Search - Some terms of the search are too small. The operation could be very costly -->
-  <string name="search_few_characters_msg">חלק מתנאי החיפוש מכילים מספר תווים קטן. הפעולה עלולה לארוך זמן רב ולצרוך המון משאבים.\n\nהאם ברצונך להמשיך?</string>
+  <string name="search_few_characters_msg">חלק מתנאי החיפוש מכילים מספר תווים קטן. הפעולה עלולה לארוך זמן רב ולצרוך הרבה משאבים.\n\nהאם ברצונך להמשיך?</string>
   <!-- Search - Searching dialog title -->
   <string name="searching">אנא המתן\u2026</string>
   <!-- Search - Searching label -->
@@ -307,7 +307,7 @@
   <!-- Editor - Editor activity title -->
   <string name="editor">עורך</string>
   <!-- Editor - Invalid file message -->
-  <string name="editor_invalid_file_msg">קובץ שגוי.</string>
+  <string name="editor_invalid_file_msg">קובץ לא חוקי.</string>
   <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">קובץ לא נמצא.</string>
   <!-- Editor - File size exceed the limit -->
@@ -341,7 +341,7 @@
   <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">הסר את הסימנייה.</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
-  <string name="bookmarks_msgs_add_success">הסימנייה הוספה בהצלחה.</string>
+  <string name="bookmarks_msgs_add_success">הסימנייה נוספה בהצלחה.</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">הסימנייה כבר קיימת.</string>
   <!-- Initial directory dialog title -->
@@ -351,7 +351,7 @@
   <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">נתיבים יחסיים אסורים.</string>
   <!-- Initial directory error message -->
-  <string name="initial_directory_error_msg">התרחשה שגיאה בעת שמירת נתיב התיקייה ההתחלתית.</string>
+  <string name="initial_directory_error_msg">אירעה שגיאה בעת שמירת נתיב התיקייה ההתחלתית.</string>
   <!-- Menu - Navigation - Search -->
   <string name="menu_search">חיפוש</string>
   <!-- Menu - Navigation - Settings -->
@@ -361,9 +361,9 @@
   <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">אין הצעות</string>
   <!-- Menu - Editor - Word wrap -->
-  <string name="menu_word_wrap">גלישת מילים</string>
+  <string name="menu_word_wrap">גלישת שורות</string>
   <!-- Menu - Editor - Sintax highlight -->
-  <string name="menu_syntax_highlight">הבלט תחביר</string>
+  <string name="menu_syntax_highlight">הדגש תחביר</string>
   <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp">
     <xliff:g id="name">%1$s</xliff:g> - עותק<xliff:g id="extension">%2$s</xliff:g></string>
@@ -403,7 +403,7 @@
   <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">מאפיינים</string>
   <!-- Actions Dialog - Menu - Refresh -->
-  <string name="actions_menu_refresh">רענן</string>
+  <string name="actions_menu_refresh">רענון</string>
   <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">תיקייה חדשה</string>
   <!-- Actions Dialog - Menu - New file -->
@@ -531,7 +531,7 @@
   <string name="category_mail">דוא\"ל</string>
   <string name="category_compress">דחוס</string>
   <string name="category_exec">ניתן להרצה</string>
-  <string name="category_database">בסיס נתונים</string>
+  <string name="category_database">מסד נתונים</string>
   <string name="category_font">גופן</string>
   <string name="category_image">תמונה</string>
   <string name="category_audio">אודיו</string>
@@ -582,7 +582,7 @@
   <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">תצוגה מקדימה</string>
   <!-- Preferences - General - Display thumbs summary -->
-  <string name="pref_display_thumbs_summary">הצג תצוגה מקדימה של תמונה עבור אפליקציות, קבצי מוזיקה, וידאו ותמונות</string>
+  <string name="pref_display_thumbs_summary">הצג תצוגה מקדימה של תמונה עבור יישומים, קבצי מוזיקה, וידאו ותמונות</string>
   <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">השתמש במחוות החלקה</string>
   <!-- Preferences - General - Use flinger detection summary -->
@@ -594,15 +594,15 @@
   <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">מצב בטוח</string>
   <!-- Preferences - General - Safe mode summary -->
-  <string name="pref_access_mode_safe_summary">מצב בטוח\n\nהיישום רץ ללא הרשאות, מערכות הקבצים היחידות שנגישות הן מחיצות האחסון (כרטיסי זיכרון ו-USB)</string>
+  <string name="pref_access_mode_safe_summary">מצב בטוח\n\nהיישום רץ ללא הרשאות, מערכות הקבצים היחידות שנגישות הן אמצעי האחסון (כרטיסי זיכרון ו-USB)</string>
   <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">מצב התראה למשתמש</string>
   <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">מצב התראה למשתמש\n\nהיישום רץ עם הרשאות מלאות למערכת הקבצים, אך יתריע לפני ביצוע כל פעולה הדורשת הרשאות אלו</string>
   <!-- Preferences - General - Root access mode -->
-  <string name="pref_access_mode_root">מצב גישת Root</string>
+  <string name="pref_access_mode_root">מצב גישת שורש</string>
   <!-- Preferences - General - Root access mode summary -->
-  <string name="pref_access_mode_root_summary">מצב גישת Root\n\nאזהרה! מצב זה מאפשר פעולות שעלולת להרוס את המכשיר. זוהי אחריותך לוודא שפעולות אלו בטוחות</string>
+  <string name="pref_access_mode_root_summary">מצב גישת שורש\n\nאזהרה! מצב זה מאפשר פעולות שעלולת להרוס את המכשיר. זוהי אחריותך לוודא שפעולות אלו בטוחות</string>
   <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">הגבל גישה למשתמשים</string>
   <!-- Preferences - General - Restrict secondary users access summary -->
@@ -640,7 +640,7 @@
   <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">סנכרון מושהה</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
-  <string name="pref_secure_storage_delayed_sync_summary">סינכרון של מערכות קבצים מאובטחות הוא פעולה יקרה. הפעל אפשרות זו כדי לאפשר תגובות מהירות יותר לאחר כל פעולה, כך שיתבצע סינכרון כאשר מערכת הקבצים איננה נמצאת בשימוש, אבל על חשבון איבוד המידע הממתין שלא הסתנכרן במידה והאפליקציה תקרוס.</string>
+  <string name="pref_secure_storage_delayed_sync_summary">סנכרון של מערכות קבצים מאובטחות הוא פעולה יקרה. הפעל אפשרות זו כדי לאפשר תגובות מהירות יותר לאחר כל פעולה, כך שיתבצע סנכרון כאשר מערכת הקבצים איננה נמצאת בשימוש, אבל על חשבון איבוד המידע הממתין שלא הסתנכרן אם היישום יקרוס.</string>
   <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">שנה סיסמה</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
@@ -658,19 +658,19 @@
   <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">כאשר פותחים קובץ בינארי, צור hexdump של הקובץ ופתח אותו באמצעות hex viewer</string>
   <!-- Preferences - Editor - Syntax highlight category -->
-  <string name="pref_editor_syntax_highlight_category">הבלטת תחביר</string>
+  <string name="pref_editor_syntax_highlight_category">הדגש תחביר</string>
   <!-- Preferences - Editor - Syntax highlight -->
-  <string name="pref_syntax_highlight">הבלט תחביר</string>
+  <string name="pref_syntax_highlight">הדגש תחביר</string>
   <!-- Preferences - Editor - Syntax highlight summary -->
-  <string name="pref_syntax_highlight_desc">הבלט את התחביר של הקובץ המוצג בעורך (רק כאשר מעבד הבלטת תחביר עבור סוג קובץ זה זמין)</string>
+  <string name="pref_syntax_highlight_desc">הדגש את התחביר של הקובץ המוצג בעורך (רק כאשר מעבד הדגשת תחביר זמין עבור סוג קובץ זה)</string>
   <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">ערכת צבעים</string>
   <!-- Preferences - Editor - Syntax highlight color scheme summary -->
-  <string name="pref_syntax_highlight_color_scheme_desc">בחר את ערכת הצבעים של הבלטת תחביר</string>
+  <string name="pref_syntax_highlight_color_scheme_desc">בחר את ערכת הצבעים להדגשת תחביר</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">השתמש בברירת המחדל של ערכת העיצוב</string>
   <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
-  <string name="pref_syntax_sh_use_theme_default_desc">השתמש בהבלטת התחביר הרגילה של ערכת העיצוב הנוכחית</string>
+  <string name="pref_syntax_sh_use_theme_default_desc">השתמש בהדגשת התחביר הרגילה של ערכת העיצוב הנוכחית</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">פריטים</string>
   <!-- Preferences - Themes - Themes selection category -->
@@ -682,7 +682,7 @@
   <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">ערכת העיצוב לא נמצאה.</string>
   <!-- Preferences - Debug - Capture debug traces -->
-  <string name="pref_debug_traces">תעד ניפוי שגיאות</string>
+  <string name="pref_debug_traces">תעד איתור באגים</string>
   <!-- Themes - Default theme name -->
   <string name="theme_default_name">ערכת עיצוב בהירה</string>
   <!-- Themes - Default theme description -->
@@ -712,7 +712,7 @@
   <string name="ash_variable">משתנה</string>
   <!-- Secure Storage -->
   <!-- Secure Storage dialog title - Unlock -->
-  <string name="secure_storage_unlock_title">שחרור אחסון מאובטח</string>
+  <string name="secure_storage_unlock_title">פתיחת אחסון מאובטח</string>
   <!-- Secure Storage dialog title - Create -->
   <string name="secure_storage_create_title">יצירת אחסון מאובטח</string>
   <!-- Secure Storage dialog title - Reset -->
@@ -720,11 +720,11 @@
   <!-- Secure Storage dialog title - Delete -->
   <string name="secure_storage_delete_title">מחיקת אחסון מאובטח</string>
   <!-- Secure Storage unlock dialog message (secure storage exists) -->
-  <string name="secure_storage_unlock_key_prompt_msg">הקלד את הסיסמה כדי לבטל את נעילת מערכת האחסון המאובטחת.</string>
+  <string name="secure_storage_unlock_key_prompt_msg">הקלד את הסיסמה כדי לפתוח את מערכת האחסון המאובטחת.</string>
   <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">הקלד את הסיסמה כדי לנעול את מערכת האחסון המאובטחת.</string>
   <!-- Secure Storage unlock dialog message (reset the current password) -->
-  <string name="secure_storage_unlock_key_reset_msg">הקלד את העכשוית וסיסמה חדשה כדי לאפס את נעילת מערכת האחסון המאובטחת.</string>
+  <string name="secure_storage_unlock_key_reset_msg">הקלד את העכשווית וססמה חדשה כדי לאפס את נעילת מערכת האחסון המאובטחת.</string>
   <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">הקלד את הסיסמה הנוכחית על מנת להסיר את הגנת הקבצים המאובטחת.</string>
   <!-- Secure Storage unlock dialog old key title -->
@@ -738,19 +738,19 @@
   <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">צור</string>
   <!-- Secure Storage unlock button -->
-  <string name="secure_storage_unlock_button">בטל נעילה</string>
+  <string name="secure_storage_unlock_button">פתיחה</string>
   <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">אתחל</string>
   <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">מחק</string>
   <!-- Secure Storage unlock failed toast -->
-  <string name="secure_storage_unlock_failed">לא יכול לבטל את נעילת אמצעי האחסון</string>
+  <string name="secure_storage_unlock_failed">לא ניתן לפתוח את אמצעי האחסון</string>
   <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">הסיסמה חייבת להכיל לפחות <xliff:g id="characters">%1$d</xliff:g> תווים.</string>
   <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">הסיסמאות אינן תאומות.</string>
   <!-- Secure storage open file warning -->
-  <string name="secure_storage_open_file_warning">פעולה זו תעתיק את הקובץ למיקום זמני לא מוצפן. הקובץ הזמני יימחק לאחר שעה.</string>
+  <string name="secure_storage_open_file_warning">פעולה זו תעתיק את הקובץ למיקום זמני לא מוצפן. הקובץ הזמני ינוקה לאחר שעה.</string>
   <!-- Print messages -->
   <!-- Unsupported document format -->
   <string name="print_unsupported_document">פורמט מסמך לא נתמך</string>

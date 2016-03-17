@@ -115,7 +115,7 @@
   <!-- Operation not permitted in the current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">Целевата папката не може да бъде подпапка на източника или в директорията на източника.</string>
   <!-- The advice message prior to exit the app -->
-  <string name="msgs_push_again_to_exit">Натиснете отново за да изход.</string>
+  <string name="msgs_push_again_to_exit">Натиснете отново за изход.</string>
   <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">Няма приложение, регистрирано да обработва типа на избрания файл.</string>
   <!-- Overwrite files? -->
@@ -280,7 +280,7 @@
   <!-- Search - Search activity title -->
   <string name="search">Резултати от търсенето</string>
   <!-- Search - Search hint message -->
-  <string name="search_hint">Въведете вашето търсене</string>
+  <string name="search_hint">Въведете условие за търсене</string>
   <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">Гласово търсене</string>
   <!-- Search - Search error message -->
@@ -298,7 +298,7 @@
   <!-- Search - Searching dialog title -->
   <string name="searching">Моля, изчакайте\u2026</string>
   <!-- Search - Searching label -->
-  <string name="searching_action_label">Търсене в ход</string>
+  <string name="searching_action_label">В процес на търсене</string>
   <!-- Picker Activity -->
   <!-- Picker Activity - Dialog title -->
   <string name="picker_title">Изберете файл</string>
@@ -446,7 +446,7 @@
   <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">Свойства</string>
   <!-- Actions Dialog - Menu - Add to bookmarks -->
-  <string name="actions_menu_add_to_bookmarks">Добави към отметките</string>
+  <string name="actions_menu_add_to_bookmarks">Добави към отметки</string>
   <!-- Actions Dialog - Menu - Add shortcut -->
   <string name="actions_menu_add_shortcut">Добавяне на пряк път</string>
   <!-- Actions Dialog - Menu - Open parent folder -->
@@ -583,7 +583,7 @@
   <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Използвай жестове</string>
   <!-- Preferences - General - Use flinger detection summary -->
-  <string name="pref_use_flinger_summary">Използвайте плъзгане от наляво на десно за да изтривате файлове или папки</string>
+  <string name="pref_use_flinger_summary">Плъзгане от ляво надясно за да изтриете даден файл или папка</string>
   <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Разширени</string>
   <!-- Preferences - General - Access mode -->
@@ -623,7 +623,7 @@
   <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">Запиши критериите за търсене</string>
   <!-- Preferences - Search - Save search terms summary on -->
-  <string name="pref_save_search_terms_on">Термини за търсене ще бъдат съхранени и използвани както предложения в бъдеще търсения</string>
+  <string name="pref_save_search_terms_on">Критериите за търсене ще бъдат съхранени и използвани, като предложения в бъдещи търсения</string>
   <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">Критериите за търсене няма да бъдат записвани</string>
   <!-- Preferences - Search - Remove saved search terms -->
@@ -764,9 +764,9 @@
   <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Добре дошли</string>
   <!-- Welcome Dialog - Message -->
-  <string name="welcome_msg">Добре дошли в CyanogenMod файловия мениджър.\n\nТова приложение ви позволява да проучите файловата система и операции, които могат да блокират вашето устройство. За да предотвратите повреда, приложението ще започне в сигурен ниско правен режим.\n\nВие може да влезете в администраторски режим чрез настройките, но на своя отговорност.\n\nThe CyanogenMod екип</string>
+  <string name="welcome_msg">Добре дошли във файловия мениджър на CyanogenMod.\n\nТова приложение Ви позволява да проучите файловата система и позволява операции, които могат да блокират вашето устройство. За да предотврати повреда, приложението ще започне в сигурен ниско правен режим.\n\nВие може да влезете в администраторски режим чрез настройките, но на своя отговорност.\n\nThe CyanogenMod Team</string>
   <string name="activity_not_found_exception">Не може да намери приложение, за отварянето на този файл</string>
   <string name="storage_permissions_denied">Мениджъра на файлове изисква разрешение до устройството с памет, за да видите вашите файлове.</string>
-  <string name="storage_permissions_explanation">Отидете в Настройки / Разрешения за да дадете разрешение.</string>
+  <string name="storage_permissions_explanation">Отидете в Настройки и кликнете върху \" Разрешения \" за да дадете разрешение за достъп.</string>
   <string name="snackbar_settings">Настройки</string>
 </resources>

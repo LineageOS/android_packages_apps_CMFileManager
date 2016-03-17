@@ -17,366 +17,756 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- The name of the app -->
+  <string name="app_name">ھۆججەت باشقۇرغۇچ</string>
   <!-- The description of the app -->
+  <string name="app_description">CyanogenMod ھۆججەت باشقۇرغۇچ</string>
   <!-- Human readable sizes -->
+  <string name="size_bytes">B</string>
+  <string name="size_kilobytes">kB</string>
+  <string name="size_megabytes">MB</string>
+  <string name="size_gigabytes">GB</string>
   <!-- Date/time format order (%1$s: date; %2$s: time) -->
+  <string name="datetime_format_order">%1$s %2$s</string>
   <!-- Devices types -->
+  <string name="device_blockdevice">بۆلەك ئۈسكۈنىسى</string>
+  <string name="device_characterdevice">ھەرپ ئۈسكۈنىسى</string>
+  <string name="device_namedpipe">ئاتالغان تۇرۇبا</string>
+  <string name="device_domainsocket">دائىرە سوكىت</string>
   <!-- Mount Point States -->
+  <string name="mount_point_readonly">ئوقۇشقىلا</string>
+  <string name="mount_point_readwrite">ئوقۇپ يېزىش</string>
   <!-- Default buttons -->
+  <string name="yes">ھەئە</string>
+  <string name="no">ياق</string>
+  <string name="all">ھەممىسى</string>
+  <string name="overwrite">قاپلاڭ</string>
+  <string name="select">تاللاڭ</string>
   <!-- The root directory name -->
+  <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
   <!-- The search result name -->
+  <string name="search_result_name">ئىزدەڭ: <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Loading waiting message -->
+  <string name="loading_message">يۈكلەۋاتىدۇ</string>
   <!-- Computing message -->
   <!-- Computing new line message -->
   <!-- Cancelled message -->
+  <string name="cancelled_message">بىكار قىلىندى.</string>
   <!-- Error message -->
+  <string name="error_message">خاتالىق.</string>
   <!-- Copy text content description -->
+  <string name="copy_text_cd">چېكىلسە تېكىست چاپلاش تاختىسىغا كۆچۈرۈلىدۇ</string>
   <!-- Copy text content message -->
+  <string name="copy_text_msg">تېكىست كېسىپ چاپلاش تاختىسىغا كۆچۈرۈلدى</string>
   <!-- Warning dialog title -->
+  <string name="warning_title">ئاگاھلاندۇرۇش</string>
   <!-- Error dialog title -->
+  <string name="error_title">خاتالىق</string>
   <!-- Confirm operation dialog title -->
+  <string name="confirm_operation">مەشغۇلاتنى جەزملەڭ</string>
   <!-- Confirm overwrite dialog title -->
+  <string name="confirm_overwrite">قاپلاشنى جەزملەڭ</string>
   <!-- Confirm deletion dialog title -->
+  <string name="confirm_deletion">ئۆچۈرۈشنى جەزملەڭ</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
+  <string name="msgs_change_to_prompt_access_mode_title">ئالماشۇرۇشنى جەزملەڭ</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
+  <string name="msgs_change_to_prompt_access_mode_msg">بۇنى Root زىيارەت ھالىتىدە ئىجرا قىلالمايدۇ. بىخەتەر ھالەتكە ئالمىشىۋاتىدۇ.\n\nبۇ ئۆزگەرتىشنى قوللىنامدۇ؟</string>
   <!-- A console couldn't be created - Without privileges, the app won't work -->
+  <string name="msgs_cant_create_console">ئىجرا قىلىشقا زۆرۈر بولغان ھوقۇققا ئېرىشەلمىدى.</string>
   <!-- The message shown when an allocation of a privileged console fails, and a non
          privileged is allocated -->
+  <string name="msgs_privileged_console_alloc_failed">بۇنى Root زىيارەت ھالىتىدە ئىجرا قىلالمايدۇ. بىخەتەر ھالەتكە ئالمىشىۋاتىدۇ.</string>
   <!-- The selected setting was not applied or stored -->
+  <string name="msgs_settings_save_failure">تەڭشەكنى قوللىنالمىدى ياكى ساقلىيالمىدى.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
+  <string name="msgs_settings_invalid_initial_directory">دەسلەپكى قىسقۇچ \"<xliff:g id="initial_dir">%1$s</xliff:g>\" ئىناۋەتسىز. root قىسقۇچقا ئالمىشىۋاتىدۇ.</string>
   <!-- Root is not available message -->
+  <string name="root_not_available_msg">بۇ ئۈسكۈنىدە Root ھوقۇقى يوق، بۇ مەشغۇلاتنى ئىجرا قىلالمايدۇ.</string>
   <!-- Success -->
+  <string name="msgs_success">مەشغۇلات غەلبىلىك تاماملاندى.</string>
   <!-- Unknown error -->
+  <string name="msgs_unknown">خاتالىق بايقالدى. مەشغۇلات غەلبىلىك تاماملانمىدى.</string>
   <!-- When an operation requires elevated privileged (normally caused for the use of a
          non-privileged console) -->
+  <string name="msgs_insufficient_permissions">بۇ مەشغۇلات تېخىمۇ يۇقىرى ھوقۇققا ئېھتىياجلىق. Root زىيارەت ھالىتىگە ئالمىشىشنى سىناۋاتىدۇ.</string>
   <!-- When an operation fails because the device has run out of storage. -->
+  <string name="msgs_no_disk_space">بۇ مەشغۇلات مەغلۇپ بولدى چۈنكى ئۈسكۈنىدە قېپ قالغان بوشلۇق يوق.</string>
   <!-- The file or directory was not found -->
+  <string name="msgs_file_not_found">ھۆججەت ياكى قىسقۇچ تېپىلمىدى.</string>
   <!-- The command reference couldn't be created (not found or invalid definition)
          (normally caused by a development error) -->
+  <string name="msgs_command_not_found">مەشغۇلات بۇيرۇقىنى تاپالمىدى ياكى ئىناۋەتسىز ئېنىقلىما بار.</string>
   <!-- I/O exception -->
+  <string name="msgs_io_failed">ئوقۇپ/يېزىش مەغلۇپ بولدى.</string>
   <!-- Operation timeout detected -->
+  <string name="msgs_operation_timeout">مەشغۇلات ۋاقىت ھالقىدى.</string>
   <!-- The operation returns an invalid exit code -->
+  <string name="msgs_operation_failure">مەشغۇلات مەغلۇپ بولدى.</string>
   <!-- A console couldn't be allocated -->
+  <string name="msgs_console_alloc_failure">ئىچكى خاتالىق يۈز بەردى.</string>
   <!-- An operation can't be cancelled -->
+  <string name="msgs_operation_can_not_be_cancelled">بۇ مەشغۇلاتتىن ۋاز كېچەلمەيدۇ.</string>
   <!-- The operation requieres mount the file system prior to execute the command -->
+  <string name="msgs_read_only_filesystem">ئوقۇشقىلا بولىدىغان ھۆججەت سىستېمىسى. مەشغۇلاتنى ئېلىپ بېرىشتىن ئىلگىرى ھۆججەت سىستېمىسىنى ئوقۇپ يېزىش ھالىتىدە ئېگەرلەشنى سىناڭ.</string>
   <!-- Illegal argument (normally caused by a development error when calling internal api) -->
+  <string name="msgs_illegal_argument">ئىناۋەتسىز ئەركىن ئۆزگەرگۈچى. يۆتكەپ ئىشلىتەلمىدى.</string>
   <!-- The operation will cause inconsistencies -->
+  <string name="msgs_unresolved_inconsistencies">بۇ مەشغۇلاتقا يول قويۇلمىغان چۈنكى ئۇ بىردەك بولماسلىقنى كەلتۈرۈپ چىقىرىدۇ.</string>
   <!-- Operation not permitted in the current directory -->
+  <string name="msgs_operation_not_allowed_in_current_directory">نىشان قىسقۇچ مەنبە قىسقۇچنىڭ تارماق قىسقۇچى ياكى مەنبە قىسقۇچ بىلەن ئوخشاش بولسا بولمايدۇ.</string>
   <!-- The advice message prior to exit the app -->
+  <string name="msgs_push_again_to_exit">قايتا چېكىلسە چېكىنىدۇ.</string>
   <!-- There is no registered app that can handle the mime-type -->
+  <string name="msgs_not_registered_app">تاللانغان بۇ تۈردىكى ھۆججەتنى بىر تەرەپ قىلىدىغان ئەپ خەتلەنمىگەن.</string>
   <!-- Overwrite files? -->
+  <string name="msgs_overwrite_files">نىشان مۇندەرىجىدە بىر قىسىم ھۆججەتلەر مەۋجۇت.\n\nقاپلىۋېتەمدۇ؟</string>
   <!-- The association of an action to the app failed -->
+  <string name="msgs_action_association_failed">مەشغۇلات بىلەن ئەپ ئۇلىنالمىدى.</string>
   <!-- An operation requires elevated privileged. Ask the user. -->
+  <string name="advise_insufficient_permissions">بۇ مەشغۇلات تېخىمۇ يۇقىرى ھوقۇققا ئېھتىياجلىق.\n\nRoot زىيارەت ھالىتىگە ئالمىشامسىز؟</string>
   <!-- The parent directory of the current directory in navigation view -->
+  <string name="parent_dir">ئاتا قىسقۇچ</string>
   <!-- External storage descripton -->
+  <string name="external_storage">سىرتقى ساقلىغۇچ</string>
   <!-- Usb storage descripton -->
+  <string name="usb_storage">USB ساقلىغۇچ</string>
   <!-- ActionBar Buttons - FileSystem -->
+  <string name="actionbar_button_filesystem_cd">ھۆججەت سىستېما ئۇچۇرى</string>
   <!-- ActionBar Buttons - Sort Mode -->
+  <string name="actionbar_button_sort_mode_cd">تەرتىپلەش ئۇسۇلى</string>
   <!-- ActionBar Buttons - Layout Mode -->
+  <string name="actionbar_button_layout_mode_cd">ئورۇنلاشتۇرۇش ئۇسۇلى</string>
   <!-- ActionBar Buttons - Other View Options -->
+  <string name="actionbar_button_other_view_options_cd">باشقا كۆرۈنۈش تاللانمىلىرى</string>
   <!-- ActionBar Buttons - Done -->
+  <string name="actionbar_button_selection_done_cd">تامام</string>
   <!-- ActionBar Buttons - Actions -->
+  <string name="actionbar_button_actions_cd">مەشغۇلاتلار</string>
   <!-- ActionBar Buttons - Search -->
+  <string name="actionbar_button_search_cd">ئىزدە</string>
   <!-- ActionBar Buttons - Overflow -->
+  <string name="actionbar_button_overflow_cd">تېخىمۇ كۆپ تاللانما</string>
   <!-- ActionBar Buttons - Storage volumes -->
+  <string name="actionbar_button_storage_cd">ساقلىغۇچ دىسكىلىرى</string>
   <!-- ActionBar Buttons - Save -->
+  <string name="actionbar_button_save_cd">ساقلاش</string>
   <!-- ActionBar Buttons - Print -->
+  <string name="actionbar_button_print_cd">بېسىش</string>
   <!-- Navigation View - Sort - Sort by name (ascending) -->
+  <string name="sort_by_name_asc">ئات بويىچە \u25B2</string>
   <!-- Navigation View - Sort - Sort by name (descending) -->
+  <string name="sort_by_name_desc">ئات بويىچە \u25BC</string>
   <!-- Navigation View - Sort - Sort by date (ascending) -->
+  <string name="sort_by_date_asc">چېسلا بويىچە \u25B2</string>
   <!-- Navigation View - Sort - Sort by date (descending) -->
+  <string name="sort_by_date_desc">چېسلا بويىچە \u25BC</string>
   <!-- Navigation View - Sort - Sort by size (ascending) -->
+  <string name="sort_by_size_asc">چوڭلۇقى بويىچە \u25B2</string>
   <!-- Navigation View - Sort - Sort by size (descending) -->
+  <string name="sort_by_size_desc">چوڭلۇقى بويىچە \u25BC</string>
   <!-- Navigation View - Sort - Sort by type (ascending) -->
+  <string name="sort_by_type_asc">تىپى بويىچە \u25B2</string>
   <!-- Navigation View - Sort - Sort by type (descending) -->
+  <string name="sort_by_type_desc">تىپى بويىچە \u25BC</string>
   <!-- Navigation View - Layout - Icons -->
+  <string name="layout_icons">سىنبەلگەلەر</string>
   <!-- Navigation View - Layout - Simple -->
+  <string name="layout_simple">ئاددىي</string>
   <!-- Navigation View - Layout - Details -->
+  <string name="layout_details">تەپسىلاتى</string>
   <!-- Navigation View - View - Show folders first -->
+  <string name="cm_filemanager_show_dirs_first">باشتا قىسقۇچلارنى كۆرسىتىش</string>
   <!-- Navigation View - View - Show hidden files option -->
+  <string name="cm_filemanager_show_hidden">يوشۇرۇن ھۆججەتلەرنى كۆرسەت</string>
   <!-- Navigation View - View - Show system files option -->
+  <string name="cm_filemanager_show_system">سىستېما ھۆججەتلەرنى كۆرسەت</string>
   <!-- Navigation View - View - Show symlinks option -->
+  <string name="cm_filemanager_show_symlinks">بەلگە ئۇلانمىلارنى كۆرسەت</string>
   <!-- Filesystem Info (no data). Dialog title -->
+  <string name="filesystem_info_warning_title">ئۇچۇر يوق</string>
   <!-- Filesystem Info (no data). Dialog message -->
+  <string name="filesystem_info_warning_msg">ھۆججەت سىستېمىسىغا ئائىت ئىشلەتكىلى بولىدىغان ھېچقانداق ئۇچۇر يوق.</string>
   <!-- Filesystem Info - Filesystem couldn't be mounted -->
+  <string name="filesystem_info_cant_be_mounted_msg">ھۆججەت سىستېمىسىنى ئېگەرلىيەلمىدى/ئېگەرسىزلىيەلمىدى.</string>
   <!-- Filesystem Info - Not allowed message -->
+  <string name="filesystem_info_mount_not_allowed_msg">بىخەتەر ھالەتتە ھۆججەت سىستېمىسىنى ئېگەرلەش مەشغۇلاتىغا يول قويۇلمايدۇ. چېكىلسە Root ئالىي ئىشلەتكۈچى زىيارەت ھالىتىگە ئالمىشىدۇ.</string>
   <!-- Filesystem Info - Mount failed -->
+  <string name="filesystem_info_mount_failed_msg">ھۆججەت سىستېمىسىنى يۈكلەش مەشغۇلاتى مەغلۇپ بولدى. بەزى ھۆججەت سىستېمىسى (SD كارتىغا ئوخشاش) پەقەت ئوقۇشقىلا بولىدىغان قىلىپ لايىھەلەنگەن، شۇڭلاشقا ئېگەرلىگىلى ياكى ئېگەرسىزلىگىلى بولمايدۇ.</string>
   <!-- Filesystem Info Dialog - Title -->
+  <string name="filesystem_info_dialog_title">ھۆججەت سىستېما ئۇچۇرى</string>
   <!-- Filesystem Info Dialog - Tab - Info -->
+  <string name="filesystem_info_dialog_tab_info">ئۇچۇر</string>
   <!-- Filesystem Info Dialog - Tab - Disk Usage -->
+  <string name="filesystem_info_dialog_tab_disk_usage">دىسكىنىڭ ئىشلىتىلىشى</string>
   <!-- Filesystem Info Dialog - Status Label -->
+  <string name="filesystem_info_dialog_status">ئېگەرلەندى:</string>
   <!-- Filesystem Info Dialog - Mount Point Label -->
+  <string name="filesystem_info_dialog_mount_point">ئېگەرلەش نۇقتىسى:</string>
   <!-- Filesystem Info Dialog - Device Label -->
+  <string name="filesystem_info_dialog_device">ئۈسكۈنە:</string>
   <!-- Filesystem Info Dialog - Type Label -->
+  <string name="filesystem_info_dialog_type">تۈرى:</string>
   <!-- Filesystem Info Dialog - Options Label -->
+  <string name="filesystem_info_dialog_options">تاللانمىلار:</string>
   <!-- Filesystem Info Dialog - Dump/Pass Label -->
+  <string name="filesystem_info_dialog_dump_pass">يۆتكەپ ساقلاش/يوللاش:</string>
   <!-- Filesystem Info Dialog - Virtual Label -->
+  <string name="filesystem_info_dialog_virtual">مەۋھۇم:</string>
   <!-- Filesystem Info Dialog - Total Disk Usage -->
+  <string name="filesystem_info_dialog_total_disk_usage">جەمئى:</string>
   <!-- Filesystem Info Dialog - Used Disk Usage -->
+  <string name="filesystem_info_dialog_used_disk_usage">ئىشلىتىلگىنى:</string>
   <!-- Filesystem Info Dialog - Free Disk Usage -->
+  <string name="filesystem_info_dialog_free_disk_usage">بوش:</string>
   <!-- Fso Properties - Not allowed message -->
+  <string name="fso_properties_permissions_not_allowed_msg">بىخەتەر ھالەتتە ھوقۇق مەشغۇلاتىغا يول قويۇلمايدۇ. چېكىلسە Root ئالىي ئىشلەتكۈچى زىيارەت ھالىتىگە ئالمىشىدۇ.</string>
   <!-- Fso Properties - Failed to change owner to fso -->
+  <string name="fso_properties_failed_to_change_owner_msg">گۇرۇپپىسىنى ئۆزگەرتەلمىدى.\n\nبىخەتەرلىك سەۋەبىدىن بەزى ھۆججەت سىستېمىسى (SD كارتىغا ئوخشاش) گۇرۇپپىسىنى ئۆزگەرتىش مەشغۇلاتىغا يول قويمايدۇ.</string>
   <!-- Fso Properties - Failed to change group to fso -->
+  <string name="fso_properties_failed_to_change_group_msg">گۇرۇپپىسىنى ئۆزگەرتەلمىدى.\n\nبىخەتەرلىك سەۋەبىدىن بەزى ھۆججەت سىستېمىسى (SD كارتىغا ئوخشاش) گۇرۇپپىسىنى ئۆزگەرتىش مەشغۇلاتىغا يول قويمايدۇ.</string>
   <!-- Fso Properties - Failed to change group to fso -->
+  <string name="fso_properties_failed_to_change_permission_msg">ھوقۇقنى ئۆزگەرتەلمىدى.\n\nبىخەتەرلىك سەۋەبىدىن بەزى ھۆججەت سىستېمىسى (SD كارتىغا ئوخشاش) ھوقۇقنى ئۆزگەرتىش مەشغۇلاتىغا يول قويمايدۇ.</string>
   <!-- Fso Properties Dialog - Title -->
+  <string name="fso_properties_dialog_title">خاسلىقلار</string>
   <!-- Fso Properties Dialog - Tab - Info -->
+  <string name="fso_properties_dialog_tab_info">ئۇچۇر</string>
   <!-- Fso Properties Dialog - Tab - Permissions -->
+  <string name="fso_properties_dialog_tab_permissions">ھوقۇقلار</string>
   <!-- Fso Properties Dialog - Name Label -->
+  <string name="fso_properties_dialog_name">ئىسمى:</string>
   <!-- Fso Properties Dialog - Parent Folder Label -->
+  <string name="fso_properties_dialog_parent">ئاتا-ئانا:</string>
   <!-- Fso Properties Dialog - Type Label -->
+  <string name="fso_properties_dialog_type">تىپى:</string>
   <!-- Fso Properties Dialog - Category Label -->
+  <string name="fso_properties_dialog_category">تۈرى:</string>
   <!-- Fso Properties Dialog - Link Label -->
+  <string name="fso_properties_dialog_link">ئۇلانما:</string>
   <!-- Fso Properties Dialog - Size Label -->
+  <string name="fso_properties_dialog_size">چوڭلۇقى:</string>
   <!-- Fso Properties Dialog - Contains Label -->
+  <string name="fso_properties_dialog_contains">ئىچىدە:</string>
   <!-- Fso Properties Dialog - Last Accessed Time Label -->
+  <string name="fso_properties_dialog_last_accessed_date">زىيارەت:</string>
   <!-- Fso Properties Dialog - Last Modified Time Label -->
+  <string name="fso_properties_dialog_last_modified_date">ئۆزگەرتكەن:</string>
   <!-- Fso Properties Dialog - Last Changed Time -->
+  <string name="fso_properties_dialog_last_changed_date">ئۆزگەردى:</string>
   <!-- Fso Properties Dialog - Owner Label -->
+  <string name="fso_properties_dialog_owner">ئىگىدار:</string>
   <!-- Fso Properties Dialog - Group Label -->
+  <string name="fso_properties_dialog_group">گۇرۇپپا:</string>
   <!-- Fso Properties Dialog - Others Label -->
+  <string name="fso_properties_dialog_others">باشقىلار:</string>
   <!-- Fso Properties Dialog - Special Label -->
   <!-- Fso Properties Dialog - Read Label -->
   <!-- Fso Properties Dialog - Write Label -->
   <!-- Fso Properties Dialog - Execute Label -->
   <!-- Fso Properties Dialog - Execute Label -->
   <!-- Fso Properties Dialog - Skip media scan -->
+  <string name="fso_properties_dialog_include_in_media_scan">ۋاستە تەكشۈرۈشتىن ئاتلاڭ:</string>
+  <string name="fso_failed_to_allow_media_scan">ۋاستە تەكشۈرۈشكە يول قويالمىدى</string>
+  <string name="fso_failed_to_prevent_media_scan">ۋاستە تەكشۈرۈشنىڭ ئالدىنى ئالالمىدى</string>
+  <string name="fso_delete_nomedia_dir_title">بۇ .nomedia مۇندەرىجىنى ئۆچۈر</string>
+  <string name="fso_delete_nomedia_dir_body">بۇ مۇندەرىجىدە بىر .nomedia مۇندەرىجە بار.\n\nئۇنى ۋە ئۇنىڭ ھەممە مەزمۇنلىرىنى ئۆچۈرەمسىز؟?</string>
+  <string name="fso_delete_nomedia_non_empty_title">بۇ .nomedia ھۆججەتنى ئۆچۈر</string>
   <string name="fso_delete_nomedia_non_empty_body">بۇ مۇندەرىجىدە بوش بولمىغان .nomedia ھۆججەت بار.\n\nئۇنى  ئۆچۈرەمسىز؟</string>
   <!-- History - History activity title -->
+  <string name="history">تارىخ</string>
   <!-- History - The history is empty -->
+  <string name="msgs_history_empty">تارىخ خاتىرىسى بوش.</string>
   <!-- History - The history reference is not in the actual history list -->
+  <string name="msgs_history_unknown">يوچۇن تارىخ خاتىرىسى تۈرى.</string>
   <!-- Search - Search activity title -->
+  <string name="search">ئىزدەش نەتىجىلىرى</string>
   <!-- Search - Search hint message -->
+  <string name="search_hint">ئىزدەيدىغىنىڭىزنى كىرگۈزۈڭ</string>
   <!-- Search - Voice search hint message -->
+  <string name="search_voice_hint">ئىزدەيدىغىنىڭىزنى سۆزلەڭ</string>
   <!-- Search - Search error message -->
+  <string name="search_error_msg">ئىزدەۋاتقاندا خاتالىق كۆرۈلدى. ھېچقانداق نەتىجە تېپىلمىدى.</string>
   <!-- Search - Search no results message -->
+  <string name="search_no_results_msg">ھېچقانداق نەتىجە تېپىلمىدى.</string>
   <!-- Search - Number of items found in directory -->
+  <string name="search_found_items_in_directory"><xliff:g id="path">%2$s</xliff:g> دىكى <xliff:g id="items">%1$s</xliff:g></string>
   <!-- Search - Search query terms -->
+  <string name="search_terms"><![CDATA[<b>ھالقىلىق سۆز:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Search - Confirm search -->
+  <string name="search_few_characters_title">ئىزدەشنى جەزملەش</string>
   <!-- Search - Some terms of the search are too small. The operation could be very costly -->
+  <string name="search_few_characters_msg">بەزى ئىزدەيدىغان ھالقىلىق سۆزدە ھەرپ بەك ئاز. بۇ مەشغۇلات بەك كۆپ ۋاقىت ۋە سىستېما مەنبەسىنى سەرپ قىلىشى مۇمكىن.\n\nداۋاملاشتۇرامدۇ؟</string>
   <!-- Search - Searching dialog title -->
+  <string name="searching">سەل كۈتۈڭ…\u2026</string>
   <!-- Search - Searching label -->
+  <string name="searching_action_label">ئىزدەۋاتىدۇ</string>
   <!-- Picker Activity -->
   <!-- Picker Activity - Dialog title -->
+  <string name="picker_title">بىر ھۆججەت تاللاڭ</string>
+  <string name="directory_picker_title">بىر مۇندەرىجە تاللاڭ</string>
   <!-- Editor - Editor activity title -->
+  <string name="editor">تەھرىرلىگۈچ</string>
   <!-- Editor - Invalid file message -->
+  <string name="editor_invalid_file_msg">ئىناۋەتسىز ھۆججەت.</string>
   <!-- Editor - File not found message -->
+  <string name="editor_file_not_found_msg">ھۆججەت تېپىلمىدى.</string>
   <!-- Editor - File size exceed the limit -->
+  <string name="editor_file_exceed_size_msg">بۇ ھۆججەت بەك چوڭ، مەزكۇر ئۈسكۈنىدە ئاچالمايدۇ.</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog title -->
+  <string name="editor_dirty_ask_title">چېكىنىشنى جەزملەش</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog message -->
+  <string name="editor_dirty_ask_msg">تېخى ساقلانمىغان ئۆزگەرتىشلەر بار.\n\nساقلىمايلا چېكىنەمدۇ؟</string>
   <!-- Editor - Save operation success -->
+  <string name="editor_successfully_saved">ھۆججەت مۇۋەپپەقىيەتلىك ساقلاندى.</string>
   <!-- Editor - Read-only file mode -->
+  <string name="editor_read_only_mode">ھۆججەت ئوقۇشقىلا بولىدىغان ھالەتتە ئېچىلدى.</string>
   <!-- Editor - Dumping message -->
+  <string name="dumping_message">ئون ئالتەلىك ساقلانما قۇرۇۋاتىدۇ\u2026</string>
   <!-- Editor - Displaying -->
+  <string name="displaying_message">كۆرسىتىۋاتىدۇ\u2026</string>
   <!-- Bookmarks - Bookmarks activity title -->
+  <string name="bookmarks">خەتكۈچلەر</string>
   <!-- Bookmarks - Bookmark name - Home -->
+  <string name="bookmarks_home">باش ئېكران</string>
   <!-- Bookmarks - Bookmark name - Root folder -->
+  <string name="bookmarks_root_folder">غول قىسقۇچ</string>
   <!-- Bookmarks - Bookmark name - System folder -->
+  <string name="bookmarks_system_folder">سىستېما قىسقۇچى</string>
   <!-- Bookmarks - Bookmark name - Secure storage -->
+  <string name="bookmarks_secure">بىخەتەر ساقلىغۇچ</string>
   <!-- Bookmarks - Bookmark name - Remote storage -->
+  <string name="bookmarks_remote">يىراقتىكى ساقلىغۇچ</string>
   <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
+  <string name="bookmarks_button_config_cd">دەسلەپكى قىسقۇچ تەڭشىكى.</string>
   <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
+  <string name="bookmarks_button_remove_bookmark_cd">خەتكۈچنى چىقىرىۋېتىش.</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
+  <string name="bookmarks_msgs_add_success">خەتكۈش مۇۋەپپەقىيەتلىق قوشۇلدى.</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
+  <string name="bookmarks_msgs_add_exists">بۇ خەتكۈچ مەۋجۇت.</string>
   <!-- Initial directory dialog title -->
+  <string name="initial_directory_dialog_title">دەسلەپكى قىسقۇچ</string>
   <!-- Initial directory label -->
+  <string name="initial_directory_label">دەسلەپكى قىسقۇچنى تاللاڭ:</string>
   <!-- Initial directory is relative -->
+  <string name="initial_directory_relative_msg">نىسپىي يولغا يول قويۇلمايدۇ.</string>
   <!-- Initial directory error message -->
+  <string name="initial_directory_error_msg">دەسلەپكى قىسقۇچنى ساقلاۋاتقاندا خاتالىق كۆرۈلدى.</string>
   <!-- Menu - Navigation - Search -->
+  <string name="menu_search">ئىزدە</string>
   <!-- Menu - Navigation - Settings -->
+  <string name="menu_settings">تەڭشەكلەر</string>
   <!-- Menu - History - Clear history -->
+  <string name="menu_clear_history">ئىزنا تازىلاش</string>
   <!-- Menu - Editor - No suggestions -->
+  <string name="menu_no_suggestions">تەكلىپ يوق</string>
   <!-- Menu - Editor - Word wrap -->
+  <string name="menu_word_wrap">سۆز قاتلاش</string>
   <!-- Menu - Editor - Sintax highlight -->
+  <string name="menu_syntax_highlight">تىلقۇرما يورۇت</string>
   <!-- Regular expression for create copy action -->
+  <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - نۇسخا<xliff:g id="extension">%2$s</xliff:g></string>
   <!-- Regular expression for new compressed file -->
+  <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - يېڭى<xliff:g id="extension">%2$s</xliff:g></string>
   <!-- Waiting dialog - Performing operation message -->
+  <string name="waiting_dialog_msg">مەشغۇلاتنى ئىجرا قىلىۋاتىدۇ\u2026</string>
   <!-- Waiting dialog - Copying title -->
+  <string name="waiting_dialog_copying_title">كۆچۈرۈۋاتىدۇ\u2026</string>
   <!-- Waiting dialog - Copying message -->
+  <string name="waiting_dialog_copying_msg"><![CDATA[<b>مەنبە</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>غا</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog - Moving title -->
+  <string name="waiting_dialog_moving_title">يۆتكەۋاتىدۇ\u2026</string>
   <!-- Waiting dialog - Moving message -->
+  <string name="waiting_dialog_moving_msg"><![CDATA[<b>مەنبە</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>غا</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog - Deleting title -->
+  <string name="waiting_dialog_deleting_title">ئۆچۈرۈۋاتىدۇ\u2026</string>
   <!-- Waiting dialog - Deleting message -->
+  <string name="waiting_dialog_deleting_msg"><![CDATA[<b>ھۆججەت</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Extracting title -->
+  <string name="waiting_dialog_extracting_title">يېشىۋاتىدۇ\u2026</string>
   <!-- Waiting dialog - Extracting message -->
+  <string name="waiting_dialog_extracting_msg"><![CDATA[<b>ھۆججەت</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Extracting title -->
+  <string name="waiting_dialog_compressing_title">پىرىسلاۋاتىدۇ\u2026</string>
   <!-- Waiting dialog - Extracting message -->
+  <string name="waiting_dialog_compressing_msg"><![CDATA[<b>ھۆججەت</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Initializing the dialog -->
+  <string name="waiting_dialog_analizing_msg"><![CDATA[<b>ئانالىز قىلۋاتىدۇ\u2026</b>]]></string>
   <!-- Extracting - Success message -->
+  <string name="msgs_extracting_success">يېشىش مەشغۇلاتى مۇۋەپپەقىيەتلىك تاماملاندى. سانلىق مەلۇمات <xliff:g id="destination">%1$s</xliff:g> غا يېشىلدى.</string>
   <!-- Compressing - Success message -->
+  <string name="msgs_compressing_success">پېرىسلاش مەشغۇلاتى مۇۋەپپەقىيەتلىك تاماملاندى. سانلىق مەلۇمات <xliff:g id="destination">%1$s</xliff:g> غا يېشىلدى.</string>
   <!-- Actions Dialog - Title -->
+  <string name="actions_dialog_title">مەشغۇلاتلار</string>
   <!-- Actions Dialog - Menu - Properties of current folder -->
+  <string name="actions_menu_properties_current_folder">خاسلىقلار</string>
   <!-- Actions Dialog - Menu - Refresh -->
+  <string name="actions_menu_refresh">يېڭىلاش</string>
   <!-- Actions Dialog - Menu - New directory -->
+  <string name="actions_menu_new_directory">يېڭى قىسقۇچ</string>
   <!-- Actions Dialog - Menu - New file -->
+  <string name="actions_menu_new_file">يېڭى ھۆججەت</string>
   <!-- Actions Dialog - Menu - Select all -->
+  <string name="actions_menu_select_all">ھەممىنى تاللاڭ</string>
   <!-- Actions Dialog - Menu - Deselect all -->
+  <string name="actions_menu_deselect_all">ھەممىنى تاللىماڭ</string>
   <!-- Actions Dialog - Menu - Select -->
+  <string name="actions_menu_select">تاللاڭ</string>
   <!-- Actions Dialog - Menu - Deselect -->
+  <string name="actions_menu_deselect">ئەكسىچە تاللاڭ</string>
   <!-- Actions Dialog - Menu - Copy/Paste selection -->
+  <string name="actions_menu_paste_selection">تاللىغاننى بۇ جايغا كۆچۈرۇڭ</string>
   <!-- Actions Dialog - Menu - Move selection -->
+  <string name="actions_menu_move_selection">تاللىغاننى بۇ جايغا يۆتكەڭ</string>
   <!-- Actions Dialog - Menu - Delete selection -->
+  <string name="actions_menu_delete_selection">تاللىغاننى ئۆچۈرۇڭ</string>
   <!-- Actions Dialog - Menu - Compress selection -->
+  <string name="actions_menu_compress_selection">تاللىغاننى پىرىسلاڭ</string>
   <!-- Actions Dialog - Menu - Create link -->
+  <string name="actions_menu_create_link">ئۇلانما قۇرۇڭ</string>
   <!-- Actions Dialog - Menu - Open -->
+  <string name="actions_menu_open">ئېچىش</string>
   <!-- Actions Dialog - Menu - Open with -->
+  <string name="actions_menu_open_with">ئىلە ئېچىش</string>
   <!-- Actions Dialog - Menu - Execute -->
+  <string name="actions_menu_execute">ئىجرا قىلىش</string>
   <!-- Actions Dialog - Menu - Send -->
+  <string name="actions_menu_send">يوللاڭ</string>
   <!-- Actions Dialog - Menu - Send selection -->
+  <string name="actions_menu_send_selection">تاللىغاننى يوللاڭ</string>
   <!-- Actions Dialog - Menu - Compress -->
+  <string name="actions_menu_compress">پىرېس</string>
   <!-- Actions Dialog - Menu - Extract -->
+  <string name="actions_menu_extract">يېشىش</string>
   <!-- Actions Dialog - Menu - Delete -->
+  <string name="actions_menu_delete">ئۆچۈرۇش</string>
   <!-- Actions Dialog - Menu - Rename -->
+  <string name="actions_menu_rename">قايتا ناملاش</string>
   <!-- Actions Dialog - Menu - Create copy -->
+  <string name="actions_menu_create_copy">نۇسخا قۇرۇش</string>
   <!-- Actions Dialog - Menu - Properties -->
+  <string name="actions_menu_properties">خاسلىقلار</string>
   <!-- Actions Dialog - Menu - Add to bookmarks -->
+  <string name="actions_menu_add_to_bookmarks">خەتكۈچكە قوشۇش</string>
   <!-- Actions Dialog - Menu - Add shortcut -->
+  <string name="actions_menu_add_shortcut">قىسقا يول قوشۇش</string>
   <!-- Actions Dialog - Menu - Open parent folder -->
+  <string name="actions_menu_open_parent_folder">ئاتا قىسقۇچنى ئېچىش</string>
   <!-- Actions Dialog - Menu - Compute checksum -->
+  <string name="actions_menu_compute_checksum">Checksum نى ھېسابلاش</string>
   <!-- Actions Dialog - Menu - Print -->
+  <string name="actions_menu_print">بېسىش</string>
   <!-- Actions Dialog - Menu - Set as home -->
+  <string name="actions_menu_set_as_home">باش بەتكە تەڭشەش</string>
   <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
+  <string name="actions_ask_undone_operation_msg">بۇ مەشغۇلاتتىن يېنىۋالالمايدۇ. داۋاملاشتۇرامسىز؟</string>
   <!-- Enter Name Dialog - Label -->
+  <string name="input_name_dialog_label">ئىسمى:</string>
   <!-- Enter Name Dialog - Message - Empty name -->
+  <string name="input_name_dialog_message_empty_name">نام بوش قالسا بولمايدۇ.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
+  <string name="input_name_dialog_message_invalid_path_name">ئىناۋەتسىز ئات. <xliff:g id="invalid_characters">%1$s</xliff:g> ھەرپكە يول قويمايدۇ.</string>
   <!-- Enter Name Dialog - Message - Invalid name length -->
+  <string name="input_name_dialog_message_invalid_name_length">ئەڭ خەت-ھەرپ چەكلىمىسىگە يەتتى.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
+  <string name="input_name_dialog_message_invalid_name">ئىناۋەتسىز ئات. \'.\' ۋە \'..\' ئاتقا يول قويمايدۇ.</string>
   <!-- Enter Name Dialog - Message - Name exists -->
+  <string name="input_name_dialog_message_name_exists">بۇ نام مەۋجۇت.</string>
   <!-- Associations Dialog - Title -->
+  <string name="associations_dialog_title">ئۇلىنىش</string>
   <!-- Associations Dialog - Remember the user action -->
+  <string name="associations_dialog_remember">تاللاشنى ئەستە تۇتۇش</string>
   <!-- Associations Dialog - Open with Title -->
+  <string name="associations_dialog_openwith_title">ئىلە ئېچىش</string>
   <!-- Associations Dialog - Open action (button title) -->
+  <string name="associations_dialog_openwith_action">ئېچىش</string>
   <!-- Associations Dialog - Send with Title -->
+  <string name="associations_dialog_sendwith_title">ئىلە يوللاش</string>
   <!-- Associations Dialog - Send action (button title) -->
+  <string name="associations_dialog_sendwith_action">يوللاڭ</string>
   <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
+  <string name="inline_autocomplete_tab_nothing_to_complete_msg">تاماملايدىغان ھېچ ئىش يوق.</string>
   <!-- Execution console - Title -->
+  <string name="execution_console_title">تىزگىن سۇپا</string>
   <!-- Execution console - The script name label -->
+  <string name="execution_console_script_name_label">قوليازما:</string>
   <!-- Execution console - The script execution time label -->
+  <string name="execution_console_script_execution_time_label">ۋاقىت:</string>
   <!-- Execution console - The script exit code label -->
+  <string name="execution_console_script_exitcode_label">چېكىنىش كودى:</string>
   <!-- Execution console - The script execution time seconds string -->
+  <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> سېكۇنت.</string>
   <!-- Compute checksum - Title -->
+  <string name="compute_checksum_title">Checksum نى ھېسابلاش</string>
   <!-- Compute checksum - The file name label -->
+  <string name="compute_checksum_filename_label">ھۆججەت:</string>
   <!-- Compute checksum - The MD5 label -->
   <!-- Compute checksum - The SHA1 label -->
   <!-- Compute checksum - The computing checksum message-->
+  <string name="compute_checksum_computing_checksum_msg">يىغىندا تەكشۈرۈشنى ھېسابلاۋاتىدۇ\u2026</string>
   <!-- Mime/Types - Folder -->
+  <string name="mime_folder">قىسقۇچ</string>
   <!-- Mime/Types - Symlink -->
+  <string name="mime_symlink">بەلگە ئۇلىنىشى</string>
   <!-- Mime/Types - Unknown -->
+  <string name="mime_unknown">يوچۇن</string>
   <!--  Filetime formats -->
+  <string name="filetime_format_mode_system">سىستېما بەلگىلىگەن</string>
+  <string name="filetime_format_mode_locale">يەرلىك تەڭشەك بەلگىلىگەن</string>
+  <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/yyyy hh:mm:ss</string>
+  <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
+  <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
   <!-- Selection -->
   <!-- For example "2 folders and 1 file selected." -->
+  <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> بىلەن <xliff:g id="files">%2$s</xliff:g> تاللاندى.</string>
   <!-- Category descriptions -->
+  <string name="category_system">سىستېما</string>
+  <string name="category_app">ئەپ</string>
+  <string name="category_binary">ئىككىلىك سان</string>
+  <string name="category_text">تېكىست</string>
+  <string name="category_document">پۈتۈك</string>
+  <string name="category_ebook">ئې-كىتاب</string>
+  <string name="category_mail">خەت</string>
+  <string name="category_compress">پىرېس</string>
+  <string name="category_exec">ئىجراچان</string>
+  <string name="category_database">ساندان</string>
+  <string name="category_font">خەت نۇسخا</string>
+  <string name="category_image">سۈرەت</string>
+  <string name="category_audio">ئۈن</string>
+  <string name="category_video">سىن</string>
+  <string name="category_security">بىخەتەرلىك</string>
+  <string name="category_all">ھەممە</string>
   <!-- Compression - Compression modes dialog title -->
+  <string name="compression_mode_title">پىرېسلاش شەكلى</string>
   <!-- Compression - Supported archive and compression modes -->
   <!-- Shortcut. Failed to handle the shortcut -->
+  <string name="shortcut_failed_msg">قىسقا يولنى بىر تەرەپ قىلالمىدى.</string>
   <!-- Shortcut. The shortcut was created -->
+  <string name="shortcut_creation_success_msg">قىسقا يول مۇۋەپپەقىيەتلىك قۇرۇلدى.</string>
   <!-- Shortcut. The shortcut wasn't created -->
+  <string name="shortcut_creation_failed_msg">قىسقا يولنى قۇرالمىدى.</string>
   <!-- Preferences title -->
+  <string name="pref">تەڭشەكلەر</string>
   <!-- Preferences - General title -->
+  <string name="pref_general">ئادەتتىكى تەڭشەكلەر</string>
   <!-- Preferences - Search title -->
+  <string name="pref_search">ئىزدەش تاللانمىلىرى</string>
   <!-- Preferences - Storage title -->
+  <string name="pref_storage">ساقلاش تاللانمىسى</string>
   <!-- Preferences - Editor title -->
+  <string name="pref_editor">تەھرىرلىگۈچ تاللانمىلىرى</string>
   <!-- Preferences - Themes title -->
+  <string name="pref_themes">ئۆرنەكلەر</string>
   <!-- Preferences - About title -->
+  <string name="pref_about">ھەققىدە</string>
   <!-- Preferences - General - Behaviour category -->
+  <string name="pref_general_behaviour_category">ئادەتتىكى</string>
   <!-- Preferences - General - Case sensitive sort and navigating title -->
+  <string name="pref_case_sensitive_sort">چوڭ كىچىك ھەرپنى پەرقلەندۈرۈش</string>
   <!-- Preferences - General - Case sensitive sort and navigating summary -->
+  <string name="pref_case_sensitive_sort_summary">ئىزدەش نەتىجىسىگە يول باشلىغان ياكى تەرتىپلىگەندە چوڭ كىچىك ھەرپنى پەرقلەندۈرىدۇ</string>
   <!-- Preferences - General - Filetime format mode title -->
+  <string name="pref_filetime_format_mode">چېسلا/ۋاقىت پىچىمى</string>
   <!-- Preferences - General -Disk usage warning level title -->
+  <string name="pref_disk_usage_warning_level">دىسكا ئىشلىتىش ئاگاھلاندۇرۇشى</string>
   <!-- Preferences - General - Disk usage warning level summary -->
   <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
          of ListPreference. This should be fixed in frameworks base prior to be added here. -->
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">دىسكا ئىشلىتىش مىقدارى ئىشلەتكىلى بولىدىغان دىسكا بوشلۇقىنىڭ %1$s كە يەتكەندە، دىسكا ئىشلىتىش ئەھۋالى ئەپچەدە ئوخشاش بولمىغان رەڭدە كۆرسىتىدۇ<xliff:g id="level"/></string>
   <!-- Preferences - General - Compute folder statistics title -->
+  <string name="pref_compute_folder_statistics">قىسقۇچ سىتاتىستىكاسىنى ھېسابلايدۇ</string>
   <!-- Preferences - General - Compute folder statistics summary on -->
+  <string name="pref_compute_folder_statistics_on">ئاگاھلاندۇرۇش! قىسقۇچ سىتاتىستىكاسىنى ھېسابلاشقا كۆپ ۋاقىت ۋە تېخىمۇ كۆپ سىستېما مەنبەسى سەرپ بولىدۇ</string>
   <!-- Preferences - General - Display thumbs -->
+  <string name="pref_display_thumbs">ئالدىن كۆزىتىش</string>
   <!-- Preferences - General - Display thumbs summary -->
+  <string name="pref_display_thumbs_summary">ئەپ، نەغمە ھۆججەت، رەسىم ۋە سىنلارنىڭ ئالدىن كۆزىتىش سۈرىتىنى كۆرسىتىدۇ</string>
   <!-- Preferences - General - Use flinger detection -->
+  <string name="pref_use_flinger">سۈرۈش قول ئىشارىتىنى ئىشلىتىڭ</string>
   <!-- Preferences - General - Use flinger detection summary -->
+  <string name="pref_use_flinger_summary">سولدىن ئوڭغا سۈرۈش قول ئىشارىتى ئىشلىتىلسە ھۆججەت ياكى قىسقۇچنى ئۆچۈرىدۇ</string>
   <!-- Preferences - General - Advanced settings category -->
+  <string name="pref_general_advanced_settings_category">ئالىي</string>
   <!-- Preferences - General - Access mode -->
+  <string name="pref_access_mode">زىيارەت ھالىتى</string>
   <!-- Preferences - General - Safe mode -->
+  <string name="pref_access_mode_safe">بىخەتەر ھالەت</string>
   <!-- Preferences - General - Safe mode summary -->
+  <string name="pref_access_mode_safe_summary">بىخەتەر ھالەت\n\nبۇ ئەپ ئالاھىدە ھوقۇق يوق ئەھۋالدا ئىجرا قىلىنىۋاتىدۇ، پەقەت ساقلىغۇچ دىسكا ھۆججەت سىستېمىسى (مەسىلەن SD كارتا ۋە USB) نىلا زىيارەت قىلالايدۇ</string>
   <!-- Preferences - General - Prompt user mode -->
+  <string name="pref_access_mode_prompt">ئىشلەتكۈچى ئەسكەرتىش ھالىتى</string>
   <!-- Preferences - General - Prompt user mode summary -->
+  <string name="pref_access_mode_prompt_summary">ئىشلەتكۈچى ئەسكەرتىش ھالىتى\n\nئەپنىڭ ھۆججەت سىستېمىسىنى تولۇق زىيارەت قىلىش ھوقۇقى بار ئەمما ئالاھىدە ھوقۇققا ئېھتىياجلىق ھەر قانداق مەشغۇلاتنى ئىجرا قىلىشتا ئىشلەتكۈچىنى ئەسكەرتىدۇ</string>
   <!-- Preferences - General - Root access mode -->
+  <string name="pref_access_mode_root">ئالىي ئىشلەتكۈچى زىيارەت ھالىتى</string>
   <!-- Preferences - General - Root access mode summary -->
+  <string name="pref_access_mode_root_summary">ئالىي ئىشلەتكۈچى زىيارەت ھالىتى\n\nئاگاھلاندۇرۇش! بۇ ھالەتتە سىستېمىغا خەۋپ ئېلىپ كېلىدىغان مەشغۇلاتقا يول قويۇشى مۇمكىن. سىز مەشغۇلاتىڭىزنىڭ بىخەتەرلىكىنى جەزملىشىڭىز زۆرۈر</string>
   <!-- Preferences - General - Restrict secondary users access title -->
+  <string name="pref_restrict_secondary_users_access_title">ئىشلەتكۈچى زىيارىتىنى چەكلەش</string>
   <!-- Preferences - General - Restrict secondary users access summary -->
+  <string name="pref_restrict_secondary_users_access_summary">ئىككىنچى ئىشلەتكۈچىنىڭ پۈتكۈل سىستېمىغا بولغان زىيارىتىنى چەكلەيدۇ</string>
   <!-- Preferences - Search - Results category -->
+  <string name="pref_search_results_category">نەتىجىلەر</string>
   <!-- Preferences - Search - Show relevance widget -->
+  <string name="pref_show_relevance_widget">مۇناسىۋەتلىك ئەپچەلەرنى كۆرسىتىش</string>
   <!-- Preferences - Search - Highlight search terms -->
+  <string name="pref_highlight_terms">ئىزدىگەن ئاتالغۇلارنى يورۇت</string>
   <!-- Preferences - Search - Sort results mode -->
+  <string name="pref_sort_search_results_mode">ئىزدەش نەتىجىسىنى تەرتىپلەش ھالىتى</string>
   <!-- Preferences - Search - Sort results mode. None -->
+  <string name="pref_sort_search_results_mode_none">تەرتىپسىز</string>
   <!-- Preferences - Search - Sort results mode. None -->
+  <string name="pref_sort_search_results_mode_name">ئاتى بويىچە</string>
   <!-- Preferences - Search - Sort results mode. Relevance -->
+  <string name="pref_sort_search_results_mode_relevance">مۇناسىۋەتلىكلىكى بويىچە</string>
   <!-- Preferences - Search - Privacity category -->
+  <string name="pref_search_privacity_category">شەخسىيەت</string>
   <!-- Preferences - Search - Save search terms -->
+  <string name="pref_save_search_terms">ئىزدىگەن ئاتالغۇلارنى ساقلاش</string>
   <!-- Preferences - Search - Save search terms summary on -->
+  <string name="pref_save_search_terms_on">ئىزدىگەن ئاتالغۇلار ساقلىنىدۇ ھەمدە كەلگۈسىدىكى ئىزدەش تەكلىپى سۈپىتىدە ئىشلىتىلىدۇ</string>
   <!-- Preferences - Search - Save search terms summary off -->
+  <string name="pref_save_search_terms_off">ئىزدىگەن ئاتالغۇلار ساقلانمىدى</string>
   <!-- Preferences - Search - Remove saved search terms -->
+  <string name="pref_remove_saved_search_terms">ساقلانغان ئىزدىگەن ئاتالغۇلارنى چىقىرىۋېتىش</string>
   <!-- Preferences - Search - Remove saved search terms summary -->
+  <string name="pref_remove_saved_search_terms_summary">چېكىلسە ئىزدىگەندە ساقلانغان ھەممە ئاتالغۇلارنى چىقىرىۋېتىدۇ</string>
   <!-- Preferences - Search - Suggestions were truncated -->
+  <string name="pref_remove_saved_search_terms_msg">ئىزدىگەندە ساقلانغان ھەممە ئاتالغۇلار چىقىرىۋېتىلىدۇ</string>
   <!-- Preferences - Storage - Secure Storage category -->
+  <string name="pref_secure_storage_category">بىخەتەر ساقلىغۇچ</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
+  <string name="pref_secure_storage_delayed_sync_title">قەدەمداش قىلىشنى چېكىندۈرۈش</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
+  <string name="pref_secure_storage_delayed_sync_summary">بىخەتەر سىستېمىنى قەدەمداش قىلىش بولسا بەدىلى ئىنتايىن يوقىرى بولغان مەشخۇلات. ھەر قېتىملىق مەشخۇلاتتىن كىيىن تېخىمۇ تىز ئىنكاسقا ئېرىشەلەيدۇ، ھەمدە ھۆججەت سىستېمىسى ئىشلىتىلمىگەندە قەدەمداش قىلىدۇ، بۇ تاللاشنى ئېچىڭ؛ لىكىن بۇنداق قىلىشنىڭ بەدىلى بولسا، ئەگەر ئەپ گۇمران بولسا، ئېسىپ قويۇپ قەدەمداش قىلمىغان ئۇچۇرلار يۇيۇلۇپ كېتىدۇ.</string>
   <!-- Preferences - Storage - Secure Storage - Change password title -->
+  <string name="pref_secure_storage_reset_password_title">پارول ئۆزگەرتىڭ</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
+  <string name="pref_secure_storage_delete_storage_title">ساقلغۇچنى ئۆچۈرۈش</string>
   <!-- Preferences - Editor - Behaviour category -->
+  <string name="pref_editor_behaviour_category">قىلمىش</string>
   <!-- Preferences - Editor - No suggestions -->
+  <string name="pref_no_suggestions">تەكلىپ يوق</string>
   <!-- Preferences - Editor - No suggestions summary -->
+  <string name="pref_no_suggestions_desc">ھۆججەت تەھرىرلىگەندە لۇغەت تەكلىپىنى كۆرسەتمەيدۇ</string>
   <!-- Preferences - Editor - Word wrap -->
+  <string name="pref_word_wrap">سۆز قاتلاش</string>
   <!-- Preferences - Editor - Hex dump -->
+  <string name="pref_hexdump">Hexdump ئىككىلىك ھۆججەتلەر</string>
   <!-- Preferences - Editor - Hex dump desc -->
+  <string name="pref_hexdump_desc">ئىككىلىك ھۆججەتنى ئاچقاندا، ھاسىل بولغان ئون ئالتىلىك ھۆججەت ساقلىنىدۇ ھەمدە ئون ئالتىلىك ھۆججەت كۆرگۈچتە ئاچىدۇ</string>
   <!-- Preferences - Editor - Syntax highlight category -->
+  <string name="pref_editor_syntax_highlight_category">گىراماتېكا يورۇق كۆرۈنسۇن</string>
   <!-- Preferences - Editor - Syntax highlight -->
+  <string name="pref_syntax_highlight">گىراماتېكا يورۇق كۆرۈنسۇن</string>
   <!-- Preferences - Editor - Syntax highlight summary -->
+  <string name="pref_syntax_highlight_desc">تەھرىرلىگەندە گىراماتكىنى يورۇق كۆرسىتىدۇ(پەقەت نۆۋەتتىكى ھۆججەت فورماتىنى يورۇق بىر تەرەپ قىلۋاتقاندا ئىناۋەتلىك)</string>
   <!-- Preferences - Editor - Syntax highlight color scheme -->
+  <string name="pref_syntax_highlight_color_scheme">رەڭ نۇسخىسى</string>
   <!-- Preferences - Editor - Syntax highlight color scheme summary -->
+  <string name="pref_syntax_highlight_color_scheme_desc">گىرامماتىكىنى يورۇتۇش رەڭ ئۆرنىكىنى تاللاڭ</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
+  <string name="pref_syntax_sh_use_theme_default">كۆڭۈلدىكى ئۆرنەكنى ئىشلىتىڭ</string>
   <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
+  <string name="pref_syntax_sh_use_theme_default_desc">نۆۋەتتىكى ئۆرنەككە كۆڭۈلدىكى تىلقۇرما يورۇتۇشنى قوللىنىدۇ</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
+  <string name="pref_editor_sh_item_category">تۈرلەر</string>
   <!-- Preferences - Themes - Themes selection category -->
+  <string name="pref_themes_selection_category">ئۆرنەكلەر</string>
   <!-- Preferences - Themes - Set theme button -->
+  <string name="pref_themes_set_theme">ئۆرنەك تەڭشەك</string>
   <!-- Preferences - Themes - Confirmation message -->
+  <string name="pref_themes_confirmation">ئۆرنەك مۇۋەپپەقىيەتلىك قوللىنىلدى.</string>
   <!-- Preferences - Themes - Theme not found message -->
+  <string name="pref_themes_not_found">ئۆرنەك تېپىلمىدى.</string>
   <!-- Preferences - Debug - Capture debug traces -->
+  <string name="pref_debug_traces">خاتىرە سازلاش ئۇچۇرى</string>
   <!-- Themes - Default theme name -->
+  <string name="theme_default_name">سۇس ئۆرنەك</string>
   <!-- Themes - Default theme description -->
+  <string name="theme_default_description">بۇ CyanogenMod ھۆججەت باشقۇرغۇچنىڭ سۇس ئۆرنەكى.</string>
   <!-- Themes - Default theme author -->
+  <string name="themes_author">CyanogenMod</string>
   <!-- Navigation drawer -->
+  <string name="drawer_open">تارتما يولباشچىنى ئاچ</string>
+  <string name="drawer_close">تارتما يولباشچىنى تاقاش</string>
   <!-- ColorPickerDialog -->
   <!-- The text of the alpha slider control -->
+  <string name="color_picker_alpha_slider_text">ئالفا</string>
   <!-- The label of the current color panel -->
+  <string name="color_picker_current_text">نۆۋەتتىكى:</string>
   <!-- The label of the new color panel -->
+  <string name="color_picker_new_text">يېڭى:</string>
   <!-- The label of the color input -->
+  <string name="color_picker_color">رەڭ:</string>
   <!-- Android Syntax Highlight -->
+  <string name="ash_reset_color_scheme">كۆڭۈلدىكى ئۆرنەك رەڭ نۇسخىسىنى ئەسلىگە قايتۇرىدۇ</string>
+  <string name="ash_text">تېكىست</string>
+  <string name="ash_assignment">تەقسىملەش</string>
+  <string name="ash_singleline_comment">بىر قۇرلۇق ئىزاھات</string>
+  <string name="ash_multiline_comment">كۆپ قۇرلۇق ئىزاھات</string>
+  <string name="ash_keyword">ھالقىلىق سۆز</string>
+  <string name="ash_quoted_string">نەقىل تىزىق</string>
+  <string name="ash_variable">ئۆزگەرگۈچى</string>
   <!-- Secure Storage -->
   <!-- Secure Storage dialog title - Unlock -->
+  <string name="secure_storage_unlock_title">بىخەتەر ساقلىغۇچنى ئېچىش</string>
   <!-- Secure Storage dialog title - Create -->
+  <string name="secure_storage_create_title">بىخەتەر ساقلىغۇچ قۇرۇش</string>
   <!-- Secure Storage dialog title - Reset -->
+  <string name="secure_storage_reset_title">پارولنى قايتا بېكىتىش</string>
   <!-- Secure Storage dialog title - Delete -->
+  <string name="secure_storage_delete_title">بىخەتەر ساقلىغۇچنى ئۆچۈرۈش</string>
   <!-- Secure Storage unlock dialog message (secure storage exists) -->
+  <string name="secure_storage_unlock_key_prompt_msg">پارولنى كىرگۈزۈپ بىخەتەر ھۆججەت سىستېمىسىغا كىرىڭ.</string>
   <!-- Secure Storage unlock dialog message (new secure storage) -->
+  <string name="secure_storage_unlock_key_new_msg">پارولنى كىرگۈزۈپ بىخەتەر ھۆججەت سىستېمىسىنى قوغداڭ.</string>
   <!-- Secure Storage unlock dialog message (reset the current password) -->
+  <string name="secure_storage_unlock_key_reset_msg">نۆۋەتتىكى ۋە يېڭى پارولنى كىرگۈزۈپ بىخەتەر ھۆججەت سىستېمىسنى قايتا بېكىتىڭ.</string>
   <!-- Secure Storage unlock dialog message (delete the secure storage) -->
+  <string name="secure_storage_unlock_key_delete_msg">نۆۋەتتىكى پارولنى كىرگۈزۈپ بىخەتەر ھۆججەت سىستېمىسنى ئۆچۈرۈڭ.</string>
   <!-- Secure Storage unlock dialog old key title -->
+  <string name="secure_storage_unlock_old_key_title">كونا پارول:</string>
   <!-- Secure Storage unlock dialog key title -->
+  <string name="secure_storage_unlock_new_key_title">يېڭى پارول:</string>
   <!-- Secure Storage unlock dialog key title -->
+  <string name="secure_storage_unlock_key_title">پارول:</string>
   <!-- Secure Storage unlock dialog repeat key title-->
+  <string name="secure_storage_unlock_repeat_title">قايتا پارول بېكىتىش:</string>
   <!-- Secure Storage create button -->
+  <string name="secure_storage_create_button">قۇر</string>
   <!-- Secure Storage unlock button -->
+  <string name="secure_storage_unlock_button">قۇلۇپ ئېچىش</string>
   <!-- Secure Storage reset button -->
+  <string name="secure_storage_reset_button">ئەسلىگە قايتۇرۇش</string>
   <!-- Secure Storage delete button -->
+  <string name="secure_storage_delete_button">ئۆچۈرۇش</string>
   <!-- Secure Storage unlock failed toast -->
+  <string name="secure_storage_unlock_failed">ساقلقغۇچ قۇلۇپىنى ئاچالمىدى</string>
   <!-- Secure Storage unlock validation, length -->
+  <string name="secure_storage_unlock_validation_length">پارول ئاز بولغاندا <xliff:g id="characters">%1$d</xliff:g> دانە ھەرپ-بەلگىدىن تۈزۈلىدۇ.</string>
   <!-- Secure Storage unlock validation, equal -->
+  <string name="secure_storage_unlock_validation_equals">پارول ئۇدۇللاشمىدى.</string>
   <!-- Secure storage open file warning -->
+  <string name="secure_storage_open_file_warning">بۇ ھۆججەتنى ۋاقىتلىق پارول سېلىنمىغان ئورۇنغا كۆچۈرىدۇ. بىر سائەتتىن كىيىن ئۆچۈرىۋېتىدۇ.</string>
   <!-- Print messages -->
   <!-- Unsupported document format -->
+  <string name="print_unsupported_document">قوللىمايدىغان پۈتۈك پىچىمى</string>
   <!-- Unsupported image format -->
+  <string name="print_unsupported_image">قوللىمايدىغان سۈرەت پىچىمى</string>
   <!-- Print header -->
+  <string name="print_document_header">پۈتۈك: <xliff:g id="document_name">%1$s</xliff:g></string>
   <!-- Print footer -->
+  <string name="print_document_footer">بەت <xliff:g id="page_number">%1$s</xliff:g></string>
   <!-- Security - Extract relative or absolute files -->
+  <string name="security_warning_extract">ئاگاھلاندۇرۇش!\n\nنىسپىي يول ياكى مۇتلەق يول ئىشلەتكەن پىرىسلانغان ھۆججەتنى يەشكەندە سىستېما ھۆججەتلىرىنى قاپلاپ ياكى بۇزۇۋېتىشى مۇمكىن.\n\nداۋاملاشتۇرامسىز؟?</string>
   <!-- ChangeLog - Dialog title -->
+  <string name="changelog_title">ئۆزگىرىش خاتىرىسى</string>
   <!-- Welcome Dialog - Title -->
+  <string name="welcome_title">مەرھابا</string>
   <!-- Welcome Dialog - Message -->
+  <string name="welcome_msg">بۇ CyanogenMod ھۆججەت باشقۇرغۇچقا مەرھابا.\n\nبۇ ئەپ سىزنىڭ ئۈسكۈنىدىكى ھۆججەت سىستېمىسىنى زىيارەت قىلىشىڭىز ھەمدە ئۈسكۈنىگە خەۋپ يەتكۈزۈشىڭىز مۇمكىن بولغان مەشغۇلاتىڭىزغا يول قويىدۇ. بۇزغۇنچىلىقتىن ساقلىنىش ئۈچۈن، بۇ ئەپ كۆڭۈلدىكى ئەھۋالدا تۆۋەن ھوقۇقتا ۋە بىخەتەر ھالەتتە ئىجرا قىلىنىدۇ.\n\nسىز تەڭشەش ئارقىلىق ئالىي ۋە تولۇق ھوقۇقلۇق ھالەتكە ئالمىشالايسىز. مەشغۇلاتىڭىزنىڭ سىستېمىنى بۇزۇۋەتمەسلىكىگە كاپالەتلىك قىلىش ۋە ئۇنىڭ بىخەتەرلىكى سىزنىڭ مەسئۇلىيىتىڭىز.\n\nCyanogenMod قوشۇنى</string>
+  <string name="activity_not_found_exception">بۇ ھۆججەتنى ئاچالايدىغان ئەپ يوق</string>
+  <string name="storage_permissions_denied">ھۆججەت كۆرگۈچ ھۆججىتىڭىزنى كۆرۈش ئۈچۈن، ساقلاش ھوقۇقىغا ئېرىشىشى كېرەك.</string>
+  <string name="storage_permissions_explanation">تەڭشەكلەرگە كىرىڭ، ھوقۇقلارنى بېسىپ ھوقۇق بېرىڭ.</string>
+  <string name="snackbar_settings">تەڭشەكلەر</string>
 </resources>
