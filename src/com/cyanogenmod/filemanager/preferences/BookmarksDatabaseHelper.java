@@ -51,6 +51,11 @@ public class BookmarksDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE bookmarks (" + //$NON-NLS-1$
                    "_id INTEGER PRIMARY KEY," + //$NON-NLS-1$
                    "path TEXT);"); //$NON-NLS-1$
+
+        db.execSQL("CREATE TABLE history (" + //$NON-NLS-1$
+                "_id INTEGER PRIMARY KEY," + //$NON-NLS-1$
+                "title TEXT," + //$NON-NLS-1$
+                "description TEXT);"); //$NON-NLS-1$
     }
 
     /**
