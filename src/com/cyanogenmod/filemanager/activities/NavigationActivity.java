@@ -22,6 +22,8 @@ import android.app.Dialog;
 import android.app.SearchManager;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
+import android.content.ContentUris;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -40,6 +42,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.storage.StorageVolume;
 import android.provider.Settings;
@@ -431,7 +434,14 @@ public class NavigationActivity extends Activity
      * @hide
      */
     ListView mEasyModeListView;
+    /**
+     * used to record the operation steps
+     */
     private List<History> mHistory;
+    /**
+     * used to record the items saved in database
+     */
+    private List<History> mHistorySaved;
 
     private static final List<MimeTypeCategory> EASY_MODE_LIST = new ArrayList<MimeTypeCategory>() {
         {
@@ -498,6 +508,7 @@ public class NavigationActivity extends Activity
     Handler mHandler;
 
     private AsyncTask<Void, Void, Boolean> mBookmarksTask;
+    private AsyncTask<Void, Void, Boolean> mHistoryTask;
 
     private static final int REQUEST_CODE_STORAGE_PERMS = 321;
     private boolean hasPermissions() {
@@ -658,6 +669,7 @@ public class NavigationActivity extends Activity
         // Initialize navigation drawer
         initDrawer();
         initBookmarks();
+        initHistory();
 
         // Adjust layout (only when start on landscape mode)
         int orientation = getResources().getConfiguration().orientation;
@@ -886,6 +898,7 @@ public class NavigationActivity extends Activity
      */
     private void init() {
         this.mHistory = new ArrayList<History>();
+        this.mHistorySaved = new ArrayList<History>();
         this.mChRooted = FileManagerApplication.getAccessMode().compareTo(AccessMode.SAFE) == 0;
     }
 
@@ -1112,9 +1125,9 @@ public class NavigationActivity extends Activity
             public void onClick(View v) {
                 final int index = mDrawerHistory.indexOfChild(v);
                 final int count = mDrawerHistory.getChildCount();
-                final History history = mHistory.get(count - index - 1);
+                final History history = mHistorySaved.get(count - index - 1);
 
-                navigateToHistory(history);
+                navigateToHistory(history, true);
                 mDrawerLayout.closeDrawer(Gravity.START);
             }
         });
@@ -1373,6 +1386,66 @@ public class NavigationActivity extends Activity
     }
 
     /**
+     * Method that initializes the history.
+     */
+    private synchronized void initHistory() {
+        if (mHistoryTask != null &&
+                !mHistoryTask.getStatus().equals(AsyncTask.Status.FINISHED)) {
+            return;
+        }
+
+        // Retrieve the loading view
+        //final View waiting = findViewById(R.id.bookmarks_loading);
+
+        // Load history in background
+        mHistoryTask = new AsyncTask<Void, Void, Boolean>() {
+            Exception mCause;
+
+            @Override
+            protected Boolean doInBackground(Void... params) {
+                try {
+                    loadHistory();
+                    return Boolean.TRUE;
+
+                }
+                catch (Exception e) {
+                    this.mCause = e;
+                    return Boolean.FALSE;
+                }
+            }
+
+            @Override
+            protected void onPreExecute() {
+                mDrawerHistory.removeAllViews();
+            }
+
+            @Override
+            protected void onPostExecute(Boolean result) {
+                if (result.booleanValue()) {
+                    for (int i = 0; i < mHistory.size(); i++) {
+                        History history = mHistory.get(i);
+                        addHistoryToDrawer(i, history.getItem());
+                    }
+                }
+                else {
+                    if (this.mCause != null) {
+                        ExceptionUtil.translateException(
+                                NavigationActivity.this, this.mCause);
+                    }
+                }
+                mHistoryTask = null;
+                mHistory.clear();
+            }
+
+            @Override
+            protected void onCancelled() {
+                mHistoryTask = null;
+            }
+        };
+        mHistoryTask.execute();
+    }
+
+    /**
      * Method that loads all kind of bookmarks and join in an array to be used
      * in the listview adapter.
      *
@@ -1598,6 +1671,92 @@ public class NavigationActivity extends Activity
         }
 
         return bookmarks;
+    }
+
+    /**
+     * Method that load history saved in database
+     */
+    private void loadHistory() {
+        ContentResolver contentResolver = this.getContentResolver();
+        Cursor cursor = contentResolver.query(
+                History.Columns.CONTENT_URI,
+                History.Columns.HISTORY_QUERY_COLUMNS,
+                null, null, null);
+        try {
+            if (cursor != null && cursor.moveToFirst()) {
+                do {
+                    String title = cursor.getString(1);
+                    String description = cursor.getString(2);
+                    HistoryItem historyItem = new HistoryItem(title, description);
+                    History history = new History(mHistory.size(), historyItem);
+
+                    mHistory.add(history);
+                    mHistorySaved.add(history);
+                }
+                while (cursor.moveToNext());
+            }
+        } finally {
+            try {
+                if (cursor != null) {
+                    cursor.close();
+                }
+            } catch (Exception e) {
+
+            }
+        }
+    }
+
+    /**
+     * Method that save history to database
+     *
+     * @param historyItem
+     * @return
+     */
+    private boolean addHistory(HistoryNavigable historyItem) {
+        ContentValues values = new ContentValues(2);
+        values.put(History.Columns.TITLE, historyItem.getTitle());
+        values.put(History.Columns.DESCRIPTION, historyItem.getDescription());
+
+        ContentResolver contentResolver = this.getContentResolver();
+        Uri uri = contentResolver.insert(History.Columns.CONTENT_URI, values);
+
+        if ((int) ContentUris.parseId(uri) == -1) {
+            if (DEBUG) {
+                Log.e(TAG, "insert History error");
+            }
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * Method that clear history database
+     */
+    private void deleteAllHistorys() {
+        ContentResolver contentResolver = this.getContentResolver();
+        contentResolver.delete(History.Columns.CONTENT_URI, "", null);
+    }
+
+    /**
+     * Method that judge if the history item should be saved to database
+     *
+     * @param historyItem the history item to be saved to database
+     * @return
+     */
+    private boolean shouldAddHistory(HistoryNavigable historyItem) {
+        String description = historyItem.getDescription();
+        if (description == null) {
+            return false;
+        }
+
+        for (History history : mHistorySaved) {
+            String des = history.getItem().getDescription();
+            if (des != null && des.equals(description)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
@@ -2098,10 +2257,17 @@ public class NavigationActivity extends Activity
      */
     @Override
     public void onNewHistory(HistoryNavigable navigable) {
-        addHistoryToDrawer(this.mHistory.size(), navigable);
         //Recollect information about current status
         History history = new History(this.mHistory.size(), navigable);
         this.mHistory.add(history);
+        if (!shouldAddHistory(navigable)) {
+            return;
+        }
+        // show in the ui
+        addHistoryToDrawer(this.mHistory.size() - 1, navigable);
+        this.mHistorySaved.add(history);
+        // add to database
+        addHistory(navigable);
     }
 
     /**
@@ -2368,20 +2534,30 @@ public class NavigationActivity extends Activity
      */
     private void clearHistory() {
         this.mHistory.clear();
+        this.mHistorySaved.clear();
         mDrawerHistory.removeAllViews();
         mDrawerHistoryEmpty.setVisibility(View.VISIBLE);
+
+        // delete items in database
+        deleteAllHistorys();
     }
 
     /**
      * Method that navigates to the passed history reference.
      *
      * @param history The history reference
+     * @param isFromSavedHistory judge if called by saved history item
      * @return boolean A problem occurs while navigate
      */
-    public synchronized boolean navigateToHistory(History history) {
+    public synchronized boolean navigateToHistory(History history, boolean isFromSavedHistory) {
         try {
             //Gets the history
-            History realHistory = this.mHistory.get(history.getPosition());
+            History realHistory;
+            if (isFromSavedHistory) {
+                realHistory = this.mHistorySaved.get(history.getPosition());
+            } else {
+                realHistory = this.mHistory.get(history.getPosition());
+            }
 
             //Navigate to item. Check what kind of history is
             if (realHistory.getItem() instanceof NavigationViewInfoParcelable) {
@@ -2403,6 +2579,16 @@ public class NavigationActivity extends Activity
                 searchIntent.setAction(SearchActivity.ACTION_RESTORE);
                 searchIntent.putExtra(SearchActivity.EXTRA_SEARCH_RESTORE, (Parcelable)info);
                 startActivityForResult(searchIntent, INTENT_REQUEST_SEARCH);
+            } else if (realHistory.getItem() instanceof HistoryItem) {
+                String path = realHistory.getItem().getDescription();
+                FileSystemObject fso = CommandHelper.getFileInfo(
+                        getApplicationContext(), path, null);
+                if (fso != null) {
+                    performHideEasyMode();
+                    performShowBackArrow(!mDrawerToggle.isDrawerIndicatorEnabled());
+                    getCurrentNavigationView().open(fso);
+                    mDrawerLayout.closeDrawer(Gravity.START);
+                }
             } else {
                 //The type is unknown
                 throw new IllegalArgumentException("Unknown history type"); //$NON-NLS-1$
@@ -2412,7 +2598,7 @@ public class NavigationActivity extends Activity
             int cc = realHistory.getPosition();
             for (int i = this.mHistory.size() - 1; i >= cc; i--) {
                 this.mHistory.remove(i);
-                mDrawerHistory.removeViewAt(0);
+                //mDrawerHistory.removeViewAt(0);
             }
 
             if (mDrawerHistory.getChildCount() == 0) {
@@ -2420,7 +2606,7 @@ public class NavigationActivity extends Activity
             }
 
             //Navigate
-            boolean clearHistory = mHistoryTab.isSelected() && mHistory.size() > 0;
+            boolean clearHistory = mHistoryTab.isSelected() && mHistorySaved.size() > 0;
             mClearHistory.setVisibility(clearHistory ? View.VISIBLE : View.GONE);
             return true;
 
@@ -2478,7 +2664,7 @@ public class NavigationActivity extends Activity
 
         //Navigate to history
         if (this.mHistory.size() > 0) {
-            return navigateToHistory(this.mHistory.get(this.mHistory.size() - 1));
+            return navigateToHistory(this.mHistory.get(this.mHistory.size() - 1), false);
         }
 
         //Nothing to apply
@@ -2960,5 +3146,31 @@ public class NavigationActivity extends Activity
 
     public void updateActiveDialog(Dialog dialog) {
         mActiveDialog = dialog;
+    }
+
+    private class HistoryItem extends HistoryNavigable {
+        private String mTitle;
+        private String mDescription;
+
+        public HistoryItem(String title, String description) {
+            mTitle = title;
+            mDescription = description;
+        }
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {}
+
+        public String getTitle() {
+            return mTitle;
+        }
+
+        public String getDescription() {
+            return mDescription;
+        }
     }
 }
