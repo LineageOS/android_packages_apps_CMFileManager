@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="one">תיקייה <xliff:g id="folders">%1$d</xliff:g></item>
+    <item quantity="one">תיקיה <xliff:g id="folders">%1$d</xliff:g></item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> תיקיות</item>
   </plurals>
   <plurals name="n_files">
@@ -31,7 +31,7 @@
   </plurals>
   <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
-    <item quantity="one">נבחרה תיקייה <xliff:g id="folders">%1$d</xliff:g>.</item>
+    <item quantity="one">נבחרה תיקיה <xliff:g id="folders">%1$d</xliff:g>.</item>
     <item quantity="other">נבחרו <xliff:g id="folders">%1$d</xliff:g> תיקיות.</item>
   </plurals>
   <plurals name="selection_files">
@@ -40,7 +40,7 @@
   </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
-    <item quantity="one">פריט <xliff:g id="count">%1$d</xliff:g> הולך להימחק.</item>
-    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> פריטים הולכים להימחק.</item>
+    <item quantity="one">פריט <xliff:g id="count">%1$d</xliff:g> עומד להימחק.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> פריטים עומדים להימחק.</item>
   </plurals>
 </resources>

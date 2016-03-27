@@ -269,9 +269,9 @@
   <string name="fso_failed_to_allow_media_scan">נכשל במתן אפשרות לסריקת מדיה</string>
   <string name="fso_failed_to_prevent_media_scan">נכשל במניעת סריקת מדיה</string>
   <string name="fso_delete_nomedia_dir_title">מחק תיקיית .nomedia</string>
-  <string name="fso_delete_nomedia_dir_body">תיקייה זו מכילה תיקיית .nomedia.\n\nהאם ברצונך למחוק אותה ואת כל תוכנה?</string>
+  <string name="fso_delete_nomedia_dir_body">תיקיה זו מכילה תיקיית .nomedia.\n\nהאם ברצונך למחוק אותה ואת כל תוכנה?</string>
   <string name="fso_delete_nomedia_non_empty_title">מחק קובץ .nomedia</string>
-  <string name="fso_delete_nomedia_non_empty_body">תיקייה זו מכילה קובץ .nomedia שאינו ריק.\n\nהאם ברצונך למחוק אותו?</string>
+  <string name="fso_delete_nomedia_non_empty_body">תיקיה זו מכילה קובץ .nomedia שאינו ריק.\n\nהאם ברצונך למחוק אותו?</string>
   <!-- History - History activity title -->
   <string name="history">היסטוריה</string>
   <!-- History - The history is empty -->
@@ -303,7 +303,7 @@
   <!-- Picker Activity -->
   <!-- Picker Activity - Dialog title -->
   <string name="picker_title">בחר קובץ</string>
-  <string name="directory_picker_title">בחר תיקייה</string>
+  <string name="directory_picker_title">בחר תיקיה</string>
   <!-- Editor - Editor activity title -->
   <string name="editor">עורך</string>
   <!-- Editor - Invalid file message -->
@@ -345,7 +345,7 @@
   <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">הסימנייה כבר קיימת.</string>
   <!-- Initial directory dialog title -->
-  <string name="initial_directory_dialog_title">תיקייה התחלתית</string>
+  <string name="initial_directory_dialog_title">תיקיה התחלתית</string>
   <!-- Initial directory label -->
   <string name="initial_directory_label">בחר את התיקייה ההתחלתית:</string>
   <!-- Initial directory is relative -->
@@ -405,7 +405,7 @@
   <!-- Actions Dialog - Menu - Refresh -->
   <string name="actions_menu_refresh">רענון</string>
   <!-- Actions Dialog - Menu - New directory -->
-  <string name="actions_menu_new_directory">תיקייה חדשה</string>
+  <string name="actions_menu_new_directory">תיקיה חדשה</string>
   <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">קובץ חדש</string>
   <!-- Actions Dialog - Menu - Select all -->
@@ -431,13 +431,13 @@
   <!-- Actions Dialog - Menu - Open with -->
   <string name="actions_menu_open_with">פתח באמצעות</string>
   <!-- Actions Dialog - Menu - Execute -->
-  <string name="actions_menu_execute">הרץ</string>
+  <string name="actions_menu_execute">בצע</string>
   <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">שלח</string>
   <!-- Actions Dialog - Menu - Send selection -->
   <string name="actions_menu_send_selection">שלח בחירה</string>
   <!-- Actions Dialog - Menu - Compress -->
-  <string name="actions_menu_compress">דחוס</string>
+  <string name="actions_menu_compress">דחיסה</string>
   <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">חלץ</string>
   <!-- Actions Dialog - Menu - Delete -->
@@ -449,9 +449,9 @@
   <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">מאפיינים</string>
   <!-- Actions Dialog - Menu - Add to bookmarks -->
-  <string name="actions_menu_add_to_bookmarks">הוספה למועדפים</string>
+  <string name="actions_menu_add_to_bookmarks">הוסף למועדפים</string>
   <!-- Actions Dialog - Menu - Add shortcut -->
-  <string name="actions_menu_add_shortcut">הוספת קיצור דרך</string>
+  <string name="actions_menu_add_shortcut">הוסף קיצור דרך</string>
   <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">פתח תיקיית הורה</string>
   <!-- Actions Dialog - Menu - Compute checksum -->
@@ -507,7 +507,7 @@
   <!-- Compute checksum - The computing checksum message-->
   <string name="compute_checksum_computing_checksum_msg">מחשב חתימה\u2026</string>
   <!-- Mime/Types - Folder -->
-  <string name="mime_folder">תיקייה</string>
+  <string name="mime_folder">תיקיה</string>
   <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">קישור</string>
   <!-- Mime/Types - Unknown -->
@@ -534,10 +534,10 @@
   <string name="category_database">מסד נתונים</string>
   <string name="category_font">גופן</string>
   <string name="category_image">תמונה</string>
-  <string name="category_audio">אודיו</string>
+  <string name="category_audio">שמע</string>
   <string name="category_video">וידאו</string>
   <string name="category_security">אבטחה</string>
-  <string name="category_all">הכל</string>
+  <string name="category_all">הכול</string>
   <!-- Compression - Compression modes dialog title -->
   <string name="compression_mode_title">מצב דחיסה</string>
   <!-- Compression - Supported archive and compression modes -->
@@ -566,7 +566,7 @@
   <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">רגיש לאותיות גדולות/קטנות</string>
   <!-- Preferences - General - Case sensitive sort and navigating summary -->
-  <string name="pref_case_sensitive_sort_summary">שקול מקרה כאשר מנווטים או ממיינים תוצאות חיפוש</string>
+  <string name="pref_case_sensitive_sort_summary">שקול מקרה בעת ניווט או מיון תוצאות חיפוש</string>
   <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">תבנית תאריך/שעה</string>
   <!-- Preferences - General -Disk usage warning level title -->
@@ -574,11 +574,11 @@
   <!-- Preferences - General - Disk usage warning level summary -->
   <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
          of ListPreference. This should be fixed in frameworks base prior to be added here. -->
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">הצג צבע שונה בווידג\'טי שימוש בדיסק כשהם מגיעים ל-<xliff:g id="level">%1$s</xliff:g> אחוזים משטח הדיסק הפנוי</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">הצג צבע שונה בווידג\'טים לשימוש בדיסק כשהם מגיעים ל-<xliff:g id="level">%1$s</xliff:g> אחוזים משטח הדיסק הפנוי</string>
   <!-- Preferences - General - Compute folder statistics title -->
-  <string name="pref_compute_folder_statistics">חשב סטטיסטיקות תיקייה</string>
+  <string name="pref_compute_folder_statistics">חשב סטטיסטיקות תיקיה</string>
   <!-- Preferences - General - Compute folder statistics summary on -->
-  <string name="pref_compute_folder_statistics_on">אזהרה! חישוב הסטטיסטיקות של תיקייה הוא הליך היקר בזמן ובמשאבי מערכת</string>
+  <string name="pref_compute_folder_statistics_on">אזהרה! חישוב הסטטיסטיקות של תיקיה הוא הליך היקר בזמן ובמשאבי מערכת</string>
   <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">תצוגה מקדימה</string>
   <!-- Preferences - General - Display thumbs summary -->
@@ -586,7 +586,7 @@
   <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">השתמש במחוות החלקה</string>
   <!-- Preferences - General - Use flinger detection summary -->
-  <string name="pref_use_flinger_summary">השתמש בהחלקה ימינה או שמאלה כדי למחוק קבצים ותיקיות</string>
+  <string name="pref_use_flinger_summary">השתמש במחוות החלקה ימינה או שמאלה כדי למחוק קבצים או תיקיות</string>
   <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">מתקדם</string>
   <!-- Preferences - General - Access mode -->
@@ -602,11 +602,11 @@
   <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">מצב גישת שורש</string>
   <!-- Preferences - General - Root access mode summary -->
-  <string name="pref_access_mode_root_summary">מצב גישת שורש\n\nאזהרה! מצב זה מאפשר פעולות שעלולת להרוס את המכשיר. זוהי אחריותך לוודא שפעולות אלו בטוחות</string>
+  <string name="pref_access_mode_root_summary">מצב גישת שורש\n\nאזהרה! מצב זה מאפשר פעולות שעלולת להרוס את המכשיר. באחריותך לוודא שפעולה זו בטוחה</string>
   <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">הגבל גישה למשתמשים</string>
   <!-- Preferences - General - Restrict secondary users access summary -->
-  <string name="pref_restrict_secondary_users_access_summary">הגבל גישה לכל המערכת למשתמשים משניים</string>
+  <string name="pref_restrict_secondary_users_access_summary">הגבל גישה לכל המערכת עבור משתמשים משניים</string>
   <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">תוצאות</string>
   <!-- Preferences - Search - Show relevance widget -->
@@ -626,13 +626,13 @@
   <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">שמור את תנאי החיפוש</string>
   <!-- Preferences - Search - Save search terms summary on -->
-  <string name="pref_save_search_terms_on">תנאי החיפוש ישמרו וישמשו כהצעות בחיפושים עתידיים</string>
+  <string name="pref_save_search_terms_on">תנאי החיפוש יישמרו וישמשו כהצעות בחיפושים עתידיים</string>
   <!-- Preferences - Search - Save search terms summary off -->
-  <string name="pref_save_search_terms_off">תנאי החיפוש לא ישמרו</string>
+  <string name="pref_save_search_terms_off">תנאי החיפוש לא יישמרו</string>
   <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">הסר תנאי חיפוש שמורים</string>
   <!-- Preferences - Search - Remove saved search terms summary -->
-  <string name="pref_remove_saved_search_terms_summary">לחץ כדי להסיר את כל תנאי החיפוש השמורים</string>
+  <string name="pref_remove_saved_search_terms_summary">הקש כדי להסיר את כל תנאי החיפוש השמורים</string>
   <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">כל מונחי החיפוש השמורים הוסרו</string>
   <!-- Preferences - Storage - Secure Storage category -->
@@ -640,11 +640,11 @@
   <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">סנכרון מושהה</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
-  <string name="pref_secure_storage_delayed_sync_summary">סנכרון של מערכות קבצים מאובטחות הוא פעולה יקרה. הפעל אפשרות זו כדי לאפשר תגובות מהירות יותר לאחר כל פעולה, כך שיתבצע סנכרון כאשר מערכת הקבצים איננה נמצאת בשימוש, אבל על חשבון איבוד המידע הממתין שלא הסתנכרן אם היישום יקרוס.</string>
+  <string name="pref_secure_storage_delayed_sync_summary">סנכרון של מערכות קבצים מאובטחות הוא פעולה יקרה. הפעל אפשרות זו כדי לאפשר תגובות מהירות יותר לאחר כל פעולה, כך שיתבצע סנכרון כאשר מערכת הקבצים איננה נמצאת בשימוש, אבל על חשבון אבדן המידע הממתין שלא הסתנכרן אם היישום יקרוס.</string>
   <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">שנה סיסמה</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
-  <string name="pref_secure_storage_delete_storage_title">מחיקת אחסון</string>
+  <string name="pref_secure_storage_delete_storage_title">מחק אחסון</string>
   <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">התנהגות</string>
   <!-- Preferences - Editor - No suggestions -->
@@ -652,11 +652,11 @@
   <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">אל תציג הצעות מילון בעת עריכת קובץ</string>
   <!-- Preferences - Editor - Word wrap -->
-  <string name="pref_word_wrap">גלישת מילים</string>
+  <string name="pref_word_wrap">גלישת שורות</string>
   <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">קבצים בינארים של Hexdump</string>
   <!-- Preferences - Editor - Hex dump desc -->
-  <string name="pref_hexdump_desc">כאשר פותחים קובץ בינארי, צור hexdump של הקובץ ופתח אותו באמצעות hex viewer</string>
+  <string name="pref_hexdump_desc">כאשר נפתח קובץ בינארי, צור hexdump של הקובץ ופתח אותו באמצעות hex viewer</string>
   <!-- Preferences - Editor - Syntax highlight category -->
   <string name="pref_editor_syntax_highlight_category">הדגש תחביר</string>
   <!-- Preferences - Editor - Syntax highlight -->
@@ -702,7 +702,7 @@
   <!-- The label of the color input -->
   <string name="color_picker_color">צבע:</string>
   <!-- Android Syntax Highlight -->
-  <string name="ash_reset_color_scheme">שחזר את ערכת הצבעים הרגילה של ערכת העיצוב</string>
+  <string name="ash_reset_color_scheme">שחזר את ערכת ברירת המחדל לצבעים של ערכת העיצוב</string>
   <string name="ash_text">טקסט</string>
   <string name="ash_assignment">משימה</string>
   <string name="ash_singleline_comment">הערה בשורה בודדת</string>
@@ -712,25 +712,25 @@
   <string name="ash_variable">משתנה</string>
   <!-- Secure Storage -->
   <!-- Secure Storage dialog title - Unlock -->
-  <string name="secure_storage_unlock_title">פתיחת אחסון מאובטח</string>
+  <string name="secure_storage_unlock_title">פתח אחסון מאובטח</string>
   <!-- Secure Storage dialog title - Create -->
-  <string name="secure_storage_create_title">יצירת אחסון מאובטח</string>
+  <string name="secure_storage_create_title">צור אחסון מאובטח</string>
   <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">איפוס סיסמה</string>
   <!-- Secure Storage dialog title - Delete -->
-  <string name="secure_storage_delete_title">מחיקת אחסון מאובטח</string>
+  <string name="secure_storage_delete_title">מחק אחסון מאובטח</string>
   <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">הקלד את הסיסמה כדי לפתוח את מערכת האחסון המאובטחת.</string>
   <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">הקלד את הסיסמה כדי לנעול את מערכת האחסון המאובטחת.</string>
   <!-- Secure Storage unlock dialog message (reset the current password) -->
-  <string name="secure_storage_unlock_key_reset_msg">הקלד את העכשווית וססמה חדשה כדי לאפס את נעילת מערכת האחסון המאובטחת.</string>
+  <string name="secure_storage_unlock_key_reset_msg">הקלד את הססמה העכשווית והחדשה כדי לאפס את נעילת מערכת האחסון המאובטחת.</string>
   <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">הקלד את הסיסמה הנוכחית על מנת להסיר את הגנת הקבצים המאובטחת.</string>
   <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">סיסמה ישנה:</string>
   <!-- Secure Storage unlock dialog key title -->
-  <string name="secure_storage_unlock_new_key_title">סיסמה חדשה:</string>
+  <string name="secure_storage_unlock_new_key_title">ססמה חדשה:</string>
   <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">סיסמה:</string>
   <!-- Secure Storage unlock dialog repeat key title-->
@@ -740,7 +740,7 @@
   <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">פתיחה</string>
   <!-- Secure Storage reset button -->
-  <string name="secure_storage_reset_button">אתחל</string>
+  <string name="secure_storage_reset_button">איפוס</string>
   <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">מחק</string>
   <!-- Secure Storage unlock failed toast -->
@@ -748,7 +748,7 @@
   <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">הסיסמה חייבת להכיל לפחות <xliff:g id="characters">%1$d</xliff:g> תווים.</string>
   <!-- Secure Storage unlock validation, equal -->
-  <string name="secure_storage_unlock_validation_equals">הסיסמאות אינן תאומות.</string>
+  <string name="secure_storage_unlock_validation_equals">הססמאות אינן תואמות.</string>
   <!-- Secure storage open file warning -->
   <string name="secure_storage_open_file_warning">פעולה זו תעתיק את הקובץ למיקום זמני לא מוצפן. הקובץ הזמני ינוקה לאחר שעה.</string>
   <!-- Print messages -->
@@ -767,9 +767,9 @@
   <!-- Welcome Dialog - Title -->
   <string name="welcome_title">ברוכים הבאים</string>
   <!-- Welcome Dialog - Message -->
-  <string name="welcome_msg">ברוכים הבאים למנהל הקבצים של CyanogenMod.\n\nיישום זה מאפשר לך לסייר במערכת הקבצים ולבצע פעולות שעלולות להרוס את המכשיר. כדי למנוע נזק, היישום יתחיל במצב בטוח, עם הרשאות נמוכות.\n\nבאפשרותך לגשת למצב המתקדם, בעל הרשאות מלאות דרך ההגדרות. זוהי אחריותך לוודא שפעולה שתבוצע לא תהרוס את מערכת ההפעלה.\n\nקבוצת CyanogenMod</string>
+  <string name="welcome_msg">ברוכים הבאים למנהל הקבצים של CyanogenMod.\n\nיישום זה מאפשר לך לסייר במערכת הקבצים ולבצע פעולות שעלולות להרוס את המכשיר. כדי למנוע נזק, היישום יתחיל במצב בטוח, עם הרשאות נמוכות.\n\nבאפשרותך לגשת למצב המתקדם, בעל הרשאות מלאות דרך ההגדרות. באחריותך לוודא שפעולה שתבוצע לא תהרוס את מערכת ההפעלה.\n\nצוות CyanogenMod</string>
   <string name="activity_not_found_exception">לא ניתן למצוא יישום לפתיחת הקובץ</string>
-  <string name="storage_permissions_denied">מנהל הקבצים דורש הרשאה לאחסון בשביל להציג את הקבצים שלך.</string>
-  <string name="storage_permissions_explanation">יש להיכנס להגדרות, ואז ללחוץ על הרשאות כדי להעניק הרשאה.</string>
+  <string name="storage_permissions_denied">מנהל הקבצים דורש הרשאה לאחסון על מנת להציג את הקבצים שלך.</string>
+  <string name="storage_permissions_explanation">עבור אל ההגדרות, והקש על הרשאות כדי להעניק הרשאה.</string>
   <string name="snackbar_settings">הגדרות</string>
 </resources>
