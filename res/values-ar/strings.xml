@@ -768,5 +768,7 @@
   <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">مرحباً بكم في إدرة ملفات CyanogenMod.\n\n هذا التطبيق يتيح لك استكشاف نظام الملفات والقيام بعمليات قد تؤدي إلى خرق الجهاز الخاص بك. لمنع التلف، سيبدأ التطبيق في الوضع الآمن، الوضع ذو الامتيازات المنخفضة.\n\nيمكنك الموصل إلى الوضع المتقدم ذو الامتيازات الكاملة عبر الإعدادات. تقع عليك المسؤولية في ضمان عدم قيام العملية بخرق نظامك. \n\n فريق CyanogenMod</string>
   <string name="activity_not_found_exception">تعذر العثور على تطبيق لفتح هذا الملف</string>
+  <string name="storage_permissions_denied">إدارة الملفات تتطلب إذن للتخزين من أجل عرض الملفات الخاصة بك.</string>
+  <string name="storage_permissions_explanation">انتقل إلى إعدادات، وانقر فوق الصلاحيات لمنح إذن.</string>
   <string name="snackbar_settings">إعدادات</string>
 </resources>

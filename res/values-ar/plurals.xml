@@ -59,4 +59,12 @@
     <item quantity="other">تم تحديد <xliff:g id="files">%1$d</xliff:g> ملفات.</item>
   </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
+  <plurals name="deleting_n_items">
+    <item quantity="zero">سيتم حذف العناصر <xliff:g id="count">%1$d</xliff:g>.</item>
+    <item quantity="one">سيتم حذف <xliff:g id="count">%1$d</xliff:g> عناصر.</item>
+    <item quantity="two">سيتم حذف عنصرين.</item>
+    <item quantity="few">سيتم حذف <xliff:g id="count">%1$d</xliff:g> عنصر.</item>
+    <item quantity="many">سيتم حذف <xliff:g id="count">%1$d</xliff:g> عنصر.</item>
+    <item quantity="other">سيتم حذف <xliff:g id="count">%1$d</xliff:g> عنصر.</item>
+  </plurals>
 </resources>

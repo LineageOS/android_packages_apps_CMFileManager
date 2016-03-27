@@ -766,5 +766,7 @@
   <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">CyanogenMod dosya yöneticisine hoş geldiniz.\n\nBu uygulama dosya sistemine göz atmanızı ve cihazınıza zarar verebilecek işlemler yapmanıza izin verir. Zararları engellemek için bu uygulama güvenli, düşük yetkili modda başlayacaktır.\n\nGelişmiş, tam yetkili moda Ayarlar aracılığıyla erişebilirsiniz. Yaptığınız işlemlerin sisteminize zarar vermemesini sağlamak sizin sorumluluğunuzda olacaktır.\n\nCyanogenMod Takımı</string>
   <string name="activity_not_found_exception">Bu dosyayı açacak uygulama bulunamadı</string>
+  <string name="storage_permissions_denied">Dosya yöneticisinin dosyalarınızı görüntülemesi için depolama izni gerekiyor.</string>
+  <string name="storage_permissions_explanation">Ayarlar gidin ve izin vermek için İzinler\'e dokunun.</string>
   <string name="snackbar_settings">Ayarlar</string>
 </resources>
