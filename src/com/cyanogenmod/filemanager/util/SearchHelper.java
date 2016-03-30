@@ -58,7 +58,7 @@ public final class SearchHelper {
      * @return String The regular expressions of the query to match an ignore case search
      */
     @SuppressWarnings("boxing")
-    public static String toIgnoreCaseRegExp(final String query, boolean javaRegExp) {
+    public static String toRegExp(final String query, boolean javaRegExp) {
         //Check that all is correct
         if (query == null || query.trim().length() == 0) {
             return "";  //$NON-NLS-1$
@@ -82,7 +82,8 @@ public final class SearchHelper {
             char upper = upperCase.charAt(i);
             if (lower != upper) {
                 //Convert to expression
-                sb.append(String.format("[%s%s]", lower, upper)); //$NON-NLS-1$
+                //sb.append(String.format("[%s%s]", lower, upper)); //$NON-NLS-1$
+                sb.append(String.format("%s", lower));
             } else {
                 //Not need to convert
                 sb.append(lower);

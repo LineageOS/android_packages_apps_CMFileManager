@@ -276,7 +276,7 @@ public class FindCommand extends Program implements FindExecutable {
         String[] args = new String[query.getSlotsCount()];
         int cc = query.getSlotsCount();
         for (int i = 0; i < cc; i++) {
-            args[i] = SearchHelper.toIgnoreCaseRegExp(query.getSlot(i), true);
+            args[i] = SearchHelper.toRegExp(query.getSlot(i), true);
         }
         return args;
     }
