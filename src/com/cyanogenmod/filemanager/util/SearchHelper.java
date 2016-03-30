@@ -58,7 +58,7 @@ public final class SearchHelper {
      * @return String The regular expressions of the query to match an ignore case search
      */
     @SuppressWarnings("boxing")
-    public static String toIgnoreCaseRegExp(final String query, boolean javaRegExp) {
+    public static String toRegExp(final String query, boolean javaRegExp) {
         //Check that all is correct
         if (query == null || query.trim().length() == 0) {
             return "";  //$NON-NLS-1$
@@ -70,28 +70,10 @@ public final class SearchHelper {
             q = prepareQuery(q);
         }
 
-        //Convert the string to lower and upper
-        final String lowerCase = q.toLowerCase(Locale.ROOT);
-        final String upperCase = q.toUpperCase(Locale.ROOT);
-
-        //Create the regular expression filter
-        StringBuffer sb = new StringBuffer();
-        int cc = lowerCase.length();
-        for (int i = 0; i < cc; i++) {
-            char lower = lowerCase.charAt(i);
-            char upper = upperCase.charAt(i);
-            if (lower != upper) {
-                //Convert to expression
-                sb.append(String.format("[%s%s]", lower, upper)); //$NON-NLS-1$
-            } else {
-                //Not need to convert
-                sb.append(lower);
-            }
-        }
         return String.format(
                     "%s%s%s",  //$NON-NLS-1$;
                     javaRegExp ? REGEXP_WILCARD_JAVA : REGEXP_WILCARD,
-                    sb.toString(), javaRegExp ? REGEXP_WILCARD_JAVA : REGEXP_WILCARD);
+                    q, javaRegExp ? REGEXP_WILCARD_JAVA : REGEXP_WILCARD);
     }
 
     /**
