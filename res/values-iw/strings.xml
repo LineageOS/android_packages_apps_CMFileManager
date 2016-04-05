@@ -54,7 +54,7 @@
   <!-- Error message -->
   <string name="error_message">שגיאה.</string>
   <!-- Copy text content description -->
-  <string name="copy_text_cd">גע כדי להעתיק טקסט ללוח</string>
+  <string name="copy_text_cd">הקש כדי להעתיק טקסט ללוח</string>
   <!-- Copy text content message -->
   <string name="copy_text_msg">הטקסט הועתק ללוח</string>
   <!-- Warning dialog title -->
@@ -190,7 +190,7 @@
   <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">לא ניתן לטעון, או לבטל את טעינת מערכת הקבצים.</string>
   <!-- Filesystem Info - Not allowed message -->
-  <string name="filesystem_info_mount_not_allowed_msg">פעולות הטעינה של מערכות קבצים הן אסורות במצב בטוח. לחץ כדי לעבור למצב גישת שורש.</string>
+  <string name="filesystem_info_mount_not_allowed_msg">פעולות הטעינה של מערכות קבצים אינן מאושרות במצב בטוח. הקש כדי לעבור למצב גישת שורש.</string>
   <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">פעולת טעינת מערכת הקבצים נכשלה. מערכות קבצים מסוימות, כמו כרטיסי זיכרון, אינן ניתנות לטעינה, או לביטול טעינה, כיוון שהן מובנות כמערכות קבצים לקריאה בלבד.</string>
   <!-- Filesystem Info Dialog - Title -->
@@ -220,7 +220,7 @@
   <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">פנוי:</string>
   <!-- Fso Properties - Not allowed message -->
-  <string name="fso_properties_permissions_not_allowed_msg">פעולות בהרשאות אינן אפשריות במצב בטוח. לחץ כדי לעבור למצב גישת שורש.</string>
+  <string name="fso_properties_permissions_not_allowed_msg">פעולות בהרשאות אינן מאושרות במצב בטוח. הקש כדי לעבור למצב גישת שורש.</string>
   <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">פעולת שינוי בעלות נכשלה.\n\nמסיבות בטיחותיות, חלק ממערכות הקבצים, כמו כרטיסי זיכרון, לא מאפשרות שינויי בעלות.</string>
   <!-- Fso Properties - Failed to change group to fso -->
@@ -349,7 +349,7 @@
   <!-- Initial directory label -->
   <string name="initial_directory_label">בחר את התיקייה ההתחלתית:</string>
   <!-- Initial directory is relative -->
-  <string name="initial_directory_relative_msg">נתיבים יחסיים אסורים.</string>
+  <string name="initial_directory_relative_msg">נתיבים יחסיים אינם מאושרים.</string>
   <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">אירעה שגיאה בעת שמירת נתיב התיקייה ההתחלתית.</string>
   <!-- Menu - Navigation - Search -->
@@ -467,11 +467,11 @@
   <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">השם אינו יכול להשאר ריק.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
-  <string name="input_name_dialog_message_invalid_path_name">שם לא חוקי. התווים \"<xliff:g id="invalid_characters">%1$s</xliff:g>\" אסורים.</string>
+  <string name="input_name_dialog_message_invalid_path_name">שם לא חוקי. התווים \"<xliff:g id="invalid_characters">%1$s</xliff:g>\" אינם מאושרים.</string>
   <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">הגעת למגבלת התווים המרבית.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
-  <string name="input_name_dialog_message_invalid_name">שם לא חוקי. השמות \".\" ו-\"..\" אסורים.</string>
+  <string name="input_name_dialog_message_invalid_name">שם לא חוקי. השמות \".\" ו-\"..\" אינם מאושרים.</string>
   <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">השם כבר קיים.</string>
   <!-- Associations Dialog - Title -->
@@ -509,7 +509,7 @@
   <!-- Mime/Types - Folder -->
   <string name="mime_folder">תיקיה</string>
   <!-- Mime/Types - Symlink -->
-  <string name="mime_symlink">קישור</string>
+  <string name="mime_symlink">קישור סמלי</string>
   <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">לא ידוע</string>
   <!--  Filetime formats -->
@@ -542,7 +542,7 @@
   <string name="compression_mode_title">מצב דחיסה</string>
   <!-- Compression - Supported archive and compression modes -->
   <!-- Shortcut. Failed to handle the shortcut -->
-  <string name="shortcut_failed_msg">נכשל בניהול קיצור הדרך.</string>
+  <string name="shortcut_failed_msg">נכשל הטיפול בקיצור הדרך.</string>
   <!-- Shortcut. The shortcut was created -->
   <string name="shortcut_creation_success_msg">קיצור הדרך נוצר בהצלחה.</string>
   <!-- Shortcut. The shortcut wasn't created -->
@@ -690,8 +690,8 @@
   <!-- Themes - Default theme author -->
   <string name="themes_author">CyanogenMod</string>
   <!-- Navigation drawer -->
-  <string name="drawer_open">פתח תפריט ניווט</string>
-  <string name="drawer_close">סגור תפריט ניווט</string>
+  <string name="drawer_open">פתח חלונית ניווט</string>
+  <string name="drawer_close">סגור חלונית ניווט</string>
   <!-- ColorPickerDialog -->
   <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">שקיפות</string>
@@ -724,13 +724,13 @@
   <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">הקלד את הסיסמה כדי לנעול את מערכת האחסון המאובטחת.</string>
   <!-- Secure Storage unlock dialog message (reset the current password) -->
-  <string name="secure_storage_unlock_key_reset_msg">הקלד את הססמה העכשווית והחדשה כדי לאפס את נעילת מערכת האחסון המאובטחת.</string>
+  <string name="secure_storage_unlock_key_reset_msg">הקלד את הסיסמה העכשווית והחדשה כדי לאפס את נעילת מערכת האחסון המאובטחת.</string>
   <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">הקלד את הסיסמה הנוכחית על מנת להסיר את הגנת הקבצים המאובטחת.</string>
   <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">סיסמה ישנה:</string>
   <!-- Secure Storage unlock dialog key title -->
-  <string name="secure_storage_unlock_new_key_title">ססמה חדשה:</string>
+  <string name="secure_storage_unlock_new_key_title">סיסמה חדשה:</string>
   <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">סיסמה:</string>
   <!-- Secure Storage unlock dialog repeat key title-->
@@ -748,7 +748,7 @@
   <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">הסיסמה חייבת להכיל לפחות <xliff:g id="characters">%1$d</xliff:g> תווים.</string>
   <!-- Secure Storage unlock validation, equal -->
-  <string name="secure_storage_unlock_validation_equals">הססמאות אינן תואמות.</string>
+  <string name="secure_storage_unlock_validation_equals">הסיסמאות אינן תואמות.</string>
   <!-- Secure storage open file warning -->
   <string name="secure_storage_open_file_warning">פעולה זו תעתיק את הקובץ למיקום זמני לא מוצפן. הקובץ הזמני ינוקה לאחר שעה.</string>
   <!-- Print messages -->
