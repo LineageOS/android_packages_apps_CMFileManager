@@ -346,7 +346,7 @@
   <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Carpeta inicial</string>
   <!-- Initial directory label -->
-  <string name="initial_directory_label">Escull la carpeta inicial:</string>
+  <string name="initial_directory_label">Tria la carpeta inicial:</string>
   <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Les rutes relatives no estan permeses.</string>
   <!-- Initial directory error message -->
