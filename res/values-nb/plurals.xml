@@ -24,10 +24,12 @@
     <item quantity="one">0 filer</item>
     <item quantity="other">1 fil</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one">Ingen elementer funnet</item>
     <item quantity="other">1 element funnet</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> mappe valgt.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mappe valgt.</item>
@@ -36,6 +38,7 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fil valgt.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> fil valgt.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element vil bli slettet.</item>
     <item quantity="other"><xliff:g id="count">%1$d</xliff:g> elementer vil bli slettet.</item>

@@ -24,10 +24,12 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> tiedosto</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> tiedostoa</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> kohde löytyi</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> kohdetta löytyi</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> kansio valittu.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> kansiota valittu.</item>
@@ -36,6 +38,7 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> tiedosto valittu.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> tiedostoa valittu.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> kohde poistetaan.</item>
     <item quantity="other"><xliff:g id="count">%1$d</xliff:g> kohdetta poistetaan.</item>

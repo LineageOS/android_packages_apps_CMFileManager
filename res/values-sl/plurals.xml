@@ -28,12 +28,14 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> datoteke</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> datotek</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one">Najden je bil <xliff:g id="count">%1$d</xliff:g> predmet</item>
     <item quantity="two">Najdena sta bila <xliff:g id="count">%d</xliff:g> predmeta</item>
     <item quantity="few">Najdeni so bili <xliff:g id="count">%d</xliff:g> predmeti</item>
     <item quantity="other">Najdenih je bilo <xliff:g id="count">%d</xliff:g> predmetov</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one">Izbrana je bila <xliff:g id="folders">%1$d</xliff:g> mapa.</item>
     <item quantity="two">Izbrani sta bili <xliff:g id="folders">%1$d</xliff:g> mapi.</item>
@@ -46,6 +48,7 @@
     <item quantity="few">Izbrane so bile <xliff:g id="folders">%1$d</xliff:g> datoteke.</item>
     <item quantity="other">Izbranih je bilo <xliff:g id="folders">%1$d</xliff:g> datotek.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> predmet bo izbrisan.</item>
     <item quantity="two"><xliff:g id="count">%1$d</xliff:g> predmeta bosta izbrisana.</item>
