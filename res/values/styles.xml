@@ -30,7 +30,7 @@
         <item name="android:colorControlHighlight">@color/material_palette_blue_accent_dark</item>
         <item name="android:colorAccent">@color/material_palette_blue_primary_dark</item>
         <item name="android:actionMenuTextColor">@android:color/white</item>
-        <item name="android:colorControlNormal">@android:color/white</item>
+        <item name="android:colorControlNormal">@color/material_palette_blue_primary_dark</item>
     </style>
 
     <!-- Base themes -->
