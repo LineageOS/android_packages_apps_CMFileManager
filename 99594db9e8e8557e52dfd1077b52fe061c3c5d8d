@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_4b24fe0d",
+        "filename": "res/values/styles.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2016-04-27T08:06:25Z",
+      "side": 1,
+      "message": "This color matches the android:colorControlHighlight, so no ui feedback will be return. I guess it could need a soft color variant.",
+      "range": {
+        "startLine": 33,
+        "startChar": 55,
+        "endLine": 33,
+        "endChar": 89
+      },
+      "revId": "99594db9e8e8557e52dfd1077b52fe061c3c5d8d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
