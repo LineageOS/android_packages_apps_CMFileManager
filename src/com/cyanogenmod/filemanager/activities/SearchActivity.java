@@ -864,7 +864,9 @@ public class SearchActivity extends Activity
             }
             if (success) {
                 // add to adapter
-                activity.mAdapter.addNewItem(mHolder);
+                if (mResult.getRelevance() > 1) {
+                    activity.mAdapter.addNewItem(mHolder);
+                }
                 int progress = activity.mAdapter.resultsSize();
                 activity.toggleResults(progress > 0, false);
                 String foundItems = activity.getResources().getQuantityString(
