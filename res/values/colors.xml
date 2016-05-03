@@ -64,6 +64,7 @@
     <color name="material_palette_blue_accent_dark">#77BDBDBD</color>
     <color name="material_palette_blue_primary">#1E88E5</color>
     <color name="material_palette_blue_primary_dark">#1976D2</color>
+    <color name="material_palette_blue_primary_light">#64B5F6</color>
     <color name="actionbar_palette_blue_primary">#1E88E5</color>
 
 
