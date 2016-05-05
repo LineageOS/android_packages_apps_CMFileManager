@@ -375,7 +375,7 @@ public class FlingerListView extends ListView {
             if (this.mFlingingView != null) {
                 // Only if event has changed (and only to the right and if not scrolling)
                 if (!this.mScrolling) {
-                    if (ev.getX() >= this.mStartX && (ev.getX() - this.mCurrentX != 0)) {
+                    if ((int)ev.getX() >= this.mStartX && ((int)ev.getX() - this.mCurrentX != 0)) {
                         this.mCurrentX = (int)ev.getX();
                         this.mTranslationX = this.mCurrentX - this.mStartX;
                         this.mFlingingView.setTranslationX(this.mTranslationX);
