@@ -189,8 +189,9 @@ public class MimeTypeIndexProvider extends ContentProvider {
         if (TextUtils.isEmpty(fileRoot)) {
             throw new IllegalArgumentException("'fileRoot' cannot be null or empty!");
         }
-        String selection = COLUMN_FILE_ROOT + " = ?";
-        String[] selectionArgs = new String[] { fileRoot };
+
+        String selection = COLUMN_FILE_ROOT + " LIKE ?";
+        String[] selectionArgs = new String[] { fileRoot + "%" };
         return context.getContentResolver().query(MimeTypeIndexProvider.getContentUri(),
                 null, selection, selectionArgs, null);
     }
