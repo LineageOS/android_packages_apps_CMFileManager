@@ -654,6 +654,7 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
                    this.mFinished = false;
                    this.mNewData = false;
                    this.mOut.write(sb.toString().getBytes());
+                   this.mOut.flush();
                }
             } catch (InvalidCommandDefinitionException icdEx) {
                 throw new CommandNotFoundException(
@@ -1133,6 +1134,7 @@ public abstract class ShellConsole extends Console implements Program.ProgramLis
             //Test write something to the buffer
             this.mOut.write(FileHelper.NEWLINE.getBytes());
             this.mOut.write(FileHelper.NEWLINE.getBytes());
+            this.mOut.flush();
         } catch (IOException ioex) {
             //Something is wrong with the buffers. Reallocate console.
             Log.w(TAG,
