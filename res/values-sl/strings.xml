@@ -121,6 +121,7 @@
   <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">Nekatere mape že obstajajo v ciljni mapi.\n\nPrepiši?</string>
   <!-- The association of an action to the app failed -->
+  <string name="msgs_action_association_failed">Povezovanje dejanja z aplikacijo je spodletelo.</string>
   <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">Opravilo zahteva skrbniška dovoljenja.\n\nAli želite spremeniti v način Skrbniškega dostopa?</string>
   <!-- The parent directory of the current directory in navigation view -->
@@ -764,6 +765,7 @@
   <string name="welcome_title">Dobrodošli</string>
   <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Dobrodošli v upravljalniku datotek CyanogenMod.\n\nTa aplikacija vam dovoli, da raziščete datotečni sistem in izvajate opravila, ki lahko poškodujejo vašo napravo. V izogib škodi se bo aplikacija začela v varnem načinu z nizkimi dovoljenji.\n\nDo naprednega načina z visokimi dovoljenji lahko dostopate v nastavitvah. Vaša odgovornost je zagotoviti, da opravilo ne poškoduje vašega sistema.\n\nEkipa CyanogenMod</string>
+  <string name="activity_not_found_exception">Za odpiranje te datoteke ni bilo mogoče najti aplikacije</string>
   <string name="storage_permissions_denied">Upravljalnik datotek potrebuje dovoljenje za pomnilniško napravo za prikaz vaših datotek.</string>
   <string name="storage_permissions_explanation">Pojdite v Nastavitve in tapnite Dovoljenja za odobritev dovoljenja.</string>
   <string name="snackbar_settings">Nastavitve</string>

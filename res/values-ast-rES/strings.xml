@@ -343,6 +343,7 @@
   <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">Amestóse\'l marcador.</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
+  <string name="bookmarks_msgs_add_exists">Yá esiste\'l marcador.</string>
   <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Carpeta inicial</string>
   <!-- Initial directory label -->
@@ -713,10 +714,13 @@
   <string name="ash_variable">Variable</string>
   <!-- Secure Storage -->
   <!-- Secure Storage dialog title - Unlock -->
+  <string name="secure_storage_unlock_title">Desbloquiar almacenamientu seguru</string>
   <!-- Secure Storage dialog title - Create -->
+  <string name="secure_storage_create_title">Crear almacenamientu seguru</string>
   <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">Restablecer contraseña</string>
   <!-- Secure Storage dialog title - Delete -->
+  <string name="secure_storage_delete_title">Desaniciar almacenamientu seguru</string>
   <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">Escribi la contraseña pa desbloquiar el sistema d\'almacenamientu de ficheros seguru.</string>
   <!-- Secure Storage unlock dialog message (new secure storage) -->
@@ -767,5 +771,7 @@
   <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Bienllegáu al esplorador de ficheros de CyanogenMod.\n\nEsta aplicación dexa esplorar el sistema de ficheros y con ello, facer aiciones que puen llegar a bloquiar el preséu. Pa evitalo, l\'aplicación va aniciase en mou seguru.\n\nVas poder acceder al mou avanzáu de superusuariu per aciu del menú Axustes, pero va ser baxo la to responsabilidá l\'evitar qu\'una operación frañe\'l preséu.\n\nL\'equipu de CyanogenMod.\n</string>
   <string name="activity_not_found_exception">Nun pudo atopase una app p\'abrir esti ficheru</string>
+  <string name="storage_permissions_denied">El xestor de ficheros rique\'l permisu d\'almacemientu pa ver los tos ficheros.</string>
+  <string name="storage_permissions_explanation">Vete a Axustes y calca en Permisos pa conceder el permisu.</string>
   <string name="snackbar_settings">Axustes</string>
 </resources>

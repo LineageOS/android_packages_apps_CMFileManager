@@ -133,7 +133,7 @@
   <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">Информация за файловата система</string>
   <!-- ActionBar Buttons - Sort Mode -->
-  <string name="actionbar_button_sort_mode_cd">Режим на подререждане</string>
+  <string name="actionbar_button_sort_mode_cd">Режим на сортиране</string>
   <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">Режим на оформление</string>
   <!-- ActionBar Buttons - Other View Options -->
