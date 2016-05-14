@@ -26,8 +26,8 @@
   </plurals>
   <!-- Search - Found items -->
   <plurals name="search_found_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> föremål funnet</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> föremål funna</item>
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> objekt funnet</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> objekt funna</item>
   </plurals>
   <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
