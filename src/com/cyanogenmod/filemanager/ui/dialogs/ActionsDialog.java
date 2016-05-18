@@ -37,6 +37,7 @@ import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.activities.NavigationActivity;
 import com.cyanogenmod.filemanager.adapters.TwoColumnsMenuListAdapter;
 import com.cyanogenmod.filemanager.console.VirtualMountPointConsole;
+import com.cyanogenmod.filemanager.console.secure.SecureStorageKeyManagerProvider;
 import com.cyanogenmod.filemanager.listeners.OnRequestRefreshListener;
 import com.cyanogenmod.filemanager.listeners.OnSelectionListener;
 import com.cyanogenmod.filemanager.model.Bookmark;
@@ -682,7 +683,8 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
         }
 
         //- Remove properties option if multiple files selected
-        if (selection != null && selection.size() > 1) {
+        // or this selection contains a secure folder.
+        if ((selection != null && selection.size() > 1) || containsSecureDirectory(selection)) {
             menu.removeItem(R.id.mnu_actions_properties);
             menu.removeItem(R.id.mnu_actions_properties_current_folder);
         }
@@ -865,5 +867,19 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
             resources.add(new LinkedResource(src, dst));
         }
         return resources;
+    }
+
+    private boolean containsSecureDirectory(List<FileSystemObject> selection) {
+        if (mFso != null && FileHelper.isDirectory(mFso) && mFso.isSecure()) {
+            return true;
+        }
+
+        for (FileSystemObject fso : selection) {
+            if (FileHelper.isDirectory(fso) && fso.isSecure()) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
