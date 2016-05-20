@@ -44,4 +44,9 @@
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> datoteka odabrano.</item>
   </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> stavka će biti izbrisana.</item>
+    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> stavke će biti izbrisane.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> stavki će biti izbrisano.</item>
+  </plurals>
 </resources>
