@@ -340,10 +340,10 @@ public class DiskUsageGraph extends View {
             drawTotal(rect, stroke);
 
             // Draw the usage
-            if (USE_COLORS) {
-                drawUsedWithColors(rect, stroke);
-            } else {
+            if (!USE_COLORS || mDiskUsage == null || mDiskUsage.getUsageCategoryList().isEmpty()) {
                 drawUsed(rect, stroke, used);
+            } else {
+                drawUsedWithColors(rect, stroke);
             }
 
             if (used >= mDiskWarningAngle) {
