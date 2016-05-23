@@ -16,130 +16,254 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- The name of the app -->
   <string name="app_name">Tiedostonhallinta</string>
+  <!-- The description of the app -->
   <string name="app_description">CyanogenModin tiedostonhallinta.</string>
+  <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">kB</string>
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">GB</string>
+  <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
+  <!-- Devices types -->
   <string name="device_blockdevice">Irroitettava laite</string>
   <string name="device_characterdevice">Merkkilaite</string>
   <string name="device_namedpipe">Named pipe</string>
   <string name="device_domainsocket">Domain socket</string>
+  <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
+  <!-- Default buttons -->
   <string name="yes">Kyllä</string>
   <string name="no">Ei</string>
   <string name="all">Kaikki</string>
   <string name="overwrite">Ylikirjoita</string>
   <string name="select">Valitse</string>
+  <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
+  <!-- The search result name -->
   <string name="search_result_name">Haku: <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Loading waiting message -->
   <string name="loading_message">Ladataan\u2026</string>
+  <!-- Computing message -->
+  <!-- Computing new line message -->
+  <!-- Cancelled message -->
   <string name="cancelled_message">Peruutettu.</string>
+  <!-- Error message -->
   <string name="error_message">Virhe.</string>
+  <!-- Copy text content description -->
   <string name="copy_text_cd">Napauta kopioidaksesi tekstin leikepöydälle</string>
+  <!-- Copy text content message -->
   <string name="copy_text_msg">Teksti kopioitu leikepöydälle</string>
+  <!-- Warning dialog title -->
   <string name="warning_title">Varoitus</string>
+  <!-- Error dialog title -->
   <string name="error_title">Virhe</string>
+  <!-- Confirm operation dialog title -->
   <string name="confirm_operation">Varmista tehtävä</string>
+  <!-- Confirm overwrite dialog title -->
   <string name="confirm_overwrite">Varmista ylikirjoitus</string>
+  <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">Varmista poistaminen</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Varmista vaihto</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
   <string name="msgs_change_to_prompt_access_mode_msg">Root-tilassa käynnistäminen epäonnistui. Vaihdetaan turvalliseen tilaan.\n\nHyväksytäänkö?</string>
+  <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">Tarvittavien oikeuksien saaminen ei onnistu.</string>
+  <!-- The message shown when an allocation of a privileged console fails, and a non
+         privileged is allocated -->
   <string name="msgs_privileged_console_alloc_failed">Root-tilassa käynnistäminen epäonnistui. Vaihdetaan turvalliseen tilaan.</string>
+  <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Asetusta ei voitu ottaa käyttöön tai tallentaa.</string>
+  <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">Alkukansio \"<xliff:g id="initial_dir">%1$s</xliff:g>\" on virheellinen. Vaihdetaan juurikansioon.</string>
+  <!-- Root is not available message -->
   <string name="root_not_available_msg">Laitteessa ei ole root-oikeuksia. Tätä toimintoa ei voi suorittaa.</string>
+  <!-- Success -->
   <string name="msgs_success">Toiminto suoritettiin onnistuneesti.</string>
+  <!-- Unknown error -->
   <string name="msgs_unknown">Virhe havaittu. Toiminto epäonnistui.</string>
+  <!-- When an operation requires elevated privileged (normally caused for the use of a
+         non-privileged console) -->
   <string name="msgs_insufficient_permissions">Toiminto tarvitsee lisäoikeuksia. Kokeile vaihtaa Root-tilaan.</string>
+  <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">Toiminto epäonnistui, koska laitteessa ei ole tarpeeksi tallennustilaa.</string>
+  <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">Tiedostoa tai kansiota ei löydy.</string>
+  <!-- The command reference couldn't be created (not found or invalid definition)
+         (normally caused by a development error) -->
   <string name="msgs_command_not_found">Toiminnon komentoa ei löydy tai määritelmä on virheellinen.</string>
+  <!-- I/O exception -->
   <string name="msgs_io_failed">Virhe lukiessa/kirjoittaessa.</string>
+  <!-- Operation timeout detected -->
   <string name="msgs_operation_timeout">Toiminnon aikakatkaisu.</string>
+  <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">Toiminto epäonnistui.</string>
+  <!-- A console couldn't be allocated -->
   <string name="msgs_console_alloc_failure">Tapahtui sisäinen virhe.</string>
+  <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">Toimintoa ei voi peruuttaa.</string>
+  <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">Tiedostojärjestelmä on \"vain luku\"-tilassa. Kokeile vaihtaa tiedostojärjestelmä luku/kirjoitustilaan ennen toimintoa.</string>
+  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">Väite virheellinen. Komento epäonnistui.</string>
+  <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">Komentoa ei suoritettu koska se loisi ristiriitoja.</string>
+  <!-- Operation not permitted in the current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">Kohdekansio ei voi olla lähteen alikansio tai sama kuin lähde.</string>
+  <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">Paina uudestaan poistuaksesi.</string>
+  <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">Mitään sovellusta ei ole rekisteröity avaamaan tätä tiedostotyyppiä.</string>
+  <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">Osa tiedostoista on jo kohdekansiossa.\n\nKorvataanko?</string>
+  <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">Tehtävän yhdistäminen sovellukseen epäonnistui.</string>
+  <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">Toiminto tarvitsee korkeammat oikeudet.\n\nHaluatko vaihtaa Root-tilaan?</string>
+  <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Aloituskansio</string>
+  <!-- External storage descripton -->
   <string name="external_storage">Ulkoinen tallennustila</string>
+  <!-- Usb storage descripton -->
   <string name="usb_storage">USB-tallennustila</string>
+  <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">Tiedostojärjestelmän tiedot</string>
+  <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">Lajittelu</string>
+  <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">Ulkoasu</string>
+  <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">Muut ulkoasuasetukset</string>
+  <!-- ActionBar Buttons - Done -->
   <string name="actionbar_button_selection_done_cd">Valmis</string>
+  <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">Tehtävät</string>
+  <!-- ActionBar Buttons - Search -->
   <string name="actionbar_button_search_cd">Haku</string>
+  <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">Lisäasetukset</string>
+  <!-- ActionBar Buttons - Storage volumes -->
   <string name="actionbar_button_storage_cd">Tallennustilan osiot</string>
+  <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">Tallenna</string>
+  <!-- ActionBar Buttons - Print -->
   <string name="actionbar_button_print_cd">Tulosta</string>
+  <!-- Navigation View - Sort - Sort by name (ascending) -->
   <string name="sort_by_name_asc">Nimen mukaan \u25B2</string>
+  <!-- Navigation View - Sort - Sort by name (descending) -->
   <string name="sort_by_name_desc">Nimen mukaan \u25BC</string>
+  <!-- Navigation View - Sort - Sort by date (ascending) -->
   <string name="sort_by_date_asc">Ajan mukaan \u25B2</string>
+  <!-- Navigation View - Sort - Sort by date (descending) -->
   <string name="sort_by_date_desc">Ajan mukaan \u25BC</string>
+  <!-- Navigation View - Sort - Sort by size (ascending) -->
   <string name="sort_by_size_asc">Koon mukaan \u25B2</string>
+  <!-- Navigation View - Sort - Sort by size (descending) -->
   <string name="sort_by_size_desc">Koon mukaan \u25BC</string>
+  <!-- Navigation View - Sort - Sort by type (ascending) -->
   <string name="sort_by_type_asc">Muodon mukaan \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (descending) -->
   <string name="sort_by_type_desc">Muodon mukaan \u25BC</string>
+  <!-- Navigation View - Layout - Icons -->
   <string name="layout_icons">Kuvakkeet</string>
+  <!-- Navigation View - Layout - Simple -->
   <string name="layout_simple">Yksinkertainen</string>
+  <!-- Navigation View - Layout - Details -->
   <string name="layout_details">Tietoja</string>
+  <!-- Navigation View - View - Show folders first -->
   <string name="cm_filemanager_show_dirs_first">Näytä kansiot ensin</string>
+  <!-- Navigation View - View - Show hidden files option -->
   <string name="cm_filemanager_show_hidden">Näytä piilotetut tiedostot</string>
+  <!-- Navigation View - View - Show system files option -->
   <string name="cm_filemanager_show_system">Näytä järjestelmätiedostot</string>
+  <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">Näytä symlinkit</string>
+  <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">Ei tietoja</string>
+  <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">Tietoja tiedostojärjestelmästä ei ole saatavilla.</string>
+  <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">Tiedostojärjestelmää ei voida kiinnittää/poistaa kiinnitystä.</string>
+  <!-- Filesystem Info - Not allowed message -->
   <string name="filesystem_info_mount_not_allowed_msg">Tiedostojärjestelmän kiinnitystoiminnot ei ole sallittuja turvallisessa tilassa. Vaihda tästä Root-tilaan.</string>
+  <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">Tiedostojärjestelmän kiinnitystoiminto epäonnistui. Joitakin tiedostojärjestelmiä, kuten SD-kortteja, ei voi kiinnittää/poistaa kiinnitystä koska ne on suunniteltu vain-luku tiedostojärjestelmiksi.</string>
+  <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">Tiedostojärjestelmän tiedost</string>
+  <!-- Filesystem Info Dialog - Tab - Info -->
   <string name="filesystem_info_dialog_tab_info">Tiedot</string>
+  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">Levyn käyttö</string>
+  <!-- Filesystem Info Dialog - Status Label -->
   <string name="filesystem_info_dialog_status">Kiinnitetty:</string>
+  <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">Kiinnityspaikka:</string>
+  <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">Laite:</string>
+  <!-- Filesystem Info Dialog - Type Label -->
   <string name="filesystem_info_dialog_type">Tyyppi:</string>
+  <!-- Filesystem Info Dialog - Options Label -->
   <string name="filesystem_info_dialog_options">Asetukset:</string>
+  <!-- Filesystem Info Dialog - Dump/Pass Label -->
   <string name="filesystem_info_dialog_dump_pass">Virhe/Läpäisy:</string>
+  <!-- Filesystem Info Dialog - Virtual Label -->
   <string name="filesystem_info_dialog_virtual">Virtuaalinen:</string>
+  <!-- Filesystem Info Dialog - Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">Yhteensä:</string>
+  <!-- Filesystem Info Dialog - Used Disk Usage -->
   <string name="filesystem_info_dialog_used_disk_usage">Käytetty:</string>
+  <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Vapaana:</string>
+  <!-- Fso Properties - Not allowed message -->
   <string name="fso_properties_permissions_not_allowed_msg">Oikeuksiin tehtävät muutokset ei ole sallittu turvallisessa tilassa. Vaihda tästä Root-tilaan.</string>
+  <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">Omistajan vaihto epäonnistui.\n\nTurvallisuussyistä, jotkin tiedostojärjestelmät, kuten SD-kortit, eivät anna vaihtaa omistajaa.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">Ryhmän vaihto epäonnistui.\n\nTurvallisuussyistä, jotkin tiedostojärjestelmät, kuten SD-kortit, eivät anna vaihtaa ryhmiä.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_permission_msg">Oikeuksien muuttaminen epäonnistui.\n\nTurvallisuussyistä, jotkin tiedostojärjestelmät, kuten SD-kortit, eivät anna muuttaa oikeuksia.</string>
+  <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">Ominaisuudet</string>
+  <!-- Fso Properties Dialog - Tab - Info -->
   <string name="fso_properties_dialog_tab_info">Tiedot</string>
+  <!-- Fso Properties Dialog - Tab - Permissions -->
   <string name="fso_properties_dialog_tab_permissions">Oikeudet</string>
+  <!-- Fso Properties Dialog - Name Label -->
   <string name="fso_properties_dialog_name">Nimi:</string>
+  <!-- Fso Properties Dialog - Parent Folder Label -->
   <string name="fso_properties_dialog_parent">Yläkansio:</string>
+  <!-- Fso Properties Dialog - Type Label -->
   <string name="fso_properties_dialog_type">Tyyppi:</string>
+  <!-- Fso Properties Dialog - Category Label -->
   <string name="fso_properties_dialog_category">Kategoria:</string>
+  <!-- Fso Properties Dialog - Link Label -->
   <string name="fso_properties_dialog_link">Linkki:</string>
+  <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">Koko:</string>
+  <!-- Fso Properties Dialog - Contains Label -->
   <string name="fso_properties_dialog_contains">Sisältää:</string>
+  <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <string name="fso_properties_dialog_last_accessed_date">Käytetty:</string>
+  <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">Muokattu:</string>
+  <!-- Fso Properties Dialog - Last Changed Time -->
   <string name="fso_properties_dialog_last_changed_date">Muutettu:</string>
+  <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">Omistaja:</string>
+  <!-- Fso Properties Dialog - Group Label -->
   <string name="fso_properties_dialog_group">Ryhmä:</string>
+  <!-- Fso Properties Dialog - Others Label -->
   <string name="fso_properties_dialog_others">Muut:</string>
+  <!-- Fso Properties Dialog - Special Label -->
+  <!-- Fso Properties Dialog - Read Label -->
+  <!-- Fso Properties Dialog - Write Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Skip media scan -->
   <string name="fso_properties_dialog_include_in_media_scan">Ohita mediaskannaus:</string>
   <string name="fso_failed_to_allow_media_scan">Mediaskannauksen suorittaminen epäonnistui</string>
   <string name="fso_failed_to_prevent_media_scan">Mediaskannauksen estäminen epäonnistui</string>
@@ -147,130 +271,254 @@
   <string name="fso_delete_nomedia_dir_body">Tämä kansio sisältää .nomedia kansion.\n\nHaluatko poistaa sen ja kaiken sen sisällön?</string>
   <string name="fso_delete_nomedia_non_empty_title">Poista .nomedia tiedostot</string>
   <string name="fso_delete_nomedia_non_empty_body">Tämä kansio sisältää .nomedia tiedoston.\n\nHaluatko poistaa sen?</string>
+  <!-- History - History activity title -->
   <string name="history">Historia</string>
+  <!-- History - The history is empty -->
   <string name="msgs_history_empty">Historia on tyhjä.</string>
+  <!-- History - The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">Tuntematon historian tapahtuma.</string>
+  <!-- Search - Search activity title -->
   <string name="search">Haun tulokset</string>
+  <!-- Search - Search hint message -->
   <string name="search_hint">Hae</string>
+  <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">Puhehaku</string>
+  <!-- Search - Search error message -->
   <string name="search_error_msg">Virhe tapahtui suorittaessa hakua. Ei tuloksia.</string>
+  <!-- Search - Search no results message -->
   <string name="search_no_results_msg">Ei tuloksia.</string>
+  <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> / <xliff:g id="path">%2$s</xliff:g></string>
+  <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>Termit:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Search - Confirm search -->
   <string name="search_few_characters_title">Vahvista haku</string>
+  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">Jotkin hakutermit sisältävät vain muutaman merkin. Toiminto saattaa kestää erittäin kauan ja käyttää paljon järjestelmän resursseja.\n\nHaluako jatkaa?</string>
+  <!-- Search - Searching dialog title -->
   <string name="searching">Odota\u2026</string>
+  <!-- Search - Searching label -->
   <string name="searching_action_label">Haku käynnissä</string>
+  <!-- Picker Activity -->
+  <!-- Picker Activity - Dialog title -->
   <string name="picker_title">Valitse tiedosto</string>
   <string name="directory_picker_title">Valitse kansio</string>
+  <!-- Editor - Editor activity title -->
   <string name="editor">Editori</string>
+  <!-- Editor - Invalid file message -->
   <string name="editor_invalid_file_msg">Virheellinen tiedosto.</string>
+  <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">Tiedostoa ei löytynyt.</string>
+  <!-- Editor - File size exceed the limit -->
   <string name="editor_file_exceed_size_msg">Tiedosto on liian suuri avattavaksi tässä laitteessa.</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">Vahvista poistuminen</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <string name="editor_dirty_ask_msg">Muutoksia ei ole tallennettu.\n\nPoistu tallentamatta?</string>
+  <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">Tiedosto tallennettiin onnistuneesti.</string>
+  <!-- Editor - Read-only file mode -->
   <string name="editor_read_only_mode">Tiedosto avattiin vain-luku tilassa.</string>
+  <!-- Editor - Dumping message -->
   <string name="dumping_message">Luodaan hex-vedosta\u2026</string>
+  <!-- Editor - Displaying -->
   <string name="displaying_message">Näytetään\u2026</string>
+  <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">Kirjanmerkit</string>
+  <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">Koti</string>
+  <!-- Bookmarks - Bookmark name - Root folder -->
   <string name="bookmarks_root_folder">Juurikansio</string>
+  <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">Järjestelmäkansio</string>
+  <!-- Bookmarks - Bookmark name - Secure storage -->
   <string name="bookmarks_secure">Turvallinen tallennustila</string>
+  <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">Etätallennustila</string>
+  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">Valitse aloituskansio.</string>
+  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">Poista kirjanmerkki.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">Kirjanmerkki luotiin onnistuneesti.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">Kirjanmerkki on jo olemassa.</string>
+  <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Aloituskansio</string>
+  <!-- Initial directory label -->
   <string name="initial_directory_label">Valitse aloituskansio:</string>
+  <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Suhteelliset polut ei ole sallittuja.</string>
+  <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">Virhe tallennettaessa aloituskansiota.</string>
+  <!-- Menu - Navigation - Search -->
   <string name="menu_search">Haku</string>
+  <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">Asetukset</string>
+  <!-- Menu - History - Clear history -->
   <string name="menu_clear_history">Tyhjennä historia</string>
+  <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">Ei ehdotuksia</string>
+  <!-- Menu - Editor - Word wrap -->
   <string name="menu_word_wrap">Rivitys</string>
+  <!-- Menu - Editor - Sintax highlight -->
   <string name="menu_syntax_highlight">Syntaksinkorotus</string>
+  <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - kopio<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Regular expression for new compressed file -->
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - uusi<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">Suoritetaan\u2026</string>
+  <!-- Waiting dialog - Copying title -->
   <string name="waiting_dialog_copying_title">Kopioidaan\u2026</string>
+  <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b> </b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>"->"</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">Siirretään\u2026</string>
+  <!-- Waiting dialog - Moving message -->
   <string name="waiting_dialog_moving_msg"><![CDATA[<b> </b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>"->"</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Deleting title -->
   <string name="waiting_dialog_deleting_title">Poistetaan\u2026</string>
+  <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Tiedosto</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_extracting_title">Puretaan\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg"><![CDATA[<bTiedosto</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_compressing_title">Pakataan\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Tiedosto</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Tutkitaan\u2026</b>]]></string>
+  <!-- Extracting - Success message -->
   <string name="msgs_extracting_success">Purkaminen onnistui. Tiedostot purettiin kansioon <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Compressing - Success message -->
   <string name="msgs_compressing_success">Pakkaaminen onnistui. Tiedostot pakattiin arkistoon <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">Tehtävät</string>
+  <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">Ominaisuudet</string>
+  <!-- Actions Dialog - Menu - Refresh -->
   <string name="actions_menu_refresh">Päivitä</string>
+  <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">Uusi kansio</string>
+  <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">Uusi tiedosto</string>
+  <!-- Actions Dialog - Menu - Select all -->
   <string name="actions_menu_select_all">Valitse kaikki</string>
+  <!-- Actions Dialog - Menu - Deselect all -->
   <string name="actions_menu_deselect_all">Poista valinnat</string>
+  <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">Valitse</string>
+  <!-- Actions Dialog - Menu - Deselect -->
   <string name="actions_menu_deselect">Poista valinta</string>
+  <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <string name="actions_menu_paste_selection">Liitä valinta tähän</string>
+  <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">Siirrä valinta tähän</string>
+  <!-- Actions Dialog - Menu - Delete selection -->
   <string name="actions_menu_delete_selection">Poista valittu kohde</string>
+  <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">Pakkaa valinta</string>
+  <!-- Actions Dialog - Menu - Create link -->
   <string name="actions_menu_create_link">Luo linkki</string>
+  <!-- Actions Dialog - Menu - Open -->
   <string name="actions_menu_open">Avaa</string>
+  <!-- Actions Dialog - Menu - Open with -->
   <string name="actions_menu_open_with">Avaa sovelluksessa..</string>
+  <!-- Actions Dialog - Menu - Execute -->
   <string name="actions_menu_execute">Suorita</string>
+  <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">Lähetä</string>
+  <!-- Actions Dialog - Menu - Send selection -->
   <string name="actions_menu_send_selection">Lähetä valittu</string>
+  <!-- Actions Dialog - Menu - Compress -->
   <string name="actions_menu_compress">Pakkaa</string>
+  <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">Pura</string>
+  <!-- Actions Dialog - Menu - Delete -->
   <string name="actions_menu_delete">Poista</string>
+  <!-- Actions Dialog - Menu - Rename -->
   <string name="actions_menu_rename">Uudelleennimeä</string>
+  <!-- Actions Dialog - Menu - Create copy -->
   <string name="actions_menu_create_copy">Luo kopio</string>
+  <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">Ominaisuudet</string>
+  <!-- Actions Dialog - Menu - Add to bookmarks -->
   <string name="actions_menu_add_to_bookmarks">Lisää kirjanmerkkeihin</string>
+  <!-- Actions Dialog - Menu - Add shortcut -->
   <string name="actions_menu_add_shortcut">Luo pikakuvake</string>
+  <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">Avaa yläkansio</string>
+  <!-- Actions Dialog - Menu - Compute checksum -->
   <string name="actions_menu_compute_checksum">Luo tarkistussumma</string>
+  <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">Tulosta</string>
+  <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">Aseta kotisivuksi</string>
+  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">Tehtävää ei voi perua. Haluatko jatkaa?</string>
+  <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">Nimi:</string>
+  <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">Nimi ei voi olla tyhjä.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_path_name">Virheellinen nimi. Seuraavat merkit ei ole sallittuja: \'<xliff:g id="invalid_characters">%1$s</xliff:g>\'</string>
+  <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">Merkkien enimmäismäärä saavutettu.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_name">Virheellinen nimi. Nimet \'.\' ja \'..\' ei ole sallittuja.</string>
+  <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">Nimi on jo käytössä.</string>
+  <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">Yhdistykset</string>
+  <!-- Associations Dialog - Remember the user action -->
   <string name="associations_dialog_remember">Muista valinta</string>
+  <!-- Associations Dialog - Open with Title -->
   <string name="associations_dialog_openwith_title">Avaa sovelluksessa</string>
+  <!-- Associations Dialog - Open action (button title) -->
   <string name="associations_dialog_openwith_action">Avaa</string>
+  <!-- Associations Dialog - Send with Title -->
   <string name="associations_dialog_sendwith_title">Lähetä..</string>
+  <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">Lähetä</string>
+  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">Ei suoritettavaa.</string>
+  <!-- Execution console - Title -->
   <string name="execution_console_title">Konsoli</string>
+  <!-- Execution console - The script name label -->
   <string name="execution_console_script_name_label">Skripti:</string>
+  <!-- Execution console - The script execution time label -->
   <string name="execution_console_script_execution_time_label">Aika:</string>
+  <!-- Execution console - The script exit code label -->
   <string name="execution_console_script_exitcode_label">Poistumiskoodi:</string>
+  <!-- Execution console - The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> sek.</string>
+  <!-- Compute checksum - Title -->
   <string name="compute_checksum_title">Luo tarkistussumma</string>
+  <!-- Compute checksum - The file name label -->
   <string name="compute_checksum_filename_label">Tiedosto:</string>
+  <!-- Compute checksum - The MD5 label -->
+  <!-- Compute checksum - The SHA1 label -->
+  <!-- Compute checksum - The computing checksum message-->
   <string name="compute_checksum_computing_checksum_msg">Luodaan tarkistussummaa\u2026</string>
+  <!-- Mime/Types - Folder -->
   <string name="mime_folder">Kansio</string>
+  <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">Symlinkki</string>
+  <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">Tuntematon</string>
+  <!--  Filetime formats -->
   <string name="filetime_format_mode_system">Järjestelmän määrittämä</string>
   <string name="filetime_format_mode_locale">Sijainnin määrittämä</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">pp/kk/vvvv tt:mm:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">kk/pp/yyyy tt:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">vvvv-kk-pp tt:mm:ss</string>
+  <!-- Selection -->
+  <!-- For example "2 folders and 1 file selected." -->
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> ja <xliff:g id="files">%2$s</xliff:g> valittu.</string>
+  <!-- Category descriptions -->
   <string name="category_system">JÄRJESTELMÄ</string>
   <string name="category_app">SOVELLUS</string>
   <string name="category_binary">BINÄÄRI</string>
@@ -287,86 +535,170 @@
   <string name="category_video">VIDEO</string>
   <string name="category_security">TURVALLISUUS</string>
   <string name="category_all">KAIKKI</string>
+  <!-- Compression - Compression modes dialog title -->
   <string name="compression_mode_title">Pakkaustila</string>
+  <!-- Compression - Supported archive and compression modes -->
+  <!-- Shortcut. Failed to handle the shortcut -->
   <string name="shortcut_failed_msg">Pikakuvake ei toimi.</string>
+  <!-- Shortcut. The shortcut was created -->
   <string name="shortcut_creation_success_msg">Pikakuvake luotu onnistuneesti.</string>
+  <!-- Shortcut. The shortcut wasn't created -->
   <string name="shortcut_creation_failed_msg">Pikakuvakkeen luonti epäonnistui.</string>
+  <!-- Preferences title -->
   <string name="pref">Asetukset</string>
+  <!-- Preferences - General title -->
   <string name="pref_general">Yleiset asetukset</string>
+  <!-- Preferences - Search title -->
   <string name="pref_search">Haun asetukset</string>
+  <!-- Preferences - Storage title -->
   <string name="pref_storage">Tallennustilan asetukset</string>
+  <!-- Preferences - Editor title -->
   <string name="pref_editor">Editorin asetukset</string>
+  <!-- Preferences - Themes title -->
   <string name="pref_themes">Teemat</string>
+  <!-- Preferences - About title -->
   <string name="pref_about">Tietoja</string>
+  <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">Yleiset</string>
+  <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">Lajittelu kirjainkoon mukaan</string>
+  <!-- Preferences - General - Case sensitive sort and navigating summary -->
   <string name="pref_case_sensitive_sort_summary">Huomioi kirjainkoko selatessa tai lajitellessa hakutuloksia</string>
+  <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">Päivä/aikamuoto</string>
+  <!-- Preferences - General -Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">Levynkäytön varoitus</string>
+  <!-- Preferences - General - Disk usage warning level summary -->
+  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
+         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
   <string name="pref_disk_usage_warning_level_summary" formatted="false">Näyttää eri värin levykäytön widgeteissä kun ne saavuttavat <xliff:g id="level">%1$s</xliff:g> prosenttia vapaasta levytilasta</string>
+  <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Laske kansion tilastot</string>
+  <!-- Preferences - General - Compute folder statistics summary on -->
   <string name="pref_compute_folder_statistics_on">Varoitus! Kansion tilastojen laskeminen vie paljon aikaa ja järjestelmän resursseja!</string>
+  <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">Esikatsele</string>
+  <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">Näytä esikatselukuva sovelluksille, musiikkitiedostoille, sekä kuville ja videoille</string>
+  <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Käytä eleitä</string>
+  <!-- Preferences - General - Use flinger detection summary -->
   <string name="pref_use_flinger_summary">Pyyhkäise vasemmalta oikealle poistaaksesi tiedostoja ja kansioita</string>
+  <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Lisäasetukset</string>
+  <!-- Preferences - General - Access mode -->
   <string name="pref_access_mode">Oikeudet</string>
+  <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">Turvallinen tila</string>
+  <!-- Preferences - General - Safe mode summary -->
   <string name="pref_access_mode_safe_summary">Turvallinen tila\n\nSovellus toimii ilman oikeuksia ja pääsee käsiksi vain SD-kortteihin ja USB-muisteihin</string>
+  <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">Kysy käyttäjältä</string>
+  <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">Kysy käyttäjältä\n\nSovellus toimii tiedostojärjestelmän täysillä oikeuksilla mutta kysyy luvan jos oikeuksia tarvitaan</string>
+  <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">Root-tila</string>
+  <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">Root-tila\n\nVaroitus! Tämä tila sallii muutokset jotka saattavat tuhota laitteesi, käytä tätä tilaa omalla vastuulla!</string>
+  <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">Rajoita käyttäjien pääsyä</string>
+  <!-- Preferences - General - Restrict secondary users access summary -->
   <string name="pref_restrict_secondary_users_access_summary">Rajoita toissijaisten käyttäjien pääsyä koko järjestelmän tiedostoihin</string>
+  <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">Tulokset</string>
+  <!-- Preferences - Search - Show relevance widget -->
   <string name="pref_show_relevance_widget">Näytä merkitys</string>
+  <!-- Preferences - Search - Highlight search terms -->
   <string name="pref_highlight_terms">Merkkaa hakutermit</string>
+  <!-- Preferences - Search - Sort results mode -->
   <string name="pref_sort_search_results_mode">Järjestä tulokset</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">Ei järjestystä</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_name">Nimen mukaan</string>
+  <!-- Preferences - Search - Sort results mode. Relevance -->
   <string name="pref_sort_search_results_mode_relevance">Tärkeyden mukaan</string>
+  <!-- Preferences - Search - Privacity category -->
   <string name="pref_search_privacity_category">Yksityisyys</string>
+  <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">Tallenna hakutermit</string>
+  <!-- Preferences - Search - Save search terms summary on -->
   <string name="pref_save_search_terms_on">Hakutermit tallennetaan ja käytetään ehdotuksina tulevissa hauissa</string>
+  <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">Hakutermejä ei tallenneta</string>
+  <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">Poista tallennetut hakutermit</string>
+  <!-- Preferences - Search - Remove saved search terms summary -->
   <string name="pref_remove_saved_search_terms_summary">Paina tästä poistaaksesi kaikki hakutermit</string>
+  <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">Kaikki hakutermit poistettu</string>
+  <!-- Preferences - Storage - Secure Storage category -->
   <string name="pref_secure_storage_category">Turvallinen tallennustila</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">Viivästetty synkronointi</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <string name="pref_secure_storage_delayed_sync_summary">Turvallisten tiedostojärjestelmien synkronointi vaatii paljon resursseja. Ottamalla tämän käyttöön, toiminnot vastaavat nopeammin, ja synkronointi suoritetaan kun tiedostojärjestelmää ei käytetä, mutta sovelluksen kaatuessa menetät odottavat tiedot.</string>
+  <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">Vaihda salasana</string>
+  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">Poista tallennustila</string>
+  <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">Käyttäytyminen</string>
+  <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">Ei ehdotuksia</string>
+  <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">Älä näytä sanakirjan ehdotuksia muokatessa tiedostoa</string>
+  <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">Rivitys</string>
+  <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">Hex dump-binääritiedostot</string>
+  <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">Avattaessa binääritiedostoa, luo hex dump tiedostosta ja avaa se heksadesimaalieditorissa</string>
+  <!-- Preferences - Editor - Syntax highlight category -->
   <string name="pref_editor_syntax_highlight_category">Syntaksin korostus</string>
+  <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">Syntaksinkorostus</string>
+  <!-- Preferences - Editor - Syntax highlight summary -->
   <string name="pref_syntax_highlight_desc">Korosta tiedoston syntaksi editorissa (vain jos syntaksin korostus tukee tiedostomuotoa)</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">Väriteema</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
   <string name="pref_syntax_highlight_color_scheme_desc">Valitse syntaksin korostuksen värisävy</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">Käytä teeman oletusta</string>
+  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <string name="pref_syntax_sh_use_theme_default_desc">Käytä syntaksinkorotuksina nykyisen teeman oletuksia</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">Kohteet</string>
+  <!-- Preferences - Themes - Themes selection category -->
   <string name="pref_themes_selection_category">Teemat</string>
+  <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">Aseta teema</string>
+  <!-- Preferences - Themes - Confirmation message -->
   <string name="pref_themes_confirmation">Teema asetettu onnistuneesti.</string>
+  <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">Teemaa ei löytynyt.</string>
+  <!-- Preferences - Debug - Capture debug traces -->
   <string name="pref_debug_traces">Kirjaa debug-tilan tiedot</string>
+  <!-- Themes - Default theme name -->
   <string name="theme_default_name">Vaalea teema</string>
+  <!-- Themes - Default theme description -->
   <string name="theme_default_description">Vaalea teena Cyanogenmodin tiedostonhallintaan.</string>
+  <!-- Themes - Default theme author -->
   <string name="themes_author">CyanogenMod</string>
+  <!-- Navigation drawer -->
   <string name="drawer_open">Avaa navigointivalikko</string>
   <string name="drawer_close">Sulje navigointivalikko</string>
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">Alpha</string>
+  <!-- The label of the current color panel -->
   <string name="color_picker_current_text">Nykyinen:</string>
+  <!-- The label of the new color panel -->
   <string name="color_picker_new_text">Uusi:</string>
+  <!-- The label of the color input -->
   <string name="color_picker_color">Väri:</string>
+  <!-- Android Syntax Highlight -->
   <string name="ash_reset_color_scheme">Palauta alkuperäinen värisävy</string>
   <string name="ash_text">Teksti</string>
   <string name="ash_assignment">Tehtävä</string>
@@ -375,33 +707,63 @@
   <string name="ash_keyword">Hakusana</string>
   <string name="ash_quoted_string">Merkkijono</string>
   <string name="ash_variable">Muuttuja</string>
+  <!-- Secure Storage -->
+  <!-- Secure Storage dialog title - Unlock -->
   <string name="secure_storage_unlock_title">Avaa turvallinen tallennustila</string>
+  <!-- Secure Storage dialog title - Create -->
   <string name="secure_storage_create_title">Luo turvallinen tallennustila</string>
+  <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">Nollaa salasana</string>
+  <!-- Secure Storage dialog title - Delete -->
   <string name="secure_storage_delete_title">Poista turvallinen tallennustila</string>
+  <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">Kirjoita salasana avataksesi turvallisen tallennustilan.</string>
+  <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">Kirjoita salasana suojataksesi turvallisen tallennustilan.</string>
+  <!-- Secure Storage unlock dialog message (reset the current password) -->
   <string name="secure_storage_unlock_key_reset_msg">Kirjoita nykyinen ja uusi salasana palauttaaksesi turvallisen tallennustilan.</string>
+  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">Kirjoita nykyinen salasana poistaaksesi turvallisen tallennustilan.</string>
+  <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">Vanha salasana:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_new_key_title">Uusi salasana:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">Salasana:</string>
+  <!-- Secure Storage unlock dialog repeat key title-->
   <string name="secure_storage_unlock_repeat_title">Kirjoita salasana uudestaan:</string>
+  <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">Luo</string>
+  <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Avaa lukitus</string>
+  <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">Palauta oletukset</string>
+  <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Poista</string>
+  <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">Ei voida avata tallennustilaa</string>
+  <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">Salasanassa on oltava vähintään <xliff:g id="characters">%1$d</xliff:g> merkkiä.</string>
+  <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">Salasanat eivät täsmää.</string>
+  <!-- Secure storage open file warning -->
   <string name="secure_storage_open_file_warning">Tämä kopioi tiedostot väliaikaisesti salaamattomaan kansioon. Väliaikaiset tiedostot poistetaan tunnin kuluttua.</string>
+  <!-- Print messages -->
+  <!-- Unsupported document format -->
   <string name="print_unsupported_document">Asiakirjamuotoa ei tueta</string>
+  <!-- Unsupported image format -->
   <string name="print_unsupported_image">Kuvamuotoa ei tueta</string>
+  <!-- Print header -->
   <string name="print_document_header">Asiakirja: <xliff:g id="document_name">%1$s</xliff:g></string>
+  <!-- Print footer -->
   <string name="print_document_footer">Sivu <xliff:g id="page_number">%1$s</xliff:g></string>
+  <!-- Security - Extract relative or absolute files -->
   <string name="security_warning_extract">Varoitus!\n\nTiedoston purkaminen väärässä paikassa saattaa aiheuttaa vahinkoa laitteellesi ylikirjoittamalla järjestelmätiedostoja.\n\nHaluatko jatkaa?</string>
+  <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">Muutosloki</string>
+  <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Tervetuloa</string>
+  <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Tervetuloa CyanogenModin tiedostonhallintaan.\n\nTällä sovelluksella voit selata tiedostojärjestelmää ja tehdä muutoksia jotka voivat rikkoa laitteesi. Ehkäistäksemme rikkoutumisia, sovellus käynnistyy turvallisessa tilassa jossa ei ole kaikkia oikeuksia.\n\nSaat täydet oikeudet käyttöön asetuksista. Teet kaikki muutokset omalla vastuullasi.\n\nCyanogenMod-tiimi.\n</string>
   <string name="activity_not_found_exception">Tiedoston avaamiseen sopivaa sovellusta ei löydy</string>
 </resources>

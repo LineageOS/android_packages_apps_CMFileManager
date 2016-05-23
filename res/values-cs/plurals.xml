@@ -26,11 +26,13 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> soubory</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> souborů</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one">Nalezena 1 položka</item>
     <item quantity="few">Nalezeny <xliff:g id="count">%d</xliff:g> položky</item>
     <item quantity="other">Nalezeno <xliff:g id="count">%d</xliff:g> položek</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one">1 složka vybrána.</item>
     <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> složky vybrány.</item>
@@ -41,6 +43,7 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> soubory vybrány.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> souborů vybráno.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> položka bude vymazána.</item>
     <item quantity="few"><xliff:g id="count">%1$d</xliff:g> položky budou vymazány.</item>

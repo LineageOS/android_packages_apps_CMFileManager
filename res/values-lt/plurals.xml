@@ -26,11 +26,13 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> failai</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> failų</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one">Rastas <xliff:g id="count">%d</xliff:g> elementas</item>
     <item quantity="few">Rasti <xliff:g id="count">%d</xliff:g> elementai</item>
     <item quantity="other">Rasta <xliff:g id="count">%d</xliff:g> elementų</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one">Pasirinktas <xliff:g id="folders">%1$d</xliff:g> aplankas.</item>
     <item quantity="few">Pasirinkti <xliff:g id="folders">%1$d</xliff:g> aplankai.</item>
@@ -41,6 +43,7 @@
     <item quantity="few">Pasirinkti <xliff:g id="files">%1$d</xliff:g> failai.</item>
     <item quantity="other">Pasirinkta <xliff:g id="files">%1$d</xliff:g> failų.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> elementas bus pašalintas.</item>
     <item quantity="few"><xliff:g id="count">%1$d</xliff:g> elementai bus pašalinti.</item>

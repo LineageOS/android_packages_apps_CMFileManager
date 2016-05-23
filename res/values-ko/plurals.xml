@@ -22,15 +22,18 @@
   <plurals name="n_files">
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g>개의 파일</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="other"><xliff:g id="count">%d</xliff:g>개의 항목을 찾았습니다.</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g>개의 폴더가 선택되었습니다.</item>
   </plurals>
   <plurals name="selection_files">
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g>개의 파일이 선택되었습니다.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="other"><xliff:g id="count">%1$d</xliff:g>개의 항목이 삭제됩니다.</item>
   </plurals>

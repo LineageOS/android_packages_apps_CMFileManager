@@ -26,11 +26,13 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> pliki</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> plików</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> pozycja znaleziona</item>
     <item quantity="few"><xliff:g id="count">%1$d</xliff:g> pozycje znaleziono</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> pozycji znaleziono</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> zaznaczony folder.</item>
     <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> zaznaczone foldery.</item>
@@ -41,6 +43,7 @@
     <item quantity="few"><xliff:g id="files">%1$d</xliff:g> zaznaczone pliki.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> zaznaczonych plików.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> plik zostanie usunięty.</item>
     <item quantity="few"><xliff:g id="count">%1$d</xliff:g> pliki zostaną usunięte.</item>

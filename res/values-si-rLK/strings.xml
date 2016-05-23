@@ -16,120 +16,244 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- The name of the app -->
   <string name="app_name">ගොනු කළමනාකරු</string>
+  <!-- The description of the app -->
   <string name="app_description">CyanogenMod ගොනු කළමනාකරු</string>
+  <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">kB</string>
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">GB</string>
+  <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
+  <!-- Devices types -->
   <string name="device_blockdevice">කාණ්ඩ උපාංගය</string>
   <string name="device_characterdevice">අක්ෂර උපාංගය</string>
   <string name="device_namedpipe">නමැති පයිප්පය</string>
   <string name="device_domainsocket">වසම් කෙවෙනිය</string>
+  <!-- Mount Point States -->
   <string name="mount_point_readonly">R/O</string>
   <string name="mount_point_readwrite">R/W</string>
+  <!-- Default buttons -->
   <string name="yes">ඔව්</string>
   <string name="no">නැහැ</string>
   <string name="all">සියලු</string>
   <string name="overwrite">උඩින්ලියන්න</string>
   <string name="select">තෝරන්න</string>
+  <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<මූල ෆෝල්ඩරය>]]></string>
+  <!-- The search result name -->
   <string name="search_result_name">සොයන්න: <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Loading waiting message -->
   <string name="loading_message">පූරණයවෙමින්\u2026</string>
+  <!-- Computing message -->
+  <!-- Computing new line message -->
+  <!-- Cancelled message -->
   <string name="cancelled_message">අවලංගුයි.</string>
+  <!-- Error message -->
   <string name="error_message">දෝෂය.</string>
+  <!-- Copy text content description -->
   <string name="copy_text_cd">පෙළ පසුරු පුවරුවට පිටපත් කිරීමට තට්ටු කරන්න</string>
+  <!-- Copy text content message -->
   <string name="copy_text_msg">පෙළ පසුරු පුවරුවට පිටපත් කෙරුණි</string>
+  <!-- Warning dialog title -->
   <string name="warning_title">අවවාදයයි</string>
+  <!-- Error dialog title -->
+  <!-- Confirm operation dialog title -->
   <string name="confirm_operation">ක්‍රියාකරණය තහවුරු කරන්න</string>
+  <!-- Confirm overwrite dialog title -->
   <string name="confirm_overwrite">උඩින්ලිවීම තහවුරු කරන්න</string>
+  <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">මකා දැමීම තහවුරු කරන්න</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">මාරු කිරීම තහවුරු කරන්න</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
   <string name="msgs_change_to_prompt_access_mode_msg">මූල ප්‍රවේශ ප්‍රකාරයෙන් ධාවනය කල නොහැක. සුරක්ෂිත ප්‍රකාරයට වෙනස් කෙරේ.\n\nමෙම වෙනස යොදන්නද?</string>
+  <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">කාර්යය සඳහා අවශ්‍ය වරප්‍රසාද ලබාගැනීමට නොහැක.</string>
+  <!-- The message shown when an allocation of a privileged console fails, and a non
+         privileged is allocated -->
   <string name="msgs_privileged_console_alloc_failed">මූල ප්‍රවේශ ප්‍රකාරයෙන් ධාවනය කල නොහැක. සුරක්ෂිත ප්‍රකාරයට වෙනස් කෙරේ.</string>
+  <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">සැකසීම යෙදීමට හෝ ආචය කිරීමට නොහැකිවිය.</string>
+  <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">ඇරඹුම් ෆෝල්ඩරය \'<xliff:g id="initial_dir">%1$s</xliff:g>\' වලංගු නැත. මූල ෆෝල්ඩරයට වෙනස් කෙරේ.</string>
+  <!-- Root is not available message -->
+  <!-- Success -->
   <string name="msgs_success">ක්‍රියාව සාර්ථක ලෙස සමාප්ත විය.</string>
+  <!-- Unknown error -->
   <string name="msgs_unknown">දෝෂයක් අනාවරණය කෙරුණි. ක්‍රියාව අසාර්ථකය.</string>
+  <!-- When an operation requires elevated privileged (normally caused for the use of a
+         non-privileged console) -->
   <string name="msgs_insufficient_permissions">මෙම ක්‍රියාකරණයට උසස් අවසර අවශ්‍යවේ. මූල ප්‍රවේශ ප්‍රකාරයට වෙනස්කර උත්සාහ කරන්න.</string>
+  <!-- When an operation fails because the device has run out of storage. -->
+  <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">ගොනුව හෝ ෆෝල්ඩරය සොයාගත නොහැක.</string>
+  <!-- The command reference couldn't be created (not found or invalid definition)
+         (normally caused by a development error) -->
   <string name="msgs_command_not_found">ක්‍රියාකරණයේ විධානය සොයාගත නොහැක නැතිනම් එහි අවලංගු අර්ථ දැක්වීමක් ඇත.</string>
+  <!-- I/O exception -->
   <string name="msgs_io_failed">කියවීම/ලිවීම අසමත් වීය.</string>
+  <!-- Operation timeout detected -->
   <string name="msgs_operation_timeout">ක්‍රියාකරණය කල්ඉකුත් විය.</string>
+  <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">ක්‍රියාකරණය අසමත්විය.</string>
+  <!-- A console couldn't be allocated -->
   <string name="msgs_console_alloc_failure">අභ්‍යන්තර දෝෂයක් සිදුවුනි.</string>
+  <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">ක්‍රියාකරණය අවලංගු කල නොහැක.</string>
+  <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">ගොනු පද්ධතිය කියවීම-පමණය. ක්‍රියාකරණය ඇරඹීමට පෙර ගොනු පද්ධතිය කියවීම් සහ ලිවීම් ලෙස ආරූඩ කිරීමට උත්සාහ කරන්න.</string>
+  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">අයුතු විස්තාරකයකි. ආයාචනය අසමත්විය.</string>
+  <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">නොගැළපීමක් ඇතිවිය හැකි බැවින් ක්‍රියාකරණයට අවසර නොමැත.</string>
+  <!-- Operation not permitted in the current directory -->
+  <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">පිටවීමට නැවත ඔබන්න.</string>
+  <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">තෝරාගත් ගොනු වර්ගය හැසිරවීමට යෙදුමක් ලියාපදිංචි කර නොමැත.</string>
+  <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">සමහර ගොනු දැනටමත් ඉලක්කවූ ෆෝල්ඩරයෙහි ඇත.\n\nඋඩින් ලියන්නද?</string>
+  <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">ක්‍රියාව යෙදුමට සම්බන්ධ කිරීම අසමත්විය.</string>
+  <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">ක්‍රියාකරණය සඳහා උසස් වරප්‍රසාද අවශ්‍යවේ.\n\nඔබට මූල ප්‍රවේශ ප්‍රකාරයට වෙනස්කිරීමට අවශ්‍යද?</string>
+  <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">මව්පිය ෆෝල්ඩරය</string>
+  <!-- External storage descripton -->
   <string name="external_storage">බාහිර ආචයනය</string>
+  <!-- Usb storage descripton -->
   <string name="usb_storage">USB ආචයනය</string>
+  <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">ගොනු පද්ධතියේ තොරතුරු</string>
+  <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">සුබෙදුම් ප්‍රකාරය</string>
+  <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">සැලසුම් ප්‍රකාරය</string>
+  <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">වෙනත් දර්ශන විකල්ප</string>
+  <!-- ActionBar Buttons - Done -->
   <string name="actionbar_button_selection_done_cd">හරි</string>
+  <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">ක්‍රියා</string>
+  <!-- ActionBar Buttons - Search -->
   <string name="actionbar_button_search_cd">සොයන්න</string>
+  <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">තවත් විකල්ප</string>
+  <!-- ActionBar Buttons - Storage volumes -->
   <string name="actionbar_button_storage_cd">ආචයන කලාප</string>
+  <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">සුරකින්න</string>
+  <!-- ActionBar Buttons - Print -->
   <string name="actionbar_button_print_cd">මුද්‍රණය</string>
+  <!-- Navigation View - Sort - Sort by name (ascending) -->
   <string name="sort_by_name_asc">නමින් \u25B2</string>
+  <!-- Navigation View - Sort - Sort by name (descending) -->
   <string name="sort_by_name_desc">නමින් \u25BC</string>
+  <!-- Navigation View - Sort - Sort by date (ascending) -->
   <string name="sort_by_date_asc">දිනයෙන් \u25B2</string>
+  <!-- Navigation View - Sort - Sort by date (descending) -->
   <string name="sort_by_date_desc">දිනයෙන් \u25BC</string>
+  <!-- Navigation View - Sort - Sort by size (ascending) -->
+  <!-- Navigation View - Sort - Sort by size (descending) -->
+  <!-- Navigation View - Sort - Sort by type (ascending) -->
+  <!-- Navigation View - Sort - Sort by type (descending) -->
+  <!-- Navigation View - Layout - Icons -->
   <string name="layout_icons">අයිකන</string>
+  <!-- Navigation View - Layout - Simple -->
   <string name="layout_simple">සරල</string>
+  <!-- Navigation View - Layout - Details -->
   <string name="layout_details">තොරතුරු</string>
+  <!-- Navigation View - View - Show folders first -->
   <string name="cm_filemanager_show_dirs_first">ෆෝල්ඩර පළමුව පෙන්වන්න</string>
+  <!-- Navigation View - View - Show hidden files option -->
   <string name="cm_filemanager_show_hidden">සැඟවුණු ගොනු පෙන්වන්න</string>
+  <!-- Navigation View - View - Show system files option -->
   <string name="cm_filemanager_show_system">පද්ධති ගොනු පෙන්වන්න</string>
+  <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">සංකේතාත්මක සබැඳි පෙන්වන්න</string>
+  <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">තොරතුරු නැත</string>
+  <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">ගොනු පද්ධතිය සඳහා කිසිඳු තොරතුරක් ලබාගත නොහැක.</string>
+  <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">ගොනු පද්ධතිය ආරූඩ/අනාරූඩ කල නොහැක.</string>
+  <!-- Filesystem Info - Not allowed message -->
+  <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">ගොනු පද්ධතිය ආරූඩ කිරීමේ ක්‍රියාකරණය අසමත්විය. SD කාඩ්පත් වැනි සමහර ගොනු පද්ධති කියවීම-පමණයි ලෙස තිළැලි බැවින් ආරූඩ/අනාරූඩ කලනොහැක.</string>
+  <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">ගොනු පද්ධතියේ තොරතුරු</string>
+  <!-- Filesystem Info Dialog - Tab - Info -->
   <string name="filesystem_info_dialog_tab_info">තොරතුරු</string>
+  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">ඩිස්කයේ භාවිතය</string>
+  <!-- Filesystem Info Dialog - Status Label -->
+  <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">ආරූඩ ලක්ෂ්‍යය:</string>
+  <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">උපාංගය:</string>
+  <!-- Filesystem Info Dialog - Type Label -->
   <string name="filesystem_info_dialog_type">ආකාරය:</string>
+  <!-- Filesystem Info Dialog - Options Label -->
   <string name="filesystem_info_dialog_options">විකල්ප:</string>
+  <!-- Filesystem Info Dialog - Dump/Pass Label -->
   <string name="filesystem_info_dialog_dump_pass">නික්ෂේප / අත්හළ:</string>
+  <!-- Filesystem Info Dialog - Virtual Label -->
   <string name="filesystem_info_dialog_virtual">අතථ්‍ය:</string>
+  <!-- Filesystem Info Dialog - Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">එකතුව:</string>
+  <!-- Filesystem Info Dialog - Used Disk Usage -->
   <string name="filesystem_info_dialog_used_disk_usage">භාවිතාවූ:</string>
+  <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">නිදහස්:</string>
+  <!-- Fso Properties - Not allowed message -->
   <string name="fso_properties_permissions_not_allowed_msg">සුරක්ෂිත ප්‍රකාරයේදී අනුමැතිය අවැසි ක්‍රියාකරණ සඳහා අවසර නැත. මූල ප්‍රවේශ ප්‍රකාරය වෙත වෙනස් කිරීමට තට්ටු කරන්න.</string>
+  <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">අයිතිකරු වෙනස් කිරීමේ ක්‍රියාකරණය අසමත්විය.\n\nආරක්ෂක හේතු මත, SD කාඩ්පත් වැනි සමහර ගොනු පද්ධති, අයිතිය වෙනස් කිරීමට අවසර නොදෙයි.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">කාණ්ඩය වෙනස් කිරීමේ ක්‍රියාකරණය අසමත්විය.\n\nආරක්ෂක හේතු මත, SD කාඩ්පත් වැනි සමහර ගොනු පද්ධති, කාණ්ඩ වෙනස් කිරීමට අවසර නොදෙයි.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_permission_msg">අනුමැති වෙනස් කිරීමේ ක්‍රියාකරණය අසමත්විය.\n\nආරක්ෂක හේතු මත, SD කාඩ්පත් වැනි සමහර ගොනු පද්ධති, අනුමැති වෙනස් කිරීමට අවසර නොදෙයි.</string>
+  <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">ගුණාංග</string>
+  <!-- Fso Properties Dialog - Tab - Info -->
   <string name="fso_properties_dialog_tab_info">තොරතුරු</string>
+  <!-- Fso Properties Dialog - Tab - Permissions -->
   <string name="fso_properties_dialog_tab_permissions">අනුමැති</string>
+  <!-- Fso Properties Dialog - Name Label -->
   <string name="fso_properties_dialog_name">නම:</string>
+  <!-- Fso Properties Dialog - Parent Folder Label -->
   <string name="fso_properties_dialog_parent">මව්පිය:</string>
+  <!-- Fso Properties Dialog - Type Label -->
   <string name="fso_properties_dialog_type">ආකාරය:</string>
+  <!-- Fso Properties Dialog - Category Label -->
   <string name="fso_properties_dialog_category">වර්ගය:</string>
+  <!-- Fso Properties Dialog - Link Label -->
   <string name="fso_properties_dialog_link">සබැඳි:</string>
+  <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">තරම:</string>
+  <!-- Fso Properties Dialog - Contains Label -->
   <string name="fso_properties_dialog_contains">අඩංගුවේ:</string>
+  <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <string name="fso_properties_dialog_last_accessed_date">ප්‍රවේශිත:</string>
+  <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">වෙනස්වූ:</string>
+  <!-- Fso Properties Dialog - Last Changed Time -->
   <string name="fso_properties_dialog_last_changed_date">විපර්යාසිත:</string>
+  <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">අයිතිකරු:</string>
+  <!-- Fso Properties Dialog - Group Label -->
   <string name="fso_properties_dialog_group">කාණ්ඩය:</string>
+  <!-- Fso Properties Dialog - Others Label -->
   <string name="fso_properties_dialog_others">වෙනත්:</string>
+  <!-- Fso Properties Dialog - Special Label -->
+  <!-- Fso Properties Dialog - Read Label -->
+  <!-- Fso Properties Dialog - Write Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Skip media scan -->
   <string name="fso_properties_dialog_include_in_media_scan">මාධ්‍ය සුපිරික්සීම පැනයන්න:</string>
   <string name="fso_failed_to_allow_media_scan">මාධ්‍ය සුපිරික්සීමට ඉඩ දීමට අසමත්විය</string>
   <string name="fso_failed_to_prevent_media_scan">මාධ්‍ය සුපිරික්සීම වැලැක්වීමට අසමත්විය</string>
@@ -137,128 +261,252 @@
   <string name="fso_delete_nomedia_dir_body">මෙම ෆෝල්ඩරයේ .nomedia ෆෝල්ඩරයක් ඇත.\n\nඔබට එය සහ එහි අන්තර්ගත සියල්ල මැකීමට අවශ්‍යද?</string>
   <string name="fso_delete_nomedia_non_empty_title">.nomedia ගොනුව මකන්න</string>
   <string name="fso_delete_nomedia_non_empty_body">මෙම ෆෝල්ඩරයේ හිස් නොවන .nomedia ගොනුවක් ඇත.\n\nඔබට එය මැකීමට අවශ්‍යද?</string>
+  <!-- History - History activity title -->
   <string name="history">ඉතිහාසය</string>
+  <!-- History - The history is empty -->
   <string name="msgs_history_empty">ඉතිහාසය හිස්ය.</string>
+  <!-- History - The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">නාඳුනන ඉතිහාස අයිතමයක්.</string>
+  <!-- Search - Search activity title -->
   <string name="search">සෙවුම් ප්‍රතිඵල</string>
+  <!-- Search - Search hint message -->
   <string name="search_hint">ඔබගේ සෙවීම ටයිප් කරන්න</string>
+  <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">ඔබගේ සෙවීම කියන්න</string>
+  <!-- Search - Search error message -->
   <string name="search_error_msg">සෙවීමේදී දෝෂයක් පැනනැගුණි. ප්‍රතිඵල කිසිවක් සොයා නොගැනුණි.</string>
+  <!-- Search - Search no results message -->
   <string name="search_no_results_msg">ප්‍රතිඵල සොයාගෙන නැත.</string>
+  <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="path">%2$s</xliff:g> තුල <xliff:g id="items">%1$s</xliff:g></string>
+  <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>වචන:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Search - Confirm search -->
   <string name="search_few_characters_title">සෙවීම තහවුරු කරන්න</string>
+  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">සමහර සෙවීමේ වචන වල ඇත්තේ අක්ෂර අඩු ගණනකි. ක්‍රියාකරණය සඳහා කාලය සහ පද්ධති සම්පත් බොහෝ සෙයින් වැයවිය හැක.\n\nඔබට ඉදිරියට යාමට අවශ්‍යද?</string>
+  <!-- Search - Searching dialog title -->
   <string name="searching">කරුණාකර රැඳෙන්න\u2026</string>
+  <!-- Search - Searching label -->
   <string name="searching_action_label">සොයමින් පවතී</string>
+  <!-- Picker Activity -->
+  <!-- Picker Activity - Dialog title -->
   <string name="picker_title">ගොනුවක් තෝරන්න</string>
   <string name="directory_picker_title">ෆෝල්ඩරයක් තෝරන්න</string>
+  <!-- Editor - Editor activity title -->
   <string name="editor">සංස්කාරක</string>
+  <!-- Editor - Invalid file message -->
   <string name="editor_invalid_file_msg">අවලංගු ගොනුවකි.</string>
+  <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">ගොනුව සොයාගැනීමට නැත.</string>
+  <!-- Editor - File size exceed the limit -->
   <string name="editor_file_exceed_size_msg">උපාංගය තුල විවෘත කිරීම සඳහා ගොනුව ඉතා විශාලය.</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">පිටවීම තහවුරු කරන්න</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <string name="editor_dirty_ask_msg">මෙහි නොසුරැකූ වෙනස් කම් ඇත.\n\nසුරකින්නේ නැතුව පිටවන්නද?</string>
+  <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">ගොනුව සාර්ථක ලෙස සුරැකුනි.</string>
+  <!-- Editor - Read-only file mode -->
   <string name="editor_read_only_mode">ගොනුව කියවීම-පමණයි ලෙස විවෘත කර ඇත.</string>
+  <!-- Editor - Dumping message -->
   <string name="dumping_message">hex නික්ෂේපය සාදමින්\u2026</string>
+  <!-- Editor - Displaying -->
   <string name="displaying_message">පෙන්වමින්\u2026</string>
+  <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">පොත්සලකුණු</string>
+  <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">නිවස</string>
+  <!-- Bookmarks - Bookmark name - Root folder -->
   <string name="bookmarks_root_folder">මූල ෆෝල්ඩරය</string>
+  <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">පද්ධති ෆෝල්ඩරය</string>
+  <!-- Bookmarks - Bookmark name - Secure storage -->
   <string name="bookmarks_secure">සුරක්ෂිත ගබඩාව</string>
+  <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">දුරස්ථ ගබඩාව</string>
+  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">ඇරඹුම් ෆෝල්ඩරය සකසන්න.</string>
+  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">පොත්සලකුණ ඉවත්කරන්න.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">පොත්සලකුණ සාර්ථක ලෙස එක් කෙරුණි.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
+  <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">ඇරඹුම් ෆෝල්ඩරය</string>
+  <!-- Initial directory label -->
   <string name="initial_directory_label">ඇරඹුම් ෆෝල්ඩරය තෝරන්න:</string>
+  <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">සාපේක්ෂ මංපෙත් අනුමත නැත.</string>
+  <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">ඇරඹුම් ෆෝල්ඩරය සුරැකීම අතරතුර දෝෂයක් පැනනැගුණි.</string>
+  <!-- Menu - Navigation - Search -->
   <string name="menu_search">සොයන්න</string>
+  <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">සැකසීම්</string>
+  <!-- Menu - History - Clear history -->
   <string name="menu_clear_history">ඉතිහාසය හිස් කරන්න</string>
+  <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">යෝජනා නොමැත</string>
+  <!-- Menu - Editor - Word wrap -->
   <string name="menu_word_wrap">පද එතුම</string>
+  <!-- Menu - Editor - Sintax highlight -->
   <string name="menu_syntax_highlight">වාග් රීති ඉස්මතු කිරීම</string>
+  <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - පිටපත<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Regular expression for new compressed file -->
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - අලුත්<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">ක්‍රියාකරණය ඉටු කරමින්\u2026</string>
+  <!-- Waiting dialog - Copying title -->
   <string name="waiting_dialog_copying_title">පිටපත් කරමින්\u2026</string>
+  <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><xliff:g id="from">%1$s</xliff:g> <![CDATA[<b>සිට</b>]]> <xliff:g id="to">%2$s</xliff:g> <![CDATA[<br/><b>වෙත</b>]]></string>
+  <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">ගෙනයමින්\u2026</string>
+  <!-- Waiting dialog - Moving message -->
   <string name="waiting_dialog_moving_msg"><xliff:g id="from">%1$s</xliff:g> <![CDATA[<b>සිට</b>]]> <xliff:g id="to">%2$s</xliff:g> <![CDATA[<br/><b>වෙත</b>]]></string>
+  <!-- Waiting dialog - Deleting title -->
   <string name="waiting_dialog_deleting_title">මකමින්\u2026</string>
+  <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>ගොනුව</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_extracting_title">ඇද ගනීමින්\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>ගොනුව</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_compressing_title">හකුළමින්\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>ගොනුව</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>විශ්ලේෂණය කරමින්\u2026</b>]]></string>
+  <!-- Extracting - Success message -->
   <string name="msgs_extracting_success">ඇද ගැනීමේ ක්‍රියාකරණය සාර්ථක ලෙස සමාප්තවිය. දත්ත <xliff:g id="destination">%1$s</xliff:g> වෙත ඇද ගැනුනි.</string>
+  <!-- Compressing - Success message -->
   <string name="msgs_compressing_success">හැකිලීමේ ක්‍රියාකරණය සාර්ථක ලෙස සමාප්තවිය. දත්ත <xliff:g id="destination">%1$s</xliff:g> වෙත හකුලා දැමුණි.</string>
+  <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">ක්‍රියා</string>
+  <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">ගුණාංග</string>
+  <!-- Actions Dialog - Menu - Refresh -->
   <string name="actions_menu_refresh">ප්‍රතිනැවුම් කරන්න</string>
+  <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">අලුත් ෆෝල්ඩරයක්</string>
+  <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">අලුත් ගොනුවක්</string>
+  <!-- Actions Dialog - Menu - Select all -->
   <string name="actions_menu_select_all">සියල්ල තෝරන්න</string>
+  <!-- Actions Dialog - Menu - Deselect all -->
   <string name="actions_menu_deselect_all">සියල්ල නොතෝරන්න</string>
+  <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">තෝරන්න</string>
+  <!-- Actions Dialog - Menu - Deselect -->
   <string name="actions_menu_deselect">නොතෝරන්න</string>
+  <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <string name="actions_menu_paste_selection">තේරීම මෙතනට පිටපත් කරන්න</string>
+  <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">තේරීම මෙතනට ගෙන එන්න</string>
+  <!-- Actions Dialog - Menu - Delete selection -->
   <string name="actions_menu_delete_selection">තේරීම මකා දමන්න</string>
+  <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">තේරීම හකුළන්න</string>
+  <!-- Actions Dialog - Menu - Create link -->
   <string name="actions_menu_create_link">සබැඳියක් සාදන්න</string>
+  <!-- Actions Dialog - Menu - Open -->
   <string name="actions_menu_open">විවෘත කරන්න</string>
+  <!-- Actions Dialog - Menu - Open with -->
   <string name="actions_menu_open_with">සමගින් විවෘත කරන්න</string>
+  <!-- Actions Dialog - Menu - Execute -->
   <string name="actions_menu_execute">ඉෂ්ට කරන්න</string>
+  <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">යවන්න</string>
+  <!-- Actions Dialog - Menu - Send selection -->
   <string name="actions_menu_send_selection">තේරීම යවන්න</string>
+  <!-- Actions Dialog - Menu - Compress -->
   <string name="actions_menu_compress">හකුළන්න</string>
+  <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">ඇද ගන්න</string>
+  <!-- Actions Dialog - Menu - Delete -->
   <string name="actions_menu_delete">මකන්න</string>
+  <!-- Actions Dialog - Menu - Rename -->
   <string name="actions_menu_rename">යලි නම් තබන්න</string>
+  <!-- Actions Dialog - Menu - Create copy -->
   <string name="actions_menu_create_copy">පිටපතක් සාදන්න</string>
+  <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">ගුණාංග</string>
+  <!-- Actions Dialog - Menu - Add to bookmarks -->
   <string name="actions_menu_add_to_bookmarks">පොත්සලකුණු වෙත එක් කරන්න</string>
+  <!-- Actions Dialog - Menu - Add shortcut -->
   <string name="actions_menu_add_shortcut">කෙටි මගක් එක් කරන්න</string>
+  <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">මව්පියා විවෘත කරන්න</string>
+  <!-- Actions Dialog - Menu - Compute checksum -->
   <string name="actions_menu_compute_checksum">පිරික්සුම් එකතුව ගණනය කරන්න</string>
+  <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">මුද්‍රණය</string>
+  <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">නිවස ලෙස සකසන්න</string>
+  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">මෙම ක්‍රියාව ආපසු කල නොහැක. ඔබට ඉදිරියට යාමට අවශ්‍යද?</string>
+  <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">නම:</string>
+  <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">නම හිස් විය නොහැක.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_path_name">අවලංගු නමකි. \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' අක්ෂර අනුමත නැත.</string>
+  <!-- Enter Name Dialog - Message - Invalid name length -->
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_name">අවලංගු නමකි. \'.\' සහ \'..\' යන නම් අනුමත නැත.</string>
+  <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">මෙම නම දැනටමත් පවතී.</string>
+  <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">සහචාරයන්</string>
+  <!-- Associations Dialog - Remember the user action -->
   <string name="associations_dialog_remember">තේරීම මතක තබා ගන්න</string>
+  <!-- Associations Dialog - Open with Title -->
   <string name="associations_dialog_openwith_title">සමගින් විවෘත කරන්න</string>
+  <!-- Associations Dialog - Open action (button title) -->
   <string name="associations_dialog_openwith_action">විවෘත කරන්න</string>
+  <!-- Associations Dialog - Send with Title -->
   <string name="associations_dialog_sendwith_title">සමගින් යවන්න</string>
+  <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">යවන්න</string>
+  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">නිම කිරීමට කිසිවක් නැත.</string>
+  <!-- Execution console - Title -->
   <string name="execution_console_title">කොන්සෝලය</string>
+  <!-- Execution console - The script name label -->
   <string name="execution_console_script_name_label">විධානාවලිය:</string>
+  <!-- Execution console - The script execution time label -->
   <string name="execution_console_script_execution_time_label">කාලය:</string>
+  <!-- Execution console - The script exit code label -->
   <string name="execution_console_script_exitcode_label">පිටවීම් කේතය:</string>
+  <!-- Execution console - The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text">තත්පර <xliff:g id="seconds">%1$s</xliff:g>.</string>
+  <!-- Compute checksum - Title -->
   <string name="compute_checksum_title">පිරික්සුම් එකතුව ගණනය කරන්න</string>
+  <!-- Compute checksum - The file name label -->
   <string name="compute_checksum_filename_label">ගොනුව:</string>
+  <!-- Compute checksum - The MD5 label -->
+  <!-- Compute checksum - The SHA1 label -->
+  <!-- Compute checksum - The computing checksum message-->
   <string name="compute_checksum_computing_checksum_msg">පිරික්සුම් එකතුව ගණනය කරමින්\u2026</string>
+  <!-- Mime/Types - Folder -->
   <string name="mime_folder">ෆෝල්ඩරය</string>
+  <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">සංකේතාත්මක සබැඳිය</string>
+  <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">නොදනී</string>
+  <!--  Filetime formats -->
   <string name="filetime_format_mode_system">පද්ධති-නිර්වාචිත</string>
   <string name="filetime_format_mode_locale">පෙදෙසි-නිර්වාචිත</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/yyyy hh:mm:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
+  <!-- Selection -->
+  <!-- For example "2 folders and 1 file selected." -->
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> සහ <xliff:g id="files">%2$s</xliff:g> තෝරාගැනුනි.</string>
+  <!-- Category descriptions -->
   <string name="category_system">පද්ධතිය</string>
   <string name="category_app">යෙදුම</string>
   <string name="category_binary">ද්ව්‍යංගී</string>
@@ -274,83 +522,167 @@
   <string name="category_audio">ශ්‍රව්‍ය</string>
   <string name="category_video">වීඩියෝ</string>
   <string name="category_security">ආරක්ෂාව</string>
+  <!-- Compression - Compression modes dialog title -->
   <string name="compression_mode_title">හැකිළීම් ප්‍රකාරය</string>
+  <!-- Compression - Supported archive and compression modes -->
+  <!-- Shortcut. Failed to handle the shortcut -->
   <string name="shortcut_failed_msg">කෙටි මග හැසිරවීමට අසමත්විය.</string>
+  <!-- Shortcut. The shortcut was created -->
   <string name="shortcut_creation_success_msg">කෙටි මග සාර්ථක ලෙස සෑදුනි.</string>
+  <!-- Shortcut. The shortcut wasn't created -->
   <string name="shortcut_creation_failed_msg">කෙටි මග සෑදීම අසමත්විය.</string>
+  <!-- Preferences title -->
   <string name="pref">සැකසීම්</string>
+  <!-- Preferences - General title -->
   <string name="pref_general">පොදු සැකසීම්</string>
+  <!-- Preferences - Search title -->
   <string name="pref_search">සෙවීම් විකල්ප</string>
+  <!-- Preferences - Storage title -->
   <string name="pref_storage">ගබඩා විකල්ප</string>
+  <!-- Preferences - Editor title -->
   <string name="pref_editor">සංස්කාරක විකල්ප</string>
+  <!-- Preferences - Themes title -->
   <string name="pref_themes">තේමා</string>
+  <!-- Preferences - About title -->
   <string name="pref_about">පිලිබඳ</string>
+  <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">පොදු</string>
+  <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">මහකුරු කුඩාකුරු සංවේදීය</string>
+  <!-- Preferences - General - Case sensitive sort and navigating summary -->
   <string name="pref_case_sensitive_sort_summary">සෙවුම් ප්‍රතිඵල සංචාලනයේදී හෝ සුබෙදීමේදී මහකුරු කුඩාකුරු පිලිබඳ සලකා බලන්න</string>
+  <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">දිනය/වේලාව ආකෘතිය</string>
+  <!-- Preferences - General -Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">ඩිස්ක භාවිතාවේ අවවාදය</string>
+  <!-- Preferences - General - Disk usage warning level summary -->
+  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
+         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
   <string name="pref_disk_usage_warning_level_summary" formatted="false">නිදහස් ඩිස්ක ඉඩ සියයට <xliff:g id="level">%1$s</xliff:g> වෙත ලඟාවූ විට ඩිස්ක භාවිතාව විජටයේ වෙනස් පාටක් පෙන්වන්න</string>
+  <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">ෆෝල්ඩර සංඛ්‍යායන ගණනය කරන්න</string>
+  <!-- Preferences - General - Compute folder statistics summary on -->
   <string name="pref_compute_folder_statistics_on">අවවාදයයි! ෆෝල්ඩර සංඛ්‍යායන ගණනය සඳහා වේලාව සහ පද්ධති සම්පත් වැඩි ලෙස වැයවේ</string>
+  <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">පූර්වදර්ශනය</string>
+  <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">යෙදුම්, සංගීත ගොනු, පින්තූර සහ වීඩියෝ සඳහා පූර්වදර්ශන පිළිරුවක් පෙන්වන්න</string>
+  <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">ඇතිල්ලීමේ අභින භාවිතාකරන්න</string>
+  <!-- Preferences - General - Use flinger detection summary -->
   <string name="pref_use_flinger_summary">ගොනු හෝ ෆෝල්ඩර මකා දැමීමට වමේ සිට දකුණට ඇතිල්ලීමේ අභිනය භාවිතාකරන්න</string>
+  <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">උසස්</string>
+  <!-- Preferences - General - Access mode -->
   <string name="pref_access_mode">පිවිසුම් ප්‍රකාරය</string>
+  <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">සුරක්ෂිත ප්‍රකාරය</string>
+  <!-- Preferences - General - Safe mode summary -->
   <string name="pref_access_mode_safe_summary">සුරක්ෂිත ප්‍රකාරය\n\nයෙදුම වරප්‍රසාද රහිතව ධාවනය වන අතර, ආචයන කලාප ගොනු පද්ධති (SD කාඩ්පත් සහ USB) පමණක් ප්‍රවේශනය කල හැක</string>
+  <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">ඉඟි කිරීමේ ප්‍රකාරය</string>
+  <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">පරිශීලක වෙත ඉඟි කිරීමේ ප්‍රකාරය\n\nයෙදුම ගොනු පද්ධතිය වෙත පූර්ණ පිවිසුම් බලය සහිතව ධාවනය වේ නමුත් වරප්‍රසාද අවැසි ක්‍රියාවන් ඉෂ්ට කිරීමට පෙර ඉඟි කෙරෙනු ඇත</string>
+  <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">මූල ප්‍රවේශ ප්‍රකාරය</string>
+  <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">මූල ප්‍රවේශ ප්‍රකාරය\n\nඅවවාදයයි! මෙම ප්‍රකාරය ඔබගේ උපාංගය භේද කළහැකි ක්‍රියාකරණයන් වෙත අවසර ලබාදෙයි. ක්‍රියාකරණයක් සුරක්ෂිත දැයි තහවුරු කරගැනීම ඔබගේ වගකීමකි</string>
+  <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">සීමා කල පරිශීලක ප්‍රවේශය</string>
+  <!-- Preferences - General - Restrict secondary users access summary -->
   <string name="pref_restrict_secondary_users_access_summary">අමතර පරිශීලකයන් සඳහා සමස්ත පද්ධතියම වෙත ප්‍රවේශය සීමා කරන්න</string>
+  <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">ප්‍රතිඵල</string>
+  <!-- Preferences - Search - Show relevance widget -->
   <string name="pref_show_relevance_widget">අදාළවූ විජටය පෙන්වන්න</string>
+  <!-- Preferences - Search - Highlight search terms -->
   <string name="pref_highlight_terms">සොයන වචන ඉස්මතු කරන්න</string>
+  <!-- Preferences - Search - Sort results mode -->
   <string name="pref_sort_search_results_mode">ප්‍රතිඵල සුබෙදීමේ ප්‍රකාරය</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">සුබෙදීමක් නැත</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_name">නමින්</string>
+  <!-- Preferences - Search - Sort results mode. Relevance -->
   <string name="pref_sort_search_results_mode_relevance">අදාළත්වයෙන්</string>
+  <!-- Preferences - Search - Privacity category -->
   <string name="pref_search_privacity_category">පෞද්ගලිකත්වය</string>
+  <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">සොයන වචන සුරකින්න</string>
+  <!-- Preferences - Search - Save search terms summary on -->
   <string name="pref_save_search_terms_on">සෙවීමේ වචන සුරකින අතර ඉදිරි සෙවීම් වලදී යෝජනා ලෙස භාවිතාවේ</string>
+  <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">සෙවීමේ වචන සුරකින්නේ නැත</string>
+  <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">සුරැකු සෙවීමේ වචන ඉවත්කරන්න</string>
+  <!-- Preferences - Search - Remove saved search terms summary -->
   <string name="pref_remove_saved_search_terms_summary">සියලුම සුරැකු සෙවීමේ වචන ඉවත්කිරීමට තට්ටු කරන්න</string>
+  <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">සුරැකු සෙවීමේ වචන සියල්ල ඉවත් කෙරිණි</string>
+  <!-- Preferences - Storage - Secure Storage category -->
   <string name="pref_secure_storage_category">සුරක්ෂිත ගබඩාව</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">ප්‍රමාදිත සමමුහුකරණය</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <string name="pref_secure_storage_delayed_sync_summary">සුරක්‍ෂිත ගොනු පද්ධති සමමුහුර්තකරණය යනු මිල අධික වූ මෙහෙයුමකි. යෙදුම බිඳ වැටුණහොත් පොරොත්තු තොරතුරු සමමුහුර්ත නොවී නැති වී යාමේ වියදමක් ඇතුව ගොනු පද්ධතිය භාවිත නොවන තත්ත්වයේ පවතින විට සමමුහුර්තකරණය සිදු කිරීමට, සෑම මෙහෙයුමක් ම අවසානයේදී වේගවත් ප්‍රතිචාරවලට ඉඩ දීමට මෙම විකල්පය සබල කරන්න.</string>
+  <!-- Preferences - Storage - Secure Storage - Change password title -->
+  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">ගබඩාව මකන්න</string>
+  <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">හැසිරීම</string>
+  <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">යෝජනා එපා</string>
+  <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">ගොනුව සකසන අතරතුර ශබ්දකෝෂ යෝජනා නොපෙන්වන්න</string>
+  <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">පද එතුම</string>
+  <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">ද්ව්‍යංගී ගොනු hex නික්ෂේපය</string>
+  <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">ද්ව්‍යංගී ගොනුවක් විවෘත කිරීමේදී, ගොනුවේ hex නික්ෂේපයක් සාදා එය hex පෙන්වනයේ විවෘත කරන්න</string>
+  <!-- Preferences - Editor - Syntax highlight category -->
+  <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">වාග් රීති ඉස්මතු කිරීම</string>
+  <!-- Preferences - Editor - Syntax highlight summary -->
+  <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">වර්ණ ක්‍රමානුරූපය</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
   <string name="pref_syntax_highlight_color_scheme_desc">වාග් රීති ඉස්මතු කිරීමේ වර්ණ ක්‍රමානුරූපය තෝරන්න</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">තේමා පෙරනිමි භාවිතාකරන්න</string>
+  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <string name="pref_syntax_sh_use_theme_default_desc">පවත්නා තේමාවේ පෙරනිමි වාග් රීති ඉස්මතු කිරීම භාවිතාකරන්න</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">අයිතමයන්</string>
+  <!-- Preferences - Themes - Themes selection category -->
   <string name="pref_themes_selection_category">තේමා</string>
+  <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">තේමාව සකසන්න</string>
+  <!-- Preferences - Themes - Confirmation message -->
   <string name="pref_themes_confirmation">තේමාව සාර්ථක ලෙස යොදාගැනුනි.</string>
+  <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">තේමාව සොයාගැනීමට නැත.</string>
+  <!-- Preferences - Debug - Capture debug traces -->
   <string name="pref_debug_traces">නිදොස්කරණ තොරතුර ලොග් ගත කරන්න</string>
+  <!-- Themes - Default theme name -->
   <string name="theme_default_name">සැහැල්ලු තේමාව</string>
+  <!-- Themes - Default theme description -->
   <string name="theme_default_description">CyanogenMod ගොනු කළමනාකරු සඳහා සැහැල්ලු තේමාවක්.</string>
+  <!-- Themes - Default theme author -->
   <string name="themes_author">CyanogenMod</string>
+  <!-- Navigation drawer -->
   <string name="drawer_open">සංචාලන ලාච්චුව දිගහරින්න</string>
   <string name="drawer_close">සංචාලන ලාච්චුව වසන්න</string>
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">ඇල්ෆා</string>
+  <!-- The label of the current color panel -->
   <string name="color_picker_current_text">පවත්නා:</string>
+  <!-- The label of the new color panel -->
   <string name="color_picker_new_text">අලුත්:</string>
+  <!-- The label of the color input -->
   <string name="color_picker_color">පාට:</string>
+  <!-- Android Syntax Highlight -->
   <string name="ash_reset_color_scheme">පෙරනිමි තේමා වර්ණ ක්‍රමානුරූපය පිළිනගන්න</string>
   <string name="ash_text">පෙළ</string>
   <string name="ash_assignment">පවරා දීම</string>
@@ -359,28 +691,58 @@
   <string name="ash_keyword">යතුරුපදය</string>
   <string name="ash_quoted_string">උධෘත අනුලකුණු වැල</string>
   <string name="ash_variable">විචල්‍යය</string>
+  <!-- Secure Storage -->
+  <!-- Secure Storage dialog title - Unlock -->
+  <!-- Secure Storage dialog title - Create -->
+  <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">මුරපදය යළි සකසන්න</string>
+  <!-- Secure Storage dialog title - Delete -->
+  <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">සුරක්ෂිත ගබඩා ගොනු පද්ධතිය අගුළු ඇරීමට මුරපදය ටයිප් කරන්න.</string>
+  <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">සුරක්ෂිත ගබඩා ගොනු පද්ධතිය ආරක්ෂා කිරීමට මුරපදයක් ටයිප් කරන්න.</string>
+  <!-- Secure Storage unlock dialog message (reset the current password) -->
   <string name="secure_storage_unlock_key_reset_msg">සුරක්ෂිත ගබඩා ගොනු පද්ධතිය යළි පිහිටුවීමට පවත්නා සහ අලුත් මුරපද ටයිප් කරන්න.</string>
+  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">සුරක්ෂිත ගබඩා ගොනු පද්ධතිය මැකීමට පවත්නා මුරපදය ටයිප් කරන්න.</string>
+  <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">පැරණි මුරපදය:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_new_key_title">නව මුරපදය:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">මුරපදය:</string>
+  <!-- Secure Storage unlock dialog repeat key title-->
   <string name="secure_storage_unlock_repeat_title">මුරපදය යළි යොදන්න:</string>
+  <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">තනන්න</string>
+  <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">අගුළු අරින්න</string>
+  <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">යළි පිහිටුවන්න</string>
+  <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">මකන්න</string>
+  <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">ගබඩාව අගුළු හැරිය නොහැක</string>
+  <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">මුරපදයෙහි අවම වශයෙන් අක්ෂර <xliff:g id="characters">%1$d</xliff:g> ක් තිබිය යුතුය.</string>
+  <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">මුරපද නොගැලපේ.</string>
+  <!-- Secure storage open file warning -->
+  <!-- Print messages -->
+  <!-- Unsupported document format -->
   <string name="print_unsupported_document">සහාය නොදක්වන ලේඛන ආකෘතියකි</string>
+  <!-- Unsupported image format -->
   <string name="print_unsupported_image">සහාය නොදක්වන පින්තූර ආකෘතියකි</string>
+  <!-- Print header -->
   <string name="print_document_header">ලේඛනය: <xliff:g id="document_name">%1$s</xliff:g></string>
+  <!-- Print footer -->
   <string name="print_document_footer">පිටුව <xliff:g id="page_number">%1$s</xliff:g></string>
+  <!-- Security - Extract relative or absolute files -->
   <string name="security_warning_extract">අවවාදයයි!\n\nසාපේක්ෂ හෝ ඒකාන්ත මංපෙත් සහිත හැකිලුනු ගොනුවක් අද ගැනීමේදී, පද්ධති ගොනු උඩින් ලිවීමක් සිදුවී ඔබගේ උපාංගයට හානි පැමිණිය හැක.\n\nඔබට ඉදිරියට යාමය අවශ්‍යද?</string>
+  <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">වෙනස්කම් ලොගය</string>
+  <!-- Welcome Dialog - Title -->
   <string name="welcome_title">ආයුබෝවන්</string>
+  <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">CyanogenMod ගොනු කළමනාකරු වෙත සැරද! ආයුබෝවන්.\n\nමෙම යෙදුම ඔබගේ ගොනු පද්ධතිය ගවේශනයට සහ ඔබගේ උපාංගයට හානි ගෙනදෙන ක්‍රියාකරණ කිරීමට අවසර ලබාදෙයි. හානිය වළක්වාගැනීමට, යෙදුම අඩු-වරප්‍රසාද සහිත සුරක්ෂිත ප්‍රකාරයෙන් ඇරඹෙනු ඇත.\n\nඔබට සැකසීම් තුලින් පූර්ණ-වරප්‍රසාද සහිත උසස් ප්‍රකාරය වෙත පිවිසිය හැක. ක්‍රියාකරණයක් ඔබගේ පද්ධතිය භේද නොකරන බව තහවුරු කරගැනීම ඔබගේ වගකීමකි.\n\nCyanogenMod සමූහය</string>
 </resources>

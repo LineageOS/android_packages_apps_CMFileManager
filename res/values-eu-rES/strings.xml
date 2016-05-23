@@ -16,130 +16,254 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- The name of the app -->
   <string name="app_name">Fitxategi kudeatzailea</string>
+  <!-- The description of the app -->
   <string name="app_description">CyanogenMod fitxategi kudeatzailea</string>
+  <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">KB</string>
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">GB</string>
+  <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
+  <!-- Devices types -->
   <string name="device_blockdevice">Bloke gailua</string>
   <string name="device_characterdevice">Karaktere gailua</string>
   <string name="device_namedpipe">Hodi izendatua</string>
   <string name="device_domainsocket">Domeinuaren socketa</string>
+  <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
+  <!-- Default buttons -->
   <string name="yes">Bai</string>
   <string name="no">Ez</string>
   <string name="all">Dena</string>
   <string name="overwrite">Gainidatzi</string>
   <string name="select">Hautatu</string>
+  <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
+  <!-- The search result name -->
   <string name="search_result_name">Bilatu: <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Loading waiting message -->
   <string name="loading_message">Kargatzen\u2026</string>
+  <!-- Computing message -->
+  <!-- Computing new line message -->
+  <!-- Cancelled message -->
   <string name="cancelled_message">Ezeztuta.</string>
+  <!-- Error message -->
   <string name="error_message">Akatsa.</string>
+  <!-- Copy text content description -->
   <string name="copy_text_cd">Sakatu testua paper-zorrora kopiatzeko</string>
+  <!-- Copy text content message -->
   <string name="copy_text_msg">Testua paper-zorrora kopiatu da</string>
+  <!-- Warning dialog title -->
   <string name="warning_title">Kontuz</string>
+  <!-- Error dialog title -->
   <string name="error_title">Errorea</string>
+  <!-- Confirm operation dialog title -->
   <string name="confirm_operation">Berretsi eragiketa</string>
+  <!-- Confirm overwrite dialog title -->
   <string name="confirm_overwrite">Berretsi gainidazketa</string>
+  <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">Berretsi ezabaketa</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Berretsi aldaketa</string>
+  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
   <string name="msgs_change_to_prompt_access_mode_msg">Ezin da Root sarbide moduan exekutatu. Modu babestura aldatzen.\n\nAplikatu aldaketa?</string>
+  <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">Ezin izan dira funtzionatzeko beharrezko pribilegioak lortu.</string>
+  <!-- The message shown when an allocation of a privileged console fails, and a non
+         privileged is allocated -->
   <string name="msgs_privileged_console_alloc_failed">Ezin izan da Root moduan exekutatu. Modu segurura aldatzen.</string>
+  <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Ezarpena ezin izan da ez aplikatu ezta gorde ere.</string>
+  <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory"><xliff:g id="initial_dir">%1$s</xliff:g> hasierako karpeta okerra da. Erro karpetara aldatzen.</string>
+  <!-- Root is not available message -->
   <string name="root_not_available_msg">Root ez dago eskuragarri gailu honetan. Ezin da eragiketa hau burutu.</string>
+  <!-- Success -->
   <string name="msgs_success">Eragiketa ondo burutu da.</string>
+  <!-- Unknown error -->
   <string name="msgs_unknown">Errore bat antzeman da. Eragiketak huts egin du.</string>
+  <!-- When an operation requires elevated privileged (normally caused for the use of a
+         non-privileged console) -->
   <string name="msgs_insufficient_permissions">Eragiketa honek super-erabiltzaile baimenak behar ditu. Aldatu Root sarbide modura.</string>
+  <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">Eragiketak huts egin du gailuan biltegiratze leku nahikorik ez dagoelako.</string>
+  <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">Fitxategi edo karpeta ez da existitzen.</string>
+  <!-- The command reference couldn't be created (not found or invalid definition)
+         (normally caused by a development error) -->
   <string name="msgs_command_not_found">Eragiketa burutzeko komandoa ez da aurkitu edo definizio okerra du.</string>
+  <!-- I/O exception -->
   <string name="msgs_io_failed">Irakurtze/idazte akatsa.</string>
+  <!-- Operation timeout detected -->
   <string name="msgs_operation_timeout">Eragiketaren denbora-muga gainditu da.</string>
+  <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">Eragiketak huts egin du.</string>
+  <!-- A console couldn't be allocated -->
   <string name="msgs_console_alloc_failure">Barne akats bat egon da.</string>
+  <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">Eragiketa ezin da eten.</string>
+  <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">Fitxategi sistema irakurtzeko soilik da. Saiatu Irakurtze-idazte bezala muntatzen eragiketa errepikatu aurretik.</string>
+  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">Lege kontrako argumentua. Inbokazioak huts egin du.</string>
+  <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">Eragiketa ez da zilegi inkoherentziak sortuko lituzkeelako.</string>
+  <!-- Operation not permitted in the current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">Karpeta helburua ezin da jatorriaren azpikarpeta bat edo jatorria bera izan.</string>
+  <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">Berriro sakatu irteteko.</string>
+  <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">Ez dago hautatutako fitxategia irekitzeko aplikaziorik erregistratuta.</string>
+  <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">Fitxategiren bat helmugako karpetan existitzen da jada.\n\n Gainidatzi?</string>
+  <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">Ekintza aplikazioari lotzeak huts egin du.</string>
+  <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">Eragiketa honek super-erabiltzaile baimenak behar ditu. \n\nRoot sarbide modura aldatu nahi duzu?</string>
+  <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Karpeta gurasoa</string>
+  <!-- External storage descripton -->
   <string name="external_storage">Kanpo biltegiratzea</string>
+  <!-- Usb storage descripton -->
   <string name="usb_storage">USB biltegiratzea</string>
+  <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">Fitxategi sistema</string>
+  <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">Ordenatze modua</string>
+  <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">Ikuspegi modua</string>
+  <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">Beste ikuspegi aukerak</string>
+  <!-- ActionBar Buttons - Done -->
   <string name="actionbar_button_selection_done_cd">Eginda</string>
+  <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">Ekintzak</string>
+  <!-- ActionBar Buttons - Search -->
   <string name="actionbar_button_search_cd">Bilatu</string>
+  <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">Aukera gehiago</string>
+  <!-- ActionBar Buttons - Storage volumes -->
   <string name="actionbar_button_storage_cd">Biltegiratze euskarriak</string>
+  <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">Gorde</string>
+  <!-- ActionBar Buttons - Print -->
   <string name="actionbar_button_print_cd">Inprimatu</string>
+  <!-- Navigation View - Sort - Sort by name (ascending) -->
   <string name="sort_by_name_asc">Izenaren arabera \u25B2</string>
+  <!-- Navigation View - Sort - Sort by name (descending) -->
   <string name="sort_by_name_desc">Izenaren arabera \u25BC</string>
+  <!-- Navigation View - Sort - Sort by date (ascending) -->
   <string name="sort_by_date_asc">Dataren arabera \u25B2</string>
+  <!-- Navigation View - Sort - Sort by date (descending) -->
   <string name="sort_by_date_desc">Dataren arabera \u25BC</string>
+  <!-- Navigation View - Sort - Sort by size (ascending) -->
   <string name="sort_by_size_asc">Tamainaz \u25B2</string>
+  <!-- Navigation View - Sort - Sort by size (descending) -->
   <string name="sort_by_size_desc">Tamainaz \u25BC</string>
+  <!-- Navigation View - Sort - Sort by type (ascending) -->
   <string name="sort_by_type_asc">Motaz \u25B2</string>
+  <!-- Navigation View - Sort - Sort by type (descending) -->
   <string name="sort_by_type_desc">Motaz \u25BC</string>
+  <!-- Navigation View - Layout - Icons -->
   <string name="layout_icons">Ikonoak</string>
+  <!-- Navigation View - Layout - Simple -->
   <string name="layout_simple">Sinpleak</string>
+  <!-- Navigation View - Layout - Details -->
   <string name="layout_details">Xehetasunez</string>
+  <!-- Navigation View - View - Show folders first -->
   <string name="cm_filemanager_show_dirs_first">Erakutsi karpetak aurretik</string>
+  <!-- Navigation View - View - Show hidden files option -->
   <string name="cm_filemanager_show_hidden">Erakutsi ezkutuko fitxategiak</string>
+  <!-- Navigation View - View - Show system files option -->
   <string name="cm_filemanager_show_system">Erakutsi sistemaren fitxategiak</string>
+  <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">Erakutsi lasterbideak</string>
+  <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">Informaziorik ez</string>
+  <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">Ez dago informaziorik eskuragarri fitxategi sistemarako.</string>
+  <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">Fitxategi sistema ezin da muntatu/desmuntatu.</string>
+  <!-- Filesystem Info - Not allowed message -->
   <string name="filesystem_info_mount_not_allowed_msg">Fitxategi sistemaren muntaketa ez da zilegi modu seguruan. Sakatu hemen Root sarbide modura aldatzeko.</string>
+  <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">Fitxategi sistemaren muntaketak huts egin du. Fitxategi sistema batzuk, SD txartelak kasu, ezin dira muntatuak edo desmuntatuak izan irakurtzea soilik bezala diseinatuta daudelako.</string>
+  <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">Fitxategi sistemari buruzko informazioa</string>
+  <!-- Filesystem Info Dialog - Tab - Info -->
   <string name="filesystem_info_dialog_tab_info">Informazioa</string>
+  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">Diskoaren erabilpena</string>
+  <!-- Filesystem Info Dialog - Status Label -->
   <string name="filesystem_info_dialog_status">Muntatuta:</string>
+  <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">Muntatze puntua:</string>
+  <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">Gailua:</string>
+  <!-- Filesystem Info Dialog - Type Label -->
   <string name="filesystem_info_dialog_type">Mota:</string>
+  <!-- Filesystem Info Dialog - Options Label -->
   <string name="filesystem_info_dialog_options">Aukerak:</string>
+  <!-- Filesystem Info Dialog - Dump/Pass Label -->
   <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
+  <!-- Filesystem Info Dialog - Virtual Label -->
   <string name="filesystem_info_dialog_virtual">Birtuala:</string>
+  <!-- Filesystem Info Dialog - Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">Guztira:</string>
+  <!-- Filesystem Info Dialog - Used Disk Usage -->
   <string name="filesystem_info_dialog_used_disk_usage">Erabilita:</string>
+  <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Hutsik:</string>
+  <!-- Fso Properties - Not allowed message -->
   <string name="fso_properties_permissions_not_allowed_msg">Baimen aldaketa eragiketak ez dira zilegi modu seguruan. Sakatu hemen Root sarbide modura aldatzeko.</string>
+  <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">Jabea aldatzeko eragiketak huts egin du.\n\nSegurtasun arrazioak direla eta, fitxategi sistema batzuk, SD txartelak kasu, ez dute jabe aldaketa baimentzen.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">Talde aldaketa eragiketak huts egin du.\n\nSegurtasuna dela eta, fitxategi sistema batzuk, SD txartelak kasu, ez dute talde aldaketa baimentzen.</string>
+  <!-- Fso Properties - Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_permission_msg">Baimen aldaketa eragiketak huts egin du.\n\nSegurtasuna dela eta, fitxategi sistema batzuk, SD txartelak kasu, ez dute baimen aldaketa baimentzen.</string>
+  <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">Xehetasunak</string>
+  <!-- Fso Properties Dialog - Tab - Info -->
   <string name="fso_properties_dialog_tab_info">Informazioa</string>
+  <!-- Fso Properties Dialog - Tab - Permissions -->
   <string name="fso_properties_dialog_tab_permissions">Baimenak</string>
+  <!-- Fso Properties Dialog - Name Label -->
   <string name="fso_properties_dialog_name">Izena:</string>
+  <!-- Fso Properties Dialog - Parent Folder Label -->
   <string name="fso_properties_dialog_parent">Karpeta:</string>
+  <!-- Fso Properties Dialog - Type Label -->
   <string name="fso_properties_dialog_type">Mota:</string>
+  <!-- Fso Properties Dialog - Category Label -->
   <string name="fso_properties_dialog_category">Kategoria:</string>
+  <!-- Fso Properties Dialog - Link Label -->
   <string name="fso_properties_dialog_link">Esteka:</string>
+  <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">Tamaina:</string>
+  <!-- Fso Properties Dialog - Contains Label -->
   <string name="fso_properties_dialog_contains">Edukia:</string>
+  <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <string name="fso_properties_dialog_last_accessed_date">Sartua:</string>
+  <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">Aldatua:</string>
+  <!-- Fso Properties Dialog - Last Changed Time -->
   <string name="fso_properties_dialog_last_changed_date">Aldatua:</string>
+  <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">Jabea:</string>
+  <!-- Fso Properties Dialog - Group Label -->
   <string name="fso_properties_dialog_group">Taldea:</string>
+  <!-- Fso Properties Dialog - Others Label -->
   <string name="fso_properties_dialog_others">Besteak:</string>
+  <!-- Fso Properties Dialog - Special Label -->
+  <!-- Fso Properties Dialog - Read Label -->
+  <!-- Fso Properties Dialog - Write Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Execute Label -->
+  <!-- Fso Properties Dialog - Skip media scan -->
   <string name="fso_properties_dialog_include_in_media_scan">Saltatu euskarria eskaneatzea:</string>
   <string name="fso_failed_to_allow_media_scan">Ezin izan da baimendu euskarria eskaneatzea</string>
   <string name="fso_failed_to_prevent_media_scan">Ezin izan da eragotzi euskarria eskaneatzea</string>
@@ -147,130 +271,254 @@
   <string name="fso_delete_nomedia_dir_body">Direktorio honek .nomedia direktorio bat du.\n\n Berau eta bere eta eduki guztiak ezabatu nahi dituzu?</string>
   <string name="fso_delete_nomedia_non_empty_title">ezabatu .nomedia fitxategia</string>
   <string name="fso_delete_nomedia_non_empty_body">Direktorio honek hutsik ez dagoen .nomedia fitxategi bat du.\n\nEzabatu nahi duzu?</string>
+  <!-- History - History activity title -->
   <string name="history">Historia</string>
+  <!-- History - The history is empty -->
   <string name="msgs_history_empty">Historia hutsik dago.</string>
+  <!-- History - The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">Gai ezezaguna historian.</string>
+  <!-- Search - Search activity title -->
   <string name="search">Bilaketaren emaitzak</string>
+  <!-- Search - Search hint message -->
   <string name="search_hint">Idatzi bilatu nahi duzuna</string>
+  <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">Esan bilatu nahi duzuna</string>
+  <!-- Search - Search error message -->
   <string name="search_error_msg">Akats bat egon da bilaketan zehar. Ez da emaitzarik aurkitu.</string>
+  <!-- Search - Search no results message -->
   <string name="search_no_results_msg">Ez da emaitzarik aurkitu.</string>
+  <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="path">%2$s</xliff:g>  <xliff:g id="items">%1$s</xliff:g>-en</string>
+  <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>Terminoak:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <!-- Search - Confirm search -->
   <string name="search_few_characters_title">Berretsi bilaketa</string>
+  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">Bilaketa-terminoren bat oso laburra da eta eragiketak denbora eta sistemaren baliabide asko beharko du.\n\nJarraitu?</string>
+  <!-- Search - Searching dialog title -->
   <string name="searching">Itxaron, mesedez\u2026</string>
+  <!-- Search - Searching label -->
   <string name="searching_action_label">Bilaketa martxan</string>
+  <!-- Picker Activity -->
+  <!-- Picker Activity - Dialog title -->
   <string name="picker_title">Hautatu fitxategi bat</string>
   <string name="directory_picker_title">Karpeta bat hautatu</string>
+  <!-- Editor - Editor activity title -->
   <string name="editor">Editorea</string>
+  <!-- Editor - Invalid file message -->
   <string name="editor_invalid_file_msg">Fitxategi okerra.</string>
+  <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">Fitxategia ez da aurkitu.</string>
+  <!-- Editor - File size exceed the limit -->
   <string name="editor_file_exceed_size_msg">Fitxategia handiegia da gailu honetan ireki ahal izateko.</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">Berretsi irteera</string>
+  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <string name="editor_dirty_ask_msg">Gorde ez diren aldaketak daude.\n\nGorde barik irten?</string>
+  <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">Fitxategia ondo gorde da.</string>
+  <!-- Editor - Read-only file mode -->
   <string name="editor_read_only_mode">Fitxatekia irakurtzeko soilik moduan dago irekita.</string>
+  <!-- Editor - Dumping message -->
   <string name="dumping_message">Irauli hexadezimala sortzen\u2026</string>
+  <!-- Editor - Displaying -->
   <string name="displaying_message">Erakusten\u2026</string>
+  <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">Laster markak</string>
+  <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">Hasiera</string>
+  <!-- Bookmarks - Bookmark name - Root folder -->
   <string name="bookmarks_root_folder">Erroa</string>
+  <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">Sistemaren karpeta</string>
+  <!-- Bookmarks - Bookmark name - Secure storage -->
   <string name="bookmarks_secure">Biltegiratze segurua</string>
+  <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">Urruneko biltegiratzea</string>
+  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">Hasierako karpeta ezarri.</string>
+  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">Laster marka ezabatu.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">Laster marka ondo gehitu da.</string>
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">Laster-marka badago aurretik.</string>
+  <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Hasierako karpeta</string>
+  <!-- Initial directory label -->
   <string name="initial_directory_label">Hasierako karpeta hautatu:</string>
+  <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Ibilbide erlatiboak ez dira onartzen.</string>
+  <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">Hasierako karpeta berrezartzean akats bat egon da.</string>
+  <!-- Menu - Navigation - Search -->
   <string name="menu_search">Bilatu</string>
+  <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">Ezarpenak</string>
+  <!-- Menu - History - Clear history -->
   <string name="menu_clear_history">Garbitu historia</string>
+  <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">Iradokizunik gabe</string>
+  <!-- Menu - Editor - Word wrap -->
   <string name="menu_word_wrap">Lerro doikuntza</string>
+  <!-- Menu - Editor - Sintax highlight -->
   <string name="menu_syntax_highlight">Nabarmendu sintaxia</string>
+  <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - kopia<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Regular expression for new compressed file -->
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - berria<xliff:g id="extension">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">Eragiketa burutzen\u2026</string>
+  <!-- Waiting dialog - Copying title -->
   <string name="waiting_dialog_copying_title">Kopiatzen\u2026</string>
+  <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>Nondik:</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/>]]> <![CDATA[<b>Nora:</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">Mugitzen\u2026</string>
+  <!-- Waiting dialog - Moving message -->
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>Nondik:</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/>]]> <![CDATA[<b>Nora:</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Waiting dialog - Deleting title -->
   <string name="waiting_dialog_deleting_title">Ezabatzen\u2026</string>
+  <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Fitxategia</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_extracting_title">Erauzten\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Fitxategia</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_compressing_title">Konprimitzen\u2026</string>
+  <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Fitxategia</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Aztertzen\u2026</b>]]></string>
+  <!-- Extracting - Success message -->
   <string name="msgs_extracting_success">Erauzketa ondo burutu da. Datuak hona erauzi dira: <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Compressing - Success message -->
   <string name="msgs_compressing_success">Konpresioa ondo burutu da. Datuak hona konprimitu dira <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">Ekintzak</string>
+  <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">Xehetasunak</string>
+  <!-- Actions Dialog - Menu - Refresh -->
   <string name="actions_menu_refresh">Berritu</string>
+  <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">Karpeta berria</string>
+  <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">Fitxategi berria</string>
+  <!-- Actions Dialog - Menu - Select all -->
   <string name="actions_menu_select_all">Hautatu guztiak</string>
+  <!-- Actions Dialog - Menu - Deselect all -->
   <string name="actions_menu_deselect_all">Desautatu guztiak</string>
+  <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">Hautatu</string>
+  <!-- Actions Dialog - Menu - Deselect -->
   <string name="actions_menu_deselect">Desautatu</string>
+  <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <string name="actions_menu_paste_selection">Kopiatu hona hautapena</string>
+  <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">Mugitu hona hautapena</string>
+  <!-- Actions Dialog - Menu - Delete selection -->
   <string name="actions_menu_delete_selection">Ezabatu hautapena</string>
+  <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">Konprimitu hautapena</string>
+  <!-- Actions Dialog - Menu - Create link -->
   <string name="actions_menu_create_link">Esteka sortu</string>
+  <!-- Actions Dialog - Menu - Open -->
   <string name="actions_menu_open">Ireki</string>
+  <!-- Actions Dialog - Menu - Open with -->
   <string name="actions_menu_open_with">Honekin ireki</string>
+  <!-- Actions Dialog - Menu - Execute -->
   <string name="actions_menu_execute">Exekutatu</string>
+  <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">Bidali</string>
+  <!-- Actions Dialog - Menu - Send selection -->
   <string name="actions_menu_send_selection">Bidali hautapena</string>
+  <!-- Actions Dialog - Menu - Compress -->
   <string name="actions_menu_compress">Konprimitu</string>
+  <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">Erauzi</string>
+  <!-- Actions Dialog - Menu - Delete -->
   <string name="actions_menu_delete">Ezabatu</string>
+  <!-- Actions Dialog - Menu - Rename -->
   <string name="actions_menu_rename">Aldatu izena</string>
+  <!-- Actions Dialog - Menu - Create copy -->
   <string name="actions_menu_create_copy">Kopia sortu</string>
+  <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">Xehetasunak</string>
+  <!-- Actions Dialog - Menu - Add to bookmarks -->
   <string name="actions_menu_add_to_bookmarks">Gehitu laster-marketara</string>
+  <!-- Actions Dialog - Menu - Add shortcut -->
   <string name="actions_menu_add_shortcut">Gehitu lasterbidea</string>
+  <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">Karpeta ireki</string>
+  <!-- Actions Dialog - Menu - Compute checksum -->
   <string name="actions_menu_compute_checksum">Kalkulatu kontrol-batura</string>
+  <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">Inprimatu</string>
+  <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">Ezarri hasiera gisa</string>
+  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">Eragiketa hau ezin da desegin. Jarraitu?</string>
+  <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">Izena:</string>
+  <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">Izena ezin da hutsik geratu.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_path_name">Baliogabeko izena. \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' karaktereak ez dira onartzen.</string>
+  <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">Gehieneko karaktere kopurura heldu da.</string>
+  <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_name">Baliogabeko izena.  \'.\' eta \'..\' izenak ez dira onartzen.</string>
+  <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">Izen hori badago aurretik.</string>
+  <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">Elkarketak</string>
+  <!-- Associations Dialog - Remember the user action -->
   <string name="associations_dialog_remember">Gogoratu hautapena</string>
+  <!-- Associations Dialog - Open with Title -->
   <string name="associations_dialog_openwith_title">Honekin ireki</string>
+  <!-- Associations Dialog - Open action (button title) -->
   <string name="associations_dialog_openwith_action">Ireki</string>
+  <!-- Associations Dialog - Send with Title -->
   <string name="associations_dialog_sendwith_title">Bidali honekin:</string>
+  <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">Bidali</string>
+  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">Osatzeko ezer ez.</string>
+  <!-- Execution console - Title -->
   <string name="execution_console_title">Kontsola</string>
+  <!-- Execution console - The script name label -->
   <string name="execution_console_script_name_label">Script:</string>
+  <!-- Execution console - The script execution time label -->
   <string name="execution_console_script_execution_time_label">Denbora:</string>
+  <!-- Execution console - The script exit code label -->
   <string name="execution_console_script_exitcode_label">Irteerako kodea:</string>
+  <!-- Execution console - The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> seg.</string>
+  <!-- Compute checksum - Title -->
   <string name="compute_checksum_title">Kalkulatu kontrol-batura</string>
+  <!-- Compute checksum - The file name label -->
   <string name="compute_checksum_filename_label">Fitxategia:</string>
+  <!-- Compute checksum - The MD5 label -->
+  <!-- Compute checksum - The SHA1 label -->
+  <!-- Compute checksum - The computing checksum message-->
   <string name="compute_checksum_computing_checksum_msg">Kontrol-batura kalkulatzen\u2026</string>
+  <!-- Mime/Types - Folder -->
   <string name="mime_folder">Karpeta</string>
+  <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">Lasterbidea</string>
+  <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">Ezezaguna</string>
+  <!--  Filetime formats -->
   <string name="filetime_format_mode_system">Sistemaren ezarpena</string>
   <string name="filetime_format_mode_locale">Lurralde ezarpena</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">ee/hh/uuuu hh:mm:ss</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">hh/ee/uuuu hh:mm:ss</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">uuuu-hh-ee oo:mm:ss</string>
+  <!-- Selection -->
+  <!-- For example "2 folders and 1 file selected." -->
   <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> eta <xliff:g id="files">%2$s</xliff:g> hautatuta.</string>
+  <!-- Category descriptions -->
   <string name="category_system">SISTEMA</string>
   <string name="category_app">APLIKAZIOA</string>
   <string name="category_binary">BITARRA</string>
@@ -287,86 +535,170 @@
   <string name="category_video">BIDEOA</string>
   <string name="category_security">SEGURTASUNA</string>
   <string name="category_all">GUZTIAK</string>
+  <!-- Compression - Compression modes dialog title -->
   <string name="compression_mode_title">Konprimitze modua</string>
+  <!-- Compression - Supported archive and compression modes -->
+  <!-- Shortcut. Failed to handle the shortcut -->
   <string name="shortcut_failed_msg">Akatsa lasterbidea irekitzerakoan.</string>
+  <!-- Shortcut. The shortcut was created -->
   <string name="shortcut_creation_success_msg">Lasterbidea ondo sortu da.</string>
+  <!-- Shortcut. The shortcut wasn't created -->
   <string name="shortcut_creation_failed_msg">Akatsa lasterbidea sortzerakoan.</string>
+  <!-- Preferences title -->
   <string name="pref">Ezarpenak</string>
+  <!-- Preferences - General title -->
   <string name="pref_general">Ezarpen orokorrak</string>
+  <!-- Preferences - Search title -->
   <string name="pref_search">Bilaketa aukerak</string>
+  <!-- Preferences - Storage title -->
   <string name="pref_storage">Biltegiratze aukerak</string>
+  <!-- Preferences - Editor title -->
   <string name="pref_editor">Editorearen aukerak</string>
+  <!-- Preferences - Themes title -->
   <string name="pref_themes">Gaiak</string>
+  <!-- Preferences - About title -->
   <string name="pref_about">Honi buruz</string>
+  <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">Orokorra</string>
+  <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">Bereizi maiuskulak eta minuskulak</string>
+  <!-- Preferences - General - Case sensitive sort and navigating summary -->
   <string name="pref_case_sensitive_sort_summary">Bilaketa emaitzetan edo nabigatzean maiuskulak/minuskulak kontuan izan</string>
+  <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">Data/ordua formatua</string>
+  <!-- Preferences - General -Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">Disko erabileraren abisua</string>
+  <!-- Preferences - General - Disk usage warning level summary -->
+  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
+         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
   <string name="pref_disk_usage_warning_level_summary" formatted="false">Ezarri kolore desberdin bat disko erabileraren trepetan erabilitako espazioa %<xliff:g id="level">%1$s</xliff:g>a gainditzean</string>
+  <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Karpeten estatistikak</string>
+  <!-- Preferences - General - Compute folder statistics summary on -->
   <string name="pref_compute_folder_statistics_on">Kontuz! karpeten estatistiken kalkuluak denbora eta sistema baliabide gehiago beharko ditu</string>
+  <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">Aurrebista</string>
+  <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">Erakutsi aplikazio, irudi, musika eta bideoen aurrebista</string>
+  <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Erabili hatza pasatze keinuak</string>
+  <!-- Preferences - General - Use flinger detection summary -->
   <string name="pref_use_flinger_summary">Pasatu hatza eskumara fitxategiak edo karpetak ezabatzeko</string>
+  <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Aurreratua</string>
+  <!-- Preferences - General - Access mode -->
   <string name="pref_access_mode">Sarbide modua</string>
+  <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">Modu segurua</string>
+  <!-- Preferences - General - Safe mode summary -->
   <string name="pref_access_mode_safe_summary">Modu segurua\n\nAplikazioa baimenik gabe abiatu da eta atzitu ditzakeen fitxategi sistema bakarrak biltegiratze bolumenak dira (SD txartelak eta USB)</string>
+  <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">Berrespen modua</string>
+  <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">Berrespen modua\n\nAplikazioak fitxategi sistemarako sarbide osoa du, baina Supererabiltzaile ekintzak burutu aurretik galdetu egingo da</string>
+  <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">Root sarbide modua</string>
+  <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">Root sarbide modua\n\nKontuz! Modu honek gailua izorratu ditzaketen eragiketak baimentzen ditu. Zure ardura da eragiketa bat segurua den ziurtatzea</string>
+  <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">Sarbidea mugatu</string>
+  <!-- Preferences - General - Restrict secondary users access summary -->
   <string name="pref_restrict_secondary_users_access_summary">Mugatu sistema osorako sarbidea bigarren mailako erabiltzaileei</string>
+  <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">Emaitzak</string>
+  <!-- Preferences - Search - Show relevance widget -->
   <string name="pref_show_relevance_widget">Erakutsi egokitasun trepeta</string>
+  <!-- Preferences - Search - Highlight search terms -->
   <string name="pref_highlight_terms">Nabarmendu bilaketa-terminoak</string>
+  <!-- Preferences - Search - Sort results mode -->
   <string name="pref_sort_search_results_mode">Emaitzen ordenazioa</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">Ordenatu barik</string>
+  <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_name">Izenaren bidez</string>
+  <!-- Preferences - Search - Sort results mode. Relevance -->
   <string name="pref_sort_search_results_mode_relevance">Lehentasunaren bidez</string>
+  <!-- Preferences - Search - Privacity category -->
   <string name="pref_search_privacity_category">Pribatutasuna</string>
+  <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">Gorde bilaketa-terminoak</string>
+  <!-- Preferences - Search - Save search terms summary on -->
   <string name="pref_save_search_terms_on">Bilaketa-terminoak gordeko dira hurrengo bilaketetan iradokizun bezala erabiltzeko</string>
+  <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">Bilaketa-terminoak ez dira gordeko</string>
+  <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">Ezabatu gordetako bilaketa-terminoak</string>
+  <!-- Preferences - Search - Remove saved search terms summary -->
   <string name="pref_remove_saved_search_terms_summary">Sakatu gordetako bilaketa-termino guztiak ezabatzeko</string>
+  <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">Gordetako bilaketa-termino guztiak ezabatu dira</string>
+  <!-- Preferences - Storage - Secure Storage category -->
   <string name="pref_secure_storage_category">Biltegiratze segurua</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">Sinkronizazio atzeratua</string>
+  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <string name="pref_secure_storage_delayed_sync_summary">Fitxategi sistema seguruen sinkronizazioa neketsua da. Gaitu aukera hau eragiketa bakoitzaren ostean erantzun azkarragoak baimentzeko, sinkronizazioa fitxategi sistema erabili gabe dagoenerako utziz, baina aplikazioa bat-batean itxiko balitz sinkronizatu gabeko informazioa galtzeko arriskua hartuz.</string>
+  <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">Aldatu pasahitza</string>
+  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">Ezabatu biltegiratzea</string>
+  <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">Izaera</string>
+  <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">Iradokizunik gabe</string>
+  <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">Ez erakutsi hiztegiaren iradokizunik fitxategiak editatzerakoan</string>
+  <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">Lerro doikuntza</string>
+  <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">fitxategi bitarren iraulketa hexadezimala</string>
+  <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">Fitxategi bitar bat irekitzean, iraulketa hexadezimal bat sortu eta ireki hau hex ikuskatzailearekin</string>
+  <!-- Preferences - Editor - Syntax highlight category -->
   <string name="pref_editor_syntax_highlight_category">Sintaxia nabarmentzea</string>
+  <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">Nabarmendu sintaxia</string>
+  <!-- Preferences - Editor - Syntax highlight summary -->
   <string name="pref_syntax_highlight_desc">Nabarmendu bistaratutako fitxategiaren sintaxia editorean (sintaxi nabarmentze prozesagailu bat eskuragarri dagoenean fitxategi mota horrentzat)</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">Kolore eskema</string>
+  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
   <string name="pref_syntax_highlight_color_scheme_desc">Sintaxiaren nabarmentzerako kolore eskema hautatu</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">Erabili gai lehenetsia</string>
+  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <string name="pref_syntax_sh_use_theme_default_desc">Uneko gaiaren sintaxi nabarmentze lehenetsia erabili</string>
+  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">Elementuak</string>
+  <!-- Preferences - Themes - Themes selection category -->
   <string name="pref_themes_selection_category">Gaiak</string>
+  <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">Gaia ezarri</string>
+  <!-- Preferences - Themes - Confirmation message -->
   <string name="pref_themes_confirmation">Gaia ondo ezarri da.</string>
+  <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">Ez da gaia aurkitu.</string>
+  <!-- Preferences - Debug - Capture debug traces -->
   <string name="pref_debug_traces">Erregistratu arazketa informazioa</string>
+  <!-- Themes - Default theme name -->
   <string name="theme_default_name">Gai argia</string>
+  <!-- Themes - Default theme description -->
   <string name="theme_default_description">CyanogenMod fitxategi kudeatzailearen gai argi bat.</string>
+  <!-- Themes - Default theme author -->
   <string name="themes_author">CyanogenMod</string>
+  <!-- Navigation drawer -->
   <string name="drawer_open">Ireki nabigazio tiradera</string>
   <string name="drawer_close">Itxi nabigazio tiradera</string>
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">Gardentasuna</string>
+  <!-- The label of the current color panel -->
   <string name="color_picker_current_text">Unekoa:</string>
+  <!-- The label of the new color panel -->
   <string name="color_picker_new_text">Berria:</string>
+  <!-- The label of the color input -->
   <string name="color_picker_color">Kolorea:</string>
+  <!-- Android Syntax Highlight -->
   <string name="ash_reset_color_scheme">Berrezarri lehenetsitako kolore eskema</string>
   <string name="ash_text">Testua</string>
   <string name="ash_assignment">Esleipena</string>
@@ -375,33 +707,63 @@
   <string name="ash_keyword">Hitz gakoa</string>
   <string name="ash_quoted_string">Aipatutako katea</string>
   <string name="ash_variable">Aldagaia</string>
+  <!-- Secure Storage -->
+  <!-- Secure Storage dialog title - Unlock -->
   <string name="secure_storage_unlock_title">Desblokeatu biltegiratze segurua</string>
+  <!-- Secure Storage dialog title - Create -->
   <string name="secure_storage_create_title">Sortu biltegiratze segurua</string>
+  <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">Berrezarri pasahitza</string>
+  <!-- Secure Storage dialog title - Delete -->
   <string name="secure_storage_delete_title">Ezabatu biltegiratze segurua</string>
+  <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">Idatzi pasahitza biltegiratze segurua desblokeatzeko.</string>
+  <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">Idatzi pasahitza biltegiratze seguruaren fitxategi sistema babesteko.</string>
+  <!-- Secure Storage unlock dialog message (reset the current password) -->
   <string name="secure_storage_unlock_key_reset_msg">Idatzi oraingo pasahitza eta pasahitz berria biltegiratze seguruaren fitxategi sistema berrezartzeko.</string>
+  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">Idatzi oraingo pasahitza biltegiratze seguruaren fitxategi sistema ezabatzeko.</string>
+  <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">Pasahitz zaharra:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_new_key_title">Pasahitz berria:</string>
+  <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">Pasahitza:</string>
+  <!-- Secure Storage unlock dialog repeat key title-->
   <string name="secure_storage_unlock_repeat_title">Errepikatu pasahitza:</string>
+  <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">Sortu</string>
+  <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Desblokeatu</string>
+  <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">Leheneratu</string>
+  <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Ezabatu</string>
+  <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">Ezin da biltegiratzea desblokeatu</string>
+  <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">Pasahitzak gutxienez <xliff:g id="characters">%1$d</xliff:g> karaktere izan behar ditu.</string>
+  <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">Pasahitzak ez datoz bat.</string>
+  <!-- Secure storage open file warning -->
   <string name="secure_storage_open_file_warning">Honek fitxategia kopiatuko du zifratu gabeko behin behineko kokaleku batetara. Ordubete eta gero ezabatuko da.</string>
+  <!-- Print messages -->
+  <!-- Unsupported document format -->
   <string name="print_unsupported_document">Euskarririk gabeko dokumentu formatua</string>
+  <!-- Unsupported image format -->
   <string name="print_unsupported_image">Euskarririk gabeko irudi formatua</string>
+  <!-- Print header -->
   <string name="print_document_header">Dokumentua: <xliff:g id="document_name">%1$s</xliff:g></string>
+  <!-- Print footer -->
   <string name="print_document_footer"><xliff:g id="page_number">%1$s</xliff:g>. orrialdea</string>
+  <!-- Security - Extract relative or absolute files -->
   <string name="security_warning_extract">Kontuz!\n\nIbilbide absolutu edo erlatiboak dituzten fitxategiak erauztea gailuan kalteak sor ditzake sistemaren fitxategiak gainidatzi ditzaketelako.\n\nJarraitu?</string>
+  <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">Aldaketa-egunkaria</string>
+  <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Ongi etorri</string>
+  <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Ongi etorri CyanogenMod fitxategi kudeatzailera.\n\nAplikazio honen bidez fitxategi sistema kudeatu dezakezu eta, honela, zure gailua blokeatu ditzaketen eragiketak burutu. Hau ekiditeko, aplikazioa modu seguruan abiatuko da.\n\nSupererabiltzaile modu aurreratuan sar zaitezke ezarpen menuan hala ezarriz, baina zure ardura izango da operazioren batek zure gailua kaltetzea ekiditea.\n\nCyanogenMod taldea.\n</string>
   <string name="activity_not_found_exception">Ezin izan da aplikazio bat aurkitu fitxategi hau irekitzeko</string>
 </resources>

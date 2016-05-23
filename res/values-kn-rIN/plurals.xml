@@ -24,10 +24,12 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ಕಡತ</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ಕಡತಗಳು</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> ವಸ್ತು ಪತ್ತೆಯಾಗಿದೆ</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> ವಸ್ತುಗಳು ಪತ್ತೆಯಾಗಿದೆ</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> ಫೋಲ್ಡರ್‍ ಆಯ್ಕೆಯಾಗಿದೆ.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> ಫೋಲ್ಡರ್‍ಗಳು ಆಯ್ಕೆಯಾಗಿದೆ.</item>
@@ -36,6 +38,7 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ಕಡತ ಆಯ್ಕೆಯಾಗಿದೆ.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ಕಡತಗಳು ಆಯ್ಕೆಯಾಗಿದೆ.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> ವಸ್ತುವನ್ನು ಅಳಿಸಲಾಗುತ್ತಿದೆ.</item>
     <item quantity="other"><xliff:g id="count">%1$d</xliff:g> ವಸ್ತುಗಳನ್ನು ಅಳಿಸಲಾಗುತ್ತಿದೆ.</item>

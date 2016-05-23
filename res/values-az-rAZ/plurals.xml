@@ -24,10 +24,12 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fayl</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> fayl</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element tapıldı</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> element tapıldı</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> qovluq seçildi.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> qovluq seçildi.</item>
@@ -36,6 +38,7 @@
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fayl seçildi.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> fayl seçildi.</item>
   </plurals>
+  <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element silinəcək.</item>
     <item quantity="other"><xliff:g id="count">%1$d</xliff:g> element silinəcək.</item>
