@@ -494,6 +494,7 @@ public class PickerActivity extends Activity
             // and return RESULT_OK result)
             Intent result = new Intent();
             result.setData(getResultUriForFileFromIntent(this, src, getIntent()));
+            result.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             setResult(Activity.RESULT_OK, result);
             finish();
 
