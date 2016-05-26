@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_5e41c238",
+        "filename": "src/com/cyanogenmod/filemanager/console/shell/ShellConsole.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2016-05-26T14:47:45Z",
+      "side": 1,
+      "message": "Why this extra check? AFAICT both cannot be null here.",
+      "range": {
+        "startLine": 209,
+        "startChar": 21,
+        "endLine": 209,
+        "endChar": 22
+      },
+      "revId": "93b460661167cac149bba078b5f81d5d1f454d54",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
