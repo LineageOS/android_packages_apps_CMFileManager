@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_dee9321a",
+        "filename": "res/layout/compute_checksum_dialog.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2016-05-26T14:50:59Z",
+      "side": 1,
+      "message": "any layout needs a layout_width and layout_height and hence the namespace. In addition, margin should be at this level too.",
+      "range": {
+        "startLine": 17,
+        "startChar": 1,
+        "endLine": 17,
+        "endChar": 11
+      },
+      "revId": "8f33636c186417398c997482bd010e0607d71cb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
