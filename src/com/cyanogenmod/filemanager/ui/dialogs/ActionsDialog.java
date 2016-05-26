@@ -786,6 +786,10 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
             menu.removeItem(R.id.mnu_actions_set_as_home);
         } else if (mGlobal && (selection != null && selection.size() > 0)) {
             menu.removeItem(R.id.mnu_actions_global_set_as_home);
+        } else if (!mGlobal && (mFso.isSecure() || mFso.isRemote())) {
+            menu.removeItem(R.id.mnu_actions_set_as_home);
+        } else if (mGlobal && (mFso.isSecure() || mFso.isRemote())) {
+            menu.removeItem(R.id.mnu_actions_global_set_as_home);
         }
 
         // Not allowed in search
