@@ -17,24 +17,30 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> پوشه</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> پوشه</item>
   </plurals>
   <plurals name="n_files">
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> فایل</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> فایل</item>
   </plurals>
   <!-- Search - Found items -->
   <plurals name="search_found_items">
+    <item quantity="one"><xliff:g id="count">%d</xliff:g> مورد پیدا شد</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> مورد پیدا شد</item>
   </plurals>
   <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> پوشه انتخاب شد.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> پوشه انتخاب شد.</item>
   </plurals>
   <plurals name="selection_files">
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> فایل انتخاب شد.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> فایل انتخاب شد.</item>
   </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> مورد حذف خواهد شد.</item>
     <item quantity="other"><xliff:g id="count">%1$d</xliff:g> مورد حذف خواهد شد.</item>
   </plurals>
 </resources>
