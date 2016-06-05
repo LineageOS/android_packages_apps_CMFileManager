@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_129d6dbb",
+        "filename": "src/com/cyanogenmod/filemanager/console/secure/SecureConsole.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 627,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2016-06-05T09:15:59Z",
+      "side": 1,
+      "message": "Can just return here to avoid the reindention.",
+      "revId": "ea15602ee3302a659eb8f3686628d8a9565cb95f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
