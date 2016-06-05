@@ -624,6 +624,10 @@ public class SecureConsole extends VirtualMountPointConsole {
      */
     private void clearCache(Context ctx) {
         File filesDir = ctx.getExternalFilesDir(null);
+        if (filesDir == null) {
+            return;
+        }
+
         File[] cacheFiles = filesDir.listFiles(new FilenameFilter() {
             @Override
             public boolean accept(File dir, String filename) {
