@@ -766,6 +766,13 @@ public class EditorActivity extends Activity implements TextWatcher {
             }
             this.mEditor.setInputType(type);
             this.mNoSuggestions = !this.mNoSuggestions;
+            /* Update the preference values */
+            try {
+                Preferences.savePreference(
+                    FileManagerSettings.SETTINGS_EDITOR_NO_SUGGESTIONS, this.mNoSuggestions, true);
+            } catch (Exception e) {
+                Log.e(TAG, "Can't save preference value ", e);
+            }
         }
     }
 
@@ -789,6 +796,13 @@ public class EditorActivity extends Activity implements TextWatcher {
             vDst.setVisibility(View.VISIBLE);
             vDst.scrollTo(0, 0);
             this.mWordWrap = !this.mWordWrap;
+            /* Update the preference values */
+            try {
+                Preferences.savePreference(
+                    FileManagerSettings.SETTINGS_EDITOR_WORD_WRAP, this.mWordWrap, true);
+            } catch (Exception e) {
+                Log.e(TAG, "Can't save preference value ", e);
+            }
         }
     }
 
@@ -812,6 +826,13 @@ public class EditorActivity extends Activity implements TextWatcher {
             }
 
             this.mSyntaxHighlight = !this.mSyntaxHighlight;
+            /* Update the preference values */
+            try {
+                Preferences.savePreference(
+                    FileManagerSettings.SETTINGS_EDITOR_SYNTAX_HIGHLIGHT, this.mSyntaxHighlight, true);
+            } catch (Exception e) {
+                Log.e(TAG, "Can't save preference value ", e);
+            }
         }
     }
 
