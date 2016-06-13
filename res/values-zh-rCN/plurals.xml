@@ -22,9 +22,11 @@
   <plurals name="n_files">
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> 个文件</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="other">找到 <xliff:g id="count">%d</xliff:g> 个项目</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="other">已选择 <xliff:g id="folders">%1$d</xliff:g> 个文件夹。</item>
   </plurals>

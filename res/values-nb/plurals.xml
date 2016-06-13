@@ -24,10 +24,12 @@
     <item quantity="one">0 filer</item>
     <item quantity="other">1 fil</item>
   </plurals>
+  <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one">Ingen elementer funnet</item>
     <item quantity="other">1 element funnet</item>
   </plurals>
+  <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> mappe valgt.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mappe valgt.</item>
