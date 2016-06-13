@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5faad753_3ca2a9fd",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 772,
+      "author": {
+        "id": 14187
+      },
+      "writtenOn": "2016-06-13T14:45:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5faad753_5c7205af",
+      "range": {
+        "startLine": 772,
+        "startChar": 16,
+        "endLine": 772,
+        "endChar": 20
+      },
+      "revId": "8a935d600f761873234b0aadd5e27f65a69968f4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_1c680db7",
         "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
         "patchSetId": 2
@@ -36,6 +60,24 @@
       "writtenOn": "2016-06-13T14:33:44Z",
       "side": 1,
       "message": "100 chars",
+      "revId": "8a935d600f761873234b0aadd5e27f65a69968f4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_5ca7650c",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 832,
+      "author": {
+        "id": 14187
+      },
+      "writtenOn": "2016-06-13T14:45:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5faad753_1c680db7",
       "revId": "8a935d600f761873234b0aadd5e27f65a69968f4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
