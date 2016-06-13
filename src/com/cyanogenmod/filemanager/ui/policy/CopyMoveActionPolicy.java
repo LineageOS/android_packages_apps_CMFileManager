@@ -17,8 +17,11 @@
 package com.cyanogenmod.filemanager.ui.policy;
 
 import android.app.AlertDialog;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
 import android.util.Log;
@@ -360,6 +363,7 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
                         task.onRequestProgress();
                     }
                 }
+                doMediascan(this.mCtx);
             }
 
             @Override
@@ -517,6 +521,22 @@ public final class CopyMoveActionPolicy extends ActionsPolicy {
 
         // Execute background task
         task.execute(task);
+    }
+
+    /**
+     * Method that do media scan.
+     * The directory cannot be insert into MediaProvider correctly
+     *
+     * @param context The current context
+     */
+    private static void doMediascan(Context context) {
+        Bundle args = new Bundle();
+        args.putString("volume", "external");
+        Intent startScan = new Intent();
+        startScan.putExtras(args);
+        startScan.setComponent(new ComponentName("com.android.providers.media",
+                                                 "com.android.providers.media.MediaScannerService"));
+        context.startService(startScan);
     }
 
     /**
