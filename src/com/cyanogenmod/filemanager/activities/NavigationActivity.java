@@ -206,6 +206,7 @@ public class NavigationActivity extends Activity
     private NavigationCustomTitleView mCustomTitleView;
     private InputMethodManager mImm;
     private FilesystemInfoDialog.OnConfigChangeListener mOnConfigChangeListener;
+    private ListPopupWindow mPopupWindow;
 
     private final BroadcastReceiver mNotificationReceiver = new BroadcastReceiver() {
         @Override
@@ -805,6 +806,9 @@ public class NavigationActivity extends Activity
         NavigationView navView = getCurrentNavigationView();
         if (navView != null) {
             navView.refreshViewMode();
+        }
+        if (mPopupWindow != null) {
+            mPopupWindow.postShow();
         }
     }
 
@@ -2194,14 +2198,15 @@ public class NavigationActivity extends Activity
         final MenuSettingsAdapter adapter = new MenuSettingsAdapter(this, settings);
 
         //Create a show the popup menu
-        final ListPopupWindow popup = DialogHelper.createListPopupWindow(this, adapter, anchor);
-        popup.setOnItemClickListener(new OnItemClickListener() {
+        mPopupWindow = DialogHelper.createListPopupWindow(this, adapter, anchor);
+        mPopupWindow.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 FileManagerSettings setting =
                         ((MenuSettingsAdapter)parent.getAdapter()).getSetting(position);
                 final int value = ((MenuSettingsAdapter)parent.getAdapter()).getId(position);
-                popup.dismiss();
+                mPopupWindow.dismiss();
+                mPopupWindow = null;
                 try {
                     if (setting.compareTo(FileManagerSettings.SETTINGS_LAYOUT_MODE) == 0) {
                         //Need to change the layout
@@ -2246,13 +2251,14 @@ public class NavigationActivity extends Activity
 
             }
         });
-        popup.setOnDismissListener(new PopupWindow.OnDismissListener() {
+        mPopupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
             public void onDismiss() {
                 adapter.dispose();
             }
         });
-        popup.show();
+        mPopupWindow.setInputMethodMode(ListPopupWindow.INPUT_METHOD_NOT_NEEDED);
+        mPopupWindow.show();
     }
 
     /**
