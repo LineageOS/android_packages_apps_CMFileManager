@@ -571,7 +571,7 @@
   <!-- Preferences - General - Disk usage warning level summary -->
   <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
          of ListPreference. This should be fixed in frameworks base prior to be added here. -->
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">Prikaži različno barvo v gradnikih uporabe diska, ko dosežejo <xliff:g id="level">%1$s</xliff:g> odstotkov nezasedenega prostora</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">Prikaži različno barvo v pripomočkih uporabe diska, ko dosežejo <xliff:g id="level">%1$s</xliff:g> odstotkov nezasedenega prostora</string>
   <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Izračun statistike map</string>
   <!-- Preferences - General - Compute folder statistics summary on -->
