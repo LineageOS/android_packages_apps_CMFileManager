@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_7c57abcb",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 769,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-06-21T21:20:44Z",
+      "side": 1,
+      "message": "just wonder do we need to mGlobal check mFso can be null",
+      "revId": "a7d8afd7721e9d0b60343612dfad17aa72c24b66",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
