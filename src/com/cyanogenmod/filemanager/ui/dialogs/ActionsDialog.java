@@ -72,7 +72,7 @@ import java.io.File;
 import java.io.InvalidClassException;
 import java.util.ArrayList;
 import java.util.List;
-
+import android.util.Log;
 /**
  * A class that wraps a dialog for showing the list of actions that
  * the user can do.
@@ -761,6 +761,20 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
                     if (!areAllFiles) {
                         menu.removeItem(R.id.mnu_actions_send_selection);
                     }
+                }
+            }
+        }
+
+        // Remove shortcuts for all folders if its secure
+        //if there is no selection and using a global menu
+        if (mFso != null && FileHelper.isDirectory(mFso) && mFso.isSecure()) {
+            menu.removeItem(R.id.mnu_actions_add_shortcut_current_folder);
+        }
+
+        if (selection != null && selection.size() > 0) {
+            for (FileSystemObject fso : selection) {
+                if (FileHelper.isDirectory(fso) && fso.isSecure()) {
+                    menu.removeItem(R.id.mnu_actions_add_shortcut_current_folder);
                 }
             }
         }
