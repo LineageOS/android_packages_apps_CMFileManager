@@ -765,6 +765,21 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
             }
         }
 
+        // Remove shortcuts for all folders if its secure
+        //if there is no selection and using a global menu
+        if (mFso != null && FileHelper.isDirectory(mFso) && mFso.isSecure()) {
+            menu.removeItem(R.id.mnu_actions_add_shortcut_current_folder);
+        }
+
+        // if there is a selection
+        if (selection != null && selection.size() > 0) {
+            for (FileSystemObject fso : selection) {
+                if (FileHelper.isDirectory(fso) && fso.isSecure()) {
+                    menu.removeItem(R.id.mnu_actions_add_shortcut_current_folder);
+                }
+            }
+        }
+
         // Shotcuts and Bookmarks (not available in virtual filesystems)
         if (!mGlobal && (mFso.isSecure() || mFso.isRemote())) {
             menu.removeItem(R.id.mnu_actions_add_shortcut);
