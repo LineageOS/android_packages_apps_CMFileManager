@@ -34,6 +34,24 @@
       "revId": "bfad90be958f5b8977d77d12b892820f6c8c5cf3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_90b4cbd2",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 775,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-06-22T15:15:43Z",
+      "side": 1,
+      "message": "mnu_actions_add_shortcut_current_folder is from global action\nmnu_actions_add_shortcut is from File system object selection\nWe possibly don\u0027t need mnu_actions_add_shortcut since we have a mGlobal check here.",
+      "parentUuid": "5faad753_d0bec3b2",
+      "revId": "bfad90be958f5b8977d77d12b892820f6c8c5cf3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
