@@ -472,8 +472,8 @@ public final class MimeTypeHelper {
         MimeTypeInfo mimeTypeInfo = null;
         ArrayList<MimeTypeInfo> mimeTypeInfoList = sMimeTypes.get(ext.toLowerCase(Locale.ROOT));
         // Multiple mimetypes map to the same extension, try to resolve it.
-        if (mimeTypeInfoList != null && mimeTypeInfoList.size() > 1 && !firstFound) {
-            if (absolutePath != null) {
+        if (mimeTypeInfoList != null && mimeTypeInfoList.size() > 1) {
+            if ((absolutePath != null) && (!firstFound)) {
                 String mimeType = getAmbiguousExtensionMimeType(absolutePath, ext);
                 mimeTypeInfo = sExtensionMimeTypes.get(ext + mimeType);
             } else {
