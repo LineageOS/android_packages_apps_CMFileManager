@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_905ccbed",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 770,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-06-22T13:25:37Z",
+      "side": 1,
+      "message": "This block should be placed after line 787",
+      "revId": "72cbad4e70ebccd427c8940af3e33610903c8ac3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_7057cfcb",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 774,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-06-22T13:25:37Z",
+      "side": 1,
+      "message": "I think this block is duplicated with below checking with mGlobal. And can be removed.",
+      "revId": "72cbad4e70ebccd427c8940af3e33610903c8ac3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_3075d764",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 787,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-06-22T13:25:37Z",
+      "side": 1,
+      "message": "I tried and we can just add the checking here instead:\n+if ((mFso!\u003dnull) \u0026\u0026 mFso.isSecure()) {\n+menu.removeItem(R.id.mnu_actions_add_shortcut_current_folder);\n+menu.removeItem(R.id.mnu_actions_add_to_bookmarks_current_folder);\n+ }",
+      "revId": "72cbad4e70ebccd427c8940af3e33610903c8ac3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
