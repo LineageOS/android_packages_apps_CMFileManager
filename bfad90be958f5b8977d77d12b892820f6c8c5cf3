@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_f0a97f7b",
+        "filename": "src/com/cyanogenmod/filemanager/ui/dialogs/ActionsDialog.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 775,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-06-22T15:09:40Z",
+      "side": 1,
+      "message": "Do we need removeItem mnu_actions_add_shortcut ? (I seems had been removed somewhere per my test)\nremoveItem R.id.mnu_actions_add_shortcut_current_folder should just works.",
+      "revId": "bfad90be958f5b8977d77d12b892820f6c8c5cf3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
