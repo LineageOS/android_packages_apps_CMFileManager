@@ -49,6 +49,7 @@ import com.cyanogenmod.filemanager.util.ResourcesHelper;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -177,6 +178,65 @@ public final class IntentsActionPolicy extends ActionsPolicy {
         return context.getPackageManager().queryIntentActivities(i, 0).size() > 0;
     }
 
+    public static boolean sendHandledByAnyActivity(final Context ctx, final FileSystemObject fso) {
+        return ctx.getPackageManager().queryIntentActivities(getFsoSendIntent(ctx, fso), 0).size() > 0;
+    }
+
+    public static boolean sendHandledByAnyActivity(final Context ctx, final List<FileSystemObject> fsos) {
+        return ctx.getPackageManager().queryIntentActivities(getFsoSendIntent(ctx, fsos), 0).size() > 0;
+    }
+
+    private static Intent getFsoSendIntent(final Context ctx, final FileSystemObject fso) {
+        return getFsoSendIntent(ctx, Arrays.asList(fso));
+    }
+
+    private static Intent getFsoSendIntent(final Context ctx, final List<FileSystemObject> fsos) {
+        Intent intent = new Intent();
+        intent.setAction(fsos.size() > 1 ? Intent.ACTION_SEND_MULTIPLE : Intent.ACTION_SEND);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+        // Create an array list of the uris to send
+        ArrayList<Uri> uris = new ArrayList<Uri>();
+
+        int cc = fsos.size();
+        String lastMimeType = null;
+        boolean sameMimeType = true;
+        for (int i = 0; i < cc; i++) {
+            FileSystemObject fso = fsos.get(i);
+
+            // Folders are not allowed
+            if (FileHelper.isDirectory(fso)) continue;
+
+            // Check if we can use a unique mime/type
+            String mimeType = MimeTypeHelper.getMimeType(ctx, fso);
+            if (mimeType == null) {
+                sameMimeType = false;
+            }
+            if (sameMimeType &&
+                    (mimeType != null && lastMimeType != null &&
+                            mimeType.compareTo(lastMimeType) != 0)) {
+                sameMimeType = false;
+            }
+            lastMimeType = mimeType;
+
+            // Add the uri
+            uris.add(getUriFromFile(ctx, fso));
+        }
+        if (lastMimeType != null) {
+            if (sameMimeType) {
+                intent.setType(lastMimeType);
+            } else {
+                intent.setType(MimeTypeHelper.ALL_MIME_TYPES);
+            }
+        }
+        if (uris.size() > 1) {
+            intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
+        } else {
+            intent.putExtra(Intent.EXTRA_STREAM, uris.get(0));
+        }
+        return intent;
+    }
+
     /**
      * Method that sends a {@link FileSystemObject} with the default registered application
      * by the system, or ask the user for select a registered application.
@@ -188,18 +248,10 @@ public final class IntentsActionPolicy extends ActionsPolicy {
     public static void sendFileSystemObject(
             final Context ctx, final FileSystemObject fso, OnDismissListener onDismissListener) {
         try {
-            // Create the intent to
-            Intent intent = new Intent();
-            intent.setAction(android.content.Intent.ACTION_SEND);
-            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            intent.setType(MimeTypeHelper.getMimeType(ctx, fso));
-            Uri uri = getUriFromFile(ctx, fso);
-            intent.putExtra(Intent.EXTRA_STREAM, uri);
-
             // Resolve the intent
             resolveIntent(
                     ctx,
-                    intent,
+                    getFsoSendIntent(ctx, fso),
                     false,
                     onDismissListener);
 
@@ -220,48 +272,10 @@ public final class IntentsActionPolicy extends ActionsPolicy {
             final Context ctx, final List<FileSystemObject> fsos,
             OnDismissListener onDismissListener) {
         try {
-            // Create the intent to
-            Intent intent = new Intent();
-            intent.setAction(android.content.Intent.ACTION_SEND_MULTIPLE);
-            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-
-            // Create an array list of the uris to send
-            ArrayList<Uri> uris = new ArrayList<Uri>();
-            int cc = fsos.size();
-            String lastMimeType = null;
-            boolean sameMimeType = true;
-            for (int i = 0; i < cc; i++) {
-                FileSystemObject fso = fsos.get(i);
-
-                // Folders are not allowed
-                if (FileHelper.isDirectory(fso)) continue;
-
-                // Check if we can use a unique mime/type
-                String mimeType = MimeTypeHelper.getMimeType(ctx, fso);
-                if (mimeType == null) {
-                    sameMimeType = false;
-                }
-                if (sameMimeType &&
-                    (mimeType != null && lastMimeType != null &&
-                     mimeType.compareTo(lastMimeType) != 0)) {
-                    sameMimeType = false;
-                }
-                lastMimeType = mimeType;
-
-                // Add the uri
-                uris.add(getUriFromFile(ctx, fso));
-            }
-            if (sameMimeType) {
-                intent.setType(lastMimeType);
-            } else {
-                intent.setType(MimeTypeHelper.ALL_MIME_TYPES);
-            }
-            intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
-
             // Resolve the intent
             resolveIntent(
                     ctx,
-                    intent,
+                    getFsoSendIntent(ctx, fsos),
                     false,
                     onDismissListener);
 
