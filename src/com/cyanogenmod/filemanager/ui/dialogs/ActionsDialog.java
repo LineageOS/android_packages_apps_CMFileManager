@@ -653,6 +653,10 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
                 menu.removeItem(R.id.mnu_actions_send);
             }
 
+            if (!IntentsActionPolicy.sendHandledByAnyActivity(mContext, this.mFso)) {
+                menu.removeItem(R.id.mnu_actions_send);
+            }
+
             // Create link (not allow in storage volume)
             if (StorageHelper.isPathInStorageVolume(this.mFso.getFullPath())) {
                 menu.removeItem(R.id.mnu_actions_create_link);
@@ -758,7 +762,8 @@ public class ActionsDialog implements OnItemClickListener, OnItemLongClickListen
                             break;
                         }
                     }
-                    if (!areAllFiles) {
+                    if (!areAllFiles ||
+                            !IntentsActionPolicy.sendHandledByAnyActivity(mContext, selection)) {
                         menu.removeItem(R.id.mnu_actions_send_selection);
                     }
                 }
