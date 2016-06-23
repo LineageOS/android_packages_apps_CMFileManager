@@ -781,6 +781,8 @@ public class NavigationActivity extends Activity
 
         //Initialize navigation
         if (!hasPermissions()) {
+            requestNecessaryPermissions();
+        } else {
             initNavigation(this.mCurrentNavigationView, restore, intent);
         }
 
