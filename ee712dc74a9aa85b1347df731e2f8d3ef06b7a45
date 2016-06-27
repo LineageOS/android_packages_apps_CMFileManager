@@ -16,6 +16,24 @@
       "revId": "ee712dc74a9aa85b1347df731e2f8d3ef06b7a45",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa7e38b_8a90cf97",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 10094
+      },
+      "writtenOn": "2016-06-27T14:49:09Z",
+      "side": 1,
+      "message": "The original logic would put an empty list into EXTRA_STREAM in this case.  I can change the logic to\n\n  if (uris.size()\u003d\u003d 1) {\n      intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris.get(0));\n  } else {\n            intent.putExtra(Intent.EXTRA_STREAM, uris);\n  }\n\nif you want.",
+      "parentUuid": "3fa7e38b_ca96c795",
+      "revId": "ee712dc74a9aa85b1347df731e2f8d3ef06b7a45",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
