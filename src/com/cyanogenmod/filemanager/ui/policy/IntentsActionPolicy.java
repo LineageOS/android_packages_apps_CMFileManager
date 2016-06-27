@@ -231,7 +231,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
         }
         if (uris.size() > 1) {
             intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
-        } else {
+        } else if (uris.size() > 0) {
             intent.putExtra(Intent.EXTRA_STREAM, uris.get(0));
         }
         return intent;
