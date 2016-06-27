@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fa7e38b_ca96c795",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-06-27T14:45:30Z",
+      "side": 1,
+      "message": "I think the original logic always put uri/uris into EXTRA_STREAM. Not sure how we run into this and what is the consequence if EXTRA_STREAM of the uri/uris is not set for the intent.",
+      "revId": "ee712dc74a9aa85b1347df731e2f8d3ef06b7a45",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
