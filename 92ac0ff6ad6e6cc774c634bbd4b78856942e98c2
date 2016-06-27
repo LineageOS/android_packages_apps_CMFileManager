@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fa7e38b_a7e06498",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 13956
+      },
+      "writtenOn": "2016-06-27T13:21:10Z",
+      "side": 1,
+      "message": "Crash here if single selection, uris size is 0. FEIJ-1439",
+      "revId": "92ac0ff6ad6e6cc774c634bbd4b78856942e98c2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
