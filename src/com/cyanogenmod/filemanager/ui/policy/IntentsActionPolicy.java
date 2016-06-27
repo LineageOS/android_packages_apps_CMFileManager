@@ -192,7 +192,6 @@ public final class IntentsActionPolicy extends ActionsPolicy {
 
     private static Intent getFsoSendIntent(final Context ctx, final List<FileSystemObject> fsos) {
         Intent intent = new Intent();
-        intent.setAction(fsos.size() > 1 ? Intent.ACTION_SEND_MULTIPLE : Intent.ACTION_SEND);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
         // Create an array list of the uris to send
@@ -229,10 +228,12 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                 intent.setType(MimeTypeHelper.ALL_MIME_TYPES);
             }
         }
-        if (uris.size() > 1) {
-            intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
-        } else {
+        if (uris.size() == 1) {
+            intent.setAction(Intent.ACTION_SEND);
             intent.putExtra(Intent.EXTRA_STREAM, uris.get(0));
+        } else {
+            intent.setAction(Intent.ACTION_SEND_MULTIPLE);
+            intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
         }
         return intent;
     }
