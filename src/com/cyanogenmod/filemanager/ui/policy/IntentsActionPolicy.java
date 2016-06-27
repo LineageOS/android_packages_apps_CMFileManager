@@ -229,10 +229,10 @@ public final class IntentsActionPolicy extends ActionsPolicy {
                 intent.setType(MimeTypeHelper.ALL_MIME_TYPES);
             }
         }
-        if (uris.size() > 1) {
-            intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
-        } else {
+        if (uris.size() == 1) {
             intent.putExtra(Intent.EXTRA_STREAM, uris.get(0));
+        } else {
+            intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
         }
         return intent;
     }
