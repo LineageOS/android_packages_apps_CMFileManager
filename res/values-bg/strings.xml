@@ -418,7 +418,7 @@
   <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">Премести избраното тук</string>
   <!-- Actions Dialog - Menu - Delete selection -->
-  <string name="actions_menu_delete_selection">Изтриване на избраното</string>
+  <string name="actions_menu_delete_selection">Изтриване</string>
   <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">Компресиране на избраното</string>
   <!-- Actions Dialog - Menu - Create link -->
