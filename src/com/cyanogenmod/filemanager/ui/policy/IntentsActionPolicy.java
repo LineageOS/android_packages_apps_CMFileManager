@@ -208,14 +208,10 @@ public final class IntentsActionPolicy extends ActionsPolicy {
 
             // Check if we can use a unique mime/type
             String mimeType = MimeTypeHelper.getMimeType(ctx, fso);
-            if (mimeType == null) {
+            if (lastMimeType != null && !mimeType.equals(lastMimeType)) {
                 sameMimeType = false;
             }
-            if (sameMimeType &&
-                    (mimeType != null && lastMimeType != null &&
-                            mimeType.compareTo(lastMimeType) != 0)) {
-                sameMimeType = false;
-            }
+
             lastMimeType = mimeType;
 
             // Add the uri
