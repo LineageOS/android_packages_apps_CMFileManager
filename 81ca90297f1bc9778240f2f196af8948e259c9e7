@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fa7e38b_a1fcc93e",
+        "filename": "src/com/cyanogenmod/filemanager/ui/policy/IntentsActionPolicy.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 10094
+      },
+      "writtenOn": "2016-07-01T16:44:39Z",
+      "side": 1,
+      "message": "This can be further reduced to:\n\n    if (lastMimeType !\u003d null \u0026\u0026 !mimeType.equals(lastMimeType)) {\n        sameMimeType \u003d false;\n    }",
+      "revId": "81ca90297f1bc9778240f2f196af8948e259c9e7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
