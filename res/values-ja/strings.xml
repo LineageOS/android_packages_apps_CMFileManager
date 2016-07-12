@@ -475,7 +475,7 @@
   <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">連携</string>
   <!-- Associations Dialog - Remember the user action -->
-  <string name="associations_dialog_remember">選択を記憶</string>
+  <string name="associations_dialog_remember">選択を保存</string>
   <!-- Associations Dialog - Open with Title -->
   <string name="associations_dialog_openwith_title">他のアプリで開く</string>
   <!-- Associations Dialog - Open action (button title) -->
@@ -744,7 +744,7 @@
   <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">ストレージのロックを解除できません</string>
   <!-- Secure Storage unlock validation, length -->
-  <string name="secure_storage_unlock_validation_length">パスワードは最低<xliff:g id="characters">%1$d</xliff:g>文字以上である必要があります。</string>
+  <string name="secure_storage_unlock_validation_length">パスワードは最低<xliff:g id="characters">%1$d</xliff:g>文字以上で指定してください。</string>
   <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">パスワードが一致しません。</string>
   <!-- Secure storage open file warning -->
