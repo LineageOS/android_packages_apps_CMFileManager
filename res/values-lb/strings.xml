@@ -766,5 +766,7 @@
   <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Wëllkomm am Fichiersmanager vu CyanogenMod.\n\nDës App erméiglecht der de Fichierssystem ze duerchsichen an Operatiounen drop auszeféieren déi den Apparat kéinte stéieren. Fir Schied ze vermeide start d\'App am séchere Modus mat manner Privilegien.\n\nIwwer d\'Astellunge kanns du den erweiderten, voll-privilegéierten, Modus aktivéieren. Et ass deng eege Responsabilitéit, sécherzestellen datt keng vun den Operatiounen däi System zerstéiert.\n\nD\'Equipe vu CyanogenMod</string>
   <string name="activity_not_found_exception">Konnt keng App fanne fir dëse Fichier opzemaachen</string>
+  <string name="storage_permissions_denied">Den Dateimanager brauch Zougrëff op de Späicher, fir deng Dateien unzeweisen.</string>
+  <string name="storage_permissions_explanation">Géi an d\'Astellungen an dréck op Berechtegungen, fir d\'Berechtegung ze verginn.</string>
   <string name="snackbar_settings">Astellungen</string>
 </resources>
