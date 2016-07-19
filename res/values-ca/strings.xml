@@ -706,7 +706,7 @@
   <string name="ash_singleline_comment">Comentari d\'una sola línia</string>
   <string name="ash_multiline_comment">Comentari multi-línia</string>
   <string name="ash_keyword">Paraula clau</string>
-  <string name="ash_quoted_string">Cadena comentada</string>
+  <string name="ash_quoted_string">Cadena citada</string>
   <string name="ash_variable">Variable</string>
   <!-- Secure Storage -->
   <!-- Secure Storage dialog title - Unlock -->
