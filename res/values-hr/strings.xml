@@ -738,7 +738,7 @@
   <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Otključaj</string>
   <!-- Secure Storage reset button -->
-  <string name="secure_storage_reset_button">Resetiraj</string>
+  <string name="secure_storage_reset_button">Ponovno postavi</string>
   <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Obriši</string>
   <!-- Secure Storage unlock failed toast -->
