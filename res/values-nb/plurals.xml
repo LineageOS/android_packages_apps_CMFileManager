@@ -17,26 +17,26 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="one">0 mapper</item>
-    <item quantity="other">1 mappe</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> mappe</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mapper</item>
   </plurals>
   <plurals name="n_files">
-    <item quantity="one">0 filer</item>
-    <item quantity="other">1 fil</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fil</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> filer</item>
   </plurals>
   <!-- Search - Found items -->
   <plurals name="search_found_items">
-    <item quantity="one">Ingen elementer funnet</item>
-    <item quantity="other">1 element funnet</item>
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element funnet</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> elementer funnet</item>
   </plurals>
   <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
     <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> mappe valgt.</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mappe valgt.</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mapper valgt.</item>
   </plurals>
   <plurals name="selection_files">
     <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fil valgt.</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> fil valgt.</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> filer valgt.</item>
   </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
