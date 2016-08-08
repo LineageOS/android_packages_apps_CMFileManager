@@ -17,26 +17,30 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> folder</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> folder</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> ഫോൾഡർ</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> ഫോൾഡറുകൾ</item>
   </plurals>
   <plurals name="n_files">
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> file</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> file</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ഫയല്</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ഫയലുകൾ</item>
   </plurals>
   <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> ഇനം കണ്ടെത്തി</item>
-    <item quantity="other"><xliff:g id="count">%1$d</xliff:g>ഇനങ്ങള്‍ കണ്ടെത്തി</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> ഇനങ്ങൾ കണ്ടെത്തി</item>
   </plurals>
   <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> folder selected.</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> folder selected.</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> ഫോൾഡർ തിരഞ്ഞെടുത്തു.</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> ഫോൾഡറുകൾ തിരഞ്ഞെടുത്തു.</item>
+  </plurals>
+  <plurals name="selection_files">
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ഫയലുകൾ തിരഞ്ഞെടുത്തു.</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ഫയലുകൾ തിരഞ്ഞെടുത്തു.</item>
   </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item is going to be deleted.</item>
-    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> item is going to be deleted.</item>
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> ഇനം ഇല്ലാതാക്കും.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> ഇനങ്ങൾ ഇല്ലാതാക്കും.</item>
   </plurals>
 </resources>

@@ -24,14 +24,14 @@
   </plurals>
   <!-- Search - Found items -->
   <plurals name="search_found_items">
-    <item quantity="other">Phát hiện <xliff:g id="count">%d</xliff:g> mục</item>
+    <item quantity="other">Đã tìm thấy <xliff:g id="count">%d</xliff:g> mục</item>
   </plurals>
   <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
-    <item quantity="other">Đã chọn <xliff:g id="folders">%1$d</xliff:g> thư mục.</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> thư mục đã được chọn.</item>
   </plurals>
   <plurals name="selection_files">
-    <item quantity="other">Đã chọn <xliff:g id="files">%1$d</xliff:g> tập tin.</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> tập tin đã được chọn.</item>
   </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
