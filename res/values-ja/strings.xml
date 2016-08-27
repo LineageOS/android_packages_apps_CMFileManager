@@ -288,7 +288,7 @@
   <!-- Search - Search no results message -->
   <string name="search_no_results_msg">結果は見つかりませんでした。</string>
   <!-- Search - Number of items found in directory -->
-  <string name="search_found_items_in_directory"><xliff:g id="path">%2$s</xliff:g>に<xliff:g id="items">%1$s</xliff:g>件</string>
+  <string name="search_found_items_in_directory"><xliff:g id="path">%2$s</xliff:g>で<xliff:g id="items">%1$s</xliff:g></string>
   <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>検索語:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Search - Confirm search -->
