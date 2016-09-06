@@ -34,6 +34,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.storage.StorageVolume;
+import android.support.v4.content.FileProvider;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -466,7 +467,8 @@ public class PickerActivity extends Activity
                     if (getIntent().getType() != null) {
                         intent.setType(getIntent().getType());
                     }
-                    intent.setData(Uri.fromFile(src));
+                    intent.setData(FileProvider.getUriForFile(this,
+                                "com.cyanogenmod.filemanager.providers.file", src));
                     intent.putExtras(extras);
                     intent.setComponent(CROP_COMPONENT);
                     try {
@@ -572,7 +574,8 @@ public class PickerActivity extends Activity
         // Try to find the preferred uri scheme
         Uri result = MediaHelper.fileToContentUri(context, src);
         if (result == null) {
-            result = Uri.fromFile(src);
+            result = FileProvider.getUriForFile(context,
+                    "com.cyanogenmod.filemanager.providers.file", src);
         }
 
         if (Intent.ACTION_PICK.equals(intent.getAction()) && intent.getData() != null) {
