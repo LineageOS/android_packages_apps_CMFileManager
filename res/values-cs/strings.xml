@@ -21,7 +21,6 @@
   <!-- The description of the app -->
   <string name="app_description">CyanogenMod správce souborů</string>
   <!-- Human readable sizes -->
-  <string name="size_bytes">B</string>
   <string name="size_kilobytes">kB</string>
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">GB</string>
