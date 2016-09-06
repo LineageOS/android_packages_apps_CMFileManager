@@ -311,20 +311,29 @@ public final class ParseHelper {
             line = line.substring(pos).trim();
             // Skip "on"
             pos = line.indexOf(" "); //$NON-NLS-1$
-            line = line.substring(pos).trim();
+            if ("on".equals(line.substring(0, pos).trim())) {
+                line = line.substring(pos).trim();
+            }
             // Mount point
             pos = line.indexOf(" "); //$NON-NLS-1$
             String mountPoint = line.substring(0, pos).trim();
             line = line.substring(pos).trim();
             // Skip "type"
             pos = line.indexOf(" "); //$NON-NLS-1$
-            line = line.substring(pos).trim();
+            if ("type".equals(line.substring(0, pos).trim())) {
+                line = line.substring(pos).trim();
+            }
             // Type
             pos = line.indexOf(" "); //$NON-NLS-1$
             String type = line.substring(0, pos).trim();
             line = line.substring(pos).trim();
             // Options
-            String options = line.substring(1, line.length() - 1).trim();
+            String options;
+            if (line.charAt(0) == '(') {
+                options = line.substring(1, line.length() - 1).trim();
+            } else {
+                options = line.trim();
+            }
 
             //Return the mount point
             return new MountPoint(mountPoint, device, type, options, /*dump*/0, /*pass*/0, false, false);
