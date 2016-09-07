@@ -21,7 +21,6 @@
   <!-- The description of the app -->
   <string name="app_description">Файловый менеджер CyanogenMod</string>
   <!-- Human readable sizes -->
-  <string name="size_bytes">Б</string>
   <string name="size_kilobytes">КБ</string>
   <string name="size_megabytes">МБ</string>
   <string name="size_gigabytes">ГБ</string>

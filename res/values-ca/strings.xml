@@ -738,7 +738,7 @@
   <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Desbloqueja</string>
   <!-- Secure Storage reset button -->
-  <string name="secure_storage_reset_button">Reestableix</string>
+  <string name="secure_storage_reset_button">Restableix</string>
   <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Esborra</string>
   <!-- Secure Storage unlock failed toast -->
