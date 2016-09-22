@@ -22,6 +22,30 @@
       "revId": "8f33636c186417398c997482bd010e0607d71cb5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1fa4df85_3622f001",
+        "filename": "res/layout/compute_checksum_dialog.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2016-09-22T14:43:57Z",
+      "side": 1,
+      "message": "As jorge mentioned, top most view needs to have the xmlns:android line added to it, and removed from the LinearLayout, in addition to adding layout_width, layout_height and layout_margin.\n\nAll other views need to be indented an additional 4 spaces now that the ScrollView is the topmost parent.",
+      "parentUuid": "5faad753_dee9321a",
+      "range": {
+        "startLine": 17,
+        "startChar": 1,
+        "endLine": 17,
+        "endChar": 11
+      },
+      "revId": "8f33636c186417398c997482bd010e0607d71cb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
