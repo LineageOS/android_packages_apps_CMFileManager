@@ -16,6 +16,24 @@
       "revId": "391c251a2fac0e6daed316a581b4bc44e39672f6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff2e2bb8_f8c4ee94",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2016-10-04T12:56:35Z",
+      "side": 1,
+      "message": "It\u0027s just a convention meaning that it should only be written and read from when under a lock.",
+      "parentUuid": "ff2e2bb8_b8cb86a3",
+      "revId": "391c251a2fac0e6daed316a581b4bc44e39672f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
