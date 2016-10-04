@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff2e2bb8_b8cb86a3",
+        "filename": "src/com/cyanogenmod/filemanager/activities/EditorActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 10984
+      },
+      "writtenOn": "2016-10-04T12:55:17Z",
+      "side": 1,
+      "message": "The var name suggests it means exactly the opposite of what it really does. If it\u0027s \"mReadDone\", then it should be \"locked\" while it isn\u0027t done, right?\n\nI\u0027d replace it to simply \"mReadDone\".",
+      "revId": "391c251a2fac0e6daed316a581b4bc44e39672f6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
