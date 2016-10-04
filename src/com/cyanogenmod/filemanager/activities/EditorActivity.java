@@ -269,6 +269,101 @@ public class EditorActivity extends Activity implements TextWatcher {
     }
 
     /**
+     * Abstraction of a read source, it implements reading and feeding
+     * to an {@link AsyncReader}.
+     */
+    private interface ReadSource {
+        long getSize();
+        void read(AsyncReader reader) throws Exception;
+        void close() throws IOException;
+    }
+
+    /**
+     * An implementation of a {@link ReadSource} that reads from a file
+     * system object.
+     */
+    public class FileSystemObjectReadSource implements ReadSource {
+        private final Context mContext;
+        private final FileSystemObject mFso;
+
+        public FileSystemObjectReadSource(Context context, FileSystemObject fso) {
+            mContext = context;
+            mFso = fso;
+        }
+
+        @Override
+        public long getSize() {
+            return mFso.getSize();
+        }
+
+        @Override
+        public void read(AsyncReader reader) throws Exception {
+            CommandHelper.read(mContext, mFso.getFullPath(), reader,
+                    null);
+        }
+
+        @Override
+        public void close() throws IOException {}
+    }
+
+    /**
+     * An implementation of a {@link ReadSource} that reads from a content provider
+     * Uri.
+     */
+    public class ContentProviderReadSource implements ReadSource {
+        private final Context mContext;
+        private final Uri mUri;
+        private final InputStream mInputStream;
+
+        public ContentProviderReadSource(Context context, Uri uri) throws IOException {
+            mContext = context;
+            mUri = uri;
+            mInputStream = context.getContentResolver().openInputStream(uri);
+        }
+
+        @Override
+        public long getSize() {
+            try {
+                return mInputStream.available();
+            } catch (IOException ex) {
+                // This is just an estimation, return _something_ as the buffer base.
+                return 4096;
+            }
+        }
+
+        @Override
+        public void read(AsyncReader reader) throws Exception {
+            reader.onAsyncStart();
+
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            int readBytes;
+            byte[] buffer = new byte[1024];
+            try {
+                while ((readBytes = mInputStream.read(buffer, 0, buffer.length)) != -1) {
+                    if (readBytes != buffer.length) {
+                        byte newBuffer[] = new byte[readBytes];
+                        System.arraycopy(buffer, 0, newBuffer, 0, readBytes);
+                        buffer = newBuffer;
+                    }
+                    reader.onPartialResult(buffer);
+                }
+                reader.onAsyncEnd(false);
+                reader.onAsyncExitCode(0);
+            } catch (IOException e) {
+                e.printStackTrace();
+                reader.onException(e);
+                reader.onAsyncEnd(true);
+                reader.onAsyncExitCode(-1);
+            }
+
+        }
+
+        public void close() throws IOException {
+            mInputStream.close();
+        }
+    }
+
+    /**
      * An internal listener for read a file
      */
     private class AsyncReader implements AsyncResultListener {
@@ -280,7 +375,7 @@ public class EditorActivity extends Activity implements TextWatcher {
         SpannableStringBuilder mBuffer = null;
         Exception mCause;
         long mSize;
-        FileSystemObject mReadFso;
+        ReadSource mReadSource;
         OnProgressListener mListener;
         boolean mDetectEncoding = false;
         UniversalDetector mDetector;
@@ -302,7 +397,7 @@ public class EditorActivity extends Activity implements TextWatcher {
          */
         @Override
         public void onAsyncStart() {
-            this.mByteBuffer = new ByteArrayOutputStream((int)this.mReadFso.getSize());
+            this.mByteBuffer = new ByteArrayOutputStream((int)this.mReadSource.getSize());
             this.mSize = 0;
         }
 
@@ -344,10 +439,10 @@ public class EditorActivity extends Activity implements TextWatcher {
                 }
                 this.mByteBuffer.write(partial, 0, partial.length);
                 this.mSize += partial.length;
-                if (this.mListener != null && this.mReadFso != null) {
+                if (this.mListener != null && this.mReadSource != null) {
                     int progress = 0;
-                    if (this.mReadFso.getSize() != 0) {
-                        progress = (int)((this.mSize*100) / this.mReadFso.getSize());
+                    if (this.mReadSource.getSize() != 0) {
+                        progress = (int)((this.mSize*100) / this.mReadSource.getSize());
                     }
                     this.mListener.onProgress(progress);
                 }
@@ -492,6 +587,10 @@ public class EditorActivity extends Activity implements TextWatcher {
      * @hide
      */
     boolean mReadOnly;
+    /**
+     * @hide
+     */
+    Uri mContentProviderUri;
     /**
      * @hide
      */
@@ -1001,12 +1100,14 @@ public class EditorActivity extends Activity implements TextWatcher {
         // better compatibility, IntentsActionPolicy use always ACTION_VIEW, so we have
         // to ignore this check here
         this.mReadOnly = false;
+        this.mContentProviderUri = null;
 
         // Read the intent and check that is has a valid request
         Intent fileIntent = getIntent();
         if (fileIntent.getData().getScheme().equals("content")) {
-            asyncReadContentURI(fileIntent.getData());
+            mContentProviderUri = fileIntent.getData();
             this.mTitle.setText(fileIntent.getDataString());
+            asyncRead();
         } else {
             // File Scheme URI's
             String path = uriToPath(this, getIntent().getData());
@@ -1078,165 +1179,13 @@ public class EditorActivity extends Activity implements TextWatcher {
     }
 
     /**
-     * Method that does the read of a content uri in the background
-     * @hide
-     */
-    void asyncReadContentURI(Uri uri) {
-        // Do the load of the file
-        AsyncTask<Uri, Integer, Boolean> mReadTask =
-                new AsyncTask<Uri, Integer, Boolean>() {
-
-                    private Exception mCause;
-                    private boolean changeToBinaryMode;
-                    private boolean changeToDisplaying;
-                    private String tempText;
-
-                    @Override
-                    protected void onPreExecute() {
-                        // Show the progress
-                        this.changeToBinaryMode = false;
-                        this.changeToDisplaying = false;
-                        doProgress(true, 0);
-                    }
-
-                    @Override
-                    protected Boolean doInBackground(Uri... params) {
-
-                        // Only one argument (the file to open)
-                        Uri fso = params[0];
-                        this.mCause = null;
-
-                        // Read the file in an async listener
-                        try {
-
-                            publishProgress(Integer.valueOf(0));
-
-                            InputStream is = getContentResolver().openInputStream(fso);
-
-                            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                            int readBytes;
-                            byte[] buffer = new byte[1024];
-                            try {
-                                while ((readBytes = is.read(buffer, 0, buffer.length)) != -1) {
-                                    baos.write(buffer, 0, readBytes);
-                                    publishProgress(
-                                            Integer.valueOf((readBytes * 100) / buffer.length));
-                                }
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                                return Boolean.FALSE;
-                            }
-
-                            // 100%
-                            publishProgress(new Integer(100));
-                            tempText = new String(baos.toByteArray(), "UTF-8");
-                            Log.i(TAG, "Bytes read: " + baos.toByteArray().length); //$NON-NLS-1$
-
-                            // 100%
-                            this.changeToDisplaying = true;
-                            publishProgress(new Integer(0));
-
-                        } catch (Exception e) {
-                            this.mCause = e;
-                            return Boolean.FALSE;
-                        }
-
-                        return Boolean.TRUE;
-
-                    }
-
-                    @Override
-                    protected void onProgressUpdate(Integer... values) {
-                        // Do progress
-                        doProgress(true, values[0].intValue());
-                    }
-
-                    @Override
-                    protected void onPostExecute(Boolean result) {
-                        final EditorActivity activity = EditorActivity.this;
-                        // Is error?
-                        if (!result.booleanValue()) {
-                            if (this.mCause != null) {
-                                ExceptionUtil.translateException(activity, this.mCause);
-                                activity.mEditor.setEnabled(false);
-                            }
-                        } else {
-                            // Now we have the buffer, set the text of the editor
-                            activity.mEditor.setText(
-                                    tempText, BufferType.EDITABLE);
-
-                            // Highlight editor text syntax
-                            if (activity.mSyntaxHighlight &&
-                                    activity.mSyntaxHighlightProcessor != null) {
-                                try {
-                                    activity.mSyntaxHighlightProcessor.process(
-                                            activity.mEditor.getText());
-                                } catch (Exception ex) {
-                                    // An error in a syntax library, should not break down app.
-                                    Log.e(TAG, "Syntax highlight failed.", ex); //$NON-NLS-1$
-                                }
-                            }
-
-                            setDirty(false);
-                            activity.mEditor.setEnabled(!activity.mReadOnly);
-
-                            // Notify read-only mode
-                            if (activity.mReadOnly) {
-                                DialogHelper.showToast(
-                                        activity,
-                                        R.string.editor_read_only_mode,
-                                        Toast.LENGTH_SHORT);
-                            }
-                        }
-
-                        doProgress(false, 0);
-                    }
-
-                    @Override
-                    protected void onCancelled() {
-                        // Hide the progress
-                        doProgress(false, 0);
-                    }
-
-                    /**
-                     * Method that update the progress status
-                     *
-                     * @param visible If the progress bar need to be hidden
-                     * @param progress The progress
-                     */
-                    private void doProgress(boolean visible, int progress) {
-                        final EditorActivity activity = EditorActivity.this;
-
-                        // Show the progress bar
-                        activity.mProgressBar.setProgress(progress);
-                        activity.mProgress.setVisibility(visible ? View.VISIBLE : View.GONE);
-
-                        if (this.changeToBinaryMode) {
-                            mWordWrapView.setVisibility(View.GONE);
-                            mNoWordWrapView.setVisibility(View.GONE);
-                            mBinaryEditor.setVisibility(View.VISIBLE);
-
-                            // Show hex dumping text
-                            activity.mProgressBarMsg.setText(R.string.dumping_message);
-                            this.changeToBinaryMode = false;
-                        }
-                        else if (this.changeToDisplaying) {
-                            activity.mProgressBarMsg.setText(R.string.displaying_message);
-                            this.changeToDisplaying = false;
-                        }
-                    }
-                };
-        mReadTask.execute(uri);
-    }
-
-    /**
      * Method that does the read of the file in background
      * @hide
      */
     void asyncRead() {
         // Do the load of the file
-        AsyncTask<FileSystemObject, Integer, Boolean> mReadTask =
-                            new AsyncTask<FileSystemObject, Integer, Boolean>() {
+        AsyncTask<ReadSource, Integer, Boolean> mReadTask =
+                            new AsyncTask<ReadSource, Integer, Boolean>() {
 
             private Exception mCause;
             private AsyncReader mReader;
@@ -1252,19 +1201,15 @@ public class EditorActivity extends Activity implements TextWatcher {
             }
 
             @Override
-            protected Boolean doInBackground(FileSystemObject... params) {
+            protected Boolean doInBackground(ReadSource... params) {
                 final EditorActivity activity = EditorActivity.this;
-
-                // Only one argument (the file to open)
-                FileSystemObject fso = params[0];
-                this.mCause = null;
 
                 // Read the file in an async listener
                 try {
                     while (true) {
                         // Configure the reader
                         this.mReader = new AsyncReader(true);
-                        this.mReader.mReadFso = fso;
+                        this.mReader.mReadSource = params[0];
                         this.mReader.mListener = new OnProgressListener() {
                             @Override
                             @SuppressWarnings("synthetic-access")
@@ -1274,8 +1219,7 @@ public class EditorActivity extends Activity implements TextWatcher {
                         };
 
                         // Execute the command (read the file)
-                        CommandHelper.read(activity, fso.getFullPath(), this.mReader,
-                                           null);
+                        mReader.mReadSource.read(mReader);
 
                         // Wait for
                         synchronized (this.mReader.mSync) {
@@ -1322,6 +1266,7 @@ public class EditorActivity extends Activity implements TextWatcher {
                         Log.i(TAG, "Bytes read: " + data.getBytes().length); //$NON-NLS-1$
                     }
                     this.mReader.mByteBuffer = null;
+                    this.mReader.mReadSource.close();
 
                     // 100%
                     this.changeToDisplaying = true;
@@ -1493,7 +1438,17 @@ public class EditorActivity extends Activity implements TextWatcher {
                 return printable;
             }
         };
-        mReadTask.execute(this.mFso);
+        if (mContentProviderUri == null) {
+            mReadTask.execute(new FileSystemObjectReadSource(this, this.mFso));
+        } else {
+            try {
+                mReadTask.execute(new ContentProviderReadSource(this, mContentProviderUri));
+            } catch (IOException ex) {
+                // Cannot read the URI, just exit.
+                ex.printStackTrace();
+                finish();
+            }
+        }
     }
 
     private void checkAndWrite() {
