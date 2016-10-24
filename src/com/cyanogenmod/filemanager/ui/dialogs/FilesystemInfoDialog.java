@@ -19,7 +19,6 @@ package com.cyanogenmod.filemanager.ui.dialogs;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.res.Configuration;
 import android.database.Cursor;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -158,11 +157,6 @@ public class FilesystemInfoDialog implements OnClickListener, OnCheckedChangeLis
     }
 
 
-    public interface OnConfigChangeListener {
-        void onConfigurationChanged(Configuration newConfig);
-    }
-
-
 
     private static final String TAG = "FilesystemInfoDialog"; //$NON-NLS-1$
 
@@ -192,22 +186,6 @@ public class FilesystemInfoDialog implements OnClickListener, OnCheckedChangeLis
     private boolean mIsMountAllowed;
     private final boolean mIsAdvancedMode;
     private boolean mIsInUsageTab = false;
-
-    private final OnConfigChangeListener mOnConfigChangeListener = new OnConfigChangeListener() {
-        @Override
-        public void onConfigurationChanged(Configuration newConfig) {
-            if (mDiskUsageGraph != null) {
-                populateLegend();
-                mDiskUsageGraph.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        //Animate disk usage graph
-                        FilesystemInfoDialog.this.mDiskUsageGraph.drawDiskUsage(mDiskUsage);
-                    }
-                });
-            }
-        }
-    };
 
     /**
      * Constructor of <code>FilesystemInfoDialog</code>.
@@ -268,14 +246,6 @@ public class FilesystemInfoDialog implements OnClickListener, OnCheckedChangeLis
      */
     public void setOnMountListener(OnMountListener onMountListener) {
         this.mOnMountListener = onMountListener;
-    }
-
-    public OnConfigChangeListener getOnConfigChangeListener() {
-        return mOnConfigChangeListener;
-    }
-
-    public void setOnDismissListener(final DialogInterface.OnDismissListener listener) {
-        mDialog.setOnDismissListener(listener);
     }
 
     /**
