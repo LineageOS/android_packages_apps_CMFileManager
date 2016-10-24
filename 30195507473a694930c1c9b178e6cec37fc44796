@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff2e2bb8_1b4c059d",
+        "filename": "res/layout/filesystem_info_dialog.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2016-10-24T05:35:35Z",
+      "side": 1,
+      "message": "Indention seems off.",
+      "revId": "30195507473a694930c1c9b178e6cec37fc44796",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff2e2bb8_bb7d19b3",
+        "filename": "res/layout/filesystem_info_dialog.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2016-10-24T05:35:35Z",
+      "side": 1,
+      "message": "This can be replaced by a LinearLayout with orientation\u003dvertical.",
+      "revId": "30195507473a694930c1c9b178e6cec37fc44796",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff2e2bb8_fb504135",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/DiskUsageGraph.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2016-10-24T05:35:35Z",
+      "side": 1,
+      "message": "Those are useless.",
+      "revId": "30195507473a694930c1c9b178e6cec37fc44796",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff2e2bb8_5b468d7e",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/DiskUsageGraph.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2016-10-24T05:35:35Z",
+      "side": 1,
+      "message": "Kill the whole method.",
+      "revId": "30195507473a694930c1c9b178e6cec37fc44796",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff2e2bb8_3b4bc984",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/DiskUsageGraph.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2016-10-24T05:35:35Z",
+      "side": 1,
+      "message": "Kill this.",
+      "revId": "30195507473a694930c1c9b178e6cec37fc44796",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff2e2bb8_9b5f7540",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/DiskUsageGraph.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2016-10-24T05:35:35Z",
+      "side": 1,
+      "message": "int width \u003d getWidth(), height \u003d getHeight();\nif (width \u003d\u003d 0 || height \u003d\u003d 0) {\n\n...",
+      "revId": "30195507473a694930c1c9b178e6cec37fc44796",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff2e2bb8_7b5c314b",
+        "filename": "src/com/cyanogenmod/filemanager/ui/widgets/DiskUsageGraph.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2016-10-24T05:35:35Z",
+      "side": 1,
+      "message": "Nuke this.",
+      "revId": "30195507473a694930c1c9b178e6cec37fc44796",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
