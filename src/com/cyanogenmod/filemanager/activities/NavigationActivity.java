@@ -206,7 +206,6 @@ public class NavigationActivity extends Activity
     private SearchView mSearchView;
     private NavigationCustomTitleView mCustomTitleView;
     private InputMethodManager mImm;
-    private FilesystemInfoDialog.OnConfigChangeListener mOnConfigChangeListener;
     private ListPopupWindow mPopupWindow;
 
     private final BroadcastReceiver mNotificationReceiver = new BroadcastReceiver() {
@@ -805,9 +804,6 @@ public class NavigationActivity extends Activity
             if (mDrawerToggle != null ) {
                 mDrawerToggle.onConfigurationChanged(newConfig);
             }
-        }
-        if (mActiveDialog != null && mOnConfigChangeListener != null) {
-            mOnConfigChangeListener.onConfigurationChanged(newConfig);
         }
         NavigationView navView = getCurrentNavigationView();
         if (navView != null) {
@@ -2303,13 +2299,6 @@ public class NavigationActivity extends Activity
                     intent.putExtra(EXTRA_ADD_TO_HISTORY, false);
                     initNavigation(NavigationActivity.this.mCurrentNavigationView, false, intent);
                 }
-            }
-        });
-        mOnConfigChangeListener = dialog.getOnConfigChangeListener();
-        dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-                mOnConfigChangeListener = null;
             }
         });
         dialog.show();
