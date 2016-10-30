@@ -782,4 +782,5 @@
   <string name="storage_permissions_denied">Filhanteraren behöver behörighet till lagring för att kunna visa dina filer.</string>
   <string name="storage_permissions_explanation">Gå till inställningar och tryck på behörigheter för att bevilja behörighet.</string>
   <string name="snackbar_settings">Inställningar</string>
+  <!-- Wrap mode - toast -->
 </resources>

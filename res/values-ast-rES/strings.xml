@@ -774,4 +774,5 @@
   <string name="storage_permissions_denied">El xestor de ficheros rique\'l permisu d\'almacemientu pa ver los tos ficheros.</string>
   <string name="storage_permissions_explanation">Vete a Axustes y calca en Permisos pa conceder el permisu.</string>
   <string name="snackbar_settings">Axustes</string>
+  <!-- Wrap mode - toast -->
 </resources>

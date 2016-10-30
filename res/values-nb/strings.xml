@@ -776,4 +776,6 @@
   <string name="storage_permissions_denied">FileManager krever tillatelse til lager for å vise filene.</string>
   <string name="storage_permissions_explanation">Gå til innstillinger, og tapp tillatelser gi tillatelse.</string>
   <string name="snackbar_settings">Innstillinger</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Slår av/på ordoppdeling ved linjeslutt</string>
 </resources>

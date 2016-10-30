@@ -752,4 +752,5 @@
   <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Sveicināti CyanogenMod failu pārvaldniekā.\n\nŠī lietotne ļauj jums pārlūkot failu sistēmu un veikt darbības, kas varētu salauzt jūsu iekārtu. Lai izvairītos no bojājumiem, palaidiet lietotni drošā režīmā ar mazām tiesībām.\n\nJūsu varat piekļūt papildu priviliģētam režīmam, izmantojot iestatījumus. Tajā jūs atbildat par jūsu sistēmas darbības nodrošināšanu.\n\nCyanogenMod komanda</string>
   <string name="snackbar_settings">Iestatījumi</string>
+  <!-- Wrap mode - toast -->
 </resources>

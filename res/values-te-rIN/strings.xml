@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">మీ యొక్క ఫైళ్ళను వీక్షించడానికి ఫైల్ మేనేజరుకు నిల్వలోకి అనుమతి అవసరం</string>
   <string name="storage_permissions_explanation">సెట్టింగ్సుకు వెళ్ళండి, మరియు అనుమతినిచ్చేందుకు అనుమతులపైన ట్యాప్ చేయండి.</string>
   <string name="snackbar_settings">సెట్టింగ్‌లు</string>
+  <!-- Wrap mode - toast -->
 </resources>

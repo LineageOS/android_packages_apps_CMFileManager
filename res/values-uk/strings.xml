@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">Для перегляду файловому менеджеру потрібен доступ до сховища.</string>
   <string name="storage_permissions_explanation">Перейдіть в налаштування програми і натисніть \"Дозволи\" для включення дозволу.</string>
   <string name="snackbar_settings">Налаштування</string>
+  <!-- Wrap mode - toast -->
 </resources>

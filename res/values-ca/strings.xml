@@ -773,4 +773,6 @@
   <string name="storage_permissions_denied">El Gestor d\'arxius requereix permís per a emmagatzemar per mostrar els teus fitxers.</string>
   <string name="storage_permissions_explanation">Ves la Configuració i prem a Permisos per concedir el permís.</string>
   <string name="snackbar_settings">Configuració</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">S\'està commutant al mode de salt de línia</string>
 </resources>

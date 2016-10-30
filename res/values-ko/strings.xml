@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">파일 매니저는 파일을 보기 위한 권한이 필요합니다.</string>
   <string name="storage_permissions_explanation">설정에 이동하고 권한을 탭하여 권한을 부여하세요.</string>
   <string name="snackbar_settings">설정</string>
+  <!-- Wrap mode - toast -->
 </resources>

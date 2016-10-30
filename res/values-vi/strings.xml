@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">Trình quản lý tập tin yêu cầu quyền truy cập bộ nhớ để hiện tập tin của bạn.</string>
   <string name="storage_permissions_explanation">Đi đến Cài đặt và chạm vào Quyền truy cập để cấp quyền.</string>
   <string name="snackbar_settings">Cài đặt</string>
+  <!-- Wrap mode - toast -->
 </resources>

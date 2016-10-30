@@ -772,4 +772,5 @@
   <string name="storage_permissions_denied">מנהל הקבצים דורש הרשאה לאחסון על מנת להציג את הקבצים שלך.</string>
   <string name="storage_permissions_explanation">עבור אל ההגדרות, והקש על הרשאות כדי להעניק הרשאה.</string>
   <string name="snackbar_settings">הגדרות</string>
+  <!-- Wrap mode - toast -->
 </resources>

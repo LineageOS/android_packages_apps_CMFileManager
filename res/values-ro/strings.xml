@@ -765,4 +765,5 @@
   <string name="storage_permissions_denied">Managerul de fișiere necesită permisiune de stocare pentru a putea vizualiza fișierele tale.</string>
   <string name="storage_permissions_explanation">Mergi la Setări și apasă Permisiuni pentru acordarea de permisiuni.</string>
   <string name="snackbar_settings">Setări</string>
+  <!-- Wrap mode - toast -->
 </resources>

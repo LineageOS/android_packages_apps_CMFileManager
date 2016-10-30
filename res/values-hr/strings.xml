@@ -770,4 +770,6 @@
   <string name="storage_permissions_denied">Upravitelj datoteka zahtijeva dozvolu za pohranu da bi pokazao datoteke.</string>
   <string name="storage_permissions_explanation">Idite u Postavke i dodirnite Dozvole za odobravanje dozvole.</string>
   <string name="snackbar_settings">Postavke</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Način prebacivanja prijeloma riječi</string>
 </resources>

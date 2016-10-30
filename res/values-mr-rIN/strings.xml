@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">तुमच्या फाइल्स पाहण्यासाठी फाइल व्यवस्थापकाला संचयनाची परवानगी आवश्यक आहे.</string>
   <string name="storage_permissions_explanation">परवानगी मंजूर करण्यासाठी सेटिंग्जला जा आणि परवानग्या टॅप करा.</string>
   <string name="snackbar_settings">सेटिंग्ज</string>
+  <!-- Wrap mode - toast -->
 </resources>
