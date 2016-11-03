@@ -148,12 +148,13 @@ public class NavigationDrawerController implements OnDirectoryChangedListener {
                 null, null, 0, 0));
 
         // Load manage storage and settings
+        /*
         title = mCtx.getResources().getString(R.string.navigation_item_title_manage);
         summary = null;
         color = mCtx.getResources().getColor(R.color.misc_primary);
         mNavigationDrawerItemList.add(new NavigationDrawerItem(R.id.navigation_item_manage,
                 NavigationDrawerItemType.SINGLE, title, summary, R.drawable.ic_storage_sources,
-                color));
+                color));*/
         title = mCtx.getResources().getString(R.string.navigation_item_title_settings);
         summary = null;
         color = mCtx.getResources().getColor(R.color.misc_primary);
