@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 The CyanogenMod Project
+ * Copyright (C) 2016 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,41 +16,25 @@
 
 package com.cyanogenmod.filemanager.adapters;
 
-import android.support.v4.view.PagerAdapter;
-import android.view.View;
-import com.cyanogenmod.filemanager.R;
-import android.view.ViewGroup;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 
-public class WelcomeAdapter extends PagerAdapter {
+import com.cyanogenmod.filemanager.ui.fragments.WelcomeFragment;
 
-    private final static int COUNT_OF_INTRO_PAGES = 4;
+public class WelcomeAdapter extends FragmentPagerAdapter {
 
-    public Object instantiateItem(ViewGroup collection, int position) {
+    public WelcomeAdapter(FragmentManager mFragmentManager) {
+        super(mFragmentManager);
+    }
 
-        int resId = 0;
-        switch (position) {
-            case 0:
-                resId = R.id.itemOne;
-                break;
-            case 1:
-                resId = R.id.itemTwo;
-                break;
-            case 2:
-                resId = R.id.itemThree;
-                break;
-            case 3:
-                resId = R.id.itemFour;
-        }
-        return collection.findViewById(resId);
+    @Override
+    public Fragment getItem(int mPostion) {
+        return WelcomeFragment.newInstance(mPostion + 1);
     }
 
     @Override
     public int getCount() {
-        return COUNT_OF_INTRO_PAGES;
-    }
-
-    @Override
-    public boolean isViewFromObject(View view, Object o) {
-        return view == ((View) o);
+        return 3;
     }
 }
