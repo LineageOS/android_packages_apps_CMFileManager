@@ -248,10 +248,14 @@ public class SearchActivity extends Activity
                     try {
                         mExecutable = null;
                         mAdapter.stopStreaming();
+                        int resultsSize = mAdapter.resultsSize();
                         mStreamingSearchProgress.setVisibility(View.INVISIBLE);
                         if (mMimeTypeCategories != null && mMimeTypeCategories.size() > 1) {
                             mMimeTypeSpinner.setVisibility(View.VISIBLE);
                         }
+                        mSearchListView.setVisibility(resultsSize > 0 ? View.VISIBLE : View.GONE);
+                        mEmptyListMsg.setVisibility(resultsSize > 0 ? View.GONE : View.VISIBLE);
+
                     } catch (Throwable ex) {
                         // hide the search progress spinner if the search fails
                         mStreamingSearchProgress.setVisibility(View.INVISIBLE);
@@ -268,6 +272,7 @@ public class SearchActivity extends Activity
         @SuppressWarnings("unchecked")
         public void onConcurrentPartialResult(final Object partialResults) {
             //Saved in the global result list, for save at the end
+            FileSystemObject result = null;
             if (partialResults instanceof FileSystemObject) {
                 FileSystemObject fso = (FileSystemObject) partialResults;
                 if (mMimeTypeCategories == null || mMimeTypeCategories.contains(MimeTypeHelper
@@ -285,6 +290,24 @@ public class SearchActivity extends Activity
                     }
                 }
             }
+
+            //Notify progress
+            mSearchListView.post(new Runnable() {
+                @Override
+                public void run() {
+                    int progress = mAdapter.resultsSize();
+                    String foundItems =
+                            getResources().
+                                    getQuantityString(
+                                            R.plurals.search_found_items, progress,
+                                            Integer.valueOf(progress) );
+                    mSearchFoundItems.setText(
+                            getString(
+                                    R.string.search_found_items_in_directory,
+                                    foundItems,
+                                    mSearchDirectory));
+                }
+            });
         }
 
         /**
@@ -788,7 +811,7 @@ public class SearchActivity extends Activity
                     DialogHelper.showToast(
                             SearchActivity.this,
                             R.string.search_error_msg, Toast.LENGTH_SHORT);
-                    toggleResults(false, true);
+                    SearchActivity.this.mSearchListView.setVisibility(View.GONE);
                 }
             }
         });
