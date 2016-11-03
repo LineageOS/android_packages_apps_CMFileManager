@@ -32,7 +32,7 @@ public class BookmarksDatabaseHelper extends SQLiteOpenHelper {
     private static boolean DEBUG = false;
 
     private static final String DATABASE_NAME = "bookmarks.db"; //$NON-NLS-1$
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     /**
      * Constructor of <code>BookmarksDatabaseHelper</code>
@@ -51,11 +51,7 @@ public class BookmarksDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE bookmarks (" + //$NON-NLS-1$
                    "_id INTEGER PRIMARY KEY," + //$NON-NLS-1$
                    "path TEXT);"); //$NON-NLS-1$
-
-        db.execSQL("CREATE TABLE history (" + //$NON-NLS-1$
-                "_id INTEGER PRIMARY KEY," + //$NON-NLS-1$
-                "title TEXT," + //$NON-NLS-1$
-                "description TEXT);"); //$NON-NLS-1$
+        createHistoryTable(db);
     }
 
     /**
@@ -65,10 +61,17 @@ public class BookmarksDatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int currentVersion) {
         if (DEBUG) {
             Log.v(TAG, "Upgrading bookmarks database from version " + //$NON-NLS-1$
-                oldVersion + " to " + currentVersion + //$NON-NLS-1$
-                ", which will destroy all old data"); //$NON-NLS-1$
+                oldVersion + " to " + currentVersion); //$NON-NLS-1$
         }
-        db.execSQL("DROP TABLE IF EXISTS bookmarks"); //$NON-NLS-1$
-        onCreate(db);
+        if (oldVersion < 2) {
+            createHistoryTable(db);
+        }
+    }
+
+    private void createHistoryTable(SQLiteDatabase db) {
+        db.execSQL("CREATE TABLE history (" + //$NON-NLS-1$
+                "_id INTEGER PRIMARY KEY," + //$NON-NLS-1$
+                "title TEXT," + //$NON-NLS-1$
+                "description TEXT);"); //$NON-NLS-1$
     }
 }
