@@ -484,8 +484,6 @@ public class NavigationFragment extends Fragment
     private int mOrientation;
 
 
-    private boolean mDisplayingSearchResults;
-
     /**
      * @hide
      */
@@ -581,8 +579,7 @@ public class NavigationFragment extends Fragment
     public void onResume() {
         super.onResume();
 
-        if (mDisplayingSearchResults) {
-            mDisplayingSearchResults = false;
+        if (mSearchView.getVisibility() == View.VISIBLE) {
             closeSearch();
         }
 
@@ -1524,16 +1521,14 @@ public class NavigationFragment extends Fragment
      * @hide
      */
     void initNavigation(final int viewId, final boolean restore, final Intent intent) {
-        if (mDisplayingSearchResults || restore) {
-            return;
-        }
-
         final NavigationView navigationView = getNavigationView(viewId);
         this.mHandler.post(new Runnable() {
             @Override
             public void run() {
                 //Is necessary navigate?
-                applyInitialDir(navigationView, intent);
+                if (!restore) {
+                    applyInitialDir(navigationView, intent);
+                }
             }
         });
     }
@@ -1725,7 +1720,6 @@ public class NavigationFragment extends Fragment
                             if (fso != null) {
                                 //Goto to new directory
                                 getCurrentNavigationView().open(fso, searchInfo);
-                                mDisplayingSearchResults = true;
                             }
                         }
                     } else if (resultCode == getActivity().RESULT_CANCELED) {
