@@ -291,6 +291,7 @@ public class MainActivity extends ActionBarActivity
 
         mToolBar = (Toolbar) findViewById(R.id.material_toolbar);
         setSupportActionBar(mToolBar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
