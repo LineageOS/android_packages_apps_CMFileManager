@@ -44,8 +44,8 @@
     <!-- Default buttons -->
     <string name="ok" translatable="false">@android:string/ok</string>
     <string name="cancel" translatable="false">@android:string/cancel</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="yes" translatable="false">@android:string/yes</string>
+    <string name="no" translatable="false">@android:string/no</string>
     <string name="all">All</string>
     <string name="overwrite">Overwrite</string>
     <string name="select">Select</string>
@@ -67,9 +67,9 @@
     <!-- Computing new line message -->
     <string name="computing_message_ln" translatable="false"><xliff:g id="data">%1$s</xliff:g></string>
     <!-- Cancelled message -->
-    <string name="cancelled_message">Cancelled.</string>
+    <string name="cancelled_message">Cancelled</string>
     <!-- Error message -->
-    <string name="error_message">Error.</string>
+    <string name="error_message">Error</string>
     <!-- Copy text content description -->
     <string name="copy_text_cd">Tap to copy text to clipboard</string>
     <!-- Copy text content message -->
@@ -89,67 +89,67 @@
     <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
     <string name="msgs_change_to_prompt_access_mode_title">Confirm switch</string>
     <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
-    <string name="msgs_change_to_prompt_access_mode_msg">Unable to run in Root Access mode. Changing to Safe mode.\n\nApply this change?</string>
+    <string name="msgs_change_to_prompt_access_mode_msg">Unable to run in root mode. Change to safe mode?</string>
 
     <!-- A console couldn't be created - Without privileges, the app won't work -->
-    <string name="msgs_cant_create_console">Unable to gain the required privileges to function.</string>
+    <string name="msgs_cant_create_console">Unable to gain the required privileges to function</string>
     <!-- The message shown when an allocation of a privileged console fails, and a non
          privileged is allocated -->
-    <string name="msgs_privileged_console_alloc_failed">Unable to run in Root Access mode. Changing to Safe mode.</string>
+    <string name="msgs_privileged_console_alloc_failed">Unable to run in root mode. Changing to safe mode\u2026</string>
     <!-- The selected setting was not applied or stored -->
-    <string name="msgs_settings_save_failure">The setting could not be applied or stored.</string>
+    <string name="msgs_settings_save_failure">The setting could not be applied</string>
     <!-- The initial directory has an invalid or inaccessible reference -->
-    <string name="msgs_settings_invalid_initial_directory">The initial folder \'<xliff:g id="initial_dir">%1$s</xliff:g>\' is invalid. Changing to root folder.</string>
+    <string name="msgs_settings_invalid_initial_directory">Initial folder \'<xliff:g id="initial_dir">%1$s</xliff:g>\' is invalid. Changing to root folder\u2026</string>
     <!-- Root is not available message -->
-    <string name="root_not_available_msg">Root is not available on this device. Cannot perform this operation.</string>
+    <string name="root_not_available_msg">Root isn\'t available on this device</string>
 
     <!-- Success -->
-    <string name="msgs_success">The operation was completed successfully.</string>
+    <string name="msgs_success">Done</string>
     <!-- Unknown error -->
-    <string name="msgs_unknown">An error was detected. The operation was unsuccessful.</string>
+    <string name="msgs_unknown">Operation failed</string>
     <!-- When an operation requires elevated privileged (normally caused for the use of a
          non-privileged console) -->
-    <string name="msgs_insufficient_permissions">This operation requires elevated permissions. Try changing to Root Access mode.</string>
+    <string name="msgs_insufficient_permissions">This operation requires elevated permissions. Try changing to root mode</string>
     <!-- When an operation fails because the device has run out of storage. -->
-    <string name="msgs_no_disk_space">This operation failed because there is no space left on the device.</string>
+    <string name="msgs_no_disk_space">Failed: no space left on the device</string>
     <!-- The file or directory was not found -->
-    <string name="msgs_file_not_found">The file or folder was not found.</string>
+    <string name="msgs_file_not_found">File or directory not found</string>
     <!-- The command reference couldn't be created (not found or invalid definition)
          (normally caused by a development error) -->
-    <string name="msgs_command_not_found">The operation\'s command was not found or has an invalid definition.</string>
+    <string name="msgs_command_not_found">Operation\'s command was not found or has an invalid definition</string>
     <!-- I/O exception -->
-    <string name="msgs_io_failed">Read/write failure.</string>
+    <string name="msgs_io_failed">I/O failure</string>
     <!-- Operation timeout detected -->
-    <string name="msgs_operation_timeout">The operation timed out.</string>
+    <string name="msgs_operation_timeout">Operation timed out</string>
     <!-- The operation returns an invalid exit code -->
-    <string name="msgs_operation_failure">The operation failed.</string>
+    <string name="msgs_operation_failure">Operation failed</string>
     <!-- A console couldn't be allocated -->
-    <string name="msgs_console_alloc_failure">An internal error occurred.</string>
+    <string name="msgs_console_alloc_failure">An internal error occurred</string>
     <!-- An operation can't be cancelled -->
-    <string name="msgs_operation_can_not_be_cancelled">The operation cannot be cancelled.</string>
+    <string name="msgs_operation_can_not_be_cancelled">The operation can\'t be cancelled</string>
     <!-- The operation requieres mount the file system prior to execute the command -->
-    <string name="msgs_read_only_filesystem">The file system is read-only. Try to mount the file system as read-write before attempting the operation.</string>
+    <string name="msgs_read_only_filesystem">File system is read-only. Mount it as read-write before attempting the operation</string>
     <!-- Illegal argument (normally caused by a development error when calling internal api) -->
-    <string name="msgs_illegal_argument">Illegal argument. Invocation failed.</string>
+    <string name="msgs_illegal_argument">Illegal argument, invocation failed</string>
     <!-- The operation will cause inconsistencies -->
-    <string name="msgs_unresolved_inconsistencies">The operation is not permitted because it would create inconsistencies.</string>
+    <string name="msgs_unresolved_inconsistencies">The operation is not permitted because it would create inconsistencies</string>
     <!-- Operation not permitted in the current directory -->
-    <string name="msgs_operation_not_allowed_in_current_directory">Destination folder cannot be a subfolder of source or be the same as source.</string>
+    <string name="msgs_operation_not_allowed_in_current_directory">Destination folder cannot be a subfolder of source or be the same as source</string>
 
     <!-- The advice message prior to exit the app -->
-    <string name="msgs_push_again_to_exit">Press again to exit.</string>
+    <string name="msgs_push_again_to_exit">Press again to exit</string>
 
     <!-- There is no registered app that can handle the mime-type -->
-    <string name="msgs_not_registered_app">There is no app registered to handle the type of file selected.</string>
+    <string name="msgs_not_registered_app">No app registered to handle the selected file</string>
 
     <!-- Overwrite files? -->
-    <string name="msgs_overwrite_files">Some of the files already exist in the destination folder.\n\nOverwrite?</string>
+    <string name="msgs_overwrite_files">Some of the files already exist in the destination folder.\nDo you want to overwrite them?</string>
 
     <!-- The association of an action to the app failed -->
-    <string name="msgs_action_association_failed">Associating the action to the app failed.</string>
+    <string name="msgs_action_association_failed">Associating the action to the app failed</string>
 
     <!-- An operation requires elevated privileged. Ask the user. -->
-    <string name="advise_insufficient_permissions">The operation requires elevated privileges.\n\nDo you want to change to Root Access mode?</string>
+    <string name="advise_insufficient_permissions">This operation requires elevated privileges.\nDo you want to change to root mode?</string>
 
     <!-- The parent directory of the current directory in navigation view -->
     <string name="parent_dir">Parent folder</string>
@@ -159,7 +159,7 @@
     <string name="usb_storage">USB storage</string>
 
     <!-- ActionBar Buttons - FileSystem -->
-    <string name="actionbar_button_filesystem_cd">File system info</string>
+    <string name="actionbar_button_filesystem_cd">File System info</string>
     <!-- ActionBar Buttons - Sort Mode -->
     <string name="actionbar_button_sort_mode_cd">Sort mode</string>
     <!-- ActionBar Buttons - Layout Mode -->
@@ -229,13 +229,13 @@
     <!-- Filesystem Info (no data). Dialog title -->
     <string name="filesystem_info_warning_title">No information</string>
     <!-- Filesystem Info (no data). Dialog message -->
-    <string name="filesystem_info_warning_msg">There is no information available for the file system.</string>
+    <string name="filesystem_info_warning_msg">There is no information available for the file system</string>
     <!-- Filesystem Info - Filesystem couldn't be mounted -->
-    <string name="filesystem_info_cant_be_mounted_msg">The file system cannot be mounted/unmounted.</string>
+    <string name="filesystem_info_cant_be_mounted_msg">The file system cannot be mounted/unmounted</string>
     <!-- Filesystem Info - Not allowed message -->
-    <string name="filesystem_info_mount_not_allowed_msg">File system mounting operations are not allowed in Safe mode. Tap to change to Root Access mode.</string>
+    <string name="filesystem_info_mount_not_allowed_msg">File system mounting operations are not allowed in safe mode. Change to root mode?</string>
     <!-- Filesystem Info - Mount failed -->
-    <string name="filesystem_info_mount_failed_msg">File system mounting operation failed. Some file systems, like SD cards, cannot be mounted/unmounted because they are built-in as read-only file systems.</string>
+    <string name="filesystem_info_mount_failed_msg">File system mounting failed. Some file systems, like SD cards, cannot be mounted/unmounted because they are read-only</string>
     <!-- Filesystem Info Dialog - Title -->
     <string name="filesystem_info_dialog_title">File system information</string>
     <!-- Filesystem Info Dialog - Tab - Info -->
@@ -264,13 +264,13 @@
     <string name="filesystem_info_dialog_free_disk_usage">Free:</string>
 
     <!-- Fso Properties - Not allowed message -->
-    <string name="fso_properties_permissions_not_allowed_msg">Permissions operations are not allowed in Safe mode. Tap to change to Root Access mode.</string>
+    <string name="fso_properties_permissions_not_allowed_msg">Permissions operations are not allowed in safe mode. Do you want to change to root mode?</string>
     <!-- Fso Properties - Failed to change owner to fso -->
-    <string name="fso_properties_failed_to_change_owner_msg">The change of owner operation failed.\n\nFor security reasons, some file systems, like SD cards, do not allow the changing of ownership.</string>
+    <string name="fso_properties_failed_to_change_owner_msg">The change of owner operation failed.\nFor security reasons, you aren\'t allowed to change ownership</string>
     <!-- Fso Properties - Failed to change group to fso -->
-    <string name="fso_properties_failed_to_change_group_msg">The change of group operation failed.\n\nFor security reasons, some file systems, like SD cards, do not allow the changing of groups.</string>
+    <string name="fso_properties_failed_to_change_group_msg">The change of group operation failed.\nFor security reasons, you aren\'t allowed to change groups</string>
     <!-- Fso Properties - Failed to change group to fso -->
-    <string name="fso_properties_failed_to_change_permission_msg">The change of permissions operation failed.\n\nFor security reasons, some file systems, like SD cards, do not allow the changing of permissions.</string>
+    <string name="fso_properties_failed_to_change_permission_msg">The change of permissions failed.\nFor security reasons, you aren\'t allowed to change permissions</string>
     <!-- Fso Properties Dialog - Title -->
     <string name="fso_properties_dialog_title">Properties</string>
     <!-- Fso Properties Dialog - Tab - Info -->
@@ -318,16 +318,16 @@
     <string name="fso_failed_to_allow_media_scan">Failed to allow media scanning</string>
     <string name="fso_failed_to_prevent_media_scan">Failed to prevent media scanning</string>
     <string name="fso_delete_nomedia_dir_title">Delete .nomedia directory</string>
-    <string name="fso_delete_nomedia_dir_body">This directory contains a .nomedia directory.\n\nDo you want to delete it and all of its contents?</string>
+    <string name="fso_delete_nomedia_dir_body">This directory contains a .nomedia directory.\nDo you want to delete it and all of its contents?</string>
     <string name="fso_delete_nomedia_non_empty_title">Delete .nomedia file</string>
-    <string name="fso_delete_nomedia_non_empty_body">This directory contains a non-empty .nomedia file.\n\nDo you want to delete it?</string>
+    <string name="fso_delete_nomedia_non_empty_body">This directory contains a non-empty .nomedia file.\nDo you want to delete it?</string>
 
     <!-- History - History activity title -->
     <string name="history">History</string>
     <!-- History - The history is empty -->
-    <string name="msgs_history_empty">History is empty.</string>
+    <string name="msgs_history_empty">History is empty</string>
     <!-- History - The history reference is not in the actual history list -->
-    <string name="msgs_history_unknown">Unknown history item.</string>
+    <string name="msgs_history_unknown">Unknown history item</string>
 
     <!-- Search - Search activity title -->
     <string name="search">Search results</string>
@@ -336,9 +336,9 @@
     <!-- Search - Voice search hint message -->
     <string name="search_voice_hint">Speak your search</string>
     <!-- Search - Search error message -->
-    <string name="search_error_msg">An error occurred while searching. No results found.</string>
+    <string name="search_error_msg">An error occurred while searching. No results found</string>
     <!-- Search - Search no results message -->
-    <string name="search_no_results_msg">No results found.</string>
+    <string name="search_no_results_msg">No results found</string>
     <!-- Search - Number of items found in directory -->
     <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> in <xliff:g id="path">%2$s</xliff:g></string>
     <!-- Search - Search query terms -->
@@ -346,11 +346,11 @@
     <!-- Search - Confirm search -->
     <string name="search_few_characters_title">Confirm search</string>
     <!-- Search - Some terms of the search are too small. The operation could be very costly -->
-    <string name="search_few_characters_msg">Some of the search terms has a small number of characters. The operation could be very costly in time and system resources.\n\nDo you want to continue?</string>
+    <string name="search_few_characters_msg">Search terms have a small number of characters, the operation could be very costly in time.\nDo you want to continue?</string>
     <!-- Search - Searching dialog title -->
     <string name="searching">Please wait\u2026</string>
     <!-- Search - Searching label -->
-    <string name="searching_action_label">Searching in progress</string>
+    <string name="searching_action_label">Searching</string>
 
     <!-- Picker Activity -->
     <string name="picker" translatable="false">@string/app_name</string>
@@ -363,19 +363,19 @@
     <!-- Editor - Editor activity title -->
     <string name="editor">Editor</string>
     <!-- Editor - Invalid file message -->
-    <string name="editor_invalid_file_msg">Invalid file.</string>
+    <string name="editor_invalid_file_msg">Invalid file</string>
     <!-- Editor - File not found message -->
-    <string name="editor_file_not_found_msg">File not found.</string>
+    <string name="editor_file_not_found_msg">File not found</string>
     <!-- Editor - File size exceed the limit -->
-    <string name="editor_file_exceed_size_msg">The file is too big to be open inside this device.</string>
+    <string name="editor_file_exceed_size_msg">Unable to open the file, it\'s too big</string>
     <!-- Editor - Editor is dirty, ask the user - Dialog title -->
     <string name="editor_dirty_ask_title">Confirm exit</string>
     <!-- Editor - Editor is dirty, ask the user - Dialog message -->
-    <string name="editor_dirty_ask_msg">There are unsaved changes.\n\nExit without saving?</string>
+    <string name="editor_dirty_ask_msg">There are unsaved changes.\nExit without saving?</string>
     <!-- Editor - Save operation success -->
-    <string name="editor_successfully_saved">The file was successfully saved.</string>
+    <string name="editor_successfully_saved">Saved</string>
     <!-- Editor - Read-only file mode -->
-    <string name="editor_read_only_mode">The file is opened in read-only mode.</string>
+    <string name="editor_read_only_mode">Opened in read-only mode</string>
     <!-- Editor - Dumping message -->
     <string name="dumping_message">Generating hex dump\u2026</string>
     <!-- Editor - Displaying -->
@@ -386,7 +386,7 @@
     <!-- Bookmarks - Bookmark name - Home -->
     <string name="bookmarks_home">Home</string>
     <!-- Bookmarks - Bookmark name - Root folder -->
-    <string name="bookmarks_root_folder">Root folder</string>
+    <string name="bookmarks_root_folder">root folder</string>
     <!-- Bookmarks - Bookmark name - System folder -->
     <string name="bookmarks_system_folder">System folder</string>
     <!-- Bookmarks - Bookmark name - Secure storage -->
@@ -394,13 +394,13 @@
     <!-- Bookmarks - Bookmark name - Remote storage -->
     <string name="bookmarks_remote">Remote storage</string>
     <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
-    <string name="bookmarks_button_config_cd">Set the initial folder.</string>
+    <string name="bookmarks_button_config_cd">Set the initial folder</string>
     <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
-    <string name="bookmarks_button_remove_bookmark_cd">Remove the bookmark.</string>
+    <string name="bookmarks_button_remove_bookmark_cd">Remove the bookmark</string>
     <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
-    <string name="bookmarks_msgs_add_success">The bookmark was added successfully.</string>
+    <string name="bookmarks_msgs_add_success">The bookmark was added successfully</string>
     <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
-    <string name="bookmarks_msgs_add_exists">The bookmark already exists.</string>
+    <string name="bookmarks_msgs_add_exists">The bookmark already exists</string>
 
     <!-- Navigation Drawer Item Titles - Home -->
     <string name="navigation_item_title_home">Home</string>
@@ -426,9 +426,9 @@
     <!-- Initial directory label -->
     <string name="initial_directory_label">Choose the initial folder:</string>
     <!-- Initial directory is relative -->
-    <string name="initial_directory_relative_msg">Relative paths are not allowed.</string>
+    <string name="initial_directory_relative_msg">Relative paths are not allowed</string>
     <!-- Initial directory error message -->
-    <string name="initial_directory_error_msg">An error occurred while saving the initial folder.</string>
+    <string name="initial_directory_error_msg">An error occurred while saving the initial folder</string>
 
     <!-- Menu - Navigation - Search -->
     <string name="menu_search">Search</string>
@@ -478,9 +478,9 @@
     <string name="waiting_dialog_opening_storage_provider_message_2">Opening\u2026</string>
     <string name="waiting_dialog_opening_storage_provider_message"><![CDATA[<b>Opening</b>]]> <xliff:g id="file">%1$s</xliff:g><![CDATA[<br/>]]> <![CDATA[<b>From</b>]]> <xliff:g id="name">%2$s</xliff:g></string>
     <!-- Extracting - Success message -->
-    <string name="msgs_extracting_success">The extracting operation was completed successfully. The data was extracted to <xliff:g id="destination">%1$s</xliff:g>.</string>
+    <string name="msgs_extracting_success">Done. The data was extracted to <xliff:g id="destination">%1$s</xliff:g></string>
     <!-- Compressing - Success message -->
-    <string name="msgs_compressing_success">The compressing operation was completed successfully. The data was compressed to <xliff:g id="destination">%1$s</xliff:g>.</string>
+    <string name="msgs_compressing_success">Done. The data was compressed to <xliff:g id="destination">%1$s</xliff:g></string>
 
     <!-- Actions Dialog - Title -->
     <string name="actions_dialog_title">Actions</string>
@@ -553,15 +553,15 @@
     <!-- Enter Name Dialog - Label -->
     <string name="input_name_dialog_label">Name:</string>
     <!-- Enter Name Dialog - Message - Empty name -->
-    <string name="input_name_dialog_message_empty_name">The name cannot be empty.</string>
+    <string name="input_name_dialog_message_empty_name">Name cannot be empty</string>
     <!-- Enter Name Dialog - Message - Invalid name -->
-    <string name="input_name_dialog_message_invalid_path_name">Invalid name. The characters \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' are not allowed.</string>
+    <string name="input_name_dialog_message_invalid_path_name">Invalid name. The characters \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' are not allowed</string>
     <!-- Enter Name Dialog - Message - Invalid name length -->
-    <string name="input_name_dialog_message_invalid_name_length">Maximum character limit reached.</string>
+    <string name="input_name_dialog_message_invalid_name_length">Maximum character limit reached</string>
     <!-- Enter Name Dialog - Message - Invalid name -->
-    <string name="input_name_dialog_message_invalid_name">Invalid name. The names \'.\' and \'..\' are not allowed.</string>
+    <string name="input_name_dialog_message_invalid_name">Invalid name. The names \'.\' and \'..\' are not allowed</string>
     <!-- Enter Name Dialog - Message - Name exists -->
-    <string name="input_name_dialog_message_name_exists">The name already exists.</string>
+    <string name="input_name_dialog_message_name_exists">The name already exists</string>
 
     <!-- Associations Dialog - Title -->
     <string name="associations_dialog_title">Associations</string>
@@ -577,7 +577,7 @@
     <string name="associations_dialog_sendwith_action">Send</string>
 
     <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
-    <string name="inline_autocomplete_tab_nothing_to_complete_msg">Nothing to complete.</string>
+    <string name="inline_autocomplete_tab_nothing_to_complete_msg">Nothing to complete</string>
 
     <!-- Execution console - Title -->
     <string name="execution_console_title">Console</string>
@@ -588,7 +588,7 @@
     <!-- Execution console - The script exit code label -->
     <string name="execution_console_script_exitcode_label">Exit code:</string>
     <!-- Execution console - The script execution time seconds string -->
-    <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> sec.</string>
+    <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> sec</string>
 
     <!-- Compute checksum - Title -->
     <string name="compute_checksum_title">Compute checksum</string>
@@ -649,11 +649,11 @@
     <string name="compression_mode_zip" translatable="false">Zip (zip)</string>
 
     <!-- Shortcut. Failed to handle the shortcut -->
-    <string name="shortcut_failed_msg">Failed to handle the shortcut.</string>
+    <string name="shortcut_failed_msg">Failed to handle the shortcut</string>
     <!-- Shortcut. The shortcut was created -->
-    <string name="shortcut_creation_success_msg">Shortcut created successfully.</string>
+    <string name="shortcut_creation_success_msg">Shortcut created successfully</string>
     <!-- Shortcut. The shortcut wasn't created -->
-    <string name="shortcut_creation_failed_msg">Shortcut creation failed.</string>
+    <string name="shortcut_creation_failed_msg">Shortcut creation failed</string>
 
     <!-- Preferences title -->
     <string name="pref">Settings</string>
@@ -693,9 +693,9 @@
     <!-- Preferences - General - Display thumbs summary -->
     <string name="pref_display_thumbs_summary">Show a preview image for apps, music files, pictures and videos</string>
     <!-- Preferences - General - Use flinger detection -->
-    <string name="pref_use_flinger">Use swipe gestures</string>
+    <string name="pref_use_flinger">Swipe to delete</string>
     <!-- Preferences - General - Use flinger detection summary -->
-    <string name="pref_use_flinger_summary">Use swipe left to right gesture detection to delete files or folders</string>
+    <string name="pref_use_flinger_summary">Swipe right to delete a folder or a file</string>
     <!-- Preferences - General - Advanced settings category -->
     <string name="pref_general_advanced_settings_category">Advanced</string>
     <!-- Preferences - General - Access mode -->
@@ -703,23 +703,23 @@
     <!-- Preferences - General - Safe mode -->
     <string name="pref_access_mode_safe">Safe mode</string>
     <!-- Preferences - General - Safe mode summary -->
-    <string name="pref_access_mode_safe_summary">Safe mode\n\nThe app is running without privileges and the only accessible file systems are the storage volumes (SD cards and USB)</string>
+    <string name="pref_access_mode_safe_summary">Safe mode: the app is running without privileges and the only SD cards and USB are accessible</string>
     <!-- Preferences - General - Prompt user mode -->
-    <string name="pref_access_mode_prompt">Prompt User mode</string>
+    <string name="pref_access_mode_prompt">Ask mode</string>
     <!-- Preferences - General - Prompt user mode summary -->
-    <string name="pref_access_mode_prompt_summary">Prompt User mode\n\nThe app is running with full access to the file system but will prompt for permission prior to executing any privileged actions</string>
+    <string name="pref_access_mode_prompt_summary">Ask mode: the app is running with full access to the filesystem but will prompt for permission prior to executing any privileged actions</string>
     <!-- Preferences - General - Root access mode -->
-    <string name="pref_access_mode_root">Root Access mode</string>
+    <string name="pref_access_mode_root">Root mode</string>
     <!-- Preferences - General - Root access mode summary -->
-    <string name="pref_access_mode_root_summary">Root Access mode\n\nWarning! This mode allows operations that could break your device. It\'s your responsibility to ensure that an operation is safe</string>
+    <string name="pref_access_mode_root_summary">Root mode: the app is running with full access to the filesystem. Warning! This allows operations that could break your device</string>
     <!-- Preferences - General - Restrict secondary users access title -->
-    <string name="pref_restrict_secondary_users_access_title">Restrict users access</string>
+    <string name="pref_restrict_secondary_users_access_title">Restrict users</string>
     <!-- Preferences - General - Restrict secondary users access summary -->
     <string name="pref_restrict_secondary_users_access_summary">Restrict access to the whole system to secondary users</string>
     <!-- Preferences - Search - Results category -->
     <string name="pref_search_results_category">Results</string>
     <!-- Preferences - Search - Show relevance widget -->
-    <string name="pref_show_relevance_widget">Show relevance widget</string>
+    <string name="pref_show_relevance_widget">Show relevance</string>
     <!-- Preferences - Search - Highlight search terms -->
     <string name="pref_highlight_terms">Highlight search terms</string>
     <!-- Preferences - Search - Sort results mode -->
@@ -743,7 +743,7 @@
     <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
     <string name="pref_secure_storage_delayed_sync_title">Delayed synchronization</string>
     <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
-    <string name="pref_secure_storage_delayed_sync_summary">Synchronization of secure file systems is a costly operation. Enable this option to allow faster responses after every operation, performing the synchronization when the filesystem is in unused state, but at the expense of losing the pending information not synced if the app crashes.</string>
+    <string name="pref_secure_storage_delayed_sync_summary">Synchronization is a costly operation. Enable this to allow faster responses after every operation. The synchronization will be done when the filesystem is unused. This could lead to data loss on secure filesystem if the app crashes</string>
     <!-- Preferences - Storage - Secure Storage - Change password title -->
     <string name="pref_secure_storage_reset_password_title">Change password</string>
     <!-- Preferences - Storage - Secure Storage - Delete storage title -->
@@ -781,9 +781,9 @@
     <!-- Preferences - Themes - Set theme button -->
     <string name="pref_themes_set_theme">Set theme</string>
     <!-- Preferences - Themes - Confirmation message -->
-    <string name="pref_themes_confirmation">Theme was applied successfully.</string>
+    <string name="pref_themes_confirmation">Theme was applied successfully</string>
     <!-- Preferences - Themes - Theme not found message -->
-    <string name="pref_themes_not_found">Theme not found.</string>
+    <string name="pref_themes_not_found">Theme not found</string>
 
     <!-- Preferences - Debug - Capture debug traces -->
     <string name="pref_debug_traces">Log debugging information</string>
@@ -829,13 +829,13 @@
     <!-- Secure Storage dialog title - Delete -->
     <string name="secure_storage_delete_title">Delete secure storage</string>
     <!-- Secure Storage unlock dialog message (secure storage exists) -->
-    <string name="secure_storage_unlock_key_prompt_msg">Type the password to unlock the secure storage filesystem.</string>
+    <string name="secure_storage_unlock_key_prompt_msg">Type the password to unlock the secure storage filesystem</string>
     <!-- Secure Storage unlock dialog message (new secure storage) -->
-    <string name="secure_storage_unlock_key_new_msg">Type a password to protect the secure storage filesystem.</string>
+    <string name="secure_storage_unlock_key_new_msg">Type a password to protect the secure storage filesystem</string>
     <!-- Secure Storage unlock dialog message (reset the current password) -->
-    <string name="secure_storage_unlock_key_reset_msg">Type the current and new passwords to reset the secure storage filesystem.</string>
+    <string name="secure_storage_unlock_key_reset_msg">Type the current and new passwords to reset the secure storage filesystem</string>
     <!-- Secure Storage unlock dialog message (delete the secure storage) -->
-    <string name="secure_storage_unlock_key_delete_msg">Type the current password to delete the secure storage filesystem.</string>
+    <string name="secure_storage_unlock_key_delete_msg">Type the current password to delete the secure storage filesystem</string>
     <!-- Secure Storage unlock dialog old key title -->
     <string name="secure_storage_unlock_old_key_title">Old password:</string>
     <!-- Secure Storage unlock dialog key title -->
@@ -855,11 +855,11 @@
     <!-- Secure Storage unlock failed toast -->
     <string name="secure_storage_unlock_failed">Cannot unlock the storage</string>
     <!-- Secure Storage unlock validation, length -->
-    <string name="secure_storage_unlock_validation_length">Password must have at least <xliff:g id="characters">%1$d</xliff:g> characters.</string>
+    <string name="secure_storage_unlock_validation_length">Password must have at least <xliff:g id="characters">%1$d</xliff:g> characters</string>
     <!-- Secure Storage unlock validation, equal -->
-    <string name="secure_storage_unlock_validation_equals">Passwords do not match.</string>
+    <string name="secure_storage_unlock_validation_equals">Passwords do not match</string>
     <!-- Secure storage open file warning -->
-    <string name="secure_storage_open_file_warning">This will copy the file out to a temporary unencrypted location. This will be cleared after 1 hour.</string>
+    <string name="secure_storage_open_file_warning">This will copy the file out to a temporary unencrypted location. This will be cleared after 1 hour</string>
 
     <!-- Print messages -->
     <!-- Unsupported document format -->
@@ -872,7 +872,7 @@
     <string name="print_document_footer">Page <xliff:g id="page_number">%1$s</xliff:g></string>
 
     <!-- Security - Extract relative or absolute files -->
-    <string name="security_warning_extract">Warning!\n\nExtracting an archive file with relative or absolute paths may cause damage to your device by overwriting system files.\n\nDo you want to continue?</string>
+    <string name="security_warning_extract">Warning!\nExtracting an archive file with relative or absolute paths may cause damage to your device by overwriting system files.\nDo you want to continue?</string>
 
     <!-- ChangeLog - Dialog title -->
     <string name="changelog_title">Changelog</string>
@@ -892,9 +892,9 @@
     <string name="second_title">Placeholder Intro Title </string>
 
     <string name="second_message">
-        \n\nYou can access the advanced, full-privileged mode via Settings. It\'s your
+        \nYou can access the advanced, full-privileged mode via Settings. It\'s your
         responsibility to ensure that an operation doesn\'t break your system.
-        \n\nThe CyanogenMod Team
+        \nThe CyanogenMod Team
     </string>
 
     <string name="activity_not_found_exception">Couldn\'t find an app to open this file</string>
@@ -907,18 +907,18 @@
     <string name="toggle_word_wrap_msg">Toggling word wrap mode</string>
 
     <string name="add_cloud_storage">Add cloud storage</string>
-    <string name="add_cloud_storage_desc">Important files are a tap away when you link cloud storage to your device. Tap here to set up.</string>
-    <string name="oobe_add_cloud_storage_desc">Important files are a tap away when you link cloud storage to your device.</string>
+    <string name="add_cloud_storage_desc">Important files are a tap away when you link cloud storage to your device. Tap here to set up</string>
+    <string name="oobe_add_cloud_storage_desc">Important files are a tap away when you link cloud storage to your device</string>
     <string name="welcome_to">Welcome to</string>
     <string name="file">File</string>
     <string name="manager">Manager</string>
-    <string name="welcome_desc">Simple, powerful access to all your data from anywhere.</string>
+    <string name="welcome_desc">Simple, powerful access to all your data from anywhere</string>
 
     <string name="safe_mode_not_allowed">Setting not available in safe mode</string>
 
     <!-- Snackbar messages -->
     <!-- Snackbar message - Storage volume unmounted -->
-    <string name="snackbar_storage_volume_unmounted"><xliff:g id="characters">%1$s</xliff:g> was removed.</string>
+    <string name="snackbar_storage_volume_unmounted"><xliff:g id="characters">%1$s</xliff:g> was removed</string>
     <string name="snackbar_over_quota">Not enough space in destination</string>
     <string name="snackbar_unable_to_open">Unable to open file</string>
     <string name="snackbar_unable_to_copy">Unable to copy file</string>
@@ -944,12 +944,12 @@
 
     <!-- Moving file notifications -->
     <string name="moving_file_notification_title">Moving file</string>
-    <string name="move_complete_notification_title">Move complete</string>
+    <string name="move_complete_notification_title">Completed</string>
     <string name="move_complete_notification_description">Open location</string>
     <string name="move_complete_notification_share_link">Share link</string>
     <!-- Moving file error notifications -->
     <string name="moving_file_failed_notification_title">Unable to move</string>
-    <string name="moving_file_failed_not_enough_space">Not enough space in source.  Free more space before retrying.</string>
+    <string name="moving_file_failed_not_enough_space">Not enough space. Free more space before retrying</string>
     <string name="moving_file_failed_no_provider_connection">Tap to check account connection</string>
     <string name="moving_file_failed_no_data_connection">Check data connection and tap to retry</string>
     <string name="moving_file_failed_generic">Tap to retry</string>
@@ -957,5 +957,5 @@
     <string name="moving_file_failed_upgrade_action">Upgrade</string>
     <!-- MStarU Frequent -->
     <string name="frequent">Frequent</string>
-    <string name="access_the_files_you_use_the_most_here">Access the files you use the most here.</string>
+    <string name="access_the_files_you_use_the_most_here">Your favorite files will appear here</string>
 </resources>
