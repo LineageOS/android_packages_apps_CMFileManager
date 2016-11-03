@@ -85,7 +85,7 @@
     <color name="text_color">@color/black_transparent</color>
 
     <!-- The text color of Dialog -->
-    <color name="dialog_text_color">@color/material_palette_blue_primary_dark</color>
+    <color name="dialog_text_color">@color/black</color>
 
     <!-- The highlight color for terms found in the search result -->
     <color name="search_highlight_color">@color/search_highlight</color>
