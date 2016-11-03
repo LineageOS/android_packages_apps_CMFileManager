@@ -255,6 +255,11 @@ public class FileSystemObjectAdapter
             StringBuilder sbSummary = new StringBuilder();
             if (fso instanceof ParentDirectory) {
                 sbSummary.append(res.getString(R.string.parent_dir));
+            } else if (fso instanceof RootDirectory) {
+                // TODO: add summary for root list directories
+                // Currently RootDirectory is only used in picker activity, which uses simple view
+                // by default (no summary).
+                // Roots List needs to add a summary if the user is in privileged mode
             } else {
                 if (!FileHelper.isDirectory(fso)) {
                     sbSummary.append(FileHelper.getHumanReadableSize(fso));
@@ -420,34 +425,14 @@ public class FileSystemObjectAdapter
      * @param item The path or the {@link FileSystemObject}
      */
     private void openPropertiesDialog(Object item) {
+        FileSystemObject fso = null;
         // Resolve the full path
         String path = String.valueOf(item);
         if (item instanceof FileSystemObject) {
             path = ((FileSystemObject)item).getFullPath();
-        }
-
-        // Prior to show the dialog, refresh the item reference
-        FileSystemObject fso = null;
-        try {
-            fso = CommandHelper.getFileInfo(getContext(), path, false, null);
-            if (fso == null) {
-                throw new NoSuchFileOrDirectory(path);
-            }
-
-        } catch (Exception e) {
-            // Notify the user
-            ExceptionUtil.translateException(getContext(), e);
-
-            // Remove the object
-            if (e instanceof FileNotFoundException || e instanceof NoSuchFileOrDirectory) {
-                // If have a FileSystemObject reference then there is no need to search
-                // the path (less resources used)
-                if (item instanceof FileSystemObject) {
-                    //removeItem((FileSystemObject)item);
-                } else {
-                    //removeItem((String)item);
-                }
-            }
+            fso = (FileSystemObject)item;
+        } else {
+            Log.e(TAG, "Failed to open Properties Dialog. Invalid file object.");
             return;
         }
 

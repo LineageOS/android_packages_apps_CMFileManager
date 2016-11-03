@@ -537,7 +537,7 @@ public class PickerActivity extends Activity implements OnCancelListener, OnDism
 
             if (INTENT_FOLDER_SELECT.equals(getIntent().getAction())) {
                 Intent result = new Intent();
-                result.putExtra(EXTRA_FOLDER_PATH, src.getAbsolutePath());
+                result.putExtra(EXTRA_FOLDER_PATH, mFso.getFullPath());
                 setResult(Activity.RESULT_OK, result);
                 finish();
                 return;
@@ -814,6 +814,11 @@ public class PickerActivity extends Activity implements OnCancelListener, OnDism
 
     @Override
     public void onCancel(){
+        // nop
+    }
+
+    @Override
+    public void onClearCache(Object o) {
         // nop
     }
 }

@@ -21,6 +21,7 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
 	frameworks/support/design/res \
     frameworks/support/v7/appcompat/res \
     frameworks/support/v7/cardview/res \
+    frameworks/support/v7/recyclerview/res \
     external/uicommon/res
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
@@ -28,31 +29,29 @@ LOCAL_SRC_FILES += $(call all-java-files-under, libs/android-syntax-highlight/sr
 LOCAL_SRC_FILES += $(call all-java-files-under, libs/color-picker-view/src)
 
 LOCAL_AAPT_FLAGS := \
-        --auto-add-overlay \
-        --extra-packages com.cyngn.uicommon
+    --auto-add-overlay \
+	--extra-packages android.support.design:android.support.v7.appcompat:android.support.v7.cardview:android.support.v7.recyclerview:com.cyngn.uicommon
 
-LOCAL_AAPT_FLAGS += --extra-packages android.support.design:android.support.v7.appcompat:android.support.v7.cardview
-
-LOCAL_STATIC_JAVA_LIBRARIES += libtruezip
-LOCAL_STATIC_JAVA_LIBRARIES += juniversalchardet
-LOCAL_STATIC_JAVA_LIBRARIES += uicommon
-LOCAL_STATIC_JAVA_LIBRARIES += android-support-v4
-LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-appcompat
-LOCAL_STATIC_JAVA_LIBRARIES += android-support-design
-LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-cardview
+LOCAL_STATIC_JAVA_LIBRARIES += \
+    libtruezip \
+    juniversalchardet \
+    uicommon \
+    android-support-design \
+    android-support-v4 \
+    android-support-v7-appcompat \
+    android-support-v7-cardview \
+    android-support-v7-recyclerview
 
 LOCAL_PACKAGE_NAME := CMFileManager
 LOCAL_CERTIFICATE := platform
 #LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 LOCAL_PROGUARD_ENABLED := disabled
 
-LOCAL_AAPT_FLAGS := --auto-add-overlay
-
 include $(BUILD_PACKAGE)
-include $(CLEAR_VARS)
 
+include $(CLEAR_VARS)
 LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := \
     juniversalchardet:libs/juniversalchardet/juniversalchardet-1.0.3.jar 
-
 include $(BUILD_MULTI_PREBUILT)
+
 include $(call all-makefiles-under,$(LOCAL_PATH))

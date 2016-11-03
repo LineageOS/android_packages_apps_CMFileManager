@@ -262,6 +262,8 @@ public class MainActivity extends ActionBarActivity
      */
     @Override
     protected void onCreate(Bundle state) {
+        super.onCreate(state);
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
 
          // Set the theme before setContentView
@@ -270,9 +272,6 @@ public class MainActivity extends ActionBarActivity
 
         //Set the main layout of the activity
         setContentView(R.layout.navigation);
-
-        //Save state
-        super.onCreate(state);
 
         if (!hasPermissions()) {
             requestNecessaryPermissions();

@@ -22,26 +22,17 @@ import android.app.Dialog;
 import android.app.SearchManager;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
-import android.content.ContentUris;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Color;
-import android.Manifest;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.storage.StorageVolume;
-import android.provider.Settings;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.FileProvider;
 import android.support.v4.graphics.ColorUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
@@ -68,7 +59,6 @@ import com.cyanogenmod.filemanager.console.ConsoleAllocException;
 import com.cyanogenmod.filemanager.console.ConsoleBuilder;
 import com.cyanogenmod.filemanager.console.InsufficientPermissionsException;
 import com.cyanogenmod.filemanager.console.VirtualMountPointConsole;
-import com.cyanogenmod.filemanager.console.secure.SecureConsole;
 import com.cyanogenmod.filemanager.dialogs.SortViewOptions;
 import com.cyanogenmod.filemanager.listeners.OnHistoryListener;
 import com.cyanogenmod.filemanager.listeners.OnRequestRefreshListener;
@@ -111,7 +101,6 @@ import com.cyanogenmod.filemanager.util.ExceptionUtil;
 import com.cyanogenmod.filemanager.util.FileHelper;
 import com.cyanogenmod.filemanager.util.MountPointHelper;
 import com.cyanogenmod.filemanager.util.StorageHelper;
-import com.cyngn.uicommon.view.Snackbar;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -386,11 +375,6 @@ public class NavigationFragment extends Fragment
      */
     private List<History> mHistory;
 
-    /**
-     * Used to record the items saved in database
-     */
-    private List<History> mHistorySaved;
-
     private ViewGroup mActionBar;
 
     private SelectionView mSelectionBar;
@@ -417,8 +401,6 @@ public class NavigationFragment extends Fragment
     View mView;
     LayoutInflater mLayoutInflater;
 
-    private AsyncTask<Void, Void, Boolean> mHistoryTask;
-
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
@@ -428,6 +410,24 @@ public class NavigationFragment extends Fragment
         if (DEBUG) {
             Log.d(TAG, "NavigationFragment.onCreate"); //$NON-NLS-1$
         }
+
+        // Register the broadcast receiver
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(FileManagerSettings.INTENT_SETTING_CHANGED);
+        filter.addAction(FileManagerSettings.INTENT_FILE_CHANGED);
+        filter.addAction(FileManagerSettings.INTENT_THEME_CHANGED);
+        filter.addAction(Intent.ACTION_DATE_CHANGED);
+        filter.addAction(Intent.ACTION_TIME_CHANGED);
+        filter.addAction(Intent.ACTION_TIMEZONE_CHANGED);
+        filter.addAction(FileManagerSettings.INTENT_MOUNT_STATUS_CHANGED);
+        getActivity().registerReceiver(this.mNotificationReceiver, filter);
+
+        // This filter needs the file data scheme, so it must be defined separately.
+        IntentFilter newFilter = new IntentFilter();
+        newFilter.addAction(Intent.ACTION_MEDIA_MOUNTED);
+        newFilter.addAction(Intent.ACTION_MEDIA_UNMOUNTED);
+        newFilter.addDataScheme(ContentResolver.SCHEME_FILE);
+        getActivity().registerReceiver(mNotificationReceiver, newFilter);
 
         //Set the main layout of the activity
         mView = inflater.inflate(R.layout.nav_fragment, container, false);
@@ -1111,8 +1111,7 @@ public class NavigationFragment extends Fragment
      * @param isFromSavedHistory Whether this is called by saved history item
      * @return boolean A problem occurs while navigate
      */
-    public synchronized boolean navigateToHistory(
-            History history, boolean isFromSavedHistory) {
+    public synchronized boolean navigateToHistory(History history) {
         try {
             //Navigate to item. Check what kind of history is
             if (history.getItem() instanceof NavigationViewInfoParcelable) {
@@ -1197,7 +1196,7 @@ public class NavigationFragment extends Fragment
 
         //Navigate to history
         if (this.mHistory.size() > 0) {
-            return navigateToHistory(mHistory.get(mHistory.size() - 1), false);
+            return navigateToHistory(mHistory.get(mHistory.size() - 1));
         }
 
         //Nothing to apply
@@ -1216,6 +1215,9 @@ public class NavigationFragment extends Fragment
         }
 
         // Show the dialog
+        if (mActionsDialog != null && mActionsDialog.isShowing()) {
+            return;
+        }
         mActionsDialog = new ActionsDialog(getActivity(), this, fso, global, false);
         mActionsDialog.setOnRequestRefreshListener(this);
         mActionsDialog.setOnSelectionListener(getCurrentNavigationView());
