@@ -19,6 +19,8 @@
 
     <!-- The default primary color -->
     <color name="default_primary">#009688</color>
+    <color name="default_primary_dark">#035850</color>
+    <color name="default_primary_light">#80CBC4</color>
     <!-- The favorites primary color -->
     <color name="favorites_primary">#f2b807</color>
     <!-- The sdcard primary color -->
@@ -114,29 +116,29 @@
     <color name="navigation_view_item_detail_icon">#33000000</color>
 
     <!-- Disk usage total color -->
-    <color name="disk_usage_total">#7ecccccc</color>
+    <color name="disk_usage_total">#B2DFDB</color>
     <!-- Disk usage used color -->
-    <color name="disk_usage_used">#7e0099cc</color>
+    <color name="disk_usage_used">#009688</color>
     <!-- Disk usage used color warning -->
-    <color name="disk_usage_used_warning">#7eff4444</color>
+    <color name="disk_usage_used_warning">#661B15</color>
     <!-- Disk usage used color filter normal -->
     <color name="disk_usage_color_filter_normal">#ffffffff</color>
     <!-- Disk usage used color filter warning -->
-    <color name="disk_usage_color_filter_warning">#99ff0000</color>
+    <color name="disk_usage_color_filter_warning">#F44336</color>
 
     <!-- Relevance - Border color -->
-    <color name="relevance_border">#becccccc</color>
+    <color name="relevance_border">#00000000</color>
     <!-- Relevance - 0% ~ 50% -->
-    <color name="relevance_percentil_25">#bee89338</color>
+    <color name="relevance_percentil_25">#beFFC107</color>
     <!-- Relevance - 25% ~ 50% -->
-    <color name="relevance_percentil_50">#bee8e238</color>
+    <color name="relevance_percentil_50">#beFFEB3B</color>
     <!-- Relevance - 50% ~ 75% -->
-    <color name="relevance_percentil_75">#be45bc6c</color>
+    <color name="relevance_percentil_75">#be4CAF50</color>
     <!-- Relevance - 75% ~ 100% -->
-    <color name="relevance_percentil_100">#be207da4</color>
+    <color name="relevance_percentil_100">#be03A9F4</color>
 
     <!-- A color for highlight text -->
-    <color name="search_highlight">#ffffff00</color>
+    <color name="search_highlight">#beFFEB3B</color>
 
     <!-- Divider - Normal -->
     <color name="divider_color">#90909090</color>
@@ -146,8 +148,8 @@
     <color name="navigation_drawer_divider_color">#1f000000</color>
 
     <!-- Execution console -->
-    <color name="console_bg">#99000000</color>
-    <color name="console_fg">#99FFFFFF</color>
+    <color name="console_bg">#00000000</color>
+    <color name="console_fg">#000000</color>
 
     <color name="material_palette_blue_accent">#77E0E0E0</color>
     <color name="material_palette_blue_accent_dark">#77BDBDBD</color>
@@ -156,30 +158,29 @@
     <color name="material_palette_blue_primary_light">#64B5F6</color>
     <color name="actionbar_palette_blue_primary">#1E88E5</color>
 
-
     <!-- Disk usage blue -->
-    <color name="material_palette_blue_1">#64B5F6</color>
-    <color name="material_palette_blue_2">#2196F3</color>
-    <color name="material_palette_blue_3">#1976D2</color>
-    <color name="material_palette_blue_4">#0D47A1</color>
+    <color name="material_palette_blue_1">#8093FF</color>
+    <color name="material_palette_blue_2">#3A4AA6</color>
+    <color name="material_palette_blue_3">#242E66</color>
+    <color name="material_palette_blue_4">#000B4D</color>
 
     <!-- Disk usage green -->
-    <color name="material_palette_green_1">#DCE775</color>
-    <color name="material_palette_green_2">#CDDC39</color>
-    <color name="material_palette_green_3">#AFB42B</color>
-    <color name="material_palette_green_4">#827717</color>
+    <color name="material_palette_green_1">#B5FF61</color>
+    <color name="material_palette_green_2">#76A63F</color>
+    <color name="material_palette_green_3">#486627</color>
+    <color name="material_palette_green_4">#364D1D</color>
 
     <!-- Disk usage orange -->
-    <color name="material_palette_orange_1">#FFB74D</color>
-    <color name="material_palette_orange_2">#FF9800</color>
-    <color name="material_palette_orange_3">#F57C00</color>
-    <color name="material_palette_orange_4">#E65100</color>
+    <color name="material_palette_orange_1">#FF9800</color>
+    <color name="material_palette_orange_2">#A66300</color>
+    <color name="material_palette_orange_3">#663D00</color>
+    <color name="material_palette_orange_4">#4D2E00</color>
 
     <!-- Disk usage pink -->
-    <color name="material_palette_pink_1">#F06292</color>
-    <color name="material_palette_pink_2">#E91E63</color>
-    <color name="material_palette_pink_3">#C2185B</color>
-    <color name="material_palette_pink_4">#880E4F</color>
+    <color name="material_palette_pink_1">#FF216B</color>
+    <color name="material_palette_pink_2">#A61646</color>
+    <color name="material_palette_pink_3">#660D2B</color>
+    <color name="material_palette_pink_4">#4D0A20</color>
 
     <!-- intro circles -->
     <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
