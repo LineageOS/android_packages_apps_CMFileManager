@@ -76,6 +76,7 @@
     <color name="black_46">#75000000</color>
     <color name="black_26">#42000000</color>
     <color name="black_11">#1C000000</color>
+    <color name="black">#000000</color>
 
     <!-- Default navigation drawer colors -->
     <color name="navigation_drawer_title_default">#df000000</color>
@@ -205,4 +206,6 @@
     <color name="open_file_progress_dialog_message_color">#8b000000</color>
 
     <color name="picker_activity_window_bg_color">#99000000</color>
+
+    <color name="slide_color">@color/default_primary</color>
 </resources>

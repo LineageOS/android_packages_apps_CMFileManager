@@ -140,6 +140,13 @@
         <item name="android:backgroundDimAmount">0.6</item>
     </style>
 
+    <style name="FileManager.Theme.Welcome" parent="Theme.AppCompat.Light">
+        <item name="android:colorPrimary">@color/default_primary</item>
+        <item name="android:colorPrimaryDark">@color/default_primary_dark</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <!-- Action bar -->
     <style name="FileManager.Widget.ActionBar.White" parent="@android:style/Widget.Material.Light.ActionBar">
         <item name="android:textColorPrimary">@android:color/white</item>
@@ -154,6 +161,7 @@
     <style name="FileManager.NavigationActionBar" parent="@android:style/Theme.Material">
        <item name="android:colorControlNormal">@android:color/white</item>
     </style>
+
 
     <!-- Title -->
     <style name="title_text_appearance">

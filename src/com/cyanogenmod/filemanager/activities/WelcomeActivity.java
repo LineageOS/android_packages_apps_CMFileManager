@@ -16,153 +16,60 @@
 
 package com.cyanogenmod.filemanager.activities;
 
-import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ImageView;
+
 import com.cyanogenmod.filemanager.R;
 import com.cyanogenmod.filemanager.adapters.WelcomeAdapter;
 import com.cyanogenmod.filemanager.views.CirclePageIndicator;
 import com.cyanogenmod.filemanager.views.PageIndicator;
+import com.cyanogenmod.filemanager.views.InkPageIndicator;
 
+public class WelcomeActivity extends AppCompatActivity {
 
-/**
- * An activity for search files and folders.
- */
-public class WelcomeActivity extends Activity {
-
-    private static final String TAG = "WelcomeActivity"; //$NON-NLS-1$
-
-    private static boolean DEBUG = false;
-
-    ImageView mNextButton;
-    ViewPager vp;
-    WelcomeAdapter adapter;
-    ImageView mPrevButton;
-
-    /**
-     * {@inheritDoc}
-     */
     @Override
-    protected void onCreate(android.os.Bundle state) {
-        if (DEBUG) {
-            android.util.Log.d(TAG, "WelcomeActivity.onCreate"); //$NON-NLS-1$
-        }
-        //Set the main layout of the activity
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome);
+        final WelcomeAdapter mSectionsPagerAdapter =
+                new WelcomeAdapter(getSupportFragmentManager());
+        AppCompatButton mFinishBtn = (AppCompatButton) findViewById(R.id.intro_btn_finish);
+        InkPageIndicator inkPageIndicator = (InkPageIndicator) findViewById(R.id.indicator);
+        ViewPager mViewPager = (ViewPager) findViewById(R.id.container);
 
-        adapter = new WelcomeAdapter();
-        vp = (ViewPager) findViewById(R.id.intro_pager);
-        mNextButton = (ImageView) findViewById(R.id.nextButton);
-        PageIndicator indicator = (CirclePageIndicator)findViewById(R.id.pagination);
-        mPrevButton = (ImageView) findViewById(R.id.prevButton);
-
-        vp.setAdapter(adapter);
-        vp.setOffscreenPageLimit(3);
-
-        indicator.setViewPager(vp);
-
-        pagePrepare(vp.getCurrentItem());
-
-        indicator.setOnPageChangeListener(new OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int i, float v, int i1) {
-            }
-
-            @Override
-            public void onPageSelected(int i) {
-                pagePrepare(i);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int i) {
-            }
-        });
-
-        //Save state
-        super.onCreate(state);
-    }
-
-    private void endButton(ImageView b) {
-        b.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
-    }
-
-    private void pagePrepare(int currentPage) {
-        int maxCount = adapter.getCount();
-        if (maxCount == currentPage + 1) {
-            mNextButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_oobe_finish));
-            endButton(mNextButton);
-        } else {
-            mNextButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_oobe_forward));
-            mNextButton.setOnClickListener(new OnClickListener() {
+        if (mViewPager != null && inkPageIndicator != null) {
+            mViewPager.setAdapter(mSectionsPagerAdapter);
+            mViewPager.setCurrentItem(0);
+            mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                 @Override
-                public void onClick(View view) {
-                    int current = vp.getCurrentItem();
-                    vp.setCurrentItem(current + 1);
+                public void onPageScrolled(int position, float positionOffset,
+                                           int positionOffsetPixels) {
+                }
+                @Override
+                public void onPageSelected(int position) {
+                }
+                @Override
+                public void onPageScrollStateChanged(int state) {
                 }
             });
-        }
-        if (currentPage == 0) {
-            mPrevButton.setVisibility(View.INVISIBLE);
-        } else {
-            mPrevButton.setVisibility(View.VISIBLE);
-            mPrevButton.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    int current = vp.getCurrentItem();
-                    vp.setCurrentItem(current - 1);
-                }
-            });
+            inkPageIndicator.setViewPager(mViewPager);
+            if (mFinishBtn != null) {
+                mFinishBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        finish();
+                    }
+                });
+            }
         }
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
-    protected void onDestroy() {
-        if (DEBUG) {
-            Log.d(TAG, "WelcomeActivity.onDestroy"); //$NON-NLS-1$
-        }
-
-        //All destroy. Continue
-        super.onDestroy();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void onConfigurationChanged(android.content.res.Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-    }
-
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    protected void onSaveInstanceState(android.os.Bundle outState) {
-        if (DEBUG) {
-            Log.d(TAG, "SearchActivity.onSaveInstanceState"); //$NON-NLS-1$
-        }
-        super.onSaveInstanceState(outState);
+    public void onBackPressed() {
+        // Do nothing
     }
 }
-

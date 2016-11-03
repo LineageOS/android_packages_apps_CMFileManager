@@ -240,5 +240,6 @@
     <dimen name="open_dialog_text_margin_top">25dp</dimen>
     <!-- Open dialog text padding bottom -->
     <dimen name="open_dialog_text_padding_bottom">21dp</dimen>
-
+    <!-- Intro margin -->
+    <dimen name="intro_margin">16dp</dimen>
 </resources>
