@@ -544,8 +544,6 @@ public class SearchActivity extends Activity
         // Set up the action bar to show a dropdown list.
         final ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowTitleEnabled(false);
-        actionBar.setBackgroundDrawable(
-                getResources().getDrawable(R.drawable.bg_material_titlebar));
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
@@ -1394,4 +1392,3 @@ public class SearchActivity extends Activity
         //ignore
     }
 }
-
