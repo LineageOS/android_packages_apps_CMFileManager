@@ -286,7 +286,7 @@
   <!-- Search - Search error message -->
   <string name="search_error_msg">検索中にエラーが発生しました。結果は見つかりませんでした。</string>
   <!-- Search - Search no results message -->
-  <string name="search_no_results_msg">結果は見つかりませんでした。</string>
+  <string name="search_no_results_msg">検索結果は見つかりませんでした。</string>
   <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="path">%2$s</xliff:g>で<xliff:g id="items">%1$s</xliff:g></string>
   <!-- Search - Search query terms -->
