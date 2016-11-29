@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">ଫାଇଲ୍‍ ପରିଚାଳକ ଆପଣଙ୍କ ଫାଇଲ୍‍ ଦେଖିବା ପାଇଁ ଷ୍ଟୋରେଜ୍‍ ପାଇଁ ଅନୁମତି ଆବ୍ଶ୍ୟକ କରେ।</string>
   <string name="storage_permissions_explanation">ଅନୁମତି ଦେବା ପାଇଁ, ସେଟିଂସମୂହକୁ ଯାଆନ୍ତୁ ଓ ଅନୁମତିରେ ଟ୍ୟାପ୍‍ କରନ୍ତୁ।</string>
   <string name="snackbar_settings">ସେଟିଂସ୍</string>
+  <!-- Wrap mode - toast -->
 </resources>

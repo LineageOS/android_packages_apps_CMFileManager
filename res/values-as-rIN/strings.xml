@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">আপোনাৰ ফাইলবোৰ চাবলৈ ফাইল মেনেজাৰক ষ্ট\'ৰেজ ইন অনুমতিৰ প্ৰয়োজন।</string>
   <string name="storage_permissions_explanation">ছেটিংছলৈ যাওক, অনুমতি মঞ্জুৰ কৰিবলৈ পাৰ্মিচন টেপ কৰক।</string>
   <string name="snackbar_settings">ছেটিংছ</string>
+  <!-- Wrap mode - toast -->
 </resources>

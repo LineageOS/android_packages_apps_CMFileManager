@@ -767,4 +767,5 @@
   <string name="welcome_msg">Sveiki atvykę į „CyanogenMod“ failų tvarkyklę.\n\nŠi programa leidžia ieškoti sistemos failų ir daryti veiksmus kurie gali pažeisti jūsų įrenginį. Kad išvengtumėte galymos žalos, programa startuos saugiame, mažo privilegijuotumo režime.\n\nNaudodamiesi nustatymais jūs galite prisijungti prie pažangaus, pilnai priveligijuoto režimo. Jūsų atsakomybė yra užtikrinti, kad savo veiksmais nepažeisite sistemos.\n\n„CyanogenMod“ komanda</string>
   <string name="activity_not_found_exception">Nepavyko rasti programos, kad atidaryti šį failą</string>
   <string name="snackbar_settings">Nustatymai</string>
+  <!-- Wrap mode - toast -->
 </resources>

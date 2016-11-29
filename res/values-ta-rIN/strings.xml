@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">உங்கள் கோப்புகளை காண கோப்பு மேலாளருக்கு சேமிப்பகத்திற்கான அனுமதி தேவை</string>
   <string name="storage_permissions_explanation">அமைப்புகளுக்குச் சென்று, அனுமதி வழங்குவதற்கு அனுமதிகளை தட்டவும்.</string>
   <string name="snackbar_settings">அமைப்புகள்</string>
+  <!-- Wrap mode - toast -->
 </resources>

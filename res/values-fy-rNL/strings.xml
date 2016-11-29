@@ -396,4 +396,5 @@
   <!-- Welcome Dialog - Title -->
   <!-- Welcome Dialog - Message -->
   <string name="snackbar_settings">Ynstellingen</string>
+  <!-- Wrap mode - toast -->
 </resources>

@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">Файлавы менеджэр патрабуе дазвол, каб прагледзець файлы.</string>
   <string name="storage_permissions_explanation">Перайдзі ў Налады, націсні Дазвол, прадастаўляць дазвол.</string>
   <string name="snackbar_settings">Налады</string>
+  <!-- Wrap mode - toast -->
 </resources>

@@ -597,7 +597,7 @@
   <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">Modus Tanya Pengguna\n\nAplikasi berjalan dengan akses penuh ke sistem berkas tetapi akan meminta izin sebelum melakukan aksi istimewa</string>
   <!-- Preferences - General - Root access mode -->
-  <string name="pref_access_mode_root">Akses Root mode</string>
+  <string name="pref_access_mode_root">Mode akses root</string>
   <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">Mode Akses Root\n\nPeringatan! Mode ini memungkinkan operasi yang dapat merusak perangkat anda. Adalah tanggung jawab anda untuk memastikan bahwa operasi aman</string>
   <!-- Preferences - General - Restrict secondary users access title -->
@@ -769,4 +769,6 @@
   <string name="storage_permissions_denied">Manajer berkas memerlukan izin ke penyimpanan untuk melihat berkas Anda.</string>
   <string name="storage_permissions_explanation">Pergi ke pengaturan, dan ketuk Perizinan untuk memberikan izin.</string>
   <string name="snackbar_settings">Pengaturan</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Mode merapatkan kata</string>
 </resources>

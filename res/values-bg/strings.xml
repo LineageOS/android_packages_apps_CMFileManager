@@ -769,4 +769,6 @@
   <string name="storage_permissions_denied">Мениджъра на файлове изисква разрешение до устройството с памет, за да видите вашите файлове.</string>
   <string name="storage_permissions_explanation">Отидете в Настройки и кликнете върху \" Разрешения \" за да дадете разрешение за достъп.</string>
   <string name="snackbar_settings">Настройки</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Превключване в режим подчертаване на текст</string>
 </resources>

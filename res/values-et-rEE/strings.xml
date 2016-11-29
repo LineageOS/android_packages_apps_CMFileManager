@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">Failihaldur vajab failide vaatamiseks õigusi.</string>
   <string name="storage_permissions_explanation">Õiguste andmiseks avage Sätted alt Õigused.</string>
   <string name="snackbar_settings">Seaded</string>
+  <!-- Wrap mode - toast -->
 </resources>

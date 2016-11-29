@@ -768,4 +768,5 @@
   <string name="storage_permissions_denied">檔案管理員需要使用儲存空間的權限以檢視檔案。</string>
   <string name="storage_permissions_explanation">進入設定，然後按一下權限設定以授予權限。</string>
   <string name="snackbar_settings">設定</string>
+  <!-- Wrap mode - toast -->
 </resources>

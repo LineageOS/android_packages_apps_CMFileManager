@@ -770,4 +770,6 @@
   <string name="storage_permissions_denied">O Gestor de Ficheiros necessita de permissões para aceder ao armazenamento, de forma a poder ver os seus ficheiros.</string>
   <string name="storage_permissions_explanation">Vá a Definições e toque em Permissões para conceder permissão.</string>
   <string name="snackbar_settings">Definições</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Alternar modo de quebra de linha</string>
 </resources>

@@ -769,4 +769,6 @@
   <string name="storage_permissions_denied">Fitxategi kudeatzaileak biltegiratze baimena behar du zure fitxategiak ikusteko.</string>
   <string name="storage_permissions_explanation">Zoaz ezarpenetara eta sakatu Baimenak baimena emateko.</string>
   <string name="snackbar_settings">Ezarpenak</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Itzulbiratze modua txandakatzen</string>
 </resources>

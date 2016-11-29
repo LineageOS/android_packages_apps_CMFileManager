@@ -795,4 +795,5 @@
   <string name="storage_permissions_denied">Lêer verkenner vereis toestemming na jou stoor spasie om jou lêers te besigtig.</string>
   <string name="storage_permissions_explanation">Gaan na Instellings en raak Programtoestemmings om toestemming te verleen.</string>
   <string name="snackbar_settings">Instellings</string>
+  <!-- Wrap mode - toast -->
 </resources>
