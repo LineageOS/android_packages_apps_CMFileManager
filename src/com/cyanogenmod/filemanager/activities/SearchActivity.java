@@ -31,6 +31,7 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Parcelable;
 import android.preference.PreferenceActivity;
 import android.provider.SearchRecentSuggestions;
@@ -249,16 +250,18 @@ public class SearchActivity extends Activity
                         mExecutable = null;
                         mAdapter.stopStreaming();
                         int resultsSize = mAdapter.resultsSize();
-                        mStreamingSearchProgress.setVisibility(View.INVISIBLE);
                         if (mMimeTypeCategories != null && mMimeTypeCategories.size() > 1) {
                             mMimeTypeSpinner.setVisibility(View.VISIBLE);
+                        }
+                        if (SearchActivity.this.mSearchWaiting != null) {
+                            SearchActivity.this.mSearchWaiting.setVisibility(View.GONE);
+                            mMimeTypeText.setText(mFirstMimeTypeFilter);
                         }
                         mSearchListView.setVisibility(resultsSize > 0 ? View.VISIBLE : View.GONE);
                         mEmptyListMsg.setVisibility(resultsSize > 0 ? View.GONE : View.VISIBLE);
 
                     } catch (Throwable ex) {
                         // hide the search progress spinner if the search fails
-                        mStreamingSearchProgress.setVisibility(View.INVISIBLE);
                         Log.e(TAG, "onAsyncEnd method fails", ex); //$NON-NLS-1$
                     }
                 }
@@ -290,24 +293,6 @@ public class SearchActivity extends Activity
                     }
                 }
             }
-
-            //Notify progress
-            mSearchListView.post(new Runnable() {
-                @Override
-                public void run() {
-                    int progress = mAdapter.resultsSize();
-                    String foundItems =
-                            getResources().
-                                    getQuantityString(
-                                            R.plurals.search_found_items, progress,
-                                            Integer.valueOf(progress) );
-                    mSearchFoundItems.setText(
-                            getString(
-                                    R.string.search_found_items_in_directory,
-                                    foundItems,
-                                    mSearchDirectory));
-                }
-            });
         }
 
         /**
@@ -335,18 +320,15 @@ public class SearchActivity extends Activity
      * @hide
      */
     ListView mSearchListView;
+
     /**
      * @hide
      */
     ProgressBar mSearchWaiting;
+
     /**
      * @hide
      */
-    TextView mSearchFoundItems;
-    /**
-     * @hide
-     */
-    TextView mSearchTerms;
     private View mEmptyListMsg;
 
     /**
@@ -354,7 +336,15 @@ public class SearchActivity extends Activity
      */
     Spinner mMimeTypeSpinner;
 
+    /**
+     * @hide
+     */
+    TextView mMimeTypeText;
+
+    private String mFirstMimeTypeFilter;
+
     private String mSearchDirectory;
+
     /**
      * @hide
      */
@@ -380,7 +370,6 @@ public class SearchActivity extends Activity
     HashSet<MimeTypeCategory> mMimeTypeCategories;
 
     private SearchResultAdapter mAdapter;
-    private ProgressBar mStreamingSearchProgress;
     private boolean mSearchInProgress;
 
     /**
@@ -583,18 +572,10 @@ public class SearchActivity extends Activity
 
         //Other components
         this.mSearchWaiting = (ProgressBar)findViewById(R.id.search_waiting);
-        mStreamingSearchProgress = (ProgressBar) findViewById(R.id.streaming_progress_bar);
-        mStreamingSearchProgress.getIndeterminateDrawable()
-                .setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
-
-        this.mSearchFoundItems = (TextView)findViewById(R.id.search_status_found_items);
-        setFoundItems(0, ""); //$NON-NLS-1$
-        this.mSearchTerms = (TextView)findViewById(R.id.search_status_query_terms);
-        this.mSearchTerms.setText(
-                Html.fromHtml(getString(R.string.search_terms, ""))); //$NON-NLS-1$
 
         // populate Mime Types spinner for search results filtering
         mMimeTypeSpinner = (Spinner) findViewById(R.id.search_status_type_spinner);
+        mMimeTypeText = (TextView) findViewById(R.id.search_status_type_title);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 R.layout.search_spinner_item,
@@ -639,17 +620,20 @@ public class SearchActivity extends Activity
             for (MimeTypeCategory category : categories) {
                 mMimeTypeCategories.add(category);
             }
+            if (!categories.isEmpty()) {
+                mFirstMimeTypeFilter = categories.get(0).toString();
+            }
         }
 
         //If data is not present, use root directory to do the search
-        this.mSearchDirectory = FileHelper.ROOT_DIRECTORY;
+        this.mSearchDirectory = Environment.getExternalStorageDirectory().getAbsolutePath();
         String searchDirectory = getIntent()
                 .getStringExtra(SearchActivity.EXTRA_SEARCH_DIRECTORY);
 
         if (!TextUtils.isEmpty(searchDirectory)) {
             this.mSearchDirectory = searchDirectory;
         }
-        setFoundItems(0, mSearchDirectory);
+
         //Retrieve the query ¿from voice recognizer?
         boolean voiceQuery = true;
         List<String> userQueries =
@@ -768,19 +752,17 @@ public class SearchActivity extends Activity
         this.mSearchListView.setAdapter(mAdapter);
 
         //Set terms
-        if (mMimeTypeCategories == null) {
-            this.mSearchTerms.setText(
-                    Html.fromHtml(getString(R.string.search_terms, query.getTerms())));
-        } else {
+        if (mMimeTypeCategories != null) {
             ArrayList<String> localizedNames = new ArrayList<String>(mMimeTypeCategories.size());
             for (MimeTypeCategory category : mMimeTypeCategories) {
                 localizedNames
                         .add(MimeTypeHelper.MimeTypeCategory
                                 .getFriendlyLocalizedNames(this)[category.ordinal()]);
             }
-             this.mSearchTerms.setText(
-                     Html.fromHtml(getString(R.string.search_terms, localizedNames)));
         }
+
+        // TODO jr: set this to title
+        Log.d("OHAI", "Query: " + mQuery.toString());
 
         //Now, do the search in background
         this.mSearchListView.post(new Runnable() {
@@ -847,7 +829,6 @@ public class SearchActivity extends Activity
                 List<SearchResult> list = SearchActivity.this.mRestoreState.getSearchResultList();
                 String directory = SearchActivity.this.mRestoreState.getSearchDirectory();
                 SearchActivity.this.toggleResults(list.size() > 0, true);
-                setFoundItems(list.size(), directory);
 
                 //Set terms
                 Query query = SearchActivity.this.mRestoreState.getSearchQuery();
@@ -857,8 +838,6 @@ public class SearchActivity extends Activity
                 if (terms.endsWith(" | ")) { //$NON-NLS-1$;
                     terms = ""; //$NON-NLS-1$;
                 }
-                SearchActivity.this.mSearchTerms.setText(
-                        Html.fromHtml(getString(R.string.search_terms, terms)));
 
                 try {
                     if (SearchActivity.this.mSearchWaiting != null) {
@@ -881,9 +860,6 @@ public class SearchActivity extends Activity
 
                     SearchActivity.this.mQuery = query;
                     SearchActivity.this.mSearchDirectory = mRestoreState.getSearchDirectory();
-
-                    mStreamingSearchProgress.setVisibility(View.INVISIBLE);
-
                 } catch (Throwable ex) {
                     //Capture the exception
                     ExceptionUtil.translateException(SearchActivity.this, ex);
@@ -940,38 +916,6 @@ public class SearchActivity extends Activity
     void toggleResults(boolean hasResults, boolean showEmpty) {
         this.mSearchListView.setVisibility(hasResults ? View.VISIBLE : View.INVISIBLE);
         this.mEmptyListMsg.setVisibility(!hasResults && showEmpty ? View.VISIBLE : View.INVISIBLE);
-    }
-
-    /**
-     * Method that display the number of found items.
-     *
-     * @param items The number of items
-     * @param searchDirectory The search directory path
-     * @hide
-     */
-    void setFoundItems(final int items, final String searchDirectory) {
-        if (this.mSearchFoundItems != null) {
-            this.mSearchFoundItems.post(new Runnable() {
-                @Override
-                public void run() {
-                    String directory = searchDirectory;
-                    if (SearchActivity.this.mChRooted &&
-                            directory != null && directory.length() > 0) {
-                        directory = StorageHelper.getChrootedPath(directory);
-                    }
-
-                    String foundItems =
-                            getResources().
-                                getQuantityString(
-                                    R.plurals.search_found_items, items, Integer.valueOf(items));
-                    SearchActivity.this.mSearchFoundItems.setText(
-                                            getString(
-                                                R.string.search_found_items_in_directory,
-                                                foundItems,
-                                                directory));
-                }
-            });
-        }
     }
 
     /**
@@ -1157,7 +1101,6 @@ public class SearchActivity extends Activity
 
             // Toggle resultset?
             toggleResults(adapter.getCount() > 0, true);
-            setFoundItems(adapter.getCount(), this.mSearchDirectory);
         }
     }
 
@@ -1361,14 +1304,6 @@ public class SearchActivity extends Activity
         // ContentView
         theme.setBackgroundDrawable(
                 this, getWindow().getDecorView(), "background_drawable"); //$NON-NLS-1$
-        //- StatusBar
-        v = findViewById(R.id.search_status);
-        theme.setBackgroundDrawable(this, v, "statusbar_drawable"); //$NON-NLS-1$
-        v = findViewById(R.id.search_status_found_items);
-        theme.setTextColor(this, (TextView)v, "action_bar_text_color"); //$NON-NLS-1$
-        v = findViewById(R.id.search_status_query_terms);
-        theme.setTextColor(this, (TextView)v, "action_bar_text_color"); //$NON-NLS-1$
-
         //ListView
         if (this.mSearchListView.getAdapter() != null) {
             ((SearchResultAdapter)this.mSearchListView.getAdapter()).notifyDataSetChanged();

@@ -34,6 +34,7 @@ import android.graphics.drawable.StateListDrawable;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.Settings;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -548,7 +549,8 @@ public class MainActivity extends ActionBarActivity
                 extraDir = ((NavigationFragment)currentFragment)
                         .getCurrentNavigationView().getCurrentDir();
             }
-            extraDir = TextUtils.isEmpty(extraDir) ? FileHelper.ROOT_DIRECTORY : extraDir;
+            extraDir = TextUtils.isEmpty(extraDir) ?
+                    Environment.getExternalStorageDirectory().getAbsolutePath() : extraDir;
             searchIntent.putExtra(SearchActivity.EXTRA_SEARCH_DIRECTORY, extraDir);
             //- SearchManager.APP_DATA
             if (intent.getBundleExtra(SearchManager.APP_DATA) != null) {

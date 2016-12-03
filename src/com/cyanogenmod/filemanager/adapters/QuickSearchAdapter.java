@@ -23,6 +23,7 @@ import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
+import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -143,7 +144,8 @@ public class QuickSearchAdapter extends ArrayAdapter<MimeTypeHelper.MimeTypeCate
 
         Intent intent = new Intent(getContext(), SearchActivity.class);
         intent.setAction(Intent.ACTION_SEARCH);
-        intent.putExtra(SearchActivity.EXTRA_SEARCH_DIRECTORY, FileHelper.ROOT_DIRECTORY);
+        intent.putExtra(SearchActivity.EXTRA_SEARCH_DIRECTORY,
+                Environment.getExternalStorageDirectory().getAbsolutePath());
         intent.putExtra(SearchManager.QUERY, "*"); // Use wild-card '*'
 
         ArrayList<MimeTypeHelper.MimeTypeCategory> searchCategories =
