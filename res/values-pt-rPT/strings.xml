@@ -328,7 +328,7 @@
   <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">Início</string>
   <!-- Bookmarks - Bookmark name - Root folder -->
-  <string name="bookmarks_root_folder">Pasta raíz</string>
+  <string name="bookmarks_root_folder">Pasta inicial</string>
   <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">Pasta de Sistema</string>
   <!-- Bookmarks - Bookmark name - Secure storage -->
