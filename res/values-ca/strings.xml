@@ -738,7 +738,7 @@
   <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Desbloqueja</string>
   <!-- Secure Storage reset button -->
-  <string name="secure_storage_reset_button">Reestableix</string>
+  <string name="secure_storage_reset_button">Restableix</string>
   <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Esborra</string>
   <!-- Secure Storage unlock failed toast -->
@@ -773,4 +773,6 @@
   <string name="storage_permissions_denied">El Gestor d\'arxius requereix permís per a emmagatzemar per mostrar els teus fitxers.</string>
   <string name="storage_permissions_explanation">Ves la Configuració i prem a Permisos per concedir el permís.</string>
   <string name="snackbar_settings">Configuració</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">S\'està commutant al mode de salt de línia</string>
 </resources>

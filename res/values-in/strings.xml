@@ -28,10 +28,10 @@
   <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
   <!-- Devices types -->
-  <string name="device_blockdevice">Alat perangkat blok</string>
-  <string name="device_characterdevice">Perangkat karakter</string>
+  <string name="device_blockdevice">Blok perangkat</string>
+  <string name="device_characterdevice">Karakter perangkat</string>
   <string name="device_namedpipe">Pipa bernama</string>
-  <string name="device_domainsocket">Soket ranah</string>
+  <string name="device_domainsocket">Soket domain</string>
   <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
@@ -42,9 +42,9 @@
   <string name="overwrite">Timpa</string>
   <string name="select">Pilih</string>
   <!-- The root directory name -->
-  <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
+  <string name="root_directory_name"><![CDATA[<Folder root>]]></string>
   <!-- The search result name -->
-  <string name="search_result_name">Penelusuran: <xliff:g id="terms">%1$s</xliff:g></string>
+  <string name="search_result_name">Pencarian: <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Loading waiting message -->
   <string name="loading_message">Memuat\u2026</string>
   <!-- Computing message -->
@@ -52,7 +52,7 @@
   <!-- Cancelled message -->
   <string name="cancelled_message">Dibatalkan.</string>
   <!-- Error message -->
-  <string name="error_message">Galat.</string>
+  <string name="error_message">Kesalahan.</string>
   <!-- Copy text content description -->
   <string name="copy_text_cd">Ketuk untuk menyalin ke clipboard</string>
   <!-- Copy text content message -->
@@ -60,50 +60,50 @@
   <!-- Warning dialog title -->
   <string name="warning_title">Peringatan</string>
   <!-- Error dialog title -->
-  <string name="error_title">Galat</string>
+  <string name="error_title">Kesalahan</string>
   <!-- Confirm operation dialog title -->
-  <string name="confirm_operation">Memastikan operasi</string>
+  <string name="confirm_operation">Konfirmasi operasi</string>
   <!-- Confirm overwrite dialog title -->
   <string name="confirm_overwrite">Konfirmasi timpa</string>
   <!-- Confirm deletion dialog title -->
-  <string name="confirm_deletion">Memastikan penghapusan</string>
+  <string name="confirm_deletion">Konfirmasi penghapusan</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Konfirmasi perpindahan</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
-  <string name="msgs_change_to_prompt_access_mode_msg">Tidak dapat menjalankan dalam modus Akses Punca (Root). Mengalihkan ke modus Aman.\n\nTerapkan perubahan ini?</string>
+  <string name="msgs_change_to_prompt_access_mode_msg">Tidak dapat menjalankan dalam mode Akses Root. Berganti ke mode Aman.\n\nTerapkan perubahan ini?</string>
   <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">Tidak bisa mendapatkan hak istimewa yang diperlukan untuk berfungsi.</string>
   <!-- The message shown when an allocation of a privileged console fails, and a non
          privileged is allocated -->
-  <string name="msgs_privileged_console_alloc_failed">Tidak dapat menjalankan dalam modus Akses Punca (Root). Mengalihkan ke modus Aman.</string>
+  <string name="msgs_privileged_console_alloc_failed">Tidak dapat menjalankan dalam mode Akses Root. Berganti ke mode Aman.</string>
   <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Pengaturan tidak dapat diterapkan atau disimpan.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
-  <string name="msgs_settings_invalid_initial_directory">Folder awal \'<xliff:g id="initial_dir">%1$s</xliff:g>\' tidak valid. Mengalihkan ke folder punca (root).</string>
+  <string name="msgs_settings_invalid_initial_directory">Folder awal \'<xliff:g id="awal_dir">%1$s</xliff:g>\' tidak valid. Berganti ke folder root.</string>
   <!-- Root is not available message -->
-  <string name="root_not_available_msg">Punca (root) tidak tersedia pada perangkat ini. Tidak dapat melakukan operasi ini.</string>
+  <string name="root_not_available_msg">Root tidak tersedia dalam perangkat ini. Tidak dapat melakukan operasi ini.</string>
   <!-- Success -->
   <string name="msgs_success">Operasi diselesaikan dengan sukses.</string>
   <!-- Unknown error -->
-  <string name="msgs_unknown">Galat terdeteksi. Operasi tidak berhasil.</string>
+  <string name="msgs_unknown">Kesalahan terdeteksi. Operasi tidak berhasil.</string>
   <!-- When an operation requires elevated privileged (normally caused for the use of a
          non-privileged console) -->
-  <string name="msgs_insufficient_permissions">Operasi ini membutuhkan izin lebih tinggi. Coba ubah ke modus Akses Punca (Root).</string>
+  <string name="msgs_insufficient_permissions">Operasi ini memerlukan izin lebih tinggi. Cobalah ubah ke mode Akses Root.</string>
   <!-- When an operation fails because the device has run out of storage. -->
-  <string name="msgs_no_disk_space">Operasi ini gagal karena ada tidak ada ruang yang tersisa pada perangkat.</string>
+  <string name="msgs_no_disk_space">Operasi ini gagal karena tidak ada ruang yang tersisa pada perangkat.</string>
   <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">Berkas atau folder tidak ditemukan.</string>
   <!-- The command reference couldn't be created (not found or invalid definition)
          (normally caused by a development error) -->
   <string name="msgs_command_not_found">Perintah operasi tidak ditemukan atau memiliki definisi yang tidak valid.</string>
   <!-- I/O exception -->
-  <string name="msgs_io_failed">Kegagalan dalam baca/tulis.</string>
+  <string name="msgs_io_failed">Kegagalan baca/tulis.</string>
   <!-- Operation timeout detected -->
   <string name="msgs_operation_timeout">Operasi melewati batas.</string>
   <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">Operasi gagal.</string>
   <!-- A console couldn't be allocated -->
-  <string name="msgs_console_alloc_failure">Terjadi galat internal.</string>
+  <string name="msgs_console_alloc_failure">Terjadi kesalahan internal.</string>
   <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">Operasi tidak dapat dibatalkan.</string>
   <!-- The operation requieres mount the file system prior to execute the command -->
@@ -111,11 +111,11 @@
   <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">Argumen ilegal. Permintaan gagal.</string>
   <!-- The operation will cause inconsistencies -->
-  <string name="msgs_unresolved_inconsistencies">Operasi tidak dibenarkan karena akan membuat ketidakkonsistenan.</string>
+  <string name="msgs_unresolved_inconsistencies">Operasi tidak dibenarkan karena akan membuat inkonsistensi.</string>
   <!-- Operation not permitted in the current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">Folder tujuan bukan subfolder dari sumber atau sama dengan sumber.</string>
   <!-- The advice message prior to exit the app -->
-  <string name="msgs_push_again_to_exit">Tekan kembali untuk keluar.</string>
+  <string name="msgs_push_again_to_exit">Tekan lagi untuk keluar.</string>
   <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">Tidak ada aplikasi yang terdaftar untuk menangani jenis berkas yang terpilih.</string>
   <!-- Overwrite files? -->
@@ -123,7 +123,7 @@
   <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">Gagal mengaitkan tindakan ke dalam aplikasi.</string>
   <!-- An operation requires elevated privileged. Ask the user. -->
-  <string name="advise_insufficient_permissions">Operasi memerlukan hak istimewa yang lebih tinggi.\n\nApakah ingin mengubah ke modus Akses Punca (Root)?</string>
+  <string name="advise_insufficient_permissions">Operasi ini memerlukan hak istimewa yang lebih tinggi.\n\nApakah ingin mengubah ke mode Akses Root?</string>
   <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Folder induk</string>
   <!-- External storage descripton -->
@@ -133,9 +133,9 @@
   <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">Informasi sistem berkas</string>
   <!-- ActionBar Buttons - Sort Mode -->
-  <string name="actionbar_button_sort_mode_cd">Modus pengurutan</string>
+  <string name="actionbar_button_sort_mode_cd">Mode pengurutan</string>
   <!-- ActionBar Buttons - Layout Mode -->
-  <string name="actionbar_button_layout_mode_cd">Modus tata letak</string>
+  <string name="actionbar_button_layout_mode_cd">Mode tata letak</string>
   <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">Pilihan tampilan lainnya</string>
   <!-- ActionBar Buttons - Done -->
@@ -143,7 +143,7 @@
   <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">Tindakan</string>
   <!-- ActionBar Buttons - Search -->
-  <string name="actionbar_button_search_cd">Telusuri</string>
+  <string name="actionbar_button_search_cd">Cari</string>
   <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">Pilihan lainnya</string>
   <!-- ActionBar Buttons - Storage volumes -->
@@ -173,7 +173,7 @@
   <!-- Navigation View - Layout - Simple -->
   <string name="layout_simple">Sederhana</string>
   <!-- Navigation View - Layout - Details -->
-  <string name="layout_details">Detail</string>
+  <string name="layout_details">Rinci</string>
   <!-- Navigation View - View - Show folders first -->
   <string name="cm_filemanager_show_dirs_first">Tampilkan folder lebih dahulu</string>
   <!-- Navigation View - View - Show hidden files option -->
@@ -187,25 +187,25 @@
   <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">Ada tidak ada informasi yang tersedia untuk sistem berkas.</string>
   <!-- Filesystem Info - Filesystem couldn't be mounted -->
-  <string name="filesystem_info_cant_be_mounted_msg">Sistem berkas tidak dapat diinstal/dilepas.</string>
+  <string name="filesystem_info_cant_be_mounted_msg">Sistem berkas tidak dapat dipasang/dilepas.</string>
   <!-- Filesystem Info - Not allowed message -->
-  <string name="filesystem_info_mount_not_allowed_msg">Operasi pemasangan sistem berkas tidak diizinkan dalam modus Aman. Ketuk untuk mengubah ke modus Akses Punca (Root).</string>
+  <string name="filesystem_info_mount_not_allowed_msg">Operasi pemasangan berkas sistem tidak diizinkan pada mode Aman. Ketuk untuk mengubah ke mode Akses Root.</string>
   <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">Operasi pemasangan sistem berkas gagal. Beberapa sistem berkas, seperti kartu SD, tidak dapat diinstal/dilepas karena mereka dibangun sebagai sistem berkas baca-saja.</string>
   <!-- Filesystem Info Dialog - Title -->
-  <string name="filesystem_info_dialog_title">Informasi sistem berkas</string>
+  <string name="filesystem_info_dialog_title">Informasi berkas sistem</string>
   <!-- Filesystem Info Dialog - Tab - Info -->
   <string name="filesystem_info_dialog_tab_info">Info</string>
   <!-- Filesystem Info Dialog - Tab - Disk Usage -->
-  <string name="filesystem_info_dialog_tab_disk_usage">Penggunaan diska</string>
+  <string name="filesystem_info_dialog_tab_disk_usage">Penggunaan disk</string>
   <!-- Filesystem Info Dialog - Status Label -->
-  <string name="filesystem_info_dialog_status">Diinstal:</string>
+  <string name="filesystem_info_dialog_status">Dipasang:</string>
   <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">Titik pasang:</string>
   <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">Perangkat:</string>
   <!-- Filesystem Info Dialog - Type Label -->
-  <string name="filesystem_info_dialog_type">Jenis:</string>
+  <string name="filesystem_info_dialog_type">Tipe:</string>
   <!-- Filesystem Info Dialog - Options Label -->
   <string name="filesystem_info_dialog_options">Pilihan:</string>
   <!-- Filesystem Info Dialog - Dump/Pass Label -->
@@ -219,13 +219,13 @@
   <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Bebas:</string>
   <!-- Fso Properties - Not allowed message -->
-  <string name="fso_properties_permissions_not_allowed_msg">Operasi izin tidak diizinkan dalam modus Aman. Ketuk untuk mengubah ke modus Akses Punca (Root).</string>
+  <string name="fso_properties_permissions_not_allowed_msg">Operasi izin tidak diizinkan dalam mode Aman. Ketuk untuk mengubah ke mode Akses Root.</string>
   <!-- Fso Properties - Failed to change owner to fso -->
-  <string name="fso_properties_failed_to_change_owner_msg">Operasi perubahan pemilik gagal.\n\nUntuk alasan keamanan, beberapa sistem berkas, seperti kartu SD, tidak mengizinkan perubahan kepemilikan.</string>
+  <string name="fso_properties_failed_to_change_owner_msg">Operasi perubahan pemilik gagal.\n\nUntuk alasan keamanan, beberapa berkas sistem, seperti kartu SD, tidak mengizinkan perubahan kepemilikan.</string>
   <!-- Fso Properties - Failed to change group to fso -->
-  <string name="fso_properties_failed_to_change_group_msg">Operasi perubahan grup gagal.\n\nUntuk alasan keamanan, beberapa sistem berkas, seperti kartu SD, tidak mengizinkan perubahan grup.</string>
+  <string name="fso_properties_failed_to_change_group_msg">Operasi perubahan grup gagal.\n\nUntuk alasan keamanan, beberapa berkas sistem, seperti kartu SD, tidak mengizinkan perubahan grup.</string>
   <!-- Fso Properties - Failed to change group to fso -->
-  <string name="fso_properties_failed_to_change_permission_msg">Operasi perubahan izin gagal.\n\nUntuk alasan keamanan, beberapa sistem berkas, seperti kartu SD, tidak mengizinkan perubahan izin.</string>
+  <string name="fso_properties_failed_to_change_permission_msg">Operasi perubahan izin gagal.\n\nUntuk alasan keamanan, beberapa berkas sistem, seperti kartu SD, tidak mengizinkan perubahan izin.</string>
   <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">Properti</string>
   <!-- Fso Properties Dialog - Tab - Info -->
@@ -237,11 +237,11 @@
   <!-- Fso Properties Dialog - Parent Folder Label -->
   <string name="fso_properties_dialog_parent">Induk:</string>
   <!-- Fso Properties Dialog - Type Label -->
-  <string name="fso_properties_dialog_type">Jenis:</string>
+  <string name="fso_properties_dialog_type">Tipe:</string>
   <!-- Fso Properties Dialog - Category Label -->
   <string name="fso_properties_dialog_category">Kategori:</string>
   <!-- Fso Properties Dialog - Link Label -->
-  <string name="fso_properties_dialog_link">Tautan:</string>
+  <string name="fso_properties_dialog_link">Link:</string>
   <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">Ukuran:</string>
   <!-- Fso Properties Dialog - Contains Label -->
@@ -249,9 +249,9 @@
   <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <string name="fso_properties_dialog_last_accessed_date">Diakses:</string>
   <!-- Fso Properties Dialog - Last Modified Time Label -->
-  <string name="fso_properties_dialog_last_modified_date">Diubah:</string>
+  <string name="fso_properties_dialog_last_modified_date">Dimodifikasi:</string>
   <!-- Fso Properties Dialog - Last Changed Time -->
-  <string name="fso_properties_dialog_last_changed_date">Diubah:</string>
+  <string name="fso_properties_dialog_last_changed_date">Dirubah:</string>
   <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">Pemilik:</string>
   <!-- Fso Properties Dialog - Group Label -->
@@ -268,9 +268,9 @@
   <string name="fso_failed_to_allow_media_scan">Gagal untuk mengizinkan pemindaian media</string>
   <string name="fso_failed_to_prevent_media_scan">Gagal mencegah pemindaian media</string>
   <string name="fso_delete_nomedia_dir_title">Hapus direktori .nomedia</string>
-  <string name="fso_delete_nomedia_dir_body">Direktori ini berisi .nomedia direktori.\n\nApakah Anda ingin menghapus direktori dan semua isinya?</string>
+  <string name="fso_delete_nomedia_dir_body">Direktori ini berisi .nomedia. \n\nApakah Anda ingin menghapus direktori dan semua isinya?</string>
   <string name="fso_delete_nomedia_non_empty_title">Hapus berkas .nomedia</string>
-  <string name="fso_delete_nomedia_non_empty_body">Direktori ini berisi berkas .nomedia tidak kosong.\n\nApakah Anda ingin menghapusnya?</string>
+  <string name="fso_delete_nomedia_non_empty_body">Direktori ini berisi berkas .nomedia dan tidak kosong.\n\nApakah Anda ingin menghapusnya?</string>
   <!-- History - History activity title -->
   <string name="history">Riwayat</string>
   <!-- History - The history is empty -->
@@ -278,13 +278,13 @@
   <!-- History - The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">Item riwayat tidak diketahui.</string>
   <!-- Search - Search activity title -->
-  <string name="search">Hasil penelusuran</string>
+  <string name="search">Hasil pencarian</string>
   <!-- Search - Search hint message -->
-  <string name="search_hint">Ketik penelusuran Anda</string>
+  <string name="search_hint">Ketik pancarian</string>
   <!-- Search - Voice search hint message -->
-  <string name="search_voice_hint">Ucapkan penelusuran Anda</string>
+  <string name="search_voice_hint">Ucapkan pencarian</string>
   <!-- Search - Search error message -->
-  <string name="search_error_msg">Terjadi galat saat menelusuri. Tiada hasil yang ditemukan.</string>
+  <string name="search_error_msg">Kesalahan terjadi ketika menelusuri. Tidak ada hasil yang ditemukan.</string>
   <!-- Search - Search no results message -->
   <string name="search_no_results_msg">Hasil tidak ditemukan.</string>
   <!-- Search - Number of items found in directory -->
@@ -292,13 +292,13 @@
   <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>Istilah:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Search - Confirm search -->
-  <string name="search_few_characters_title">Konfirmasi penelusuran</string>
+  <string name="search_few_characters_title">Konfirmasi pencarian</string>
   <!-- Search - Some terms of the search are too small. The operation could be very costly -->
-  <string name="search_few_characters_msg">Beberapa istilah penelusuran menggunakan sedikit karakter. Operasi bisa menghabiskan banyak waktu dan sumber daya sistem.\n\nApakah Anda ingin melanjutkan?</string>
+  <string name="search_few_characters_msg">Beberapa istilah pencarian menggunakan sedikit karakter. Operasi bisa menghabiskan banyak waktu dan sumber daya sistem.\n\nApakah anda ingin melanjutkan?</string>
   <!-- Search - Searching dialog title -->
-  <string name="searching">Silakan tunggu\u2026</string>
+  <string name="searching">Silahkan tunggu\u2026</string>
   <!-- Search - Searching label -->
-  <string name="searching_action_label">Penelusuran dalam proses</string>
+  <string name="searching_action_label">Pencarian dalam proses</string>
   <!-- Picker Activity -->
   <!-- Picker Activity - Dialog title -->
   <string name="picker_title">Pilih berkas</string>
@@ -310,7 +310,7 @@
   <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">Berkas tidak ditemukan.</string>
   <!-- Editor - File size exceed the limit -->
-  <string name="editor_file_exceed_size_msg">Berkas terlalu besar untuk dibuka pada perangkat ini.</string>
+  <string name="editor_file_exceed_size_msg">Berkas terlalu besar untuk dibuka di perangkat ini.</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">Konfirmasi keluar</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog message -->
@@ -318,45 +318,45 @@
   <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">Berkas berhasil disimpan.</string>
   <!-- Editor - Read-only file mode -->
-  <string name="editor_read_only_mode">Berkas dibuka dalam modus baca-saja.</string>
+  <string name="editor_read_only_mode">Berkas dibuka dalam mode baca-saja.</string>
   <!-- Editor - Dumping message -->
   <string name="dumping_message">Menghasilkan hex dump\u2026</string>
   <!-- Editor - Displaying -->
   <string name="displaying_message">Menampilkan\u2026</string>
   <!-- Bookmarks - Bookmarks activity title -->
-  <string name="bookmarks">Markah buku</string>
+  <string name="bookmarks">Bookmark</string>
   <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">Beranda</string>
   <!-- Bookmarks - Bookmark name - Root folder -->
-  <string name="bookmarks_root_folder">Folder punca (root)</string>
+  <string name="bookmarks_root_folder">Folder root</string>
   <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">Folder sistem</string>
   <!-- Bookmarks - Bookmark name - Secure storage -->
-  <string name="bookmarks_secure">Penyimpanan yang aman</string>
+  <string name="bookmarks_secure">Penyimpanan aman</string>
   <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">Penyimpanan jarak jauh</string>
   <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">Atur folder awal.</string>
   <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
-  <string name="bookmarks_button_remove_bookmark_cd">Hapus markah buku.</string>
+  <string name="bookmarks_button_remove_bookmark_cd">Hapus bookmark.</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
-  <string name="bookmarks_msgs_add_success">Markah buku berhasil ditambahkan.</string>
+  <string name="bookmarks_msgs_add_success">Bookmark berhasil ditambahkan.</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
-  <string name="bookmarks_msgs_add_exists">Markah buku telah ada.</string>
+  <string name="bookmarks_msgs_add_exists">Bookmark ini sudah ada.</string>
   <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Folder awal</string>
   <!-- Initial directory label -->
   <string name="initial_directory_label">Pilih folder awal:</string>
   <!-- Initial directory is relative -->
-  <string name="initial_directory_relative_msg">Alur relatif tidak diizinkan.</string>
+  <string name="initial_directory_relative_msg">Path relatif tidak diizinkan.</string>
   <!-- Initial directory error message -->
-  <string name="initial_directory_error_msg">Terjadi galat saat menyimpan folder awal.</string>
+  <string name="initial_directory_error_msg">Terjadi kesalahan saat menyimpan folder awal.</string>
   <!-- Menu - Navigation - Search -->
   <string name="menu_search">Telusuri</string>
   <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">Pengaturan</string>
   <!-- Menu - History - Clear history -->
-  <string name="menu_clear_history">Hapus riwayat</string>
+  <string name="menu_clear_history">Bersihkan riwayat</string>
   <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">Tidak ada saran</string>
   <!-- Menu - Editor - Word wrap -->
@@ -382,25 +382,25 @@
   <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Berkas</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Extracting title -->
-  <string name="waiting_dialog_extracting_title">Ekstraksi\u2026</string>
+  <string name="waiting_dialog_extracting_title">Mengekstrak\u2026</string>
   <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Berkas</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Extracting title -->
-  <string name="waiting_dialog_compressing_title">Kompresi\u2026</string>
+  <string name="waiting_dialog_compressing_title">Mengompress\u2026</string>
   <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Berkas</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Menganalisa\u2026</b>]]></string>
   <!-- Extracting - Success message -->
-  <string name="msgs_extracting_success">Operasi ekstraksi selesai dengan sukses. Data telah diekstraksi ke <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <string name="msgs_extracting_success">Operasi ekstraksi selesai dengan sukses. Data telah diekstrak ke <xliff:g id="destination">%1$s</xliff:g>.</string>
   <!-- Compressing - Success message -->
-  <string name="msgs_compressing_success">Operasi kompresi selesai dengan sukses. Data telah dikompresi ke <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <string name="msgs_compressing_success">Operasi kompresi selesai dengan sukses. Data telah dikompres ke <xliff:g id="destination">%1$s</xliff:g>.</string>
   <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">Tindakan</string>
   <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">Properti</string>
   <!-- Actions Dialog - Menu - Refresh -->
-  <string name="actions_menu_refresh">Muat ulang</string>
+  <string name="actions_menu_refresh">Segarkan</string>
   <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">Folder baru</string>
   <!-- Actions Dialog - Menu - New file -->
@@ -408,19 +408,19 @@
   <!-- Actions Dialog - Menu - Select all -->
   <string name="actions_menu_select_all">Pilih semua</string>
   <!-- Actions Dialog - Menu - Deselect all -->
-  <string name="actions_menu_deselect_all">Hapus semua</string>
+  <string name="actions_menu_deselect_all">Tidak pilih semua</string>
   <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">Pilih</string>
   <!-- Actions Dialog - Menu - Deselect -->
-  <string name="actions_menu_deselect">Hapus</string>
+  <string name="actions_menu_deselect">Tidak pilih</string>
   <!-- Actions Dialog - Menu - Copy/Paste selection -->
-  <string name="actions_menu_paste_selection">Salin pilihan di sini</string>
+  <string name="actions_menu_paste_selection">Salin terpilih di sini</string>
   <!-- Actions Dialog - Menu - Move selection -->
-  <string name="actions_menu_move_selection">Pindahkan pilihan di sini</string>
+  <string name="actions_menu_move_selection">Pindah terpilih di sini</string>
   <!-- Actions Dialog - Menu - Delete selection -->
-  <string name="actions_menu_delete_selection">Hapus pilihan</string>
+  <string name="actions_menu_delete_selection">Hapus terpilih</string>
   <!-- Actions Dialog - Menu - Compress selection -->
-  <string name="actions_menu_compress_selection">Kompres pilihan</string>
+  <string name="actions_menu_compress_selection">Kompres terpilih</string>
   <!-- Actions Dialog - Menu - Create link -->
   <string name="actions_menu_create_link">Buat tautan</string>
   <!-- Actions Dialog - Menu - Open -->
@@ -432,7 +432,7 @@
   <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">Kirim</string>
   <!-- Actions Dialog - Menu - Send selection -->
-  <string name="actions_menu_send_selection">Kirim pilihan</string>
+  <string name="actions_menu_send_selection">Kirim terpilih</string>
   <!-- Actions Dialog - Menu - Compress -->
   <string name="actions_menu_compress">Kompres</string>
   <!-- Actions Dialog - Menu - Extract -->
@@ -446,13 +446,13 @@
   <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">Properti</string>
   <!-- Actions Dialog - Menu - Add to bookmarks -->
-  <string name="actions_menu_add_to_bookmarks">Tambahkan ke markah buku</string>
+  <string name="actions_menu_add_to_bookmarks">Tambahkan ke bookmark</string>
   <!-- Actions Dialog - Menu - Add shortcut -->
-  <string name="actions_menu_add_shortcut">Menambahkan jalan pintas</string>
+  <string name="actions_menu_add_shortcut">Tambah pintasan</string>
   <!-- Actions Dialog - Menu - Open parent folder -->
   <string name="actions_menu_open_parent_folder">Buka induk</string>
   <!-- Actions Dialog - Menu - Compute checksum -->
-  <string name="actions_menu_compute_checksum">Hitung ceksum</string>
+  <string name="actions_menu_compute_checksum">Hitung checksum</string>
   <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">Cetak</string>
   <!-- Actions Dialog - Menu - Set as home -->
@@ -468,9 +468,9 @@
   <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">Batas karakter maksimum tercapai.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
-  <string name="input_name_dialog_message_invalid_name">Nama tidak valid. Nama \'.\' dan \'..\' tidak diperbolehkan.</string>
+  <string name="input_name_dialog_message_invalid_name">Nama tidak valid. Nama \'.\' dan \'..\' tidak diizinkan.</string>
   <!-- Enter Name Dialog - Message - Name exists -->
-  <string name="input_name_dialog_message_name_exists">Nama telah ada.</string>
+  <string name="input_name_dialog_message_name_exists">Nama sudah ada.</string>
   <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">Asosiasi</string>
   <!-- Associations Dialog - Remember the user action -->
@@ -488,7 +488,7 @@
   <!-- Execution console - Title -->
   <string name="execution_console_title">Konsol</string>
   <!-- Execution console - The script name label -->
-  <string name="execution_console_script_name_label">Naskah:</string>
+  <string name="execution_console_script_name_label">Skrip:</string>
   <!-- Execution console - The script execution time label -->
   <string name="execution_console_script_execution_time_label">Waktu:</string>
   <!-- Execution console - The script exit code label -->
@@ -496,13 +496,13 @@
   <!-- Execution console - The script execution time seconds string -->
   <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> det.</string>
   <!-- Compute checksum - Title -->
-  <string name="compute_checksum_title">Hitung ceksum</string>
+  <string name="compute_checksum_title">Hitung checksum</string>
   <!-- Compute checksum - The file name label -->
   <string name="compute_checksum_filename_label">Berkas:</string>
   <!-- Compute checksum - The MD5 label -->
   <!-- Compute checksum - The SHA1 label -->
   <!-- Compute checksum - The computing checksum message-->
-  <string name="compute_checksum_computing_checksum_msg">Menghitung ceksum\u2026</string>
+  <string name="compute_checksum_computing_checksum_msg">Menghitung checksum\u2026</string>
   <!-- Mime/Types - Folder -->
   <string name="mime_folder">Folder</string>
   <!-- Mime/Types - Symlink -->
@@ -525,31 +525,31 @@
   <string name="category_text">TEKS</string>
   <string name="category_document">DOKUMEN</string>
   <string name="category_ebook">EBOOK</string>
-  <string name="category_mail">SURAT</string>
+  <string name="category_mail">MAIL</string>
   <string name="category_compress">KOMPRES</string>
   <string name="category_exec">TEREKSEKUSI</string>
-  <string name="category_database">BASIS DATA</string>
-  <string name="category_font">FON</string>
+  <string name="category_database">DATABASE</string>
+  <string name="category_font">FONT</string>
   <string name="category_image">GAMBAR</string>
   <string name="category_audio">AUDIO</string>
   <string name="category_video">VIDEO</string>
   <string name="category_security">KEAMANAN</string>
   <string name="category_all">SEMUA</string>
   <!-- Compression - Compression modes dialog title -->
-  <string name="compression_mode_title">Modus kompresi</string>
+  <string name="compression_mode_title">Mode kompresi</string>
   <!-- Compression - Supported archive and compression modes -->
   <!-- Shortcut. Failed to handle the shortcut -->
   <string name="shortcut_failed_msg">Gagal menangani pintasan.</string>
   <!-- Shortcut. The shortcut was created -->
-  <string name="shortcut_creation_success_msg">Pintasan dibuat dengan sukses.</string>
+  <string name="shortcut_creation_success_msg">Sukses membuat pintasan.</string>
   <!-- Shortcut. The shortcut wasn't created -->
-  <string name="shortcut_creation_failed_msg">Pembuatan pintasan gagal.</string>
+  <string name="shortcut_creation_failed_msg">Gagal membuat pintasan.</string>
   <!-- Preferences title -->
   <string name="pref">Pengaturan</string>
   <!-- Preferences - General title -->
   <string name="pref_general">Pengaturan umum</string>
   <!-- Preferences - Search title -->
-  <string name="pref_search">Pilihan penelusuran</string>
+  <string name="pref_search">Pilihan pencarian</string>
   <!-- Preferences - Storage title -->
   <string name="pref_storage">Pilihan penyimpanan</string>
   <!-- Preferences - Editor title -->
@@ -557,21 +557,21 @@
   <!-- Preferences - Themes title -->
   <string name="pref_themes">Tema</string>
   <!-- Preferences - About title -->
-  <string name="pref_about">Mengenai</string>
+  <string name="pref_about">Tentang</string>
   <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">Umum</string>
   <!-- Preferences - General - Case sensitive sort and navigating title -->
-  <string name="pref_case_sensitive_sort">Sensitif-bentuk</string>
+  <string name="pref_case_sensitive_sort">Case-sensitif</string>
   <!-- Preferences - General - Case sensitive sort and navigating summary -->
-  <string name="pref_case_sensitive_sort_summary">Pertimbangkan bentuk ketika menavigasi atau menyortir hasil penelusuran</string>
+  <string name="pref_case_sensitive_sort_summary">Pertimbangkan case ketika menavigasi atau menyortir hasil penelusuran</string>
   <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">Format tanggal/jam</string>
   <!-- Preferences - General -Disk usage warning level title -->
-  <string name="pref_disk_usage_warning_level">Peringatan penggunaan diska</string>
+  <string name="pref_disk_usage_warning_level">Peringatan penggunaan disk</string>
   <!-- Preferences - General - Disk usage warning level summary -->
   <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
          of ListPreference. This should be fixed in frameworks base prior to be added here. -->
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">Tampilkan warna berbeda pada gawit penggunaan diska ketika mencapai <xliff:g id="level">%1$s</xliff:g> persen dari ruang bebas diska</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">Tampilkan warna berbeda dalam widget penggunaan disk ketika mencapai <xliff:g id="level">%1$s</xliff:g> persen dari ruang bebas disk</string>
   <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Hitung statistik folder</string>
   <!-- Preferences - General - Compute folder statistics summary on -->
@@ -581,9 +581,9 @@
   <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">Tampilkan pratinjau gambar untuk aplikasi, berkas musik, gambar dan video</string>
   <!-- Preferences - General - Use flinger detection -->
-  <string name="pref_use_flinger">Gunakan gerakan usap</string>
+  <string name="pref_use_flinger">Gunakan gerakan geser</string>
   <!-- Preferences - General - Use flinger detection summary -->
-  <string name="pref_use_flinger_summary">Gunakan deteksi gerakan usap kiri ke kanan untuk menghapus berkas atau folder</string>
+  <string name="pref_use_flinger_summary">Gunakan deteksi gerakan geser kiri ke kanan untuk menghapus berkas atau folder</string>
   <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Lanjutan</string>
   <!-- Preferences - General - Access mode -->
@@ -597,9 +597,9 @@
   <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">Modus Tanya Pengguna\n\nAplikasi berjalan dengan akses penuh ke sistem berkas tetapi akan meminta izin sebelum melakukan aksi istimewa</string>
   <!-- Preferences - General - Root access mode -->
-  <string name="pref_access_mode_root">Modus Akses Punca (Root)</string>
+  <string name="pref_access_mode_root">Mode akses root</string>
   <!-- Preferences - General - Root access mode summary -->
-  <string name="pref_access_mode_root_summary">Modus Akses Punca (Root)\n\nPeringatan! Modus ini memungkinkan operasi yang dapat merusak perangkat Anda. Adalah tanggung jawab Anda untuk memastikan bahwa operasi aman</string>
+  <string name="pref_access_mode_root_summary">Mode Akses Root\n\nPeringatan! Mode ini memungkinkan operasi yang dapat merusak perangkat anda. Adalah tanggung jawab anda untuk memastikan bahwa operasi aman</string>
   <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">Batasi akses pengguna</string>
   <!-- Preferences - General - Restrict secondary users access summary -->
@@ -607,11 +607,11 @@
   <!-- Preferences - Search - Results category -->
   <string name="pref_search_results_category">Hasil</string>
   <!-- Preferences - Search - Show relevance widget -->
-  <string name="pref_show_relevance_widget">Tampilkan gawit yang relevan</string>
+  <string name="pref_show_relevance_widget">Tampilkan widget relevan</string>
   <!-- Preferences - Search - Highlight search terms -->
-  <string name="pref_highlight_terms">Sorot istilah penelusuran</string>
+  <string name="pref_highlight_terms">Sorot istilah pencarian</string>
   <!-- Preferences - Search - Sort results mode -->
-  <string name="pref_sort_search_results_mode">Modus pengurutan hasil</string>
+  <string name="pref_sort_search_results_mode">Mode pengurutan hasil</string>
   <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_none">Tidak diurut</string>
   <!-- Preferences - Search - Sort results mode. None -->
@@ -621,23 +621,23 @@
   <!-- Preferences - Search - Privacity category -->
   <string name="pref_search_privacity_category">Privasi</string>
   <!-- Preferences - Search - Save search terms -->
-  <string name="pref_save_search_terms">Simpan istilah penelusuran</string>
+  <string name="pref_save_search_terms">Simpan istilah pencarian</string>
   <!-- Preferences - Search - Save search terms summary on -->
-  <string name="pref_save_search_terms_on">Istilah penelusuran akan disimpan dan digunakan sebagai saran di penelusuran mendatang</string>
+  <string name="pref_save_search_terms_on">Istilah pencarian akan disimpan dan digunakan sebagai saran di pencarian mendatang</string>
   <!-- Preferences - Search - Save search terms summary off -->
-  <string name="pref_save_search_terms_off">Istilah penelusuran tidak akan disimpan</string>
+  <string name="pref_save_search_terms_off">Istilah pencarian tidak akan disimpan</string>
   <!-- Preferences - Search - Remove saved search terms -->
-  <string name="pref_remove_saved_search_terms">Hapus istilah penelusuran yang tersimpan</string>
+  <string name="pref_remove_saved_search_terms">Hapus istilah pencarian yang tersimpan</string>
   <!-- Preferences - Search - Remove saved search terms summary -->
-  <string name="pref_remove_saved_search_terms_summary">Ketuk untuk mencabut semua istilah penelusuran yang tersimpan</string>
+  <string name="pref_remove_saved_search_terms_summary">Ketuk untuk menghapus semua istilah pencarian tersimpan</string>
   <!-- Preferences - Search - Suggestions were truncated -->
-  <string name="pref_remove_saved_search_terms_msg">Semua istilah penelusuran tersimpan telah dihapus</string>
+  <string name="pref_remove_saved_search_terms_msg">Semua istilah pencarian tersimpan telah dihapus</string>
   <!-- Preferences - Storage - Secure Storage category -->
-  <string name="pref_secure_storage_category">Penyimpanan yang aman</string>
+  <string name="pref_secure_storage_category">Penyimpanan aman</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
-  <string name="pref_secure_storage_delayed_sync_title">Sinkronisasi yang tertunda</string>
+  <string name="pref_secure_storage_delayed_sync_title">Sinkronisasi tertunda</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
-  <string name="pref_secure_storage_delayed_sync_summary">Sinkronisasi sistem berkas aman adalah operasi yang mahal. Aktifkan opsi ini untuk mengizinkan respons yang lebih cepat setelah setiap operasi, melakukan sinkronisasi ketika sistem berkas dalam keadaan tidak digunakan, tetapi dengan mengorbankan kehilangan informasi yang tertunda tidak disinkronkan jika terdapat kemogokan aplikasi.</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Sinkronisasi sistem berkas aman adalah operasi yang mahal. Aktifkan pilihan ini untuk mengizinkan respons yang lebih cepat setiap operasi, melakukan sinkronisasi ketika sistem berkas dalam keadaan tidak digunakan, tetapi dengan mengorbankan kehilangan informasi yang tertunda tidak disinkronkan jika ada aplikasi bertabrakan.</string>
   <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">Ubah kata sandi</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
@@ -647,7 +647,7 @@
   <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">Tidak ada saran</string>
   <!-- Preferences - Editor - No suggestions summary -->
-  <string name="pref_no_suggestions_desc">Jangan tampilkan kamus saran ketika mengubah berkas</string>
+  <string name="pref_no_suggestions_desc">Jangan tampilkan saran kamus ketika mengubah berkas</string>
   <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">Penggal kata</string>
   <!-- Preferences - Editor - Hex dump -->
@@ -663,11 +663,11 @@
   <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">Skema warna</string>
   <!-- Preferences - Editor - Syntax highlight color scheme summary -->
-  <string name="pref_syntax_highlight_color_scheme_desc">Pilih skema warna highlight sintaks</string>
+  <string name="pref_syntax_highlight_color_scheme_desc">Pilih skema warna sorot sintaks</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
-  <string name="pref_syntax_sh_use_theme_default">Gunakan tema baku</string>
+  <string name="pref_syntax_sh_use_theme_default">Gunakan tema bawaan</string>
   <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
-  <string name="pref_syntax_sh_use_theme_default_desc">Gunakan sorot sintaksis baku dari tema saat ini</string>
+  <string name="pref_syntax_sh_use_theme_default_desc">Gunakan sorot sintak baku dari tema saat ini</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">Item</string>
   <!-- Preferences - Themes - Themes selection category -->
@@ -679,7 +679,7 @@
   <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">Tema tidak ditemukan.</string>
   <!-- Preferences - Debug - Capture debug traces -->
-  <string name="pref_debug_traces">Log informasi perbaikan galat fungsi</string>
+  <string name="pref_debug_traces">Log Informasi debug</string>
   <!-- Themes - Default theme name -->
   <string name="theme_default_name">Tema Terang</string>
   <!-- Themes - Default theme description -->
@@ -687,8 +687,8 @@
   <!-- Themes - Default theme author -->
   <string name="themes_author">CyanogenMod</string>
   <!-- Navigation drawer -->
-  <string name="drawer_open">Buka laci navigasi</string>
-  <string name="drawer_close">Tutup laci navigasi</string>
+  <string name="drawer_open">Buka panel navigasi</string>
+  <string name="drawer_close">Tutup panel navigasi</string>
   <!-- ColorPickerDialog -->
   <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">Alfa</string>
@@ -699,7 +699,7 @@
   <!-- The label of the color input -->
   <string name="color_picker_color">Warna:</string>
   <!-- Android Syntax Highlight -->
-  <string name="ash_reset_color_scheme">Kembalikan skema warna tema baku</string>
+  <string name="ash_reset_color_scheme">Kembalikan skema warna tema bawaan</string>
   <string name="ash_text">Teks</string>
   <string name="ash_assignment">Tugas</string>
   <string name="ash_singleline_comment">Komentar satu-baris</string>
@@ -721,7 +721,7 @@
   <!-- Secure Storage unlock dialog message (new secure storage) -->
   <string name="secure_storage_unlock_key_new_msg">Ketik kata sandi untuk melindungi penyimpanan sistem berkas yang aman.</string>
   <!-- Secure Storage unlock dialog message (reset the current password) -->
-  <string name="secure_storage_unlock_key_reset_msg">Ketik kata sandi saat ini dan yang baru untuk mengatur ulang penyimpanan sistem berlas yang aman.</string>
+  <string name="secure_storage_unlock_key_reset_msg">Ketik kata sandi saat ini dan yang baru untuk menyetel ulang penyimpanan sistem berkas yang aman.</string>
   <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <string name="secure_storage_unlock_key_delete_msg">Ketik kata sandi saat ini untuk menghapus penyimpanan sistem berkas yang aman.</string>
   <!-- Secure Storage unlock dialog old key title -->
@@ -756,17 +756,19 @@
   <!-- Print header -->
   <string name="print_document_header">Dokumen: <xliff:g id="document_name">%1$s</xliff:g></string>
   <!-- Print footer -->
-  <string name="print_document_footer">Laman: <xliff:g id="page_number">%1$s</xliff:g></string>
+  <string name="print_document_footer">Halaman <xliff:g id="page_number">%1$s</xliff:g></string>
   <!-- Security - Extract relative or absolute files -->
   <string name="security_warning_extract">Peringatan!\n\nEkstraksi berkas arsip dengan alur relatif atau absolut dapat menyebabkan kerusakan perangkat Anda karena tertimpanya berkas sistem.\n\nApakah Anda ingin melanjutkan?</string>
   <!-- ChangeLog - Dialog title -->
-  <string name="changelog_title">Daftar perubahan</string>
+  <string name="changelog_title">Log perubahan</string>
   <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Selamat datang</string>
   <!-- Welcome Dialog - Message -->
-  <string name="welcome_msg">Selamat datang di manjer berkas CyanogenMod.\n\nAplikasi ini memungkinkan Anda untuk menjelajahi sistem berkas dan melakukan operasi yang dapat merusak perangkat Anda. Untuk mencegah kerusakan, aplikasi akan mulai dengan aman, modus hak-istimewa-rendah.\n\nAnda dapat mengakses modus lanjutan, modus hak-istimewa-penuh melalui Pengaturan. Anda bertanggung jawab untuk memastikan bahwa operasi tidak merusak sistem Anda.\n\nTim CyanogenMod</string>
+  <string name="welcome_msg">Selamat datang di manjer berkas CyanogenMod.\n\nAplikasi ini memungkinkan Anda untuk menjelajahi sistem berkas dan melakukan operasi yang dapat merusak perangkat Anda. Untuk mencegah kerusakan, aplikasi akan mulai dengan aman, mode hak-istimewa-rendah.\n\nAnda dapat mengakses mode lanjutan, mode hak-istimewa-penuh melalui Pengaturan. Anda bertanggung jawab untuk memastikan bahwa operasi tidak merusak sistem Anda.\n\nTim CyanogenMod</string>
   <string name="activity_not_found_exception">Tidak dapat menemukan sebuah aplikasi untuk membuka berkas ini</string>
   <string name="storage_permissions_denied">Manajer berkas memerlukan izin ke penyimpanan untuk melihat berkas Anda.</string>
   <string name="storage_permissions_explanation">Pergi ke pengaturan, dan ketuk Perizinan untuk memberikan izin.</string>
   <string name="snackbar_settings">Pengaturan</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Mode merapatkan kata</string>
 </resources>

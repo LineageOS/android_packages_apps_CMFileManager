@@ -769,4 +769,6 @@
   <string name="storage_permissions_denied">Tiedostonhallinta tarvitsee käyttöoikeudet tallennustilaan näyttääkseen tiedostosi.</string>
   <string name="storage_permissions_explanation">Mene Asetuksiin, ja valitse Käyttöoikeudet myöntääksesi luvan.</string>
   <string name="snackbar_settings">Asetukset</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Sanojen lyhennystila</string>
 </resources>

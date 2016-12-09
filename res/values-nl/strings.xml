@@ -769,4 +769,6 @@
   <string name="storage_permissions_denied">Bestandsbeheerder vereist machtiging voor opslag om bestanden te kunnen bekijken.</string>
   <string name="storage_permissions_explanation">Ga naar Instellingen en tik Machtigingen om machtiging te verlenen.</string>
   <string name="snackbar_settings">Instellingen</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Automatisch terugloop in-/uitschakelen</string>
 </resources>

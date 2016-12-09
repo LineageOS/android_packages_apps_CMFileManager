@@ -41,6 +41,6 @@
   <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item is going to be deleted.</item>
-    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> item is going to be deleted.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> items are going to be deleted.</item>
   </plurals>
 </resources>

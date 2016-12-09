@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">ನಿಮ್ಮ ಫೈಲ್ ಗಳನ್ನು ನೋಡುವ ನಿಟ್ಟಿನಲ್ಲಿ ದಾಸ್ತಾನು ಮಾಡಲು ಫೈಲ್ ಮ್ಯಾನೇಜರ್ ಗೆ ಅನುಮತಿ ಬೇಕಾಗುತ್ತದೆ.</string>
   <string name="storage_permissions_explanation">ಸೆಟ್ಟಿಂಗ್ ಗೆ ಹೋಗು, ಮತ್ತು ಅನುಮತಿ ಪಡೆಯಲು ಟ್ಯಾಪ್ ಮಾಡು.</string>
   <string name="snackbar_settings">ಸೆಟ್ಟಿಂಗ್ಸ್</string>
+  <!-- Wrap mode - toast -->
 </resources>

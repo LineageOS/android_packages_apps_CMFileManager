@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">ഫയൽ മാനേജറിനു സ്റ്റൊറെജിലെ ഫയലുകൾ കാണിക്കാൻ അനുവാദം ആവശ്യമുണ്ട്.</string>
   <string name="storage_permissions_explanation">അനുവാദം നല്കുവാൻ ക്രമീകരണങ്ങളിലേക്ക് പോയി അനുവാദങ്ങൾ-ൽ സ്പർശിക്കുക.</string>
   <string name="snackbar_settings">ക്രമീകരണം</string>
+  <!-- Wrap mode - toast -->
 </resources>

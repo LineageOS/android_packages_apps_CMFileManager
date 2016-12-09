@@ -17,9 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- The name of the app -->
-  <string name="app_name">Dosieradministrilo</string>
   <!-- The description of the app -->
-  <string name="app_description">CyanogenMod dosiermastrumilo</string>
   <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">kB</string>
@@ -28,25 +26,13 @@
   <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
   <!-- Devices types -->
-  <string name="device_blockdevice">Bloki aparaton</string>
-  <string name="device_characterdevice">Karaktero de aparato</string>
-  <string name="device_namedpipe">Nomhava dukto</string>
-  <string name="device_domainsocket">Kontaktoskatolo de domajno</string>
   <!-- Mount Point States -->
-  <string name="mount_point_readonly">RO</string>
-  <string name="mount_point_readwrite">RW</string>
   <!-- Default buttons -->
   <string name="yes">Jes</string>
-  <string name="no">Ne</string>
-  <string name="all">Ĉio</string>
-  <string name="overwrite">Anstataŭigi</string>
-  <string name="select">Elekti</string>
   <!-- The root directory name -->
-  <string name="root_directory_name"><![CDATA[<Radika dosierujo>]]></string>
   <!-- The search result name -->
   <string name="search_result_name">Serĉi: <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Loading waiting message -->
-  <string name="loading_message">Ŝarĝas\u2026</string>
   <!-- Computing message -->
   <!-- Computing new line message -->
   <!-- Cancelled message -->
@@ -54,675 +40,356 @@
   <!-- Error message -->
   <string name="error_message">Eraro.</string>
   <!-- Copy text content description -->
-  <string name="copy_text_cd">Tuŝetu por kopii en la tondejon</string>
   <!-- Copy text content message -->
-  <string name="copy_text_msg">Teksto kopiita en la tondejon</string>
   <!-- Warning dialog title -->
   <string name="warning_title">Averto</string>
   <!-- Error dialog title -->
   <string name="error_title">Eraro</string>
   <!-- Confirm operation dialog title -->
-  <string name="confirm_operation">Konfirmi operacion</string>
   <!-- Confirm overwrite dialog title -->
-  <string name="confirm_overwrite">Konfirmi anstataŭigon</string>
   <!-- Confirm deletion dialog title -->
-  <string name="confirm_deletion">Konfirmi forigon</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
-  <string name="msgs_change_to_prompt_access_mode_title">Konfirmi ŝalton</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
-  <string name="msgs_change_to_prompt_access_mode_msg">Neeblas lanĉi la radikuzantan reĝimon. Ŝanĝas al sekura reĝimo.\n\nĈu konfirmi la ŝanĝon?</string>
   <!-- A console couldn't be created - Without privileges, the app won't work -->
-  <string name="msgs_cant_create_console">Neeblas akiri la privilegiojn por funkcii.</string>
   <!-- The message shown when an allocation of a privileged console fails, and a non
          privileged is allocated -->
-  <string name="msgs_privileged_console_alloc_failed">Neeblas lanĉi la radikuzantan reĝimon. Ŝanĝas al sekura reĝimo.</string>
   <!-- The selected setting was not applied or stored -->
-  <string name="msgs_settings_save_failure">Ne eblas apliki aŭ konservi la agordojn.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
-  <string name="msgs_settings_invalid_initial_directory">La komenca dosierujo \'<xliff:g id="initial_dir">%1$s</xliff:g>\' ne validas. Ŝanĝiĝas al radika dosierujo.</string>
   <!-- Root is not available message -->
-  <string name="root_not_available_msg">Radikuzanto ne disponeblas sur tiu aparato. Ne eblas plenumi tiun operacion.</string>
   <!-- Success -->
-  <string name="msgs_success">Operacio sukcesis.</string>
   <!-- Unknown error -->
-  <string name="msgs_unknown">Detektis eraron. Operacio fiaskis.</string>
   <!-- When an operation requires elevated privileged (normally caused for the use of a
          non-privileged console) -->
-  <string name="msgs_insufficient_permissions">Tiu operacio postulas grandigon de la rajtoj. Provu ŝanĝi al radikuzanta reĝimo.</string>
   <!-- When an operation fails because the device has run out of storage. -->
-  <string name="msgs_no_disk_space">Operacio fiaskis pro manko da spaco.</string>
   <!-- The file or directory was not found -->
-  <string name="msgs_file_not_found">Dosiero aŭ dosierujo ne trovita.</string>
   <!-- The command reference couldn't be created (not found or invalid definition)
          (normally caused by a development error) -->
-  <string name="msgs_command_not_found">Netrovebla instrukcio aŭ nevalida difino.</string>
   <!-- I/O exception -->
-  <string name="msgs_io_failed">Lego/skribo fiaskis.</string>
   <!-- Operation timeout detected -->
-  <string name="msgs_operation_timeout">La operacio eltempiĝis.</string>
   <!-- The operation returns an invalid exit code -->
-  <string name="msgs_operation_failure">La operacio fiaskis.</string>
   <!-- A console couldn't be allocated -->
-  <string name="msgs_console_alloc_failure">Interna eraro okazis.</string>
   <!-- An operation can't be cancelled -->
-  <string name="msgs_operation_can_not_be_cancelled">Ne eblas nuligi la operacion.</string>
   <!-- The operation requieres mount the file system prior to execute the command -->
-  <string name="msgs_read_only_filesystem">La dosiersistemo estas nurlega. Provu munti la dosiersistemon kiel skribebla reĝimo.</string>
   <!-- Illegal argument (normally caused by a development error when calling internal api) -->
-  <string name="msgs_illegal_argument">Malpermesita argumento. Alvokado fiaskis.</string>
   <!-- The operation will cause inconsistencies -->
-  <string name="msgs_unresolved_inconsistencies">Operacio ne permesita ĉar ĝi kreus nekoherecojn.</string>
   <!-- Operation not permitted in the current directory -->
-  <string name="msgs_operation_not_allowed_in_current_directory">Celdosierujo ne estu subdosierujo nek la sama dosierujo.</string>
   <!-- The advice message prior to exit the app -->
-  <string name="msgs_push_again_to_exit">Premu denove por foriri.</string>
   <!-- There is no registered app that can handle the mime-type -->
-  <string name="msgs_not_registered_app">Neniu aplikaĵo konservita por trakti la elektitan dosieron.</string>
   <!-- Overwrite files? -->
-  <string name="msgs_overwrite_files">Kelkaj dosieroj jam ekzistas en la celdosierujo.\n\nĈu anstataŭigi?</string>
   <!-- The association of an action to the app failed -->
-  <string name="msgs_action_association_failed">Ne eblas asocii la agon al la aplikaĵo.</string>
   <!-- An operation requires elevated privileged. Ask the user. -->
-  <string name="advise_insufficient_permissions">La operacio postulas plialtigon de viaj rajtoj.\n\nĈu vi deziras ŝanĝi al radikuzanta reĝimo?</string>
   <!-- The parent directory of the current directory in navigation view -->
-  <string name="parent_dir">Patra dosierujo</string>
   <!-- External storage descripton -->
-  <string name="external_storage">Ekstera memorilo</string>
   <!-- Usb storage descripton -->
-  <string name="usb_storage">USB memorilo</string>
   <!-- ActionBar Buttons - FileSystem -->
-  <string name="actionbar_button_filesystem_cd">Informoj pri dosiersistemo</string>
   <!-- ActionBar Buttons - Sort Mode -->
-  <string name="actionbar_button_sort_mode_cd">Ordiga reĝimo</string>
   <!-- ActionBar Buttons - Layout Mode -->
-  <string name="actionbar_button_layout_mode_cd">Reĝimo de aspektigo</string>
   <!-- ActionBar Buttons - Other View Options -->
-  <string name="actionbar_button_other_view_options_cd">Aliaj opcioj pri vido</string>
   <!-- ActionBar Buttons - Done -->
-  <string name="actionbar_button_selection_done_cd">Finite</string>
   <!-- ActionBar Buttons - Actions -->
-  <string name="actionbar_button_actions_cd">Agoj</string>
   <!-- ActionBar Buttons - Search -->
-  <string name="actionbar_button_search_cd">Serĉi</string>
   <!-- ActionBar Buttons - Overflow -->
-  <string name="actionbar_button_overflow_cd">Pliaj opcioj</string>
   <!-- ActionBar Buttons - Storage volumes -->
-  <string name="actionbar_button_storage_cd">Memorilaj volumoj</string>
   <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">Konservi</string>
   <!-- ActionBar Buttons - Print -->
-  <string name="actionbar_button_print_cd">Printi</string>
   <!-- Navigation View - Sort - Sort by name (ascending) -->
-  <string name="sort_by_name_asc">Laŭ nomo\u25B2</string>
   <!-- Navigation View - Sort - Sort by name (descending) -->
-  <string name="sort_by_name_desc">Laŭ nomo\u25BC</string>
   <!-- Navigation View - Sort - Sort by date (ascending) -->
-  <string name="sort_by_date_asc">Laŭ dato \u25B2</string>
   <!-- Navigation View - Sort - Sort by date (descending) -->
-  <string name="sort_by_date_desc">Laŭ dato \u25BC</string>
   <!-- Navigation View - Sort - Sort by size (ascending) -->
-  <string name="sort_by_size_asc">Laŭ grandeco \u25B2</string>
   <!-- Navigation View - Sort - Sort by size (descending) -->
-  <string name="sort_by_size_desc">Laŭ grandeco \u25BC</string>
   <!-- Navigation View - Sort - Sort by type (ascending) -->
-  <string name="sort_by_type_asc">Laŭ tipo \u25B2</string>
   <!-- Navigation View - Sort - Sort by type (descending) -->
-  <string name="sort_by_type_desc">Laŭ tipo \u25BC</string>
   <!-- Navigation View - Layout - Icons -->
-  <string name="layout_icons">Piktogramoj</string>
   <!-- Navigation View - Layout - Simple -->
-  <string name="layout_simple">Simpla</string>
   <!-- Navigation View - Layout - Details -->
-  <string name="layout_details">Detaloj</string>
   <!-- Navigation View - View - Show folders first -->
-  <string name="cm_filemanager_show_dirs_first">Montri dosierujojn unue</string>
   <!-- Navigation View - View - Show hidden files option -->
-  <string name="cm_filemanager_show_hidden">Montri la kaŝitajn dosierojn</string>
   <!-- Navigation View - View - Show system files option -->
-  <string name="cm_filemanager_show_system">Montri sistemdosierojn</string>
   <!-- Navigation View - View - Show symlinks option -->
-  <string name="cm_filemanager_show_symlinks">Montri simbolajn ligilojn</string>
   <!-- Filesystem Info (no data). Dialog title -->
-  <string name="filesystem_info_warning_title">Neniu informo</string>
   <!-- Filesystem Info (no data). Dialog message -->
-  <string name="filesystem_info_warning_msg">Neniu informo disponeblas por la dosiersistemo.</string>
   <!-- Filesystem Info - Filesystem couldn't be mounted -->
-  <string name="filesystem_info_cant_be_mounted_msg">La dosiersistemo ne munteblas/malmunteblas.</string>
   <!-- Filesystem Info - Not allowed message -->
-  <string name="filesystem_info_mount_not_allowed_msg">Muntado de la dosiersistemo ne eblas en Sekura reĝimo. Tuŝetu por ŝanĝi al radikuzanta reĝimo.</string>
   <!-- Filesystem Info - Mount failed -->
-  <string name="filesystem_info_mount_failed_msg">Muntado de la dosiersistemo fiaskis. Kelkaj dosiersisteoj, kiel SD-kartoj, ne eblas muntiĝi ĉar ili enhavas nur-legan dosiersistemon.</string>
   <!-- Filesystem Info Dialog - Title -->
-  <string name="filesystem_info_dialog_title">Informo pri dosiersistemo</string>
   <!-- Filesystem Info Dialog - Tab - Info -->
-  <string name="filesystem_info_dialog_tab_info">Informoj</string>
   <!-- Filesystem Info Dialog - Tab - Disk Usage -->
-  <string name="filesystem_info_dialog_tab_disk_usage">Uzo de disko</string>
   <!-- Filesystem Info Dialog - Status Label -->
-  <string name="filesystem_info_dialog_status">Muntita:</string>
   <!-- Filesystem Info Dialog - Mount Point Label -->
-  <string name="filesystem_info_dialog_mount_point">Surmetingo:</string>
   <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">Aparato:</string>
   <!-- Filesystem Info Dialog - Type Label -->
-  <string name="filesystem_info_dialog_type">Tipo:</string>
   <!-- Filesystem Info Dialog - Options Label -->
-  <string name="filesystem_info_dialog_options">Opcioj:</string>
   <!-- Filesystem Info Dialog - Dump/Pass Label -->
-  <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
   <!-- Filesystem Info Dialog - Virtual Label -->
-  <string name="filesystem_info_dialog_virtual">Virtuala:</string>
   <!-- Filesystem Info Dialog - Total Disk Usage -->
-  <string name="filesystem_info_dialog_total_disk_usage">Sumo:</string>
   <!-- Filesystem Info Dialog - Used Disk Usage -->
-  <string name="filesystem_info_dialog_used_disk_usage">Uzita:</string>
   <!-- Filesystem Info Dialog - Free Disk Usage -->
-  <string name="filesystem_info_dialog_free_disk_usage">Libera:</string>
   <!-- Fso Properties - Not allowed message -->
-  <string name="fso_properties_permissions_not_allowed_msg">Operacio pri rajtoj ne eblas en Sekura reĝimo .Tuŝetu por ŝanĝi al radikuzanta reĝimo.</string>
   <!-- Fso Properties - Failed to change owner to fso -->
-  <string name="fso_properties_failed_to_change_owner_msg">La ŝanĝo de posedanto fiaskis.\n\nPro sekuraj kialoj, kelkaj dosiersistemoj, kiel SD-kartoj, ne permesas tian ŝanĝon.</string>
   <!-- Fso Properties - Failed to change group to fso -->
-  <string name="fso_properties_failed_to_change_group_msg">La ŝanĝo de posedantgrupo fiaskis.\n\nPro sekuraj kialoj, kelkaj dosiersistemoj, kiel SD-kartoj, ne permesas tian ŝanĝon.</string>
   <!-- Fso Properties - Failed to change group to fso -->
-  <string name="fso_properties_failed_to_change_permission_msg">La ŝanĝo de permesoj fiaskis.\n\nPro sekuraj kialoj, kelkaj dosiersistemoj, kiel SD-kartoj, ne permesas tian ŝanĝon.</string>
   <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">Ecoj</string>
   <!-- Fso Properties Dialog - Tab - Info -->
-  <string name="fso_properties_dialog_tab_info">Informoj</string>
   <!-- Fso Properties Dialog - Tab - Permissions -->
-  <string name="fso_properties_dialog_tab_permissions">Permesoj</string>
   <!-- Fso Properties Dialog - Name Label -->
-  <string name="fso_properties_dialog_name">Nomo:</string>
   <!-- Fso Properties Dialog - Parent Folder Label -->
-  <string name="fso_properties_dialog_parent">Parenco:</string>
   <!-- Fso Properties Dialog - Type Label -->
-  <string name="fso_properties_dialog_type">Tipo:</string>
   <!-- Fso Properties Dialog - Category Label -->
-  <string name="fso_properties_dialog_category">Kategorio:</string>
   <!-- Fso Properties Dialog - Link Label -->
-  <string name="fso_properties_dialog_link">Ligilo:</string>
   <!-- Fso Properties Dialog - Size Label -->
-  <string name="fso_properties_dialog_size">Grando:</string>
   <!-- Fso Properties Dialog - Contains Label -->
-  <string name="fso_properties_dialog_contains">Enhavo:</string>
   <!-- Fso Properties Dialog - Last Accessed Time Label -->
-  <string name="fso_properties_dialog_last_accessed_date">Atingita:</string>
   <!-- Fso Properties Dialog - Last Modified Time Label -->
-  <string name="fso_properties_dialog_last_modified_date">Modifita:</string>
   <!-- Fso Properties Dialog - Last Changed Time -->
-  <string name="fso_properties_dialog_last_changed_date">Ŝanĝita:</string>
   <!-- Fso Properties Dialog - Owner Label -->
-  <string name="fso_properties_dialog_owner">Posedanto:</string>
   <!-- Fso Properties Dialog - Group Label -->
-  <string name="fso_properties_dialog_group">Grupo:</string>
   <!-- Fso Properties Dialog - Others Label -->
-  <string name="fso_properties_dialog_others">Aliaj:</string>
   <!-- Fso Properties Dialog - Special Label -->
   <!-- Fso Properties Dialog - Read Label -->
   <!-- Fso Properties Dialog - Write Label -->
   <!-- Fso Properties Dialog - Execute Label -->
   <!-- Fso Properties Dialog - Execute Label -->
   <!-- Fso Properties Dialog - Skip media scan -->
-  <string name="fso_properties_dialog_include_in_media_scan">Preterpasi skadanon de aŭdvidaĵoj:</string>
-  <string name="fso_failed_to_allow_media_scan">Permeso de skanado de aŭdvidaĵoj fiaskis</string>
-  <string name="fso_failed_to_prevent_media_scan">Malpermeso de skanado de aŭdvidaĵoj fiaskis</string>
-  <string name="fso_delete_nomedia_dir_title">Forigi .nomedia dosierujon</string>
-  <string name="fso_delete_nomedia_dir_body">Tiu dosierujo enhavas .nomedia dosierujon.\n\nĈu vi deziras forigi ĝin kaj ĝian tutan enhavon?</string>
-  <string name="fso_delete_nomedia_non_empty_title">Forigi .nomedia dosierojn</string>
-  <string name="fso_delete_nomedia_non_empty_body">Tiu dosierujo enhavas malplenan .nomedia dosieron.\n\nĈu vi deziras forigi ĝin?</string>
   <!-- History - History activity title -->
-  <string name="history">Historio</string>
   <!-- History - The history is empty -->
-  <string name="msgs_history_empty">Historio malplenas.</string>
   <!-- History - The history reference is not in the actual history list -->
-  <string name="msgs_history_unknown">Ero de historio nekonata.</string>
   <!-- Search - Search activity title -->
-  <string name="search">Serĉrezultoj</string>
   <!-- Search - Search hint message -->
-  <string name="search_hint">Tajpu vian serĉon</string>
   <!-- Search - Voice search hint message -->
-  <string name="search_voice_hint">Eldiru vian serĉon</string>
   <!-- Search - Search error message -->
-  <string name="search_error_msg">Eraro okazis dum serĉado. Neniu rezulto trovita.</string>
   <!-- Search - Search no results message -->
-  <string name="search_no_results_msg">Neniu rezulto trovita.</string>
   <!-- Search - Number of items found in directory -->
-  <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> en <xliff:g id="path">%2$s</xliff:g></string>
   <!-- Search - Search query terms -->
-  <string name="search_terms"><![CDATA[<b>Terminoj:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Search - Confirm search -->
-  <string name="search_few_characters_title">Konfirmi serĉadon</string>
   <!-- Search - Some terms of the search are too small. The operation could be very costly -->
-  <string name="search_few_characters_msg">Kelkaj serĉtermoj havas malmultajn signojn. Tiu operacio postulus  tempon kaj risurco.\n\nĈu vi deziras daŭrigi?</string>
   <!-- Search - Searching dialog title -->
-  <string name="searching">Bonvolu pacienci\u2026</string>
   <!-- Search - Searching label -->
-  <string name="searching_action_label">Ŝerĉanta</string>
   <!-- Picker Activity -->
   <!-- Picker Activity - Dialog title -->
-  <string name="picker_title">Elektu dosieron</string>
-  <string name="directory_picker_title">Elektu dosierujon</string>
   <!-- Editor - Editor activity title -->
-  <string name="editor">Redaktilo</string>
   <!-- Editor - Invalid file message -->
-  <string name="editor_invalid_file_msg">Nevalida dosiero.</string>
   <!-- Editor - File not found message -->
-  <string name="editor_file_not_found_msg">Dosiero ne troveblas.</string>
   <!-- Editor - File size exceed the limit -->
-  <string name="editor_file_exceed_size_msg">La dosiero estas tro peza por malfermiĝi sur tiu aparato.</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog title -->
-  <string name="editor_dirty_ask_title">Konfirmi eliron</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog message -->
-  <string name="editor_dirty_ask_msg">Estas nesekurigataj ŝanĝoj.\n\nĈu foriri sen konservi?</string>
   <!-- Editor - Save operation success -->
-  <string name="editor_successfully_saved">La dosiero sukcese konserviĝis.</string>
   <!-- Editor - Read-only file mode -->
-  <string name="editor_read_only_mode">La dosiero malfermiĝis nur-lege.</string>
   <!-- Editor - Dumping message -->
-  <string name="dumping_message">Kreado de la 16-uma nekropsio\u2026</string>
   <!-- Editor - Displaying -->
-  <string name="displaying_message">Vidigado\u2026</string>
   <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">Legosignoj</string>
   <!-- Bookmarks - Bookmark name - Home -->
-  <string name="bookmarks_home">Hejmo</string>
   <!-- Bookmarks - Bookmark name - Root folder -->
-  <string name="bookmarks_root_folder">Radika dosierujo</string>
   <!-- Bookmarks - Bookmark name - System folder -->
-  <string name="bookmarks_system_folder">Sistemdosiero</string>
   <!-- Bookmarks - Bookmark name - Secure storage -->
-  <string name="bookmarks_secure">Sekura memorilo</string>
   <!-- Bookmarks - Bookmark name - Remote storage -->
-  <string name="bookmarks_remote">Fora memorilo</string>
   <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
-  <string name="bookmarks_button_config_cd">Agordi la inician dosierujon.</string>
   <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">Forigi la legosignon.</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
-  <string name="bookmarks_msgs_add_success">La legosigno sukcesis aldoniĝis.</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <!-- Initial directory dialog title -->
-  <string name="initial_directory_dialog_title">Inicia dosierujo</string>
   <!-- Initial directory label -->
-  <string name="initial_directory_label">Elektu la inician dosierujon:</string>
   <!-- Initial directory is relative -->
-  <string name="initial_directory_relative_msg">Relativa serĉvojo ne permesataj.</string>
   <!-- Initial directory error message -->
-  <string name="initial_directory_error_msg">Eraro okazis dum registrado de inicia dosierujo.</string>
   <!-- Menu - Navigation - Search -->
-  <string name="menu_search">Serĉi</string>
   <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">Agordoj</string>
   <!-- Menu - History - Clear history -->
-  <string name="menu_clear_history">Forviŝi historion</string>
   <!-- Menu - Editor - No suggestions -->
-  <string name="menu_no_suggestions">Neniu sugesto</string>
   <!-- Menu - Editor - Word wrap -->
-  <string name="menu_word_wrap">Liniosalto</string>
   <!-- Menu - Editor - Sintax highlight -->
-  <string name="menu_syntax_highlight">Sintaksemfazo</string>
   <!-- Regular expression for create copy action -->
-  <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - kopio<xliff:g id="extension">%2$s</xliff:g></string>
   <!-- Regular expression for new compressed file -->
-  <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - nova<xliff:g id="extension">%2$s</xliff:g></string>
   <!-- Waiting dialog - Performing operation message -->
-  <string name="waiting_dialog_msg">Efektivigas operacion\u2026</string>
   <!-- Waiting dialog - Copying title -->
-  <string name="waiting_dialog_copying_title">Kopiado\u2026</string>
   <!-- Waiting dialog - Copying message -->
-  <string name="waiting_dialog_copying_msg"><![CDATA[<b>El</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Al</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog - Moving title -->
-  <string name="waiting_dialog_moving_title">Movanta\u2026</string>
   <!-- Waiting dialog - Moving message -->
-  <string name="waiting_dialog_moving_msg"><![CDATA[<b>El</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Al</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog - Deleting title -->
-  <string name="waiting_dialog_deleting_title">Forigado\u2026</string>
   <!-- Waiting dialog - Deleting message -->
-  <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Dosiero</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Extracting title -->
-  <string name="waiting_dialog_extracting_title">Eltirado\u2026</string>
   <!-- Waiting dialog - Extracting message -->
-  <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Dosiero</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Extracting title -->
-  <string name="waiting_dialog_compressing_title">Densigado\u2026</string>
   <!-- Waiting dialog - Extracting message -->
-  <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Dosiero</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Initializing the dialog -->
-  <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Analizado\u2026</b>]]></string>
   <!-- Extracting - Success message -->
-  <string name="msgs_extracting_success">Eltirado plene sukcesis. La datumoj troviĝas en <xliff:g id="destination">%1$s</xliff:g>.</string>
   <!-- Compressing - Success message -->
-  <string name="msgs_compressing_success">Densigado plene sukcesis. La datumoj troviĝas en <xliff:g id="destination">%1$s</xliff:g>.</string>
   <!-- Actions Dialog - Title -->
-  <string name="actions_dialog_title">Agoj</string>
   <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">Ecoj</string>
   <!-- Actions Dialog - Menu - Refresh -->
-  <string name="actions_menu_refresh">Aktualiga klavo</string>
   <!-- Actions Dialog - Menu - New directory -->
   <string name="actions_menu_new_directory">Nova dosierujo</string>
   <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">Nova dosiero</string>
   <!-- Actions Dialog - Menu - Select all -->
-  <string name="actions_menu_select_all">Elekti ĉion</string>
   <!-- Actions Dialog - Menu - Deselect all -->
-  <string name="actions_menu_deselect_all">Malselekti ĉiujn</string>
   <!-- Actions Dialog - Menu - Select -->
-  <string name="actions_menu_select">Elekti</string>
   <!-- Actions Dialog - Menu - Deselect -->
-  <string name="actions_menu_deselect">Malselekti</string>
   <!-- Actions Dialog - Menu - Copy/Paste selection -->
-  <string name="actions_menu_paste_selection">Kopii elektaĵon</string>
   <!-- Actions Dialog - Menu - Move selection -->
-  <string name="actions_menu_move_selection">Movi elektaĵon ĉi-tien</string>
   <!-- Actions Dialog - Menu - Delete selection -->
-  <string name="actions_menu_delete_selection">Forigi elektaĵon</string>
   <!-- Actions Dialog - Menu - Compress selection -->
-  <string name="actions_menu_compress_selection">Densigi elektaĵon</string>
   <!-- Actions Dialog - Menu - Create link -->
-  <string name="actions_menu_create_link">Krei ligilon</string>
   <!-- Actions Dialog - Menu - Open -->
-  <string name="actions_menu_open">Malfermi</string>
   <!-- Actions Dialog - Menu - Open with -->
-  <string name="actions_menu_open_with">Malpermi per</string>
   <!-- Actions Dialog - Menu - Execute -->
-  <string name="actions_menu_execute">Lanĉi</string>
   <!-- Actions Dialog - Menu - Send -->
   <string name="actions_menu_send">Sendi</string>
   <!-- Actions Dialog - Menu - Send selection -->
-  <string name="actions_menu_send_selection">Sendi elektaĵon</string>
   <!-- Actions Dialog - Menu - Compress -->
-  <string name="actions_menu_compress">Densigi</string>
   <!-- Actions Dialog - Menu - Extract -->
-  <string name="actions_menu_extract">Elpaki</string>
   <!-- Actions Dialog - Menu - Delete -->
-  <string name="actions_menu_delete">Foriga klavo</string>
+  <string name="actions_menu_delete">Forigi</string>
   <!-- Actions Dialog - Menu - Rename -->
-  <string name="actions_menu_rename">Alinomi</string>
   <!-- Actions Dialog - Menu - Create copy -->
-  <string name="actions_menu_create_copy">Duobligi</string>
   <!-- Actions Dialog - Menu - Properties -->
   <string name="actions_menu_properties">Ecoj</string>
   <!-- Actions Dialog - Menu - Add to bookmarks -->
-  <string name="actions_menu_add_to_bookmarks">Aldoni legosignon</string>
   <!-- Actions Dialog - Menu - Add shortcut -->
-  <string name="actions_menu_add_shortcut">Aldoni simbolan ligilon</string>
   <!-- Actions Dialog - Menu - Open parent folder -->
-  <string name="actions_menu_open_parent_folder">Malfermi patron</string>
   <!-- Actions Dialog - Menu - Compute checksum -->
-  <string name="actions_menu_compute_checksum">Kontrolsumo</string>
   <!-- Actions Dialog - Menu - Print -->
-  <string name="actions_menu_print">Printi</string>
   <!-- Actions Dialog - Menu - Set as home -->
-  <string name="actions_menu_set_as_home">Agordi kiel hejmo</string>
   <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
-  <string name="actions_ask_undone_operation_msg">Ago ne malfareblas. Ĉu vi deziras daŭrigi?</string>
   <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">Nomo:</string>
   <!-- Enter Name Dialog - Message - Empty name -->
-  <string name="input_name_dialog_message_empty_name">Nomo ne malplenu.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
-  <string name="input_name_dialog_message_invalid_path_name">Nevalida nomo. La signoj  \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' ne validas.</string>
   <!-- Enter Name Dialog - Message - Invalid name length -->
-  <string name="input_name_dialog_message_invalid_name_length">Maksimumo de signoj atingita.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
-  <string name="input_name_dialog_message_invalid_name">Nevalida nomo. La nomoj \'.\' kaj \'..\' ne validas.</string>
   <!-- Enter Name Dialog - Message - Name exists -->
-  <string name="input_name_dialog_message_name_exists">La nomo jam ekzistas.</string>
   <!-- Associations Dialog - Title -->
-  <string name="associations_dialog_title">Asocioj</string>
   <!-- Associations Dialog - Remember the user action -->
-  <string name="associations_dialog_remember">Memori elektaĵon</string>
   <!-- Associations Dialog - Open with Title -->
-  <string name="associations_dialog_openwith_title">Malfermi per</string>
   <!-- Associations Dialog - Open action (button title) -->
-  <string name="associations_dialog_openwith_action">Malfermi</string>
   <!-- Associations Dialog - Send with Title -->
-  <string name="associations_dialog_sendwith_title">Sendi per</string>
   <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">Sendi</string>
   <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
-  <string name="inline_autocomplete_tab_nothing_to_complete_msg">Nenio por kompleti.</string>
   <!-- Execution console - Title -->
-  <string name="execution_console_title">Konzolo</string>
   <!-- Execution console - The script name label -->
-  <string name="execution_console_script_name_label">Skripto:</string>
   <!-- Execution console - The script execution time label -->
-  <string name="execution_console_script_execution_time_label">Tempo:</string>
   <!-- Execution console - The script exit code label -->
-  <string name="execution_console_script_exitcode_label">Elira kodo:</string>
   <!-- Execution console - The script execution time seconds string -->
-  <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> sek.</string>
   <!-- Compute checksum - Title -->
-  <string name="compute_checksum_title">Kontrolsumo</string>
   <!-- Compute checksum - The file name label -->
-  <string name="compute_checksum_filename_label">Dosiero:</string>
   <!-- Compute checksum - The MD5 label -->
   <!-- Compute checksum - The SHA1 label -->
   <!-- Compute checksum - The computing checksum message-->
-  <string name="compute_checksum_computing_checksum_msg">Kontrolante sumon\u2026</string>
   <!-- Mime/Types - Folder -->
-  <string name="mime_folder">Dosierujo</string>
   <!-- Mime/Types - Symlink -->
-  <string name="mime_symlink">Simbola ligilo</string>
   <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">Nekonata</string>
   <!--  Filetime formats -->
-  <string name="filetime_format_mode_system">Sistem-agordo</string>
-  <string name="filetime_format_mode_locale">Loka-agordo</string>
-  <string name="filetime_format_mode_ddMMyyyy_HHmmss">tt/mm/jjjj hh:mm:ss</string>
-  <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/tt/jjjj hh:mm:ss</string>
-  <string name="filetime_format_mode_yyyyMMdd_HHmmss">jjjj-mm-tt hh:mm:ss</string>
   <!-- Selection -->
   <!-- For example "2 folders and 1 file selected." -->
-  <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> kaj <xliff:g id="files">%2$s</xliff:g> elektitaj.</string>
   <!-- Category descriptions -->
-  <string name="category_system">SISTEMO</string>
-  <string name="category_app">APLIKAĴO</string>
-  <string name="category_binary">BINARA</string>
-  <string name="category_text">TEKSTO</string>
   <string name="category_document">DOKUMENTO</string>
-  <string name="category_ebook">BITLIBRO</string>
-  <string name="category_mail">RETMESAĜO</string>
-  <string name="category_compress">DENSIGITA</string>
-  <string name="category_exec">PLENUMEBLA</string>
-  <string name="category_database">DATUMBAZO</string>
-  <string name="category_font">FONTO</string>
   <string name="category_image">BILDO</string>
-  <string name="category_audio">AŬDAĴO</string>
-  <string name="category_video">FILMO</string>
-  <string name="category_security">SEKURIGO</string>
-  <string name="category_all">ĈIUJ</string>
   <!-- Compression - Compression modes dialog title -->
-  <string name="compression_mode_title">Densigreĝimo</string>
   <!-- Compression - Supported archive and compression modes -->
   <!-- Shortcut. Failed to handle the shortcut -->
-  <string name="shortcut_failed_msg">Simbola ligilo ne atingeblas.</string>
   <!-- Shortcut. The shortcut was created -->
-  <string name="shortcut_creation_success_msg">Simbola ligilo sukcese kreita.</string>
   <!-- Shortcut. The shortcut wasn't created -->
-  <string name="shortcut_creation_failed_msg">Kreado de simbola ligilo fiaskis.</string>
   <!-- Preferences title -->
   <string name="pref">Agordoj</string>
   <!-- Preferences - General title -->
-  <string name="pref_general">Ĝeneralaj agordoj</string>
   <!-- Preferences - Search title -->
-  <string name="pref_search">Serĉ-opcioj</string>
   <!-- Preferences - Storage title -->
-  <string name="pref_storage">Memorilaj opcioj</string>
   <!-- Preferences - Editor title -->
-  <string name="pref_editor">Redaktilaj opcioj</string>
   <!-- Preferences - Themes title -->
   <string name="pref_themes">Etosoj</string>
   <!-- Preferences - About title -->
   <string name="pref_about">Pri</string>
   <!-- Preferences - General - Behaviour category -->
-  <string name="pref_general_behaviour_category">Ĝeneralo</string>
   <!-- Preferences - General - Case sensitive sort and navigating title -->
-  <string name="pref_case_sensitive_sort">Usklecodistinga</string>
   <!-- Preferences - General - Case sensitive sort and navigating summary -->
-  <string name="pref_case_sensitive_sort_summary">Konsideri usklecon por navigado aŭ ordigado de serĉ-rezultoj</string>
   <!-- Preferences - General - Filetime format mode title -->
-  <string name="pref_filetime_format_mode">Formato de dato/horo</string>
   <!-- Preferences - General -Disk usage warning level title -->
-  <string name="pref_disk_usage_warning_level">Atentigo de disk-uzo</string>
   <!-- Preferences - General - Disk usage warning level summary -->
   <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
          of ListPreference. This should be fixed in frameworks base prior to be added here. -->
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">Montri per malsamaj koloroj disk-uzon kiam ĝi atingas  <xliff:g id="level">%1$s</xliff:g> procenton de libera spaco</string>
   <!-- Preferences - General - Compute folder statistics title -->
-  <string name="pref_compute_folder_statistics">Kalkuli statistikojn de dosierujoj</string>
   <!-- Preferences - General - Compute folder statistics summary on -->
-  <string name="pref_compute_folder_statistics_on">Atentu! La kalkulado de statistikoj postulas tempon kaj sistemajn risurcojn</string>
   <!-- Preferences - General - Display thumbs -->
-  <string name="pref_display_thumbs">Antaŭvido</string>
   <!-- Preferences - General - Display thumbs summary -->
-  <string name="pref_display_thumbs_summary">Montri antaŭvidon por aplikaĵoj, muzik-dosieroj, bildoj kaj filmoj</string>
   <!-- Preferences - General - Use flinger detection -->
-  <string name="pref_use_flinger">Uzi \"swipe\"-gestojn</string>
   <!-- Preferences - General - Use flinger detection summary -->
-  <string name="pref_use_flinger_summary">Uzi movon dekstren por forigi dosierojn aŭ dosierujojn</string>
   <!-- Preferences - General - Advanced settings category -->
-  <string name="pref_general_advanced_settings_category">Altnivelaj opcioj</string>
   <!-- Preferences - General - Access mode -->
-  <string name="pref_access_mode">Atinga reĝimo</string>
   <!-- Preferences - General - Safe mode -->
-  <string name="pref_access_mode_safe">Sekura reĝimo</string>
   <!-- Preferences - General - Safe mode summary -->
-  <string name="pref_access_mode_safe_summary">Sekura reĝimo\n\nLa aplikaĵo ruliĝas sen privilegio kaj povas atingi nur memorilojn kiel SD-kartojn kaj USB</string>
   <!-- Preferences - General - Prompt user mode -->
-  <string name="pref_access_mode_prompt">Peti uzant-reĝimon</string>
   <!-- Preferences - General - Prompt user mode summary -->
-  <string name="pref_access_mode_prompt_summary">Peti uzant-reĝimon\n\nLa aplikaĵo ruliĝas kun plenaj privilegioj sed petos permeson por lanĉi specifajn agojn</string>
   <!-- Preferences - General - Root access mode -->
-  <string name="pref_access_mode_root">Radikuzanta reĝimo</string>
   <!-- Preferences - General - Root access mode summary -->
-  <string name="pref_access_mode_root_summary">Radikuzanta reĝimo\n\nAtentu! Tiu reĝimo ebligas operaiojn kiuj povas damaĝi vian aparaton. Vi respondecas pri la danĝereco de tiu ŝanĝo</string>
   <!-- Preferences - General - Restrict secondary users access title -->
-  <string name="pref_restrict_secondary_users_access_title">Limigi la aliron de uzantoj</string>
   <!-- Preferences - General - Restrict secondary users access summary -->
-  <string name="pref_restrict_secondary_users_access_summary">Limigi la aliron de la tuta sistemo por la duarangaj uzantoj</string>
   <!-- Preferences - Search - Results category -->
-  <string name="pref_search_results_category">Rezultoj</string>
   <!-- Preferences - Search - Show relevance widget -->
-  <string name="pref_show_relevance_widget">Montri fenestraĵon de kongrueco</string>
   <!-- Preferences - Search - Highlight search terms -->
-  <string name="pref_highlight_terms">Marki serĉitajn terminojn</string>
   <!-- Preferences - Search - Sort results mode -->
-  <string name="pref_sort_search_results_mode">Reĝimo de serĉ-ordigo</string>
   <!-- Preferences - Search - Sort results mode. None -->
-  <string name="pref_sort_search_results_mode_none">Neniu ordo</string>
   <!-- Preferences - Search - Sort results mode. None -->
-  <string name="pref_sort_search_results_mode_name">Laŭ nomo</string>
   <!-- Preferences - Search - Sort results mode. Relevance -->
-  <string name="pref_sort_search_results_mode_relevance">Laŭ kongrueco</string>
   <!-- Preferences - Search - Privacity category -->
-  <string name="pref_search_privacity_category">Privateco</string>
   <!-- Preferences - Search - Save search terms -->
-  <string name="pref_save_search_terms">Konservi serĉ-terminojn</string>
   <!-- Preferences - Search - Save search terms summary on -->
-  <string name="pref_save_search_terms_on">Serĉ-terminoj estos konservitaj kaj uzitaj kiel sugestoj por venontaj serĉoj</string>
   <!-- Preferences - Search - Save search terms summary off -->
-  <string name="pref_save_search_terms_off">Serĉ-terminoj ne estos konservitaj</string>
   <!-- Preferences - Search - Remove saved search terms -->
-  <string name="pref_remove_saved_search_terms">Forigi konservitajn serĉ-terminojn</string>
   <!-- Preferences - Search - Remove saved search terms summary -->
-  <string name="pref_remove_saved_search_terms_summary">Tuŝetu por forigi konservitajn serĉ-terminojn</string>
   <!-- Preferences - Search - Suggestions were truncated -->
-  <string name="pref_remove_saved_search_terms_msg">Konservitaj serĉ-terminoj forigitaj</string>
   <!-- Preferences - Storage - Secure Storage category -->
-  <string name="pref_secure_storage_category">Sekura memorilo</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
-  <string name="pref_secure_storage_delayed_sync_title">Sinkronigo prokrastita</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
-  <string name="pref_secure_storage_delayed_sync_summary">Sinkronigo de la sekurigita dosiersistemo estas peza tasko. Ebligi tiun opcion permesas plirapidajn respondojn por ĉiuj operacioj, sinkronigante kiam la dosiersistemo ne estas uzata. Sinkronigindaj datumoj povas perdiĝi se la aplikaĵo kolapsus.</string>
   <!-- Preferences - Storage - Secure Storage - Change password title -->
-  <string name="pref_secure_storage_reset_password_title">Ŝanĝi pasvorton</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
-  <string name="pref_secure_storage_delete_storage_title">Forigi memorilon</string>
   <!-- Preferences - Editor - Behaviour category -->
-  <string name="pref_editor_behaviour_category">Konduto</string>
   <!-- Preferences - Editor - No suggestions -->
-  <string name="pref_no_suggestions">Neniu sugesto</string>
   <!-- Preferences - Editor - No suggestions summary -->
-  <string name="pref_no_suggestions_desc">Ne montri korektajn sugestojn dum redakto de la dosiero</string>
   <!-- Preferences - Editor - Word wrap -->
-  <string name="pref_word_wrap">Aŭtomata liniosalto</string>
   <!-- Preferences - Editor - Hex dump -->
-  <string name="pref_hexdump">Deksesumaj dosieroj</string>
   <!-- Preferences - Editor - Hex dump desc -->
-  <string name="pref_hexdump_desc">Generi deksesuman dosieron dum malfermo de ne-tekstaj dosieroj kaj malfermi ĝin per deksesuma vidigilo</string>
   <!-- Preferences - Editor - Syntax highlight category -->
-  <string name="pref_editor_syntax_highlight_category">Kolorigita marko</string>
   <!-- Preferences - Editor - Syntax highlight -->
-  <string name="pref_syntax_highlight">Kolorigita marko</string>
   <!-- Preferences - Editor - Syntax highlight summary -->
-  <string name="pref_syntax_highlight_desc">Uzi kolorigajn markojn de la dosiero en la redaktilo (nur kiam ĝi disponeblas por tiu tipo de dosiero)</string>
   <!-- Preferences - Editor - Syntax highlight color scheme -->
-  <string name="pref_syntax_highlight_color_scheme">Kolor-skemo</string>
   <!-- Preferences - Editor - Syntax highlight color scheme summary -->
-  <string name="pref_syntax_highlight_color_scheme_desc">Elekti skemon por koloriga marko</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
-  <string name="pref_syntax_sh_use_theme_default">Uzi defaŭltan etoson</string>
   <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
-  <string name="pref_syntax_sh_use_theme_default_desc">Uzi defaŭltan kolorigan markon de la aktuala etoso</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
-  <string name="pref_editor_sh_item_category">Eroj</string>
   <!-- Preferences - Themes - Themes selection category -->
   <string name="pref_themes_selection_category">Etosoj</string>
   <!-- Preferences - Themes - Set theme button -->
-  <string name="pref_themes_set_theme">Uzi etoson</string>
   <!-- Preferences - Themes - Confirmation message -->
-  <string name="pref_themes_confirmation">Etoso sukcesis aplikiĝis.</string>
   <!-- Preferences - Themes - Theme not found message -->
-  <string name="pref_themes_not_found">Etoso ne troveblas.</string>
   <!-- Preferences - Debug - Capture debug traces -->
-  <string name="pref_debug_traces">Informoj por sencimigi</string>
   <!-- Themes - Default theme name -->
-  <string name="theme_default_name">Hela temo</string>
   <!-- Themes - Default theme description -->
-  <string name="theme_default_description">Hela temo por CyanogenMod dosiermastrumilo.</string>
   <!-- Themes - Default theme author -->
-  <string name="themes_author">CyanogenMod</string>
   <!-- Navigation drawer -->
-  <string name="drawer_open">Malfermi navigan fenestron</string>
-  <string name="drawer_close">Fermi navigan fenestron</string>
   <!-- ColorPickerDialog -->
   <!-- The text of the alpha slider control -->
-  <string name="color_picker_alpha_slider_text">Alfo</string>
   <!-- The label of the current color panel -->
-  <string name="color_picker_current_text">Nuna:</string>
   <!-- The label of the new color panel -->
   <string name="color_picker_new_text">Nova:</string>
   <!-- The label of the color input -->
-  <string name="color_picker_color">Koloro:</string>
   <!-- Android Syntax Highlight -->
-  <string name="ash_reset_color_scheme">Restaŭri defaŭltan kolorigan skemon</string>
-  <string name="ash_text">Teksto</string>
-  <string name="ash_assignment">Atribuo</string>
-  <string name="ash_singleline_comment">Unu-linia komento</string>
-  <string name="ash_multiline_comment">Plur-linia komento</string>
-  <string name="ash_keyword">Ŝlosilvorto</string>
-  <string name="ash_quoted_string">Encitila ĉeno</string>
-  <string name="ash_variable">Variablo</string>
   <!-- Secure Storage -->
   <!-- Secure Storage dialog title - Unlock -->
-  <string name="secure_storage_unlock_title">Malŝlosi sekuran memorilon</string>
   <!-- Secure Storage dialog title - Create -->
-  <string name="secure_storage_create_title">Krei sekuran memorilon</string>
   <!-- Secure Storage dialog title - Reset -->
-  <string name="secure_storage_reset_title">Rekomencigi pasvorton</string>
   <!-- Secure Storage dialog title - Delete -->
-  <string name="secure_storage_delete_title">Forigi sekuran memorilon</string>
   <!-- Secure Storage unlock dialog message (secure storage exists) -->
-  <string name="secure_storage_unlock_key_prompt_msg">Tajpu pasvorton por malŝlosi la sekuran memorilon.</string>
   <!-- Secure Storage unlock dialog message (new secure storage) -->
-  <string name="secure_storage_unlock_key_new_msg">Tajpu pasvorton por ŝlosi la sekuran memorilon.</string>
   <!-- Secure Storage unlock dialog message (reset the current password) -->
-  <string name="secure_storage_unlock_key_reset_msg">Tajpu la malnovan kaj la novan pasvortojn por reagordi la sekuran memorilon.</string>
   <!-- Secure Storage unlock dialog message (delete the secure storage) -->
-  <string name="secure_storage_unlock_key_delete_msg">Tajpu la pasvorton por forigi la sekurigitan dosiersistemon.</string>
   <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">Malnova pasvorto:</string>
   <!-- Secure Storage unlock dialog key title -->
@@ -730,40 +397,26 @@
   <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">Pasvorto:</string>
   <!-- Secure Storage unlock dialog repeat key title-->
-  <string name="secure_storage_unlock_repeat_title">Ripetu pasvorton:</string>
   <!-- Secure Storage create button -->
-  <string name="secure_storage_create_button">Krei</string>
   <!-- Secure Storage unlock button -->
-  <string name="secure_storage_unlock_button">Malŝlosi</string>
   <!-- Secure Storage reset button -->
-  <string name="secure_storage_reset_button">Restarigo</string>
   <!-- Secure Storage delete button -->
-  <string name="secure_storage_delete_button">Foriga klavo</string>
+  <string name="secure_storage_delete_button">Forigi</string>
   <!-- Secure Storage unlock failed toast -->
-  <string name="secure_storage_unlock_failed">Neeblas malŝlosi memorilon</string>
   <!-- Secure Storage unlock validation, length -->
-  <string name="secure_storage_unlock_validation_length">Pasvorto enhavu almenaŭ <xliff:g id="characters">%1$d</xliff:g> signojn.</string>
   <!-- Secure Storage unlock validation, equal -->
-  <string name="secure_storage_unlock_validation_equals">Pasvortoj ne kongruas.</string>
   <!-- Secure storage open file warning -->
-  <string name="secure_storage_open_file_warning">Dosiero estos registrita en neĉifrita loko. Tiu kopio forviŝiĝos post unu horo.</string>
   <!-- Print messages -->
   <!-- Unsupported document format -->
-  <string name="print_unsupported_document">Nesubtenata dokumenta formato</string>
   <!-- Unsupported image format -->
-  <string name="print_unsupported_image">Nesubtenata bilda formato</string>
   <!-- Print header -->
   <string name="print_document_header">Dokumento: <xliff:g id="document_name">%1$s</xliff:g></string>
   <!-- Print footer -->
   <string name="print_document_footer">Paĝo <xliff:g id="page_number">%1$s</xliff:g></string>
   <!-- Security - Extract relative or absolute files -->
-  <string name="security_warning_extract">Atentu!\n\nEltiri arkivon povas damaĝi vian aparaton se ĝi anstataŭigus sistemajn dosierojn.\n\nĈu vi certas ke vi deziras daŭrigi?</string>
   <!-- ChangeLog - Dialog title -->
-  <string name="changelog_title">Ŝanĝoprotokolo</string>
   <!-- Welcome Dialog - Title -->
-  <string name="welcome_title">Bonvenon</string>
   <!-- Welcome Dialog - Message -->
-  <string name="welcome_msg">Bonvenon en la CyanogenMod dosiermastrumilo.\n\nTiu aplikaĵo permesas foliumi tra la dosieroj kaj fari operaciojn kiuj povus damaĝi vian aparaton. Pro tio, la aplikaĵo lanĉiĝos en sekura reĝimo.\n\nVi povas akiri tutan aliron kaj plenajn rajtojn per la agorda sistemo. Vi respondecu ke la operacioj ne damaĝu vian sistemon.\n\nLa CyanogenMod teamo\n</string>
-  <string name="activity_not_found_exception">Ne eblas trovi aplikaĵon por malfermi tiun dosieron</string>
   <string name="snackbar_settings">Agordoj</string>
+  <!-- Wrap mode - toast -->
 </resources>

@@ -769,4 +769,6 @@
   <string name="storage_permissions_denied">Upravljalnik datotek potrebuje dovoljenje za pomnilniško napravo za prikaz vaših datotek.</string>
   <string name="storage_permissions_explanation">Pojdite v Nastavitve in tapnite Dovoljenja za odobritev dovoljenja.</string>
   <string name="snackbar_settings">Nastavitve</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Preklapljanje načina za prelom besedila</string>
 </resources>

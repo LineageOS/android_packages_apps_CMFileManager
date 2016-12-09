@@ -24,17 +24,17 @@
   </plurals>
   <!-- Search - Found items -->
   <plurals name="search_found_items">
-    <item quantity="other">พบ <xliff:g id="count">%d</xliff:g> รายการ</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> รายการที่พบ</item>
   </plurals>
   <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> โฟลเดอร์ถูกเลือก</item>
+    <item quantity="other">มี <xliff:g id="folders">%1$d</xliff:g> โฟลเดอร์ถูกเลือก</item>
   </plurals>
   <plurals name="selection_files">
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ไฟล์ถูกเลือก</item>
+    <item quantity="other">มี <xliff:g id="files">%1$d</xliff:g> ไฟล์ถูกเลือก</item>
   </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
-    <item quantity="other">มี <xliff:g id="count">%1$d</xliff:g> รายการจะถูกลบ</item>
+    <item quantity="other">มี <xliff:g id="count">%1$d</xliff:g> รายการที่จะถูกลบ</item>
   </plurals>
 </resources>

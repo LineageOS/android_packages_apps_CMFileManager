@@ -769,4 +769,6 @@
   <string name="storage_permissions_denied">Správce souborů vyžaduje oprávnění k přístupu na úložiště.</string>
   <string name="storage_permissions_explanation">Přejděte na nastavení a klepnutím na „Oprávnění“ provedete udělení požadovaného oprávnění.</string>
   <string name="snackbar_settings">Nastavení</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Přepnutí režimu zalamování slov</string>
 </resources>

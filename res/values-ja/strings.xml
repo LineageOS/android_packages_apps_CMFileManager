@@ -286,9 +286,9 @@
   <!-- Search - Search error message -->
   <string name="search_error_msg">検索中にエラーが発生しました。結果は見つかりませんでした。</string>
   <!-- Search - Search no results message -->
-  <string name="search_no_results_msg">結果は見つかりませんでした。</string>
+  <string name="search_no_results_msg">検索結果は見つかりませんでした。</string>
   <!-- Search - Number of items found in directory -->
-  <string name="search_found_items_in_directory"><xliff:g id="path">%2$s</xliff:g>に<xliff:g id="items">%1$s</xliff:g>件</string>
+  <string name="search_found_items_in_directory"><xliff:g id="path">%2$s</xliff:g>で<xliff:g id="items">%1$s</xliff:g></string>
   <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>検索語:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Search - Confirm search -->
@@ -768,6 +768,8 @@
   <string name="welcome_msg">CyanogenModファイルマネージャーへようこそ。\n\nこのアプリはシステムファイルの操作や端末を破壊する可能性のある操作を許可します。損害を防ぐために、アプリは安全で低い権限を持つモードで開始します。\n\nすべての権限を持つ上級者向けのモードは設定からアクセスできます。操作がシステムを破壊しないことを確認するのは個人の責任です。\n\nCyanogenModチーム</string>
   <string name="activity_not_found_exception">このファイルを開くためのアプリが見つかりませんでした</string>
   <string name="storage_permissions_denied">ファイルマネージャーはファイルを表示するためにストレージの権限を必要とします。</string>
-  <string name="storage_permissions_explanation">設定に移動して、権限を許可するために権限をタップしてください。</string>
+  <string name="storage_permissions_explanation">設定に移動して、権限を許可するために[権限]をタップしてください。</string>
   <string name="snackbar_settings">設定</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">ワードラップモードを切り替えています</string>
 </resources>

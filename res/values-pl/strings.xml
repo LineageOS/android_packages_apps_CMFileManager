@@ -778,4 +778,6 @@
   <string name="storage_permissions_denied">Menedżer plików wymaga uprawnienia dostępu do nośnika, aby wyświetlać twoje pliki.</string>
   <string name="storage_permissions_explanation">Przejdź do Ustawień i dotknij Uprawnienia, aby przyznać dostęp.</string>
   <string name="snackbar_settings">Ustawienia</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Przełączanie trybu zawijania słów</string>
 </resources>

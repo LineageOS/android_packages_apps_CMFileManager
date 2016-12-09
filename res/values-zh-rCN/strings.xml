@@ -794,4 +794,6 @@
   <string name="storage_permissions_denied">文件管理器需要存储权限以便查看您的文件。</string>
   <string name="storage_permissions_explanation">进入设置，然后点击权限以授予权限。</string>
   <string name="snackbar_settings">设置</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">切换自动换行模式</string>
 </resources>

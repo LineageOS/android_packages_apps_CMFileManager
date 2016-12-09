@@ -770,4 +770,5 @@
   <string name="storage_permissions_denied">ตัวจัดการไฟล์ต้องได้รับอนุญาตให้เข้าถึงที่เก็บข้อมูลเพื่อดูไฟล์ของคุณ</string>
   <string name="storage_permissions_explanation">ไปที่การตั้งค่า แตะสิทธิ์ของแอปเพื่ออนุญาตให้ใช้งาน</string>
   <string name="snackbar_settings">การตั้งค่า</string>
+  <!-- Wrap mode - toast -->
 </resources>

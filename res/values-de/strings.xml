@@ -769,4 +769,6 @@
   <string name="storage_permissions_denied">Dateimanager benötigt Zugriff auf den Speicher, um Ihre Dateien anzuzeigen.</string>
   <string name="storage_permissions_explanation">Rufen Sie die Einstellungen auf und tippen Sie auf Berechtigungen, um die Berechtigung zu gewähren.</string>
   <string name="snackbar_settings">Einstellungen</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Zeilenumbruchmodus umschalten</string>
 </resources>

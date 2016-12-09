@@ -766,5 +766,9 @@
   <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Dámoslle a benvida a xestor de ficheiros de CyanogenMod.\n\nEsta aplicación permítelle explorar o sistema de ficheiros e facer operacións que poderían bloquear o dispositivo. Para evitar danos, a aplicación iniciarase en modo seguro.\n\nPoderá acceder ao modo avanzado de superusuario mediante o menú Configuración, pero será da súa responsabilidade evitar que unha operación dane o dispositivo.\n\nO equipo de CyanogenMod.\n</string>
   <string name="activity_not_found_exception">Non se puido atopar unha aplicación que abrira este ficheiro</string>
+  <string name="storage_permissions_denied">O xestor de ficheiros require de permisos no almacenamento para amosar os teus ficheiros.</string>
+  <string name="storage_permissions_explanation">Ir a Axustes, premer en Permisos para conceder permiso.</string>
   <string name="snackbar_settings">Configuración</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Mudando ao modo de salto de liña</string>
 </resources>

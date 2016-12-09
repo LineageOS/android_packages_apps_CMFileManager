@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">Dosya yöneticisinin dosyalarınızı görüntülemesi için depolama izni gerekiyor.</string>
   <string name="storage_permissions_explanation">Ayarlar gidin ve izin vermek için İzinler\'e dokunun.</string>
   <string name="snackbar_settings">Ayarlar</string>
+  <!-- Wrap mode - toast -->
 </resources>

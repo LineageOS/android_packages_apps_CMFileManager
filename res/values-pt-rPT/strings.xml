@@ -123,7 +123,7 @@
   <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">A associação da ação à aplicação falhou.</string>
   <!-- An operation requires elevated privileged. Ask the user. -->
-  <string name="advise_insufficient_permissions">A operação necessita de previlégios elevados.\n\nDeseja mudar para o modo de Acesso Root?</string>
+  <string name="advise_insufficient_permissions">A operação necessita de previlégios elevados.\n\nDeseja mudar para o modo de acesso Root?</string>
   <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Pasta superior</string>
   <!-- External storage descripton -->
@@ -328,7 +328,7 @@
   <!-- Bookmarks - Bookmark name - Home -->
   <string name="bookmarks_home">Início</string>
   <!-- Bookmarks - Bookmark name - Root folder -->
-  <string name="bookmarks_root_folder">Pasta Root</string>
+  <string name="bookmarks_root_folder">Pasta inicial</string>
   <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">Pasta de Sistema</string>
   <!-- Bookmarks - Bookmark name - Secure storage -->
@@ -577,7 +577,7 @@
   <!-- Preferences - General - Compute folder statistics summary on -->
   <string name="pref_compute_folder_statistics_on">Atenção! O cálculo das estatísticas das pastas é exaustiva em tempo e recursos de sistema</string>
   <!-- Preferences - General - Display thumbs -->
-  <string name="pref_display_thumbs">Previsualizar </string>
+  <string name="pref_display_thumbs">Pré-visualizar</string>
   <!-- Preferences - General - Display thumbs summary -->
   <string name="pref_display_thumbs_summary">Mostrar uma imagem de pré-visualização para aplicações, ficheiros de música, imagens e vídeos</string>
   <!-- Preferences - General - Use flinger detection -->
@@ -770,4 +770,6 @@
   <string name="storage_permissions_denied">O Gestor de Ficheiros necessita de permissões para aceder ao armazenamento, de forma a poder ver os seus ficheiros.</string>
   <string name="storage_permissions_explanation">Vá a Definições e toque em Permissões para conceder permissão.</string>
   <string name="snackbar_settings">Definições</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Alternar modo de quebra de linha</string>
 </resources>

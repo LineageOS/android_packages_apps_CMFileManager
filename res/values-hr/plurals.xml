@@ -28,25 +28,25 @@
   </plurals>
   <!-- Search - Found items -->
   <plurals name="search_found_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> stavka pronađena</item>
-    <item quantity="few"><xliff:g id="count">%d</xliff:g> stavke pronađene</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> stavki pronađeno</item>
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> stavka je pronađena.</item>
+    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> stavke su pronađene.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> stavki je pronađeno.</item>
   </plurals>
   <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> mapa označena.</item>
-    <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> mape označene.</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mapi označeno.</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> mapa je odabrana.</item>
+    <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> mape su odabrane.</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mapa je odabrano.</item>
   </plurals>
   <plurals name="selection_files">
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> datoteka označena.</item>
-    <item quantity="few"><xliff:g id="files">%1$d</xliff:g> datoteke označene.</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> datoteka označeno.</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> datoteka je odabrana.</item>
+    <item quantity="few"><xliff:g id="files">%1$d</xliff:g> datoteke su odabrane.</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> datoteka je odabrano.</item>
   </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
   <plurals name="deleting_n_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> stavka će biti obrisana.</item>
-    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> stavke će biti obrisane.</item>
-    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> stavki će biti obrisano.</item>
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> stavka će se izbrisati.</item>
+    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> stavke će se izbrisati.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> stavki će se izbrisati.</item>
   </plurals>
 </resources>

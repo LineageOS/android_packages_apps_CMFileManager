@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">તમારી ફાઇલ્સ જોવા માટે ફાઇલ મેનેજરને સંગ્રહ કરવા માટે પરવાનગીની આવશ્યકતા છે.</string>
   <string name="storage_permissions_explanation">સેટિંગ્સમાં જાવ, Permissions પર ટૅપ કરી પરવાનગી આપો.</string>
   <string name="snackbar_settings">સેટિંગ્સ</string>
+  <!-- Wrap mode - toast -->
 </resources>

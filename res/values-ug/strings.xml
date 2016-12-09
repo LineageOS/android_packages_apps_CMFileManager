@@ -769,4 +769,5 @@
   <string name="storage_permissions_denied">ھۆججەت كۆرگۈچ ھۆججىتىڭىزنى كۆرۈش ئۈچۈن، ساقلاش ھوقۇقىغا ئېرىشىشى كېرەك.</string>
   <string name="storage_permissions_explanation">تەڭشەكلەرگە كىرىڭ، ھوقۇقلارنى بېسىپ ھوقۇق بېرىڭ.</string>
   <string name="snackbar_settings">تەڭشەكلەر</string>
+  <!-- Wrap mode - toast -->
 </resources>

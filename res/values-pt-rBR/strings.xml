@@ -769,4 +769,6 @@
   <string name="storage_permissions_denied">O gerenciador de arquivos requer permissão de acesso ao armazenamento para ver os seus arquivos.</string>
   <string name="storage_permissions_explanation">Vá até o menu configurações e toque em permissões para conceder a permissão.</string>
   <string name="snackbar_settings">Configurações</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Alterar o modo de quebra de linha</string>
 </resources>

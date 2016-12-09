@@ -774,4 +774,6 @@
   <string name="storage_permissions_denied">Файловому менеджеру требуется разрешение на доступ к памяти устройства для просмотра ваших файлов.</string>
   <string name="storage_permissions_explanation">Перейдите в Настройки и нажмите «Разрешения», чтобы предоставить доступ.</string>
   <string name="snackbar_settings">Настройки</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Режим переноса по словам изменён</string>
 </resources>

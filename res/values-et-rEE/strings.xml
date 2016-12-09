@@ -766,5 +766,8 @@
   <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Tere tulemast CyanogenMod failihalduri.\n\nSee rakendus võimaldab failisüsteemi sedasi muuta, et seade ei tööta enam korrektselt või sootuks rikute operatsioonisüsteemi. Kahju vältimiseks rakendus käivitatakse madalates õigustes (low-privileged mode).\n\nEdasijõudnud kasutajad võivad rohkem õigusi anda Androidi sätete alt. Vastutate ise kui teete tegevusi mis võivad kahjustada seadme faili- või operatsioonisüsteemi.\n\nCyanogenMod-i meeskond</string>
   <string name="activity_not_found_exception">Ei leidnud faili avamiseks rakendust</string>
+  <string name="storage_permissions_denied">Failihaldur vajab failide vaatamiseks õigusi.</string>
+  <string name="storage_permissions_explanation">Õiguste andmiseks avage Sätted alt Õigused.</string>
   <string name="snackbar_settings">Seaded</string>
+  <!-- Wrap mode - toast -->
 </resources>

@@ -769,4 +769,6 @@
   <string name="storage_permissions_denied">File Manager richiede l\'autorizzazione alla memoria al fine di visualizzare i file.</string>
   <string name="storage_permissions_explanation">Vai in Impostazioni e seleziona i Permessi per concedere l\'autorizzazione.</string>
   <string name="snackbar_settings">Impostazioni</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Attivazione/disattivazione modalità di sillabazione parole</string>
 </resources>

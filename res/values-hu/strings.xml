@@ -769,4 +769,6 @@
   <string name="storage_permissions_denied">Fájlkezelő engedélyt kér a tárolóhoz annak érdekében, hogy lássa a fájlokat.</string>
   <string name="storage_permissions_explanation">Menjen a Beállításokba, majd koppintson a Jogosultságokra az engedély megadásához.</string>
   <string name="snackbar_settings">Beállítások</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Sortörés kapcsolása</string>
 </resources>

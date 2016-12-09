@@ -767,4 +767,5 @@
   <string name="welcome_msg">CyanogenMod Fayl İdarəçisinə Xoş Gəldiniz.\n\nBu tətbiqetmə fayl sistemini tədqiq etməyə və cihazınıza ziyan vura biləcək əməliyyatlara icazə verir. Ziyanın qarşısını almaq üçün, tətbiqetmə təhlükəsiz, aşağı səlahiyyətli rejimdə açılacaq.\n\nQabaqcıl, tam səlahiyyətli rejimə Tənzimləmələrdən müraciət edə bilərsiniz. Etdiyiniz əməliyyatların cihazınıza ziyan vurmamasını təmin etmək sizin öhdəliyinizdədir.\n\nCyanogenMod Komandası</string>
   <string name="activity_not_found_exception">Bu faylı açacaq tətbiqetmə tapılmadı</string>
   <string name="snackbar_settings">Tənzimləmələr</string>
+  <!-- Wrap mode - toast -->
 </resources>

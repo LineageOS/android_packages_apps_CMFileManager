@@ -133,7 +133,7 @@
   <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">Информация за файловата система</string>
   <!-- ActionBar Buttons - Sort Mode -->
-  <string name="actionbar_button_sort_mode_cd">Режим на подререждане</string>
+  <string name="actionbar_button_sort_mode_cd">Режим на сортиране</string>
   <!-- ActionBar Buttons - Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">Режим на оформление</string>
   <!-- ActionBar Buttons - Other View Options -->
@@ -418,7 +418,7 @@
   <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">Премести избраното тук</string>
   <!-- Actions Dialog - Menu - Delete selection -->
-  <string name="actions_menu_delete_selection">Изтриване</string>
+  <string name="actions_menu_delete_selection">Изтриване на избраното</string>
   <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">Компресиране на избраното</string>
   <!-- Actions Dialog - Menu - Create link -->
@@ -769,4 +769,6 @@
   <string name="storage_permissions_denied">Мениджъра на файлове изисква разрешение до устройството с памет, за да видите вашите файлове.</string>
   <string name="storage_permissions_explanation">Отидете в Настройки и кликнете върху \" Разрешения \" за да дадете разрешение за достъп.</string>
   <string name="snackbar_settings">Настройки</string>
+  <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Превключване в режим подчертаване на текст</string>
 </resources>
