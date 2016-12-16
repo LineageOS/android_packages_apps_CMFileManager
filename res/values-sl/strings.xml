@@ -44,7 +44,7 @@
   <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<Korenska mapa>]]></string>
   <!-- The search result name -->
-  <string name="search_result_name">Iskanje: <xliff:g id="terms">%1$s</xliff:g></string>
+  <string name="search_result_name">Išči: <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Loading waiting message -->
   <string name="loading_message">Nalaganje \u2026</string>
   <!-- Computing message -->
@@ -143,7 +143,7 @@
   <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">Dejanja</string>
   <!-- ActionBar Buttons - Search -->
-  <string name="actionbar_button_search_cd">Iskanje</string>
+  <string name="actionbar_button_search_cd">Išči</string>
   <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">Več možnosti</string>
   <!-- ActionBar Buttons - Storage volumes -->
@@ -352,7 +352,7 @@
   <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">Med shranjevanjem začetne mape je prišlo do napake.</string>
   <!-- Menu - Navigation - Search -->
-  <string name="menu_search">Iskanje</string>
+  <string name="menu_search">Išči</string>
   <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">Nastavitve</string>
   <!-- Menu - History - Clear history -->

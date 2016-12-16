@@ -706,7 +706,7 @@
   <string name="ash_singleline_comment">Comentari d\'una sola línia</string>
   <string name="ash_multiline_comment">Comentari multi-línia</string>
   <string name="ash_keyword">Paraula clau</string>
-  <string name="ash_quoted_string">Cadena comentada</string>
+  <string name="ash_quoted_string">Cadena citada</string>
   <string name="ash_variable">Variable</string>
   <!-- Secure Storage -->
   <!-- Secure Storage dialog title - Unlock -->
@@ -738,7 +738,7 @@
   <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Desbloqueja</string>
   <!-- Secure Storage reset button -->
-  <string name="secure_storage_reset_button">Reestableix</string>
+  <string name="secure_storage_reset_button">Restableix</string>
   <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Esborra</string>
   <!-- Secure Storage unlock failed toast -->

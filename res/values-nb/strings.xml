@@ -586,7 +586,7 @@
   <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">Forhåndsvisning</string>
   <!-- Preferences - General - Display thumbs summary -->
-  <string name="pref_display_thumbs_summary">Vis et forhåndsvisningsbilde for apps, musikkfiler, bilder og videoer</string>
+  <string name="pref_display_thumbs_summary">Vis et forhåndsvisningsbilde for apper, musikkfiler, bilder og videoer</string>
   <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Bruk bevegelser</string>
   <!-- Preferences - General - Use flinger detection summary -->
@@ -660,7 +660,7 @@
   <!-- Preferences - Editor - Hex dump -->
   <string name="pref_hexdump">Hexdump av binære filer</string>
   <!-- Preferences - Editor - Hex dump desc -->
-  <string name="pref_hexdump_desc">Generer en hex-dump av den binære filen og åpne den i en hex-editor</string>
+  <string name="pref_hexdump_desc">Når en binærfil åpnes, genereres en hex-dump av filen og åpne den i en hex-editor</string>
   <!-- Preferences - Editor - Syntax highlight category -->
   <string name="pref_editor_syntax_highlight_category">Syntaks utheving</string>
   <!-- Preferences - Editor - Syntax highlight -->

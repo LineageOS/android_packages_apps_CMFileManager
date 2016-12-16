@@ -738,7 +738,7 @@
   <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Otključaj</string>
   <!-- Secure Storage reset button -->
-  <string name="secure_storage_reset_button">Resetiraj</string>
+  <string name="secure_storage_reset_button">Ponovno postavi</string>
   <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Obriši</string>
   <!-- Secure Storage unlock failed toast -->
@@ -763,7 +763,7 @@
   <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">Dnevnik izmjena</string>
   <!-- Welcome Dialog - Title -->
-  <string name="welcome_title">Dobrodošli</string>
+  <string name="welcome_title">Dobro došli</string>
   <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Dobrodošli u CyanogenMod upravitelj datoteka.\n\nOva aplikacija omogućuje pretraživanje ​​datoteka sustava i izvršavanje operacija koje bi mogle pokvariti vaš uređaj. Da bi se šteta izbjegla, aplikacija počinje u sigurnom načinu rada.\n\nMožete pristupiti naprednom načinu rada sa svim privilegijama putem postavki. Vaša je odgovornost da ne pokvarite svoj ​​sustav.\n\nCyanogenMod Tim</string>
   <string name="activity_not_found_exception">Nije moguće pronaći aplikaciju za otvaranje ove datoteke</string>

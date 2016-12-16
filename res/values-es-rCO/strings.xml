@@ -19,32 +19,21 @@
   <!-- The name of the app -->
   <!-- The description of the app -->
   <!-- Human readable sizes -->
-  <string name="size_bytes">B</string>
-  <string name="size_kilobytes">kB</string>
-  <string name="size_megabytes">MB</string>
-  <string name="size_gigabytes">GB</string>
   <!-- Date/time format order (%1$s: date; %2$s: time) -->
-  <string name="datetime_format_order">%1$s %2$s</string>
   <!-- Devices types -->
   <!-- Mount Point States -->
   <!-- Default buttons -->
-  <string name="yes">Jes</string>
   <!-- The root directory name -->
   <!-- The search result name -->
-  <string name="search_result_name">Serĉi: <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Loading waiting message -->
   <!-- Computing message -->
   <!-- Computing new line message -->
   <!-- Cancelled message -->
-  <string name="cancelled_message">Nuligita.</string>
   <!-- Error message -->
-  <string name="error_message">Eraro.</string>
   <!-- Copy text content description -->
   <!-- Copy text content message -->
   <!-- Warning dialog title -->
-  <string name="warning_title">Averto</string>
   <!-- Error dialog title -->
-  <string name="error_title">Eraro</string>
   <!-- Confirm operation dialog title -->
   <!-- Confirm overwrite dialog title -->
   <!-- Confirm deletion dialog title -->
@@ -91,7 +80,6 @@
   <!-- ActionBar Buttons - Overflow -->
   <!-- ActionBar Buttons - Storage volumes -->
   <!-- ActionBar Buttons - Save -->
-  <string name="actionbar_button_save_cd">Konservi</string>
   <!-- ActionBar Buttons - Print -->
   <!-- Navigation View - Sort - Sort by name (ascending) -->
   <!-- Navigation View - Sort - Sort by name (descending) -->
@@ -119,7 +107,6 @@
   <!-- Filesystem Info Dialog - Status Label -->
   <!-- Filesystem Info Dialog - Mount Point Label -->
   <!-- Filesystem Info Dialog - Device Label -->
-  <string name="filesystem_info_dialog_device">Aparato:</string>
   <!-- Filesystem Info Dialog - Type Label -->
   <!-- Filesystem Info Dialog - Options Label -->
   <!-- Filesystem Info Dialog - Dump/Pass Label -->
@@ -132,7 +119,6 @@
   <!-- Fso Properties - Failed to change group to fso -->
   <!-- Fso Properties - Failed to change group to fso -->
   <!-- Fso Properties Dialog - Title -->
-  <string name="fso_properties_dialog_title">Ecoj</string>
   <!-- Fso Properties Dialog - Tab - Info -->
   <!-- Fso Properties Dialog - Tab - Permissions -->
   <!-- Fso Properties Dialog - Name Label -->
@@ -181,7 +167,6 @@
   <!-- Editor - Dumping message -->
   <!-- Editor - Displaying -->
   <!-- Bookmarks - Bookmarks activity title -->
-  <string name="bookmarks">Legosignoj</string>
   <!-- Bookmarks - Bookmark name - Home -->
   <!-- Bookmarks - Bookmark name - Root folder -->
   <!-- Bookmarks - Bookmark name - System folder -->
@@ -189,7 +174,6 @@
   <!-- Bookmarks - Bookmark name - Remote storage -->
   <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
-  <string name="bookmarks_button_remove_bookmark_cd">Forigi la legosignon.</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <!-- Initial directory dialog title -->
@@ -198,7 +182,6 @@
   <!-- Initial directory error message -->
   <!-- Menu - Navigation - Search -->
   <!-- Menu - Navigation - Settings -->
-  <string name="menu_settings">Agordoj</string>
   <!-- Menu - History - Clear history -->
   <!-- Menu - Editor - No suggestions -->
   <!-- Menu - Editor - Word wrap -->
@@ -221,12 +204,9 @@
   <!-- Compressing - Success message -->
   <!-- Actions Dialog - Title -->
   <!-- Actions Dialog - Menu - Properties of current folder -->
-  <string name="actions_menu_properties_current_folder">Ecoj</string>
   <!-- Actions Dialog - Menu - Refresh -->
   <!-- Actions Dialog - Menu - New directory -->
-  <string name="actions_menu_new_directory">Nova dosierujo</string>
   <!-- Actions Dialog - Menu - New file -->
-  <string name="actions_menu_new_file">Nova dosiero</string>
   <!-- Actions Dialog - Menu - Select all -->
   <!-- Actions Dialog - Menu - Deselect all -->
   <!-- Actions Dialog - Menu - Select -->
@@ -240,16 +220,13 @@
   <!-- Actions Dialog - Menu - Open with -->
   <!-- Actions Dialog - Menu - Execute -->
   <!-- Actions Dialog - Menu - Send -->
-  <string name="actions_menu_send">Sendi</string>
   <!-- Actions Dialog - Menu - Send selection -->
   <!-- Actions Dialog - Menu - Compress -->
   <!-- Actions Dialog - Menu - Extract -->
   <!-- Actions Dialog - Menu - Delete -->
-  <string name="actions_menu_delete">Forigi</string>
   <!-- Actions Dialog - Menu - Rename -->
   <!-- Actions Dialog - Menu - Create copy -->
   <!-- Actions Dialog - Menu - Properties -->
-  <string name="actions_menu_properties">Ecoj</string>
   <!-- Actions Dialog - Menu - Add to bookmarks -->
   <!-- Actions Dialog - Menu - Add shortcut -->
   <!-- Actions Dialog - Menu - Open parent folder -->
@@ -258,7 +235,6 @@
   <!-- Actions Dialog - Menu - Set as home -->
   <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <!-- Enter Name Dialog - Label -->
-  <string name="input_name_dialog_label">Nomo:</string>
   <!-- Enter Name Dialog - Message - Empty name -->
   <!-- Enter Name Dialog - Message - Invalid name -->
   <!-- Enter Name Dialog - Message - Invalid name length -->
@@ -270,7 +246,6 @@
   <!-- Associations Dialog - Open action (button title) -->
   <!-- Associations Dialog - Send with Title -->
   <!-- Associations Dialog - Send action (button title) -->
-  <string name="associations_dialog_sendwith_action">Sendi</string>
   <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <!-- Execution console - Title -->
   <!-- Execution console - The script name label -->
@@ -285,28 +260,22 @@
   <!-- Mime/Types - Folder -->
   <!-- Mime/Types - Symlink -->
   <!-- Mime/Types - Unknown -->
-  <string name="mime_unknown">Nekonata</string>
   <!--  Filetime formats -->
   <!-- Selection -->
   <!-- For example "2 folders and 1 file selected." -->
   <!-- Category descriptions -->
-  <string name="category_document">DOKUMENTO</string>
-  <string name="category_image">BILDO</string>
   <!-- Compression - Compression modes dialog title -->
   <!-- Compression - Supported archive and compression modes -->
   <!-- Shortcut. Failed to handle the shortcut -->
   <!-- Shortcut. The shortcut was created -->
   <!-- Shortcut. The shortcut wasn't created -->
   <!-- Preferences title -->
-  <string name="pref">Agordoj</string>
   <!-- Preferences - General title -->
   <!-- Preferences - Search title -->
   <!-- Preferences - Storage title -->
   <!-- Preferences - Editor title -->
   <!-- Preferences - Themes title -->
-  <string name="pref_themes">Etosoj</string>
   <!-- Preferences - About title -->
-  <string name="pref_about">Pri</string>
   <!-- Preferences - General - Behaviour category -->
   <!-- Preferences - General - Case sensitive sort and navigating title -->
   <!-- Preferences - General - Case sensitive sort and navigating summary -->
@@ -365,7 +334,6 @@
   <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <!-- Preferences - Themes - Themes selection category -->
-  <string name="pref_themes_selection_category">Etosoj</string>
   <!-- Preferences - Themes - Set theme button -->
   <!-- Preferences - Themes - Confirmation message -->
   <!-- Preferences - Themes - Theme not found message -->
@@ -378,7 +346,6 @@
   <!-- The text of the alpha slider control -->
   <!-- The label of the current color panel -->
   <!-- The label of the new color panel -->
-  <string name="color_picker_new_text">Nova:</string>
   <!-- The label of the color input -->
   <!-- Android Syntax Highlight -->
   <!-- Secure Storage -->
@@ -391,17 +358,13 @@
   <!-- Secure Storage unlock dialog message (reset the current password) -->
   <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <!-- Secure Storage unlock dialog old key title -->
-  <string name="secure_storage_unlock_old_key_title">Malnova pasvorto:</string>
   <!-- Secure Storage unlock dialog key title -->
-  <string name="secure_storage_unlock_new_key_title">Nova pasvorto:</string>
   <!-- Secure Storage unlock dialog key title -->
-  <string name="secure_storage_unlock_key_title">Pasvorto:</string>
   <!-- Secure Storage unlock dialog repeat key title-->
   <!-- Secure Storage create button -->
   <!-- Secure Storage unlock button -->
   <!-- Secure Storage reset button -->
   <!-- Secure Storage delete button -->
-  <string name="secure_storage_delete_button">Forigi</string>
   <!-- Secure Storage unlock failed toast -->
   <!-- Secure Storage unlock validation, length -->
   <!-- Secure Storage unlock validation, equal -->
@@ -410,9 +373,7 @@
   <!-- Unsupported document format -->
   <!-- Unsupported image format -->
   <!-- Print header -->
-  <string name="print_document_header">Dokumento: <xliff:g id="document_name">%1$s</xliff:g></string>
   <!-- Print footer -->
-  <string name="print_document_footer">Paĝo <xliff:g id="page_number">%1$s</xliff:g></string>
   <!-- Security - Extract relative or absolute files -->
   <!-- ChangeLog - Dialog title -->
   <!-- Welcome Dialog - Title -->
