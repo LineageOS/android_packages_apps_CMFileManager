@@ -782,4 +782,5 @@
   <string name="storage_permissions_explanation">Gå til Indstillinger og tryk på Tilladelser for at give tilladelse.</string>
   <string name="snackbar_settings">Indstillinger</string>
   <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Slå orddeling til/fra</string>
 </resources>
