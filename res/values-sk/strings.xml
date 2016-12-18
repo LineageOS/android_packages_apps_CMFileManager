@@ -773,6 +773,9 @@
   <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">Vitajte v správcovi súborov CyanogenMod.\n\nTáto aplikácia umožňuje prehliadať súborový systém a robiť operácie, ktoré môžu poškodiť vaše zariadenie. Na zabránenie škôd bude aplikácia spustená v Bezpečnom režime.\n\nV nastaveniach môžete zapnúť pokročilý režim s plnými oprávneniami. Tým preberiete zodpovednosť za operácie, ktoré budete s aplikáciou vykonávať.\n\nTím CyanogenMod.\n</string>
   <string name="activity_not_found_exception">Nepodarilo sa nájsť aplikáciu na otvorenie tohto súboru</string>
+  <string name="storage_permissions_denied">Správca súborov vyžaduje práva pre prístup na úložisko, aby mohol zobraziť vaše súbory.</string>
+  <string name="storage_permissions_explanation">Prejdite na Nastavenia a kliknutím na Povolenia udelíte požadované oprávnenie.</string>
   <string name="snackbar_settings">Nastavenia</string>
   <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Prepínanie režimu zalomenia slov</string>
 </resources>
