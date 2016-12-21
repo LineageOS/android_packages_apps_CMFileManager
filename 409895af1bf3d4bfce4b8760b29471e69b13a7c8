@@ -34,6 +34,24 @@
       "revId": "409895af1bf3d4bfce4b8760b29471e69b13a7c8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_60ff1b34",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 7880
+      },
+      "writtenOn": "2016-12-21T21:27:20Z",
+      "side": 1,
+      "message": "Ah right, we aren\u0027t using the support library.",
+      "parentUuid": "5f681702_20d523ba",
+      "revId": "409895af1bf3d4bfce4b8760b29471e69b13a7c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
