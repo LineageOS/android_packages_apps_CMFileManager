@@ -16,6 +16,24 @@
       "revId": "409895af1bf3d4bfce4b8760b29471e69b13a7c8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_20d523ba",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2016-12-21T21:20:28Z",
+      "side": 1,
+      "message": "I don\u0027t think so, due to this: https://review.cyanogenmod.org/127658",
+      "parentUuid": "5f681702_00c8e71f",
+      "revId": "409895af1bf3d4bfce4b8760b29471e69b13a7c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
