@@ -26,7 +26,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.provider.MediaStore;
-import android.support.v4.content.FileProvider;
 import android.util.Log;
 import android.widget.Toast;
 import com.cyanogenmod.filemanager.R;
@@ -165,8 +164,6 @@ public final class IntentsActionPolicy extends ActionsPolicy {
             } else {
                 intent.setData(getUriFromFile(ctx, fso));
             }
-
-            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
             // Resolve the intent
             resolveIntent(ctx, intent, choose, onDismissListener);
@@ -446,8 +443,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      * @param request The requested intent
      * @return Intent The intent
      */
-    public static final Intent getIntentFromResolveInfo(Context context,
-            ResolveInfo ri, Intent request) {
+    public static final Intent getIntentFromResolveInfo(ResolveInfo ri, Intent request) {
         Intent intent =
                 getIntentFromComponentName(
                     new ComponentName(
@@ -477,7 +473,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
         }
 
         // Grant access to resources if needed
-        grantSecureAccessIfNeeded(context, intent, ri);
+        grantSecureAccessIfNeeded(intent, ri);
 
         return intent;
     }
@@ -488,8 +484,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
      * @param intent The intent to grant access
      * @param ri The resolved info associated with the intent
      */
-    public static final void grantSecureAccessIfNeeded(Context context,
-            Intent intent, ResolveInfo ri) {
+    public static final void grantSecureAccessIfNeeded(Intent intent, ResolveInfo ri) {
         // If this intent will be serve by the SecureResourceProvider then this uri must
         // be granted before we start it, only for external apps. The internal editor
         // must receive an file scheme uri
@@ -497,33 +492,32 @@ public final class IntentsActionPolicy extends ActionsPolicy {
         String authority = null;
         if (uri != null) {
             authority = uri.getAuthority();
-            grantSecureAccess(context, intent, authority, ri, uri);
+            grantSecureAccess(intent, authority, ri, uri);
         } else if (intent.getExtras() != null) {
             Object obj = intent.getExtras().get(Intent.EXTRA_STREAM);
             if (obj instanceof Uri) {
                 uri = (Uri) intent.getExtras().get(Intent.EXTRA_STREAM);
                 authority = uri.getAuthority();
-                grantSecureAccess(context, intent, authority, ri, uri);
+                grantSecureAccess(intent, authority, ri, uri);
             } else if (obj instanceof ArrayList) {
                 ArrayList<Uri> uris = (ArrayList<Uri>) intent.getExtras().get(Intent.EXTRA_STREAM);
                 for (Uri u : uris) {
                     authority = u.getAuthority();
-                    grantSecureAccess(context, intent, authority, ri, u);
+                    grantSecureAccess(intent, authority, ri, u);
                 }
             }
         }
     }
 
-    private static final void grantSecureAccess(Context context, Intent intent,
-            String authority, ResolveInfo ri, Uri uri) {
+    private static final void grantSecureAccess(Intent intent, String authority, ResolveInfo ri,
+            Uri uri) {
         if (authority != null && authority.equals(SecureResourceProvider.AUTHORITY)) {
             boolean isInternalEditor = isInternalEditor(ri);
             if (isInternalEditor) {
                 // remove the authorization and change request to file scheme
                 AuthorizationResource auth = SecureResourceProvider.revertAuthorization(uri);
-                intent.setData(FileProvider.getUriForFile(context,
-                            "com.cyanogenmod.filemanager.providers.file",
-                            new File(auth.mFile.getFullPath())));
+                intent.setData(Uri.fromFile(new File(auth.mFile.getFullPath())));
+
             } else {
                 // Grant access to the package
                 SecureResourceProvider.grantAuthorizationUri(uri,
@@ -667,8 +661,7 @@ public final class IntentsActionPolicy extends ActionsPolicy {
         final File file = new File(fso.getFullPath());
         Uri uri = MediaHelper.fileToContentUri(ctx, file);
         if (uri == null) {
-            uri = FileProvider.getUriForFile(ctx,
-                   "com.cyanogenmod.filemanager.providers.file", file);
+            uri = Uri.fromFile(file);
         }
         return uri;
     }

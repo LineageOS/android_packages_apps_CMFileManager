@@ -166,7 +166,7 @@ public class AssociationsDialog implements OnItemClickListener {
                     public void onClick(DialogInterface dialog, int which) {
                         ResolveInfo ri = getSelected();
                         Intent intent =
-                                IntentsActionPolicy.getIntentFromResolveInfo(mContext,
+                                IntentsActionPolicy.getIntentFromResolveInfo(
                                         ri, AssociationsDialog.this.mRequestIntent);
 
                         // Open the intent (and remember the action is the check is marked)

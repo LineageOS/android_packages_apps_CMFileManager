@@ -47,7 +47,6 @@ import android.os.Parcelable;
 import android.os.storage.StorageVolume;
 import android.provider.Settings;
 import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.content.FileProvider;
 import android.support.v4.widget.DrawerLayout;
 import android.text.TextUtils;
 import android.util.Log;
@@ -637,10 +636,7 @@ public class NavigationActivity extends Activity
                         for (FileSystemObject f : selectedFiles) {
                             //Beam ignores folders and system files
                             if (!FileHelper.isDirectory(f) && !FileHelper.isSystemFile(f)) {
-                                fileUri.add(FileProvider.getUriForFile(
-                                            NavigationActivity.this,
-                                            "com.cyanogenmod.filemanager.providers.file",
-                                            new File(f.getFullPath())));
+                                fileUri.add(Uri.fromFile(new File(f.getFullPath())));
                             }
                         }
                         if (fileUri.size() > 0) {
