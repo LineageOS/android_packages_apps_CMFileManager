@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_00c8e71f",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 7880
+      },
+      "writtenOn": "2016-12-21T21:17:23Z",
+      "side": 1,
+      "message": "We might be able to use minSdk 21 if we even care about that.",
+      "revId": "409895af1bf3d4bfce4b8760b29471e69b13a7c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
