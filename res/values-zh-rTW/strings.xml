@@ -107,7 +107,7 @@
   <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">無法取消此操作。</string>
   <!-- The operation requieres mount the file system prior to execute the command -->
-  <string name="msgs_read_only_filesystem">只讀檔案系統。請在使用讀寫模式掛載檔案系統後再試。</string>
+  <string name="msgs_read_only_filesystem">唯讀檔案系統。請在使用讀寫模式掛載檔案系統後再試。</string>
   <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">無效參數。調用失敗。</string>
   <!-- The operation will cause inconsistencies -->
@@ -251,7 +251,7 @@
   <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">最後修改：</string>
   <!-- Fso Properties Dialog - Last Changed Time -->
-  <string name="fso_properties_dialog_last_changed_date">最後變更：</string>
+  <string name="fso_properties_dialog_last_changed_date">已更改：</string>
   <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">擁有者：</string>
   <!-- Fso Properties Dialog - Group Label -->
@@ -314,7 +314,7 @@
   <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">確認退出</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog message -->
-  <string name="editor_dirty_ask_msg">還有尚未儲存的變更。\n\n放棄變更並退出？</string>
+  <string name="editor_dirty_ask_msg">還有尚未儲存的更改。\n\n放棄更改並退出？</string>
   <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">檔案已成功儲存。</string>
   <!-- Editor - Read-only file mode -->
@@ -332,15 +332,15 @@
   <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">系統資料夾</string>
   <!-- Bookmarks - Bookmark name - Secure storage -->
-  <string name="bookmarks_secure">安全儲存</string>
+  <string name="bookmarks_secure">安全儲存空間</string>
   <!-- Bookmarks - Bookmark name - Remote storage -->
-  <string name="bookmarks_remote">遠端儲存</string>
+  <string name="bookmarks_remote">遠端儲存空間</string>
   <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">設定初始資料夾。</string>
   <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">移除書籤。</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
-  <string name="bookmarks_msgs_add_success">書籤已成功加入。</string>
+  <string name="bookmarks_msgs_add_success">書籤已成功新增。</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">該書籤已存在。</string>
   <!-- Initial directory dialog title -->
@@ -591,7 +591,7 @@
   <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">安全模式</string>
   <!-- Preferences - General - Safe mode summary -->
-  <string name="pref_access_mode_safe_summary">安全模式\n\n程式目前在沒有特權的情況下執行，並且只能存取儲存裝置檔案系統（例如 SD 卡與快閃隨身碟）</string>
+  <string name="pref_access_mode_safe_summary">安全模式\n\n程式目前在沒有特權的情況下執行，並且只能存取儲存裝置檔案系統（例如 SD 卡與 USB 隨身碟）</string>
   <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">使用者提示模式</string>
   <!-- Preferences - General - Prompt user mode summary -->
@@ -633,15 +633,15 @@
   <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">所有儲存的搜尋關鍵字已被移除。</string>
   <!-- Preferences - Storage - Secure Storage category -->
-  <string name="pref_secure_storage_category">安全儲存</string>
+  <string name="pref_secure_storage_category">安全儲存空間</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">延遲同步</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
-  <string name="pref_secure_storage_delayed_sync_summary">安全檔案系統同步是一個費時的操作。啟用此選項可以在每次操作後有更好的反應，在檔案系統處於閒置狀態時執行同步，但如果當有應用程序故障，會有機會失去未同步的信息。</string>
+  <string name="pref_secure_storage_delayed_sync_summary">安全檔案系統同步是一個費時的操作。啟用此選項可以在每次操作後有更好的反應，在檔案系統處於閒置狀態時執行同步，但如果當有應用程式故障，會有機會失去未同步的資訊。</string>
   <!-- Preferences - Storage - Secure Storage - Change password title -->
-  <string name="pref_secure_storage_reset_password_title">變更密碼</string>
+  <string name="pref_secure_storage_reset_password_title">更改密碼</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
-  <string name="pref_secure_storage_delete_storage_title">刪除儲存</string>
+  <string name="pref_secure_storage_delete_storage_title">刪除儲存空間</string>
   <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">行爲</string>
   <!-- Preferences - Editor - No suggestions -->
@@ -709,21 +709,21 @@
   <string name="ash_variable">變數</string>
   <!-- Secure Storage -->
   <!-- Secure Storage dialog title - Unlock -->
-  <string name="secure_storage_unlock_title">解鎖安全存儲</string>
+  <string name="secure_storage_unlock_title">解鎖安全儲存空間</string>
   <!-- Secure Storage dialog title - Create -->
-  <string name="secure_storage_create_title">建立安全存儲</string>
+  <string name="secure_storage_create_title">建立安全儲存空間</string>
   <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">重設密碼</string>
   <!-- Secure Storage dialog title - Delete -->
-  <string name="secure_storage_delete_title">刪除安全存儲</string>
+  <string name="secure_storage_delete_title">刪除安全儲存空間</string>
   <!-- Secure Storage unlock dialog message (secure storage exists) -->
-  <string name="secure_storage_unlock_key_prompt_msg">輸入密碼以解開安全儲存檔案系統。</string>
+  <string name="secure_storage_unlock_key_prompt_msg">輸入密碼即可解鎖安全儲存空間的檔案系統。</string>
   <!-- Secure Storage unlock dialog message (new secure storage) -->
-  <string name="secure_storage_unlock_key_new_msg">輸入密碼以保護安全儲存檔案系統。</string>
+  <string name="secure_storage_unlock_key_new_msg">輸入密碼即可保護安全儲存空間的檔案系統。</string>
   <!-- Secure Storage unlock dialog message (reset the current password) -->
   <string name="secure_storage_unlock_key_reset_msg">輸入目前密碼和新密碼來重新設定安全儲存檔案系統。</string>
   <!-- Secure Storage unlock dialog message (delete the secure storage) -->
-  <string name="secure_storage_unlock_key_delete_msg">輸入當前密碼以移除安全儲存檔案系統。</string>
+  <string name="secure_storage_unlock_key_delete_msg">輸入目前密碼即可移除安全儲存空間的檔案系統。</string>
   <!-- Secure Storage unlock dialog old key title -->
   <string name="secure_storage_unlock_old_key_title">舊密碼：</string>
   <!-- Secure Storage unlock dialog key title -->
@@ -741,13 +741,13 @@
   <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">刪除</string>
   <!-- Secure Storage unlock failed toast -->
-  <string name="secure_storage_unlock_failed">無法解鎖儲存</string>
+  <string name="secure_storage_unlock_failed">無法解鎖儲存空間</string>
   <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">密碼至少要有 <xliff:g id="characters">%1$d</xliff:g> 個字元。</string>
   <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">密碼不相符</string>
   <!-- Secure storage open file warning -->
-  <string name="secure_storage_open_file_warning">這將複製文件到臨時的未加密路徑。且將會在一小時後被清除。</string>
+  <string name="secure_storage_open_file_warning">這將複製檔案到臨時的未加密路徑。且將會在一小時後被清除。</string>
   <!-- Print messages -->
   <!-- Unsupported document format -->
   <string name="print_unsupported_document">不支援的檔案格式</string>
@@ -766,7 +766,7 @@
   <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">歡迎使用 CyanogenMod 檔案管理員。\n\n此應用程式允許您瀏覽檔案系統並做出可能破壞您裝置的操作。為了避免損害，此應用程式預設在低權限、安全的模式下執行。\n\n您可以經由設定切換至進階或擁有完全控制的模式。確保操作不會破壞系統將是您的責任。\n\nCyanogenMod 團隊</string>
   <string name="activity_not_found_exception">找不到可開啟此檔案的應用程式</string>
-  <string name="storage_permissions_denied">檔案管理員需要使用儲存空間的權限以檢視檔案。</string>
+  <string name="storage_permissions_denied">檔案管理員需要使用儲存空間的權限即可檢視檔案。</string>
   <string name="storage_permissions_explanation">進入設定，然後按一下權限設定以授予權限。</string>
   <string name="snackbar_settings">設定</string>
   <!-- Wrap mode - toast -->
