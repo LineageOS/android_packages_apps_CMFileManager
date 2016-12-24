@@ -39,7 +39,7 @@
   <string name="yes">是</string>
   <string name="no">否</string>
   <string name="all">全部</string>
-  <string name="overwrite">覆寫</string>
+  <string name="overwrite">覆蓋</string>
   <string name="select">選取</string>
   <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<根目錄>]]></string>
@@ -64,13 +64,13 @@
   <!-- Confirm operation dialog title -->
   <string name="confirm_operation">確認操作</string>
   <!-- Confirm overwrite dialog title -->
-  <string name="confirm_overwrite">確認覆寫</string>
+  <string name="confirm_overwrite">確認覆蓋</string>
   <!-- Confirm deletion dialog title -->
   <string name="confirm_deletion">確認刪除</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">確認切換</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
-  <string name="msgs_change_to_prompt_access_mode_msg">無法在超級使用者存取模式下執行。正在切換至安全模式。\n\n套用此更改？</string>
+  <string name="msgs_change_to_prompt_access_mode_msg">無法在超級使用者存取模式下執行。正在切換至安全模式。\n\n套用此更改嗎？</string>
   <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">無法取得執行所需的權限。</string>
   <!-- The message shown when an allocation of a privileged console fails, and a non
@@ -119,7 +119,7 @@
   <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">沒有任何應用程式與此類檔案關聯。</string>
   <!-- Overwrite files? -->
-  <string name="msgs_overwrite_files">有些檔案已存在於目標資料夾內。\n\n是否覆寫？</string>
+  <string name="msgs_overwrite_files">有些檔案已存在於目標資料夾內。\n\n是否覆蓋？</string>
   <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">程式與操作的關聯失敗。</string>
   <!-- An operation requires elevated privileged. Ask the user. -->
@@ -268,9 +268,9 @@
   <string name="fso_failed_to_allow_media_scan">允許媒體掃描失敗</string>
   <string name="fso_failed_to_prevent_media_scan">防止媒體掃描失敗</string>
   <string name="fso_delete_nomedia_dir_title">刪除 .nomedia 目錄</string>
-  <string name="fso_delete_nomedia_dir_body">這個目錄包含一個 .nomedia 目錄。\n\n您確定要刪除此目錄與其所有內容？</string>
+  <string name="fso_delete_nomedia_dir_body">這個目錄包含一個 .nomedia 目錄。\n\n您確定要刪除此目錄與其所有內容嗎？</string>
   <string name="fso_delete_nomedia_non_empty_title">刪除 .nomedia 檔案</string>
-  <string name="fso_delete_nomedia_non_empty_body">這個目錄包含一個非空白的 .nomedia 檔案。\n\n您確定要刪除此檔案？</string>
+  <string name="fso_delete_nomedia_non_empty_body">這個目錄包含一個非空白的 .nomedia 檔案。\n\n您確定要刪除此檔案嗎？</string>
   <!-- History - History activity title -->
   <string name="history">紀錄</string>
   <!-- History - The history is empty -->
@@ -314,7 +314,7 @@
   <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">確認退出</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog message -->
-  <string name="editor_dirty_ask_msg">還有尚未儲存的更改。\n\n放棄更改並退出？</string>
+  <string name="editor_dirty_ask_msg">還有尚未儲存的更改。\n\n是否放棄更改並退出？</string>
   <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">檔案已成功儲存。</string>
   <!-- Editor - Read-only file mode -->
@@ -458,7 +458,7 @@
   <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">設為主頁</string>
   <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
-  <string name="actions_ask_undone_operation_msg">此操作無法復原。您確定要繼續？</string>
+  <string name="actions_ask_undone_operation_msg">此操作無法復原。您確定要繼續嗎？</string>
   <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">名稱：</string>
   <!-- Enter Name Dialog - Message - Empty name -->
@@ -579,7 +579,7 @@
   <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">預覽</string>
   <!-- Preferences - General - Display thumbs summary -->
-  <string name="pref_display_thumbs_summary">為應用程式、音樂、相片及影片顯示預覽圖片</string>
+  <string name="pref_display_thumbs_summary">為應用程式、音樂、照片及影片顯示預覽圖片</string>
   <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">使用滑動手勢</string>
   <!-- Preferences - General - Use flinger detection summary -->
@@ -637,7 +637,7 @@
   <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">延遲同步</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
-  <string name="pref_secure_storage_delayed_sync_summary">安全檔案系統同步是一個費時的操作。啟用此選項可以在每次操作後有更好的反應，在檔案系統處於閒置狀態時執行同步，但如果當有應用程式故障，會有機會失去未同步的資訊。</string>
+  <string name="pref_secure_storage_delayed_sync_summary">安全檔案系統同步是一個費時的操作。啟用此選項可以在每次操作後有更好的反應，在檔案系統處於閒置狀態時執行同步，但如果當有應用程式錯誤，會有機會失去未同步的資訊。</string>
   <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">更改密碼</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
@@ -758,6 +758,7 @@
   <!-- Print footer -->
   <string name="print_document_footer">第 <xliff:g id="page_number">%1$s</xliff:g> 頁</string>
   <!-- Security - Extract relative or absolute files -->
+  <string name="security_warning_extract">警告！\n\n提取包含相對路徑或絕對路徑的壓縮檔案可能會覆蓋系統檔案，從而導致裝置損壞。\n\n是否要繼續？</string>
   <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">更新日誌</string>
   <!-- Welcome Dialog - Title -->
