@@ -773,4 +773,5 @@
   <string name="storage_permissions_explanation">עבור אל ההגדרות, והקש על הרשאות כדי להעניק הרשאה.</string>
   <string name="snackbar_settings">הגדרות</string>
   <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">הפעל מצב התאמת שורה</string>
 </resources>
