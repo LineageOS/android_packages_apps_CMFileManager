@@ -1,4 +1,4 @@
-CyanogenMod File Manager
+LineageOS File Manager
 ========================
 
 Version 2.0.0
