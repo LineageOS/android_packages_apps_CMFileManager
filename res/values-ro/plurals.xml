@@ -44,4 +44,9 @@
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> de fișire selectate.</item>
   </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> obiect va fi șters.</item>
+    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> (de) obiecte vor fi șterse.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> (de) obiecte vor fi șterse.</item>
+  </plurals>
 </resources>

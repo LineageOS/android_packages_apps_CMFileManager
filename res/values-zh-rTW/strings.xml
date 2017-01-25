@@ -29,8 +29,8 @@
   <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
   <!-- Devices types -->
-  <string name="device_blockdevice">Block device</string>
-  <string name="device_characterdevice">Character device</string>
+  <string name="device_blockdevice">封鎖裝置</string>
+  <string name="device_characterdevice">字元裝置</string>
   <string name="device_namedpipe">命名的管道</string>
   <string name="device_domainsocket">通訊端</string>
   <!-- Mount Point States -->
@@ -41,13 +41,13 @@
   <string name="no">否</string>
   <string name="all">全部</string>
   <string name="overwrite">覆蓋</string>
-  <string name="select">選取</string>
+  <string name="select">選擇</string>
   <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<根目錄>]]></string>
   <!-- The search result name -->
   <string name="search_result_name">搜尋：<xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Loading waiting message -->
-  <string name="loading_message">正在讀取\u2026</string>
+  <string name="loading_message">載入中\u2026</string>
   <!-- Computing message -->
   <!-- Computing new line message -->
   <!-- Cancelled message -->
@@ -57,7 +57,7 @@
   <!-- Copy text content description -->
   <string name="copy_text_cd">輕觸即可複製文字至剪貼簿</string>
   <!-- Copy text content message -->
-  <string name="copy_text_msg">文字已複製至剪貼簿</string>
+  <string name="copy_text_msg">文字已複製到剪貼簿</string>
   <!-- Warning dialog title -->
   <string name="warning_title">警告</string>
   <!-- Error dialog title -->
@@ -71,7 +71,7 @@
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">確認切換</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
-  <string name="msgs_change_to_prompt_access_mode_msg">無法在超級使用者存取模式下執行。正在切換至安全模式。\n\n套用此更改嗎？</string>
+  <string name="msgs_change_to_prompt_access_mode_msg">無法在超級使用者存取模式下執行。正在切換至安全模式。\n\n套用此變更嗎？</string>
   <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">無法取得執行所需的權限。</string>
   <!-- The message shown when an allocation of a privileged console fails, and a non
@@ -122,7 +122,7 @@
   <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">有些檔案已存在於目標資料夾內。\n\n是否覆蓋？</string>
   <!-- The association of an action to the app failed -->
-  <string name="msgs_action_association_failed">程式與操作的關聯失敗。</string>
+  <string name="msgs_action_association_failed">程式與動作的關聯失敗。</string>
   <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">此操作需要提升權限。\n\n您想切換至超級使用者存取模式嗎？</string>
   <!-- The parent directory of the current directory in navigation view -->
@@ -130,19 +130,19 @@
   <!-- External storage descripton -->
   <string name="external_storage">外部儲存空間</string>
   <!-- Usb storage descripton -->
-  <string name="usb_storage">USB 儲存空間</string>
+  <string name="usb_storage">USB 儲存裝置</string>
   <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">檔案系統資訊</string>
   <!-- ActionBar Buttons - Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">排序方式</string>
   <!-- ActionBar Buttons - Layout Mode -->
-  <string name="actionbar_button_layout_mode_cd">檢視模式</string>
+  <string name="actionbar_button_layout_mode_cd">佈局模式</string>
   <!-- ActionBar Buttons - Other View Options -->
   <string name="actionbar_button_other_view_options_cd">其他檢視選項</string>
   <!-- ActionBar Buttons - Done -->
   <string name="actionbar_button_selection_done_cd">完成</string>
   <!-- ActionBar Buttons - Actions -->
-  <string name="actionbar_button_actions_cd">操作</string>
+  <string name="actionbar_button_actions_cd">動作</string>
   <!-- ActionBar Buttons - Search -->
   <string name="actionbar_button_search_cd">搜尋</string>
   <!-- ActionBar Buttons - Overflow -->
@@ -200,7 +200,7 @@
   <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">磁碟使用情況</string>
   <!-- Filesystem Info Dialog - Status Label -->
-  <string name="filesystem_info_dialog_status">已掛載:</string>
+  <string name="filesystem_info_dialog_status">已掛載：</string>
   <!-- Filesystem Info Dialog - Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">掛載點：</string>
   <!-- Filesystem Info Dialog - Device Label -->
@@ -252,7 +252,7 @@
   <!-- Fso Properties Dialog - Last Modified Time Label -->
   <string name="fso_properties_dialog_last_modified_date">最後修改：</string>
   <!-- Fso Properties Dialog - Last Changed Time -->
-  <string name="fso_properties_dialog_last_changed_date">已更改：</string>
+  <string name="fso_properties_dialog_last_changed_date">最後變更：</string>
   <!-- Fso Properties Dialog - Owner Label -->
   <string name="fso_properties_dialog_owner">擁有者：</string>
   <!-- Fso Properties Dialog - Group Label -->
@@ -275,15 +275,15 @@
   <!-- History - History activity title -->
   <string name="history">紀錄</string>
   <!-- History - The history is empty -->
-  <string name="msgs_history_empty">紀錄項爲空。</string>
+  <string name="msgs_history_empty">紀錄項目爲空。</string>
   <!-- History - The history reference is not in the actual history list -->
-  <string name="msgs_history_unknown">未知的紀錄項。</string>
+  <string name="msgs_history_unknown">未知的記錄項目。</string>
   <!-- Search - Search activity title -->
   <string name="search">搜尋結果</string>
   <!-- Search - Search hint message -->
   <string name="search_hint">輸入您的搜尋內容</string>
   <!-- Search - Voice search hint message -->
-  <string name="search_voice_hint">說出您欲搜尋的內容</string>
+  <string name="search_voice_hint">說出您想搜尋的內容</string>
   <!-- Search - Search error message -->
   <string name="search_error_msg">搜尋時發生了錯誤。未找到任何結果。</string>
   <!-- Search - Search no results message -->
@@ -291,7 +291,7 @@
   <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory">在 <xliff:g id="path">%2$s</xliff:g> 內<xliff:g id="items">%1$s</xliff:g></string>
   <!-- Search - Search query terms -->
-  <string name="search_terms"><![CDATA[<b>關鍵字：</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <string name="search_terms"><![CDATA[<b>條款：</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Search - Confirm search -->
   <string name="search_few_characters_title">確認搜尋</string>
   <!-- Search - Some terms of the search are too small. The operation could be very costly -->
@@ -315,7 +315,7 @@
   <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">確認退出</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog message -->
-  <string name="editor_dirty_ask_msg">還有尚未儲存的更改。\n\n是否放棄更改並退出？</string>
+  <string name="editor_dirty_ask_msg">還有尚未儲存的變更。\n\n是否放棄變更並退出？</string>
   <!-- Editor - Save operation success -->
   <string name="editor_successfully_saved">檔案已成功儲存。</string>
   <!-- Editor - Read-only file mode -->
@@ -323,7 +323,7 @@
   <!-- Editor - Dumping message -->
   <string name="dumping_message">正在生成十六進位制轉儲\u2026</string>
   <!-- Editor - Displaying -->
-  <string name="displaying_message">正在顯示\u2026</string>
+  <string name="displaying_message">顯示中\u2026</string>
   <!-- Bookmarks - Bookmarks activity title -->
   <string name="bookmarks">書籤</string>
   <!-- Bookmarks - Bookmark name - Home -->
@@ -363,41 +363,41 @@
   <!-- Menu - Editor - Word wrap -->
   <string name="menu_word_wrap">自動換行</string>
   <!-- Menu - Editor - Sintax highlight -->
-  <string name="menu_syntax_highlight">語法高亮</string>
+  <string name="menu_syntax_highlight">醒目標示語法</string>
   <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - 副本<xliff:g id="extension">%2$s</xliff:g></string>
   <!-- Regular expression for new compressed file -->
-  <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - 新建<xliff:g id="extension">%2$s</xliff:g></string>
+  <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - 新的<xliff:g id="extension">%2$s</xliff:g></string>
   <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">正在執行操作\u2026</string>
   <!-- Waiting dialog - Copying title -->
-  <string name="waiting_dialog_copying_title">正在複製\u2026</string>
+  <string name="waiting_dialog_copying_title">複製中\u2026</string>
   <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>從</b>]]>　<xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>到</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog - Moving title -->
-  <string name="waiting_dialog_moving_title">正在移動\u2026</string>
+  <string name="waiting_dialog_moving_title">移動中\u2026</string>
   <!-- Waiting dialog - Moving message -->
   <string name="waiting_dialog_moving_msg"><![CDATA[<b>從</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>到</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog - Deleting title -->
-  <string name="waiting_dialog_deleting_title">正在刪除\u2026</string>
+  <string name="waiting_dialog_deleting_title">刪除中\u2026</string>
   <!-- Waiting dialog - Deleting message -->
   <string name="waiting_dialog_deleting_msg"><![CDATA[<b>檔案</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Extracting title -->
-  <string name="waiting_dialog_extracting_title">正在解壓縮\u2026</string>
+  <string name="waiting_dialog_extracting_title">解壓縮中\u2026</string>
   <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg"><![CDATA[<b>檔案</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Extracting title -->
-  <string name="waiting_dialog_compressing_title">正在壓縮\u2026</string>
+  <string name="waiting_dialog_compressing_title">壓縮中\u2026</string>
   <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>檔案</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Initializing the dialog -->
-  <string name="waiting_dialog_analizing_msg"><![CDATA[<![CDATA[<b>正在分析\u2026</b>]]]]><![CDATA[>]]></string>
+  <string name="waiting_dialog_analizing_msg"><![CDATA[<b>分析中\u2026</b>]]></string>
   <!-- Extracting - Success message -->
   <string name="msgs_extracting_success">解壓縮操作成功。資料已被解壓縮至：<xliff:g id="destination">%1$s</xliff:g>。</string>
   <!-- Compressing - Success message -->
   <string name="msgs_compressing_success">壓縮操作成功。資料已被壓縮至：<xliff:g id="destination">%1$s</xliff:g>。</string>
   <!-- Actions Dialog - Title -->
-  <string name="actions_dialog_title">操作</string>
+  <string name="actions_dialog_title">動作</string>
   <!-- Actions Dialog - Menu - Properties of current folder -->
   <string name="actions_menu_properties_current_folder">屬性</string>
   <!-- Actions Dialog - Menu - Refresh -->
@@ -411,9 +411,9 @@
   <!-- Actions Dialog - Menu - Deselect all -->
   <string name="actions_menu_deselect_all">取消全選</string>
   <!-- Actions Dialog - Menu - Select -->
-  <string name="actions_menu_select">選取</string>
+  <string name="actions_menu_select">選擇</string>
   <!-- Actions Dialog - Menu - Deselect -->
-  <string name="actions_menu_deselect">取消選取</string>
+  <string name="actions_menu_deselect">取消選擇</string>
   <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <string name="actions_menu_paste_selection">貼上選取的項目</string>
   <!-- Actions Dialog - Menu - Move selection -->
@@ -457,7 +457,7 @@
   <!-- Actions Dialog - Menu - Print -->
   <string name="actions_menu_print">列印</string>
   <!-- Actions Dialog - Menu - Set as home -->
-  <string name="actions_menu_set_as_home">設為主頁</string>
+  <string name="actions_menu_set_as_home">設為首頁</string>
   <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">此操作無法復原。您確定要繼續嗎？</string>
   <!-- Enter Name Dialog - Label -->
@@ -487,7 +487,7 @@
   <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
   <string name="inline_autocomplete_tab_nothing_to_complete_msg">沒有需要完成的項目。</string>
   <!-- Execution console - Title -->
-  <string name="execution_console_title">主控台</string>
+  <string name="execution_console_title">控制台</string>
   <!-- Execution console - The script name label -->
   <string name="execution_console_script_name_label">腳本：</string>
   <!-- Execution console - The script execution time label -->
@@ -558,13 +558,13 @@
   <!-- Preferences - Themes title -->
   <string name="pref_themes">主題</string>
   <!-- Preferences - About title -->
-  <string name="pref_about">關於</string>
+  <string name="pref_about">相關資訊</string>
   <!-- Preferences - General - Behaviour category -->
   <string name="pref_general_behaviour_category">一般</string>
   <!-- Preferences - General - Case sensitive sort and navigating title -->
   <string name="pref_case_sensitive_sort">排列時區分大小寫</string>
   <!-- Preferences - General - Case sensitive sort and navigating summary -->
-  <string name="pref_case_sensitive_sort_summary">導航或排列搜尋結果時區分大小寫</string>
+  <string name="pref_case_sensitive_sort_summary">導覽或排列搜尋結果時區分大小寫</string>
   <!-- Preferences - General - Filetime format mode title -->
   <string name="pref_filetime_format_mode">時間/日期格式</string>
   <!-- Preferences - General -Disk usage warning level title -->
@@ -580,7 +580,7 @@
   <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">預覽</string>
   <!-- Preferences - General - Display thumbs summary -->
-  <string name="pref_display_thumbs_summary">為應用程式、音樂、照片及影片顯示預覽圖片</string>
+  <string name="pref_display_thumbs_summary">為應用程式、音樂、相片及影片顯示預覽圖片</string>
   <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">使用滑動手勢</string>
   <!-- Preferences - General - Use flinger detection summary -->
@@ -592,7 +592,7 @@
   <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">安全模式</string>
   <!-- Preferences - General - Safe mode summary -->
-  <string name="pref_access_mode_safe_summary">安全模式\n\n程式目前在沒有特權的情況下執行，並且只能存取儲存裝置檔案系統（例如 SD 卡與 USB 隨身碟）</string>
+  <string name="pref_access_mode_safe_summary">安全模式\n\n程式目前在沒有特權的情況下執行，並且僅能存取儲存裝置檔案系統 (例如 SD 卡與 USB 隨身碟)</string>
   <!-- Preferences - General - Prompt user mode -->
   <string name="pref_access_mode_prompt">使用者提示模式</string>
   <!-- Preferences - General - Prompt user mode summary -->
@@ -614,7 +614,7 @@
   <!-- Preferences - Search - Sort results mode -->
   <string name="pref_sort_search_results_mode">搜尋結果排列方式</string>
   <!-- Preferences - Search - Sort results mode. None -->
-  <string name="pref_sort_search_results_mode_none">沒有排序</string>
+  <string name="pref_sort_search_results_mode_none">無排序</string>
   <!-- Preferences - Search - Sort results mode. None -->
   <string name="pref_sort_search_results_mode_name">按名稱</string>
   <!-- Preferences - Search - Sort results mode. Relevance -->
@@ -636,17 +636,17 @@
   <!-- Preferences - Storage - Secure Storage category -->
   <string name="pref_secure_storage_category">安全儲存空間</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
-  <string name="pref_secure_storage_delayed_sync_title">延遲同步</string>
+  <string name="pref_secure_storage_delayed_sync_title">延遲同步處理</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
-  <string name="pref_secure_storage_delayed_sync_summary">安全檔案系統同步是一個費時的操作。啟用此選項可以在每次操作後有更好的反應，在檔案系統處於閒置狀態時執行同步，但如果當有應用程式錯誤，會有機會失去未同步的資訊。</string>
+  <string name="pref_secure_storage_delayed_sync_summary">安全檔案系統同步是一個費時的操作。啟用此選項可以在每次操作後有更好的反應，在檔案系統處於閒置狀態時執行同步，但如果當有應用程式錯誤，會有機會失去未同步處理的資訊。</string>
   <!-- Preferences - Storage - Secure Storage - Change password title -->
-  <string name="pref_secure_storage_reset_password_title">更改密碼</string>
+  <string name="pref_secure_storage_reset_password_title">變更密碼</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">刪除儲存空間</string>
   <!-- Preferences - Editor - Behaviour category -->
-  <string name="pref_editor_behaviour_category">行爲</string>
+  <string name="pref_editor_behaviour_category">行為</string>
   <!-- Preferences - Editor - No suggestions -->
-  <string name="pref_no_suggestions">不顯示建議</string>
+  <string name="pref_no_suggestions">無建議</string>
   <!-- Preferences - Editor - No suggestions summary -->
   <string name="pref_no_suggestions_desc">編輯檔案時不要顯示字典建議</string>
   <!-- Preferences - Editor - Word wrap -->
@@ -656,19 +656,19 @@
   <!-- Preferences - Editor - Hex dump desc -->
   <string name="pref_hexdump_desc">開啟二進位檔時，產生此檔案的 hexdump 並在十六進制檢視器內開啟。</string>
   <!-- Preferences - Editor - Syntax highlight category -->
-  <string name="pref_editor_syntax_highlight_category">語法標示</string>
+  <string name="pref_editor_syntax_highlight_category">醒目標示語法</string>
   <!-- Preferences - Editor - Syntax highlight -->
-  <string name="pref_syntax_highlight">醒目提示語法</string>
+  <string name="pref_syntax_highlight">醒目標示語法</string>
   <!-- Preferences - Editor - Syntax highlight summary -->
-  <string name="pref_syntax_highlight_desc">在編輯器中顯示語法標示 (僅在為目前文件類型的語法標示處理有效時)</string>
+  <string name="pref_syntax_highlight_desc">在編輯器中顯示語法醒目標示 (僅在為目前文件類型的語法標示處理有效時)</string>
   <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">色彩配置</string>
   <!-- Preferences - Editor - Syntax highlight color scheme summary -->
-  <string name="pref_syntax_highlight_color_scheme_desc">選擇語法醒目提示的色彩配置</string>
+  <string name="pref_syntax_highlight_color_scheme_desc">選擇語法醒目標示與提示的色彩配置</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">使用預設值</string>
   <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
-  <string name="pref_syntax_sh_use_theme_default_desc">使用目前主題預設的語法醒目提示色彩配置</string>
+  <string name="pref_syntax_sh_use_theme_default_desc">使用目前主題預設的語法醒目標示與提示色彩配置</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">項目</string>
   <!-- Preferences - Themes - Themes selection category -->
@@ -688,8 +688,8 @@
   <!-- Themes - Default theme author -->
   <string name="themes_author">LineageOS</string>
   <!-- Navigation drawer -->
-  <string name="drawer_open">開啟導航清單</string>
-  <string name="drawer_close">關閉導航清單</string>
+  <string name="drawer_open">開啟導覽清單</string>
+  <string name="drawer_close">關閉導覽清單</string>
   <!-- ColorPickerDialog -->
   <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">透明度</string>
@@ -751,9 +751,9 @@
   <string name="secure_storage_open_file_warning">這將複製檔案到臨時的未加密路徑。且將會在一小時後被清除。</string>
   <!-- Print messages -->
   <!-- Unsupported document format -->
-  <string name="print_unsupported_document">不支援的檔案格式</string>
+  <string name="print_unsupported_document">不支援的文件格式</string>
   <!-- Unsupported image format -->
-  <string name="print_unsupported_image">不支援的圖像格式</string>
+  <string name="print_unsupported_image">不支援的圖片格式</string>
   <!-- Print header -->
   <string name="print_document_header">文件：<xliff:g id="document_name">%1$s</xliff:g></string>
   <!-- Print footer -->
@@ -768,7 +768,7 @@
   <string name="welcome_msg">歡迎使用 LineageOS 檔案管理員。\n\n此應用程式允許您瀏覽檔案系統並做出可能破壞您裝置的操作。為了避免損害，此應用程式預設在低權限、安全的模式下執行。\n\n您可以經由設定切換至進階或擁有完全控制的模式。確保操作不會破壞系統將是您的責任。\n\nLineageOS 團隊</string>
   <string name="activity_not_found_exception">找不到可開啟此檔案的應用程式</string>
   <string name="storage_permissions_denied">檔案管理員需要使用儲存空間的權限即可檢視檔案。</string>
-  <string name="storage_permissions_explanation">進入設定，然後按一下權限設定以授予權限。</string>
+  <string name="storage_permissions_explanation">進入設定，然後輕觸一下權限設定以授予權限。</string>
   <string name="snackbar_settings">設定</string>
   <!-- Wrap mode - toast -->
   <string name="toggle_word_wrap_msg">切換至自動換行模式</string>

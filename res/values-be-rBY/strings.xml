@@ -374,6 +374,47 @@
   <string name="waiting_dialog_copying_title">Капіяванне\u2026</string>
   <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>З</b>]]><xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>У</b>]]><xliff:g id="to">%2$s</xliff:g></string>
+  <!-- Search - Confirm search -->
+  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
+  <!-- Search - Searching dialog title -->
+  <!-- Search - Searching label -->
+  <!-- Picker Activity -->
+  <!-- Picker Activity - Dialog title -->
+  <!-- Editor - Editor activity title -->
+  <!-- Editor - Invalid file message -->
+  <!-- Editor - File not found message -->
+  <!-- Editor - File size exceed the limit -->
+  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
+  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
+  <!-- Editor - Save operation success -->
+  <!-- Editor - Read-only file mode -->
+  <!-- Editor - Dumping message -->
+  <!-- Editor - Displaying -->
+  <!-- Bookmarks - Bookmarks activity title -->
+  <!-- Bookmarks - Bookmark name - Home -->
+  <!-- Bookmarks - Bookmark name - Root folder -->
+  <!-- Bookmarks - Bookmark name - System folder -->
+  <!-- Bookmarks - Bookmark name - Secure storage -->
+  <!-- Bookmarks - Bookmark name - Remote storage -->
+  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
+  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
+  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
+  <!-- Initial directory dialog title -->
+  <!-- Initial directory label -->
+  <!-- Initial directory is relative -->
+  <!-- Initial directory error message -->
+  <!-- Menu - Navigation - Search -->
+  <!-- Menu - Navigation - Settings -->
+  <!-- Menu - History - Clear history -->
+  <!-- Menu - Editor - No suggestions -->
+  <!-- Menu - Editor - Word wrap -->
+  <!-- Menu - Editor - Sintax highlight -->
+  <!-- Regular expression for create copy action -->
+  <!-- Regular expression for new compressed file -->
+  <!-- Waiting dialog - Performing operation message -->
+  <!-- Waiting dialog - Copying title -->
+  <!-- Waiting dialog - Copying message -->
   <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">Перасоўванне\u2026</string>
   <!-- Waiting dialog - Moving message -->
@@ -390,6 +431,12 @@
   <string name="waiting_dialog_compressing_title">Сцісканне\u2026</string>
   <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Файл</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <!-- Waiting dialog - Deleting title -->
+  <!-- Waiting dialog - Deleting message -->
+  <!-- Waiting dialog - Extracting title -->
+  <!-- Waiting dialog - Extracting message -->
+  <!-- Waiting dialog - Extracting title -->
+  <!-- Waiting dialog - Extracting message -->
   <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Аналіз\u2026b</b>]]></string>
   <!-- Extracting - Success message -->

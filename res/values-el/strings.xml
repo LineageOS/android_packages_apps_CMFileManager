@@ -771,4 +771,5 @@
   <string name="storage_permissions_explanation">Μεταβείτε στις Ρυθμίσεις και πατήστε Δικαιώματα για να εκχωρήσετε τα δικαιώματα.</string>
   <string name="snackbar_settings">Ρυθμίσεις</string>
   <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Εναλλαγή λειτουργίας αναδίπλωσης λέξεων</string>
 </resources>
