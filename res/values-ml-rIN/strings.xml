@@ -600,7 +600,7 @@
   <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">റൂട്ട് പ്രവേശന മോഡ്</string>
   <!-- Preferences - General - Root access mode summary -->
-  <string name="pref_access_mode_root_summary">റൂട്ട് പ്രവേശന മോഡ്\n\nമുന്നറിയിപ്പ്! നിങ്ങളുടെ ഉപകരണത്തെ തകര്‍ക്കുന്ന നടപടികള്‍ ഈ മോഡ് അനുവദിക്കുന്നു. പ്രവര്‍ത്തനം സുരക്ഷിതമാണെന്ന് ഉറപ്പുവരുത്തുവാനുള്ള ഉത്തരവാദിത്തം നിങ്ങള്‍ക്കാണ്.\n\nLineageOS ടീം</string>
+  <string name="pref_access_mode_root_summary">റൂട്ട് പ്രവേശന മോഡ്\n\nമുന്നറിയിപ്പ്! നിങ്ങളുടെ ഉപകരണത്തെ തകര്‍ക്കുന്ന നടപടികള്‍ ഈ മോഡ് അനുവദിക്കുന്നു. പ്രവര്‍ത്തനം സുരക്ഷിതമാണെന്ന് ഉറപ്പുവരുത്തുവാനുള്ള ഉത്തരവാദിത്തം നിങ്ങള്‍ക്കാണ്.\n\nCyanogenMod ടീം</string>
   <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">ഉപയോക്താക്കളുടെ പ്രവേശനം നിയന്ത്രിക്കുക</string>
   <!-- Preferences - General - Restrict secondary users access summary -->

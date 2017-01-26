@@ -18,9 +18,9 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Search - Found items -->
   <plurals name="search_found_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> pozycja znaleziona</item>
-    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> pozycje znaleziono</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> pozycji znaleziono</item>
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element znaleziony</item>
+    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> elementy znalezione</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> elementów znalezionych</item>
   </plurals>
   <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">

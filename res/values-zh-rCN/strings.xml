@@ -80,7 +80,7 @@
   <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">无法应用及保存设置。</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
-  <string name="msgs_settings_invalid_initial_directory">初始目录 <xliff:g id="initial_dir">%1$s</xliff:g> 无效。正在切换至根目录。</string>
+  <string name="msgs_settings_invalid_initial_directory">初始目录 <xliff:g id="initial_dir">%1$s</xliff:g> 无效。切换至根目录。</string>
   <!-- Root is not available message -->
   <string name="root_not_available_msg">此设备没有 Root 权限，无法执行此操作。</string>
   <!-- Success -->
@@ -121,12 +121,12 @@
   <string name="msgs_not_registered_app">没有任何与此类型文件关联的应用。</string>
   <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">
-    有些文件在目标文件夹内已存在.\n\n是否覆盖?</string>
+    某些文件已在目标文件夹内存在。\n\n覆盖它们？</string>
   <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">应用与操作的关联失败。</string>
   <!-- An operation requires elevated privileged. Ask the user. -->
-  <string name="advise_insufficient_permissions">此操作需要提升权限.\n\n
-    您想切换至超级用户访问模式吗?</string>
+  <string name="advise_insufficient_permissions">此操作需要提升权限。\n\n
+您想切换到超级用户访问模式吗？</string>
   <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">父目录</string>
   <!-- External storage descripton -->
@@ -188,14 +188,13 @@
   <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">无信息</string>
   <!-- Filesystem Info (no data). Dialog message -->
-  <string name="filesystem_info_warning_msg">没有关于此文件系统可用的信息.</string>
+  <string name="filesystem_info_warning_msg">没有关于此文件系统的信息。</string>
   <!-- Filesystem Info - Filesystem couldn't be mounted -->
-  <string name="filesystem_info_cant_be_mounted_msg">无法挂载或卸载文件系统.</string>
+  <string name="filesystem_info_cant_be_mounted_msg">无法挂载或卸载该文件系统。</string>
   <!-- Filesystem Info - Not allowed message -->
   <string name="filesystem_info_mount_not_allowed_msg">在安全模式下不允许挂载文件系统的操作。点击切换至超级用户访问模式。</string>
   <!-- Filesystem Info - Mount failed -->
-  <string name="filesystem_info_mount_failed_msg">文件系统挂载失败.
-    有些文件系统 (例如 SD 存储卡) 是被设计为只读文件系统的, 所以不能被挂载或卸载.</string>
+  <string name="filesystem_info_mount_failed_msg">文件系统挂载操作失败。部分文件系统（例如 SD 存储卡）被内置为只读文件系统，因此不能被挂载或卸载。</string>
   <!-- Filesystem Info Dialog - Title -->
   <string name="filesystem_info_dialog_title">文件系统信息</string>
   <!-- Filesystem Info Dialog - Tab - Info -->
@@ -205,34 +204,34 @@
   <!-- Filesystem Info Dialog - Status Label -->
   <string name="filesystem_info_dialog_status">已挂载：</string>
   <!-- Filesystem Info Dialog - Mount Point Label -->
-  <string name="filesystem_info_dialog_mount_point">挂载点:</string>
+  <string name="filesystem_info_dialog_mount_point">挂载点：</string>
   <!-- Filesystem Info Dialog - Device Label -->
-  <string name="filesystem_info_dialog_device">设备:</string>
+  <string name="filesystem_info_dialog_device">设备：</string>
   <!-- Filesystem Info Dialog - Type Label -->
-  <string name="filesystem_info_dialog_type">类型:</string>
+  <string name="filesystem_info_dialog_type">类型：</string>
   <!-- Filesystem Info Dialog - Options Label -->
-  <string name="filesystem_info_dialog_options">选项:</string>
+  <string name="filesystem_info_dialog_options">选项：</string>
   <!-- Filesystem Info Dialog - Dump/Pass Label -->
-  <string name="filesystem_info_dialog_dump_pass">转储 / 传递:</string>
+  <string name="filesystem_info_dialog_dump_pass">转储 / 传递：</string>
   <!-- Filesystem Info Dialog - Virtual Label -->
   <string name="filesystem_info_dialog_virtual">虚拟：</string>
   <!-- Filesystem Info Dialog - Total Disk Usage -->
-  <string name="filesystem_info_dialog_total_disk_usage">总数:</string>
+  <string name="filesystem_info_dialog_total_disk_usage">总计：</string>
   <!-- Filesystem Info Dialog - Used Disk Usage -->
-  <string name="filesystem_info_dialog_used_disk_usage">已用:</string>
+  <string name="filesystem_info_dialog_used_disk_usage">已用：</string>
   <!-- Filesystem Info Dialog - Free Disk Usage -->
-  <string name="filesystem_info_dialog_free_disk_usage">可用:</string>
+  <string name="filesystem_info_dialog_free_disk_usage">可用：</string>
   <!-- Fso Properties - Not allowed message -->
-  <string name="fso_properties_permissions_not_allowed_msg">在安全模式下不允许做出改变权限的操作. 点击即可切换至超级用户访问模式.</string>
+  <string name="fso_properties_permissions_not_allowed_msg">在安全模式下不允许做出改变权限的操作。点击即可切换至超级用户访问模式。</string>
   <!-- Fso Properties - Failed to change owner to fso -->
-  <string name="fso_properties_failed_to_change_owner_msg">更改拥有者失败.\n\n
-    由于安全因素, 有些文件系统 (例如 SD 存储卡) 不允许更改拥有者的操作.</string>
+  <string name="fso_properties_failed_to_change_owner_msg">更改所有者失败。\n\n
+由于安全因素，部分文件系统（例如 SD 存储卡）不允许更改所有者的操作。</string>
   <!-- Fso Properties - Failed to change group to fso -->
-  <string name="fso_properties_failed_to_change_group_msg">更改群组失败.\n\n
-    由于安全因素, 有些文件系统 (例如 SD 存储卡) 不允许更改群组的操作.</string>
+  <string name="fso_properties_failed_to_change_group_msg">更改群组失败。\n\n
+由于安全因素，部分文件系统（例如 SD 存储卡）不允许更改群组的操作。</string>
   <!-- Fso Properties - Failed to change group to fso -->
-  <string name="fso_properties_failed_to_change_permission_msg">更改文件权限失败.\n\n
-    由于安全因素, 在有些文件系统 (例如 SD 存储卡) 不允许更改权限的操作.</string>
+  <string name="fso_properties_failed_to_change_permission_msg">更改文件权限失败。\n\n
+由于安全因素，部分文件系统（例如 SD 存储卡）不允许更改权限的操作。</string>
   <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">属性</string>
   <!-- Fso Properties Dialog - Tab - Info -->
@@ -260,11 +259,11 @@
   <!-- Fso Properties Dialog - Last Changed Time -->
   <string name="fso_properties_dialog_last_changed_date">最后改变:</string>
   <!-- Fso Properties Dialog - Owner Label -->
-  <string name="fso_properties_dialog_owner">拥有者:</string>
+  <string name="fso_properties_dialog_owner">所有者:</string>
   <!-- Fso Properties Dialog - Group Label -->
   <string name="fso_properties_dialog_group">群组:</string>
   <!-- Fso Properties Dialog - Others Label -->
-  <string name="fso_properties_dialog_others">其它:</string>
+  <string name="fso_properties_dialog_others">其他:</string>
   <!-- Fso Properties Dialog - Special Label -->
   <!-- Fso Properties Dialog - Read Label -->
   <!-- Fso Properties Dialog - Write Label -->
@@ -275,33 +274,33 @@
   <string name="fso_failed_to_allow_media_scan">允许媒体扫描失败</string>
   <string name="fso_failed_to_prevent_media_scan">防止媒体扫描失败</string>
   <string name="fso_delete_nomedia_dir_title">删除 .nomedia 目录</string>
-  <string name="fso_delete_nomedia_dir_body">此目录包含这一个 .nomedia 目录.\n\n您确定要删除此 .nomedia 目录与它包含的所有内容吗?</string>
+  <string name="fso_delete_nomedia_dir_body">此目录包含这一个 .nomedia 目录。\n\n您确定要删除此 .nomedia 目录与它包含的所有内容吗？</string>
   <string name="fso_delete_nomedia_non_empty_title">删除 .nomedia 文件</string>
-  <string name="fso_delete_nomedia_non_empty_body">此目录包含这一个非空白的 .nomedia 文件.\n\n您确定要删除此文件吗?</string>
+  <string name="fso_delete_nomedia_non_empty_body">此目录包含这一个非空白的 .nomedia 文件。\n\n您确定要删除此文件吗？</string>
   <!-- History - History activity title -->
   <string name="history">历史</string>
   <!-- History - The history is empty -->
-  <string name="msgs_history_empty">历史记录项为空.</string>
+  <string name="msgs_history_empty">历史记录为空。</string>
   <!-- History - The history reference is not in the actual history list -->
-  <string name="msgs_history_unknown">未知的历史记录项.</string>
+  <string name="msgs_history_unknown">未知的历史记录项。</string>
   <!-- Search - Search activity title -->
   <string name="search">搜索结果</string>
   <!-- Search - Search hint message -->
-  <string name="search_hint">输入您的搜索内容</string>
+  <string name="search_hint">请输入您的搜索内容</string>
   <!-- Search - Voice search hint message -->
   <string name="search_voice_hint">说出您的搜索内容</string>
   <!-- Search - Search error message -->
-  <string name="search_error_msg">搜索时发生了错误. 未找到任何结果.</string>
+  <string name="search_error_msg">搜索时发生错误。未找到任何结果。</string>
   <!-- Search - Search no results message -->
-  <string name="search_no_results_msg">未找到任何结果.</string>
+  <string name="search_no_results_msg">未找到任何结果。</string>
   <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory">在 <xliff:g id="path">%2$s</xliff:g> 内<xliff:g id="items">%1$s</xliff:g></string>
   <!-- Search - Search query terms -->
-  <string name="search_terms"><![CDATA[<b>关键词:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+  <string name="search_terms"><![CDATA[<b>关键词：</b>]]><xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Search - Confirm search -->
   <string name="search_few_characters_title">确认搜索</string>
   <!-- Search - Some terms of the search are too small. The operation could be very costly -->
-  <string name="search_few_characters_msg">有些关键词包涵了过少的字符. 此操作可能会花费较长的时间与较多的系统资源.\n\n您确定要继续吗?</string>
+  <string name="search_few_characters_msg">有些搜索关键词包含的字符过少。此操作可能会花费较长的时间与较多的系统资源。\n\n确定继续？</string>
   <!-- Search - Searching dialog title -->
   <string name="searching">请稍等\u2026</string>
   <!-- Search - Searching label -->
@@ -313,19 +312,19 @@
   <!-- Editor - Editor activity title -->
   <string name="editor">编辑器</string>
   <!-- Editor - Invalid file message -->
-  <string name="editor_invalid_file_msg">无效的文件.</string>
+  <string name="editor_invalid_file_msg">无效文件。</string>
   <!-- Editor - File not found message -->
-  <string name="editor_file_not_found_msg">未找到文件.</string>
+  <string name="editor_file_not_found_msg">未找到文件。</string>
   <!-- Editor - File size exceed the limit -->
-  <string name="editor_file_exceed_size_msg">此文件过于庞大, 无法在此设备上打开.</string>
+  <string name="editor_file_exceed_size_msg">此文件过于庞大，无法在此设备上打开。</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">确认退出</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog message -->
-  <string name="editor_dirty_ask_msg">还有尚未保存的更改.\n\n丢弃更改并退出?</string>
+  <string name="editor_dirty_ask_msg">还有尚未保存的更改。\n\n放弃更改并退出？</string>
   <!-- Editor - Save operation success -->
-  <string name="editor_successfully_saved">文件已被成功的保存.</string>
+  <string name="editor_successfully_saved">文件已成功保存。</string>
   <!-- Editor - Read-only file mode -->
-  <string name="editor_read_only_mode">文件已用只读模式打开.</string>
+  <string name="editor_read_only_mode">文件已用只读模式打开。</string>
   <!-- Editor - Dumping message -->
   <string name="dumping_message">正在生成十六进制转储\u2026</string>
   <!-- Editor - Displaying -->
@@ -343,11 +342,11 @@
   <!-- Bookmarks - Bookmark name - Remote storage -->
   <string name="bookmarks_remote">远程存储</string>
   <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
-  <string name="bookmarks_button_config_cd">设置初始文件夹.</string>
+  <string name="bookmarks_button_config_cd">设置初始文件夹。</string>
   <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
-  <string name="bookmarks_button_remove_bookmark_cd">移除书签.</string>
+  <string name="bookmarks_button_remove_bookmark_cd">移除该书签。</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
-  <string name="bookmarks_msgs_add_success">书签已成功加入.</string>
+  <string name="bookmarks_msgs_add_success">书签已成功加入。</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">此书签已存在。</string>
   <!-- Initial directory dialog title -->
@@ -355,9 +354,9 @@
   <!-- Initial directory label -->
   <string name="initial_directory_label">选择初始文件夹:</string>
   <!-- Initial directory is relative -->
-  <string name="initial_directory_relative_msg">不允许相对性路径.</string>
+  <string name="initial_directory_relative_msg">不允许相对路径。</string>
   <!-- Initial directory error message -->
-  <string name="initial_directory_error_msg">保存初始文件夹时发生了错误.</string>
+  <string name="initial_directory_error_msg">保存初始文件夹时发生错误。</string>
   <!-- Menu - Navigation - Search -->
   <string name="menu_search">搜索</string>
   <!-- Menu - Navigation - Settings -->
@@ -399,7 +398,7 @@
   <string name="waiting_dialog_extracting_title">正在解压\u2026</string>
   <!-- Waiting dialog - Extracting message -->
   <string name="waiting_dialog_extracting_msg">
-    <![CDATA[<b>File</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+    <![CDATA[<b>文件</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Extracting title -->
   <string name="waiting_dialog_compressing_title">正在压缩\u2026</string>
   <!-- Waiting dialog - Extracting message -->
@@ -408,13 +407,9 @@
   <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>正在分析\u2026</b>]]></string>
   <!-- Extracting - Success message -->
-  <string name="msgs_extracting_success">
-    解压操作成功. 数据已被解压到:
-    <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <string name="msgs_extracting_success">解压操作成功完成。数据已被解压到：<xliff:g id="destination">%1$s</xliff:g>。</string>
   <!-- Compressing - Success message -->
-  <string name="msgs_compressing_success">
-    压缩操作成功. 数据已被压缩到:
-    <xliff:g id="destination">%1$s</xliff:g>.</string>
+  <string name="msgs_compressing_success">压缩操作成功完成。数据已被压缩到：<xliff:g id="destination">%1$s</xliff:g>。</string>
   <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">操作</string>
   <!-- Actions Dialog - Menu - Properties of current folder -->
@@ -478,21 +473,19 @@
   <!-- Actions Dialog - Menu - Set as home -->
   <string name="actions_menu_set_as_home">设置为主页</string>
   <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
-  <string name="actions_ask_undone_operation_msg">
-    此操作无法撤销. 您确定要继续?</string>
+  <string name="actions_ask_undone_operation_msg">此操作无法撤销。确定继续？</string>
   <!-- Enter Name Dialog - Label -->
   <string name="input_name_dialog_label">名称:</string>
   <!-- Enter Name Dialog - Message - Empty name -->
-  <string name="input_name_dialog_message_empty_name">名称不能为空.</string>
+  <string name="input_name_dialog_message_empty_name">名称不能为空。</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
-  <string name="input_name_dialog_message_invalid_path_name">无效的名称. 名称中不能包涵以下字符: \'<xliff:g id="invalid_characters">%1$s</xliff:g>\'.</string>
+  <string name="input_name_dialog_message_invalid_path_name">无效名称。名称中不能包含以下字符：“<xliff:g id="invalid_characters">%1$s</xliff:g>”。</string>
   <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">已达到最大字符限制。</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
-  <string name="input_name_dialog_message_invalid_name">无效的名称. 名称中不能包涵 \'.\' 与
-    \'..\' .</string>
+  <string name="input_name_dialog_message_invalid_name">无效名称。名称中不能包含“.”和“..”。</string>
   <!-- Enter Name Dialog - Message - Name exists -->
-  <string name="input_name_dialog_message_name_exists">此名称已存在.</string>
+  <string name="input_name_dialog_message_name_exists">此名称已存在。</string>
   <!-- Associations Dialog - Title -->
   <string name="associations_dialog_title">关联</string>
   <!-- Associations Dialog - Remember the user action -->
@@ -506,7 +499,7 @@
   <!-- Associations Dialog - Send action (button title) -->
   <string name="associations_dialog_sendwith_action">发送</string>
   <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
-  <string name="inline_autocomplete_tab_nothing_to_complete_msg">没有需要完成的项目.</string>
+  <string name="inline_autocomplete_tab_nothing_to_complete_msg">没什么需要完成。</string>
   <!-- Execution console - Title -->
   <string name="execution_console_title">控制台</string>
   <!-- Execution console - The script name label -->
@@ -533,8 +526,8 @@
   <!-- Mime/Types - Unknown -->
   <string name="mime_unknown">未知</string>
   <!--  Filetime formats -->
-  <string name="filetime_format_mode_system">由系统指定</string>
-  <string name="filetime_format_mode_locale">由区域设置指定</string>
+  <string name="filetime_format_mode_system">按系统设置</string>
+  <string name="filetime_format_mode_locale">按区域设置</string>
   <string name="filetime_format_mode_ddMMyyyy_HHmmss">日/月/年 时:分:秒</string>
   <string name="filetime_format_mode_MMddyyyy_HHmmss">月/日/年 时:分:秒</string>
   <string name="filetime_format_mode_yyyyMMdd_HHmmss">年-月-日 时:分:秒</string>
@@ -562,11 +555,11 @@
   <string name="compression_mode_title">压缩方式</string>
   <!-- Compression - Supported archive and compression modes -->
   <!-- Shortcut. Failed to handle the shortcut -->
-  <string name="shortcut_failed_msg">快捷方式处理失败.</string>
+  <string name="shortcut_failed_msg">快捷方式处理失败。</string>
   <!-- Shortcut. The shortcut was created -->
-  <string name="shortcut_creation_success_msg">快捷方式创建成功.</string>
+  <string name="shortcut_creation_success_msg">快捷方式创建成功。</string>
   <!-- Shortcut. The shortcut wasn't created -->
-  <string name="shortcut_creation_failed_msg">快捷方式创建失败.</string>
+  <string name="shortcut_creation_failed_msg">快捷方式创建失败。</string>
   <!-- Preferences title -->
   <string name="pref">设置</string>
   <!-- Preferences - General title -->
@@ -594,11 +587,11 @@
   <!-- Preferences - General - Disk usage warning level summary -->
   <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
          of ListPreference. This should be fixed in frameworks base prior to be added here. -->
-  <string name="pref_disk_usage_warning_level_summary" formatted="false">当磁盘使用量到达百分之 <xliff:g id="level">%1$s</xliff:g> 的可用空间时, 在磁盘使用小部件中显示不同的颜色</string>
+  <string name="pref_disk_usage_warning_level_summary" formatted="false">当磁盘使用量用掉百分之 <xliff:g id="level">%1$s</xliff:g> 的可用空间时，在磁盘使用小部件中显示不同的颜色</string>
   <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">计算文件夹统计数据</string>
   <!-- Preferences - General - Compute folder statistics summary on -->
-  <string name="pref_compute_folder_statistics_on">警告! 文件夹统计数据的计将算会花费较长的时间与较多的系统资源</string>
+  <string name="pref_compute_folder_statistics_on">警告！文件夹统计数据的计算将会花费较长时间和较多的系统资源</string>
   <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">预览</string>
   <!-- Preferences - General - Display thumbs summary -->
@@ -606,7 +599,7 @@
   <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">使用滑动手势</string>
   <!-- Preferences - General - Use flinger detection summary -->
-  <string name="pref_use_flinger_summary">从左到右滑动将删除文件或文件夹。</string>
+  <string name="pref_use_flinger_summary">使用从左到右滑动手势删除文件或文件夹。</string>
   <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">高级</string>
   <!-- Preferences - General - Access mode -->
@@ -614,15 +607,15 @@
   <!-- Preferences - General - Safe mode -->
   <string name="pref_access_mode_safe">安全模式</string>
   <!-- Preferences - General - Safe mode summary -->
-  <string name="pref_access_mode_safe_summary">安全模式\n\n应用目前在没有特权的情况下运行，并且只能访问存储卷文件系统 (如 SD 卡和 USB)。</string>
+  <string name="pref_access_mode_safe_summary">安全模式\n\n应用在无特权模式下运行，并只能访问存储卷文件系统（SD 卡和 USB）。</string>
   <!-- Preferences - General - Prompt user mode -->
-  <string name="pref_access_mode_prompt">用户提示模式</string>
+  <string name="pref_access_mode_prompt">询问用户模式</string>
   <!-- Preferences - General - Prompt user mode summary -->
-  <string name="pref_access_mode_prompt_summary">用户提示模式\n\n应用目前有完全访问文件系统的权限，但会在执行任何需要特权的操作前提示用户。</string>
+  <string name="pref_access_mode_prompt_summary">询问用户模式\n\n应用运行在有完全访问文件系统的权限下，但在执行任何需要特权的操作前将询问用户。</string>
   <!-- Preferences - General - Root access mode -->
   <string name="pref_access_mode_root">超级用户访问模式</string>
   <!-- Preferences - General - Root access mode summary -->
-  <string name="pref_access_mode_root_summary">超级用户访问模式\n\n警告! 此模式将允许可能导致系统损伤的操作. 您需要确认自己操作的安全性.</string>
+  <string name="pref_access_mode_root_summary">超级用户访问模式\n\n警告！此模式将允许可能导致系统或设备损害的操作。您需要自行确保操作的安全性。</string>
   <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">限制用户访问</string>
   <!-- Preferences - General - Restrict secondary users access summary -->
@@ -646,13 +639,13 @@
   <!-- Preferences - Search - Save search terms -->
   <string name="pref_save_search_terms">保存关键词</string>
   <!-- Preferences - Search - Save search terms summary on -->
-  <string name="pref_save_search_terms_on">搜索关键词将会被保存并成为未来搜索的建议</string>
+  <string name="pref_save_search_terms_on">搜索关键词将被保存，并在以后搜索时成为建议</string>
   <!-- Preferences - Search - Save search terms summary off -->
   <string name="pref_save_search_terms_off">搜索关键词将不会被保存</string>
   <!-- Preferences - Search - Remove saved search terms -->
-  <string name="pref_remove_saved_search_terms">删除保存的关键词</string>
+  <string name="pref_remove_saved_search_terms">删除已保存的搜索关键词</string>
   <!-- Preferences - Search - Remove saved search terms summary -->
-  <string name="pref_remove_saved_search_terms_summary">点击此将会删除所有保存的搜索关键词</string>
+  <string name="pref_remove_saved_search_terms_summary">点此将会删除所有已保存的搜索关键词</string>
   <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">已删除所有搜索关键字</string>
   <!-- Preferences - Storage - Secure Storage category -->
@@ -660,13 +653,13 @@
   <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">延迟同步</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
-  <string name="pref_secure_storage_delayed_sync_summary">安全文件系统同步是代价很高的操作。要在每次操作后得到更快的响应，以及在文件系统处于未使用状态时执行同步，请开启此选项；但这样做的代价是，如果应用崩溃，挂起的未同步的信息将会丢失。</string>
+  <string name="pref_secure_storage_delayed_sync_summary">安全文件系统的同步是比较费时的操作。若启用此操作，每次操作后将更快地得到响应，并在文件系统处于未使用状态时再执行同步；但这样做的代价是，如果应用崩溃，未处理的待同步信息将会丢失。</string>
   <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">更改密码</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">删除存储</string>
   <!-- Preferences - Editor - Behaviour category -->
-  <string name="pref_editor_behaviour_category">行为</string>
+  <string name="pref_editor_behaviour_category">功能</string>
   <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">不显示建议</string>
   <!-- Preferences - Editor - No suggestions summary -->
@@ -682,12 +675,11 @@
   <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">高亮语法</string>
   <!-- Preferences - Editor - Syntax highlight summary -->
-  <string name="pref_syntax_highlight_desc">在编辑器中高亮显示语法（仅在为当前文件类型的语法高亮处理有效时）
-</string>
+  <string name="pref_syntax_highlight_desc">在编辑器中高亮显示语法（仅在语法高亮处理对当前文件类型有效时）</string>
   <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">配色方案</string>
   <!-- Preferences - Editor - Syntax highlight color scheme summary -->
-  <string name="pref_syntax_highlight_color_scheme_desc">选择语法高亮的颜色方案</string>
+  <string name="pref_syntax_highlight_color_scheme_desc">选择语法高亮的配色方案</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
   <string name="pref_syntax_sh_use_theme_default">使用主题默认值</string>
   <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
@@ -699,9 +691,9 @@
   <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">设置主题</string>
   <!-- Preferences - Themes - Confirmation message -->
-  <string name="pref_themes_confirmation">主题已被成功应用.</string>
+  <string name="pref_themes_confirmation">主题已成功应用。</string>
   <!-- Preferences - Themes - Theme not found message -->
-  <string name="pref_themes_not_found">未找到主题.</string>
+  <string name="pref_themes_not_found">主题未找到。</string>
   <!-- Preferences - Debug - Capture debug traces -->
   <string name="pref_debug_traces">记录调试信息</string>
   <!-- Themes - Default theme name -->
@@ -755,7 +747,7 @@
   <!-- Secure Storage unlock dialog key title -->
   <string name="secure_storage_unlock_key_title">密码：</string>
   <!-- Secure Storage unlock dialog repeat key title-->
-  <string name="secure_storage_unlock_repeat_title">重复密码：</string>
+  <string name="secure_storage_unlock_repeat_title">确认密码：</string>
   <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">创建</string>
   <!-- Secure Storage unlock button -->
@@ -765,7 +757,7 @@
   <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">删除</string>
   <!-- Secure Storage unlock failed toast -->
-  <string name="secure_storage_unlock_failed">无法解锁存储</string>
+  <string name="secure_storage_unlock_failed">无法解锁该存储</string>
   <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">密码必须有至少 <xliff:g id="characters"> %1$d </xliff:g> 个字符。</string>
   <!-- Secure Storage unlock validation, equal -->
@@ -782,17 +774,15 @@
   <!-- Print footer -->
   <string name="print_document_footer">第 <xliff:g id="page_number">%1$s</xliff:g> 页</string>
   <!-- Security - Extract relative or absolute files -->
-  <string name="security_warning_extract">警告!\n\n
-      解压一个使用相对或绝对路径的压缩文件有可能覆盖并损坏系统文件.\n\n
-      您确定要继续吗?</string>
+  <string name="security_warning_extract">警告！\n\n解压一个带有相对或绝对路径的压缩文件有可能覆盖系统文件而损坏您的设备。\n\n您确定要继续吗？</string>
   <!-- ChangeLog - Dialog title -->
-  <string name="changelog_title">更改记录</string>
+  <string name="changelog_title">变更记录</string>
   <!-- Welcome Dialog - Title -->
   <string name="welcome_title">欢迎</string>
   <!-- Welcome Dialog - Message -->
   <string name="welcome_msg">欢迎您使用 LineageOS 文件管理器。 \n\n本应用允许您浏览设备的文件系统并做出可能导致损伤的操作。为了避免损伤，此程序默认将会在低权限与安全的模式下开始运行。\n\n您可以通过设置切换到高级并拥有完全控制的模式。确保操作不会损坏系统与它的安全性将是您的责任。\n\nLineageOS 团队</string>
   <string name="activity_not_found_exception">无可用于打开此文件的应用</string>
-  <string name="storage_permissions_denied">文件管理器需要存储权限以便查看您的文件。</string>
+  <string name="storage_permissions_denied">文件管理器需要存储权限才能查看您的文件。</string>
   <string name="storage_permissions_explanation">进入设置，然后点击权限以授予权限。</string>
   <string name="snackbar_settings">设置</string>
   <!-- Wrap mode - toast -->
