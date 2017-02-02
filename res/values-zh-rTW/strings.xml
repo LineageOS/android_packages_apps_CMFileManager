@@ -29,7 +29,7 @@
   <!-- Date/time format order (%1$s: date; %2$s: time) -->
   <string name="datetime_format_order">%1$s %2$s</string>
   <!-- Devices types -->
-  <string name="device_blockdevice">封鎖裝置</string>
+  <string name="device_blockdevice">區塊裝置</string>
   <string name="device_characterdevice">字元裝置</string>
   <string name="device_namedpipe">命名的管道</string>
   <string name="device_domainsocket">通訊端</string>
@@ -321,7 +321,7 @@
   <!-- Editor - Read-only file mode -->
   <string name="editor_read_only_mode">檔案已用唯讀模式開啟。</string>
   <!-- Editor - Dumping message -->
-  <string name="dumping_message">正在生成十六進位制轉儲\u2026</string>
+  <string name="dumping_message">正在生成十六進位轉存\u2026</string>
   <!-- Editor - Displaying -->
   <string name="displaying_message">顯示中\u2026</string>
   <!-- Bookmarks - Bookmarks activity title -->
@@ -652,9 +652,9 @@
   <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">自動換行</string>
   <!-- Preferences - Editor - Hex dump -->
-  <string name="pref_hexdump">Hexdump 二進位檔</string>
+  <string name="pref_hexdump">十六進位轉存二進位檔案</string>
   <!-- Preferences - Editor - Hex dump desc -->
-  <string name="pref_hexdump_desc">開啟二進位檔時，產生此檔案的 hexdump 並在十六進制檢視器內開啟。</string>
+  <string name="pref_hexdump_desc">開啟二進位檔案時，生成此檔案的十六進位轉存並在十六進位檢視器內開啟。</string>
   <!-- Preferences - Editor - Syntax highlight category -->
   <string name="pref_editor_syntax_highlight_category">醒目標示語法</string>
   <!-- Preferences - Editor - Syntax highlight -->

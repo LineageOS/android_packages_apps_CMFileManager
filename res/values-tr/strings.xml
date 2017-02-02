@@ -771,4 +771,5 @@
   <string name="storage_permissions_explanation">Ayarlar gidin ve izin vermek için İzinler\'e dokunun.</string>
   <string name="snackbar_settings">Ayarlar</string>
   <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Sözcük kaydırma modu değiştiriliyor</string>
 </resources>

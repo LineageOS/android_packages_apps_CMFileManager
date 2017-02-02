@@ -47,7 +47,7 @@
   <!-- The search result name -->
   <string name="search_result_name">検索: <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Loading waiting message -->
-  <string name="loading_message">読み込み中\u2026</string>
+  <string name="loading_message">読み込み中...</string>
   <!-- Computing message -->
   <!-- Computing new line message -->
   <!-- Cancelled message -->
