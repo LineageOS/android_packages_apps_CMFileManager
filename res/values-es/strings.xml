@@ -774,4 +774,5 @@
   <string name="storage_permissions_explanation">Ve a Ajustes y pulsa Permisos para otorgar permiso.</string>
   <string name="snackbar_settings">Ajustes</string>
   <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Cambiar el modo de salto de línea</string>
 </resources>
