@@ -530,7 +530,7 @@
   <string name="category_compress">COMPRIMIR</string>
   <string name="category_exec">EJECUTABLE</string>
   <string name="category_database">BASE DE DATOS</string>
-  <string name="category_font">FUENTE</string>
+  <string name="category_font">TIPO DE LETRA</string>
   <string name="category_image">IMAGEN</string>
   <string name="category_audio">AUDIO</string>
   <string name="category_video">VIDEO</string>

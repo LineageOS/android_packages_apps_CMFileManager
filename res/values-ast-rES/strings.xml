@@ -20,7 +20,7 @@
   <!-- The name of the app -->
   <string name="app_name">Xestor de ficheros</string>
   <!-- The description of the app -->
-  <string name="app_description">Un esplorador de ficheros de LineageOS.</string>
+  <string name="app_description">Un xestor de ficheros de LineageOS</string>
   <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">KB</string>
@@ -689,7 +689,7 @@
   <!-- Themes - Default theme name -->
   <string name="theme_default_name">Tema claru</string>
   <!-- Themes - Default theme description -->
-  <string name="theme_default_description">Un tema en colores claros pa File Manager.</string>
+  <string name="theme_default_description">Un tema claru pal xestor de ficheros de LineageOS.</string>
   <!-- Themes - Default theme author -->
   <string name="themes_author">LineageOS</string>
   <!-- Navigation drawer -->
@@ -770,7 +770,7 @@
   <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Bienllegáu</string>
   <!-- Welcome Dialog - Message -->
-  <string name="welcome_msg">Bienllegáu al esplorador de ficheros de LineageOS.\n\nEsta aplicación dexa esplorar el sistema de ficheros y con ello, facer aiciones que puen llegar a bloquiar el preséu. Pa evitalo, l\'aplicación va aniciase en mou seguru.\n\nVas poder acceder al mou avanzáu de superusuariu per aciu del menú Axustes, pero va ser baxo la to responsabilidá l\'evitar qu\'una operación frañe\'l preséu.\n\nL\'equipu de LineageOS.\n</string>
+  <string name="welcome_msg">Dámoste l\'acoyida al xestor de ficheros de LineageOS.\n\nEsta aplicación permítete esplorar el sistema de ficheros y facer operaciones que puen romper el to preséu. Pa evitar daños, l\'aplicación aníciase nun mou seguru.\n\nPues acceder al mou avanzáu diendo a Axustes. Ye la to responsabilidá asegurate de les operaciones que faigas ruempan el sistema.\n\nL\'equipu de LineageOS</string>
   <string name="activity_not_found_exception">Nun pudo atopase una app p\'abrir esti ficheru</string>
   <string name="storage_permissions_denied">El xestor de ficheros rique\'l permisu d\'almacemientu pa ver los tos ficheros.</string>
   <string name="storage_permissions_explanation">Vete a Axustes y calca en Permisos pa conceder el permisu.</string>
