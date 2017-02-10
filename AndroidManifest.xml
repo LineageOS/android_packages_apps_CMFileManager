@@ -72,7 +72,7 @@
       android:name=".providers.SecureResourceProvider"
       android:authorities="com.cyanogenmod.filemanager.providers.resources"
       android:grantUriPermissions="true"
-      android:exported="true" />
+      android:exported="false" />
 
     <provider
       android:authorities="com.cyanogenmod.filemanager.providers.index"
