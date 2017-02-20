@@ -220,7 +220,7 @@
   <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Gratuito:</string>
   <!-- Fso Properties - Not allowed message -->
-  <string name="fso_properties_permissions_not_allowed_msg">Las operaciones de permisos no están permitidas en modo seguro. Toca para cambiar a modo acceso root.</string>
+  <string name="fso_properties_permissions_not_allowed_msg">Las operaciones de permisos no están permitidas en modo seguro. Pulsa para cambiar a modo de acceso Root.</string>
   <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">Error de operación de cambio de propietario.\n\nPor motivos de seguridad, algunos sistemas de archivos, como las tarjetas SD, no permiten el cambio de propietario.</string>
   <!-- Fso Properties - Failed to change group to fso -->

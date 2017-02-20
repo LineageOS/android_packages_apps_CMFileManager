@@ -644,7 +644,7 @@
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">Ezabatu biltegiratzea</string>
   <!-- Preferences - Editor - Behaviour category -->
-  <string name="pref_editor_behaviour_category">Izaera</string>
+  <string name="pref_editor_behaviour_category">Portaera</string>
   <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">Iradokizunik gabe</string>
   <!-- Preferences - Editor - No suggestions summary -->
