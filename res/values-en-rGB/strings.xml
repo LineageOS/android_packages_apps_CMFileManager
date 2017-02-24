@@ -20,6 +20,7 @@
   <!-- The name of the app -->
   <string name="app_name">File Manager</string>
   <!-- The description of the app -->
+  <string name="app_description">A LineageOS file manager</string>
   <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">kB</string>

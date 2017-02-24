@@ -20,7 +20,6 @@
   <!-- The name of the app -->
   <string name="app_name">Xestor de ficheros</string>
   <!-- The description of the app -->
-  <string name="app_description">Un xestor de ficheros de LineageOS</string>
   <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
   <string name="size_kilobytes">KB</string>
@@ -689,9 +688,7 @@
   <!-- Themes - Default theme name -->
   <string name="theme_default_name">Tema claru</string>
   <!-- Themes - Default theme description -->
-  <string name="theme_default_description">Un tema claru pal xestor de ficheros de LineageOS.</string>
   <!-- Themes - Default theme author -->
-  <string name="themes_author">LineageOS</string>
   <!-- Navigation drawer -->
   <string name="drawer_open">Abrir el panel de navegación</string>
   <string name="drawer_close">Zarrar el panel de navegación</string>
@@ -770,7 +767,6 @@
   <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Bienllegáu</string>
   <!-- Welcome Dialog - Message -->
-  <string name="welcome_msg">Dámoste l\'acoyida al xestor de ficheros de LineageOS.\n\nEsta aplicación permítete esplorar el sistema de ficheros y facer operaciones que puen romper el to preséu. Pa evitar daños, l\'aplicación aníciase nun mou seguru.\n\nPues acceder al mou avanzáu diendo a Axustes. Ye la to responsabilidá asegurate de les operaciones que faigas ruempan el sistema.\n\nL\'equipu de LineageOS</string>
   <string name="activity_not_found_exception">Nun pudo atopase una app p\'abrir esti ficheru</string>
   <string name="storage_permissions_denied">El xestor de ficheros rique\'l permisu d\'almacemientu pa ver los tos ficheros.</string>
   <string name="storage_permissions_explanation">Vete a Axustes y calca en Permisos pa conceder el permisu.</string>

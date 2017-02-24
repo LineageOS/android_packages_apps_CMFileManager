@@ -351,7 +351,7 @@
   <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Відносні шляхи не допускаються</string>
   <!-- Initial directory error message -->
-  <string name="initial_directory_error_msg">При установці початкової папки виникла помилка.</string>
+  <string name="initial_directory_error_msg">При встановленні початкової папки виникла помилка.</string>
   <!-- Menu - Navigation - Search -->
   <string name="menu_search">Пошук</string>
   <!-- Menu - Navigation - Settings -->
