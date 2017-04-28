@@ -547,11 +547,11 @@
   <string name="compression_mode_title">Režim kompresie</string>
   <!-- Compression - Supported archive and compression modes -->
   <!-- Shortcut. Failed to handle the shortcut -->
-  <string name="shortcut_failed_msg">Chyba pri spracovaní skratky.</string>
+  <string name="shortcut_failed_msg">Chyba pri spracovaní odkazu.</string>
   <!-- Shortcut. The shortcut was created -->
-  <string name="shortcut_creation_success_msg">Skratka bola úspešne vytvorená.</string>
+  <string name="shortcut_creation_success_msg">Odkaz bol úspešne vytvorený.</string>
   <!-- Shortcut. The shortcut wasn't created -->
-  <string name="shortcut_creation_failed_msg">Vytvorenie skratky zlyhalo.</string>
+  <string name="shortcut_creation_failed_msg">Vytvorenie odkazu zlyhalo.</string>
   <!-- Preferences title -->
   <string name="pref">Nastavenia</string>
   <!-- Preferences - General title -->

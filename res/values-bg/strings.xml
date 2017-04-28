@@ -584,7 +584,7 @@
   <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Използвай жестове</string>
   <!-- Preferences - General - Use flinger detection summary -->
-  <string name="pref_use_flinger_summary">Плъзгане от ляво надясно за да изтриете даден файл или папка</string>
+  <string name="pref_use_flinger_summary">Плъзнете от ляво надясно за да изтриете даден файл или папка</string>
   <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Разширени</string>
   <!-- Preferences - General - Access mode -->

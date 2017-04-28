@@ -18,27 +18,56 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- The name of the app -->
+  <string name="app_name">Menaxheri i Skedarëve</string>
   <!-- The description of the app -->
+  <string name="app_description">Një menaxher skedarësh për LineageOS</string>
   <!-- Human readable sizes -->
+  <string name="size_bytes">B</string>
+  <string name="size_kilobytes">kB</string>
+  <string name="size_megabytes">MB</string>
+  <string name="size_gigabytes">GB</string>
   <!-- Date/time format order (%1$s: date; %2$s: time) -->
+  <string name="datetime_format_order">%1$s %2$s</string>
   <!-- Devices types -->
+  <string name="device_blockdevice">Blloko pajisjen</string>
+  <string name="device_characterdevice">Pajisja e karaktereve</string>
+  <string name="device_namedpipe">Tub i emërtuar</string>
+  <string name="device_domainsocket">Foleja e domenit</string>
   <!-- Mount Point States -->
+  <string name="mount_point_readonly">RO</string>
+  <string name="mount_point_readwrite">RW</string>
   <!-- Default buttons -->
+  <string name="yes">Po</string>
+  <string name="no">Jo</string>
+  <string name="all">Të gjitha</string>
+  <string name="overwrite">Mbishkruaj</string>
+  <string name="select">Zgjidh</string>
   <!-- The root directory name -->
+  <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
   <!-- The search result name -->
+  <string name="search_result_name">Kërko: <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Loading waiting message -->
+  <string name="loading_message">Duke u ngarkuar\u2026</string>
   <!-- Computing message -->
   <!-- Computing new line message -->
   <!-- Cancelled message -->
+  <string name="cancelled_message">U anullua.</string>
   <!-- Error message -->
+  <string name="error_message">Gabim.</string>
   <!-- Copy text content description -->
   <!-- Copy text content message -->
   <!-- Warning dialog title -->
+  <string name="warning_title">Kujdes</string>
   <!-- Error dialog title -->
+  <string name="error_title">Gabim</string>
   <!-- Confirm operation dialog title -->
+  <string name="confirm_operation">Konfirmo veprimin</string>
   <!-- Confirm overwrite dialog title -->
+  <string name="confirm_overwrite">Konfirmo mbishkrimin</string>
   <!-- Confirm deletion dialog title -->
+  <string name="confirm_deletion">Konfirmo fshirjen</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
+  <string name="msgs_change_to_prompt_access_mode_title">Konfirmo ndërrimin</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
   <!-- A console couldn't be created - Without privileges, the app won't work -->
   <!-- The message shown when an allocation of a privileged console fails, and a non
@@ -46,8 +75,10 @@
   <!-- The selected setting was not applied or stored -->
   <!-- The initial directory has an invalid or inaccessible reference -->
   <!-- Root is not available message -->
+  <string name="root_not_available_msg">Root nuk është i disponueshëm në këtë pajisje. Ky operacion nuk mund të kryhet.</string>
   <!-- Success -->
   <!-- Unknown error -->
+  <string name="msgs_unknown">U has një gabim. Veprimi nuk u krye me sukses.</string>
   <!-- When an operation requires elevated privileged (normally caused for the use of a
          non-privileged console) -->
   <!-- When an operation fails because the device has run out of storage. -->
@@ -55,113 +86,185 @@
   <!-- The command reference couldn't be created (not found or invalid definition)
          (normally caused by a development error) -->
   <!-- I/O exception -->
+  <string name="msgs_io_failed">Dështim leximi/shkrimi.</string>
   <!-- Operation timeout detected -->
+  <string name="msgs_operation_timeout">Afati i veprimit skadoi.</string>
   <!-- The operation returns an invalid exit code -->
+  <string name="msgs_operation_failure">Veprimi dështoi.</string>
   <!-- A console couldn't be allocated -->
+  <string name="msgs_console_alloc_failure">Ka ndodhur një gabim i brendshëm.</string>
   <!-- An operation can't be cancelled -->
+  <string name="msgs_operation_can_not_be_cancelled">Veprimi nuk mund të anullohet.</string>
   <!-- The operation requieres mount the file system prior to execute the command -->
   <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <!-- The operation will cause inconsistencies -->
   <!-- Operation not permitted in the current directory -->
   <!-- The advice message prior to exit the app -->
+  <string name="msgs_push_again_to_exit">Shtype prapë për ta mbyllur.</string>
   <!-- There is no registered app that can handle the mime-type -->
   <!-- Overwrite files? -->
   <!-- The association of an action to the app failed -->
   <!-- An operation requires elevated privileged. Ask the user. -->
   <!-- The parent directory of the current directory in navigation view -->
+  <string name="parent_dir">Dosja e prindit</string>
   <!-- External storage descripton -->
+  <string name="external_storage">Memoria e jashtme</string>
   <!-- Usb storage descripton -->
+  <string name="usb_storage">Memoria e USB</string>
   <!-- ActionBar Buttons - FileSystem -->
   <!-- ActionBar Buttons - Sort Mode -->
+  <string name="actionbar_button_sort_mode_cd">Mënyra e renditjes</string>
   <!-- ActionBar Buttons - Layout Mode -->
+  <string name="actionbar_button_layout_mode_cd">Mënyra e organizimit</string>
   <!-- ActionBar Buttons - Other View Options -->
   <!-- ActionBar Buttons - Done -->
   <!-- ActionBar Buttons - Actions -->
+  <string name="actionbar_button_actions_cd">Veprimet</string>
   <!-- ActionBar Buttons - Search -->
+  <string name="actionbar_button_search_cd">Kërko</string>
   <!-- ActionBar Buttons - Overflow -->
+  <string name="actionbar_button_overflow_cd">Më shumë opsione</string>
   <!-- ActionBar Buttons - Storage volumes -->
   <!-- ActionBar Buttons - Save -->
+  <string name="actionbar_button_save_cd">Ruaj</string>
   <!-- ActionBar Buttons - Print -->
+  <string name="actionbar_button_print_cd">Printo</string>
   <!-- Navigation View - Sort - Sort by name (ascending) -->
+  <string name="sort_by_name_asc">Sipas emrit \u25B2</string>
   <!-- Navigation View - Sort - Sort by name (descending) -->
+  <string name="sort_by_name_desc">Sipas emrit \u25BC</string>
   <!-- Navigation View - Sort - Sort by date (ascending) -->
+  <string name="sort_by_date_asc">Sipas datës \u25B2</string>
   <!-- Navigation View - Sort - Sort by date (descending) -->
+  <string name="sort_by_date_desc">Sipas datës \u25BC</string>
   <!-- Navigation View - Sort - Sort by size (ascending) -->
+  <string name="sort_by_size_asc">Sipas madhësisë \u25B2</string>
   <!-- Navigation View - Sort - Sort by size (descending) -->
+  <string name="sort_by_size_desc">Sipas madhësisë \u25BC</string>
   <!-- Navigation View - Sort - Sort by type (ascending) -->
+  <string name="sort_by_type_asc">Sipas llojit \u25B2</string>
   <!-- Navigation View - Sort - Sort by type (descending) -->
+  <string name="sort_by_type_desc">Sipas llojit \u25BC</string>
   <!-- Navigation View - Layout - Icons -->
+  <string name="layout_icons">Ikona</string>
   <!-- Navigation View - Layout - Simple -->
+  <string name="layout_simple">E thjeshtë</string>
   <!-- Navigation View - Layout - Details -->
+  <string name="layout_details">Detajet</string>
   <!-- Navigation View - View - Show folders first -->
+  <string name="cm_filemanager_show_dirs_first">Trego më parë dosjet</string>
   <!-- Navigation View - View - Show hidden files option -->
+  <string name="cm_filemanager_show_hidden">Shfaq skedarët e fshehur</string>
   <!-- Navigation View - View - Show system files option -->
+  <string name="cm_filemanager_show_system">Shfaq skedarët e sistemit</string>
   <!-- Navigation View - View - Show symlinks option -->
   <!-- Filesystem Info (no data). Dialog title -->
+  <string name="filesystem_info_warning_title">Nuk ka informacion</string>
   <!-- Filesystem Info (no data). Dialog message -->
+  <string name="filesystem_info_warning_msg">Nuk ka informacion të disponueshëm për sistemin e skedarëve.</string>
   <!-- Filesystem Info - Filesystem couldn't be mounted -->
+  <string name="filesystem_info_cant_be_mounted_msg">Sistemi i skedarëve nuk mund të montohet/çmontohet.</string>
   <!-- Filesystem Info - Not allowed message -->
   <!-- Filesystem Info - Mount failed -->
   <!-- Filesystem Info Dialog - Title -->
   <!-- Filesystem Info Dialog - Tab - Info -->
+  <string name="filesystem_info_dialog_tab_info">Informacion</string>
   <!-- Filesystem Info Dialog - Tab - Disk Usage -->
+  <string name="filesystem_info_dialog_tab_disk_usage">Përdorimi i diskut</string>
   <!-- Filesystem Info Dialog - Status Label -->
+  <string name="filesystem_info_dialog_status">Montuar:</string>
   <!-- Filesystem Info Dialog - Mount Point Label -->
+  <string name="filesystem_info_dialog_mount_point">Pika e montimit:</string>
   <!-- Filesystem Info Dialog - Device Label -->
+  <string name="filesystem_info_dialog_device">Pajisja:</string>
   <!-- Filesystem Info Dialog - Type Label -->
+  <string name="filesystem_info_dialog_type">Lloji:</string>
   <!-- Filesystem Info Dialog - Options Label -->
+  <string name="filesystem_info_dialog_options">Opsionet:</string>
   <!-- Filesystem Info Dialog - Dump/Pass Label -->
+  <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
   <!-- Filesystem Info Dialog - Virtual Label -->
+  <string name="filesystem_info_dialog_virtual">Virtual:</string>
   <!-- Filesystem Info Dialog - Total Disk Usage -->
+  <string name="filesystem_info_dialog_total_disk_usage">Në total:</string>
   <!-- Filesystem Info Dialog - Used Disk Usage -->
+  <string name="filesystem_info_dialog_used_disk_usage">Përdorur:</string>
   <!-- Filesystem Info Dialog - Free Disk Usage -->
+  <string name="filesystem_info_dialog_free_disk_usage">E lirë:</string>
   <!-- Fso Properties - Not allowed message -->
   <!-- Fso Properties - Failed to change owner to fso -->
   <!-- Fso Properties - Failed to change group to fso -->
   <!-- Fso Properties - Failed to change group to fso -->
   <!-- Fso Properties Dialog - Title -->
+  <string name="fso_properties_dialog_title">Vetitë</string>
   <!-- Fso Properties Dialog - Tab - Info -->
+  <string name="fso_properties_dialog_tab_info">Informacion</string>
   <!-- Fso Properties Dialog - Tab - Permissions -->
+  <string name="fso_properties_dialog_tab_permissions">Lejet</string>
   <!-- Fso Properties Dialog - Name Label -->
+  <string name="fso_properties_dialog_name">Emri:</string>
   <!-- Fso Properties Dialog - Parent Folder Label -->
+  <string name="fso_properties_dialog_parent">Prindi:</string>
   <!-- Fso Properties Dialog - Type Label -->
+  <string name="fso_properties_dialog_type">Lloji:</string>
   <!-- Fso Properties Dialog - Category Label -->
+  <string name="fso_properties_dialog_category">Kategoria:</string>
   <!-- Fso Properties Dialog - Link Label -->
+  <string name="fso_properties_dialog_link">Linku:</string>
   <!-- Fso Properties Dialog - Size Label -->
+  <string name="fso_properties_dialog_size">Madhësia:</string>
   <!-- Fso Properties Dialog - Contains Label -->
+  <string name="fso_properties_dialog_contains">Përmban:</string>
   <!-- Fso Properties Dialog - Last Accessed Time Label -->
+  <string name="fso_properties_dialog_last_accessed_date">Aksesuar:</string>
   <!-- Fso Properties Dialog - Last Modified Time Label -->
+  <string name="fso_properties_dialog_last_modified_date">Modifikuar:</string>
   <!-- Fso Properties Dialog - Last Changed Time -->
+  <string name="fso_properties_dialog_last_changed_date">Ndryshuar:</string>
   <!-- Fso Properties Dialog - Owner Label -->
+  <string name="fso_properties_dialog_owner">Pronari:</string>
   <!-- Fso Properties Dialog - Group Label -->
+  <string name="fso_properties_dialog_group">Grupi:</string>
   <!-- Fso Properties Dialog - Others Label -->
+  <string name="fso_properties_dialog_others">Të tjerë:</string>
   <!-- Fso Properties Dialog - Special Label -->
   <!-- Fso Properties Dialog - Read Label -->
   <!-- Fso Properties Dialog - Write Label -->
   <!-- Fso Properties Dialog - Execute Label -->
   <!-- Fso Properties Dialog - Execute Label -->
   <!-- Fso Properties Dialog - Skip media scan -->
+  <string name="fso_properties_dialog_include_in_media_scan">Kapërce skanimin e medias:</string>
   <!-- History - History activity title -->
+  <string name="history">Historiku</string>
   <!-- History - The history is empty -->
+  <string name="msgs_history_empty">Historiku është bosh.</string>
   <!-- History - The history reference is not in the actual history list -->
+  <string name="msgs_history_unknown">Element i panjohur i historikut.</string>
   <!-- Search - Search activity title -->
+  <string name="search">Rezultatet e kërkimit</string>
   <!-- Search - Search hint message -->
+  <string name="search_hint">Shkruaj atë që do të kërkosh</string>
   <!-- Search - Voice search hint message -->
+  <string name="search_voice_hint">Kërko me zë</string>
   <!-- Search - Search error message -->
   <!-- Search - Search no results message -->
   <!-- Search - Number of items found in directory -->
   <!-- Search - Search query terms -->
   <!-- Search - Confirm search -->
+  <string name="search_few_characters_title">Konfirmo kërkimin</string>
   <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <!-- Search - Searching dialog title -->
+  <string name="searching">Prisni\u2026</string>
   <!-- Search - Searching label -->
   <!-- Picker Activity -->
   <!-- Picker Activity - Dialog title -->
   <!-- Editor - Editor activity title -->
+  <string name="editor">Redaktuesi</string>
   <!-- Editor - Invalid file message -->
   <!-- Editor - File not found message -->
   <!-- Editor - File size exceed the limit -->
   <!-- Editor - Editor is dirty, ask the user - Dialog title -->
+  <string name="editor_dirty_ask_title">Konfirmo daljen</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <!-- Editor - Save operation success -->
   <!-- Editor - Read-only file mode -->
@@ -169,7 +272,9 @@
   <!-- Editor - Displaying -->
   <!-- Bookmarks - Bookmarks activity title -->
   <!-- Bookmarks - Bookmark name - Home -->
+  <string name="bookmarks_home">Home</string>
   <!-- Bookmarks - Bookmark name - Root folder -->
+  <string name="bookmarks_root_folder">Dosja Root</string>
   <!-- Bookmarks - Bookmark name - System folder -->
   <!-- Bookmarks - Bookmark name - Secure storage -->
   <!-- Bookmarks - Bookmark name - Remote storage -->
@@ -182,7 +287,9 @@
   <!-- Initial directory is relative -->
   <!-- Initial directory error message -->
   <!-- Menu - Navigation - Search -->
+  <string name="menu_search">Kërko</string>
   <!-- Menu - Navigation - Settings -->
+  <string name="menu_settings">Parametrat</string>
   <!-- Menu - History - Clear history -->
   <!-- Menu - Editor - No suggestions -->
   <!-- Menu - Editor - Word wrap -->
@@ -192,65 +299,100 @@
   <!-- Waiting dialog - Performing operation message -->
   <!-- Waiting dialog - Copying title -->
   <!-- Waiting dialog - Copying message -->
+  <string name="waiting_dialog_copying_msg"><![CDATA[<b>Nga</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Për</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog - Moving title -->
   <!-- Waiting dialog - Moving message -->
+  <string name="waiting_dialog_moving_msg"><![CDATA[<b>Nga</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Për</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog - Deleting title -->
   <!-- Waiting dialog - Deleting message -->
+  <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Skedari</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Extracting title -->
   <!-- Waiting dialog - Extracting message -->
+  <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Skedari</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Extracting title -->
   <!-- Waiting dialog - Extracting message -->
+  <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Skedari</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog - Initializing the dialog -->
+  <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Duke analizuar\u2026</b>]]></string>
   <!-- Extracting - Success message -->
+  <string name="msgs_extracting_success">Veprimi i ekstraktimit u krye me sukses. Të dhënat u ekstraktuan në <xliff:g id="destination">%1$s</xliff:g>.</string>
   <!-- Compressing - Success message -->
+  <string name="msgs_compressing_success">Veprimi i kompresimit u krye me sukses. Të dhënat u kompresuan në <xliff:g id="destination">%1$s</xliff:g>.</string>
   <!-- Actions Dialog - Title -->
+  <string name="actions_dialog_title">Veprimet</string>
   <!-- Actions Dialog - Menu - Properties of current folder -->
+  <string name="actions_menu_properties_current_folder">Vetitë</string>
   <!-- Actions Dialog - Menu - Refresh -->
+  <string name="actions_menu_refresh">Rifresko</string>
   <!-- Actions Dialog - Menu - New directory -->
+  <string name="actions_menu_new_directory">Dosje e re</string>
   <!-- Actions Dialog - Menu - New file -->
   <!-- Actions Dialog - Menu - Select all -->
+  <string name="actions_menu_select_all">Zgjidhi të gjitha</string>
   <!-- Actions Dialog - Menu - Deselect all -->
+  <string name="actions_menu_deselect_all">Deselektoji të gjitha</string>
   <!-- Actions Dialog - Menu - Select -->
+  <string name="actions_menu_select">Zgjidh</string>
   <!-- Actions Dialog - Menu - Deselect -->
+  <string name="actions_menu_deselect">Deselekto</string>
   <!-- Actions Dialog - Menu - Copy/Paste selection -->
   <!-- Actions Dialog - Menu - Move selection -->
   <!-- Actions Dialog - Menu - Delete selection -->
   <!-- Actions Dialog - Menu - Compress selection -->
   <!-- Actions Dialog - Menu - Create link -->
   <!-- Actions Dialog - Menu - Open -->
+  <string name="actions_menu_open">Hap</string>
   <!-- Actions Dialog - Menu - Open with -->
+  <string name="actions_menu_open_with">Hap me</string>
   <!-- Actions Dialog - Menu - Execute -->
   <!-- Actions Dialog - Menu - Send -->
+  <string name="actions_menu_send">Dërgo</string>
   <!-- Actions Dialog - Menu - Send selection -->
   <!-- Actions Dialog - Menu - Compress -->
+  <string name="actions_menu_compress">Kompreso</string>
   <!-- Actions Dialog - Menu - Extract -->
+  <string name="actions_menu_extract">Ekstrakto</string>
   <!-- Actions Dialog - Menu - Delete -->
   <!-- Actions Dialog - Menu - Rename -->
+  <string name="actions_menu_rename">Riemërto</string>
   <!-- Actions Dialog - Menu - Create copy -->
   <!-- Actions Dialog - Menu - Properties -->
   <!-- Actions Dialog - Menu - Add to bookmarks -->
   <!-- Actions Dialog - Menu - Add shortcut -->
+  <string name="actions_menu_add_shortcut">Shto një shkurtore</string>
   <!-- Actions Dialog - Menu - Open parent folder -->
   <!-- Actions Dialog - Menu - Compute checksum -->
   <!-- Actions Dialog - Menu - Print -->
   <!-- Actions Dialog - Menu - Set as home -->
   <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <!-- Enter Name Dialog - Label -->
+  <string name="input_name_dialog_label">Emri:</string>
   <!-- Enter Name Dialog - Message - Empty name -->
+  <string name="input_name_dialog_message_empty_name">Emri s\'mund të jetë bosh.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
+  <string name="input_name_dialog_message_invalid_path_name">Emër i gabuar. Karakteret \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' nuk janë të lejuara.</string>
   <!-- Enter Name Dialog - Message - Invalid name length -->
+  <string name="input_name_dialog_message_invalid_name_length">U arrit kufiri maksimal i karaktereve.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
+  <string name="input_name_dialog_message_invalid_name">Emër i gabuar. Emrat \'.\' dhe \'..\' nuk janë të lejuara.</string>
   <!-- Enter Name Dialog - Message - Name exists -->
+  <string name="input_name_dialog_message_name_exists">Ky emër ekziston tashmë.</string>
   <!-- Associations Dialog - Title -->
   <!-- Associations Dialog - Remember the user action -->
   <!-- Associations Dialog - Open with Title -->
+  <string name="associations_dialog_openwith_title">Hap me</string>
   <!-- Associations Dialog - Open action (button title) -->
+  <string name="associations_dialog_openwith_action">Hap</string>
   <!-- Associations Dialog - Send with Title -->
+  <string name="associations_dialog_sendwith_title">Dërgo me</string>
   <!-- Associations Dialog - Send action (button title) -->
+  <string name="associations_dialog_sendwith_action">Dërgo</string>
   <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
+  <string name="inline_autocomplete_tab_nothing_to_complete_msg">Asgjë për të plotësuar.</string>
   <!-- Execution console - Title -->
   <!-- Execution console - The script name label -->
   <!-- Execution console - The script execution time label -->
+  <string name="execution_console_script_execution_time_label">Ora:</string>
   <!-- Execution console - The script exit code label -->
   <!-- Execution console - The script execution time seconds string -->
   <!-- Compute checksum - Title -->
@@ -264,16 +406,38 @@
   <!--  Filetime formats -->
   <!-- Selection -->
   <!-- For example "2 folders and 1 file selected." -->
+  <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> dhe <xliff:g id="files">%2$s</xliff:g> të zgjedhura.</string>
   <!-- Category descriptions -->
+  <string name="category_system">SISTEM</string>
+  <string name="category_app">APLICACION</string>
+  <string name="category_binary">BINAR</string>
+  <string name="category_text">TEKST</string>
+  <string name="category_document">DOKUMENT</string>
+  <string name="category_ebook">EBOOK</string>
+  <string name="category_mail">EMAIL</string>
+  <string name="category_compress">E KOMPRESUAR</string>
+  <string name="category_exec">E EKZEKUTUESHME</string>
+  <string name="category_database">DATABAZË</string>
+  <string name="category_font">FONT</string>
+  <string name="category_image">IMAZH</string>
+  <string name="category_audio">AUDIO</string>
+  <string name="category_video">VIDEO</string>
+  <string name="category_security">SIGURIA</string>
+  <string name="category_all">TË GJITHA</string>
   <!-- Compression - Compression modes dialog title -->
+  <string name="compression_mode_title">Mënyra e kompresimit</string>
   <!-- Compression - Supported archive and compression modes -->
   <!-- Shortcut. Failed to handle the shortcut -->
+  <string name="shortcut_failed_msg">Përdorimi i shkurtores dështoi.</string>
   <!-- Shortcut. The shortcut was created -->
+  <string name="shortcut_creation_success_msg">Shkurtorja u krijua me sukses.</string>
   <!-- Shortcut. The shortcut wasn't created -->
+  <string name="shortcut_creation_failed_msg">Krijimi i shkurtores dështoi.</string>
   <!-- Preferences title -->
   <!-- Preferences - General title -->
   <!-- Preferences - Search title -->
   <!-- Preferences - Storage title -->
+  <string name="pref_storage">Opsionet e memories</string>
   <!-- Preferences - Editor title -->
   <!-- Preferences - Themes title -->
   <!-- Preferences - About title -->
@@ -281,6 +445,7 @@
   <!-- Preferences - General - Case sensitive sort and navigating title -->
   <!-- Preferences - General - Case sensitive sort and navigating summary -->
   <!-- Preferences - General - Filetime format mode title -->
+  <string name="pref_filetime_format_mode">Formati i datës/orës</string>
   <!-- Preferences - General -Disk usage warning level title -->
   <!-- Preferences - General - Disk usage warning level summary -->
   <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
@@ -290,14 +455,17 @@
   <!-- Preferences - General - Display thumbs -->
   <!-- Preferences - General - Display thumbs summary -->
   <!-- Preferences - General - Use flinger detection -->
+  <string name="pref_use_flinger">Përdor gjestet me rrëshqitje gishti</string>
   <!-- Preferences - General - Use flinger detection summary -->
   <!-- Preferences - General - Advanced settings category -->
+  <string name="pref_general_advanced_settings_category">Të përparuara</string>
   <!-- Preferences - General - Access mode -->
   <!-- Preferences - General - Safe mode -->
   <!-- Preferences - General - Safe mode summary -->
   <!-- Preferences - General - Prompt user mode -->
   <!-- Preferences - General - Prompt user mode summary -->
   <!-- Preferences - General - Root access mode -->
+  <string name="pref_access_mode_root">Profili me Akses Root</string>
   <!-- Preferences - General - Root access mode summary -->
   <!-- Preferences - General - Restrict secondary users access title -->
   <!-- Preferences - General - Restrict secondary users access summary -->
@@ -307,19 +475,26 @@
   <!-- Preferences - Search - Sort results mode -->
   <!-- Preferences - Search - Sort results mode. None -->
   <!-- Preferences - Search - Sort results mode. None -->
+  <string name="pref_sort_search_results_mode_name">Nga emri</string>
   <!-- Preferences - Search - Sort results mode. Relevance -->
   <!-- Preferences - Search - Privacity category -->
+  <string name="pref_search_privacity_category">Privatësia</string>
   <!-- Preferences - Search - Save search terms -->
   <!-- Preferences - Search - Save search terms summary on -->
   <!-- Preferences - Search - Save search terms summary off -->
   <!-- Preferences - Search - Remove saved search terms -->
   <!-- Preferences - Search - Remove saved search terms summary -->
+  <string name="pref_remove_saved_search_terms_summary">Shtyp për të hequr të gjitha termat e kërkuar</string>
   <!-- Preferences - Search - Suggestions were truncated -->
+  <string name="pref_remove_saved_search_terms_msg">Të gjitha termat e kërkuar u hoqën</string>
   <!-- Preferences - Storage - Secure Storage category -->
+  <string name="pref_secure_storage_category">Memorie e mbrojtur</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <!-- Preferences - Storage - Secure Storage - Change password title -->
+  <string name="pref_secure_storage_reset_password_title">Ndrysho fjalëkalimin</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
+  <string name="pref_secure_storage_delete_storage_title">Fshi memorien</string>
   <!-- Preferences - Editor - Behaviour category -->
   <!-- Preferences - Editor - No suggestions -->
   <!-- Preferences - Editor - No suggestions summary -->
@@ -332,22 +507,32 @@
   <!-- Preferences - Editor - Syntax highlight color scheme -->
   <!-- Preferences - Editor - Syntax highlight color scheme summary -->
   <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
+  <string name="pref_syntax_sh_use_theme_default">Përdor temën e paracaktuar</string>
   <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
   <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <!-- Preferences - Themes - Themes selection category -->
+  <string name="pref_themes_selection_category">Temat</string>
   <!-- Preferences - Themes - Set theme button -->
+  <string name="pref_themes_set_theme">Cakto temën</string>
   <!-- Preferences - Themes - Confirmation message -->
+  <string name="pref_themes_confirmation">Tema u aplikua me sukses.</string>
   <!-- Preferences - Themes - Theme not found message -->
+  <string name="pref_themes_not_found">Tema nuk u gjet.</string>
   <!-- Preferences - Debug - Capture debug traces -->
+  <string name="pref_debug_traces">Regjistro informacionin e debugimit</string>
   <!-- Themes - Default theme name -->
+  <string name="theme_default_name">Temë e Çelur</string>
   <!-- Themes - Default theme description -->
+  <string name="theme_default_description">Një temë e çelur për Menaxherin e Skedarëve të LineageOS.</string>
   <!-- Themes - Default theme author -->
+  <string name="themes_author">LineageOS</string>
   <!-- Navigation drawer -->
   <!-- ColorPickerDialog -->
   <!-- The text of the alpha slider control -->
   <!-- The label of the current color panel -->
   <!-- The label of the new color panel -->
   <!-- The label of the color input -->
+  <string name="color_picker_color">Ngjyra:</string>
   <!-- Android Syntax Highlight -->
   <!-- Secure Storage -->
   <!-- Secure Storage dialog title - Unlock -->
@@ -359,16 +544,24 @@
   <!-- Secure Storage unlock dialog message (reset the current password) -->
   <!-- Secure Storage unlock dialog message (delete the secure storage) -->
   <!-- Secure Storage unlock dialog old key title -->
+  <string name="secure_storage_unlock_old_key_title">Fjalëkalimi i vjetër:</string>
   <!-- Secure Storage unlock dialog key title -->
+  <string name="secure_storage_unlock_new_key_title">Fjalëkalimi i ri:</string>
   <!-- Secure Storage unlock dialog key title -->
+  <string name="secure_storage_unlock_key_title">Fjalëkalimi:</string>
   <!-- Secure Storage unlock dialog repeat key title-->
+  <string name="secure_storage_unlock_repeat_title">Përsërit fjalëkalimin:</string>
   <!-- Secure Storage create button -->
+  <string name="secure_storage_create_button">Krijo</string>
   <!-- Secure Storage unlock button -->
+  <string name="secure_storage_unlock_button">Zhblloko</string>
   <!-- Secure Storage reset button -->
   <!-- Secure Storage delete button -->
+  <string name="secure_storage_delete_button">Fshije</string>
   <!-- Secure Storage unlock failed toast -->
   <!-- Secure Storage unlock validation, length -->
   <!-- Secure Storage unlock validation, equal -->
+  <string name="secure_storage_unlock_validation_equals">Fjalëkalimet nuk përputhen.</string>
   <!-- Secure storage open file warning -->
   <!-- Print messages -->
   <!-- Unsupported document format -->
@@ -379,5 +572,9 @@
   <!-- ChangeLog - Dialog title -->
   <!-- Welcome Dialog - Title -->
   <!-- Welcome Dialog - Message -->
+  <string name="welcome_msg">Mirësevini në menaxherin e skedarëve të LineageOS.\n\nKy aplikacion ju mundëson të eksploroni sistemin e skedarëve dhe të kryeni veprime që mund të demtojnë pajisjen tuaj. Për të parandaluar dëmtimet, ky aplikacion do te nisë në një profil të sigurtë dhe me privilegje te kufizuara.\n\nJu mund të aksesoni profilin e avancuar me privilegje të plota nëpërmjet Parametrave. Është përgjegjësia juaj të siguroheni që një veprim nuk do të dëmtojë sistemin tuaj.\n\nEkipi i LineageOS</string>
+  <string name="activity_not_found_exception">Nuk u gjet asnjë aplikacion që mund të hapë këtë skedar</string>
+  <string name="storage_permissions_explanation">Shko te Parametrat dhe shtyp Lejet për të dhënë lejen.</string>
+  <string name="snackbar_settings">Parametrat</string>
   <!-- Wrap mode - toast -->
 </resources>

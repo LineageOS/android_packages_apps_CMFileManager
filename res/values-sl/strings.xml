@@ -684,7 +684,7 @@
   <!-- Themes - Default theme name -->
   <string name="theme_default_name">Svetla tema</string>
   <!-- Themes - Default theme description -->
-  <string name="theme_default_description">Lahka tema za Upravljalnika datotek LineageOS.</string>
+  <string name="theme_default_description">Svetla tema za Upravljalnika datotek LineageOS.</string>
   <!-- Themes - Default theme author -->
   <string name="themes_author">LineageOS</string>
   <!-- Navigation drawer -->

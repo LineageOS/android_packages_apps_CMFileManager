@@ -17,11 +17,11 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="one">1 carpeta</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> carpeta</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> carpetes</item>
   </plurals>
   <plurals name="n_files">
-    <item quantity="one">1 ficheru</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ficheru</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ficheros</item>
   </plurals>
   <!-- Search - Found items -->
@@ -31,11 +31,11 @@
   </plurals>
   <!-- Statusbar text if there are selected files or folders -->
   <plurals name="selection_folders">
-    <item quantity="one">1 carpeta esbillada.</item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> carpeta esbillada.</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> carpetes esbillaes.</item>
   </plurals>
   <plurals name="selection_files">
-    <item quantity="one">1 ficheru esbilláu.</item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ficheru esbilláu.</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ficheros esbillaos.</item>
   </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->

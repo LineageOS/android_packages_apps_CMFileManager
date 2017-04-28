@@ -771,4 +771,5 @@
   <string name="storage_permissions_explanation">설정에 이동하고 권한을 탭하여 권한을 부여하세요.</string>
   <string name="snackbar_settings">설정</string>
   <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">단어 감싸기 모드 토글됨</string>
 </resources>

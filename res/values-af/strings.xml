@@ -797,4 +797,5 @@
   <string name="storage_permissions_explanation">Gaan na Instellings en raak Programtoestemmings om toestemming te verleen.</string>
   <string name="snackbar_settings">Instellings</string>
   <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Swaai om woordvoumodus</string>
 </resources>

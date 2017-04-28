@@ -18,12 +18,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- The name of the app -->
-  <string name="app_name">Administrador de archivos</string>
+  <string name="app_name">Gestor de archivos</string>
   <!-- The description of the app -->
-  <string name="app_description">Administrador de archivos de LineageOS</string>
+  <string name="app_description">Gestor de archivos de LineageOS</string>
   <!-- Human readable sizes -->
   <string name="size_bytes">B</string>
-  <string name="size_kilobytes">kb</string>
+  <string name="size_kilobytes">kB</string>
   <string name="size_megabytes">MB</string>
   <string name="size_gigabytes">GB</string>
   <!-- Date/time format order (%1$s: date; %2$s: time) -->
@@ -55,7 +55,7 @@
   <!-- Error message -->
   <string name="error_message">Error.</string>
   <!-- Copy text content description -->
-  <string name="copy_text_cd">Pulsar para copiar texto al portapapeles</string>
+  <string name="copy_text_cd">Pulsa para copiar texto al portapapeles</string>
   <!-- Copy text content message -->
   <string name="copy_text_msg">Texto copiado al portapapeles</string>
   <!-- Warning dialog title -->
@@ -71,25 +71,25 @@
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Confirmar cambio</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
-  <string name="msgs_change_to_prompt_access_mode_msg">Imposible ejecutar en modo acceso root. Cambiando a modo seguro.\n\n¿Aplicar el cambio?</string>
+  <string name="msgs_change_to_prompt_access_mode_msg">Imposible ejecutar en modo administrador. Cambiando a modo seguro.\n\n¿Continuar?</string>
   <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">Imposible obtener los permisos necesarios para esta función.</string>
   <!-- The message shown when an allocation of a privileged console fails, and a non
          privileged is allocated -->
-  <string name="msgs_privileged_console_alloc_failed">Imposible ejecutar en modo acceso root. Cambiando a modo seguro.</string>
+  <string name="msgs_privileged_console_alloc_failed">Imposible ejecutar en modo administrador. Cambiando a modo seguro.</string>
   <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Esta opción no se pudo aplicar o guardar.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
-  <string name="msgs_settings_invalid_initial_directory">La carpeta inicial \'<xliff:g id="initial_dir">%1$s</xliff:g>\' no es válida. Cambiando a carpeta raíz.</string>
+  <string name="msgs_settings_invalid_initial_directory">La carpeta inicial \'<xliff:g id="initial_dir">%1$s</xliff:g>\' es inválida. Cambiando a la carpeta raíz.</string>
   <!-- Root is not available message -->
-  <string name="root_not_available_msg">El modo root no está disponible en este dispositivo. No se puede realizar esta operación.</string>
+  <string name="root_not_available_msg">El permiso administrativo no está disponible en este dispositivo. No se puede realizar la operación.</string>
   <!-- Success -->
   <string name="msgs_success">La operación se completó correctamente.</string>
   <!-- Unknown error -->
   <string name="msgs_unknown">Se detectó un error. La operación no se completó.</string>
   <!-- When an operation requires elevated privileged (normally caused for the use of a
          non-privileged console) -->
-  <string name="msgs_insufficient_permissions">Esta operación requiere permisos elevados. Intenta cambiar a modo acceso root.</string>
+  <string name="msgs_insufficient_permissions">Esta operación requiere permisos elevados. Intenta cambiar a modo administrador.</string>
   <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">La operación falló porque no hay espacio suficiente en el dispositivo.</string>
   <!-- The file or directory was not found -->
@@ -116,7 +116,7 @@
   <!-- Operation not permitted in the current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">La carpeta de destino no puede ser una subcarpeta de la de origen o ser la misma que la de origen.</string>
   <!-- The advice message prior to exit the app -->
-  <string name="msgs_push_again_to_exit">Presiona de nuevo para salir.</string>
+  <string name="msgs_push_again_to_exit">Pulsa de nuevo para salir.</string>
   <!-- There is no registered app that can handle the mime-type -->
   <string name="msgs_not_registered_app">No hay ninguna aplicación registrada para el tipo de archivo seleccionado.</string>
   <!-- Overwrite files? -->
@@ -124,7 +124,7 @@
   <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">No se pudo asociar la acción a la aplicación.</string>
   <!-- An operation requires elevated privileged. Ask the user. -->
-  <string name="advise_insufficient_permissions">La operación requiere privilegios elevados.\n\n¿Quieres cambiar a modo acceso root?</string>
+  <string name="advise_insufficient_permissions">La operación requiere privilegios elevados.\n\n¿Quieres cambiar a modo administrador?</string>
   <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Carpeta principal</string>
   <!-- External storage descripton -->
@@ -180,7 +180,7 @@
   <!-- Navigation View - View - Show hidden files option -->
   <string name="cm_filemanager_show_hidden">Mostrar archivos ocultos</string>
   <!-- Navigation View - View - Show system files option -->
-  <string name="cm_filemanager_show_system">Mostrar archivos de sistema</string>
+  <string name="cm_filemanager_show_system">Mostrar archivos del sistema</string>
   <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">Mostrar enlaces simbólicos</string>
   <!-- Filesystem Info (no data). Dialog title -->
@@ -190,7 +190,7 @@
   <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">El sistema de archivos no puede ser montado/desmontado.</string>
   <!-- Filesystem Info - Not allowed message -->
-  <string name="filesystem_info_mount_not_allowed_msg">La operación de montaje del sistema de archivos no está permitida en modo seguro. Pulsa para cambiar a modo acceso root.</string>
+  <string name="filesystem_info_mount_not_allowed_msg">La operación de montaje del sistema de archivos no está permitida en modo seguro. Pulsa para cambiar a modo administrador.</string>
   <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">No se pudo realizar la operación de montaje del sistema de archivos. Algunos sistemas de archivos, como las tarjetas SD, no pueden ser montados/desmontados porque están diseñados como sistemas de archivos de solo lectura.</string>
   <!-- Filesystem Info Dialog - Title -->
@@ -220,7 +220,7 @@
   <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Gratuito:</string>
   <!-- Fso Properties - Not allowed message -->
-  <string name="fso_properties_permissions_not_allowed_msg">Las operaciones de permisos no están permitidas en modo seguro. Pulsa para cambiar a modo de acceso Root.</string>
+  <string name="fso_properties_permissions_not_allowed_msg">Las operaciones de permisos no están permitidas en modo seguro. Pulsa para cambiar a modo administrador.</string>
   <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">Error de operación de cambio de propietario.\n\nPor motivos de seguridad, algunos sistemas de archivos, como las tarjetas SD, no permiten el cambio de propietario.</string>
   <!-- Fso Properties - Failed to change group to fso -->
@@ -265,12 +265,12 @@
   <!-- Fso Properties Dialog - Execute Label -->
   <!-- Fso Properties Dialog - Execute Label -->
   <!-- Fso Properties Dialog - Skip media scan -->
-  <string name="fso_properties_dialog_include_in_media_scan">Omitir exploración de medios:</string>
-  <string name="fso_failed_to_allow_media_scan">Error al permitir exploración de medios</string>
-  <string name="fso_failed_to_prevent_media_scan">No se pudo impedir la digitalización de medios</string>
-  <string name="fso_delete_nomedia_dir_title">Eliminar directorio .nomedia</string>
-  <string name="fso_delete_nomedia_dir_body">Este directorio contiene un directorio .nomedia.\n\n¿Quieres eliminarlo con todo su contenido?</string>
-  <string name="fso_delete_nomedia_non_empty_title">Eliminar archivo .nomedia</string>
+  <string name="fso_properties_dialog_include_in_media_scan">Omitir exploración multimedia:</string>
+  <string name="fso_failed_to_allow_media_scan">Error al permitir el escaneo multimedia</string>
+  <string name="fso_failed_to_prevent_media_scan">Error al impedir el escaneo multimedia</string>
+  <string name="fso_delete_nomedia_dir_title">Borrar directorio .nomedia</string>
+  <string name="fso_delete_nomedia_dir_body">Este directorio contiene un directorio .nomedia.\n\n¿Quieres borrarlo con todo su contenido?</string>
+  <string name="fso_delete_nomedia_non_empty_title">Borrar archivo .nomedia</string>
   <string name="fso_delete_nomedia_non_empty_body">Este directorio contiene un archivo .nomedia que no está vacío.\n\n¿Quieres eliminarlo?</string>
   <!-- History - History activity title -->
   <string name="history">Historial</string>
@@ -339,7 +339,7 @@
   <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">Establecer carpeta inicial.</string>
   <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
-  <string name="bookmarks_button_remove_bookmark_cd">Eliminar el marcador.</string>
+  <string name="bookmarks_button_remove_bookmark_cd">Quitar el marcador.</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">El marcador se añadió correctamente.</string>
   <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
@@ -355,7 +355,7 @@
   <!-- Menu - Navigation - Search -->
   <string name="menu_search">Buscar</string>
   <!-- Menu - Navigation - Settings -->
-  <string name="menu_settings">Opciones</string>
+  <string name="menu_settings">Ajustes</string>
   <!-- Menu - History - Clear history -->
   <string name="menu_clear_history">Borrar historial</string>
   <!-- Menu - Editor - No suggestions -->
@@ -419,7 +419,7 @@
   <!-- Actions Dialog - Menu - Move selection -->
   <string name="actions_menu_move_selection">Mover selección aquí</string>
   <!-- Actions Dialog - Menu - Delete selection -->
-  <string name="actions_menu_delete_selection">Eliminar selección</string>
+  <string name="actions_menu_delete_selection">Borrar selección</string>
   <!-- Actions Dialog - Menu - Compress selection -->
   <string name="actions_menu_compress_selection">Comprimir selección</string>
   <!-- Actions Dialog - Menu - Create link -->
@@ -439,9 +439,9 @@
   <!-- Actions Dialog - Menu - Extract -->
   <string name="actions_menu_extract">Extraer</string>
   <!-- Actions Dialog - Menu - Delete -->
-  <string name="actions_menu_delete">Eliminar</string>
+  <string name="actions_menu_delete">Borrar</string>
   <!-- Actions Dialog - Menu - Rename -->
-  <string name="actions_menu_rename">Cambiar nombre</string>
+  <string name="actions_menu_rename">Renombrar</string>
   <!-- Actions Dialog - Menu - Create copy -->
   <string name="actions_menu_create_copy">Crear copia</string>
   <!-- Actions Dialog - Menu - Properties -->
@@ -546,9 +546,9 @@
   <!-- Shortcut. The shortcut wasn't created -->
   <string name="shortcut_creation_failed_msg">Error al crear el acceso directo.</string>
   <!-- Preferences title -->
-  <string name="pref">Opciones</string>
+  <string name="pref">Ajustes</string>
   <!-- Preferences - General title -->
-  <string name="pref_general">Configuración general</string>
+  <string name="pref_general">Ajustes generales</string>
   <!-- Preferences - Search title -->
   <string name="pref_search">Opciones de búsqueda</string>
   <!-- Preferences - Storage title -->
@@ -598,9 +598,9 @@
   <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">Modo confirmación\n\nLa aplicación está ejecutándose con acceso completo al sistema de archivos pero pedirá una autorización antes de realizar acciones privilegiadas</string>
   <!-- Preferences - General - Root access mode -->
-  <string name="pref_access_mode_root">Modo acceso root</string>
+  <string name="pref_access_mode_root">Modo administrador (root)</string>
   <!-- Preferences - General - Root access mode summary -->
-  <string name="pref_access_mode_root_summary">Modo acceso root\n\n¡Advertencia! Este modo permite operaciones que podrían dañar tu dispositivo. Es tu responsabilidad asegurarte de que la operación sea segura</string>
+  <string name="pref_access_mode_root_summary">Modo administrador (root)\n\n¡Aviso! Este modo permite operaciones que podrían dañar el dispositivo. Es tu responsabilidad asegurarte que la operación sea segura</string>
   <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">Restringir acceso a usuarios</string>
   <!-- Preferences - General - Restrict secondary users access summary -->
@@ -630,7 +630,7 @@
   <!-- Preferences - Search - Remove saved search terms -->
   <string name="pref_remove_saved_search_terms">Eliminar términos de búsqueda guardados</string>
   <!-- Preferences - Search - Remove saved search terms summary -->
-  <string name="pref_remove_saved_search_terms_summary">Pulsar para eliminar todos los términos de búsqueda guardados</string>
+  <string name="pref_remove_saved_search_terms_summary">Pulsa para eliminar todos los términos de búsqueda guardados</string>
   <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">Todos los términos de búsqueda han sido borrados</string>
   <!-- Preferences - Storage - Secure Storage category -->
@@ -638,7 +638,7 @@
   <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">Sincronización retrasada</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
-  <string name="pref_secure_storage_delayed_sync_summary">La sincronización de sistemas de archivos seguros es una operación costosa. Habilitar esta opción permitirá obtener mejores tiempos de respuesta después de cada operación, y la sincronización se realiza cuando el sistema de archivos está en desuso, pero con el riesgo de perder la información no sincronizada si la aplicación tiene un cierre inesperado.</string>
+  <string name="pref_secure_storage_delayed_sync_summary">La sincronización de sistemas de archivos seguros es una operación costosa. Activar esta opción permitirá obtener mejores tiempos de respuesta después de cada operación, y la sincronización se realiza cuando el sistema de archivos está en desuso, pero con el riesgo de perder la información no sincronizada si la aplicación tiene un cierre inesperado.</string>
   <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">Cambiar contraseña</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
@@ -648,7 +648,7 @@
   <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">Sin sugerencias</string>
   <!-- Preferences - Editor - No suggestions summary -->
-  <string name="pref_no_suggestions_desc">No mostrar sugerencias del diccionario durante la edición de archivos</string>
+  <string name="pref_no_suggestions_desc">No muestra sugerencias del diccionario durante la edición de archivos</string>
   <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">Ajuste de línea</string>
   <!-- Preferences - Editor - Hex dump -->
@@ -660,15 +660,15 @@
   <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">Resaltar sintaxis</string>
   <!-- Preferences - Editor - Syntax highlight summary -->
-  <string name="pref_syntax_highlight_desc">Resaltar la sintaxis del archivo en edición (solo cuando haya un procesador de resaltado de sintaxis disponible para el tipo de archivo)</string>
+  <string name="pref_syntax_highlight_desc">Resalta la sintaxis del archivo en edición (solo cuando haya un procesador de resaltado de sintaxis disponible para el tipo de archivo)</string>
   <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">Esquema de color</string>
   <!-- Preferences - Editor - Syntax highlight color scheme summary -->
-  <string name="pref_syntax_highlight_color_scheme_desc">Seleccionar el esquema de color para el resaltado de sintaxis</string>
+  <string name="pref_syntax_highlight_color_scheme_desc">Selecciona el esquema de color para el resaltado de sintaxis</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
-  <string name="pref_syntax_sh_use_theme_default">Usar tema predeterminado</string>
+  <string name="pref_syntax_sh_use_theme_default">Usar tema predefinido</string>
   <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
-  <string name="pref_syntax_sh_use_theme_default_desc">Usar el resaltado de sintaxis predeterminado del tema actual</string>
+  <string name="pref_syntax_sh_use_theme_default_desc">Usa el resaltado de sintaxis predefinido del tema actual</string>
   <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
   <string name="pref_editor_sh_item_category">Elementos</string>
   <!-- Preferences - Themes - Themes selection category -->
@@ -684,7 +684,7 @@
   <!-- Themes - Default theme name -->
   <string name="theme_default_name">Tema claro</string>
   <!-- Themes - Default theme description -->
-  <string name="theme_default_description">Un tema en colores claros para File Manager de LineageOS.</string>
+  <string name="theme_default_description">Un tema en colores claros para el Gestor de archivos de LineageOS.</string>
   <!-- Themes - Default theme author -->
   <string name="themes_author">LineageOS</string>
   <!-- Navigation drawer -->
@@ -700,7 +700,7 @@
   <!-- The label of the color input -->
   <string name="color_picker_color">Color:</string>
   <!-- Android Syntax Highlight -->
-  <string name="ash_reset_color_scheme">Restaurar el esquema de color predeterminado</string>
+  <string name="ash_reset_color_scheme">Restaurar el esquema de color predefinido</string>
   <string name="ash_text">Texto</string>
   <string name="ash_assignment">Asignación</string>
   <string name="ash_singleline_comment">Comentario simple</string>
@@ -740,7 +740,7 @@
   <!-- Secure Storage reset button -->
   <string name="secure_storage_reset_button">Restablecer</string>
   <!-- Secure Storage delete button -->
-  <string name="secure_storage_delete_button">Eliminar</string>
+  <string name="secure_storage_delete_button">Borrar</string>
   <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">No se puede desbloquear el almacenamiento</string>
   <!-- Secure Storage unlock validation, length -->
@@ -765,11 +765,11 @@
   <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Bienvenido</string>
   <!-- Welcome Dialog - Message -->
-  <string name="welcome_msg">Bienvenido al administrador de archivos de LineageOS.\n\nEsta aplicación permite explorar el sistema de archivos y realizar operaciones que podrían bloquear el dispositivo. Para evitar problemas, la aplicación se iniciará en modo seguro con un bajo nivel de privilegios.\n\nPodrás acceder al modo avanzado con privilegios completos mediante el menú Ajustes. Es tu responsabilidad evitar que una operación dañe el dispositivo.\n\nEl equipo de LineageOS</string>
+  <string name="welcome_msg">Bienvenido al gestor de archivos de LineageOS.\n\nEsta aplicación permite explorar el sistema de archivos y realizar operaciones que podrían bloquear el dispositivo. Para evitar problemas, la aplicación se iniciará en modo seguro con un bajo nivel de privilegios.\n\nPodrás acceder al modo avanzado con privilegios completos mediante el menú Ajustes. Es tu responsabilidad evitar que una operación dañe el dispositivo.\n\nEl equipo de LineageOS</string>
   <string name="activity_not_found_exception">No se pudo encontrar una aplicación para abrir este archivo</string>
-  <string name="storage_permissions_denied">El administrador de archivos requiere el permiso de lectura del almacenamiento para ver tus archivos.</string>
-  <string name="storage_permissions_explanation">Ir a configuración y entrar en permisos para otorgar el permiso.</string>
-  <string name="snackbar_settings">Opciones</string>
+  <string name="storage_permissions_denied">El gestor de archivos requiere el permiso de lectura del almacenamiento para ver los archivos.</string>
+  <string name="storage_permissions_explanation">Ve a Ajustes y pulsa en Permisos para conceder el permiso.</string>
+  <string name="snackbar_settings">Ajustes</string>
   <!-- Wrap mode - toast -->
   <string name="toggle_word_wrap_msg">Alternar modo de salto de línea</string>
 </resources>

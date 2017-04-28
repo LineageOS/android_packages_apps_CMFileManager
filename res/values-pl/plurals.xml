@@ -16,6 +16,16 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <plurals name="n_folders">
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> folder</item>
+    <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> foldery</item>
+    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> folderów</item>
+  </plurals>
+  <plurals name="n_files">
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> plik</item>
+    <item quantity="few"><xliff:g id="files">%1$d</xliff:g> pliki</item>
+    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> plików</item>
+  </plurals>
   <!-- Search - Found items -->
   <plurals name="search_found_items">
     <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element znaleziony</item>
@@ -34,4 +44,9 @@
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> zaznaczonych plików.</item>
   </plurals>
   <!-- Actions - Confirm the number of items that are going to be deleted -->
+  <plurals name="deleting_n_items">
+    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element zostanie usunięty.</item>
+    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> elementy zostaną usunięte.</item>
+    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> elementów zostanie usuniętych.</item>
+  </plurals>
 </resources>

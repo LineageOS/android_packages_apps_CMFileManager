@@ -407,9 +407,9 @@
   <!-- Actions Dialog - Menu - New file -->
   <string name="actions_menu_new_file">Novo ficheiro</string>
   <!-- Actions Dialog - Menu - Select all -->
-  <string name="actions_menu_select_all">Selecionar todos</string>
+  <string name="actions_menu_select_all">Selecionar tudo</string>
   <!-- Actions Dialog - Menu - Deselect all -->
-  <string name="actions_menu_deselect_all">Desmarcar todos</string>
+  <string name="actions_menu_deselect_all">Desmarcar tudo</string>
   <!-- Actions Dialog - Menu - Select -->
   <string name="actions_menu_select">Selecionar</string>
   <!-- Actions Dialog - Menu - Deselect -->

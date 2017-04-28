@@ -22,7 +22,7 @@
   <!-- The description of the app -->
   <string name="app_description">Файловий менеджер LineageOS</string>
   <!-- Human readable sizes -->
-  <string name="size_bytes">б</string>
+  <string name="size_bytes">Б</string>
   <string name="size_kilobytes">кБ</string>
   <string name="size_megabytes">МБ</string>
   <string name="size_gigabytes">ГБ</string>
@@ -71,7 +71,7 @@
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Підтвердити переключення</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
-  <string name="msgs_change_to_prompt_access_mode_msg">Неможливо запустити з Root правами. Переключитися в безпечний режим.\n\nЗастосувати?</string>
+  <string name="msgs_change_to_prompt_access_mode_msg">Неможливо запустити з Root правами. Перехід в безпечний режим.\n\nЗастосувати ці зміни?</string>
   <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">Не вдається отримати необхідні привілеї.</string>
   <!-- The message shown when an allocation of a privileged console fails, and a non
@@ -118,7 +118,7 @@
   <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">Натисніть ще раз для виходу</string>
   <!-- There is no registered app that can handle the mime-type -->
-  <string name="msgs_not_registered_app">Не знайдено застосунків для відкриття файлів даного типу</string>
+  <string name="msgs_not_registered_app">Не знайдено додатків для відкриття файлів даного типу.</string>
   <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">Деякі файли вже існують в папці призначення.\n\nЗамінити?</string>
   <!-- The association of an action to the app failed -->
@@ -244,7 +244,7 @@
   <!-- Fso Properties Dialog - Link Label -->
   <string name="fso_properties_dialog_link">Посилання:</string>
   <!-- Fso Properties Dialog - Size Label -->
-  <string name="fso_properties_dialog_size">Размір:</string>
+  <string name="fso_properties_dialog_size">Розмір:</string>
   <!-- Fso Properties Dialog - Contains Label -->
   <string name="fso_properties_dialog_contains">Містить:</string>
   <!-- Fso Properties Dialog - Last Accessed Time Label -->
@@ -269,13 +269,13 @@
   <string name="fso_failed_to_allow_media_scan">Не вдалось дозволити сканування</string>
   <string name="fso_failed_to_prevent_media_scan">Не вдалось уникнути сканування</string>
   <string name="fso_delete_nomedia_dir_title">Видалити папку .nomedia</string>
-  <string name="fso_delete_nomedia_dir_body">Ця папка містить папку .nomedia.\n\nВидали її разом зі змістом?</string>
+  <string name="fso_delete_nomedia_dir_body">Ця папка містить папку .nomedia.\n\nВидалити її разом зі змістом?</string>
   <string name="fso_delete_nomedia_non_empty_title">Видалити файл .nomedia</string>
   <string name="fso_delete_nomedia_non_empty_body">Ця папка містить не пустий файл .nomedia.\n\nВи хочете її видалити?</string>
   <!-- History - History activity title -->
   <string name="history">Історія</string>
   <!-- History - The history is empty -->
-  <string name="msgs_history_empty">Історія пуста</string>
+  <string name="msgs_history_empty">Історія порожня.</string>
   <!-- History - The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">Невідомий пункт історії</string>
   <!-- Search - Search activity title -->
@@ -309,7 +309,7 @@
   <!-- Editor - Invalid file message -->
   <string name="editor_invalid_file_msg">Неприпустимий файл</string>
   <!-- Editor - File not found message -->
-  <string name="editor_file_not_found_msg">Файл не найдено</string>
+  <string name="editor_file_not_found_msg">Файл не знайдено.</string>
   <!-- Editor - File size exceed the limit -->
   <string name="editor_file_exceed_size_msg">Файл занадто великий для відкриття на цьому пристрої.</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog title -->
@@ -351,7 +351,7 @@
   <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Відносні шляхи не допускаються</string>
   <!-- Initial directory error message -->
-  <string name="initial_directory_error_msg">При установці початкової папки виникла помилка.</string>
+  <string name="initial_directory_error_msg">При встановленні початкової папки виникла помилка.</string>
   <!-- Menu - Navigation - Search -->
   <string name="menu_search">Пошук</string>
   <!-- Menu - Navigation - Settings -->
@@ -371,7 +371,7 @@
   <!-- Waiting dialog - Performing operation message -->
   <string name="waiting_dialog_msg">Виконання операції\u2026</string>
   <!-- Waiting dialog - Copying title -->
-  <string name="waiting_dialog_copying_title">Копіюваня\u2026</string>
+  <string name="waiting_dialog_copying_title">Копіювання\u2026</string>
   <!-- Waiting dialog - Copying message -->
   <string name="waiting_dialog_copying_msg"><![CDATA[<b>З</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>В</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog - Moving title -->
@@ -461,9 +461,9 @@
   <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
   <string name="actions_ask_undone_operation_msg">Ця дія безповоротна. Ви бажаєте продовжити?</string>
   <!-- Enter Name Dialog - Label -->
-  <string name="input_name_dialog_label">Ім`я:</string>
+  <string name="input_name_dialog_label">Ім\'я:</string>
   <!-- Enter Name Dialog - Message - Empty name -->
-  <string name="input_name_dialog_message_empty_name">Ім`я не може бути пустим</string>
+  <string name="input_name_dialog_message_empty_name">Ім\'я не може бути пустим.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
   <string name="input_name_dialog_message_invalid_path_name">Неприпустиме ім’я. Не можна використовувати символи: \'<xliff:g id="invalid_characters">%1$s</xliff:g>\'</string>
   <!-- Enter Name Dialog - Message - Invalid name length -->
@@ -638,7 +638,7 @@
   <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">Відкладена синхронізація</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
-  <string name="pref_secure_storage_delayed_sync_summary">Синхронізація безпечної файлової системи може займати більше часу. Увімкніть цей параметр, для швидшої відповіді після кожної операції, синхронізація виконується коли файлова система невикористовується. За рахунок можливої втрати інформації синхронізація не відбувається, якщо програма припиняє роботу.</string>
+  <string name="pref_secure_storage_delayed_sync_summary">Синхронізація безпечної файлової системи може займати більше часу. Увімкніть цей параметр, для швидшої відповіді після кожної операції, синхронізація виконується коли файлова система не використовується. За рахунок можливої втрати інформації синхронізація не відбувається, якщо програма припиняє роботу.</string>
   <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">Змінити пароль</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
@@ -648,7 +648,7 @@
   <!-- Preferences - Editor - No suggestions -->
   <string name="pref_no_suggestions">Без припущень</string>
   <!-- Preferences - Editor - No suggestions summary -->
-  <string name="pref_no_suggestions_desc">Не відображити припущення при редагуванні файлів</string>
+  <string name="pref_no_suggestions_desc">Не відображати словник пропозицій під час редагування файлу</string>
   <!-- Preferences - Editor - Word wrap -->
   <string name="pref_word_wrap">Перенесення слів</string>
   <!-- Preferences - Editor - Hex dump -->
@@ -746,7 +746,7 @@
   <!-- Secure Storage unlock validation, length -->
   <string name="secure_storage_unlock_validation_length">Пароль повинен мати принаймні <xliff:g id="characters">%1$d</xliff:g> символів.</string>
   <!-- Secure Storage unlock validation, equal -->
-  <string name="secure_storage_unlock_validation_equals">Паролі не співпадають.</string>
+  <string name="secure_storage_unlock_validation_equals">Паролі не збігаються.</string>
   <!-- Secure storage open file warning -->
   <string name="secure_storage_open_file_warning">Файл буде скопійовано до тимчасового не шифрованого сховища. Яке буде очищено через годину.</string>
   <!-- Print messages -->
@@ -759,13 +759,13 @@
   <!-- Print footer -->
   <string name="print_document_footer">Сторінка <xliff:g id="page_number">%1$s</xliff:g></string>
   <!-- Security - Extract relative or absolute files -->
-  <string name="security_warning_extract">Увага!\n\nВидобування архіва з відносними або абсолютними шляхами може пошкодити пристрій шляхом перезапису системних файлів.\n\nВи дісно бажаєте продовжити?</string>
+  <string name="security_warning_extract">Увага!\n\nВидобування архіву з відносними або абсолютними шляхами може пошкодити пристрій шляхом перезапису системних файлів.\n\nВи дійсно бажаєте продовжити?</string>
   <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">Список змін</string>
   <!-- Welcome Dialog - Title -->
   <string name="welcome_title">Ласкаво просимо!</string>
   <!-- Welcome Dialog - Message -->
-  <string name="welcome_msg">Ласкаво просимо до файлового менеджера LineageOS.\n\n Цей застосунок допоможе вам отримати доступ до файлової системи і виконувати операції, які можуть вивести з ладу ваш пристрій. Для запобігання цього, він запуститься в безпечному режимі з мінімальними привілеями. \n\n Ви можете отримати доступ до розширених функцій з повними правами в налаштуваннях. Це ваша відповідальність. Переконайтеся, щоб ваші дії не зашкодили файловій системі.\n\nКоманда LineageOS\n</string>
+  <string name="welcome_msg">Ласкаво просимо до файлового менеджера LineageOS.\n\nЦей додаток допоможе вам отримати доступ до файлової системи і виконувати операції, які можуть вивести з ладу ваш пристрій. Для запобігання цього, він запуститься в безпечному режимі з мінімальними привілеями.\n\nВи можете отримати доступ до розширених функцій з повними правами в налаштуваннях. Це ваша відповідальність. Переконайтеся, щоб ваші дії не зашкодили файловій системі.\n\nКоманда LineageOS</string>
   <string name="activity_not_found_exception">Не можу знайти додаток, щоб відкрити цей файл.</string>
   <string name="storage_permissions_denied">Для перегляду файловому менеджеру потрібен доступ до сховища.</string>
   <string name="storage_permissions_explanation">Перейдіть в налаштування програми і натисніть \"Дозволи\" для включення дозволу.</string>
