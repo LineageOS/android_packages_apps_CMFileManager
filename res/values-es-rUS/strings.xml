@@ -71,25 +71,25 @@
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Confirmar cambio</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
-  <string name="msgs_change_to_prompt_access_mode_msg">Imposible ejecutar en modo administrador. Cambiando a modo seguro.\n\n¿Continuar?</string>
+  <string name="msgs_change_to_prompt_access_mode_msg">Imposible ejecutar en modo de Superusuario. Cambiando a modo seguro.\n\n¿Continuar?</string>
   <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">Imposible obtener los permisos necesarios para esta función.</string>
   <!-- The message shown when an allocation of a privileged console fails, and a non
          privileged is allocated -->
-  <string name="msgs_privileged_console_alloc_failed">Imposible ejecutar en modo administrador. Cambiando a modo seguro.</string>
+  <string name="msgs_privileged_console_alloc_failed">Imposible ejecutar en modo de Superusuario. Cambiando a modo seguro.</string>
   <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Esta opción no se pudo aplicar o guardar.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">La carpeta inicial \'<xliff:g id="initial_dir">%1$s</xliff:g>\' es inválida. Cambiando a la carpeta raíz.</string>
   <!-- Root is not available message -->
-  <string name="root_not_available_msg">El permiso administrativo no está disponible en este dispositivo. No se puede realizar la operación.</string>
+  <string name="root_not_available_msg">El Superusuario no está disponible en este dispositivo. No se puede realizar la operación.</string>
   <!-- Success -->
   <string name="msgs_success">La operación se completó correctamente.</string>
   <!-- Unknown error -->
   <string name="msgs_unknown">Se detectó un error. La operación no se completó.</string>
   <!-- When an operation requires elevated privileged (normally caused for the use of a
          non-privileged console) -->
-  <string name="msgs_insufficient_permissions">Esta operación requiere permisos elevados. Intenta cambiar a modo administrador.</string>
+  <string name="msgs_insufficient_permissions">Esta operación requiere permisos elevados. Intenta cambiar a modo de Superusuario.</string>
   <!-- When an operation fails because the device has run out of storage. -->
   <string name="msgs_no_disk_space">La operación falló porque no hay espacio suficiente en el dispositivo.</string>
   <!-- The file or directory was not found -->
@@ -118,13 +118,13 @@
   <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">Pulsa de nuevo para salir.</string>
   <!-- There is no registered app that can handle the mime-type -->
-  <string name="msgs_not_registered_app">No hay ninguna aplicación registrada para el tipo de archivo seleccionado.</string>
+  <string name="msgs_not_registered_app">Sin aplicación registrada para el tipo de archivo seleccionado.</string>
   <!-- Overwrite files? -->
   <string name="msgs_overwrite_files">Algunos de los archivos ya existen en la carpeta de destino.\n\n¿Sobrescribir?</string>
   <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">No se pudo asociar la acción a la aplicación.</string>
   <!-- An operation requires elevated privileged. Ask the user. -->
-  <string name="advise_insufficient_permissions">La operación requiere privilegios elevados.\n\n¿Quieres cambiar a modo administrador?</string>
+  <string name="advise_insufficient_permissions">La operación requiere privilegios elevados.\n\n¿Quieres cambiar a modo de Superusuario?</string>
   <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Carpeta principal</string>
   <!-- External storage descripton -->
@@ -184,13 +184,13 @@
   <!-- Navigation View - View - Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">Mostrar enlaces simbólicos</string>
   <!-- Filesystem Info (no data). Dialog title -->
-  <string name="filesystem_info_warning_title">No hay información</string>
+  <string name="filesystem_info_warning_title">Sin información</string>
   <!-- Filesystem Info (no data). Dialog message -->
-  <string name="filesystem_info_warning_msg">No hay información disponible para el sistema de archivos.</string>
+  <string name="filesystem_info_warning_msg">Sin información disponible para el sistema de archivos.</string>
   <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">El sistema de archivos no puede ser montado/desmontado.</string>
   <!-- Filesystem Info - Not allowed message -->
-  <string name="filesystem_info_mount_not_allowed_msg">La operación de montaje del sistema de archivos no está permitida en modo seguro. Pulsa para cambiar a modo administrador.</string>
+  <string name="filesystem_info_mount_not_allowed_msg">La operación de montaje del sistema de archivos no está permitida en modo seguro. Pulsa para cambiar a modo de Superusuario.</string>
   <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">No se pudo realizar la operación de montaje del sistema de archivos. Algunos sistemas de archivos, como las tarjetas SD, no pueden ser montados/desmontados porque están diseñados como sistemas de archivos de solo lectura.</string>
   <!-- Filesystem Info Dialog - Title -->
@@ -220,7 +220,7 @@
   <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Gratuito:</string>
   <!-- Fso Properties - Not allowed message -->
-  <string name="fso_properties_permissions_not_allowed_msg">Las operaciones de permisos no están permitidas en modo seguro. Pulsa para cambiar a modo administrador.</string>
+  <string name="fso_properties_permissions_not_allowed_msg">Las operaciones de permisos no están permitidas en modo seguro. Pulsa para cambiar a modo de Superusuario.</string>
   <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">Error de operación de cambio de propietario.\n\nPor motivos de seguridad, algunos sistemas de archivos, como las tarjetas SD, no permiten el cambio de propietario.</string>
   <!-- Fso Properties - Failed to change group to fso -->
@@ -598,9 +598,9 @@
   <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">Modo confirmación\n\nLa aplicación está ejecutándose con acceso completo al sistema de archivos pero pedirá una autorización antes de realizar acciones privilegiadas</string>
   <!-- Preferences - General - Root access mode -->
-  <string name="pref_access_mode_root">Modo administrador (root)</string>
+  <string name="pref_access_mode_root">Modo de Superusuario (root)</string>
   <!-- Preferences - General - Root access mode summary -->
-  <string name="pref_access_mode_root_summary">Modo administrador (root)\n\n¡Aviso! Este modo permite operaciones que podrían dañar el dispositivo. Es tu responsabilidad asegurarte que la operación sea segura</string>
+  <string name="pref_access_mode_root_summary">Modo de Superusuario (root)\n\n¡Aviso! Este modo permite operaciones que podrían dañar el dispositivo. Es tu responsabilidad asegurarte que la operación sea segura</string>
   <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">Restringir acceso a usuarios</string>
   <!-- Preferences - General - Restrict secondary users access summary -->

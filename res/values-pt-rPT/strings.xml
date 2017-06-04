@@ -689,8 +689,8 @@
   <!-- Themes - Default theme author -->
   <string name="themes_author">LineageOS</string>
   <!-- Navigation drawer -->
-  <string name="drawer_open">Abrir gaveta de navegação</string>
-  <string name="drawer_close">Fechar gaveta de navegação</string>
+  <string name="drawer_open">Abrir painel de navegação</string>
+  <string name="drawer_close">Fechar painel de navegação</string>
   <!-- ColorPickerDialog -->
   <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">Transparência</string>

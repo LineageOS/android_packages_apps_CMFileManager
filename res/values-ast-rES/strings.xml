@@ -31,8 +31,6 @@
   <!-- Devices types -->
   <string name="device_blockdevice">Preséu de bloques</string>
   <string name="device_characterdevice">Preséu de caráuteres</string>
-  <string name="device_namedpipe">Tubería nomada</string>
-  <string name="device_domainsocket">Socket de dominiu</string>
   <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
@@ -44,6 +42,7 @@
   <string name="select">Esbillar</string>
   <!-- The root directory name -->
   <!-- The search result name -->
+  <string name="search_result_name">Guetar: <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Loading waiting message -->
   <string name="loading_message">Cargando\u2026</string>
   <!-- Computing message -->

@@ -583,7 +583,7 @@
   <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Beregn mappe-statistikk</string>
   <!-- Preferences - General - Compute folder statistics summary on -->
-  <string name="pref_compute_folder_statistics_on">Advarsel! Beregning av mappen-statistikk er kostbart i tid og systemressurser</string>
+  <string name="pref_compute_folder_statistics_on">Advarsel! Beregning av mappe-statistikk er kostbart i tid og systemressurser</string>
   <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">Forhåndsvisning</string>
   <!-- Preferences - General - Display thumbs summary -->

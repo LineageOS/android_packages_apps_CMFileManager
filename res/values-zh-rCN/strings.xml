@@ -278,7 +278,7 @@
   <string name="fso_delete_nomedia_non_empty_title">删除 .nomedia 文件</string>
   <string name="fso_delete_nomedia_non_empty_body">此目录包含这一个非空白的 .nomedia 文件。\n\n您确定要删除此文件吗？</string>
   <!-- History - History activity title -->
-  <string name="history">历史</string>
+  <string name="history">历史记录</string>
   <!-- History - The history is empty -->
   <string name="msgs_history_empty">历史记录为空。</string>
   <!-- History - The history reference is not in the actual history list -->
@@ -362,7 +362,7 @@
   <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">设置</string>
   <!-- Menu - History - Clear history -->
-  <string name="menu_clear_history">清除历史</string>
+  <string name="menu_clear_history">清除历史记录</string>
   <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">没有建议</string>
   <!-- Menu - Editor - Word wrap -->
