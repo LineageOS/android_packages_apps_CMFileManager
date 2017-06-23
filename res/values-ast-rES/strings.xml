@@ -51,7 +51,9 @@
   <!-- Error message -->
   <string name="error_message">Fallu.</string>
   <!-- Copy text content description -->
+  <string name="copy_text_cd">Toca pa copiar el testu al cartafueyu</string>
   <!-- Copy text content message -->
+  <string name="copy_text_msg">Copióse\'l testu nel cartafueyu</string>
   <!-- Warning dialog title -->
   <string name="warning_title">Alvertencia</string>
   <!-- Error dialog title -->
@@ -69,6 +71,7 @@
   <!-- The message shown when an allocation of a privileged console fails, and a non
          privileged is allocated -->
   <!-- The selected setting was not applied or stored -->
+  <string name="msgs_settings_save_failure">L\'axuste nun pudo aplicase o atroxase.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
   <!-- Root is not available message -->
   <!-- Success -->
@@ -112,6 +115,7 @@
   <!-- ActionBar Buttons - Layout Mode -->
   <!-- ActionBar Buttons - Other View Options -->
   <!-- ActionBar Buttons - Done -->
+  <string name="actionbar_button_selection_done_cd">Fecho</string>
   <!-- ActionBar Buttons - Actions -->
   <string name="actionbar_button_actions_cd">Aiciones</string>
   <!-- ActionBar Buttons - Search -->
@@ -134,6 +138,7 @@
   <string name="layout_icons">Iconos</string>
   <!-- Navigation View - Layout - Simple -->
   <!-- Navigation View - Layout - Details -->
+  <string name="layout_details">Detalles</string>
   <!-- Navigation View - View - Show folders first -->
   <!-- Navigation View - View - Show hidden files option -->
   <!-- Navigation View - View - Show system files option -->
@@ -184,6 +189,7 @@
   <!-- Fso Properties Dialog - Size Label -->
   <string name="fso_properties_dialog_size">Tamañu:</string>
   <!-- Fso Properties Dialog - Contains Label -->
+  <string name="fso_properties_dialog_contains">Contién:</string>
   <!-- Fso Properties Dialog - Last Accessed Time Label -->
   <!-- Fso Properties Dialog - Last Modified Time Label -->
   <!-- Fso Properties Dialog - Last Changed Time -->
