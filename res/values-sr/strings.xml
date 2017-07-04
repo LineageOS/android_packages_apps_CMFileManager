@@ -128,9 +128,9 @@
   <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Родитељски фолдер</string>
   <!-- External storage descripton -->
-  <string name="external_storage">Спољашње складиште</string>
+  <string name="external_storage">Екстерна меморија</string>
   <!-- Usb storage descripton -->
-  <string name="usb_storage">USB складиште</string>
+  <string name="usb_storage">USB меморија</string>
   <!-- ActionBar Buttons - FileSystem -->
   <string name="actionbar_button_filesystem_cd">Информације о систему фајлова</string>
   <!-- ActionBar Buttons - Sort Mode -->
@@ -148,7 +148,7 @@
   <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">Више опција</string>
   <!-- ActionBar Buttons - Storage volumes -->
-  <string name="actionbar_button_storage_cd">Складишта</string>
+  <string name="actionbar_button_storage_cd">Меморијски уређаји</string>
   <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">Сачувај</string>
   <!-- ActionBar Buttons - Print -->
@@ -269,7 +269,7 @@
   <string name="fso_properties_dialog_include_in_media_scan">Прескочи скенирање медија:</string>
   <string name="fso_failed_to_allow_media_scan">Неуспело дозвољавање скенирања медија</string>
   <string name="fso_failed_to_prevent_media_scan">Неуспело искључивање скенирања медија</string>
-  <string name="fso_delete_nomedia_dir_title">Избриши .nomedia директоријум</string>
+  <string name="fso_delete_nomedia_dir_title">Избриши фасциклу .nomedia</string>
   <string name="fso_delete_nomedia_dir_body">Овај директоријум садржи .nomedia директоријум.\n\nЖелиш ли да га избришеш заједно са садржајем?</string>
   <string name="fso_delete_nomedia_non_empty_title">Избриши .nomedia фајл</string>
   <string name="fso_delete_nomedia_non_empty_body">Овај директоријум садржи не-празан .nomedia фајл.\n\nЖелиш ли да га избришеш?</string>
@@ -304,7 +304,7 @@
   <!-- Picker Activity -->
   <!-- Picker Activity - Dialog title -->
   <string name="picker_title">Изабери фајл</string>
-  <string name="directory_picker_title">Изабери директоријум</string>
+  <string name="directory_picker_title">Избор фасцикле</string>
   <!-- Editor - Editor activity title -->
   <string name="editor">Уређивач</string>
   <!-- Editor - Invalid file message -->
@@ -334,9 +334,9 @@
   <!-- Bookmarks - Bookmark name - System folder -->
   <string name="bookmarks_system_folder">Системски фолдер</string>
   <!-- Bookmarks - Bookmark name - Secure storage -->
-  <string name="bookmarks_secure">Безбедно складиште</string>
+  <string name="bookmarks_secure">Безбедни меморијски простор</string>
   <!-- Bookmarks - Bookmark name - Remote storage -->
-  <string name="bookmarks_remote">Удаљено складиште</string>
+  <string name="bookmarks_remote">Удаљени меморијски простор</string>
   <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
   <string name="bookmarks_button_config_cd">Подеси почетни фолдер.</string>
   <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
@@ -555,7 +555,7 @@
   <!-- Preferences - Search title -->
   <string name="pref_search">Опције претраге</string>
   <!-- Preferences - Storage title -->
-  <string name="pref_storage">Опције складишта</string>
+  <string name="pref_storage">Опције меморијског простора</string>
   <!-- Preferences - Editor title -->
   <string name="pref_editor">Опције уређивача</string>
   <!-- Preferences - Themes title -->
@@ -580,7 +580,7 @@
   <!-- Preferences - General - Compute folder statistics title -->
   <string name="pref_compute_folder_statistics">Рачунај статистике фолдера</string>
   <!-- Preferences - General - Compute folder statistics summary on -->
-  <string name="pref_compute_folder_statistics_on">Упозорење! Рачунање статистика фолдера захтева време и системске ресурсе</string>
+  <string name="pref_compute_folder_statistics_on">Упозорење! Анализа садржаја фасцикли може повећати време обраде њихових својстава.</string>
   <!-- Preferences - General - Display thumbs -->
   <string name="pref_display_thumbs">Преглед</string>
   <!-- Preferences - General - Display thumbs summary -->
@@ -603,7 +603,7 @@
   <string name="pref_access_mode_prompt_summary">Запамти режим корисника\n\nПрограм ради са пуним приступом систему фајлова, али ће питати за дозволу пре извршавања привилегованих акција
   </string>
   <!-- Preferences - General - Root access mode -->
-  <string name="pref_access_mode_root">Режим Root-а</string>
+  <string name="pref_access_mode_root">Режим суперкорисника</string>
   <!-- Preferences - General - Root access mode summary -->
   <string name="pref_access_mode_root_summary">Режим Root-а\n\nУпозорење! Овај режим омогућава операције које могу да покваре уређај. Твоја је одговорност да до тога не дође
   </string>
@@ -642,7 +642,7 @@
   <!-- Preferences - Search - Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">Сви сачувани услови претраге су уклоњени</string>
   <!-- Preferences - Storage - Secure Storage category -->
-  <string name="pref_secure_storage_category">Безбедно складиште</string>
+  <string name="pref_secure_storage_category">Безбедни меморијски простор</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
   <string name="pref_secure_storage_delayed_sync_title">Одложена синхронизација</string>
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
@@ -650,7 +650,7 @@
   <!-- Preferences - Storage - Secure Storage - Change password title -->
   <string name="pref_secure_storage_reset_password_title">Промени лозинку</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
-  <string name="pref_secure_storage_delete_storage_title">Обриши складиште</string>
+  <string name="pref_secure_storage_delete_storage_title">Избриши меморијски простор</string>
   <!-- Preferences - Editor - Behaviour category -->
   <string name="pref_editor_behaviour_category">Понашање</string>
   <!-- Preferences - Editor - No suggestions -->
@@ -718,13 +718,13 @@
   <string name="ash_variable">Варијабла</string>
   <!-- Secure Storage -->
   <!-- Secure Storage dialog title - Unlock -->
-  <string name="secure_storage_unlock_title">Откључај сигурно складиште</string>
+  <string name="secure_storage_unlock_title">Откључај безбедни меморијски простор</string>
   <!-- Secure Storage dialog title - Create -->
-  <string name="secure_storage_create_title">Направи сигурно складиште</string>
+  <string name="secure_storage_create_title">Направи безбедни меморијски простор</string>
   <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">Ресетујте лозинку</string>
   <!-- Secure Storage dialog title - Delete -->
-  <string name="secure_storage_delete_title">Обриши сигурно складиште</string>
+  <string name="secure_storage_delete_title">Избриши безбедни меморијски простор</string>
   <!-- Secure Storage unlock dialog message (secure storage exists) -->
   <string name="secure_storage_unlock_key_prompt_msg">Укуцајте лозинку за откључавање безбедног складишта фајл система.</string>
   <!-- Secure Storage unlock dialog message (new secure storage) -->
