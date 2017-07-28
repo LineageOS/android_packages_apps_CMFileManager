@@ -31,7 +31,7 @@
   <!-- Devices types -->
   <string name="device_blockdevice">Cihazı engelle</string>
   <string name="device_characterdevice">Karakter cihazı</string>
-  <string name="device_namedpipe">İsimli boru</string>
+  <string name="device_namedpipe">Adlandırılmış kanal</string>
   <string name="device_domainsocket">Domain soketi</string>
   <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
@@ -71,27 +71,27 @@
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Geçişi onayla</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
-  <string name="msgs_change_to_prompt_access_mode_msg">Root Erişimi modunda çalışamıyor. Güvenli Moda geçiliyor.\n\nBu değişimi onaylıyor musunuz?</string>
+  <string name="msgs_change_to_prompt_access_mode_msg">Kök Erişimi modunda çalışamıyor. Güvenli Moda geçiliyor.\n\nBu değişimi onaylıyor musunuz?</string>
   <!-- A console couldn't be created - Without privileges, the app won't work -->
   <string name="msgs_cant_create_console">İşlev için gerekli yetkiler alınamadı.</string>
   <!-- The message shown when an allocation of a privileged console fails, and a non
          privileged is allocated -->
-  <string name="msgs_privileged_console_alloc_failed">Root Erişimi modunda çalışamıyor. Güvenli Moda geçiliyor.</string>
+  <string name="msgs_privileged_console_alloc_failed">Kök Erişimi modunda çalışamıyor. Güvenli Moda geçiliyor.</string>
   <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Ayar uygulanamadı ya da saklanamadı.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">Başlangıç klasörü \"<xliff:g id="initial_dir">%1$s</xliff:g>\" geçersiz. Kök klasöre geçiliyor.</string>
   <!-- Root is not available message -->
-  <string name="root_not_available_msg">Bu cihazda root erişimi yok. Bu işlem gerçekleştirilemez.</string>
+  <string name="root_not_available_msg">Bu cihazda kök erişimi yok. Bu işlem gerçekleştirilemez.</string>
   <!-- Success -->
   <string name="msgs_success">İşlem başarıyla tamamlandı.</string>
   <!-- Unknown error -->
   <string name="msgs_unknown">Bir hata algılandı. İşlem tamamlanamadı.</string>
   <!-- When an operation requires elevated privileged (normally caused for the use of a
          non-privileged console) -->
-  <string name="msgs_insufficient_permissions">Bu işlem arttırılmış izinler istiyor. Root Erişimi moduna geçmeyi deneyin.</string>
+  <string name="msgs_insufficient_permissions">Bu işlem arttırılmış izinler istiyor. Kök Erişimi moduna geçmeyi deneyin.</string>
   <!-- When an operation fails because the device has run out of storage. -->
-  <string name="msgs_no_disk_space">Cihazda yeterli bellek alanı kalmadığından bu işlem gerçekleşmedi.</string>
+  <string name="msgs_no_disk_space">Cihazda boş alan olmadığından bu işlem başarısız oldu.</string>
   <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">Dosya veya klasör bulunamadı.</string>
   <!-- The command reference couldn't be created (not found or invalid definition)
@@ -124,7 +124,7 @@
   <!-- The association of an action to the app failed -->
   <string name="msgs_action_association_failed">Eylemi uygulamayla ilişkilendirme başarısız oldu.</string>
   <!-- An operation requires elevated privileged. Ask the user. -->
-  <string name="advise_insufficient_permissions">İşlem arttırılmış izinler gerektiriyor.\n\nRoot Erişimi moduna geçmek istiyor musunuz?</string>
+  <string name="advise_insufficient_permissions">İşlem arttırılmış izinler gerektiriyor.\n\nKök Erişimi moduna geçmek istiyor musunuz?</string>
   <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Üst klasör</string>
   <!-- External storage descripton -->
@@ -190,7 +190,7 @@
   <!-- Filesystem Info - Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">Dosya sistemi bağlanamadı/çıkarılamadı.</string>
   <!-- Filesystem Info - Not allowed message -->
-  <string name="filesystem_info_mount_not_allowed_msg">Güvenli modda dosya sistemi bağlama işlemlerine izin verilmiyor. Root Erişim moduna geçmek için dokunun.</string>
+  <string name="filesystem_info_mount_not_allowed_msg">Güvenli modda dosya sistemi bağlama işlemlerine izin verilmiyor. Kök Erişimi moduna geçmek için dokunun.</string>
   <!-- Filesystem Info - Mount failed -->
   <string name="filesystem_info_mount_failed_msg">Dosya sistemi bağlama başarısız oldu. SD kartlar gibi bazı dosya sistemleri bağlanamaz/çıkarılamaz çünkü sadece okunabilir dosya sistemi olarak dahil edilmişlerdir.</string>
   <!-- Filesystem Info Dialog - Title -->
@@ -220,7 +220,7 @@
   <!-- Filesystem Info Dialog - Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Boş:</string>
   <!-- Fso Properties - Not allowed message -->
-  <string name="fso_properties_permissions_not_allowed_msg">İzin işlemlerine Güvenli modda izin verilmiyor. Root Erişimi moduna geçmek için dokunun.</string>
+  <string name="fso_properties_permissions_not_allowed_msg">İzin işlemlerine Güvenli modda izin verilmiyor. Kök Erişimi moduna geçmek için dokunun.</string>
   <!-- Fso Properties - Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">Sahip değiştirme işlemi başarısız oldu.\n\nGüvenlik sebebiyle bazı dosya sistemleri, SD kartlar gibi, sahip değiştirmeye izin vermez.</string>
   <!-- Fso Properties - Failed to change group to fso -->
@@ -598,9 +598,9 @@
   <!-- Preferences - General - Prompt user mode summary -->
   <string name="pref_access_mode_prompt_summary">Kullanıcıya Sor modu\n\nUygulama dosya sistemine tam izinle çalışır fakat yetki isteyen işlemleri kullanıcıya sorar.</string>
   <!-- Preferences - General - Root access mode -->
-  <string name="pref_access_mode_root">Root Erişimi modu</string>
+  <string name="pref_access_mode_root">Kök Erişimi modu</string>
   <!-- Preferences - General - Root access mode summary -->
-  <string name="pref_access_mode_root_summary">Root Erişimi modu\n\nDikkat! Bu mod cihazınıza zarar verebilecek işlemlere izin verir. İşlemlerin güvenli olduğuna karar vermek sizin sorumluluğunuzdadır.</string>
+  <string name="pref_access_mode_root_summary">Kök Erişimi modu\n\nDikkat! Bu mod cihazınıza zarar verebilecek işlemlere izin verir. İşlemlerin güvenli olduğuna karar vermek sizin sorumluluğunuzdadır</string>
   <!-- Preferences - General - Restrict secondary users access title -->
   <string name="pref_restrict_secondary_users_access_title">Kullanıcı erişimini sınırlandır</string>
   <!-- Preferences - General - Restrict secondary users access summary -->
@@ -640,7 +640,7 @@
   <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
   <string name="pref_secure_storage_delayed_sync_summary">Güvenli dosya sistemlerinin eşitlenmesi riskli bir işlemdir. Her işlemden sonra daha hızlı süreler için bu seçeneği etkinleştirin. Eşitleme dosya sistemi kullanılmazken yapılır. Ancak eğer uygulama çökerse eşitlenmeyi bekleyen bilgiler kaybolabilir.</string>
   <!-- Preferences - Storage - Secure Storage - Change password title -->
-  <string name="pref_secure_storage_reset_password_title">Şifreyi değiştir</string>
+  <string name="pref_secure_storage_reset_password_title">Parolayı değiştir</string>
   <!-- Preferences - Storage - Secure Storage - Delete storage title -->
   <string name="pref_secure_storage_delete_storage_title">Depolamayı sil</string>
   <!-- Preferences - Editor - Behaviour category -->
@@ -688,8 +688,8 @@
   <!-- Themes - Default theme author -->
   <string name="themes_author">LineageOS</string>
   <!-- Navigation drawer -->
-  <string name="drawer_open">Gezinti çekmecesini aç</string>
-  <string name="drawer_close">Gezinti çekmecesini kapat</string>
+  <string name="drawer_open">Gezinme çekmecesini aç</string>
+  <string name="drawer_close">Gezinme çekmecesini kapat</string>
   <!-- ColorPickerDialog -->
   <!-- The text of the alpha slider control -->
   <string name="color_picker_alpha_slider_text">Alfa</string>
@@ -710,29 +710,29 @@
   <string name="ash_variable">Değişken</string>
   <!-- Secure Storage -->
   <!-- Secure Storage dialog title - Unlock -->
-  <string name="secure_storage_unlock_title">Güvenli belleğin kilidini aç</string>
+  <string name="secure_storage_unlock_title">Güvenli depolama alanının kilidini aç</string>
   <!-- Secure Storage dialog title - Create -->
-  <string name="secure_storage_create_title">Güvenli bellek oluştur</string>
+  <string name="secure_storage_create_title">Güvenli depolama alanı oluştur</string>
   <!-- Secure Storage dialog title - Reset -->
   <string name="secure_storage_reset_title">Parolayı sıfırla</string>
   <!-- Secure Storage dialog title - Delete -->
-  <string name="secure_storage_delete_title">Güvenli belleği sil</string>
+  <string name="secure_storage_delete_title">Güvenli depolama alanını sil</string>
   <!-- Secure Storage unlock dialog message (secure storage exists) -->
-  <string name="secure_storage_unlock_key_prompt_msg">Güvenli depolama dosya sistemini açmak için şifreyi girin.</string>
+  <string name="secure_storage_unlock_key_prompt_msg">Güvenli depolama dosya sisteminin kilidini açmak için parolayı girin.</string>
   <!-- Secure Storage unlock dialog message (new secure storage) -->
-  <string name="secure_storage_unlock_key_new_msg">Güvenli depolama dosya sistemini kilitlemek için bir şifre girin.</string>
+  <string name="secure_storage_unlock_key_new_msg">Güvenli depolama dosya sistemini korumak için bir parola yazın.</string>
   <!-- Secure Storage unlock dialog message (reset the current password) -->
-  <string name="secure_storage_unlock_key_reset_msg">Güvenli depolama dosya sistemini sıfırlamak için mevcut ve yeni şifrelerinizi girin.</string>
+  <string name="secure_storage_unlock_key_reset_msg">Güvenli depolama dosya sistemini sıfırlamak için mevcut ve yeni şifreleri yazın.</string>
   <!-- Secure Storage unlock dialog message (delete the secure storage) -->
-  <string name="secure_storage_unlock_key_delete_msg">Güvenli depolama dosya sistemini silmek için mevcut şifrenizi girin.</string>
+  <string name="secure_storage_unlock_key_delete_msg">Güvenli depolama dosya sistemini silmek için mevcut parolayı yazın.</string>
   <!-- Secure Storage unlock dialog old key title -->
-  <string name="secure_storage_unlock_old_key_title">Eski şifre:</string>
+  <string name="secure_storage_unlock_old_key_title">Eski parola:</string>
   <!-- Secure Storage unlock dialog key title -->
-  <string name="secure_storage_unlock_new_key_title">Yeni Şifre:</string>
+  <string name="secure_storage_unlock_new_key_title">Yeni Parola:</string>
   <!-- Secure Storage unlock dialog key title -->
-  <string name="secure_storage_unlock_key_title">Şifre:</string>
+  <string name="secure_storage_unlock_key_title">Parola:</string>
   <!-- Secure Storage unlock dialog repeat key title-->
-  <string name="secure_storage_unlock_repeat_title">Şifreyi tekrarla:</string>
+  <string name="secure_storage_unlock_repeat_title">Parolayı tekrarla:</string>
   <!-- Secure Storage create button -->
   <string name="secure_storage_create_button">Oluştur</string>
   <!-- Secure Storage unlock button -->
@@ -742,9 +742,9 @@
   <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Sil</string>
   <!-- Secure Storage unlock failed toast -->
-  <string name="secure_storage_unlock_failed">Depolama kilidi açılamıyor</string>
+  <string name="secure_storage_unlock_failed">Depolama alanı kilidi açılamıyor</string>
   <!-- Secure Storage unlock validation, length -->
-  <string name="secure_storage_unlock_validation_length">Şifre en az <xliff:g id="characters">%1$d</xliff:g> karakter olmalı.</string>
+  <string name="secure_storage_unlock_validation_length">Parola en az <xliff:g id="characters">%1$d</xliff:g> karakter olmalı.</string>
   <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">Parolalar uyuşmuyor.</string>
   <!-- Secure storage open file warning -->
