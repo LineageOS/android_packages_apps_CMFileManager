@@ -80,7 +80,7 @@
   <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">El ajuste no pudo ser aplicado ni guardado.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
-  <string name="msgs_settings_invalid_initial_directory">La carpeta inicial \'<xliff:g id="initial_dir">%1$s</xliff:g>\' no es válida. Cambiando a la carpeta raíz.</string>
+  <string name="msgs_settings_invalid_initial_directory">La carpeta inicial «<xliff:g id="initial_dir">%1$s</xliff:g>» es inválida. Cambiando a la carpeta raíz.</string>
   <!-- Root is not available message -->
   <string name="root_not_available_msg">El permiso administrativo no está disponible en este dispositivo. No se puede realizar la operación.</string>
   <!-- Success -->
@@ -307,7 +307,7 @@
   <!-- Editor - Editor activity title -->
   <string name="editor">Editor</string>
   <!-- Editor - Invalid file message -->
-  <string name="editor_invalid_file_msg">Archivo no válido.</string>
+  <string name="editor_invalid_file_msg">Archivo inválido.</string>
   <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">Archivo no encontrado.</string>
   <!-- Editor - File size exceed the limit -->
@@ -468,11 +468,11 @@
   <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">El nombre no puede quedar en blanco.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
-  <string name="input_name_dialog_message_invalid_path_name">Nombre inválido. Los caracteres \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' no están permitidos.</string>
+  <string name="input_name_dialog_message_invalid_path_name">Nombre inválido. Los caracteres «<xliff:g id="invalid_characters">%1$s</xliff:g>» no están permitidos.</string>
   <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">Límite máximo de caracteres alcanzado.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
-  <string name="input_name_dialog_message_invalid_name">Nombre no válido. Los nombres \'.\' y \'..\' no están permitidos.</string>
+  <string name="input_name_dialog_message_invalid_name">Nombre inválido. Los nombres «.» y «..» no están permitidos.</string>
   <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">El nombre ya existe.</string>
   <!-- Associations Dialog - Title -->

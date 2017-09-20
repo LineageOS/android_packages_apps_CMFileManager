@@ -154,21 +154,21 @@
   <!-- ActionBar Buttons - Print -->
   <string name="actionbar_button_print_cd">列印</string>
   <!-- Navigation View - Sort - Sort by name (ascending) -->
-  <string name="sort_by_name_asc">按名稱排列 ▲</string>
+  <string name="sort_by_name_asc">按名稱排列 \u25B2</string>
   <!-- Navigation View - Sort - Sort by name (descending) -->
-  <string name="sort_by_name_desc">按名稱排列 ▼</string>
+  <string name="sort_by_name_desc">按名稱排列 \u25BC</string>
   <!-- Navigation View - Sort - Sort by date (ascending) -->
-  <string name="sort_by_date_asc">按日期排列 ▲</string>
+  <string name="sort_by_date_asc">按日期排列 \u25B2</string>
   <!-- Navigation View - Sort - Sort by date (descending) -->
-  <string name="sort_by_date_desc">按日期排列 ▼</string>
+  <string name="sort_by_date_desc">按日期排列 \u25BC</string>
   <!-- Navigation View - Sort - Sort by size (ascending) -->
-  <string name="sort_by_size_asc">按大小排列 ▲</string>
+  <string name="sort_by_size_asc">按大小排列 \u25B2</string>
   <!-- Navigation View - Sort - Sort by size (descending) -->
-  <string name="sort_by_size_desc">按大小排列 ▼</string>
+  <string name="sort_by_size_desc">按大小排列 \u25BC</string>
   <!-- Navigation View - Sort - Sort by type (ascending) -->
   <string name="sort_by_type_asc">按類型排列 ▲</string>
   <!-- Navigation View - Sort - Sort by type (descending) -->
-  <string name="sort_by_type_desc">按類型排列 ▼</string>
+  <string name="sort_by_type_desc">按類型排列 \u25BC</string>
   <!-- Navigation View - Layout - Icons -->
   <string name="layout_icons">圖示</string>
   <!-- Navigation View - Layout - Simple -->

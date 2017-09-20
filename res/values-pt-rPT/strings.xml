@@ -701,7 +701,7 @@
   <!-- The label of the color input -->
   <string name="color_picker_color">Cor:</string>
   <!-- Android Syntax Highlight -->
-  <string name="ash_reset_color_scheme">Restaurar o esquema de cores de tema padrão</string>
+  <string name="ash_reset_color_scheme">Repor o esquema de cores de tema padrão</string>
   <string name="ash_text">Texto</string>
   <string name="ash_assignment">Atribuição</string>
   <string name="ash_singleline_comment">Comentar linha única</string>
@@ -739,7 +739,7 @@
   <!-- Secure Storage unlock button -->
   <string name="secure_storage_unlock_button">Desbloquear</string>
   <!-- Secure Storage reset button -->
-  <string name="secure_storage_reset_button">Redefinir</string>
+  <string name="secure_storage_reset_button">Repor</string>
   <!-- Secure Storage delete button -->
   <string name="secure_storage_delete_button">Eliminar</string>
   <!-- Secure Storage unlock failed toast -->

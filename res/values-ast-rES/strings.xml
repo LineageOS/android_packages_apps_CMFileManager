@@ -48,6 +48,7 @@
   <!-- Computing message -->
   <!-- Computing new line message -->
   <!-- Cancelled message -->
+  <string name="cancelled_message">Encaboxóse.</string>
   <!-- Error message -->
   <string name="error_message">Fallu.</string>
   <!-- Copy text content description -->
@@ -67,9 +68,12 @@
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
   <string name="msgs_change_to_prompt_access_mode_title">Confirmar cambéu</string>
   <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
+  <string name="msgs_change_to_prompt_access_mode_msg">Nun pue executase nel mou root. Camudando al mou seguru.\n\n¿Aplicar esti cambéu?</string>
   <!-- A console couldn't be created - Without privileges, the app won't work -->
+  <string name="msgs_cant_create_console">Nun puen consiguise los privilexos riquíos pa esta función.</string>
   <!-- The message shown when an allocation of a privileged console fails, and a non
          privileged is allocated -->
+  <string name="msgs_privileged_console_alloc_failed">Nun pue executase nel mou d\'accesu root. Camudando al mou seguru.</string>
   <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">L\'axuste nun pudo aplicase o atroxase.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
@@ -96,7 +100,9 @@
   <string name="msgs_operation_can_not_be_cancelled">Nun pue encaboxase la operación.</string>
   <!-- The operation requieres mount the file system prior to execute the command -->
   <!-- Illegal argument (normally caused by a development error when calling internal api) -->
+  <string name="msgs_illegal_argument">Argumentu illegal. Falló la invocación.</string>
   <!-- The operation will cause inconsistencies -->
+  <string name="msgs_unresolved_inconsistencies">La operación nun ta permitida porque podría crear inconsistencies.</string>
   <!-- Operation not permitted in the current directory -->
   <!-- The advice message prior to exit the app -->
   <string name="msgs_push_again_to_exit">Volvi primir pa colar.</string>
@@ -122,6 +128,7 @@
   <!-- ActionBar Buttons - Overflow -->
   <string name="actionbar_button_overflow_cd">Más opciones</string>
   <!-- ActionBar Buttons - Storage volumes -->
+  <string name="actionbar_button_storage_cd">Volúmenes d\'almacenamientu</string>
   <!-- ActionBar Buttons - Save -->
   <string name="actionbar_button_save_cd">Guardar</string>
   <!-- ActionBar Buttons - Print -->
@@ -144,8 +151,11 @@
   <!-- Navigation View - View - Show system files option -->
   <!-- Navigation View - View - Show symlinks option -->
   <!-- Filesystem Info (no data). Dialog title -->
+  <string name="filesystem_info_warning_title">Ensin información</string>
   <!-- Filesystem Info (no data). Dialog message -->
+  <string name="filesystem_info_warning_msg">Nun hai información disponible pal sistema de ficheros.</string>
   <!-- Filesystem Info - Filesystem couldn't be mounted -->
+  <string name="filesystem_info_cant_be_mounted_msg">El sistema de ficheros nun pue des/montase.</string>
   <!-- Filesystem Info - Not allowed message -->
   <!-- Filesystem Info - Mount failed -->
   <!-- Filesystem Info Dialog - Title -->
@@ -154,6 +164,7 @@
   <!-- Filesystem Info Dialog - Tab - Disk Usage -->
   <!-- Filesystem Info Dialog - Status Label -->
   <!-- Filesystem Info Dialog - Mount Point Label -->
+  <string name="filesystem_info_dialog_mount_point">Puntu de montaxe:</string>
   <!-- Filesystem Info Dialog - Device Label -->
   <string name="filesystem_info_dialog_device">Preséu:</string>
   <!-- Filesystem Info Dialog - Type Label -->
@@ -174,6 +185,7 @@
   <!-- Fso Properties Dialog - Title -->
   <string name="fso_properties_dialog_title">Propiedaes</string>
   <!-- Fso Properties Dialog - Tab - Info -->
+  <string name="fso_properties_dialog_tab_info">Información</string>
   <!-- Fso Properties Dialog - Tab - Permissions -->
   <string name="fso_properties_dialog_tab_permissions">Permisos</string>
   <!-- Fso Properties Dialog - Name Label -->
@@ -203,6 +215,9 @@
   <!-- Fso Properties Dialog - Execute Label -->
   <!-- Fso Properties Dialog - Execute Label -->
   <!-- Fso Properties Dialog - Skip media scan -->
+  <string name="fso_failed_to_allow_media_scan">Fallu al permitir l\'escanéu de medios</string>
+  <string name="fso_failed_to_prevent_media_scan">Fallu al evitar l\'escanéu de medios</string>
+  <string name="fso_delete_nomedia_non_empty_body">Esti ficheru contién un ficheru .nomedia que nun ta baleru.\n\n¿Quies desanicialu?</string>
   <!-- History - History activity title -->
   <string name="history">Historial</string>
   <!-- History - The history is empty -->
@@ -211,21 +226,29 @@
   <!-- Search - Search activity title -->
   <string name="search">Resultaos de gueta</string>
   <!-- Search - Search hint message -->
+  <string name="search_hint">Teclexa la to gueta</string>
   <!-- Search - Voice search hint message -->
+  <string name="search_voice_hint">Dicta la to gueta</string>
   <!-- Search - Search error message -->
+  <string name="search_error_msg">Asocedió un fallu entrín se guetaba. Nun s\'alcontraron resultaos.</string>
   <!-- Search - Search no results message -->
+  <string name="search_no_results_msg">Nun s\'alcontraron resultaos.</string>
   <!-- Search - Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> en
     <xliff:g id="path">%2$s</xliff:g></string>
   <!-- Search - Search query terms -->
   <string name="search_terms"><![CDATA[<b>Términos:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
   <!-- Search - Confirm search -->
+  <string name="search_few_characters_title">Confirmar gueta</string>
   <!-- Search - Some terms of the search are too small. The operation could be very costly -->
   <!-- Search - Searching dialog title -->
   <string name="searching">Espera, por favor\u2026</string>
   <!-- Search - Searching label -->
+  <string name="searching_action_label">Gueta en cursu</string>
   <!-- Picker Activity -->
   <!-- Picker Activity - Dialog title -->
+  <string name="picker_title">Escueyi un ficheru</string>
+  <string name="directory_picker_title">Escueyi un direutoriu</string>
   <!-- Editor - Editor activity title -->
   <string name="editor">Editor</string>
   <!-- Editor - Invalid file message -->
@@ -238,6 +261,7 @@
   <!-- Editor - Editor is dirty, ask the user - Dialog message -->
   <!-- Editor - Save operation success -->
   <!-- Editor - Read-only file mode -->
+  <string name="editor_read_only_mode">El ficheru ta abiertu en mou namái-llectura.</string>
   <!-- Editor - Dumping message -->
   <!-- Editor - Displaying -->
   <string name="displaying_message">Amosando\u2026</string>
@@ -258,26 +282,35 @@
   <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
   <string name="bookmarks_msgs_add_exists">Yá esiste\'l marcador.</string>
   <!-- Initial directory dialog title -->
+  <string name="initial_directory_dialog_title">Carpeta inicial</string>
   <!-- Initial directory label -->
   <!-- Initial directory is relative -->
   <!-- Initial directory error message -->
+  <string name="initial_directory_error_msg">Asocedió un fallu entrín se guardaba la carpeta inicial.</string>
   <!-- Menu - Navigation - Search -->
+  <string name="menu_search">Gueta</string>
   <!-- Menu - Navigation - Settings -->
   <string name="menu_settings">Axustes</string>
   <!-- Menu - History - Clear history -->
   <!-- Menu - Editor - No suggestions -->
   <string name="menu_no_suggestions">Ensin suxerencies</string>
   <!-- Menu - Editor - Word wrap -->
+  <string name="menu_word_wrap">Axuste de llinies</string>
   <!-- Menu - Editor - Sintax highlight -->
   <!-- Regular expression for create copy action -->
+  <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - copia<xliff:g id="extension">%2$s</xliff:g></string>
   <!-- Regular expression for new compressed file -->
+  <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - nuevu<xliff:g id="extension">%2$s</xliff:g></string>
   <!-- Waiting dialog - Performing operation message -->
+  <string name="waiting_dialog_msg">Faciendo operación\u2026</string>
   <!-- Waiting dialog - Copying title -->
   <string name="waiting_dialog_copying_title">Copiando\u2026</string>
   <!-- Waiting dialog - Copying message -->
+  <string name="waiting_dialog_copying_msg"><![CDATA[<b>De</b>]]>; <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Pa</b>]]>; <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog - Moving title -->
   <string name="waiting_dialog_moving_title">Moviendo\u2026</string>
   <!-- Waiting dialog - Moving message -->
+  <string name="waiting_dialog_moving_msg"><![CDATA[<b>De</b>]]>; <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Pa</b>]]>; <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog - Deleting title -->
   <string name="waiting_dialog_deleting_title">Desaniciando\u2026</string>
   <!-- Waiting dialog - Deleting message -->
@@ -293,6 +326,7 @@
   <!-- Waiting dialog - Initializing the dialog -->
   <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Analizando\u2026</b>]]></string>
   <!-- Extracting - Success message -->
+  <string name="msgs_extracting_success">Completóse con ésitu la operación d\'estraición. Los datos estraxéronse en <xliff:g id="destination">%1$s</xliff:g>.</string>
   <!-- Compressing - Success message -->
   <!-- Actions Dialog - Title -->
   <string name="actions_dialog_title">Aiciones</string>
@@ -360,6 +394,7 @@
   <string name="input_name_dialog_message_empty_name">El nome nun pue tar baleru.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
   <!-- Enter Name Dialog - Message - Invalid name length -->
+  <string name="input_name_dialog_message_invalid_name_length">Algamóse la llende máxima de caráuteres.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
   <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">Yá esiste\'l nome.</string>
@@ -396,6 +431,7 @@
   <!-- Mime/Types - Symlink -->
   <string name="mime_symlink">Enllaz simbólicu</string>
   <!-- Mime/Types - Unknown -->
+  <string name="mime_unknown">Desconozse</string>
   <!--  Filetime formats -->
   <!-- Selection -->
   <!-- For example "2 folders and 1 file selected." -->
@@ -405,6 +441,7 @@
   <string name="category_binary">BINARIU</string>
   <string name="category_text">TESTU</string>
   <string name="category_document">DOCUMENTU</string>
+  <string name="category_ebook">EBOOK</string>
   <string name="category_mail">CORRÉU</string>
   <string name="category_compress">COMPRIMÍU</string>
   <string name="category_exec">EXECUTABLE</string>
@@ -419,6 +456,7 @@
   <string name="compression_mode_title">Mou de compresión</string>
   <!-- Compression - Supported archive and compression modes -->
   <!-- Shortcut. Failed to handle the shortcut -->
+  <string name="shortcut_failed_msg">Fallu al remanar l\'atayu.</string>
   <!-- Shortcut. The shortcut was created -->
   <!-- Shortcut. The shortcut wasn't created -->
   <!-- Preferences title -->
@@ -452,6 +490,7 @@
   <!-- Preferences - General - Use flinger detection -->
   <!-- Preferences - General - Use flinger detection summary -->
   <!-- Preferences - General - Advanced settings category -->
+  <string name="pref_general_advanced_settings_category">Avanzao</string>
   <!-- Preferences - General - Access mode -->
   <string name="pref_access_mode">Mou d\'accesu</string>
   <!-- Preferences - General - Safe mode -->
@@ -460,6 +499,7 @@
   <!-- Preferences - General - Prompt user mode -->
   <!-- Preferences - General - Prompt user mode summary -->
   <!-- Preferences - General - Root access mode -->
+  <string name="pref_access_mode_root">Mou d\'accesu root</string>
   <!-- Preferences - General - Root access mode summary -->
   <!-- Preferences - General - Restrict secondary users access title -->
   <!-- Preferences - General - Restrict secondary users access summary -->
@@ -512,6 +552,7 @@
   <!-- Preferences - Themes - Set theme button -->
   <string name="pref_themes_set_theme">Afitar tema</string>
   <!-- Preferences - Themes - Confirmation message -->
+  <string name="pref_themes_confirmation">Aplicóse con ésitu\'l tema.</string>
   <!-- Preferences - Themes - Theme not found message -->
   <string name="pref_themes_not_found">Nun s\'alcontró\'l tema.</string>
   <!-- Preferences - Debug - Capture debug traces -->
@@ -562,23 +603,29 @@
   <!-- Secure Storage unlock failed toast -->
   <string name="secure_storage_unlock_failed">Nun pue desbloquiase l\'almacenamientu</string>
   <!-- Secure Storage unlock validation, length -->
+  <string name="secure_storage_unlock_validation_length">La contraseña ha tener polo menos <xliff:g id="characters">%1$d</xliff:g> caráuteres.</string>
   <!-- Secure Storage unlock validation, equal -->
   <string name="secure_storage_unlock_validation_equals">Les contraseñes nun concasen.</string>
   <!-- Secure storage open file warning -->
   <!-- Print messages -->
   <!-- Unsupported document format -->
+  <string name="print_unsupported_document">Formatu non sofitáu de documentu</string>
   <!-- Unsupported image format -->
+  <string name="print_unsupported_image">Formatu non sofitáu d\'imaxe</string>
   <!-- Print header -->
   <string name="print_document_header">Documentu: <xliff:g id="document_name">%1$s</xliff:g></string>
   <!-- Print footer -->
+  <string name="print_document_footer">Páxina <xliff:g id="page_number">%1$s</xliff:g></string>
   <!-- Security - Extract relative or absolute files -->
   <!-- ChangeLog - Dialog title -->
   <string name="changelog_title">Rexistru de cambeos</string>
   <!-- Welcome Dialog - Title -->
+  <string name="welcome_title">Afáyate</string>
   <!-- Welcome Dialog - Message -->
-  <string name="welcome_msg">Dámoste l\'acoyida al xestor de ficheros de LineageOS.\n\nEsta aplicación permítete esplorar el sistema de ficheros y facer operaciones que puen romper el to preséu. Pa evitar daños, l\'aplicación aníciase nun mou seguru.\n\nPues acceder al mou avanzáu diendo a Axustes. Ye la to responsabilidá asegurate de les operaciones que faigas ruempan el sistema.\n\nL\'equipu de LineageOS</string>
+  <string name="welcome_msg">Afáyate nel xestor de ficheros de LineageOS.\n\nEsta aplicación permítete esplorar el sistema de ficheros y facer operaciones que puen romper el to preséu. Pa evitar daños, l\'aplicación aníciase nun mou seguru.\n\nPues acceder al mou avanzáu diendo a Axustes. Ye la to responsabilidá asegurate de les operaciones que faigas nun ruempan el sistema.\n\nL\'equipu de LineageOS</string>
   <string name="activity_not_found_exception">Nun pudo alcontrase una aplicación p\'abrir esti ficheru</string>
   <string name="storage_permissions_denied">El xestor de ficheros rique\'l permisu d\'almacemientu pa ver los tos ficheros.</string>
+  <string name="storage_permissions_explanation">Vete a Axustes y calca en Permisos pa conceder el permisu.</string>
   <string name="snackbar_settings">Axustes</string>
   <!-- Wrap mode - toast -->
 </resources>

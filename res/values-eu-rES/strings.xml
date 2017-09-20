@@ -584,7 +584,7 @@
   <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Erabili hatza pasatze keinuak</string>
   <!-- Preferences - General - Use flinger detection summary -->
-  <string name="pref_use_flinger_summary">Pasatu hatza eskumara fitxategiak edo karpetak ezabatzeko</string>
+  <string name="pref_use_flinger_summary">Pasatu hatza eskuinera fitxategiak edo karpetak ezabatzeko</string>
   <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Aurreratua</string>
   <!-- Preferences - General - Access mode -->

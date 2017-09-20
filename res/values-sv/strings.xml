@@ -784,4 +784,5 @@
   <string name="storage_permissions_explanation">Gå till inställningar och tryck på behörigheter för att bevilja behörighet.</string>
   <string name="snackbar_settings">Inställningar</string>
   <!-- Wrap mode - toast -->
+  <string name="toggle_word_wrap_msg">Växlar mellan ordbrytnings lägen</string>
 </resources>

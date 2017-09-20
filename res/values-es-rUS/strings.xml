@@ -80,7 +80,7 @@
   <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Esta opción no se pudo aplicar o guardar.</string>
   <!-- The initial directory has an invalid or inaccessible reference -->
-  <string name="msgs_settings_invalid_initial_directory">La carpeta inicial \'<xliff:g id="initial_dir">%1$s</xliff:g>\' es inválida. Cambiando a la carpeta raíz.</string>
+  <string name="msgs_settings_invalid_initial_directory">La carpeta inicial «<xliff:g id="initial_dir">%1$s</xliff:g>» es inválida. Cambiando a la carpeta raíz.</string>
   <!-- Root is not available message -->
   <string name="root_not_available_msg">El superusuario no está disponible en este dispositivo. Imposible realizar la operación.</string>
   <!-- Success -->
@@ -96,7 +96,7 @@
   <string name="msgs_file_not_found">No se encontró el archivo o carpeta.</string>
   <!-- The command reference couldn't be created (not found or invalid definition)
          (normally caused by a development error) -->
-  <string name="msgs_command_not_found">No se encontró el comando de la operación o tiene una definición no válida.</string>
+  <string name="msgs_command_not_found">No se encontró el comando de la operación o tiene una definición inválida.</string>
   <!-- I/O exception -->
   <string name="msgs_io_failed">Error de lectura/escritura.</string>
   <!-- Operation timeout detected -->
@@ -110,7 +110,7 @@
   <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">El sistema de archivos es de sólo lectura. Intenta montar el sistema de archivos como lectura escritura antes de intentar la operación.</string>
   <!-- Illegal argument (normally caused by a development error when calling internal api) -->
-  <string name="msgs_illegal_argument">Argumento no válido. No se pudo completar la invocación.</string>
+  <string name="msgs_illegal_argument">Argumento inválido. No se pudo completar la invocación.</string>
   <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">La operación no está permitida porque podría crear incoherencias.</string>
   <!-- Operation not permitted in the current directory -->
@@ -307,11 +307,11 @@
   <!-- Editor - Editor activity title -->
   <string name="editor">Editor</string>
   <!-- Editor - Invalid file message -->
-  <string name="editor_invalid_file_msg">Archivo no válido.</string>
+  <string name="editor_invalid_file_msg">Archivo inválido.</string>
   <!-- Editor - File not found message -->
   <string name="editor_file_not_found_msg">Archivo no encontrado.</string>
   <!-- Editor - File size exceed the limit -->
-  <string name="editor_file_exceed_size_msg">El archivo es demasiado grande para abrir en este dispositivo.</string>
+  <string name="editor_file_exceed_size_msg">El archivo es demasiado grande para abrirlo en este dispositivo.</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog title -->
   <string name="editor_dirty_ask_title">Confirmar salida</string>
   <!-- Editor - Editor is dirty, ask the user - Dialog message -->
@@ -465,11 +465,11 @@
   <!-- Enter Name Dialog - Message - Empty name -->
   <string name="input_name_dialog_message_empty_name">El nombre no puede estar vacío.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
-  <string name="input_name_dialog_message_invalid_path_name">Nombre no válido. Los caracteres \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' no están permitidos.</string>
+  <string name="input_name_dialog_message_invalid_path_name">Nombre inválido. Los caracteres «<xliff:g id="invalid_characters">%1$s</xliff:g>» no están permitidos.</string>
   <!-- Enter Name Dialog - Message - Invalid name length -->
   <string name="input_name_dialog_message_invalid_name_length">Límite máximo de caracteres alcanzado.</string>
   <!-- Enter Name Dialog - Message - Invalid name -->
-  <string name="input_name_dialog_message_invalid_name">Nombre no válido. Los nombres \'.\' y \'..\' no están permitidos.</string>
+  <string name="input_name_dialog_message_invalid_name">Nombre inválido. Los nombres «.» y «..» no están permitidos.</string>
   <!-- Enter Name Dialog - Message - Name exists -->
   <string name="input_name_dialog_message_name_exists">El nombre ya existe.</string>
   <!-- Associations Dialog - Title -->
@@ -584,7 +584,7 @@
   <!-- Preferences - General - Use flinger detection -->
   <string name="pref_use_flinger">Usar gestos</string>
   <!-- Preferences - General - Use flinger detection summary -->
-  <string name="pref_use_flinger_summary">Usar un gesto de izquierda a derecha para borrar archivos o carpetas</string>
+  <string name="pref_use_flinger_summary">Deslizar de izquierda a derecha para borrar archivos o carpetas</string>
   <!-- Preferences - General - Advanced settings category -->
   <string name="pref_general_advanced_settings_category">Avanzados</string>
   <!-- Preferences - General - Access mode -->
