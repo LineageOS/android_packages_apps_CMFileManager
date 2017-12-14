@@ -661,7 +661,7 @@
   <!-- Preferences - Editor - Syntax highlight -->
   <string name="pref_syntax_highlight">Realçar sintaxe</string>
   <!-- Preferences - Editor - Syntax highlight summary -->
-  <string name="pref_syntax_highlight_desc">Realça a sintaxe do ficheiro exibido no editor (somente quando um processador de realce de sintaxe para o tipo de ficheiro está disponível)</string>
+  <string name="pref_syntax_highlight_desc">Realça a sintaxe do ficheiro mostrado no editor (somente quando um processador de realce de sintaxe para o tipo de ficheiro está disponível)</string>
   <!-- Preferences - Editor - Syntax highlight color scheme -->
   <string name="pref_syntax_highlight_color_scheme">Esquema de cores</string>
   <!-- Preferences - Editor - Syntax highlight color scheme summary -->
