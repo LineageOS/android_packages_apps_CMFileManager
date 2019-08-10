@@ -16,37 +16,40 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <plurals name="n_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> папка</item>
-    <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> папки</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> папок</item>
-  </plurals>
-  <plurals name="n_files">
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> файл</item>
-    <item quantity="few"><xliff:g id="files">%1$d</xliff:g> файла</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> файлов</item>
-  </plurals>
-  <!-- Search - Found items -->
-  <plurals name="search_found_items">
-    <item quantity="one">Найден <xliff:g id="count">%d</xliff:g> объект</item>
-    <item quantity="few">Найдены <xliff:g id="count">%d</xliff:g> объекта</item>
-    <item quantity="other">Найдены <xliff:g id="count">%d</xliff:g> объектов</item>
-  </plurals>
-  <!-- Statusbar text if there are selected files or folders -->
-  <plurals name="selection_folders">
-    <item quantity="one">Выбрана <xliff:g id="folders">%1$d</xliff:g> папка.</item>
-    <item quantity="few">Выбраны <xliff:g id="folders">%1$d</xliff:g> папки.</item>
-    <item quantity="other">Выбраны <xliff:g id="folders">%1$d</xliff:g> папок.</item>
-  </plurals>
-  <plurals name="selection_files">
-    <item quantity="one">Выбран <xliff:g id="files">%1$d</xliff:g> файл.</item>
-    <item quantity="few">Выбраны <xliff:g id="files">%1$d</xliff:g> файла.</item>
-    <item quantity="other">Выбраны <xliff:g id="files">%1$d</xliff:g> файлов.</item>
-  </plurals>
-  <!-- Actions - Confirm the number of items that are going to be deleted -->
-  <plurals name="deleting_n_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> элемент будет удалён безвозвратно.</item>
-    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> элемента будут удалены безвозвратно.</item>
-    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> элементов будут удалены безвозвратно.</item>
-  </plurals>
+    <plurals name="n_folders">
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> папка</item>
+        <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> папки</item>
+        <item quantity="many"><xliff:g id="folders">%1$d</xliff:g> папок</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> папок</item>
+    </plurals>
+    <plurals name="n_files">
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> файл</item>
+        <item quantity="few"><xliff:g id="files">%1$d</xliff:g> файла</item>
+        <item quantity="many"><xliff:g id="files">%1$d</xliff:g> файлов</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> файлов</item>
+    </plurals>
+    <plurals name="search_found_items">
+        <item quantity="one">Найден <xliff:g id="count">%d</xliff:g> объект</item>
+        <item quantity="few">Найдены <xliff:g id="count">%d</xliff:g> объекта</item>
+        <item quantity="many">Найдено <xliff:g id="count">%d</xliff:g> объектов</item>
+        <item quantity="other">Найдены <xliff:g id="count">%d</xliff:g> объектов</item>
+    </plurals>
+    <plurals name="selection_folders">
+        <item quantity="one">Выбрана <xliff:g id="folders">%1$d</xliff:g> папка.</item>
+        <item quantity="few">Выбраны <xliff:g id="folders">%1$d</xliff:g> папки.</item>
+        <item quantity="many">Выбрано <xliff:g id="folders">%1$d</xliff:g> папок.</item>
+        <item quantity="other">Выбраны <xliff:g id="folders">%1$d</xliff:g> папок.</item>
+    </plurals>
+    <plurals name="selection_files">
+        <item quantity="one">Выбран <xliff:g id="files">%1$d</xliff:g> файл.</item>
+        <item quantity="few">Выбраны <xliff:g id="files">%1$d</xliff:g> файла.</item>
+        <item quantity="many">Выбрано <xliff:g id="files">%1$d</xliff:g> файлов.</item>
+        <item quantity="other">Выбраны <xliff:g id="files">%1$d</xliff:g> файлов.</item>
+    </plurals>
+    <plurals name="deleting_n_items">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> элемент будет удален безвозвратно.</item>
+        <item quantity="few"><xliff:g id="count">%1$d</xliff:g> элемента будут удалены безвозвратно.</item>
+        <item quantity="many"><xliff:g id="count">%1$d</xliff:g> элементов будут удалены безвозвратно.</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g> элементов будут удалены безвозвратно.</item>
+    </plurals>
 </resources>

@@ -16,7 +16,28 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Search - Found items -->
-  <!-- Statusbar text if there are selected files or folders -->
-  <!-- Actions - Confirm the number of items that are going to be deleted -->
+    <plurals name="n_folders">
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> map</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mappen</item>
+    </plurals>
+    <plurals name="n_files">
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> bestân</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> bestannen</item>
+    </plurals>
+    <plurals name="search_found_items">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item fûn</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> items fûn</item>
+    </plurals>
+    <plurals name="selection_folders">
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> map selektearre.</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mappen selektearre.</item>
+    </plurals>
+    <plurals name="selection_files">
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> bestân selektearre.</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> bestannen selektearre.</item>
+    </plurals>
+    <plurals name="deleting_n_items">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item wurdt fuortsmiten.</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g> items wurde fuortsmiten.</item>
+    </plurals>
 </resources>

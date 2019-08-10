@@ -17,385 +17,396 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- The name of the app -->
-  <!-- The description of the app -->
-  <!-- Human readable sizes -->
-  <string name="size_bytes">B</string>
-  <string name="size_kilobytes">kB</string>
-  <string name="size_megabytes">MB</string>
-  <string name="size_gigabytes">GB</string>
-  <!-- Date/time format order (%1$s: date; %2$s: time) -->
-  <!-- Devices types -->
-  <!-- Mount Point States -->
-  <!-- Default buttons -->
-  <!-- The root directory name -->
-  <!-- The search result name -->
-  <!-- Loading waiting message -->
-  <!-- Computing message -->
-  <!-- Computing new line message -->
-  <!-- Cancelled message -->
-  <!-- Error message -->
-  <!-- Copy text content description -->
-  <!-- Copy text content message -->
-  <!-- Warning dialog title -->
-  <!-- Error dialog title -->
-  <string name="error_title">Flater</string>
-  <!-- Confirm operation dialog title -->
-  <!-- Confirm overwrite dialog title -->
-  <!-- Confirm deletion dialog title -->
-  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
-  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
-  <!-- A console couldn't be created - Without privileges, the app won't work -->
-  <!-- The message shown when an allocation of a privileged console fails, and a non
-         privileged is allocated -->
-  <!-- The selected setting was not applied or stored -->
-  <!-- The initial directory has an invalid or inaccessible reference -->
-  <!-- Root is not available message -->
-  <!-- Success -->
-  <!-- Unknown error -->
-  <!-- When an operation requires elevated privileged (normally caused for the use of a
-         non-privileged console) -->
-  <!-- When an operation fails because the device has run out of storage. -->
-  <!-- The file or directory was not found -->
-  <!-- The command reference couldn't be created (not found or invalid definition)
-         (normally caused by a development error) -->
-  <!-- I/O exception -->
-  <!-- Operation timeout detected -->
-  <!-- The operation returns an invalid exit code -->
-  <!-- A console couldn't be allocated -->
-  <!-- An operation can't be cancelled -->
-  <!-- The operation requieres mount the file system prior to execute the command -->
-  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
-  <!-- The operation will cause inconsistencies -->
-  <!-- Operation not permitted in the current directory -->
-  <!-- The advice message prior to exit the app -->
-  <!-- There is no registered app that can handle the mime-type -->
-  <!-- Overwrite files? -->
-  <!-- The association of an action to the app failed -->
-  <!-- An operation requires elevated privileged. Ask the user. -->
-  <!-- The parent directory of the current directory in navigation view -->
-  <!-- External storage descripton -->
-  <!-- Usb storage descripton -->
-  <!-- ActionBar Buttons - FileSystem -->
-  <!-- ActionBar Buttons - Sort Mode -->
-  <!-- ActionBar Buttons - Layout Mode -->
-  <!-- ActionBar Buttons - Other View Options -->
-  <!-- ActionBar Buttons - Done -->
-  <!-- ActionBar Buttons - Actions -->
-  <!-- ActionBar Buttons - Search -->
-  <!-- ActionBar Buttons - Overflow -->
-  <!-- ActionBar Buttons - Storage volumes -->
-  <!-- ActionBar Buttons - Save -->
-  <string name="actionbar_button_save_cd">Bewarje</string>
-  <!-- ActionBar Buttons - Print -->
-  <!-- Navigation View - Sort - Sort by name (ascending) -->
-  <!-- Navigation View - Sort - Sort by name (descending) -->
-  <!-- Navigation View - Sort - Sort by date (ascending) -->
-  <!-- Navigation View - Sort - Sort by date (descending) -->
-  <!-- Navigation View - Sort - Sort by size (ascending) -->
-  <!-- Navigation View - Sort - Sort by size (descending) -->
-  <!-- Navigation View - Sort - Sort by type (ascending) -->
-  <!-- Navigation View - Sort - Sort by type (descending) -->
-  <!-- Navigation View - Layout - Icons -->
-  <!-- Navigation View - Layout - Simple -->
-  <!-- Navigation View - Layout - Details -->
-  <!-- Navigation View - View - Show folders first -->
-  <!-- Navigation View - View - Show hidden files option -->
-  <!-- Navigation View - View - Show system files option -->
-  <!-- Navigation View - View - Show symlinks option -->
-  <!-- Filesystem Info (no data). Dialog title -->
-  <!-- Filesystem Info (no data). Dialog message -->
-  <!-- Filesystem Info - Filesystem couldn't be mounted -->
-  <!-- Filesystem Info - Not allowed message -->
-  <!-- Filesystem Info - Mount failed -->
-  <!-- Filesystem Info Dialog - Title -->
-  <!-- Filesystem Info Dialog - Tab - Info -->
-  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
-  <!-- Filesystem Info Dialog - Status Label -->
-  <!-- Filesystem Info Dialog - Mount Point Label -->
-  <!-- Filesystem Info Dialog - Device Label -->
-  <!-- Filesystem Info Dialog - Type Label -->
-  <!-- Filesystem Info Dialog - Options Label -->
-  <string name="filesystem_info_dialog_options">Opsjes:</string>
-  <!-- Filesystem Info Dialog - Dump/Pass Label -->
-  <!-- Filesystem Info Dialog - Virtual Label -->
-  <!-- Filesystem Info Dialog - Total Disk Usage -->
-  <!-- Filesystem Info Dialog - Used Disk Usage -->
-  <!-- Filesystem Info Dialog - Free Disk Usage -->
-  <!-- Fso Properties - Not allowed message -->
-  <!-- Fso Properties - Failed to change owner to fso -->
-  <!-- Fso Properties - Failed to change group to fso -->
-  <!-- Fso Properties - Failed to change group to fso -->
-  <!-- Fso Properties Dialog - Title -->
-  <string name="fso_properties_dialog_title">Eigenskippen</string>
-  <!-- Fso Properties Dialog - Tab - Info -->
-  <string name="fso_properties_dialog_tab_info">Ynfo</string>
-  <!-- Fso Properties Dialog - Tab - Permissions -->
-  <!-- Fso Properties Dialog - Name Label -->
-  <string name="fso_properties_dialog_name">Namme:</string>
-  <!-- Fso Properties Dialog - Parent Folder Label -->
-  <!-- Fso Properties Dialog - Type Label -->
-  <string name="fso_properties_dialog_type">Type:</string>
-  <!-- Fso Properties Dialog - Category Label -->
-  <string name="fso_properties_dialog_category">Kategory:</string>
-  <!-- Fso Properties Dialog - Link Label -->
-  <!-- Fso Properties Dialog - Size Label -->
-  <string name="fso_properties_dialog_size">Grutte:</string>
-  <!-- Fso Properties Dialog - Contains Label -->
-  <!-- Fso Properties Dialog - Last Accessed Time Label -->
-  <!-- Fso Properties Dialog - Last Modified Time Label -->
-  <!-- Fso Properties Dialog - Last Changed Time -->
-  <!-- Fso Properties Dialog - Owner Label -->
-  <!-- Fso Properties Dialog - Group Label -->
-  <!-- Fso Properties Dialog - Others Label -->
-  <!-- Fso Properties Dialog - Special Label -->
-  <!-- Fso Properties Dialog - Read Label -->
-  <!-- Fso Properties Dialog - Write Label -->
-  <!-- Fso Properties Dialog - Execute Label -->
-  <!-- Fso Properties Dialog - Execute Label -->
-  <!-- Fso Properties Dialog - Skip media scan -->
-  <!-- History - History activity title -->
-  <!-- History - The history is empty -->
-  <!-- History - The history reference is not in the actual history list -->
-  <!-- Search - Search activity title -->
-  <!-- Search - Search hint message -->
-  <!-- Search - Voice search hint message -->
-  <!-- Search - Search error message -->
-  <!-- Search - Search no results message -->
-  <!-- Search - Number of items found in directory -->
-  <!-- Search - Search query terms -->
-  <!-- Search - Confirm search -->
-  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
-  <!-- Search - Searching dialog title -->
-  <!-- Search - Searching label -->
-  <!-- Picker Activity -->
-  <!-- Picker Activity - Dialog title -->
-  <!-- Editor - Editor activity title -->
-  <!-- Editor - Invalid file message -->
-  <!-- Editor - File not found message -->
-  <!-- Editor - File size exceed the limit -->
-  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
-  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
-  <!-- Editor - Save operation success -->
-  <!-- Editor - Read-only file mode -->
-  <!-- Editor - Dumping message -->
-  <!-- Editor - Displaying -->
-  <!-- Bookmarks - Bookmarks activity title -->
-  <!-- Bookmarks - Bookmark name - Home -->
-  <!-- Bookmarks - Bookmark name - Root folder -->
-  <!-- Bookmarks - Bookmark name - System folder -->
-  <!-- Bookmarks - Bookmark name - Secure storage -->
-  <!-- Bookmarks - Bookmark name - Remote storage -->
-  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
-  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
-  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
-  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
-  <!-- Initial directory dialog title -->
-  <!-- Initial directory label -->
-  <!-- Initial directory is relative -->
-  <!-- Initial directory error message -->
-  <!-- Menu - Navigation - Search -->
-  <!-- Menu - Navigation - Settings -->
-  <string name="menu_settings">Ynstellingen</string>
-  <!-- Menu - History - Clear history -->
-  <!-- Menu - Editor - No suggestions -->
-  <!-- Menu - Editor - Word wrap -->
-  <!-- Menu - Editor - Sintax highlight -->
-  <!-- Regular expression for create copy action -->
-  <!-- Regular expression for new compressed file -->
-  <!-- Waiting dialog - Performing operation message -->
-  <!-- Waiting dialog - Copying title -->
-  <!-- Waiting dialog - Copying message -->
-  <!-- Waiting dialog - Moving title -->
-  <!-- Waiting dialog - Moving message -->
-  <!-- Waiting dialog - Deleting title -->
-  <!-- Waiting dialog - Deleting message -->
-  <!-- Waiting dialog - Extracting title -->
-  <!-- Waiting dialog - Extracting message -->
-  <!-- Waiting dialog - Extracting title -->
-  <!-- Waiting dialog - Extracting message -->
-  <!-- Waiting dialog - Initializing the dialog -->
-  <!-- Extracting - Success message -->
-  <!-- Compressing - Success message -->
-  <!-- Actions Dialog - Title -->
-  <!-- Actions Dialog - Menu - Properties of current folder -->
-  <string name="actions_menu_properties_current_folder">Eigenskippen</string>
-  <!-- Actions Dialog - Menu - Refresh -->
-  <!-- Actions Dialog - Menu - New directory -->
-  <!-- Actions Dialog - Menu - New file -->
-  <!-- Actions Dialog - Menu - Select all -->
-  <!-- Actions Dialog - Menu - Deselect all -->
-  <!-- Actions Dialog - Menu - Select -->
-  <!-- Actions Dialog - Menu - Deselect -->
-  <!-- Actions Dialog - Menu - Copy/Paste selection -->
-  <!-- Actions Dialog - Menu - Move selection -->
-  <!-- Actions Dialog - Menu - Delete selection -->
-  <!-- Actions Dialog - Menu - Compress selection -->
-  <!-- Actions Dialog - Menu - Create link -->
-  <!-- Actions Dialog - Menu - Open -->
-  <!-- Actions Dialog - Menu - Open with -->
-  <!-- Actions Dialog - Menu - Execute -->
-  <!-- Actions Dialog - Menu - Send -->
-  <!-- Actions Dialog - Menu - Send selection -->
-  <!-- Actions Dialog - Menu - Compress -->
-  <!-- Actions Dialog - Menu - Extract -->
-  <!-- Actions Dialog - Menu - Delete -->
-  <!-- Actions Dialog - Menu - Rename -->
-  <!-- Actions Dialog - Menu - Create copy -->
-  <!-- Actions Dialog - Menu - Properties -->
-  <string name="actions_menu_properties">Eigenskippen</string>
-  <!-- Actions Dialog - Menu - Add to bookmarks -->
-  <!-- Actions Dialog - Menu - Add shortcut -->
-  <!-- Actions Dialog - Menu - Open parent folder -->
-  <!-- Actions Dialog - Menu - Compute checksum -->
-  <!-- Actions Dialog - Menu - Print -->
-  <!-- Actions Dialog - Menu - Set as home -->
-  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
-  <!-- Enter Name Dialog - Label -->
-  <!-- Enter Name Dialog - Message - Empty name -->
-  <!-- Enter Name Dialog - Message - Invalid name -->
-  <!-- Enter Name Dialog - Message - Invalid name length -->
-  <!-- Enter Name Dialog - Message - Invalid name -->
-  <!-- Enter Name Dialog - Message - Name exists -->
-  <!-- Associations Dialog - Title -->
-  <!-- Associations Dialog - Remember the user action -->
-  <!-- Associations Dialog - Open with Title -->
-  <!-- Associations Dialog - Open action (button title) -->
-  <!-- Associations Dialog - Send with Title -->
-  <!-- Associations Dialog - Send action (button title) -->
-  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
-  <!-- Execution console - Title -->
-  <!-- Execution console - The script name label -->
-  <!-- Execution console - The script execution time label -->
-  <!-- Execution console - The script exit code label -->
-  <!-- Execution console - The script execution time seconds string -->
-  <!-- Compute checksum - Title -->
-  <!-- Compute checksum - The file name label -->
-  <!-- Compute checksum - The MD5 label -->
-  <!-- Compute checksum - The SHA1 label -->
-  <!-- Compute checksum - The computing checksum message-->
-  <!-- Mime/Types - Folder -->
-  <!-- Mime/Types - Symlink -->
-  <!-- Mime/Types - Unknown -->
-  <!--  Filetime formats -->
-  <!-- Selection -->
-  <!-- For example "2 folders and 1 file selected." -->
-  <!-- Category descriptions -->
-  <!-- Compression - Compression modes dialog title -->
-  <!-- Compression - Supported archive and compression modes -->
-  <!-- Shortcut. Failed to handle the shortcut -->
-  <!-- Shortcut. The shortcut was created -->
-  <!-- Shortcut. The shortcut wasn't created -->
-  <!-- Preferences title -->
-  <string name="pref">Ynstellingen</string>
-  <!-- Preferences - General title -->
-  <!-- Preferences - Search title -->
-  <!-- Preferences - Storage title -->
-  <!-- Preferences - Editor title -->
-  <!-- Preferences - Themes title -->
-  <!-- Preferences - About title -->
-  <!-- Preferences - General - Behaviour category -->
-  <!-- Preferences - General - Case sensitive sort and navigating title -->
-  <!-- Preferences - General - Case sensitive sort and navigating summary -->
-  <!-- Preferences - General - Filetime format mode title -->
-  <!-- Preferences - General -Disk usage warning level title -->
-  <!-- Preferences - General - Disk usage warning level summary -->
-  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
-         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
-  <!-- Preferences - General - Compute folder statistics title -->
-  <!-- Preferences - General - Compute folder statistics summary on -->
-  <!-- Preferences - General - Display thumbs -->
-  <!-- Preferences - General - Display thumbs summary -->
-  <!-- Preferences - General - Use flinger detection -->
-  <!-- Preferences - General - Use flinger detection summary -->
-  <!-- Preferences - General - Advanced settings category -->
-  <!-- Preferences - General - Access mode -->
-  <!-- Preferences - General - Safe mode -->
-  <!-- Preferences - General - Safe mode summary -->
-  <!-- Preferences - General - Prompt user mode -->
-  <!-- Preferences - General - Prompt user mode summary -->
-  <!-- Preferences - General - Root access mode -->
-  <!-- Preferences - General - Root access mode summary -->
-  <!-- Preferences - General - Restrict secondary users access title -->
-  <!-- Preferences - General - Restrict secondary users access summary -->
-  <!-- Preferences - Search - Results category -->
-  <!-- Preferences - Search - Show relevance widget -->
-  <!-- Preferences - Search - Highlight search terms -->
-  <!-- Preferences - Search - Sort results mode -->
-  <!-- Preferences - Search - Sort results mode. None -->
-  <!-- Preferences - Search - Sort results mode. None -->
-  <!-- Preferences - Search - Sort results mode. Relevance -->
-  <!-- Preferences - Search - Privacity category -->
-  <!-- Preferences - Search - Save search terms -->
-  <!-- Preferences - Search - Save search terms summary on -->
-  <!-- Preferences - Search - Save search terms summary off -->
-  <!-- Preferences - Search - Remove saved search terms -->
-  <!-- Preferences - Search - Remove saved search terms summary -->
-  <!-- Preferences - Search - Suggestions were truncated -->
-  <!-- Preferences - Storage - Secure Storage category -->
-  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
-  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
-  <!-- Preferences - Storage - Secure Storage - Change password title -->
-  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
-  <!-- Preferences - Editor - Behaviour category -->
-  <!-- Preferences - Editor - No suggestions -->
-  <!-- Preferences - Editor - No suggestions summary -->
-  <!-- Preferences - Editor - Word wrap -->
-  <!-- Preferences - Editor - Hex dump -->
-  <!-- Preferences - Editor - Hex dump desc -->
-  <!-- Preferences - Editor - Syntax highlight category -->
-  <!-- Preferences - Editor - Syntax highlight -->
-  <!-- Preferences - Editor - Syntax highlight summary -->
-  <!-- Preferences - Editor - Syntax highlight color scheme -->
-  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
-  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
-  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
-  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
-  <!-- Preferences - Themes - Themes selection category -->
-  <!-- Preferences - Themes - Set theme button -->
-  <!-- Preferences - Themes - Confirmation message -->
-  <!-- Preferences - Themes - Theme not found message -->
-  <!-- Preferences - Debug - Capture debug traces -->
-  <!-- Themes - Default theme name -->
-  <!-- Themes - Default theme description -->
-  <!-- Themes - Default theme author -->
-  <!-- Navigation drawer -->
-  <!-- ColorPickerDialog -->
-  <!-- The text of the alpha slider control -->
-  <!-- The label of the current color panel -->
-  <!-- The label of the new color panel -->
-  <!-- The label of the color input -->
-  <!-- Android Syntax Highlight -->
-  <!-- Secure Storage -->
-  <!-- Secure Storage dialog title - Unlock -->
-  <!-- Secure Storage dialog title - Create -->
-  <!-- Secure Storage dialog title - Reset -->
-  <!-- Secure Storage dialog title - Delete -->
-  <!-- Secure Storage unlock dialog message (secure storage exists) -->
-  <!-- Secure Storage unlock dialog message (new secure storage) -->
-  <!-- Secure Storage unlock dialog message (reset the current password) -->
-  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
-  <!-- Secure Storage unlock dialog old key title -->
-  <!-- Secure Storage unlock dialog key title -->
-  <!-- Secure Storage unlock dialog key title -->
-  <!-- Secure Storage unlock dialog repeat key title-->
-  <!-- Secure Storage create button -->
-  <!-- Secure Storage unlock button -->
-  <!-- Secure Storage reset button -->
-  <!-- Secure Storage delete button -->
-  <!-- Secure Storage unlock failed toast -->
-  <!-- Secure Storage unlock validation, length -->
-  <!-- Secure Storage unlock validation, equal -->
-  <!-- Secure storage open file warning -->
-  <!-- Print messages -->
-  <!-- Unsupported document format -->
-  <!-- Unsupported image format -->
-  <!-- Print header -->
-  <!-- Print footer -->
-  <!-- Security - Extract relative or absolute files -->
-  <!-- ChangeLog - Dialog title -->
-  <!-- Welcome Dialog - Title -->
-  <!-- Welcome Dialog - Message -->
-  <string name="snackbar_settings">Ynstellingen</string>
-  <!-- Wrap mode - toast -->
+    <string name="app_name">Bestannen</string>
+    <string name="app_description">In bestânsbehearder fan LineageOS</string>
+    <string name="size_bytes">B</string>
+    <string name="size_kilobytes">kB</string>
+    <string name="size_megabytes">MB</string>
+    <string name="size_gigabytes">GB</string>
+    <string name="datetime_format_order">%1$s %2$s</string>
+    <string name="device_blockdevice">Blokapparaat</string>
+    <string name="device_characterdevice">Karakterapparaat</string>
+    <string name="device_namedpipe">Named pipe</string>
+    <string name="device_domainsocket">Domain socket</string>
+    <string name="mount_point_readonly">RO</string>
+    <string name="mount_point_readwrite">RW</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nee</string>
+    <string name="all">Alles</string>
+    <string name="overwrite">Oerskriuwe</string>
+    <string name="select">Selektearje</string>
+    <string name="root_directory_name">&lt;Haadmap&gt;</string>
+    <string name="search_result_name">Sykje: <xliff:g id="terms">%1$s</xliff:g></string>
+    <string name="loading_message">Lade\u2026</string>
+    <string name="cancelled_message">Annulearre.</string>
+    <string name="error_message">Flater.</string>
+    <string name="copy_text_cd">Tik om tekst nei klamboerd te kopiearjen</string>
+    <string name="copy_text_msg">Tekst nei klamboerd kopiearre</string>
+    <string name="warning_title">Warskôging</string>
+    <string name="error_title">Flater</string>
+    <string name="confirm_operation">Bewurking befêstigje</string>
+    <string name="confirm_overwrite">Oerskriuwen befêstigje</string>
+    <string name="confirm_deletion">Fuortsmiten befêstigje</string>
+    <string name="msgs_change_to_prompt_access_mode_title">Wiksel befêstigje</string>
+    <string name="msgs_change_to_prompt_access_mode_msg">Kin gjin roottagong krije. Wikselje nei feilige modus.\n\nDizze wiziging tapasse?</string>
+    <string name="msgs_cant_create_console">Kin de fereaske machtigingen net krije.</string>
+    <string name="msgs_privileged_console_alloc_failed">Kin gjin roottagong krije. Wikselje nei feilige modus.</string>
+    <string name="msgs_settings_save_failure">Kin de ynstellingen net tapasse/bewarje.</string>
+    <string name="msgs_settings_invalid_initial_directory">De earste map \'<xliff:g id="initial_dir">%1$s</xliff:g>\' is net jilldich. Wizigje nei haadmap.</string>
+    <string name="root_not_available_msg">Root is net beskikber op dit apparaat. Kin dizze bewurking net útfiere.</string>
+    <string name="msgs_success">Bewurking is foltôge.</string>
+    <string name="msgs_unknown">Der is in flater bard. De bewurking is mislearre.</string>
+    <string name="msgs_insufficient_permissions">Dizze bewurking hat ferhege machtigingen nedich. Probearje nei roottagongsmodus te skeakeljen.</string>
+    <string name="msgs_no_disk_space">Bewurking mislearre, der is gjin romte mear op it apparaat.</string>
+    <string name="msgs_file_not_found">It bestân of de map is net fûn.</string>
+    <string name="msgs_command_not_found">It bewurkingskommando is net fûn of is net jildich.</string>
+    <string name="msgs_io_failed">Lês-/skriuwflater.</string>
+    <string name="msgs_operation_timeout">Bewurkingstime-out.</string>
+    <string name="msgs_operation_failure">De bewurking is mislearre.</string>
+    <string name="msgs_console_alloc_failure">Der is in ynterne flater bard.</string>
+    <string name="msgs_operation_can_not_be_cancelled">De bewurking kin net annulearre wurde.</string>
+    <string name="msgs_read_only_filesystem">It bestânssysteem is keppele as allinnich-lêze. Probearje earst it bestânssysteem as beskriuwber te keppeljen eardat jo de bewurking útfiere.</string>
+    <string name="msgs_illegal_argument">Unjildich argumint. Aktivearring mislearre.</string>
+    <string name="msgs_unresolved_inconsistencies">Dizze bewurking is net tastien omdat it ynkonsistinsjes feroarsaakje sil.</string>
+    <string name="msgs_operation_not_allowed_in_current_directory">Doelmap kin net itselde wêze as de boarne of in submap fan de boarne.</string>
+    <string name="msgs_push_again_to_exit">Tik nochris om ôf te sluten.</string>
+    <string name="msgs_not_registered_app">Der is gjin app ynstallearre om it selektearre bestânstype te iepenjen.</string>
+    <string name="msgs_overwrite_files">In oantal bestannen bestiet al yn de doelmap.\n\nOerskriuwe?</string>
+    <string name="msgs_action_association_failed">Keppeljen fan de aksje oan de app is mislearre.</string>
+    <string name="advise_insufficient_permissions">De bewurking fereasket ferhege machtigingen.\n\nWolle jo nei roottagongsmodus skeakelje?</string>
+    <string name="parent_dir">Boppe lizzende map</string>
+    <string name="external_storage">Eksterne ûnthâld</string>
+    <string name="usb_storage">USB-ûnthâld</string>
+    <string name="actionbar_button_filesystem_cd">Bestânssysteemynfo</string>
+    <string name="actionbar_button_sort_mode_cd">Sortearring</string>
+    <string name="actionbar_button_layout_mode_cd">Yndieling</string>
+    <string name="actionbar_button_other_view_options_cd">Oae byldopsjes</string>
+    <string name="actionbar_button_selection_done_cd">Foltôge</string>
+    <string name="actionbar_button_actions_cd">Aksjes</string>
+    <string name="actionbar_button_search_cd">Sykje</string>
+    <string name="actionbar_button_overflow_cd">Mear opsjes</string>
+    <string name="actionbar_button_storage_cd">Unthâldfolumes</string>
+    <string name="actionbar_button_save_cd">Bewarje</string>
+    <string name="actionbar_button_print_cd">Ofdrukke</string>
+    <string name="sort_by_name_asc">Op namme ▲</string>
+    <string name="sort_by_name_desc">Op namme ▼</string>
+    <string name="sort_by_date_asc">Op datum ▲</string>
+    <string name="sort_by_date_desc">Op datum ▼</string>
+    <string name="sort_by_size_asc">Op grutte \u25B2</string>
+    <string name="sort_by_size_desc">Op grutte \u25BC</string>
+    <string name="sort_by_type_asc">Op type \u25B2</string>
+    <string name="sort_by_type_desc">Op type \u25BC</string>
+    <string name="layout_icons">Piktogrammen</string>
+    <string name="layout_simple">Ienfâldich</string>
+    <string name="layout_details">Details</string>
+    <string name="cm_filemanager_show_dirs_first">Mappen earst</string>
+    <string name="cm_filemanager_show_hidden">Ferstoppe bestannen toane</string>
+    <string name="cm_filemanager_show_system">Systeembestannen toane</string>
+    <string name="cm_filemanager_show_symlinks">Symlinks toane</string>
+    <string name="filesystem_info_warning_title">Gjin ynformaasje</string>
+    <string name="filesystem_info_warning_msg">Der is gjin ynformaasje beskikber oer it bestânssysteem.</string>
+    <string name="filesystem_info_cant_be_mounted_msg">It bestânssysteem kin net keppele/ûntkoppele wurde.</string>
+    <string name="filesystem_info_mount_not_allowed_msg">Keppeljen fan bestânssysteem is net tastien yn feilige modus. Tik om nei roottagongsmodus te wikseljen.</string>
+    <string name="filesystem_info_mount_failed_msg">Keppeljen fan it bestânssysteem mislearre. Guon bestânssystemen, lykas op SD-kaarten, kinne net keppele/ûntkeppele wurde omdat it allinnich-lêzenbestânssystemen binne.</string>
+    <string name="filesystem_info_dialog_title">Bestânssysteemynfo</string>
+    <string name="filesystem_info_dialog_tab_info">Ynfo</string>
+    <string name="filesystem_info_dialog_tab_disk_usage">Unthâldgebrûk</string>
+    <string name="filesystem_info_dialog_status">Keppele:</string>
+    <string name="filesystem_info_dialog_mount_point">Keppelingspaad:</string>
+    <string name="filesystem_info_dialog_device">Apparaat:</string>
+    <string name="filesystem_info_dialog_type">Type:</string>
+    <string name="filesystem_info_dialog_options">Opsjes:</string>
+    <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
+    <string name="filesystem_info_dialog_virtual">Firtueel:</string>
+    <string name="filesystem_info_dialog_total_disk_usage">Totaal:</string>
+    <string name="filesystem_info_dialog_used_disk_usage">Brûkt:</string>
+    <string name="filesystem_info_dialog_free_disk_usage">Beskikber:</string>
+    <string name="fso_properties_permissions_not_allowed_msg">Machtigingsbewurking is net tastien yn feilige modus. Tik om nei roottagongsmodus te wikseljen.</string>
+    <string name="fso_properties_failed_to_change_owner_msg">It wizigjen fan eigener is mislearre.\n\nOm feilichheidsredenen stean guon bestânssystemen, lykas op SD-kaarten, in eigenerswiziging net ta.</string>
+    <string name="fso_properties_failed_to_change_group_msg">It wizigjen fan groep is mislearre.\n\nOm feilichheidsredenen stean guon bestânssystemen, lykas op SD-kaarten, in groepswiziging net ta.</string>
+    <string name="fso_properties_failed_to_change_permission_msg">It wizigjen fan machtigingen is mislearre.\n\nOm feilichheidsredenen stean guon bestânssystemen, lykas op SD-kaarten, in wiziging fan rjochten net ta.</string>
+    <string name="fso_properties_dialog_title">Eigenskippen</string>
+    <string name="fso_properties_dialog_tab_info">Ynfo</string>
+    <string name="fso_properties_dialog_tab_permissions">Machtigingen</string>
+    <string name="fso_properties_dialog_name">Namme:</string>
+    <string name="fso_properties_dialog_parent">Boppelizzend:</string>
+    <string name="fso_properties_dialog_type">Type:</string>
+    <string name="fso_properties_dialog_category">Kategory:</string>
+    <string name="fso_properties_dialog_link">Keppeling:</string>
+    <string name="fso_properties_dialog_size">Grutte:</string>
+    <string name="fso_properties_dialog_contains">Ynhâld:</string>
+    <string name="fso_properties_dialog_last_accessed_date">Iepene:</string>
+    <string name="fso_properties_dialog_last_modified_date">Bewurke:</string>
+    <string name="fso_properties_dialog_last_changed_date">Wizige:</string>
+    <string name="fso_properties_dialog_owner">Eigener:</string>
+    <string name="fso_properties_dialog_group">Groep:</string>
+    <string name="fso_properties_dialog_others">Oare:</string>
+    <string name="fso_properties_dialog_include_in_media_scan">Mediaskan oerslaan:</string>
+    <string name="fso_failed_to_allow_media_scan">Kin mediaskan net tastean</string>
+    <string name="fso_failed_to_prevent_media_scan">Kin mediaskan net blokkearje</string>
+    <string name="fso_delete_nomedia_dir_title">.nomedia-map fuortsmite</string>
+    <string name="fso_delete_nomedia_dir_body">Dizze map befettet in .nomedia-map.\n\nBinne jo wis dat jo dizze, en de ynhâld derfan, fuortsmite wolle?</string>
+    <string name="fso_delete_nomedia_non_empty_title">.nomedia-bestân fuortsmite</string>
+    <string name="fso_delete_nomedia_non_empty_body">Dizze map befettet in .nomedia-bestân.\n\nBinne jo wis dat jo dit fuortsmite wolle?</string>
+    <string name="history">Skiednis</string>
+    <string name="msgs_history_empty">Skiednis is leech.</string>
+    <string name="msgs_history_unknown">Unbekend skiednisitem.</string>
+    <string name="search">Sykresultaten</string>
+    <string name="search_hint">Typ sykopdracht</string>
+    <string name="search_voice_hint">Sprek sykopdracht</string>
+    <string name="search_error_msg">Der is in flater bard wylst it sykjen. Gjin resultaten fûn.</string>
+    <string name="search_no_results_msg">Gjin resultaten fûn.</string>
+    <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> yn <xliff:g id="path">%2$s</xliff:g></string>
+    <string name="search_terms">&lt;b&gt;Termen:&lt;/b&gt; <xliff:g id="terms">%1$s</xliff:g></string>
+    <string name="search_few_characters_title">Sykjen befêstigje</string>
+    <string name="search_few_characters_msg">Guon syktermen hawwe in lyts oantal karakters. De bewurking soe te folle tiid of systeemboarnen yn beslach nimme kinne.\n\nBinne jo wis dat jo troch gean wolle?</string>
+    <string name="searching">In momint\u2026</string>
+    <string name="searching_action_label">Dwaande mei sykjen</string>
+    <string name="picker_title">Kies in bestân</string>
+    <string name="directory_picker_title">Kies in map</string>
+    <string name="editor">Bewurker</string>
+    <string name="editor_invalid_file_msg">Unjildich bestân.</string>
+    <string name="editor_file_not_found_msg">Bestân net fûn.</string>
+    <string name="editor_file_exceed_size_msg">It bestân is te grut om te iepenjen op dit apparaat.</string>
+    <string name="editor_dirty_ask_title">Ofsluten befêstigje</string>
+    <string name="editor_dirty_ask_msg">It bestân is wizige.\n\nOfslute sûnder bewarjen?</string>
+    <string name="editor_successfully_saved">It bestân is mei sukses bewarre.</string>
+    <string name="editor_read_only_mode">It bestân is as allinnich-lêze iepene.</string>
+    <string name="dumping_message">Hex-dump generearje\u2026</string>
+    <string name="displaying_message">Toane\u2026</string>
+    <string name="bookmarks">Blêdwizers</string>
+    <string name="bookmarks_home">Startside</string>
+    <string name="bookmarks_root_folder">Haadmap</string>
+    <string name="bookmarks_system_folder">Systeemmap</string>
+    <string name="bookmarks_secure">Befeilige ûnthâld</string>
+    <string name="bookmarks_remote">Eksterne ûnthâld</string>
+    <string name="bookmarks_button_config_cd">Kies de begjinmap.</string>
+    <string name="bookmarks_button_remove_bookmark_cd">Blêdwizer fuortsmite.</string>
+    <string name="bookmarks_msgs_add_success">Blêdwizer mei sukses oanmakke.</string>
+    <string name="bookmarks_msgs_add_exists">Blêdwizer bestiet al.</string>
+    <string name="initial_directory_dialog_title">Begjinmap</string>
+    <string name="initial_directory_label">Kies de begjinmap:</string>
+    <string name="initial_directory_relative_msg">Paden moatte begjinne mei in slash.</string>
+    <string name="initial_directory_error_msg">Der is in flater bard wylst it bewarjen fan de begjinmap.</string>
+    <string name="menu_search">Sykje</string>
+    <string name="menu_settings">Ynstellingen</string>
+    <string name="menu_clear_history">Skiednis wiskje</string>
+    <string name="menu_no_suggestions">Gjin suggestjes</string>
+    <string name="menu_word_wrap">Automatyske tebekrin</string>
+    <string name="menu_syntax_highlight">Syntaksiskleur</string>
+    <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - copy<xliff:g id="extension">%2$s</xliff:g></string>
+    <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - new<xliff:g id="extension">%2$s</xliff:g></string>
+    <string name="waiting_dialog_msg">Bewurkingen útfiere\u2026</string>
+    <string name="waiting_dialog_copying_title">Kopiearje\u2026</string>
+    <string name="waiting_dialog_copying_msg">&lt;b&gt;Fan&lt;/b&gt; <xliff:g id="from">%1$s</xliff:g>&lt;br/&gt;&lt;b&gt;Nei&lt;/b&gt; <xliff:g id="to">%2$s</xliff:g></string>
+    <string name="waiting_dialog_moving_title">Ferpleatse\u2026</string>
+    <string name="waiting_dialog_moving_msg">&lt;b&gt;Fan&lt;/b&gt; <xliff:g id="from">%1$s</xliff:g>&lt;br/&gt;&lt;b&gt;Nei&lt;/b&gt; <xliff:g id="to">%2$s</xliff:g></string>
+    <string name="waiting_dialog_deleting_title">Fuortsmite\u2026</string>
+    <string name="waiting_dialog_deleting_msg">&lt;b&gt;Bestân&lt;/b&gt; <xliff:g id="file">%1$s</xliff:g></string>
+    <string name="waiting_dialog_extracting_title">Utpakke\u2026</string>
+    <string name="waiting_dialog_extracting_msg">&lt;b&gt;Bestân&lt;/b&gt; <xliff:g id="file">%1$s</xliff:g></string>
+    <string name="waiting_dialog_compressing_title">Komprimearje\u2026</string>
+    <string name="waiting_dialog_compressing_msg">&lt;b&gt;Bestân&lt;/b&gt; <xliff:g id="file">%1$s</xliff:g></string>
+    <string name="waiting_dialog_analizing_msg">&lt;b&gt;Analysearje\u2026&lt;/b&gt;</string>
+    <string name="msgs_extracting_success">It útpakken is mei sukses foltôge. De gegevens binne útpakt nei <xliff:g id="destination">%1$s</xliff:g>.</string>
+    <string name="msgs_compressing_success">It komprimearjen is mei sukses foltôge. De gegevens binne komprimearre nei <xliff:g id="destination">%1$s</xliff:g>.</string>
+    <string name="actions_dialog_title">Aksjes</string>
+    <string name="actions_menu_properties_current_folder">Eigenskippen</string>
+    <string name="actions_menu_refresh">Fernije</string>
+    <string name="actions_menu_new_directory">Nije map</string>
+    <string name="actions_menu_new_file">Nije bestân</string>
+    <string name="actions_menu_select_all">Alles selektearje</string>
+    <string name="actions_menu_deselect_all">Alles deselektearje</string>
+    <string name="actions_menu_select">Selektearje</string>
+    <string name="actions_menu_deselect">Deselektearje</string>
+    <string name="actions_menu_paste_selection">Hjir kopiearje (seleksje)</string>
+    <string name="actions_menu_move_selection">Hjir ferpleatse (seleksje)</string>
+    <string name="actions_menu_delete_selection">Fuortsmite (seleksje)</string>
+    <string name="actions_menu_compress_selection">Komprimearje (seleksje)</string>
+    <string name="actions_menu_create_link">Keppeling meitsje</string>
+    <string name="actions_menu_open">Iepenje</string>
+    <string name="actions_menu_open_with">Iepenje mei</string>
+    <string name="actions_menu_execute">Utfiere</string>
+    <string name="actions_menu_send">Ferstjoere</string>
+    <string name="actions_menu_send_selection">Ferstjoere (seleksje)</string>
+    <string name="actions_menu_compress">Komprimearje</string>
+    <string name="actions_menu_extract">Utpakke</string>
+    <string name="actions_menu_delete">Fuortsmite</string>
+    <string name="actions_menu_rename">Omneame</string>
+    <string name="actions_menu_create_copy">Kopy meitsje</string>
+    <string name="actions_menu_properties">Eigenskippen</string>
+    <string name="actions_menu_add_to_bookmarks">Blêdwizer tafoegje</string>
+    <string name="actions_menu_add_shortcut">Fluchkeppeling tafoegje</string>
+    <string name="actions_menu_open_parent_folder">Boppelizzende map iepenje</string>
+    <string name="actions_menu_compute_checksum">Checksum berekkenje</string>
+    <string name="actions_menu_print">Ofdrukke</string>
+    <string name="actions_menu_set_as_home">Ynstelle as startside</string>
+    <string name="actions_ask_undone_operation_msg">Dizze aksje kin net ûngedien makke wurde. Binne jo wis dat jo troch gean wolle?</string>
+    <string name="input_name_dialog_label">Namme:</string>
+    <string name="input_name_dialog_message_empty_name">De namme mei net leech wêze.</string>
+    <string name="input_name_dialog_message_invalid_path_name">Unjildige namme. De karakters ‘<xliff:g id="invalid_characters">%1$s</xliff:g>’ binne net tastien.</string>
+    <string name="input_name_dialog_message_invalid_name_length">Maksimale tekenlimyt berikke.</string>
+    <string name="input_name_dialog_message_invalid_name">Unjildige namme. De nammen ‘.’ en ‘..’ binne net tastien.</string>
+    <string name="input_name_dialog_message_name_exists">Dizze namme bestiet al.</string>
+    <string name="associations_dialog_title">Keppele apps</string>
+    <string name="associations_dialog_remember">Kar ûnthâlde</string>
+    <string name="associations_dialog_openwith_title">Iepenje mei</string>
+    <string name="associations_dialog_openwith_action">Iepenje</string>
+    <string name="associations_dialog_sendwith_title">Ferstjoere mei</string>
+    <string name="associations_dialog_sendwith_action">Ferstjoere</string>
+    <string name="inline_autocomplete_tab_nothing_to_complete_msg">Neat te foltôgjen.</string>
+    <string name="execution_console_title">Console</string>
+    <string name="execution_console_script_name_label">Skript:</string>
+    <string name="execution_console_script_execution_time_label">Tiid:</string>
+    <string name="execution_console_script_exitcode_label">Ofslútkoade:</string>
+    <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> sek.</string>
+    <string name="compute_checksum_title">Checksum berekkenje</string>
+    <string name="compute_checksum_filename_label">Bestân:</string>
+    <string name="compute_checksum_computing_checksum_msg">Checksum berekkenje\u2026</string>
+    <string name="mime_folder">Map</string>
+    <string name="mime_symlink">Symlink</string>
+    <string name="mime_unknown">Unbekend</string>
+    <string name="filetime_format_mode_system">Systeemynstelling</string>
+    <string name="filetime_format_mode_locale">Regionale ynstelling</string>
+    <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/yyyy hh:mm:ss</string>
+    <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
+    <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
+    <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> en <xliff:g id="files">%2$s</xliff:g> selektearre.</string>
+    <string name="category_system">SYSTEEM</string>
+    <string name="category_app">APP</string>
+    <string name="category_binary">BINÊR</string>
+    <string name="category_text">TEKST</string>
+    <string name="category_document">DOKUMINT</string>
+    <string name="category_ebook">E-BOOK</string>
+    <string name="category_mail">E-MAIL</string>
+    <string name="category_compress">KOMPRIMEARRE</string>
+    <string name="category_exec">EXECUTABLE</string>
+    <string name="category_database">DATABASE</string>
+    <string name="category_font">LETTERTYPE</string>
+    <string name="category_image">ÔFBYLDING</string>
+    <string name="category_audio">AUDIO</string>
+    <string name="category_video">FIDEO</string>
+    <string name="category_security">BEFEILIGING</string>
+    <string name="category_all">ALLES</string>
+    <string name="compression_mode_title">Komprimearmodus</string>
+    <string name="shortcut_failed_msg">Brûken fan fluchkeppeling mislearre.</string>
+    <string name="shortcut_creation_success_msg">Fluchkeppeling mei sukses oanmakke.</string>
+    <string name="shortcut_creation_failed_msg">Fluchkeppeling meitsjen mislearre.</string>
+    <string name="pref">Ynstellingen</string>
+    <string name="pref_general">Algemiene ynstellingen</string>
+    <string name="pref_search">Sykopsjes</string>
+    <string name="pref_storage">Unthâld</string>
+    <string name="pref_editor">Bewurker</string>
+    <string name="pref_themes">Tema\'s</string>
+    <string name="pref_about">Oer</string>
+    <string name="pref_general_behaviour_category">Algemien</string>
+    <string name="pref_case_sensitive_sort">Haadlettergefoelich</string>
+    <string name="pref_case_sensitive_sort_summary">Ynhâld en sykresultaten haadlettergefoelich sortearje</string>
+    <string name="pref_filetime_format_mode">Datum-/tiidnotaasje</string>
+    <string name="pref_disk_usage_warning_level">Unthâldgebrûkwarskôging</string>
+    <string name="pref_disk_usage_warning_level_summary" formatted="false">Oare kleur foar skiifgebrûkwidgets toane wannear\'t se <xliff:g id="level">%1$s</xliff:g> prosint frije romte berikje</string>
+    <string name="pref_compute_folder_statistics">Mapstatistiken berekkenje</string>
+    <string name="pref_compute_folder_statistics_on">Let op: it berekkenjen fan mapstatistiken kostet tiid en systeemboarnen</string>
+    <string name="pref_display_thumbs">Foarbyld</string>
+    <string name="pref_display_thumbs_summary">Foarbyldwerjefte foar ôfbyldingen, fideo\'s, muzyk en apps</string>
+    <string name="pref_use_flinger">Feigebaren</string>
+    <string name="pref_use_flinger_summary">Fei fan links nei rjochts om bestannen of mappen fuort te smiten</string>
+    <string name="pref_general_advanced_settings_category">Avansearre</string>
+    <string name="pref_access_mode">Tagongsmodus</string>
+    <string name="pref_access_mode_safe">Feilige modus</string>
+    <string name="pref_access_mode_safe_summary">Feilige modus\n\nDe app wurket sûnder machtigingen en allinnich ûnthâldfolumes (SD-kaart en USB) binne tagonklik</string>
+    <string name="pref_access_mode_prompt">Freegje nei tagongsmodus</string>
+    <string name="pref_access_mode_prompt_summary">Freegje nei tagongsmodus\n\nDe app hat folsleine tagong ta it bestânssysteem, mar sil tastimming freegje foar bewurkingen werfoar machtigingen nedich binne</string>
+    <string name="pref_access_mode_root">Roottagongsmodus</string>
+    <string name="pref_access_mode_root_summary">Roottagongsmodus\n\nLet op! Dizze modus stiet bewurkingen ta dy\'t it apparaat skansearje kinne. It is jo eigen ferantwurdlikheid om te soargjen dat in bewurking feilich is</string>
+    <string name="pref_restrict_secondary_users_access_title">Brûkerstagong beheine</string>
+    <string name="pref_restrict_secondary_users_access_summary">Tagong ta it komplete systeem beheine foar sekundêre brûkers</string>
+    <string name="pref_search_results_category">Resultaten</string>
+    <string name="pref_show_relevance_widget">Relevânsjepiktogram toane</string>
+    <string name="pref_highlight_terms">Syktermen markearje</string>
+    <string name="pref_sort_search_results_mode">Resultaten sortearje</string>
+    <string name="pref_sort_search_results_mode_none">Net sortearje</string>
+    <string name="pref_sort_search_results_mode_name">Op namme</string>
+    <string name="pref_sort_search_results_mode_relevance">Op relevânsje</string>
+    <string name="pref_search_privacity_category">Privacy</string>
+    <string name="pref_save_search_terms">Syktermen bewarje</string>
+    <string name="pref_save_search_terms_on">Syktermen wurde bewarre en brûkt as suggestjes foar takomstige sykopdrachten</string>
+    <string name="pref_save_search_terms_off">Syktermen wurde net bewarre</string>
+    <string name="pref_remove_saved_search_terms">Bewarre syktermen fuortsmite</string>
+    <string name="pref_remove_saved_search_terms_summary">Tik om alle bewarre syktermen fuort te smiten</string>
+    <string name="pref_remove_saved_search_terms_msg">Alle bewarre syktermen binne fuortsmiten</string>
+    <string name="pref_secure_storage_category">Befeilige ûnthâld</string>
+    <string name="pref_secure_storage_delayed_sync_title">Fertrage syngronisaasje</string>
+    <string name="pref_secure_storage_delayed_sync_summary">Syngronisaasje fan befeilige ûnthâldsystemen kin in grutte ynfloed hawwe op it systeem. Troch dizze opsje yn te skeakeljen krije jo fluggere responstiden, trochdat it bestânssysteem pas syngronisearre wurdt wannear it net yn gebrûk is, mar kinne gegevens ferlern gean wannear de app ferûngelokket eardat syngronisaasje plakfûn hat.</string>
+    <string name="pref_secure_storage_reset_password_title">Wachtwurd wizigje</string>
+    <string name="pref_secure_storage_delete_storage_title">Unthâld fuortsmite</string>
+    <string name="pref_editor_behaviour_category">Gedrach</string>
+    <string name="pref_no_suggestions">Gjin suggestjes</string>
+    <string name="pref_no_suggestions_desc">Wurdboeksuggestjes ferstopje wylst it bewurkjen fan in bestân</string>
+    <string name="pref_word_wrap">Automatyske tebekrin</string>
+    <string name="pref_hexdump">Hex-dump</string>
+    <string name="pref_hexdump_desc">Hex-dump generearje by iepenjen binêr bestân en dizze iepenje yn hex-viewer</string>
+    <string name="pref_editor_syntax_highlight_category">Syntaksiskleuring</string>
+    <string name="pref_syntax_highlight">Syntaksiskleur</string>
+    <string name="pref_syntax_highlight_desc">Syntaksiskleuring ynskeakelje yn de bewurker wannear mooglik</string>
+    <string name="pref_syntax_highlight_color_scheme">Kleureskema</string>
+    <string name="pref_syntax_highlight_color_scheme_desc">Kleureskema foar syntaksiskleuring ynstelle</string>
+    <string name="pref_syntax_sh_use_theme_default">Temastandert</string>
+    <string name="pref_syntax_sh_use_theme_default_desc">Standert kleureskema brûke fan aktuele tema</string>
+    <string name="pref_editor_sh_item_category">Items</string>
+    <string name="pref_themes_selection_category">Tema\'s</string>
+    <string name="pref_themes_set_theme">Tema ynstelle</string>
+    <string name="pref_themes_confirmation">Tema mei sukses tapast.</string>
+    <string name="pref_themes_not_found">Kin tema net fine.</string>
+    <string name="pref_debug_traces">Flateropspoaringsmodus</string>
+    <string name="theme_default_name">Ljocht tema</string>
+    <string name="theme_default_description">Ljochte kleuren foar de bestânsbehearder.</string>
+    <string name="themes_author">LineageOS</string>
+    <string name="drawer_open">Navigaasjemenu iepenje</string>
+    <string name="drawer_close">Navigaasjemenu slute</string>
+    <string name="color_picker_alpha_slider_text">Transparânsje</string>
+    <string name="color_picker_current_text">Aktuele:</string>
+    <string name="color_picker_new_text">Nij:</string>
+    <string name="color_picker_color">Kleur:</string>
+    <string name="ash_reset_color_scheme">Standert kleureskema opnij ynstelle</string>
+    <string name="ash_text">Tekst</string>
+    <string name="ash_assignment">Tawizing</string>
+    <string name="ash_singleline_comment">Inkelde rigelige opmerking</string>
+    <string name="ash_multiline_comment">Mear rigelige opmerking</string>
+    <string name="ash_keyword">Kaaiwurd</string>
+    <string name="ash_quoted_string">Kwotearre tekst</string>
+    <string name="ash_variable">Fariabele</string>
+    <string name="secure_storage_unlock_title">Befeilige ûnthâld ûntskoattelje</string>
+    <string name="secure_storage_create_title">Befeilige ûnthâld oanmeitsje</string>
+    <string name="secure_storage_reset_title">Wachtwurd opnij ynstelle</string>
+    <string name="secure_storage_delete_title">Befeilige ûnthâld fuortsmite</string>
+    <string name="secure_storage_unlock_key_prompt_msg">Typ it wachtwurd om it befeilige ûnthâldsysteem te ûntskoatteljen.</string>
+    <string name="secure_storage_unlock_key_new_msg">Typ it wachtwurd om it befeilige ûnthâldsysteem te beskermjen.</string>
+    <string name="secure_storage_unlock_key_reset_msg">Typ it aktuele en nije wachtwurd om it befeilige ûnthâldsysteem opnij yn te stellen.</string>
+    <string name="secure_storage_unlock_key_delete_msg">Typ it wachtwurd om it befeilige ûnthâldsysteem fuort te smiten.</string>
+    <string name="secure_storage_unlock_old_key_title">Ald wachtwurd:</string>
+    <string name="secure_storage_unlock_new_key_title">Nij wachtwurd:</string>
+    <string name="secure_storage_unlock_key_title">Wachtwurd:</string>
+    <string name="secure_storage_unlock_repeat_title">Wachtwurd nochris:</string>
+    <string name="secure_storage_create_button">Oanmeitsje</string>
+    <string name="secure_storage_unlock_button">Untskoattelje</string>
+    <string name="secure_storage_reset_button">Opnij ynstelle</string>
+    <string name="secure_storage_delete_button">Fuortsmite</string>
+    <string name="secure_storage_unlock_failed">Kin ûnthâld net ûntskoattelje</string>
+    <string name="secure_storage_unlock_validation_length">Wachtwurd moat op syn minst <xliff:g id="characters">%1$d</xliff:g> tekens lang wêze.</string>
+    <string name="secure_storage_unlock_validation_equals">Wachtwurden komme net oerien.</string>
+    <string name="secure_storage_open_file_warning">It bestân wurdt kopiearre nei in tydlike net fersifere lokaasje. Dizze wurdt nei in oer wiske.</string>
+    <string name="print_unsupported_document">Net-stipe dokumintformaat</string>
+    <string name="print_unsupported_image">Net-stipe ôfbyldingsformaat</string>
+    <string name="print_document_header">Dokumint: <xliff:g id="document_name">%1$s</xliff:g></string>
+    <string name="print_document_footer">Side <xliff:g id="page_number">%1$s</xliff:g></string>
+    <string name="security_warning_extract">Let op:\n\nIt útpakken fan in komprimearre bestân mei relative/absolute paden kin systeembestannen oerskriuwen en dêrtroch skealik binne foar jo apparaat.\n\nBinne jo wis dat jo trochgean wolle?</string>
+    <string name="changelog_title">Wizigingsloch</string>
+    <string name="welcome_title">Wolkom</string>
+    <string name="welcome_msg">Wolkom by de bestânsbehearder fan LineageOS\n\nHjirmei kinne jo jo bestânssysteem besjen en bewurkingen útfiere dy\'t skealik wêze kinne foar jo apparaat. Om dit foar te kommen iepenet de app yn in feilige modus sûnder machtigingen.\n\nJo kinne nei de avansearre modus mei folsleine machtigingen gean fia Ynstellingen. De bewurkingen dy\'t jo útfiere barre op eigen ferantwurdlikheid.\n\nIt LineageOS-Team\n</string>
+    <string name="activity_not_found_exception">Kin gjin app fine om dit bestân te iepenjen</string>
+    <string name="storage_permissions_denied">Bestânsbehearder fereasket machtiging foar ûnthâld om bestannen besjen te kinnen.</string>
+    <string name="storage_permissions_explanation">Gean nei Ynstellingen en tik Machtigingen om machtiging te ferlienen.</string>
+    <string name="snackbar_settings">Ynstellingen</string>
+    <string name="toggle_word_wrap_msg">Automatysk tebekrin yn-/útskeakelje</string>
 </resources>

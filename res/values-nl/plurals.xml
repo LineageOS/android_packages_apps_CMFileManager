@@ -16,31 +16,28 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <plurals name="n_folders">
-    <item quantity="one">1 map</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mappen</item>
-  </plurals>
-  <plurals name="n_files">
-    <item quantity="one">1 bestand</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> bestanden</item>
-  </plurals>
-  <!-- Search - Found items -->
-  <plurals name="search_found_items">
-    <item quantity="one">1 item gevonden</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> items gevonden</item>
-  </plurals>
-  <!-- Statusbar text if there are selected files or folders -->
-  <plurals name="selection_folders">
-    <item quantity="one">1 map geselecteerd.</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mappen geselecteerd.</item>
-  </plurals>
-  <plurals name="selection_files">
-    <item quantity="one">1 bestand geselecteerd.</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> bestanden geselecteerd.</item>
-  </plurals>
-  <!-- Actions - Confirm the number of items that are going to be deleted -->
-  <plurals name="deleting_n_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item wordt verwijderd</item>
-    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> items worden verwijderd</item>
-  </plurals>
+    <plurals name="n_folders">
+        <item quantity="one">1 map</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mappen</item>
+    </plurals>
+    <plurals name="n_files">
+        <item quantity="one">1 bestand</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> bestanden</item>
+    </plurals>
+    <plurals name="search_found_items">
+        <item quantity="one">1 item gevonden</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> items gevonden</item>
+    </plurals>
+    <plurals name="selection_folders">
+        <item quantity="one">1 map geselecteerd.</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mappen geselecteerd.</item>
+    </plurals>
+    <plurals name="selection_files">
+        <item quantity="one">1 bestand geselecteerd.</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> bestanden geselecteerd.</item>
+    </plurals>
+    <plurals name="deleting_n_items">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item wordt verwijderd</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g> items worden verwijderd</item>
+    </plurals>
 </resources>

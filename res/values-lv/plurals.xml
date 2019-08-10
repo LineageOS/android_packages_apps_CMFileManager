@@ -16,32 +16,29 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <plurals name="n_folders">
-    <item quantity="zero"><xliff:g id="folders">%1$d</xliff:g> mape</item>
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> mape</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mapes</item>
-  </plurals>
-  <plurals name="n_files">
-    <item quantity="zero"><xliff:g id="files">%1$d</xliff:g> fails</item>
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fails</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> faili</item>
-  </plurals>
-  <!-- Search - Found items -->
-  <plurals name="search_found_items">
-    <item quantity="zero"><xliff:g id="count">%d</xliff:g> atrasts vienums</item>
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> atrasts vienums</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> atrasti vienumi</item>
-  </plurals>
-  <!-- Statusbar text if there are selected files or folders -->
-  <plurals name="selection_folders">
-    <item quantity="zero"><xliff:g id="folders">%1$d</xliff:g> atlasīta mape.</item>
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> atlasīta mape.</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> atlasītas mapes.</item>
-  </plurals>
-  <plurals name="selection_files">
-    <item quantity="zero"><xliff:g id="files">%1$d</xliff:g> atlasīts fails.</item>
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> atlasīts fails.</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> atlasīti faili.</item>
-  </plurals>
-  <!-- Actions - Confirm the number of items that are going to be deleted -->
+    <plurals name="n_folders">
+        <item quantity="zero"><xliff:g id="folders">%1$d</xliff:g> mape</item>
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> mape</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> mapes</item>
+    </plurals>
+    <plurals name="n_files">
+        <item quantity="zero"><xliff:g id="files">%1$d</xliff:g> fails</item>
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fails</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> faili</item>
+    </plurals>
+    <plurals name="search_found_items">
+        <item quantity="zero"><xliff:g id="count">%d</xliff:g> atrasts vienums</item>
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> atrasts vienums</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> atrasti vienumi</item>
+    </plurals>
+    <plurals name="selection_folders">
+        <item quantity="zero"><xliff:g id="folders">%1$d</xliff:g> atlasīta mape.</item>
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> atlasīta mape.</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> atlasītas mapes.</item>
+    </plurals>
+    <plurals name="selection_files">
+        <item quantity="zero"><xliff:g id="files">%1$d</xliff:g> atlasīts fails.</item>
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> atlasīts fails.</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> atlasīti faili.</item>
+    </plurals>
 </resources>

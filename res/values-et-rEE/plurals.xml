@@ -16,31 +16,28 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <plurals name="n_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> kaust</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> kausta</item>
-  </plurals>
-  <plurals name="n_files">
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fail</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> faili</item>
-  </plurals>
-  <!-- Search - Found items -->
-  <plurals name="search_found_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> üksus leitud</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> üksust leitud</item>
-  </plurals>
-  <!-- Statusbar text if there are selected files or folders -->
-  <plurals name="selection_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> kaust valitud.</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> kausta valitud.</item>
-  </plurals>
-  <plurals name="selection_files">
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fail valitud.</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> faili valitud.</item>
-  </plurals>
-  <!-- Actions - Confirm the number of items that are going to be deleted -->
-  <plurals name="deleting_n_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element kustutatakse.</item>
-    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> elementi kustutatakse.</item>
-  </plurals>
+    <plurals name="n_folders">
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> kaust</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> kausta</item>
+    </plurals>
+    <plurals name="n_files">
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fail</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> faili</item>
+    </plurals>
+    <plurals name="search_found_items">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> üksus leitud</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> üksust leitud</item>
+    </plurals>
+    <plurals name="selection_folders">
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> kaust valitud.</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> kausta valitud.</item>
+    </plurals>
+    <plurals name="selection_files">
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fail valitud.</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> faili valitud.</item>
+    </plurals>
+    <plurals name="deleting_n_items">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> element kustutatakse.</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g> elementi kustutatakse.</item>
+    </plurals>
 </resources>

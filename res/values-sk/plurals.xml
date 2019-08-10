@@ -16,37 +16,40 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <plurals name="n_folders">
-    <item quantity="one">1 priečinok</item>
-    <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> priečinky</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> priečinkov</item>
-  </plurals>
-  <plurals name="n_files">
-    <item quantity="one">1 súbor</item>
-    <item quantity="few"><xliff:g id="files">%1$d</xliff:g> súbory</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> súborov</item>
-  </plurals>
-  <!-- Search - Found items -->
-  <plurals name="search_found_items">
-    <item quantity="one">1 nájdená položka</item>
-    <item quantity="few"><xliff:g id="count">%d</xliff:g> nájdené položky</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> nájdených položiek</item>
-  </plurals>
-  <!-- Statusbar text if there are selected files or folders -->
-  <plurals name="selection_folders">
-    <item quantity="one">1 vybraný priečinok.</item>
-    <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> vybrané priečinky.</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> vybraných priečinkov.</item>
-  </plurals>
-  <plurals name="selection_files">
-    <item quantity="one">1 vybraný súbor.</item>
-    <item quantity="few"><xliff:g id="files">%1$d</xliff:g> vybrané súbory.</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> vybraných súborov.</item>
-  </plurals>
-  <!-- Actions - Confirm the number of items that are going to be deleted -->
-  <plurals name="deleting_n_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> položka sa vymaže.</item>
-    <item quantity="few"><xliff:g id="count">%1$d</xliff:g> položky sa vymažú.</item>
-    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> položiek sa vymaže.</item>
-  </plurals>
+    <plurals name="n_folders">
+        <item quantity="one">1 priečinok</item>
+        <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> priečinky</item>
+        <item quantity="many"><xliff:g id="folders">%1$d</xliff:g> priečinkov</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> priečinkov</item>
+    </plurals>
+    <plurals name="n_files">
+        <item quantity="one">1 súbor</item>
+        <item quantity="few"><xliff:g id="files">%1$d</xliff:g> súbory</item>
+        <item quantity="many"><xliff:g id="files">%1$d</xliff:g> súborov</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> súborov</item>
+    </plurals>
+    <plurals name="search_found_items">
+        <item quantity="one">1 nájdená položka</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> nájdené položky</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> nájdených položiek</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> nájdených položiek</item>
+    </plurals>
+    <plurals name="selection_folders">
+        <item quantity="one">1 vybraný priečinok.</item>
+        <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> vybrané priečinky.</item>
+        <item quantity="many"><xliff:g id="folders">%1$d</xliff:g> vybraných priečinkov.</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> vybraných priečinkov.</item>
+    </plurals>
+    <plurals name="selection_files">
+        <item quantity="one">1 vybraný súbor.</item>
+        <item quantity="few"><xliff:g id="files">%1$d</xliff:g> vybrané súbory.</item>
+        <item quantity="many"><xliff:g id="files">%1$d</xliff:g> vybraných súborov.</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> vybraných súborov.</item>
+    </plurals>
+    <plurals name="deleting_n_items">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> položka sa vymaže.</item>
+        <item quantity="few"><xliff:g id="count">%1$d</xliff:g> položky sa vymažú.</item>
+        <item quantity="many"><xliff:g id="count">%1$d</xliff:g> položiek sa vymaže.</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g> položiek sa vymaže.</item>
+    </plurals>
 </resources>

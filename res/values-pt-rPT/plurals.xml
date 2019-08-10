@@ -16,31 +16,28 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <plurals name="n_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> pasta</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> pastas</item>
-  </plurals>
-  <plurals name="n_files">
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ficheiro</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ficheiros</item>
-  </plurals>
-  <!-- Search - Found items -->
-  <plurals name="search_found_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item encontrado</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> itens encontrados</item>
-  </plurals>
-  <!-- Statusbar text if there are selected files or folders -->
-  <plurals name="selection_folders">
-    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> pasta selecionada.</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> pastas selecionadas.</item>
-  </plurals>
-  <plurals name="selection_files">
-    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ficheiro selecionado.</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ficheiros selecionados.</item>
-  </plurals>
-  <!-- Actions - Confirm the number of items that are going to be deleted -->
-  <plurals name="deleting_n_items">
-    <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item vai ser eliminado.</item>
-    <item quantity="other"><xliff:g id="count">%1$d</xliff:g> itens vão ser eliminados.</item>
-  </plurals>
+    <plurals name="n_folders">
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> pasta</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> pastas</item>
+    </plurals>
+    <plurals name="n_files">
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ficheiro</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ficheiros</item>
+    </plurals>
+    <plurals name="search_found_items">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item encontrado</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> itens encontrados</item>
+    </plurals>
+    <plurals name="selection_folders">
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> pasta selecionada.</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> pastas selecionadas.</item>
+    </plurals>
+    <plurals name="selection_files">
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ficheiro selecionado.</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ficheiros selecionados.</item>
+    </plurals>
+    <plurals name="deleting_n_items">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> item vai ser eliminado.</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g> itens vão ser eliminados.</item>
+    </plurals>
 </resources>

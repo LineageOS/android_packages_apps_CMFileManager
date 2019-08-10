@@ -17,367 +17,396 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- The name of the app -->
-  <!-- The description of the app -->
-  <!-- Human readable sizes -->
-  <!-- Date/time format order (%1$s: date; %2$s: time) -->
-  <!-- Devices types -->
-  <!-- Mount Point States -->
-  <!-- Default buttons -->
-  <!-- The root directory name -->
-  <!-- The search result name -->
-  <!-- Loading waiting message -->
-  <!-- Computing message -->
-  <!-- Computing new line message -->
-  <!-- Cancelled message -->
-  <!-- Error message -->
-  <!-- Copy text content description -->
-  <!-- Copy text content message -->
-  <!-- Warning dialog title -->
-  <!-- Error dialog title -->
-  <!-- Confirm operation dialog title -->
-  <!-- Confirm overwrite dialog title -->
-  <!-- Confirm deletion dialog title -->
-  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Title -->
-  <!--  A console couldn't be created - Ask the user to change the access mode - Dialog Message -->
-  <!-- A console couldn't be created - Without privileges, the app won't work -->
-  <!-- The message shown when an allocation of a privileged console fails, and a non
-         privileged is allocated -->
-  <!-- The selected setting was not applied or stored -->
-  <!-- The initial directory has an invalid or inaccessible reference -->
-  <!-- Root is not available message -->
-  <!-- Success -->
-  <!-- Unknown error -->
-  <!-- When an operation requires elevated privileged (normally caused for the use of a
-         non-privileged console) -->
-  <!-- When an operation fails because the device has run out of storage. -->
-  <!-- The file or directory was not found -->
-  <!-- The command reference couldn't be created (not found or invalid definition)
-         (normally caused by a development error) -->
-  <!-- I/O exception -->
-  <!-- Operation timeout detected -->
-  <!-- The operation returns an invalid exit code -->
-  <!-- A console couldn't be allocated -->
-  <!-- An operation can't be cancelled -->
-  <!-- The operation requieres mount the file system prior to execute the command -->
-  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
-  <!-- The operation will cause inconsistencies -->
-  <!-- Operation not permitted in the current directory -->
-  <!-- The advice message prior to exit the app -->
-  <!-- There is no registered app that can handle the mime-type -->
-  <!-- Overwrite files? -->
-  <!-- The association of an action to the app failed -->
-  <!-- An operation requires elevated privileged. Ask the user. -->
-  <!-- The parent directory of the current directory in navigation view -->
-  <!-- External storage descripton -->
-  <!-- Usb storage descripton -->
-  <!-- ActionBar Buttons - FileSystem -->
-  <!-- ActionBar Buttons - Sort Mode -->
-  <!-- ActionBar Buttons - Layout Mode -->
-  <!-- ActionBar Buttons - Other View Options -->
-  <!-- ActionBar Buttons - Done -->
-  <!-- ActionBar Buttons - Actions -->
-  <!-- ActionBar Buttons - Search -->
-  <!-- ActionBar Buttons - Overflow -->
-  <!-- ActionBar Buttons - Storage volumes -->
-  <!-- ActionBar Buttons - Save -->
-  <!-- ActionBar Buttons - Print -->
-  <!-- Navigation View - Sort - Sort by name (ascending) -->
-  <!-- Navigation View - Sort - Sort by name (descending) -->
-  <!-- Navigation View - Sort - Sort by date (ascending) -->
-  <!-- Navigation View - Sort - Sort by date (descending) -->
-  <!-- Navigation View - Sort - Sort by size (ascending) -->
-  <!-- Navigation View - Sort - Sort by size (descending) -->
-  <!-- Navigation View - Sort - Sort by type (ascending) -->
-  <!-- Navigation View - Sort - Sort by type (descending) -->
-  <!-- Navigation View - Layout - Icons -->
-  <!-- Navigation View - Layout - Simple -->
-  <!-- Navigation View - Layout - Details -->
-  <!-- Navigation View - View - Show folders first -->
-  <!-- Navigation View - View - Show hidden files option -->
-  <!-- Navigation View - View - Show system files option -->
-  <!-- Navigation View - View - Show symlinks option -->
-  <!-- Filesystem Info (no data). Dialog title -->
-  <!-- Filesystem Info (no data). Dialog message -->
-  <!-- Filesystem Info - Filesystem couldn't be mounted -->
-  <!-- Filesystem Info - Not allowed message -->
-  <!-- Filesystem Info - Mount failed -->
-  <!-- Filesystem Info Dialog - Title -->
-  <!-- Filesystem Info Dialog - Tab - Info -->
-  <!-- Filesystem Info Dialog - Tab - Disk Usage -->
-  <!-- Filesystem Info Dialog - Status Label -->
-  <!-- Filesystem Info Dialog - Mount Point Label -->
-  <!-- Filesystem Info Dialog - Device Label -->
-  <!-- Filesystem Info Dialog - Type Label -->
-  <!-- Filesystem Info Dialog - Options Label -->
-  <!-- Filesystem Info Dialog - Dump/Pass Label -->
-  <!-- Filesystem Info Dialog - Virtual Label -->
-  <!-- Filesystem Info Dialog - Total Disk Usage -->
-  <!-- Filesystem Info Dialog - Used Disk Usage -->
-  <!-- Filesystem Info Dialog - Free Disk Usage -->
-  <!-- Fso Properties - Not allowed message -->
-  <!-- Fso Properties - Failed to change owner to fso -->
-  <!-- Fso Properties - Failed to change group to fso -->
-  <!-- Fso Properties - Failed to change group to fso -->
-  <!-- Fso Properties Dialog - Title -->
-  <!-- Fso Properties Dialog - Tab - Info -->
-  <!-- Fso Properties Dialog - Tab - Permissions -->
-  <!-- Fso Properties Dialog - Name Label -->
-  <!-- Fso Properties Dialog - Parent Folder Label -->
-  <!-- Fso Properties Dialog - Type Label -->
-  <!-- Fso Properties Dialog - Category Label -->
-  <!-- Fso Properties Dialog - Link Label -->
-  <!-- Fso Properties Dialog - Size Label -->
-  <!-- Fso Properties Dialog - Contains Label -->
-  <!-- Fso Properties Dialog - Last Accessed Time Label -->
-  <!-- Fso Properties Dialog - Last Modified Time Label -->
-  <!-- Fso Properties Dialog - Last Changed Time -->
-  <!-- Fso Properties Dialog - Owner Label -->
-  <!-- Fso Properties Dialog - Group Label -->
-  <!-- Fso Properties Dialog - Others Label -->
-  <!-- Fso Properties Dialog - Special Label -->
-  <!-- Fso Properties Dialog - Read Label -->
-  <!-- Fso Properties Dialog - Write Label -->
-  <!-- Fso Properties Dialog - Execute Label -->
-  <!-- Fso Properties Dialog - Execute Label -->
-  <!-- Fso Properties Dialog - Skip media scan -->
-  <!-- History - History activity title -->
-  <!-- History - The history is empty -->
-  <!-- History - The history reference is not in the actual history list -->
-  <!-- Search - Search activity title -->
-  <!-- Search - Search hint message -->
-  <!-- Search - Voice search hint message -->
-  <!-- Search - Search error message -->
-  <!-- Search - Search no results message -->
-  <!-- Search - Number of items found in directory -->
-  <!-- Search - Search query terms -->
-  <!-- Search - Confirm search -->
-  <!-- Search - Some terms of the search are too small. The operation could be very costly -->
-  <!-- Search - Searching dialog title -->
-  <!-- Search - Searching label -->
-  <!-- Picker Activity -->
-  <!-- Picker Activity - Dialog title -->
-  <!-- Editor - Editor activity title -->
-  <!-- Editor - Invalid file message -->
-  <!-- Editor - File not found message -->
-  <!-- Editor - File size exceed the limit -->
-  <!-- Editor - Editor is dirty, ask the user - Dialog title -->
-  <!-- Editor - Editor is dirty, ask the user - Dialog message -->
-  <!-- Editor - Save operation success -->
-  <!-- Editor - Read-only file mode -->
-  <!-- Editor - Dumping message -->
-  <!-- Editor - Displaying -->
-  <!-- Bookmarks - Bookmarks activity title -->
-  <!-- Bookmarks - Bookmark name - Home -->
-  <!-- Bookmarks - Bookmark name - Root folder -->
-  <!-- Bookmarks - Bookmark name - System folder -->
-  <!-- Bookmarks - Bookmark name - Secure storage -->
-  <!-- Bookmarks - Bookmark name - Remote storage -->
-  <!-- Bookmarks - Bookmark name - Button - Initial directory content description -->
-  <!-- Bookmarks - Bookmark name - Button - Remove bookmark content description -->
-  <!-- Bookmarks - Bookmarks - Actions - Bookmark successfully added -->
-  <!-- Bookmarks - Bookmarks - Actions - Bookmark already exists -->
-  <!-- Initial directory dialog title -->
-  <!-- Initial directory label -->
-  <!-- Initial directory is relative -->
-  <!-- Initial directory error message -->
-  <!-- Menu - Navigation - Search -->
-  <!-- Menu - Navigation - Settings -->
-  <!-- Menu - History - Clear history -->
-  <!-- Menu - Editor - No suggestions -->
-  <!-- Menu - Editor - Word wrap -->
-  <!-- Menu - Editor - Sintax highlight -->
-  <!-- Regular expression for create copy action -->
-  <!-- Regular expression for new compressed file -->
-  <!-- Waiting dialog - Performing operation message -->
-  <!-- Waiting dialog - Copying title -->
-  <!-- Waiting dialog - Copying message -->
-  <!-- Waiting dialog - Moving title -->
-  <!-- Waiting dialog - Moving message -->
-  <!-- Waiting dialog - Deleting title -->
-  <!-- Waiting dialog - Deleting message -->
-  <!-- Waiting dialog - Extracting title -->
-  <!-- Waiting dialog - Extracting message -->
-  <!-- Waiting dialog - Extracting title -->
-  <!-- Waiting dialog - Extracting message -->
-  <!-- Waiting dialog - Initializing the dialog -->
-  <!-- Extracting - Success message -->
-  <!-- Compressing - Success message -->
-  <!-- Actions Dialog - Title -->
-  <!-- Actions Dialog - Menu - Properties of current folder -->
-  <!-- Actions Dialog - Menu - Refresh -->
-  <!-- Actions Dialog - Menu - New directory -->
-  <!-- Actions Dialog - Menu - New file -->
-  <!-- Actions Dialog - Menu - Select all -->
-  <!-- Actions Dialog - Menu - Deselect all -->
-  <!-- Actions Dialog - Menu - Select -->
-  <!-- Actions Dialog - Menu - Deselect -->
-  <!-- Actions Dialog - Menu - Copy/Paste selection -->
-  <!-- Actions Dialog - Menu - Move selection -->
-  <!-- Actions Dialog - Menu - Delete selection -->
-  <!-- Actions Dialog - Menu - Compress selection -->
-  <!-- Actions Dialog - Menu - Create link -->
-  <!-- Actions Dialog - Menu - Open -->
-  <!-- Actions Dialog - Menu - Open with -->
-  <!-- Actions Dialog - Menu - Execute -->
-  <!-- Actions Dialog - Menu - Send -->
-  <!-- Actions Dialog - Menu - Send selection -->
-  <!-- Actions Dialog - Menu - Compress -->
-  <!-- Actions Dialog - Menu - Extract -->
-  <!-- Actions Dialog - Menu - Delete -->
-  <!-- Actions Dialog - Menu - Rename -->
-  <!-- Actions Dialog - Menu - Create copy -->
-  <!-- Actions Dialog - Menu - Properties -->
-  <!-- Actions Dialog - Menu - Add to bookmarks -->
-  <!-- Actions Dialog - Menu - Add shortcut -->
-  <!-- Actions Dialog - Menu - Open parent folder -->
-  <!-- Actions Dialog - Menu - Compute checksum -->
-  <!-- Actions Dialog - Menu - Print -->
-  <!-- Actions Dialog - Menu - Set as home -->
-  <!-- Actions - Ask user prior to do an undone operation. Dialog message -->
-  <!-- Enter Name Dialog - Label -->
-  <!-- Enter Name Dialog - Message - Empty name -->
-  <!-- Enter Name Dialog - Message - Invalid name -->
-  <!-- Enter Name Dialog - Message - Invalid name length -->
-  <!-- Enter Name Dialog - Message - Invalid name -->
-  <!-- Enter Name Dialog - Message - Name exists -->
-  <!-- Associations Dialog - Title -->
-  <!-- Associations Dialog - Remember the user action -->
-  <!-- Associations Dialog - Open with Title -->
-  <!-- Associations Dialog - Open action (button title) -->
-  <!-- Associations Dialog - Send with Title -->
-  <!-- Associations Dialog - Send action (button title) -->
-  <!-- Inline Autocomplete Widget - Tab message nothing to complete -->
-  <!-- Execution console - Title -->
-  <!-- Execution console - The script name label -->
-  <!-- Execution console - The script execution time label -->
-  <!-- Execution console - The script exit code label -->
-  <!-- Execution console - The script execution time seconds string -->
-  <!-- Compute checksum - Title -->
-  <!-- Compute checksum - The file name label -->
-  <!-- Compute checksum - The MD5 label -->
-  <!-- Compute checksum - The SHA1 label -->
-  <!-- Compute checksum - The computing checksum message-->
-  <!-- Mime/Types - Folder -->
-  <!-- Mime/Types - Symlink -->
-  <!-- Mime/Types - Unknown -->
-  <!--  Filetime formats -->
-  <!-- Selection -->
-  <!-- For example "2 folders and 1 file selected." -->
-  <!-- Category descriptions -->
-  <!-- Compression - Compression modes dialog title -->
-  <!-- Compression - Supported archive and compression modes -->
-  <!-- Shortcut. Failed to handle the shortcut -->
-  <!-- Shortcut. The shortcut was created -->
-  <!-- Shortcut. The shortcut wasn't created -->
-  <!-- Preferences title -->
-  <!-- Preferences - General title -->
-  <!-- Preferences - Search title -->
-  <!-- Preferences - Storage title -->
-  <!-- Preferences - Editor title -->
-  <!-- Preferences - Themes title -->
-  <!-- Preferences - About title -->
-  <!-- Preferences - General - Behaviour category -->
-  <!-- Preferences - General - Case sensitive sort and navigating title -->
-  <!-- Preferences - General - Case sensitive sort and navigating summary -->
-  <!-- Preferences - General - Filetime format mode title -->
-  <!-- Preferences - General -Disk usage warning level title -->
-  <!-- Preferences - General - Disk usage warning level summary -->
-  <!-- FIXME Use "percent" instead of "%" symbol, because it make crash the app on getSummary
-         of ListPreference. This should be fixed in frameworks base prior to be added here. -->
-  <!-- Preferences - General - Compute folder statistics title -->
-  <!-- Preferences - General - Compute folder statistics summary on -->
-  <!-- Preferences - General - Display thumbs -->
-  <!-- Preferences - General - Display thumbs summary -->
-  <!-- Preferences - General - Use flinger detection -->
-  <!-- Preferences - General - Use flinger detection summary -->
-  <!-- Preferences - General - Advanced settings category -->
-  <!-- Preferences - General - Access mode -->
-  <!-- Preferences - General - Safe mode -->
-  <!-- Preferences - General - Safe mode summary -->
-  <!-- Preferences - General - Prompt user mode -->
-  <!-- Preferences - General - Prompt user mode summary -->
-  <!-- Preferences - General - Root access mode -->
-  <!-- Preferences - General - Root access mode summary -->
-  <!-- Preferences - General - Restrict secondary users access title -->
-  <!-- Preferences - General - Restrict secondary users access summary -->
-  <!-- Preferences - Search - Results category -->
-  <!-- Preferences - Search - Show relevance widget -->
-  <!-- Preferences - Search - Highlight search terms -->
-  <!-- Preferences - Search - Sort results mode -->
-  <!-- Preferences - Search - Sort results mode. None -->
-  <!-- Preferences - Search - Sort results mode. None -->
-  <!-- Preferences - Search - Sort results mode. Relevance -->
-  <!-- Preferences - Search - Privacity category -->
-  <!-- Preferences - Search - Save search terms -->
-  <!-- Preferences - Search - Save search terms summary on -->
-  <!-- Preferences - Search - Save search terms summary off -->
-  <!-- Preferences - Search - Remove saved search terms -->
-  <!-- Preferences - Search - Remove saved search terms summary -->
-  <!-- Preferences - Search - Suggestions were truncated -->
-  <!-- Preferences - Storage - Secure Storage category -->
-  <!-- Preferences - Storage - Secure Storage - Delayed sync title -->
-  <!-- Preferences - Storage - Secure Storage - Delayed sync summary -->
-  <!-- Preferences - Storage - Secure Storage - Change password title -->
-  <!-- Preferences - Storage - Secure Storage - Delete storage title -->
-  <!-- Preferences - Editor - Behaviour category -->
-  <!-- Preferences - Editor - No suggestions -->
-  <!-- Preferences - Editor - No suggestions summary -->
-  <!-- Preferences - Editor - Word wrap -->
-  <!-- Preferences - Editor - Hex dump -->
-  <!-- Preferences - Editor - Hex dump desc -->
-  <!-- Preferences - Editor - Syntax highlight category -->
-  <!-- Preferences - Editor - Syntax highlight -->
-  <!-- Preferences - Editor - Syntax highlight summary -->
-  <!-- Preferences - Editor - Syntax highlight color scheme -->
-  <!-- Preferences - Editor - Syntax highlight color scheme summary -->
-  <!-- Preferences - Editor - Syntax highlight - Color Scheme -->
-  <!-- Preferences - Editor - Syntax highlight -Color Scheme summary -->
-  <!-- Preferences - Editor - Syntax highlight - Color Scheme - Items category -->
-  <!-- Preferences - Themes - Themes selection category -->
-  <!-- Preferences - Themes - Set theme button -->
-  <!-- Preferences - Themes - Confirmation message -->
-  <!-- Preferences - Themes - Theme not found message -->
-  <!-- Preferences - Debug - Capture debug traces -->
-  <!-- Themes - Default theme name -->
-  <!-- Themes - Default theme description -->
-  <!-- Themes - Default theme author -->
-  <!-- Navigation drawer -->
-  <!-- ColorPickerDialog -->
-  <!-- The text of the alpha slider control -->
-  <!-- The label of the current color panel -->
-  <!-- The label of the new color panel -->
-  <!-- The label of the color input -->
-  <!-- Android Syntax Highlight -->
-  <!-- Secure Storage -->
-  <!-- Secure Storage dialog title - Unlock -->
-  <!-- Secure Storage dialog title - Create -->
-  <!-- Secure Storage dialog title - Reset -->
-  <!-- Secure Storage dialog title - Delete -->
-  <!-- Secure Storage unlock dialog message (secure storage exists) -->
-  <!-- Secure Storage unlock dialog message (new secure storage) -->
-  <!-- Secure Storage unlock dialog message (reset the current password) -->
-  <!-- Secure Storage unlock dialog message (delete the secure storage) -->
-  <!-- Secure Storage unlock dialog old key title -->
-  <!-- Secure Storage unlock dialog key title -->
-  <!-- Secure Storage unlock dialog key title -->
-  <!-- Secure Storage unlock dialog repeat key title-->
-  <!-- Secure Storage create button -->
-  <!-- Secure Storage unlock button -->
-  <!-- Secure Storage reset button -->
-  <!-- Secure Storage delete button -->
-  <!-- Secure Storage unlock failed toast -->
-  <!-- Secure Storage unlock validation, length -->
-  <!-- Secure Storage unlock validation, equal -->
-  <!-- Secure storage open file warning -->
-  <!-- Print messages -->
-  <!-- Unsupported document format -->
-  <!-- Unsupported image format -->
-  <!-- Print header -->
-  <!-- Print footer -->
-  <!-- Security - Extract relative or absolute files -->
-  <!-- ChangeLog - Dialog title -->
-  <!-- Welcome Dialog - Title -->
-  <!-- Welcome Dialog - Message -->
-  <!-- Wrap mode - toast -->
+    <string name="app_name">Rheolwr Ffeiliau</string>
+    <string name="app_description">Rheolwr ffeiliau LineageOS</string>
+    <string name="size_bytes">B</string>
+    <string name="size_kilobytes">kB</string>
+    <string name="size_megabytes">MB</string>
+    <string name="size_gigabytes">GB</string>
+    <string name="datetime_format_order">%1$s %2$s</string>
+    <string name="device_blockdevice">Dyfais rhwystro</string>
+    <string name="device_characterdevice">Ffeiliau nodau arbennig</string>
+    <string name="device_namedpipe">Peipen ag enw</string>
+    <string name="device_domainsocket">Soced parth</string>
+    <string name="mount_point_readonly">RO</string>
+    <string name="mount_point_readwrite">RW</string>
+    <string name="yes">Iawn</string>
+    <string name="no">Na</string>
+    <string name="all">Y cwbl</string>
+    <string name="overwrite">Trosysgrifo</string>
+    <string name="select">Dewis</string>
+    <string name="root_directory_name">&lt;Ffolder craidd&gt;</string>
+    <string name="search_result_name">Chwilio: <xliff:g id="terms">%1$s</xliff:g></string>
+    <string name="loading_message">Yn llwytho\u2026</string>
+    <string name="cancelled_message">Diddymwyd.</string>
+    <string name="error_message">Gwall.</string>
+    <string name="copy_text_cd">Tapia i gopïo testun i\'r clipfwrdd</string>
+    <string name="copy_text_msg">Copïwyd y testun i\'r clipfwrdd</string>
+    <string name="warning_title">Rhybudd</string>
+    <string name="error_title">Gwall</string>
+    <string name="confirm_operation">Cadarnhau\'r weithred</string>
+    <string name="confirm_overwrite">Cadarnhau\'r trosysgrifo</string>
+    <string name="confirm_deletion">Cadarnhau\'r dileu</string>
+    <string name="msgs_change_to_prompt_access_mode_title">Cadarnhau\'r newid</string>
+    <string name="msgs_change_to_prompt_access_mode_msg">Methu â rhedeg ym modd Mynediad Craidd. Yn newid i fodd Diogel.\n\nRhoi\'r newid hwn ar waith?</string>
+    <string name="msgs_cant_create_console">Methu â chael y breintiau sydd eu hangen i weithio.</string>
+    <string name="msgs_privileged_console_alloc_failed">Methu â rhedeg ym modd Mynediad Craidd. Yn newid i fodd Diogel.</string>
+    <string name="msgs_settings_save_failure">Methwyd â chadw neu roi\'r gosodiad ar waith.</string>
+    <string name="msgs_settings_invalid_initial_directory">Mae\'r ffolder gwreiddiol <xliff:g id="initial_dir">%1$s</xliff:g> yn annilys. Yn newid i ffolder craidd.</string>
+    <string name="root_not_available_msg">Dyw mynediad craidd ddim ar gael ar y ddyfais hon. Methu â gweithredu\'r weithred hon.</string>
+    <string name="msgs_success">Cwblhawyd y weithred yn llwyddiannus.</string>
+    <string name="msgs_unknown">Canfuwyd gwall. Roedd y weithred yn aflwyddiannus.</string>
+    <string name="msgs_insufficient_permissions">Mae ar y weithred hon angen breintiau uwch. Ceisia newid i fodd Mynediad Craidd.</string>
+    <string name="msgs_no_disk_space">Methodd y weithred hon am nad oes lle ar ôl ar y ddyfais.</string>
+    <string name="msgs_file_not_found">Ni chanfuwyd y ffeil neu ffolder.</string>
+    <string name="msgs_command_not_found">Ni chanfuwyd gorchymyn y weithred neu mae ganddo ddiffiniad annilys.</string>
+    <string name="msgs_io_failed">Methiant darllen/ysgrifennu.</string>
+    <string name="msgs_operation_timeout">Daeth amser y weithred i ben.</string>
+    <string name="msgs_operation_failure">Methodd y weithred.</string>
+    <string name="msgs_console_alloc_failure">Bu gwall mewnol.</string>
+    <string name="msgs_operation_can_not_be_cancelled">Ni ellir diddymu\'r weithred.</string>
+    <string name="msgs_read_only_filesystem">Mae\'r system ffeiliau yn un darllen-yn-unig. Ceisia fowntio\'r system ffeiliau fel un ysgrifennu-darllen cyn rhoi cynnig arall ar y weithred.</string>
+    <string name="msgs_illegal_argument">Paramedr anghyfreithlon. Arddeisyfiad wedi methu.</string>
+    <string name="msgs_unresolved_inconsistencies">Ni chaniateir y weithred hon gan y byddai yn creu anghysondebau.</string>
+    <string name="msgs_operation_not_allowed_in_current_directory">Ni all y ffolder gyrchfan fod yn is-ffolder o\'r ffynhonnell na bod yr un fath â\'r ffynhonnell.</string>
+    <string name="msgs_push_again_to_exit">Gwasga eto i adael.</string>
+    <string name="msgs_not_registered_app">Does dim ap wedi ei gofrestru i drin y math hwn o ffeil.</string>
+    <string name="msgs_overwrite_files">Mae rhai o\'r ffeiliau eisoes yn bodoli yn y ffolder cyrchfan.\n\nTrosysgrifo?</string>
+    <string name="msgs_action_association_failed">Methwyd â chysylltu\'r weithred â\'r ap.</string>
+    <string name="advise_insufficient_permissions">Mae ar y weithred angen breintiau uwch.\n\nWyt ti am newid i\'r modd Mynediad Craidd?</string>
+    <string name="parent_dir">Rhiant ffolder</string>
+    <string name="external_storage">Storfa allanol</string>
+    <string name="usb_storage">Storfa USB</string>
+    <string name="actionbar_button_filesystem_cd">Gwybodaeth system ffeiliau</string>
+    <string name="actionbar_button_sort_mode_cd">Modd trefnu</string>
+    <string name="actionbar_button_layout_mode_cd">Modd gosodiad</string>
+    <string name="actionbar_button_other_view_options_cd">Dewisiadau golwg eraill</string>
+    <string name="actionbar_button_selection_done_cd">Iawn</string>
+    <string name="actionbar_button_actions_cd">Gweithredoedd</string>
+    <string name="actionbar_button_search_cd">Chwilio</string>
+    <string name="actionbar_button_overflow_cd">Rhagor o ddewisiadau</string>
+    <string name="actionbar_button_storage_cd">Cyfrolau storfeydd</string>
+    <string name="actionbar_button_save_cd">Cadw</string>
+    <string name="actionbar_button_print_cd">Argraffu</string>
+    <string name="sort_by_name_asc">Yn ôl enw \u25B2</string>
+    <string name="sort_by_name_desc">Yn ôl enw \u25BC</string>
+    <string name="sort_by_date_asc">Yn ôl dyddiad \u25B2</string>
+    <string name="sort_by_date_desc">Yn ôl dyddiad \u25BC</string>
+    <string name="sort_by_size_asc">Yn ôl maint \u25B2</string>
+    <string name="sort_by_size_desc">Yn ôl maint \u25BC</string>
+    <string name="sort_by_type_asc">Yn ôl math \u25B2</string>
+    <string name="sort_by_type_desc">Yn ôl math \u25BC</string>
+    <string name="layout_icons">Eiconau</string>
+    <string name="layout_simple">Syml</string>
+    <string name="layout_details">Manylion</string>
+    <string name="cm_filemanager_show_dirs_first">Dangos ffolderi cyntaf</string>
+    <string name="cm_filemanager_show_hidden">Dangos ffeiliau cudd</string>
+    <string name="cm_filemanager_show_system">Dangos ffeiliau system</string>
+    <string name="cm_filemanager_show_symlinks">Dangos dolenni symbolaidd</string>
+    <string name="filesystem_info_warning_title">Dim gwybodaeth</string>
+    <string name="filesystem_info_warning_msg">Does dim gwybodaeth ar gael ar gyfer y system ffeiliau.</string>
+    <string name="filesystem_info_cant_be_mounted_msg">Ni ellir mowntio/dadfowntio\'r system ffeiliau.</string>
+    <string name="filesystem_info_mount_not_allowed_msg">Ni chaniateir gweithredoedd mowntio system ffeiliau tra ym modd diogel. Tapia i newid i fodd Mynediad Craidd.</string>
+    <string name="filesystem_info_mount_failed_msg">Methodd weithred mowntio\'r system ffeiliau. Ni ellir mowntio/dadfowntio rhai systemau ffeiliau, fel cardiau SD, os ydynt wedi eu creu fel systemau ffeil darllen-yn-unig.</string>
+    <string name="filesystem_info_dialog_title">Gwybodaeth system ffeiliau</string>
+    <string name="filesystem_info_dialog_tab_info">Gwybodaeth</string>
+    <string name="filesystem_info_dialog_tab_disk_usage">Defnydd disg</string>
+    <string name="filesystem_info_dialog_status">Mowntiwyd:</string>
+    <string name="filesystem_info_dialog_mount_point">Pwynt mowntio:</string>
+    <string name="filesystem_info_dialog_device">Dyfais:</string>
+    <string name="filesystem_info_dialog_type">Math:</string>
+    <string name="filesystem_info_dialog_options">Dewisiadau:</string>
+    <string name="filesystem_info_dialog_dump_pass">Dympio / Pasio:</string>
+    <string name="filesystem_info_dialog_virtual">Rhithwir:</string>
+    <string name="filesystem_info_dialog_total_disk_usage">Cyfanswm:</string>
+    <string name="filesystem_info_dialog_used_disk_usage">Defnyddiwyd:</string>
+    <string name="filesystem_info_dialog_free_disk_usage">Rhydd:</string>
+    <string name="fso_properties_permissions_not_allowed_msg">Ni chaniateir gweithredoedd rhoi caniatâd tra ym modd diogel. Tapia i newid i fodd Mynediad Craidd.</string>
+    <string name="fso_properties_failed_to_change_owner_msg">Methodd y weithred newid perchennog.\n\nAm resymau diogelwch, dyw rhai systemau ffeiliau, fel cardiau SD, ddim yn cael newid perchnogion.</string>
+    <string name="fso_properties_failed_to_change_group_msg">Methodd y weithred newid grŵp.\n\nAm resymau diogelwch, dyw rhai systemau ffeiliau, fel cardiau SD, ddim yn cael newid grwpiau.</string>
+    <string name="fso_properties_failed_to_change_permission_msg">Methodd y weithred newid caniatâd.\n\nAm resymau diogelwch, dyw rhai systemau ffeiliau, fel cardiau SD, ddim yn caniatáu newid caniatâd.</string>
+    <string name="fso_properties_dialog_title">Priodweddau</string>
+    <string name="fso_properties_dialog_tab_info">Gwybodaeth</string>
+    <string name="fso_properties_dialog_tab_permissions">Caniatâd</string>
+    <string name="fso_properties_dialog_name">Enw:</string>
+    <string name="fso_properties_dialog_parent">Rhiant:</string>
+    <string name="fso_properties_dialog_type">Math:</string>
+    <string name="fso_properties_dialog_category">Categori:</string>
+    <string name="fso_properties_dialog_link">Dolen:</string>
+    <string name="fso_properties_dialog_size">Maint:</string>
+    <string name="fso_properties_dialog_contains">Yn cynnwys:</string>
+    <string name="fso_properties_dialog_last_accessed_date">Cyrchwyd:</string>
+    <string name="fso_properties_dialog_last_modified_date">Addaswyd:</string>
+    <string name="fso_properties_dialog_last_changed_date">Newidiwyd:</string>
+    <string name="fso_properties_dialog_owner">Perchennog:</string>
+    <string name="fso_properties_dialog_group">Grŵp:</string>
+    <string name="fso_properties_dialog_others">Eraill:</string>
+    <string name="fso_properties_dialog_include_in_media_scan">Neidio sganio cyfryngau:</string>
+    <string name="fso_failed_to_allow_media_scan">Methwyd â chaniatáu sganio cyfryngau</string>
+    <string name="fso_failed_to_prevent_media_scan">Methwyd â rhwystro sganio cyfryngau</string>
+    <string name="fso_delete_nomedia_dir_title">Dileu cyfeiriadur .nomedia</string>
+    <string name="fso_delete_nomedia_dir_body">Mae\'r cyfeiriadur hwn yn cynnwys cyfeiriadur .nomedia.\n\nWyt ti am ddileu\'r cyfeiriadur a\'i holl gynnwys?</string>
+    <string name="fso_delete_nomedia_non_empty_title">Dileu ffeil .nomedia</string>
+    <string name="fso_delete_nomedia_non_empty_body">Mae\'r cyfeiriadur hwn yn cynnwys ffeil .nomedia na sydd yn wag.\n\nWyt ti am ei dileu?</string>
+    <string name="history">Hanes</string>
+    <string name="msgs_history_empty">Does dim hanes.</string>
+    <string name="msgs_history_unknown">Eitem hanes anhysbys.</string>
+    <string name="search">Canlyniadau chwilio</string>
+    <string name="search_hint">Rho dy derm(au) chwilio</string>
+    <string name="search_voice_hint">Dyweda dy derm(au) chwilio</string>
+    <string name="search_error_msg">Bu gwall wrth chwilio. Ni chanfuwyd unrhyw ganlyniadau.</string>
+    <string name="search_no_results_msg">Ni chanfuwyd unrhyw ganlyniadau.</string>
+    <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> yn <xliff:g id="path">%2$s</xliff:g></string>
+    <string name="search_terms">&lt;b&gt;Telerau:&lt;/b&gt; <xliff:g id="terms">%1$s</xliff:g></string>
+    <string name="search_few_characters_title">Cadarnhau\'r chwiliad</string>
+    <string name="search_few_characters_msg">Mae gan rhai o\'r termau chwilio nifer bach o nodau. Gall y weithred gymryd gryn amser ac adnoddau’r system.\n\nWyt ti wir am barhau?</string>
+    <string name="searching">Arhosa\u2026</string>
+    <string name="searching_action_label">Wrthi\'n chwilio</string>
+    <string name="picker_title">Dewisa ffeil</string>
+    <string name="directory_picker_title">Dewisa gyfeiriadur</string>
+    <string name="editor">Golygydd</string>
+    <string name="editor_invalid_file_msg">Ffeil annilys.</string>
+    <string name="editor_file_not_found_msg">Ni chanfuwyd y ffeil.</string>
+    <string name="editor_file_exceed_size_msg">Mae\'r ffeil yn rhy fawr i\'w hagor o fewn y ddyfais hon.</string>
+    <string name="editor_dirty_ask_title">Cadarnhau gadael</string>
+    <string name="editor_dirty_ask_msg">Mae yna newidiadau heb eu cadw.\n\nGadael heb eu cadw?</string>
+    <string name="editor_successfully_saved">Cafodd y ffeil ei chadw\'n llwyddiannus.</string>
+    <string name="editor_read_only_mode">Mae\'r ffeil ar agor ym modd darllen-yn-unig.</string>
+    <string name="dumping_message">Yn cynhyrchu dymp hecs\u2026</string>
+    <string name="displaying_message">Yn dangos\u2026</string>
+    <string name="bookmarks">Nodau tudalennau</string>
+    <string name="bookmarks_home">Cartref</string>
+    <string name="bookmarks_root_folder">Ffolder craidd</string>
+    <string name="bookmarks_system_folder">Ffolder system</string>
+    <string name="bookmarks_secure">Storfa ddiogel</string>
+    <string name="bookmarks_remote">Storfa bell</string>
+    <string name="bookmarks_button_config_cd">Gosod y ffolder cychwynnol.</string>
+    <string name="bookmarks_button_remove_bookmark_cd">Tynnu\'r nod tudalen.</string>
+    <string name="bookmarks_msgs_add_success">Cafodd y nod tudalen ei ychwanegu\'n llwyddiannus.</string>
+    <string name="bookmarks_msgs_add_exists">Mae\'r nod tudalen yn bodoli eisoes.</string>
+    <string name="initial_directory_dialog_title">Ffolder cychwynnol</string>
+    <string name="initial_directory_label">Dewis y ffolder cychwynnol:</string>
+    <string name="initial_directory_relative_msg">Ni chaniateir llwybrau cymharol.</string>
+    <string name="initial_directory_error_msg">Bu gwall wrth gadw\'r ffolder cychwynnol.</string>
+    <string name="menu_search">Chwilio</string>
+    <string name="menu_settings">Gosodiadau</string>
+    <string name="menu_clear_history">Clirio’r hanes</string>
+    <string name="menu_no_suggestions">Dim awgrymiadau</string>
+    <string name="menu_word_wrap">Amlapio geiriau</string>
+    <string name="menu_syntax_highlight">Amlygu cystrawen</string>
+    <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - copi<xliff:g id="extension">%2$s</xliff:g></string>
+    <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - newydd<xliff:g id="extension">%2$s</xliff:g></string>
+    <string name="waiting_dialog_msg">Yn gweithredu\u2026</string>
+    <string name="waiting_dialog_copying_title">Yn copïo\u2026</string>
+    <string name="waiting_dialog_copying_msg">&lt;b&gt;O&lt;/b&gt; <xliff:g id="from">%1$s</xliff:g>&lt;br/&gt;&lt;b&gt;At&lt;/b&gt; <xliff:g id="to">%2$s</xliff:g></string>
+    <string name="waiting_dialog_moving_title">Yn symud\u2026</string>
+    <string name="waiting_dialog_moving_msg">&lt;b&gt;O&lt;/b&gt; <xliff:g id="from">%1$s</xliff:g>&lt;br/&gt;&lt;b&gt;At&lt;/b&gt; <xliff:g id="to">%2$s</xliff:g></string>
+    <string name="waiting_dialog_deleting_title">Yn dileu\u2026</string>
+    <string name="waiting_dialog_deleting_msg">&lt;b&gt;Ffeil&lt;/b&gt; <xliff:g id="file">%1$s</xliff:g></string>
+    <string name="waiting_dialog_extracting_title">Yn echdynnu\u2026</string>
+    <string name="waiting_dialog_extracting_msg">&lt;b&gt;Ffeil&lt;/b&gt; <xliff:g id="file">%1$s</xliff:g></string>
+    <string name="waiting_dialog_compressing_title">Yn cywasgu\u2026</string>
+    <string name="waiting_dialog_compressing_msg">&lt;b&gt;Ffeil&lt;/b&gt; <xliff:g id="file">%1$s</xliff:g></string>
+    <string name="waiting_dialog_analizing_msg">&lt;b&gt;Yn dadansoddi\u2026&lt;/b&gt;</string>
+    <string name="msgs_extracting_success">Cyflawnwyd y weithred echdynnu yn llwyddiannus. Cafodd y data ei echdynnu i <xliff:g id="destination">%1$s</xliff:g>.</string>
+    <string name="msgs_compressing_success">Cyflawnwyd y weithred cywasgu yn llwyddiannus. Cafodd y data ei gywasgu i <xliff:g id="destination">%1$s</xliff:g>.</string>
+    <string name="actions_dialog_title">Gweithredoedd</string>
+    <string name="actions_menu_properties_current_folder">Priodweddau</string>
+    <string name="actions_menu_refresh">Ail-lwytho</string>
+    <string name="actions_menu_new_directory">Ffolder newydd</string>
+    <string name="actions_menu_new_file">Ffeil newydd</string>
+    <string name="actions_menu_select_all">Dewis y cwbl</string>
+    <string name="actions_menu_deselect_all">Dewis dim</string>
+    <string name="actions_menu_select">Dewis</string>
+    <string name="actions_menu_deselect">Dad-ddewis</string>
+    <string name="actions_menu_paste_selection">Copïo\'r dewis yma</string>
+    <string name="actions_menu_move_selection">Symud y dewis i yma</string>
+    <string name="actions_menu_delete_selection">Dileu\'r dewis</string>
+    <string name="actions_menu_compress_selection">Cywasgu’r dewis</string>
+    <string name="actions_menu_create_link">Creu dolen</string>
+    <string name="actions_menu_open">Agor</string>
+    <string name="actions_menu_open_with">Agor gyda</string>
+    <string name="actions_menu_execute">Gweithredu</string>
+    <string name="actions_menu_send">Anfon</string>
+    <string name="actions_menu_send_selection">Anfon y dewis</string>
+    <string name="actions_menu_compress">Cywasgu</string>
+    <string name="actions_menu_extract">Echdynnu</string>
+    <string name="actions_menu_delete">Dileu</string>
+    <string name="actions_menu_rename">Ailenwi</string>
+    <string name="actions_menu_create_copy">Creu copi</string>
+    <string name="actions_menu_properties">Priodweddau</string>
+    <string name="actions_menu_add_to_bookmarks">Ychwanegu i lyfrnodau</string>
+    <string name="actions_menu_add_shortcut">Ychwanegu llwybr byr</string>
+    <string name="actions_menu_open_parent_folder">Agor rhiant</string>
+    <string name="actions_menu_compute_checksum">Cyfrifo\'r prawfswm</string>
+    <string name="actions_menu_print">Argraffu</string>
+    <string name="actions_menu_set_as_home">Gosod fel cartref</string>
+    <string name="actions_ask_undone_operation_msg">Nid yw\'n bosib dadwneud y weithred hon. Wyt ti am barhau?</string>
+    <string name="input_name_dialog_label">Enw:</string>
+    <string name="input_name_dialog_message_empty_name">Ni all yr enw fod yn wag.</string>
+    <string name="input_name_dialog_message_invalid_path_name">Enw annilys. Ni ellir defnyddio\'r nodau \'<xliff:g id="invalid_characters">%1$s</xliff:g>\'.</string>
+    <string name="input_name_dialog_message_invalid_name_length">Wedi cyrraedd terfyn nifer o nodau.</string>
+    <string name="input_name_dialog_message_invalid_name">Enw annilys. Ni chaniateir yr enwau \'.\' a \'..\'.</string>
+    <string name="input_name_dialog_message_name_exists">Mae\'r enw\'n bodoli eisoes.</string>
+    <string name="associations_dialog_title">Cydgysylltiadau</string>
+    <string name="associations_dialog_remember">Cofio\'r dewis</string>
+    <string name="associations_dialog_openwith_title">Agor gyda</string>
+    <string name="associations_dialog_openwith_action">Agor</string>
+    <string name="associations_dialog_sendwith_title">Anfon gyda</string>
+    <string name="associations_dialog_sendwith_action">Anfon</string>
+    <string name="inline_autocomplete_tab_nothing_to_complete_msg">Dim byd i\'w gwblhau.</string>
+    <string name="execution_console_title">Consol</string>
+    <string name="execution_console_script_name_label">Sgript:</string>
+    <string name="execution_console_script_execution_time_label">Amser:</string>
+    <string name="execution_console_script_exitcode_label">Cod gadael:</string>
+    <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> eil.</string>
+    <string name="compute_checksum_title">Cyfrifo prawfswm</string>
+    <string name="compute_checksum_filename_label">Ffeil:</string>
+    <string name="compute_checksum_computing_checksum_msg">Yn cyfrifo\'r prawfswm\u2026</string>
+    <string name="mime_folder">Ffolder</string>
+    <string name="mime_symlink">Dolen symbolaidd</string>
+    <string name="mime_unknown">Anhysybys</string>
+    <string name="filetime_format_mode_system">Diffinnir gan y system</string>
+    <string name="filetime_format_mode_locale">Diffinnir gan locale</string>
+    <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/yyyy hh:mm:ss</string>
+    <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
+    <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
+    <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> a <xliff:g id="files">%2$s</xliff:g> wedi\'u dewis.</string>
+    <string name="category_system">SYSTEM</string>
+    <string name="category_app">AP</string>
+    <string name="category_binary">DEUAIDD</string>
+    <string name="category_text">TESUN</string>
+    <string name="category_document">DOGFEN</string>
+    <string name="category_ebook">E-LYFR</string>
+    <string name="category_mail">POST</string>
+    <string name="category_compress">CYWASGU</string>
+    <string name="category_exec">GWEITHREDADWY</string>
+    <string name="category_database">CRONFA DDATA</string>
+    <string name="category_font">FFONT</string>
+    <string name="category_image">DELWEDD</string>
+    <string name="category_audio">SAIN</string>
+    <string name="category_video">FIDEO</string>
+    <string name="category_security">DIOGELWCH</string>
+    <string name="category_all">Y CWBL</string>
+    <string name="compression_mode_title">Modd cywasgu</string>
+    <string name="shortcut_failed_msg">Methwyd ymdrin â\'r llwybr byr.</string>
+    <string name="shortcut_creation_success_msg">Crëwyd llwybr byr yn llwyddiannus.</string>
+    <string name="shortcut_creation_failed_msg">Methwyd â chreu llwybr byr.</string>
+    <string name="pref">Gosodiadau</string>
+    <string name="pref_general">Gosodiadau cyffredinol</string>
+    <string name="pref_search">Dewisiadau chwilio</string>
+    <string name="pref_storage">Dewisiadau storfa</string>
+    <string name="pref_editor">Dewisiadau golygydd</string>
+    <string name="pref_themes">Themâu</string>
+    <string name="pref_about">Ynghylch</string>
+    <string name="pref_general_behaviour_category">Cyffredinol</string>
+    <string name="pref_case_sensitive_sort">Maint llythrennau</string>
+    <string name="pref_case_sensitive_sort_summary">Ystyried maint llythrennau wrth lywio neu drefnu canlyniadau chwilio</string>
+    <string name="pref_filetime_format_mode">Fformat dyddiad/amser</string>
+    <string name="pref_disk_usage_warning_level">Rhybudd defnydd disg</string>
+    <string name="pref_disk_usage_warning_level_summary" formatted="false">Dangos lliw gwahanol yn nheclynnau defnydd disg pan maen nhw\'n cyrraedd <xliff:g id="level">%1$s</xliff:g> y cant o le ar gael</string>
+    <string name="pref_compute_folder_statistics">Cyfrifo ystadegau\'r ffolder</string>
+    <string name="pref_compute_folder_statistics_on">Rhybudd! Mae cyfrifo ystadegau ffolder yn cymryd cryn amser ac adnoddau\'r system</string>
+    <string name="pref_display_thumbs">Rhagolwg</string>
+    <string name="pref_display_thumbs_summary">Dangos delwedd rhagolwg ar gyfer apiau, ffeiliau cerddoriaeth, lluniau a fideos</string>
+    <string name="pref_use_flinger">Defnyddio ystumiau llithro</string>
+    <string name="pref_use_flinger_summary">Synhwyro ystum llithro o\'r chwith i\'r dde i ddileu ffeiliau neu ffolderi</string>
+    <string name="pref_general_advanced_settings_category">Uwch</string>
+    <string name="pref_access_mode">Modd mynediad</string>
+    <string name="pref_access_mode_safe">Modd diogel</string>
+    <string name="pref_access_mode_safe_summary">Modd diogel\n\nMae\'r ap yn rhedeg heb freintiau a\'r unig systemau ffeiliau gall cael atyn nhw yw storfeydd (USB a chardiau SD)</string>
+    <string name="pref_access_mode_prompt">Modd rhoi Cynnig i\'r Defnyddiwr</string>
+    <string name="pref_access_mode_prompt_summary">Modd Gofyn Caniatd\n\nMae\'r ap yn rhedeg gyda mynediad llawn i\'r system ffeiliau ond mi fydd yn gofyn am ganiatâd cyn ymgymryd ag unrhyw weithredoedd breintiedig.</string>
+    <string name="pref_access_mode_root">Modd Mynediad Craidd</string>
+    <string name="pref_access_mode_root_summary">Modd Mynediad Craidd\n\nRhybudd! Mae\'r modd hwn yn caniatáu gweithredoedd gall difrodi dy ddyfais. Dy gyfrifoldeb di yw sicrhau bod gweithred yn ddiogel.</string>
+    <string name="pref_restrict_secondary_users_access_title">Cyfyngu mynediad defnyddwyr</string>
+    <string name="pref_restrict_secondary_users_access_summary">Rhwystro mynediad defnyddwyr eilradd i\'r system gyfan</string>
+    <string name="pref_search_results_category">Canlyniadau</string>
+    <string name="pref_show_relevance_widget">Dangos teclyn perthnasedd</string>
+    <string name="pref_highlight_terms">Amlygu termau chwilio</string>
+    <string name="pref_sort_search_results_mode">Modd trefnu canlyniadau</string>
+    <string name="pref_sort_search_results_mode_none">Dim trefnu</string>
+    <string name="pref_sort_search_results_mode_name">Yn ôl enw</string>
+    <string name="pref_sort_search_results_mode_relevance">Yn ôl perthnasedd</string>
+    <string name="pref_search_privacity_category">Preifatrwydd</string>
+    <string name="pref_save_search_terms">Cadw termau chwilio</string>
+    <string name="pref_save_search_terms_on">Caiff termau chwilio eu cadw a\'u defnyddio fel awgrymiadau wrth chwilio yn y dyfodol</string>
+    <string name="pref_save_search_terms_off">Ni chaiff termau chwilio eu cadw</string>
+    <string name="pref_remove_saved_search_terms">Tynnu termau chwilio wedi\'u cadw</string>
+    <string name="pref_remove_saved_search_terms_summary">Tapia i dynnu pob term chwilio sydd wedi\'i gadw</string>
+    <string name="pref_remove_saved_search_terms_msg">Cafodd pob term chwilio wedi\'i gadw ei dynnu</string>
+    <string name="pref_secure_storage_category">Storfa ddiogel</string>
+    <string name="pref_secure_storage_delayed_sync_title">Cysoni gohiriedig</string>
+    <string name="pref_secure_storage_delayed_sync_summary">Mae cysoni systemau ffeiliau diogel yn weithred gostus. Galluoga\'r opsiwn hwn i ganiatáu ymatebion mwy cyflym ar ôl pob gweithred, gan wneud y cysoni mewn cyfnod pan nad yw\'r system ffeiliau yn cael ei defnyddio, ond mae yna beryg o golli unrhyw wybodaeth heb ei gysoni os ydy\'r ap yn chwalu.</string>
+    <string name="pref_secure_storage_reset_password_title">Newid cyfrinair</string>
+    <string name="pref_secure_storage_delete_storage_title">Dileu storfa</string>
+    <string name="pref_editor_behaviour_category">Ymddygiad</string>
+    <string name="pref_no_suggestions">Dim awgrymiadau</string>
+    <string name="pref_no_suggestions_desc">Peidio â dangos awgrymiadau geiriadur wrth olygu\'r ffeil</string>
+    <string name="pref_word_wrap">Amlapio geiriau</string>
+    <string name="pref_hexdump">Ffeiliau deuaidd dympiau hecsadegol</string>
+    <string name="pref_hexdump_desc">Wrth agor ffeil deuaidd, creu dymp hecsadegol o\'r ffeil a\'i agor yn y dangosydd hecsadegol</string>
+    <string name="pref_editor_syntax_highlight_category">Amlygu cystrawennau</string>
+    <string name="pref_syntax_highlight">Amlygu cystrawen</string>
+    <string name="pref_syntax_highlight_desc">Dangos cystrawen y ffeil a ddangosir yn y golygydd (dim ond pan fo prosesydd amlygu cystrawennau ar gyfer y math o ffeil ar gael)</string>
+    <string name="pref_syntax_highlight_color_scheme">Cynllun lliwiau</string>
+    <string name="pref_syntax_highlight_color_scheme_desc">Dewisa gynllun lliwiau amlygu cystrawen</string>
+    <string name="pref_syntax_sh_use_theme_default">Defnyddio thema rhagosodedig</string>
+    <string name="pref_syntax_sh_use_theme_default_desc">Defnyddio amlygu cystrawen rhagosodedig y thema bresennol</string>
+    <string name="pref_editor_sh_item_category">Eitemau</string>
+    <string name="pref_themes_selection_category">Themâu</string>
+    <string name="pref_themes_set_theme">Gosod thema</string>
+    <string name="pref_themes_confirmation">Rhoddwyd y thema ar waith yn llwyddiannus.</string>
+    <string name="pref_themes_not_found">Ni chanfuwyd thema.</string>
+    <string name="pref_debug_traces">Logio gwybodaeth dadfygio</string>
+    <string name="theme_default_name">Thema Golau</string>
+    <string name="theme_default_description">Thema golau ar gyfer Rheolwr Ffeiliau LineageOS.</string>
+    <string name="themes_author">LineageOS</string>
+    <string name="drawer_open">Agor y drôr llywio</string>
+    <string name="drawer_close">Cau\'r drôr llywio</string>
+    <string name="color_picker_alpha_slider_text">Alffa</string>
+    <string name="color_picker_current_text">Cyfredol:</string>
+    <string name="color_picker_new_text">Newydd:</string>
+    <string name="color_picker_color">Lliw:</string>
+    <string name="ash_reset_color_scheme">Adfer cynllun lliwiau\'r thema rhagosodedig</string>
+    <string name="ash_text">Testun</string>
+    <string name="ash_assignment">Aseiniad</string>
+    <string name="ash_singleline_comment">Sylw un llinell</string>
+    <string name="ash_multiline_comment">Sylw aml-linell</string>
+    <string name="ash_keyword">Allweddair</string>
+    <string name="ash_quoted_string">Llinyn a ddyfynnwyd</string>
+    <string name="ash_variable">Newidyn</string>
+    <string name="secure_storage_unlock_title">Datgloi storfa ddiogel</string>
+    <string name="secure_storage_create_title">Creu storfa ddiogel</string>
+    <string name="secure_storage_reset_title">Ailosod cyfrinair</string>
+    <string name="secure_storage_delete_title">Dileu storfa ddiogel</string>
+    <string name="secure_storage_unlock_key_prompt_msg">Rho\'r cyfrinair i ddatgloi system ffeiliau\'r storfa ddiogel.</string>
+    <string name="secure_storage_unlock_key_new_msg">Rho gyfrinair i warchod system ffeiliau\'r storfa ddiogel.</string>
+    <string name="secure_storage_unlock_key_reset_msg">Rho\'r cyfrineiriau cyfredol a newydd i ailosod system ffeiliau\'r storfa ddiogel.</string>
+    <string name="secure_storage_unlock_key_delete_msg">Rho\'r cyfrinair cyfredol i ddileu system ffeiliau\'r storfa ddiogel.</string>
+    <string name="secure_storage_unlock_old_key_title">Hen gyfrinair:</string>
+    <string name="secure_storage_unlock_new_key_title">Cyfrinair Newydd:</string>
+    <string name="secure_storage_unlock_key_title">Cyfrinair:</string>
+    <string name="secure_storage_unlock_repeat_title">Rho\'r cyfrinair eto:</string>
+    <string name="secure_storage_create_button">Creu</string>
+    <string name="secure_storage_unlock_button">Datgloi</string>
+    <string name="secure_storage_reset_button">Ailosod</string>
+    <string name="secure_storage_delete_button">Dileu</string>
+    <string name="secure_storage_unlock_failed">Methu â datgloi\'r storfa</string>
+    <string name="secure_storage_unlock_validation_length">Rhaid bod gan y cyfrinair o leiaf <xliff:g id="characters">%1$d</xliff:g> nod.</string>
+    <string name="secure_storage_unlock_validation_equals">Dyw\'r cyfrineiriau ddim yr un fath.</string>
+    <string name="secure_storage_open_file_warning">Bydd hyn yn copïo\'r ffeil allan i leoliad dros dro heb ei amgryptio. Caiff ei glirio ar ôl 1 awr.</string>
+    <string name="print_unsupported_document">Fformat dogfen anghydnaws</string>
+    <string name="print_unsupported_image">Fformat delwedd anghydnaws</string>
+    <string name="print_document_header">Dogfen: <xliff:g id="document_name">%1$s</xliff:g></string>
+    <string name="print_document_footer">Tudalen <xliff:g id="page_number">%1$s</xliff:g></string>
+    <string name="security_warning_extract">Rhybydd\n\nGall echdynnu ffeil archif gyda llwybr perthynol neu absoliwt achosi niwed i dy ddyfais wrth drosysgrifo ffeiliau system.\n\nWyt ti wir am barhau?</string>
+    <string name="changelog_title">Log newidiadau</string>
+    <string name="welcome_title">Croeso</string>
+    <string name="welcome_msg">Croeso i reolwr ffeiliau LineageOS.\n\nMae\'r ap hwn yn dy alluogi i archwilio\'r system ffeiliau a gwneud gweithrediadau gall achosi niwed i dy ddyfais. I osgoi achosi niwed, bydd yr ap yn dechrau mewn modd diogel â chaniatâd cyfyngedig.\n\nMae\'n bosib cael mynediad i\'r modd uwch gyda chaniatâd llawn yn y Gosodiadau. Ti sy\'n gyfrifol am sicrhau nad yw gweithrediadau yn achosi niwed i dy system.\n\n- Tîm LineageOS</string>
+    <string name="activity_not_found_exception">Methwyd â chanfod ap i agor y ffeil hon</string>
+    <string name="storage_permissions_denied">Mae ar y rheolwr ffeiliau angen caniatâd i gael at y storfa er mwyn gweld dy ffeiliau.</string>
+    <string name="storage_permissions_explanation">Rho ganiatâd yn Gosodiadau dan yr adran caniatâd.</string>
+    <string name="snackbar_settings">Gosodiadau</string>
+    <string name="toggle_word_wrap_msg">Toglo modd amlapio geiriau</string>
 </resources>

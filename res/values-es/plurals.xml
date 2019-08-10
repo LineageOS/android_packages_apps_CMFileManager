@@ -16,31 +16,28 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <plurals name="n_folders">
-    <item quantity="one">1 carpeta</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> carpetas</item>
-  </plurals>
-  <plurals name="n_files">
-    <item quantity="one">1 archivo</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> archivos</item>
-  </plurals>
-  <!-- Search - Found items -->
-  <plurals name="search_found_items">
-    <item quantity="one">1 elemento encontrado</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> elementos encontrados</item>
-  </plurals>
-  <!-- Statusbar text if there are selected files or folders -->
-  <plurals name="selection_folders">
-    <item quantity="one">1 carpeta seleccionada.</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> carpetas seleccionadas.</item>
-  </plurals>
-  <plurals name="selection_files">
-    <item quantity="one">1 archivo seleccionado.</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> archivos seleccionados.</item>
-  </plurals>
-  <!-- Actions - Confirm the number of items that are going to be deleted -->
-  <plurals name="deleting_n_items">
-    <item quantity="one">elemento <xliff:g id="count">%1$d</xliff:g> va a ser eliminado.</item>
-    <item quantity="other">Los elementos <xliff:g id="count">%1$d</xliff:g> van a ser eliminados.</item>
-  </plurals>
+    <plurals name="n_folders">
+        <item quantity="one">1 carpeta</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> carpetas</item>
+    </plurals>
+    <plurals name="n_files">
+        <item quantity="one">1 archivo</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> archivos</item>
+    </plurals>
+    <plurals name="search_found_items">
+        <item quantity="one">1 elemento encontrado</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> elementos encontrados</item>
+    </plurals>
+    <plurals name="selection_folders">
+        <item quantity="one">1 carpeta seleccionada.</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> carpetas seleccionadas.</item>
+    </plurals>
+    <plurals name="selection_files">
+        <item quantity="one">1 archivo seleccionado.</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> archivos seleccionados.</item>
+    </plurals>
+    <plurals name="deleting_n_items">
+        <item quantity="one">elemento <xliff:g id="count">%1$d</xliff:g> va a ser eliminado.</item>
+        <item quantity="other">Los elementos <xliff:g id="count">%1$d</xliff:g> van a ser eliminados.</item>
+    </plurals>
 </resources>

@@ -16,7 +16,28 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Search - Found items -->
-  <!-- Statusbar text if there are selected files or folders -->
-  <!-- Actions - Confirm the number of items that are going to be deleted -->
+    <plurals name="n_folders">
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> cartella</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> cartellas</item>
+    </plurals>
+    <plurals name="n_files">
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> documentu</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> documentos</item>
+    </plurals>
+    <plurals name="search_found_items">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> elementu agatadu</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> elementos agatados</item>
+    </plurals>
+    <plurals name="selection_folders">
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> cartella ischertada.</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> cartellas ischertadas.</item>
+    </plurals>
+    <plurals name="selection_files">
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> documentu ischertadu.</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> documentos ischertados.</item>
+    </plurals>
+    <plurals name="deleting_n_items">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> elementu at a èssere iscantzelladu.</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g> elementos ant a èssere iscantzellados.</item>
+    </plurals>
 </resources>

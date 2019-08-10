@@ -16,7 +16,52 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Search - Found items -->
-  <!-- Statusbar text if there are selected files or folders -->
-  <!-- Actions - Confirm the number of items that are going to be deleted -->
+    <plurals name="n_folders">
+        <item quantity="zero"><xliff:g id="folders">%1$d</xliff:g> ffolderi</item>
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> ffolder</item>
+        <item quantity="two"><xliff:g id="folders">%1$d</xliff:g> ffolder</item>
+        <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> ffolder</item>
+        <item quantity="many"><xliff:g id="folders">%1$d</xliff:g> ffolder</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> ffolder</item>
+    </plurals>
+    <plurals name="n_files">
+        <item quantity="zero"><xliff:g id="files">%1$d</xliff:g> ffeiliau</item>
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ffeil</item>
+        <item quantity="two"><xliff:g id="files">%1$d</xliff:g> ffeil</item>
+        <item quantity="few"><xliff:g id="files">%1$d</xliff:g> ffeil</item>
+        <item quantity="many"><xliff:g id="files">%1$d</xliff:g> ffeil</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ffeil</item>
+    </plurals>
+    <plurals name="search_found_items">
+        <item quantity="zero">Wedi canfod <xliff:g id="count">%d</xliff:g> eitemau</item>
+        <item quantity="one">Wedi canfod <xliff:g id="count">%1$d</xliff:g> eitem</item>
+        <item quantity="two">Wedi canfod <xliff:g id="count">%d</xliff:g> eitem</item>
+        <item quantity="few">Wedi canfod <xliff:g id="count">%d</xliff:g> eitem</item>
+        <item quantity="many">Wedi canfod <xliff:g id="count">%d</xliff:g> eitem</item>
+        <item quantity="other">Wedi canfod <xliff:g id="count">%d</xliff:g> eitem</item>
+    </plurals>
+    <plurals name="selection_folders">
+        <item quantity="zero"><xliff:g id="folders">%1$d</xliff:g> ffolderi wedi\'u dewis.</item>
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> ffolder wedi\'i dewis.</item>
+        <item quantity="two"><xliff:g id="folders">%1$d</xliff:g> ffolder wedi\'u dewis.</item>
+        <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> ffolder wedi\'u dewis.</item>
+        <item quantity="many"><xliff:g id="folders">%1$d</xliff:g> ffolder wedi\'u dewis.</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> ffolder wedi\'u dewis.</item>
+    </plurals>
+    <plurals name="selection_files">
+        <item quantity="zero"><xliff:g id="files">%1$d</xliff:g> ffeiliau wedi\'u dewis.</item>
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> ffeil wedi\'i dewis.</item>
+        <item quantity="two"><xliff:g id="files">%1$d</xliff:g> ffeil wedi\'u dewis.</item>
+        <item quantity="few"><xliff:g id="files">%1$d</xliff:g> ffeil wedi\'u dewis.</item>
+        <item quantity="many"><xliff:g id="files">%1$d</xliff:g> ffeil wedi\'u dewis.</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> ffeil wedi\'u dewis.</item>
+    </plurals>
+    <plurals name="deleting_n_items">
+        <item quantity="zero">Caiff <xliff:g id="count">%1$d</xliff:g> eitemau eu dileu.</item>
+        <item quantity="one">Caiff <xliff:g id="count">%1$d</xliff:g> eitem ei ddileu.</item>
+        <item quantity="two">Caiff <xliff:g id="count">%1$d</xliff:g> eitem eu dileu.</item>
+        <item quantity="few">Caiff <xliff:g id="count">%1$d</xliff:g> eitem eu dileu.</item>
+        <item quantity="many">Caiff <xliff:g id="count">%1$d</xliff:g> eitem eu dileu.</item>
+        <item quantity="other">Caiff <xliff:g id="count">%1$d</xliff:g> eitem eu dileu.</item>
+    </plurals>
 </resources>
