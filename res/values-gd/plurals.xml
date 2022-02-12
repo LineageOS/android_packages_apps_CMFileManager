@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2014 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="n_folders">
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> phasgan</item>
+        <item quantity="two"><xliff:g id="folders">%1$d</xliff:g> phasgan</item>
+        <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> pasganan</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> pasgan</item>
+    </plurals>
+    <plurals name="n_files">
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fhaidhle</item>
+        <item quantity="two"><xliff:g id="files">%1$d</xliff:g> fhaidhle</item>
+        <item quantity="few"><xliff:g id="files">%1$d</xliff:g> faidhlichean</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> faidhle</item>
+    </plurals>
+    <plurals name="search_found_items">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> nì air a lorg</item>
+        <item quantity="two"><xliff:g id="count">%1$d</xliff:g> nì air a lorg</item>
+        <item quantity="few"><xliff:g id="count">%1$d</xliff:g> nithean air an lorg</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> nì air a lorg</item>
+    </plurals>
+    <plurals name="selection_folders">
+        <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> phasgan air a thaghadh.</item>
+        <item quantity="two"><xliff:g id="folders">%1$d</xliff:g> phasgan air a thaghadh.</item>
+        <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> pasganan air an taghadh.</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> pasgan air an taghadh.</item>
+    </plurals>
+    <plurals name="selection_files">
+        <item quantity="one"><xliff:g id="files">%1$d</xliff:g> fhaidhle air a thaghadh.</item>
+        <item quantity="two"><xliff:g id="files">%1$d</xliff:g> fhaidhle air a thaghadh.</item>
+        <item quantity="few"><xliff:g id="files">%1$d</xliff:g> faidhlichean air an taghadh.</item>
+        <item quantity="other"><xliff:g id="files">%1$d</xliff:g> faidhle air an taghadh.</item>
+    </plurals>
+    <plurals name="deleting_n_items">
+        <item quantity="one">Thèid <xliff:g id="count">%1$d</xliff:g> nì a sguabadh às.</item>
+        <item quantity="two">Thèid <xliff:g id="count">%1$d</xliff:g> nì a sguabadh às.</item>
+        <item quantity="few">Thèid <xliff:g id="count">%1$d</xliff:g> nithean an sguabadh às.</item>
+        <item quantity="other">Thèid <xliff:g id="count">%1$d</xliff:g> nì an sguabadh às.</item>
+    </plurals>
+</resources>

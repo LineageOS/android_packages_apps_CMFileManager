@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2014 The CyanogenMod Project
+               (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Menaxheri i Skedarëve</string>
+    <string name="app_description">Një menaxher skedarësh për LineageOS</string>
+    <string name="size_bytes">B</string>
+    <string name="size_kilobytes">kB</string>
+    <string name="size_megabytes">MB</string>
+    <string name="size_gigabytes">GB</string>
+    <string name="datetime_format_order">%1$s %2$s</string>
+    <string name="device_blockdevice">Blloko pajisjen</string>
+    <string name="device_characterdevice">Pajisja e karaktereve</string>
+    <string name="device_namedpipe">Tub i emërtuar</string>
+    <string name="device_domainsocket">Foleja e domenit</string>
+    <string name="mount_point_readonly">RO</string>
+    <string name="mount_point_readwrite">RW</string>
+    <string name="yes">Po</string>
+    <string name="no">Jo</string>
+    <string name="all">Të gjitha</string>
+    <string name="overwrite">Mbishkruaj</string>
+    <string name="select">Zgjidh</string>
+    <string name="root_directory_name"><![CDATA[<Root folder>]]></string>
+    <string name="search_result_name">Kërko: <xliff:g id="terms">%1$s</xliff:g></string>
+    <string name="loading_message">Duke u ngarkuar\u2026</string>
+    <string name="cancelled_message">U anullua.</string>
+    <string name="error_message">Gabim.</string>
+    <string name="copy_text_cd">Prek për të kopjuar tekstin</string>
+    <string name="copy_text_msg">Teksti u kopjua në kujtesën e fragmenteve.</string>
+    <string name="warning_title">Kujdes</string>
+    <string name="error_title">Gabim</string>
+    <string name="confirm_operation">Konfirmo veprimin</string>
+    <string name="confirm_overwrite">Konfirmo mbishkrimin</string>
+    <string name="confirm_deletion">Konfirmo fshirjen</string>
+    <string name="msgs_change_to_prompt_access_mode_title">Konfirmo ndërrimin</string>
+    <string name="msgs_change_to_prompt_access_mode_msg">Nuk mund të ekzekutohet në modalitetin e qasjes në rrënjë. Po kalon në modalitetin e sigurt.\n\nTë zbatohet ky ndryshim?</string>
+    <string name="msgs_cant_create_console">Në pamundësi për të fituar privilegjet e kërkuara për të funksionuar.</string>
+    <string name="msgs_privileged_console_alloc_failed">Nuk mund të ekzekutohet në modalitetin e qasjes në rrënjë. Po kalon në modalitetin e sigurt.</string>
+    <string name="msgs_settings_save_failure">Cilësimi nuk mund të zbatohej ose të ruhej.</string>
+    <string name="msgs_settings_invalid_initial_directory">Dosja fillestare \'<xliff:g id="initial_dir">%1$s</xliff:g>\' është e pavlefshme. Po ndryshon në dosjen rrënjë.</string>
+    <string name="root_not_available_msg">Root nuk është i disponueshëm në këtë pajisje. Ky operacion nuk mund të kryhet.</string>
+    <string name="msgs_success">Veprimi përfundoi me sukses.</string>
+    <string name="msgs_unknown">U has një gabim. Veprimi nuk u krye me sukses.</string>
+    <string name="msgs_insufficient_permissions">Ky operacion kërkon leje të ngritura. Provoni të kaloni në modalitetin e qasjes në rrënjë.</string>
+    <string name="msgs_no_disk_space">Ky operacion dështoi sepse nuk ka mbetur hapësirë ​​në pajisje.</string>
+    <string name="msgs_file_not_found">Skedari ose dosja nuk u gjet.</string>
+    <string name="msgs_command_not_found">Komanda e operacionit nuk u gjet ose ka një përkufizim të pavlefshëm.</string>
+    <string name="msgs_io_failed">Dështim leximi/shkrimi.</string>
+    <string name="msgs_operation_timeout">Afati i veprimit skadoi.</string>
+    <string name="msgs_operation_failure">Veprimi dështoi.</string>
+    <string name="msgs_console_alloc_failure">Ka ndodhur një gabim i brendshëm.</string>
+    <string name="msgs_operation_can_not_be_cancelled">Veprimi nuk mund të anullohet.</string>
+    <string name="msgs_read_only_filesystem">Sistemi i skedarëve është vetëm për lexim. Përpiquni të montoni sistemin e skedarëve si lexim-shkrim përpara se të provoni operimin.</string>
+    <string name="msgs_illegal_argument">Argument i paligjshëm.  Thirrja dështoi.</string>
+    <string name="msgs_unresolved_inconsistencies">Operacioni nuk lejohet sepse do të krijonte mospërputhje.</string>
+    <string name="msgs_operation_not_allowed_in_current_directory">Dosja e destinacionit nuk mund të jetë një nën-dosje e burimit ose e njëjtë me burimin.</string>
+    <string name="msgs_push_again_to_exit">Shtype prapë për ta mbyllur.</string>
+    <string name="msgs_not_registered_app">Nuk ka asnjë aplikacion të regjistruar për të trajtuar llojin e skedarit të zgjedhur.</string>
+    <string name="msgs_overwrite_files">Disa nga skedarët ekzistojnë tashmë në dosjen e destinacionit.\n\nTë mbishkruhen?</string>
+    <string name="msgs_action_association_failed">Lidhja e veprimit me aplikacionin dështoi.</string>
+    <string name="advise_insufficient_permissions">Operacioni kërkon privilegje të ngritura.\n\nDëshironi të kaloni në modalitetin e qasjes në rrënjë?</string>
+    <string name="parent_dir">Dosja e prindit</string>
+    <string name="external_storage">Memoria e jashtme</string>
+    <string name="usb_storage">Memoria e USB</string>
+    <string name="actionbar_button_filesystem_cd">Informacioni i sistemit të skedarëve</string>
+    <string name="actionbar_button_sort_mode_cd">Mënyra e renditjes</string>
+    <string name="actionbar_button_layout_mode_cd">Mënyra e organizimit</string>
+    <string name="actionbar_button_other_view_options_cd">Opsione të tjera të pamjes</string>
+    <string name="actionbar_button_selection_done_cd">U krye!</string>
+    <string name="actionbar_button_actions_cd">Veprimet</string>
+    <string name="actionbar_button_search_cd">Kërko</string>
+    <string name="actionbar_button_overflow_cd">Më shumë opsione</string>
+    <string name="actionbar_button_storage_cd">Vëllimet e ruajtjes</string>
+    <string name="actionbar_button_save_cd">Ruaj</string>
+    <string name="actionbar_button_print_cd">Printo</string>
+    <string name="sort_by_name_asc">Sipas emrit \u25B2</string>
+    <string name="sort_by_name_desc">Sipas emrit \u25BC</string>
+    <string name="sort_by_date_asc">Sipas datës \u25B2</string>
+    <string name="sort_by_date_desc">Sipas datës \u25BC</string>
+    <string name="sort_by_size_asc">Sipas madhësisë \u25B2</string>
+    <string name="sort_by_size_desc">Sipas madhësisë \u25BC</string>
+    <string name="sort_by_type_asc">Sipas llojit \u25B2</string>
+    <string name="sort_by_type_desc">Sipas llojit \u25BC</string>
+    <string name="layout_icons">Ikona</string>
+    <string name="layout_simple">E thjeshtë</string>
+    <string name="layout_details">Detajet</string>
+    <string name="cm_filemanager_show_dirs_first">Trego më parë dosjet</string>
+    <string name="cm_filemanager_show_hidden">Shfaq skedarët e fshehur</string>
+    <string name="cm_filemanager_show_system">Shfaq skedarët e sistemit</string>
+    <string name="cm_filemanager_show_symlinks">Shfaq lidhjet simbolike</string>
+    <string name="filesystem_info_warning_title">Nuk ka informacion</string>
+    <string name="filesystem_info_warning_msg">Nuk ka informacion të disponueshëm për sistemin e skedarëve.</string>
+    <string name="filesystem_info_cant_be_mounted_msg">Sistemi i skedarëve nuk mund të montohet/çmontohet.</string>
+    <string name="filesystem_info_mount_not_allowed_msg">Operacionet e montimit të sistemit të skedarëve nuk lejohen në modalitetin e sigurt.  Prekni për të kaluar në modalitetin e qasjes në rrënjë.</string>
+    <string name="filesystem_info_mount_failed_msg">Operacioni i montimit të sistemit të skedarëve dështoi.  Disa sisteme skedarësh, si kartat SD, nuk mund të montohen/çmontohen sepse ato janë të integruara si sisteme skedarësh vetëm për lexim</string>
+    <string name="filesystem_info_dialog_title">Informacioni i sistemit të skedarëve</string>
+    <string name="filesystem_info_dialog_tab_info">Informacion</string>
+    <string name="filesystem_info_dialog_tab_disk_usage">Përdorimi i diskut</string>
+    <string name="filesystem_info_dialog_status">Montuar:</string>
+    <string name="filesystem_info_dialog_mount_point">Pika e montimit:</string>
+    <string name="filesystem_info_dialog_device">Pajisja:</string>
+    <string name="filesystem_info_dialog_type">Lloji:</string>
+    <string name="filesystem_info_dialog_options">Opsionet:</string>
+    <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
+    <string name="filesystem_info_dialog_virtual">Virtual:</string>
+    <string name="filesystem_info_dialog_total_disk_usage">Në total:</string>
+    <string name="filesystem_info_dialog_used_disk_usage">Përdorur:</string>
+    <string name="filesystem_info_dialog_free_disk_usage">E lirë:</string>
+    <string name="fso_properties_permissions_not_allowed_msg">Operacionet e lejeve nuk lejohen në modalitetin e sigurt.  Prekni për të kaluar në modalitetin e qasjes në rrënjë.</string>
+    <string name="fso_properties_failed_to_change_owner_msg">Operacioni i ndryshimit të zotëruesit dështoi.\n\nPër arsye sigurie, disa sisteme skedarësh, si kartat SD, nuk lejojnë ndryshimin e pronësisë.</string>
+    <string name="fso_properties_failed_to_change_group_msg">Ndryshimi i funksionimit të grupit dështoi.\n\nPër arsye sigurie, disa sisteme skedarësh, si kartat SD, nuk lejojnë ndryshimin e grupeve.</string>
+    <string name="fso_properties_failed_to_change_permission_msg">Operacioni i ndryshimit të lejeve dështoi.\n\nPër arsye sigurie, disa sisteme skedarësh, si kartat SD, nuk lejojnë ndryshimin e lejeve.</string>
+    <string name="fso_properties_dialog_title">Vetitë</string>
+    <string name="fso_properties_dialog_tab_info">Informacion</string>
+    <string name="fso_properties_dialog_tab_permissions">Lejet</string>
+    <string name="fso_properties_dialog_name">Emri:</string>
+    <string name="fso_properties_dialog_parent">Prindi:</string>
+    <string name="fso_properties_dialog_type">Lloji:</string>
+    <string name="fso_properties_dialog_category">Kategoria:</string>
+    <string name="fso_properties_dialog_link">Linku:</string>
+    <string name="fso_properties_dialog_size">Madhësia:</string>
+    <string name="fso_properties_dialog_contains">Përmban:</string>
+    <string name="fso_properties_dialog_last_accessed_date">Aksesuar:</string>
+    <string name="fso_properties_dialog_last_modified_date">Modifikuar:</string>
+    <string name="fso_properties_dialog_last_changed_date">Ndryshuar:</string>
+    <string name="fso_properties_dialog_owner">Pronari:</string>
+    <string name="fso_properties_dialog_group">Grupi:</string>
+    <string name="fso_properties_dialog_others">Të tjerë:</string>
+    <string name="fso_properties_dialog_include_in_media_scan">Kapërce skanimin e medias:</string>
+    <string name="fso_failed_to_allow_media_scan">Dështoi në lejimin e skanimit të medias</string>
+    <string name="fso_failed_to_prevent_media_scan">Dështoi në parandalimin e skanimit të medias</string>
+    <string name="fso_delete_nomedia_dir_title">Fshi direktoriumin .nomedia</string>
+    <string name="fso_delete_nomedia_dir_body">Kjo direktori përmban një drejtori .nomedia.\n\nDëshironi ta fshini atë dhe të gjithë përmbajtjen e saj?</string>
+    <string name="fso_delete_nomedia_non_empty_title">Fshi skedarin .nomedia</string>
+    <string name="fso_delete_nomedia_non_empty_body">Kjo direktori përmban një skedar .nomedia jo bosh.\n\nDëshironi ta fshini atë?</string>
+    <string name="history">Historiku</string>
+    <string name="msgs_history_empty">Historiku është bosh.</string>
+    <string name="msgs_history_unknown">Element i panjohur i historikut.</string>
+    <string name="search">Rezultatet e kërkimit</string>
+    <string name="search_hint">Shkruaj atë që do të kërkosh</string>
+    <string name="search_voice_hint">Kërko me zë</string>
+    <string name="search_error_msg">Ndodhi një gabim gjatë kërkimit. Nuk u gjet asnjë rezultat.</string>
+    <string name="search_no_results_msg">Nuk u gjetën rezultate.</string>
+    <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> në <xliff:g id="path">%2$s</xliff:g></string>
+    <string name="search_terms"><![CDATA[<b>Kushtet:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
+    <string name="search_few_characters_title">Konfirmo kërkimin</string>
+    <string name="search_few_characters_msg">Disa nga termat e kërkimit kanë një numër të vogël karakteresh. Operacioni mund të jetë shumë i kushtueshëm në kohë dhe në burimet e sistemit.\n\nDëshironi të vazhdoni?</string>
+    <string name="searching">Prisni\u2026</string>
+    <string name="searching_action_label">Kërkimi në vazhdim</string>
+    <string name="picker_title">Zgjidh një skedar</string>
+    <string name="directory_picker_title">Zgjidh një drejtori</string>
+    <string name="editor">Redaktuesi</string>
+    <string name="editor_invalid_file_msg">Skedar i pavlefshëm.</string>
+    <string name="editor_file_not_found_msg">Skedari nuk u gjet.</string>
+    <string name="editor_file_exceed_size_msg">Skedari është shumë i madh për t\'u hapur brenda kësaj pajisjeje.</string>
+    <string name="editor_dirty_ask_title">Konfirmo daljen</string>
+    <string name="editor_dirty_ask_msg">Ka ndryshime të paruajtura.\n\nDil pa u ruajtur?</string>
+    <string name="editor_successfully_saved">Skedari u ruajt me sukses.</string>
+    <string name="editor_read_only_mode">Skedari hapet në modalitetin vetëm për lexim.</string>
+    <string name="dumping_message">Gjenerimi hex dep\u2026</string>
+    <string name="displaying_message">Duke u shfaqur\u2026</string>
+    <string name="bookmarks">Faqeshënuesi</string>
+    <string name="bookmarks_home">Home</string>
+    <string name="bookmarks_root_folder">Dosja Root</string>
+    <string name="bookmarks_system_folder">Dosja e sistemit</string>
+    <string name="bookmarks_secure">Memorie e mbrojtur</string>
+    <string name="bookmarks_remote">Ruajtja në distancë</string>
+    <string name="bookmarks_button_config_cd">Vendosni dosjen fillestare.</string>
+    <string name="bookmarks_button_remove_bookmark_cd">Hiqni faqerojtësin.</string>
+    <string name="bookmarks_msgs_add_success">Faqerojtësi u shtua me sukses</string>
+    <string name="bookmarks_msgs_add_exists">Faqerojtësi ekziston tashmë.</string>
+    <string name="initial_directory_dialog_title">Dosja fillestare</string>
+    <string name="initial_directory_label">Zgjidhni dosjen fillestare:</string>
+    <string name="initial_directory_relative_msg">Shtigjet relative nuk lejohen.</string>
+    <string name="initial_directory_error_msg">Ndodhi një gabim gjatë ruajtjes së dosjes fillestare.</string>
+    <string name="menu_search">Kërko</string>
+    <string name="menu_settings">Parametrat</string>
+    <string name="menu_clear_history">Pasto historikun</string>
+    <string name="menu_no_suggestions">Asnjë sugjerim</string>
+    <string name="menu_word_wrap">Mbështjell fjalët</string>
+    <string name="menu_syntax_highlight">Theksimi i sintaksës</string>
+    <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - Kopjo<xliff:g id="extension">%2$s</xliff:g></string>
+    <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - I ri<xliff:g id="extension">%2$s</xliff:g></string>
+    <string name="waiting_dialog_msg">Po kryen operacionin\u2026</string>
+    <string name="waiting_dialog_copying_title">Po kopjohet\u2026</string>
+    <string name="waiting_dialog_copying_msg"><![CDATA[<b>Nga</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Për</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+    <string name="waiting_dialog_moving_title">Po zhvendosen\u2026</string>
+    <string name="waiting_dialog_moving_msg"><![CDATA[<b>Nga</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/><b>Për</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+    <string name="waiting_dialog_deleting_title">Po fshihen\u2026</string>
+    <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Skedari</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+    <string name="waiting_dialog_extracting_title">Po nxirren\u2026</string>
+    <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Skedari</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+    <string name="waiting_dialog_compressing_title">Duke kompresuar\u2026</string>
+    <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Skedari</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+    <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Duke analizuar\u2026</b>]]></string>
+    <string name="msgs_extracting_success">Veprimi i ekstraktimit u krye me sukses. Të dhënat u ekstraktuan në <xliff:g id="destination">%1$s</xliff:g>.</string>
+    <string name="msgs_compressing_success">Veprimi i kompresimit u krye me sukses. Të dhënat u kompresuan në <xliff:g id="destination">%1$s</xliff:g>.</string>
+    <string name="actions_dialog_title">Veprimet</string>
+    <string name="actions_menu_properties_current_folder">Vetitë</string>
+    <string name="actions_menu_refresh">Rifresko</string>
+    <string name="actions_menu_new_directory">Dosje e re</string>
+    <string name="actions_menu_new_file">Skedar i ri</string>
+    <string name="actions_menu_select_all">Zgjidhi të gjitha</string>
+    <string name="actions_menu_deselect_all">Deselektoji të gjitha</string>
+    <string name="actions_menu_select">Zgjidh</string>
+    <string name="actions_menu_deselect">Deselekto</string>
+    <string name="actions_menu_paste_selection">Kopjo të përzgjedhurat këtu</string>
+    <string name="actions_menu_move_selection">Zhvendos të zgjedhurat ketu</string>
+    <string name="actions_menu_delete_selection">Fshi të zgjedhurat</string>
+    <string name="actions_menu_compress_selection">Kompresoni të përzgjedhurat</string>
+    <string name="actions_menu_create_link">Krijo link</string>
+    <string name="actions_menu_open">Hap</string>
+    <string name="actions_menu_open_with">Hap me</string>
+    <string name="actions_menu_execute">Kryej</string>
+    <string name="actions_menu_send">Dërgo</string>
+    <string name="actions_menu_send_selection">Dërgo të përzgjedhurat</string>
+    <string name="actions_menu_compress">Kompreso</string>
+    <string name="actions_menu_extract">Ekstrakto</string>
+    <string name="actions_menu_delete">Fshije</string>
+    <string name="actions_menu_rename">Riemërto</string>
+    <string name="actions_menu_create_copy">Krijo kopje</string>
+    <string name="actions_menu_properties">Karakteristikat</string>
+    <string name="actions_menu_add_to_bookmarks">Shto te faqeshënuesit</string>
+    <string name="actions_menu_add_shortcut">Shto një shkurtore</string>
+    <string name="actions_menu_open_parent_folder">Hap prind</string>
+    <string name="actions_menu_compute_checksum">Llogaritni shumën e kontrollit</string>
+    <string name="actions_menu_print">Printo</string>
+    <string name="actions_menu_set_as_home">Cakto si shtëpi</string>
+    <string name="actions_ask_undone_operation_msg">Ky veprim nuk mund të zhbëhet. Doni të vazhdoni?</string>
+    <string name="input_name_dialog_label">Emri:</string>
+    <string name="input_name_dialog_message_empty_name">Emri s\'mund të jetë bosh.</string>
+    <string name="input_name_dialog_message_invalid_path_name">Emër i gabuar. Karakteret \'<xliff:g id="invalid_characters">%1$s</xliff:g>\' nuk janë të lejuara.</string>
+    <string name="input_name_dialog_message_invalid_name_length">U arrit kufiri maksimal i karaktereve.</string>
+    <string name="input_name_dialog_message_invalid_name">Emër i gabuar. Emrat \'.\' dhe \'..\' nuk janë të lejuara.</string>
+    <string name="input_name_dialog_message_name_exists">Ky emër ekziston tashmë.</string>
+    <string name="associations_dialog_title">Shoqatat</string>
+    <string name="associations_dialog_remember">Mbani mend të përzgjedhurat</string>
+    <string name="associations_dialog_openwith_title">Hap me</string>
+    <string name="associations_dialog_openwith_action">Hap</string>
+    <string name="associations_dialog_sendwith_title">Dërgo me</string>
+    <string name="associations_dialog_sendwith_action">Dërgo</string>
+    <string name="inline_autocomplete_tab_nothing_to_complete_msg">Asgjë për të plotësuar.</string>
+    <string name="execution_console_title">Konsola</string>
+    <string name="execution_console_script_name_label">Script:</string>
+    <string name="execution_console_script_execution_time_label">Ora:</string>
+    <string name="execution_console_script_exitcode_label">dil nga kodi:</string>
+    <string name="execution_console_script_execution_time_text"><xliff:g id="seconds">%1$s</xliff:g> sek</string>
+    <string name="compute_checksum_title">Llogaritni shumën e kontrollit</string>
+    <string name="compute_checksum_filename_label">Skaderi:</string>
+    <string name="compute_checksum_computing_checksum_msg">Po llogarit shumën e kontrollit\u2026</string>
+    <string name="mime_folder">Dosja</string>
+    <string name="mime_symlink">Symlink</string>
+    <string name="mime_unknown">E panjohur</string>
+    <string name="filetime_format_mode_system">E përcaktuar nga sistemi</string>
+    <string name="filetime_format_mode_locale">Përcaktuar nga lokaliteti</string>
+    <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/vvvv hh:mm:ss</string>
+    <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/vvvv hh:mm:ss</string>
+    <string name="filetime_format_mode_yyyyMMdd_HHmmss">vvvv-mm-dd hh:mm:ss</string>
+    <string name="selection_folders_and_files"><xliff:g id="folders">%1$s</xliff:g> dhe <xliff:g id="files">%2$s</xliff:g> të zgjedhura.</string>
+    <string name="category_system">SISTEM</string>
+    <string name="category_app">APLICACION</string>
+    <string name="category_binary">BINAR</string>
+    <string name="category_text">TEKST</string>
+    <string name="category_document">DOKUMENT</string>
+    <string name="category_ebook">EBOOK</string>
+    <string name="category_mail">EMAIL</string>
+    <string name="category_compress">E KOMPRESUAR</string>
+    <string name="category_exec">E EKZEKUTUESHME</string>
+    <string name="category_database">DATABAZË</string>
+    <string name="category_font">FONT</string>
+    <string name="category_image">IMAZH</string>
+    <string name="category_audio">AUDIO</string>
+    <string name="category_video">VIDEO</string>
+    <string name="category_security">SIGURIA</string>
+    <string name="category_all">TË GJITHA</string>
+    <string name="compression_mode_title">Mënyra e kompresimit</string>
+    <string name="shortcut_failed_msg">Përdorimi i shkurtores dështoi.</string>
+    <string name="shortcut_creation_success_msg">Shkurtorja u krijua me sukses.</string>
+    <string name="shortcut_creation_failed_msg">Krijimi i shkurtores dështoi.</string>
+    <string name="pref">Cilësimet</string>
+    <string name="pref_general">Cilësimet e përgjithshme</string>
+    <string name="pref_search">Opsionet e kërkimit</string>
+    <string name="pref_storage">Opsionet e memories</string>
+    <string name="pref_editor">Opsionet e redaktuesit</string>
+    <string name="pref_themes">Temat</string>
+    <string name="pref_about">Rreth</string>
+    <string name="pref_general_behaviour_category">Të përgjithshme</string>
+    <string name="pref_case_sensitive_sort">E ndjeshme ndaj rasteve</string>
+    <string name="pref_case_sensitive_sort_summary">Merrni parasysh rastin kur lundroni ose renditni rezultatet e kërkimit</string>
+    <string name="pref_filetime_format_mode">Formati i datës/orës</string>
+    <string name="pref_disk_usage_warning_level">Paralajmërim për përdorimin e diskut</string>
+    <string name="pref_disk_usage_warning_level_summary" formatted="false">Shfaq një ngjyrë të ndryshme në miniaplikacionet e përdorimit të diskut kur ato arrijnë <xliff:g id="level">%1$s</xliff:g> përqindjen e hapësirës së lirë në disk</string>
+    <string name="pref_compute_folder_statistics">Llogaritni statistikat e dosjeve</string>
+    <string name="pref_compute_folder_statistics_on">Paralajmërim! Llogaritja e statistikave të dosjeve është e kushtueshme në kohë dhe në burimet e sistemit</string>
+    <string name="pref_display_thumbs">Parapamje</string>
+    <string name="pref_display_thumbs_summary">Shfaq një imazh paraprak për aplikacionet, skedarët muzikorë, fotografitë dhe videot</string>
+    <string name="pref_use_flinger">Përdor gjestet me rrëshqitje gishti</string>
+    <string name="pref_use_flinger_summary">Përdor zbulimin e gjesteve me rrëshqitje nga e majta në të djathtë për të fshirë skedarët ose dosjet</string>
+    <string name="pref_general_advanced_settings_category">Të përparuara</string>
+    <string name="pref_access_mode">Modaliteti i hyrjes</string>
+    <string name="pref_access_mode_safe">Modaliteti i sigurisë</string>
+    <string name="pref_access_mode_safe_summary">Modaliteti i sigurt\n\nAplikacioni funksionon pa privilegje dhe të vetmet sisteme skedarësh të aksesueshëm janë vëllimet e ruajtjes (kartat SD dhe USB)</string>
+    <string name="pref_access_mode_prompt">Modaliteti i shpejtë i përdoruesit</string>
+    <string name="pref_access_mode_prompt_summary">Modaliteti i kërkuar i përdoruesit\n\nAplikacioni po funksionon me akses të plotë në sistemin e skedarëve, por do të kërkojë leje përpara se të ekzekutojë ndonjë veprim të privilegjuar</string>
+    <string name="pref_access_mode_root">Profili me Akses Root</string>
+    <string name="pref_access_mode_root_summary">Modaliteti i qasjes në rrënjë\n\nVërejtje! Ky modalitet lejon operacione që mund të prishin pajisjen tuaj. Është përgjegjësia juaj për të siguruar që një operacion është i sigurt</string>
+    <string name="pref_restrict_secondary_users_access_title">Kufizoni aksesin e përdoruesve</string>
+    <string name="pref_restrict_secondary_users_access_summary">Kufizoni aksesin në të gjithë sistemin për përdoruesit dytësorë</string>
+    <string name="pref_search_results_category">Rezultatet</string>
+    <string name="pref_show_relevance_widget">Shfaq miniaplikacionin përkatës</string>
+    <string name="pref_highlight_terms">Theksoni termat e kërkimit</string>
+    <string name="pref_sort_search_results_mode">Mënyra e renditjes së rezultateve</string>
+    <string name="pref_sort_search_results_mode_none">Asnjë lloj</string>
+    <string name="pref_sort_search_results_mode_name">Nga emri</string>
+    <string name="pref_sort_search_results_mode_relevance">Sipas rëndësisë</string>
+    <string name="pref_search_privacity_category">Privatësia</string>
+    <string name="pref_save_search_terms">Ruani termat e kërkimit</string>
+    <string name="pref_save_search_terms_on">Termat e kërkimit do të ruhen dhe do të përdoren si sugjerime në kërkimet e ardhshme</string>
+    <string name="pref_save_search_terms_off">Termat e kërkimit nuk do të ruhen</string>
+    <string name="pref_remove_saved_search_terms_summary">Shtyp për të hequr të gjitha termat e kërkuar</string>
+    <string name="pref_remove_saved_search_terms_msg">Të gjitha termat e kërkuar u hoqën</string>
+    <string name="pref_secure_storage_category">Memorie e mbrojtur</string>
+    <string name="pref_secure_storage_reset_password_title">Ndrysho fjalëkalimin</string>
+    <string name="pref_secure_storage_delete_storage_title">Fshi memorien</string>
+    <string name="pref_no_suggestions">Asnjë sugjerim</string>
+    <string name="pref_syntax_highlight_desc">Theksoni sintaksën e skedarit të shfaqur në redaktues (vetëm kur është i disponueshëm procesori i theksimit të sintaksës për llojin e skedarit)</string>
+    <string name="pref_syntax_sh_use_theme_default">Përdor temën e paracaktuar</string>
+    <string name="pref_editor_sh_item_category">Artikuj</string>
+    <string name="pref_themes_selection_category">Temat</string>
+    <string name="pref_themes_set_theme">Cakto temën</string>
+    <string name="pref_themes_confirmation">Tema u aplikua me sukses.</string>
+    <string name="pref_themes_not_found">Tema nuk u gjet.</string>
+    <string name="pref_debug_traces">Regjistro informacionin e debugimit</string>
+    <string name="theme_default_name">Temë e Çelur</string>
+    <string name="theme_default_description">Një temë e çelur për Menaxherin e Skedarëve të LineageOS.</string>
+    <string name="themes_author">LineageOS</string>
+    <string name="drawer_open">Hap sirtarin nagivues</string>
+    <string name="color_picker_color">Ngjyra:</string>
+    <string name="ash_text">Tekst</string>
+    <string name="ash_assignment">Detyrë</string>
+    <string name="secure_storage_unlock_old_key_title">Fjalëkalimi i vjetër:</string>
+    <string name="secure_storage_unlock_new_key_title">Fjalëkalimi i ri:</string>
+    <string name="secure_storage_unlock_key_title">Fjalëkalimi:</string>
+    <string name="secure_storage_unlock_repeat_title">Përsërit fjalëkalimin:</string>
+    <string name="secure_storage_create_button">Krijo</string>
+    <string name="secure_storage_unlock_button">Zhblloko</string>
+    <string name="secure_storage_delete_button">Fshije</string>
+    <string name="secure_storage_unlock_validation_equals">Fjalëkalimet nuk përputhen.</string>
+    <string name="print_document_header">Dokumenti: <xliff:g id="document_name">%1$s</xliff:g></string>
+    <string name="print_document_footer">Faqe <xliff:g id="page_number">%1$s</xliff:g></string>
+    <string name="security_warning_extract">Paralajmërim!\n\nNxjerrja e një skedari arkivi me shtigje relative ose absolute mund të shkaktojë dëme në pajisjen tuaj duke mbishkruar skedarët e sistemit.\n\nDëshironi të vazhdoni?</string>
+    <string name="changelog_title">Lista e ndryshimeve</string>
+    <string name="welcome_title">Mirësevini</string>
+    <string name="welcome_msg">Mirësevini në menaxherin e skedarëve të LineageOS.\n\nKy aplikacion ju mundëson të eksploroni sistemin e skedarëve dhe të kryeni veprime që mund të demtojnë pajisjen tuaj. Për të parandaluar dëmtimet, ky aplikacion do te nisë në një profil të sigurtë dhe me privilegje te kufizuara.\n\nJu mund të aksesoni profilin e avancuar me privilegje të plota nëpërmjet Parametrave. Është përgjegjësia juaj të siguroheni që një veprim nuk do të dëmtojë sistemin tuaj.\n\nEkipi i LineageOS</string>
+    <string name="activity_not_found_exception">Nuk u gjet asnjë aplikacion që mund të hapë këtë skedar</string>
+    <string name="storage_permissions_denied">Menaxheri i skedarëve kërkon leje për ruajtje për të parë skedarët tuaj.</string>
+    <string name="storage_permissions_explanation">Shko te Parametrat dhe shtyp Lejet për të dhënë lejen.</string>
+    <string name="snackbar_settings">Parametrat</string>
+    <string name="toggle_word_wrap_msg">Ndërrimi i modalitetit të mbështjelljes së fjalëve</string>
+</resources>
